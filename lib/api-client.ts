@@ -69,9 +69,21 @@ export async function loginToBackend(payload: LoginPayload): Promise<AuthSuccess
   return data as AuthSuccessResponse;
 }
 
+function getAuthHeader(): Record<string, string> {
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("ruangti_auth_token");
+    if (token) {
+      return { Authorization: `Bearer ${token}` };
+    }
+  }
+  return {};
+}
+
 export async function fetchConversationsFromBackend(): Promise<Conversation[]> {
   try {
-    const res = await fetch(`${getApiBase()}/api/conversations`);
+    const res = await fetch(`${getApiBase()}/api/conversations`, {
+      headers: { ...getAuthHeader() },
+    });
     if (!res.ok) throw new Error("Failed to fetch conversations");
     const data = await res.json();
     return data.map((item: any) => ({
@@ -96,7 +108,7 @@ export async function createConversationOnBackend(
   try {
     const res = await fetch(`${getApiBase()}/api/conversations`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...getAuthHeader() },
       body: JSON.stringify({ title, model_id: modelId }),
     });
     if (!res.ok) throw new Error("Failed to create conversation");
