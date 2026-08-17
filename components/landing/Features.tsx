@@ -3,34 +3,35 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Factory, Boxes, RotateCcw, Timer, Binary, Cpu, Layers, LineChart } from "lucide-react";
+import { KaTeXFormula } from "@/components/ui/KaTeXFormula";
 
 const PILLARS = [
   {
     icon: Factory,
     title: "Perancangan Tata Letak Fasilitas (PTLF)",
     desc: "Optimasi ongkos material handling (MHC) dengan pendekatan From-To Chart kuantitatif, analisis derajat kedekatan ARC, dan algoritma CRAFT.",
-    formula: "MHC = \\sum D_{ij} \\times F_{ij} \\times C_{ij}",
+    formula: "\\text{MHC} = \\sum D_{ij} \\times F_{ij} \\times C_{ij}",
     tag: "Tata Letak Pabrik",
   },
   {
     icon: Boxes,
     title: "Supply Chain & Inventory Management",
     desc: "Perhitungan ukuran pesanan ekonomis (EOQ), reorder point (ROP), dan penentuan safety stock untuk meminimalkan total inventory cost.",
-    formula: "EOQ = \\sqrt{\\frac{2DS}{H}}",
+    formula: "\\text{EOQ} = \\sqrt{\\frac{2DS}{H}}",
     tag: "Rantai Pasok",
   },
   {
     icon: RotateCcw,
     title: "Lean Six Sigma & Quality Control",
     desc: "Framework DMAIC menyeluruh, diagram sebab-akibat Ishikawa (5M+1E), FMEA, dan peta kendali SPC (X-bar & R) untuk perbaikan kualitas.",
-    formula: "DPMO = \\frac{D}{N \\times O} \\times 10^6",
+    formula: "\\text{DPMO} = \\frac{D}{N \\times O} \\times 10^6",
     tag: "Manajemen Kualitas",
   },
   {
     icon: Timer,
     title: "Ergonomi & Work Design",
     desc: "Pengukuran waktu kerja baku dengan jam henti (Westinghouse Rating & Allowance), evaluasi biomekanika postur kerja REBA dan RULA.",
-    formula: "Wb = Wn \\times \\frac{100\\%}{100\\% - \\%\\text{Allowance}}",
+    formula: "W_b = W_n \\times \\frac{100\\%}{100\\% - \\%\\text{Allowance}}",
     tag: "Ergonomi Industri",
   },
 ];
@@ -106,10 +107,12 @@ export function Features() {
                 </p>
               </div>
 
-              {/* Code Snippet Formula Box */}
-              <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-border/40 font-mono text-[11px] sm:text-xs text-text-primary bg-canvas/70 px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-border/50 flex items-center justify-between flex-wrap gap-1">
-                <span className="text-text-secondary text-[10px] sm:text-[11px]">Formula Acuan:</span>
-                <span className="font-semibold text-accent tracking-wide">{p.formula}</span>
+              {/* KaTeX Rendered Formula Box */}
+              <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-border/40 text-xs sm:text-sm text-text-primary bg-canvas/70 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-border/50 flex items-center justify-between flex-wrap gap-2">
+                <span className="text-text-secondary text-[11px] sm:text-xs font-sans">Formula Acuan:</span>
+                <span className="text-accent font-medium tracking-wide flex items-center">
+                  <KaTeXFormula math={p.formula} />
+                </span>
               </div>
             </motion.div>
           );
