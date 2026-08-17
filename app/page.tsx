@@ -35,11 +35,11 @@ export default function Home() {
     isStreaming,
     sendMessage,
     stopStreaming,
-    editAndRegenerate,
-    regenerateAssistant,
-    setFeedback,
+    editMessage,
+    regenerateMessage,
   } = useChat({
     initialMessages: activeConversation?.messages || [],
+    conversationId: activeId,
     onMessagesChange: (msgs) => {
       if (activeId) {
         updateMessages(activeId, msgs);
@@ -105,9 +105,9 @@ export default function Home() {
             <MessageList
               messages={messages}
               isStreaming={isStreaming}
-              onEditMessage={(id, newText) => editAndRegenerate(id, newText, selectedModel)}
-              onRegenerateMessage={(id) => regenerateAssistant(id, selectedModel)}
-              onFeedbackMessage={(id, type) => setFeedback(id, type)}
+              onEditMessage={(id, newText) => editMessage(id, newText, selectedModel)}
+              onRegenerateMessage={() => regenerateMessage(selectedModel)}
+              onFeedbackMessage={() => {}}
             />
           </div>
         )}

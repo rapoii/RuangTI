@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 
 from app.core.config import settings
 from app.core.database import init_db
-from app.routers import health, conversations, messages
+from app.routers import health, conversations, messages, chat
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -31,6 +31,7 @@ app.add_middleware(
 app.include_router(health.router)
 app.include_router(conversations.router)
 app.include_router(messages.router)
+app.include_router(chat.router)
 
 @app.get("/")
 async def root():

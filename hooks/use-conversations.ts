@@ -3,13 +3,13 @@
 import { useEffect, useState, useCallback } from "react";
 import { Conversation, Message } from "@/lib/types";
 import {
-  loadConversations,
-  saveConversations,
-  createNewConversation,
-  getInitialSeedConversations,
-  getActiveConversationId,
-  setActiveConversationId,
-} from "@/lib/storage";
+  fetchConversationsFromBackend,
+  createConversationOnBackend,
+  deleteConversationOnBackend,
+  renameConversationOnBackend,
+  togglePinConversationOnBackend,
+  fetchMessagesFromBackend,
+} from "@/lib/api-client";
 import { generateTitleFromMessage } from "@/lib/utils";
 
 export function useConversations() {
@@ -17,139 +17,162 @@ export function useConversations() {
   const [activeId, setActiveIdState] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [mounted, setMounted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Initial load
+  // Load conversations from backend on mount
   useEffect(() => {
     setMounted(true);
-    let loaded = loadConversations();
-    if (loaded.length === 0) {
-      loaded = getInitialSeedConversations();
-      saveConversations(loaded);
+    async function loadData() {
+      setIsLoading(true);
+      const list = await fetchConversationsFromBackend();
+      setConversations(list);
+      
+      if (list.length > 0) {
+        setActiveIdState(list[0].id);
+        // Load messages for the first conversation
+        const msgs = await fetchMessagesFromBackend(list[0].id);
+        setConversations((prev) =>
+          prev.map((c) => (c.id === list[0].id ? { ...c, messages: msgs } : c))
+        );
+      } else {
+        // If empty, create a fresh initial conversation on backend
+        const newConv = await createConversationOnBackend("Konsultasi TI Baru");
+        if (newConv) {
+          setConversations([newConv]);
+          setActiveIdState(newConv.id);
+        }
+      }
+      setIsLoading(false);
     }
-    setConversations(loaded);
+    loadData();
+  }, []);
 
-    const savedActiveId = getActiveConversationId();
-    if (savedActiveId && loaded.some((c) => c.id === savedActiveId)) {
-      setActiveIdState(savedActiveId);
-    } else if (loaded.length > 0) {
-      setActiveIdState(loaded[0].id);
-      setActiveConversationId(loaded[0].id);
+  const selectConversation = useCallback(
+    async (id: string) => {
+      setActiveIdState(id);
+      // Fetch messages for selected conversation if not loaded yet
+      const current = conversations.find((c) => c.id === id);
+      if (current && current.messages.length === 0) {
+        const msgs = await fetchMessagesFromBackend(id);
+        setConversations((prev) =>
+          prev.map((c) => (c.id === id ? { ...c, messages: msgs } : c))
+        );
+      }
+    },
+    [conversations]
+  );
+
+  const startNewConversation = useCallback(async () => {
+    const newConv = await createConversationOnBackend("Konsultasi TI Baru");
+    if (newConv) {
+      setConversations((prev) => [newConv, ...prev]);
+      setActiveIdState(newConv.id);
+      return newConv.id;
     }
+    return null;
   }, []);
-
-  const persist = useCallback((newList: Conversation[]) => {
-    setConversations(newList);
-    saveConversations(newList);
-  }, []);
-
-  const selectConversation = useCallback((id: string) => {
-    setActiveIdState(id);
-    setActiveConversationId(id);
-  }, []);
-
-  const startNewConversation = useCallback(() => {
-    const newConv = createNewConversation();
-    const updated = [newConv, ...conversations];
-    persist(updated);
-    selectConversation(newConv.id);
-    return newConv.id;
-  }, [conversations, persist, selectConversation]);
 
   const deleteConversation = useCallback(
-    (id: string) => {
-      const remaining = conversations.filter((c) => c.id !== id);
-      persist(remaining);
-      if (activeId === id) {
-        if (remaining.length > 0) {
-          selectConversation(remaining[0].id);
-        } else {
-          // If all deleted, create fresh empty one
-          const fresh = createNewConversation();
-          persist([fresh]);
-          selectConversation(fresh.id);
+    async (id: string) => {
+      const ok = await deleteConversationOnBackend(id);
+      if (ok) {
+        const remaining = conversations.filter((c) => c.id !== id);
+        setConversations(remaining);
+        if (activeId === id) {
+          if (remaining.length > 0) {
+            selectConversation(remaining[0].id);
+          } else {
+            startNewConversation();
+          }
         }
       }
     },
-    [conversations, activeId, persist, selectConversation]
+    [conversations, activeId, selectConversation, startNewConversation]
   );
 
   const renameConversation = useCallback(
-    (id: string, newTitle: string) => {
+    async (id: string, newTitle: string) => {
       const trimmed = newTitle.trim();
       if (!trimmed) return;
-      const updated = conversations.map((c) =>
-        c.id === id ? { ...c, title: trimmed, updatedAt: Date.now() } : c
+      setConversations((prev) =>
+        prev.map((c) =>
+          c.id === id ? { ...c, title: trimmed, updatedAt: Date.now() } : c
+        )
       );
-      persist(updated);
+      await renameConversationOnBackend(id, trimmed);
     },
-    [conversations, persist]
+    []
   );
 
   const togglePinConversation = useCallback(
-    (id: string) => {
-      const updated = conversations.map((c) =>
-        c.id === id ? { ...c, pinned: !c.pinned } : c
+    async (id: string) => {
+      const conv = conversations.find((c) => c.id === id);
+      if (!conv) return;
+      const nextPinned = !conv.pinned;
+      setConversations((prev) =>
+        prev.map((c) => (c.id === id ? { ...c, pinned: nextPinned } : c))
       );
-      persist(updated);
+      await togglePinConversationOnBackend(id, nextPinned);
     },
-    [conversations, persist]
+    [conversations]
   );
 
   const updateMessages = useCallback(
     (id: string, messages: Message[]) => {
       setConversations((prev) => {
-        const target = prev.find((c) => c.id === id);
-        if (!target) return prev;
-
-        // Auto-generate title from first user message if still default
-        let newTitle = target.title;
-        if (
-          (target.title === "Percakapan Baru" || !target.title) &&
-          messages.length > 0
-        ) {
-          const firstUserMsg = messages.find((m) => m.role === "user");
-          if (firstUserMsg) {
-            newTitle = generateTitleFromMessage(firstUserMsg.content);
+        return prev.map((c) => {
+          if (c.id !== id) return c;
+          let newTitle = c.title;
+          // Auto rename title if still default and there's a user message
+          if (
+            (c.title === "Percakapan Baru" || c.title === "Konsultasi TI Baru") &&
+            messages.length > 0
+          ) {
+            const firstUser = messages.find((m) => m.role === "user");
+            if (firstUser) {
+              newTitle = generateTitleFromMessage(firstUser.content);
+              renameConversationOnBackend(id, newTitle);
+            }
           }
-        }
-
-        const updated = prev.map((c) =>
-          c.id === id
-            ? { ...c, title: newTitle, messages, updatedAt: Date.now() }
-            : c
-        );
-        saveConversations(updated);
-        return updated;
+          return {
+            ...c,
+            title: newTitle,
+            messages,
+            updatedAt: Date.now(),
+          };
+        });
       });
     },
     []
   );
 
+  const activeConversation =
+    conversations.find((c) => c.id === activeId) || null;
+
   const filteredConversations = conversations.filter((c) => {
     if (!searchQuery.trim()) return true;
     const q = searchQuery.toLowerCase();
-    const matchTitle = c.title.toLowerCase().includes(q);
-    const matchContent = c.messages.some((m) =>
+    const matchesTitle = c.title.toLowerCase().includes(q);
+    const matchesMessage = c.messages.some((m) =>
       m.content.toLowerCase().includes(q)
     );
-    return matchTitle || matchContent;
+    return matchesTitle || matchesMessage;
   });
-
-  const activeConversation = conversations.find((c) => c.id === activeId) || null;
 
   return {
     conversations: filteredConversations,
     allConversations: conversations,
-    activeId,
     activeConversation,
+    activeId,
+    searchQuery,
+    isLoading,
+    setSearchQuery,
     selectConversation,
     startNewConversation,
     deleteConversation,
     renameConversation,
     togglePinConversation,
     updateMessages,
-    searchQuery,
-    setSearchQuery,
     mounted,
   };
 }

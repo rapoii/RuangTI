@@ -13,6 +13,7 @@ export interface Message {
 export interface Conversation {
   id: string;
   title: string;
+  modelId?: string;
   messages: Message[];
   createdAt: number;
   updatedAt: number;
