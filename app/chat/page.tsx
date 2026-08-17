@@ -114,8 +114,8 @@ export default function ChatPage() {
             <MessageList
               messages={messages}
               isStreaming={isStreaming}
-              onEditMessage={(id, newText) => editMessage(id, newText, selectedModel)}
-              onRegenerateMessage={() => regenerateMessage(selectedModel)}
+              onEditMessage={(id, newText) => editMessage(id, newText)}
+              onRegenerateMessage={(id) => regenerateMessage(id)}
               onFeedbackMessage={() => {}}
             />
           </div>

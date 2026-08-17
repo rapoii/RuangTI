@@ -1,37 +1,47 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
-import { Message, ModelOption } from "@/lib/types";
-import { saveMessageToBackend } from "@/lib/api-client";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Message } from "@/lib/types";
+import { saveMessageToBackend, fetchMessagesFromBackend } from "@/lib/api-client";
+import { useProfile } from "@/hooks/use-profile";
 
-export function useChat({
-  initialMessages = [],
-  conversationId,
-  onMessagesChange,
-}: {
+function getApiBase(): string {
+  if (typeof window !== "undefined") {
+    return `${window.location.protocol}//${window.location.hostname}:8000`;
+  }
+  return process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+}
+
+interface UseChatProps {
+  conversationId: string | null;
   initialMessages?: Message[];
-  conversationId?: string | null;
   onMessagesChange?: (messages: Message[]) => void;
-}) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const [isStreaming, setIsStreaming] = useState(false);
-  const [isThinking, setIsThinking] = useState(false);
-  const abortControllerRef = useRef<AbortController | null>(null);
-  const prevConvIdRef = useRef<string | null>(conversationId || null);
+  onUpdateTitle?: (title: string) => void;
+}
 
-  // When conversationId changes (user switched threads in sidebar)
+export function useChat({ conversationId, initialMessages = [], onMessagesChange, onUpdateTitle }: UseChatProps) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [isStreaming, setIsStreaming] = useState<boolean>(false);
+  const [selectedModel, setSelectedModel] = useState<string>("gcli/grok-4.5-high(xhigh)");
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Load messages from backend whenever conversationId changes
   useEffect(() => {
-    if (conversationId !== prevConvIdRef.current) {
-      if (abortControllerRef.current) {
-        abortControllerRef.current.abort();
-        abortControllerRef.current = null;
-      }
-      setIsStreaming(false);
-      setIsThinking(false);
-      setMessages(initialMessages);
-      prevConvIdRef.current = conversationId || null;
+    if (!conversationId) {
+      setMessages([]);
+      return;
     }
-  }, [conversationId, initialMessages]);
+
+    async function load() {
+      if (!conversationId) return;
+      const msgs = await fetchMessagesFromBackend(conversationId);
+      setMessages(msgs);
+      if (onMessagesChange) {
+        onMessagesChange(msgs);
+      }
+    }
+    load();
+  }, [conversationId]);
 
   const stopStreaming = useCallback(() => {
     if (abortControllerRef.current) {
@@ -39,75 +49,80 @@ export function useChat({
       abortControllerRef.current = null;
     }
     setIsStreaming(false);
-    setIsThinking(false);
   }, []);
 
   const sendMessage = useCallback(
-    async (content: string, modelId: ModelOption = "ti-optima") => {
-      const trimmed = content.trim();
-      if (!trimmed || isStreaming) return;
+    async (content: string, customModel?: string) => {
+      if (!content.trim() || isStreaming || !conversationId) return;
 
+      const userMsgId = `msg_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
       const userMsg: Message = {
-        id: `msg_u_${Date.now()}`,
+        id: userMsgId,
         role: "user",
-        content: trimmed,
+        content,
         createdAt: Date.now(),
       };
 
-      const assistantMsgId = `msg_a_${Date.now() + 1}`;
-      const assistantMsgPlaceholder: Message = {
+      // Simpan user message ke backend database
+      await saveMessageToBackend(conversationId, "user", content);
+
+      // Sediakan history percakapan terkini untuk context LLM
+      const historyContext = messages.slice(-8).map((m) => ({
+        role: m.role,
+        content: m.content,
+      }));
+
+      // Optimistic user message update
+      const currentMessagesWithUser = [...messages, userMsg];
+      setMessages(currentMessagesWithUser);
+      if (onMessagesChange) onMessagesChange(currentMessagesWithUser);
+
+      // Buat placeholder assistant message untuk live SSE stream
+      const assistantMsgId = `msg_${Date.now() + 1}_${Math.random().toString(36).substring(2, 7)}`;
+      const assistantMsg: Message = {
         id: assistantMsgId,
         role: "assistant",
         content: "",
         createdAt: Date.now() + 1,
       };
 
-      const newMessages = [...messages, userMsg, assistantMsgPlaceholder];
-      setMessages(newMessages);
-      onMessagesChange?.(newMessages);
-
-      // Persist user message to backend DB if conversationId exists
-      if (conversationId) {
-        saveMessageToBackend(conversationId, "user", trimmed);
-      }
-
+      const withAssistant = [...currentMessagesWithUser, assistantMsg];
+      setMessages(withAssistant);
       setIsStreaming(true);
-      setIsThinking(true);
 
       const controller = new AbortController();
       abortControllerRef.current = controller;
 
       try {
-        const apiUrl =
-          typeof window !== "undefined"
-            ? `${window.location.protocol}//${window.location.hostname}:8000/api/chat/stream`
-            : "http://localhost:8000/api/chat/stream";
-
-        const response = await fetch(apiUrl, {
+        const targetModel = customModel || selectedModel || "gcli/grok-4.5-high(xhigh)";
+        const res = await fetch(`${getApiBase()}/api/chat/stream`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({
-            message: trimmed,
-            model_id: modelId,
+            message: content,
+            model_id: targetModel,
             conversation_id: conversationId,
+            history: historyContext,
           }),
           signal: controller.signal,
         });
 
-        if (!response.ok || !response.body) {
-          throw new Error("Gagal menerima streaming respons dari server");
+        if (!res.ok || !res.body) {
+          throw new Error("Gagal menerima respon streaming dari 9Router LLM.");
         }
 
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder();
-        let accumulated = "";
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let assistantFullContent = "";
 
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
 
-          const textChunk = decoder.decode(value, { stream: true });
-          const lines = textChunk.split("\n");
+          const chunkText = decoder.decode(value, { stream: true });
+          const lines = chunkText.split("\n");
 
           for (const line of lines) {
             if (line.startsWith("data: ")) {
@@ -117,97 +132,68 @@ export function useChat({
               }
               try {
                 const parsed = JSON.parse(dataStr);
-                if (parsed.chunk !== undefined) {
-                  accumulated += parsed.chunk;
-                  setIsThinking(false);
-                  setMessages((prev) =>
-                    prev.map((m) =>
-                      m.id === assistantMsgId
-                        ? { ...m, content: accumulated }
-                        : m
-                    )
-                  );
+                if (parsed.chunk) {
+                  assistantFullContent += parsed.chunk;
+                  setMessages((prev) => {
+                    const updated = prev.map((msg) =>
+                      msg.id === assistantMsgId
+                        ? { ...msg, content: assistantFullContent }
+                        : msg
+                    );
+                    if (onMessagesChange) onMessagesChange(updated);
+                    return updated;
+                  });
                 }
-              } catch (e) {
-                // Ignore JSON parse errors on partial chunks
+              } catch {
+                // Ignore parse errors on partial frames
               }
             }
           }
         }
 
-        // Final save upon stream finish
-        const finalMessages = newMessages.map((m) =>
-          m.id === assistantMsgId ? { ...m, content: accumulated } : m
-        );
-        setMessages(finalMessages);
-        onMessagesChange?.(finalMessages);
-
-        // Persist completed assistant message to backend DB
-        if (conversationId && accumulated) {
-          saveMessageToBackend(conversationId, "assistant", accumulated);
+        // Persist final assistant response to backend SQLite
+        if (assistantFullContent.trim()) {
+          await saveMessageToBackend(conversationId, "assistant", assistantFullContent);
         }
       } catch (err: any) {
         if (err.name === "AbortError") {
-          // Streaming was stopped by user
+          console.log("Stream aborted by user");
         } else {
-          console.error("Chat error:", err);
-          const errorMsg =
-            "\n\n*⚠️ Maaf, terjadi kendala saat menghubungi server backend RuangTI. Pastikan backend aktif.*";
-          setMessages((prev) =>
-            prev.map((m) =>
-              m.id === assistantMsgId
-                ? { ...m, content: (m.content || "") + errorMsg }
-                : m
-            )
-          );
+          console.error("Stream error:", err);
+          const errorMsgContent =
+            "*(Maaf, terjadi kendala saat menghubungi AI Gateway 9Router. Pastikan 9Router aktif di port 20128)*";
+          setMessages((prev) => {
+            const updated = prev.map((msg) =>
+              msg.id === assistantMsgId ? { ...msg, content: errorMsgContent } : msg
+            );
+            if (onMessagesChange) onMessagesChange(updated);
+            return updated;
+          });
         }
       } finally {
         setIsStreaming(false);
-        setIsThinking(false);
         abortControllerRef.current = null;
       }
     },
-    [messages, isStreaming, conversationId, onMessagesChange]
+    [conversationId, isStreaming, messages, onMessagesChange, selectedModel]
   );
 
-  const editMessage = useCallback(
-    async (
-      messageId: string,
-      newContent: string,
-      modelId: ModelOption = "ti-optima"
-    ) => {
-      const idx = messages.findIndex((m) => m.id === messageId);
-      if (idx === -1) return;
-      const historyUntilEdited = messages.slice(0, idx);
-      setMessages(historyUntilEdited);
-      await sendMessage(newContent, modelId);
-    },
-    [messages, sendMessage]
-  );
+  const editMessage = useCallback((id: string, newContent: string) => {
+    setMessages((prev) => prev.map((m) => (m.id === id ? { ...m, content: newContent } : m)));
+  }, []);
 
-  const regenerateMessage = useCallback(
-    async (modelId: ModelOption = "ti-optima") => {
-      if (messages.length === 0 || isStreaming) return;
-      let lastUserIdx = -1;
-      for (let i = messages.length - 1; i >= 0; i--) {
-        if (messages[i].role === "user") {
-          lastUserIdx = i;
-          break;
-        }
-      }
-      if (lastUserIdx === -1) return;
-      const userPrompt = messages[lastUserIdx].content;
-      const historyBeforeUser = messages.slice(0, lastUserIdx);
-      setMessages(historyBeforeUser);
-      await sendMessage(userPrompt, modelId);
-    },
-    [messages, isStreaming, sendMessage]
-  );
+  const regenerateMessage = useCallback((id: string) => {
+    const userMsg = messages.find((m) => m.role === "user");
+    if (userMsg) {
+      sendMessage(userMsg.content);
+    }
+  }, [messages, sendMessage]);
 
   return {
     messages,
     isStreaming,
-    isThinking,
+    selectedModel,
+    setSelectedModel,
     sendMessage,
     stopStreaming,
     editMessage,
