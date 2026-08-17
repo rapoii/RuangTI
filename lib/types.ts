@@ -2,6 +2,10 @@ export type Role = "user" | "assistant" | "system";
 
 export type ModelOption = "ti-optima" | "ti-lean" | "ti-sim";
 
+export type Theme = "light" | "dark";
+
+export type TimeBucket = "Hari ini" | "Kemarin" | "7 hari terakhir" | "Lebih lama";
+
 export interface Message {
   id: string;
   role: Role;
@@ -13,23 +17,33 @@ export interface Message {
 export interface Conversation {
   id: string;
   title: string;
-  modelId?: string;
-  messages: Message[];
-  createdAt: number;
   updatedAt: number;
+  createdAt: number;
+  modelId: string;
+  isPinned?: boolean;
   pinned?: boolean;
+  messages?: Message[];
 }
-
-export type Theme = "light" | "dark";
-
-export type TimeBucket = "Hari ini" | "Kemarin" | "7 hari terakhir" | "Lebih lama";
 
 export interface UserProfile {
   id: string;
   name: string;
   email: string;
-  avatar?: string;
-  plan: "Free" | "Pro" | "Enterprise";
+  phone?: string;
+  address?: string;
+  postalCode?: string;
+  role?: string;
+  institution?: string;
+  plan: string;
   isLoggedIn: boolean;
-  joinedAt?: number;
+  activeModel?: string;
+  avatarUrl?: string;
+  token?: string;
+}
+
+export interface PresetPrompt {
+  title: string;
+  prompt: string;
+  category: "PTLF" | "Lean" | "Inventory" | "Ergonomi" | "Umum";
+  iconName: string;
 }

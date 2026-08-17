@@ -2,16 +2,19 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { UserProfile } from "@/lib/types";
-import { loadUserProfile, saveUserProfile, DEFAULT_USER, GUEST_USER } from "@/lib/storage";
+import { getUserProfile, saveUserProfile, logoutUserProfile } from "@/lib/storage";
 
 export function useProfile() {
-  const [profile, setProfile] = useState<UserProfile>(DEFAULT_USER);
+  const [profile, setProfile] = useState<UserProfile>(() => getUserProfile());
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const p = loadUserProfile();
-    setProfile(p);
     setIsLoaded(true);
+    const handleStorage = () => {
+      setProfile(getUserProfile());
+    };
+    window.addEventListener("storage", handleStorage);
+    return () => window.removeEventListener("storage", handleStorage);
   }, []);
 
   const updateProfile = useCallback((updated: Partial<UserProfile>) => {
@@ -22,22 +25,32 @@ export function useProfile() {
     });
   }, []);
 
-  const login = useCallback((name: string, email: string) => {
-    const user: UserProfile = {
-      id: `usr_${Date.now()}`,
-      name: name || "Rafi Permana",
-      email: email || "user@ruangti.ac.id",
-      plan: "Pro",
-      isLoggedIn: true,
-      joinedAt: Date.now(),
-    };
-    setProfile(user);
-    saveUserProfile(user);
-  }, []);
+  const login = useCallback(
+    (userData: any, emailParam?: string) => {
+      let next: UserProfile;
+      if (typeof userData === "string") {
+        next = {
+          ...profile,
+          name: userData,
+          email: emailParam || "",
+          isLoggedIn: true,
+        };
+      } else {
+        next = {
+          ...profile,
+          ...userData,
+          isLoggedIn: true,
+        };
+      }
+      setProfile(next);
+      saveUserProfile(next);
+    },
+    [profile]
+  );
 
   const logout = useCallback(() => {
-    setProfile(GUEST_USER);
-    saveUserProfile(GUEST_USER);
+    const fresh = logoutUserProfile();
+    setProfile(fresh);
   }, []);
 
   return {

@@ -11,9 +11,13 @@ class User(SQLModel, table=True):
     __tablename__ = "users"
 
     id: str = Field(default_factory=generate_uuid, primary_key=True)
-    name: str = Field(default="Rafi Permana")
-    email: Optional[str] = Field(default=None)
-    role: str = Field(default="Mahasiswa Teknik Industri")
+    name: str = Field(index=True)
+    email: str = Field(unique=True, index=True)
+    hashed_password: str
+    phone: Optional[str] = Field(default=None)
+    address: Optional[str] = Field(default=None)
+    postal_code: Optional[str] = Field(default=None)
+    role: str = Field(default="Mahasiswa")
     institution: str = Field(default="Untirta")
     active_model: str = Field(default="TI-Optima Pro")
     created_at: datetime = Field(default_factory=datetime.utcnow)
@@ -48,7 +52,40 @@ class Message(SQLModel, table=True):
 
     conversation: Optional[Conversation] = Relationship(back_populates="messages")
 
-# ================= Pydantic DTO Schemas =================
+# ================= AUTH DTO SCHEMAS =================
+class UserRegisterRequest(SQLModel):
+    name: str
+    email: str
+    password: str
+    confirm_password: str
+    phone: Optional[str] = None
+    address: Optional[str] = None
+    postal_code: Optional[str] = None
+    role: Optional[str] = "Mahasiswa"
+    institution: Optional[str] = "Untirta"
+
+class UserLoginRequest(SQLModel):
+    email: str
+    password: str
+
+class UserResponse(SQLModel):
+    id: str
+    name: str
+    email: str
+    phone: Optional[str] = None
+    address: Optional[str] = None
+    postal_code: Optional[str] = None
+    role: str
+    institution: str
+    plan: str = "Pro"
+    created_at: datetime
+
+class AuthResponse(SQLModel):
+    access_token: str
+    token_type: str = "bearer"
+    user: UserResponse
+
+# ================= CONVERSATION / MESSAGE DTOs =================
 class ConversationCreate(SQLModel):
     title: Optional[str] = "Konsultasi TI Baru"
     model_id: Optional[str] = "TI-Optima Pro"

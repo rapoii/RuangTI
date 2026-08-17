@@ -1,34 +1,39 @@
 import { UserProfile } from "./types";
 
+export const GUEST_USER: UserProfile = {
+  id: "guest",
+  name: "Tamu",
+  email: "",
+  plan: "Free",
+  isLoggedIn: false,
+  role: "Mahasiswa",
+  institution: "Untirta",
+};
+
 export const DEFAULT_USER: UserProfile = {
   id: "usr_rafi",
   name: "Rafi Permana",
   email: "rafi.permana@untirta.ac.id",
+  phone: "081298765432",
+  address: "Kampus Cilegon FT Untirta, Jl. Jenderal Sudirman Km 3",
+  postalCode: "42435",
+  role: "Mahasiswa",
+  institution: "Universitas Sultan Ageng Tirtayasa",
   plan: "Pro",
   isLoggedIn: true,
-  joinedAt: Date.now() - 30 * 24 * 60 * 60 * 1000,
+  activeModel: "TI-Optima Pro",
 };
 
-export const GUEST_USER: UserProfile = {
-  id: "usr_guest",
-  name: "Tamu RuangTI",
-  email: "guest@ruangti.ac.id",
-  plan: "Free",
-  isLoggedIn: false,
-};
+const USER_PROFILE_KEY = "ruangti_user_profile_v2";
 
-const USER_PROFILE_KEY = "ruangti_user_profile_v1";
-
-export function loadUserProfile(): UserProfile {
-  if (typeof window === "undefined") return GUEST_USER;
+export function getUserProfile(): UserProfile {
+  if (typeof window === "undefined") return DEFAULT_USER;
   try {
     const raw = localStorage.getItem(USER_PROFILE_KEY);
-    if (!raw) {
-      return GUEST_USER;
-    }
+    if (!raw) return DEFAULT_USER;
     return JSON.parse(raw);
-  } catch (e) {
-    return GUEST_USER;
+  } catch {
+    return DEFAULT_USER;
   }
 }
 
@@ -36,7 +41,17 @@ export function saveUserProfile(profile: UserProfile): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(USER_PROFILE_KEY, JSON.stringify(profile));
-  } catch (e) {
-    console.error("Gagal menyimpan profil:", e);
+  } catch (err) {
+    console.error("Failed to save user profile:", err);
   }
+}
+
+export function logoutUserProfile(): UserProfile {
+  if (typeof window === "undefined") return GUEST_USER;
+  try {
+    localStorage.setItem(USER_PROFILE_KEY, JSON.stringify(GUEST_USER));
+  } catch (err) {
+    console.error("Failed to logout user profile:", err);
+  }
+  return GUEST_USER;
 }

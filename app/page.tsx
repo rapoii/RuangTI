@@ -14,8 +14,8 @@ export default function LandingPage() {
   const profileState = useProfile();
   const [isAuthOpen, setIsAuthOpen] = useState(false);
 
-  const handleLoginSuccess = (name: string, email: string) => {
-    profileState.login(name, email);
+  const handleLoginSuccess = (userProfileData: any) => {
+    profileState.login(userProfileData);
     // Otomatis redirect ke /chat setelah login sukses
     router.push("/chat");
   };

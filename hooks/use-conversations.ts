@@ -52,7 +52,7 @@ export function useConversations() {
       setActiveIdState(id);
       // Fetch messages for selected conversation if not loaded yet
       const current = conversations.find((c) => c.id === id);
-      if (current && current.messages.length === 0) {
+      if (current && (!current.messages || current.messages.length === 0)) {
         const msgs = await fetchMessagesFromBackend(id);
         setConversations((prev) =>
           prev.map((c) => (c.id === id ? { ...c, messages: msgs } : c))
@@ -153,7 +153,7 @@ export function useConversations() {
     if (!searchQuery.trim()) return true;
     const q = searchQuery.toLowerCase();
     const matchesTitle = c.title.toLowerCase().includes(q);
-    const matchesMessage = c.messages.some((m) =>
+    const matchesMessage = (c.messages || []).some((m: Message) =>
       m.content.toLowerCase().includes(q)
     );
     return matchesTitle || matchesMessage;

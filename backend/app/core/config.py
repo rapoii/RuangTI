@@ -8,8 +8,19 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     
-    # SQLite Database URI (Async)
-    DATABASE_URL: str = "sqlite+aiosqlite:///./data/ruangti.db"
+    # SQLite Database URI (Async) - ruangti_auth.db
+    DATABASE_URL: str = "sqlite+aiosqlite:///./data/ruangti_auth.db"
+    
+    # JWT Auth Configuration
+    JWT_SECRET_KEY: str = "ruangti_secret_super_key_jwt_untirta_2026_industrial"
+    JWT_ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7 # 7 Hari
+    
+    # Untirta Allowed Email Domains
+    ALLOWED_EMAIL_DOMAINS: List[str] = [
+        "untirta.ac.id",
+        "student.untirta.ac.id"
+    ]
     
     # CORS Origins for Localhost & Wi-Fi LAN
     CORS_ORIGINS: List[str] = [
