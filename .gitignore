@@ -28,6 +28,21 @@ yarn-error.log*
 .env*.local
 .env
 .env.production
+backend/.env
+
+# Database & SQLite files
+backend/data/*.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
+*.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
 
 # TypeScript build info
 *.tsbuildinfo
