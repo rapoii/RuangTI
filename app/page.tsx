@@ -42,6 +42,28 @@ export default function LandingPage() {
         onClose={() => setIsAuthOpen(false)}
         onLoginSuccess={handleLoginSuccess}
       />
+      {/* Scrollbar Custom & Anti-Slop Tokens */}
+      <style jsx global>{`
+        /* Smooth Scrolling */
+        html {
+          scroll-behavior: smooth;
+        }
+        /* Custom Clean Scrollbar */
+        ::-webkit-scrollbar {
+          width: 6px;
+          height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: var(--border);
+          border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: var(--text-secondary);
+        }
+      `}</style>
     </div>
   );
 }
