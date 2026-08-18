@@ -125,7 +125,9 @@ IE_THESAURUS = {
     "rcm": ["reliability centered maintenance", "perawatan berbasis keandalan", "moubray", "cbm", "condition based maintenance", "run to failure", "failure finding", "p-f interval", "rcm 4.0"],
     "craft": ["computerized relative allocation of facilities technique", "pairwise interchange", "ptlf", "mhc", "material handling cost", "improvement algorithm", "armour buffa", "jarak rectilinear"],
     "aldep": ["automated layout design program", "construction algorithm", "sweep method", "closeness rating", "arc", "tata letak fasilitas"],
-    "corelap": ["computerized relationship layout planning", "tcr", "total closeness rating", "construction algorithm", "tata letak fasilitas"]
+    "corelap": ["computerized relationship layout planning", "tcr", "total closeness rating", "construction algorithm", "tata letak fasilitas"],
+    "game theory": ["teori permainan", "supply chain coordination", "nash equilibrium", "stackelberg", "double marginalization", "cournot", "bertrand", "shapley value"],
+    "teori permainan": ["game theory", "nash equilibrium", "shapley value", "double marginalization", "supply chain contracts", "revenue sharing contract"]
 }
 
 def clean_text(text: str) -> str:
