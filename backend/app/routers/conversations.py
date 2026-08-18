@@ -3,10 +3,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
 from typing import List, Optional
 from datetime import datetime
-import jwt
 
 from app.core.database import get_session
-from app.core.security import SECRET_KEY, ALGORITHM
+from app.core.security import decode_access_token
 from app.models.schema import Conversation, ConversationCreate, ConversationUpdate
 
 router = APIRouter(prefix="/api/conversations", tags=["Conversations"])
@@ -15,11 +14,10 @@ async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> O
     if not authorization or not authorization.startswith("Bearer "):
         return None
     token = authorization.split(" ")[1]
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    payload = decode_access_token(token)
+    if payload:
         return payload.get("sub")
-    except Exception:
-        return None
+    return None
 
 @router.get("", response_model=List[Conversation])
 async def list_conversations(
