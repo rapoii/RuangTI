@@ -8,19 +8,19 @@ from app.rag.engine import rag_engine
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://localhost:20128/v1")
 ROUTER_9_MODEL = "gcli/grok-4.5-high(xhigh)"
 
-BASE_SYSTEM_PROMPT = """Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri untuk sivitas akademika Universitas Sultan Ageng Tirtayasa (Untirta) dan praktisi industri.
+BASE_SYSTEM_PROMPT = """Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri kelas dunia.
 
 Karakteristik & Prinsip Menjawab:
-1. Domain Keilmuan: Kuasai Perancangan Tata Letak Fasilitas (PTLF), Supply Chain Management & Inventory (EOQ, ROP), Lean Six Sigma & QC (DMAIC, SPC, FMEA, DPMO), Ergonomi & Work Design (Westinghouse Rating, Waktu Baku, REBA/RULA), Riset Operasi (Linear Programming, Simplex, Transportasi), dan Simulasi Sistem Industri.
+1. Domain Keilmuan: Kuasai Perancangan Tata Letak Fasilitas & Material Handling (SLP, ARC, CRAFT, MHC), Manajemen Rantai Pasok & Pengendalian Persediaan (EOQ, EPQ, ROP, Safety Stock, MRP), Lean Six Sigma & Pengendalian Mutu Statistik (SPC, Peta Kendali, Kapabilitas Proses Cp/Cpk, DPMO, DMAIC), Ergonomi & Pengukuran Kerja (Time Study, Rating Westinghouse, Kelonggaran/Allowance, Waktu Baku, REBA/RULA, Antropometri), Riset Operasional & Optimasi (Linier Programming Simplex, Model Transportasi, Teori Antrian), serta Ekonomi Teknik (Kelayakan Investasi NPV, IRR, B/C Ratio, Depresiasi).
 2. Penulisan Matematika: Gunakan KaTeX / LaTeX standar. Tuliskan formula matematika di dalam blok $$ ... $$ untuk persamaan utama atau $ ... $ untuk variabel inline.
-3. Basis Pengetahuan Terverifikasi (RAG Context): Jika konteks referensi materi akademik disertakan, prioritaskan formula, metodologi, standar tabel, dan notasi resmi yang tercantum di referensi tersebut.
+3. Basis Pengetahuan Terverifikasi (RAG Context): Manfaatkan buku teks dan standar industri internasional yang disertakan (Montgomery, Tompkins, Ralph Barnes, Hamdy Taha, Heizer-Render, Blank-Tarquin) untuk memberikan jawaban matematis yang presisi beserta nilai konstanta tabel yang tepat.
 4. Gaya Bahasa: Bahasa Indonesia profesional, presisi, solutif, analitis, dan sistematis.
 5. Struktur Jawaban:
    - **Identifikasi Masalah / Pendekatan Metodologi**
    - **Formulasi Matematis & Parameter** (Gunakan $$ ... $$)
    - **Langkah Komputasi & Solusi**
    - **Interpretasi & Rekomendasi Manajerial / Implementasi Lapangan**
-   - **Referensi Kurikulum / Modul Terkait** (Sebutkan modul akademik terkait jika ada di context)
+   - **Referensi Literatur Ilmiah Terkait** (Cantumkan referensi buku/jurnal standar internasional yang relevan)
 """
 
 async def stream_grok_ai_response(
@@ -30,22 +30,22 @@ async def stream_grok_ai_response(
 ) -> AsyncGenerator[str, None]:
     """
     Streaming AI response langsung dari 9Router LLM Proxy menggunakan model 'gcli/grok-4.5-high(xhigh)'
-    diperkaya dengan Retrieval-Augmented Generation (RAG) dari 74+ Modul Teknik Industri Untirta.
+    diperkaya dengan RAG dari buku referensi & modul keilmuan Teknik Industri internasional.
     """
     # 1. Retrieve Knowledge Base Chunks (RAG)
     rag_chunks = rag_engine.search(prompt, top_k=3)
     
     rag_context_text = ""
     if rag_chunks:
-        rag_context_text = "\n\n=== [BASIS PENGETAHUAN & DOKUMEN REFERENSI TEKNIK INDUSTRI] ===\n"
+        rag_context_text = "\n\n=== [REFERENSI LITERATUR & BUKU TEKS STANDAR TEKNIK INDUSTRI] ===\n"
         for idx, chunk in enumerate(rag_chunks, 1):
-            rag_context_text += f"\n--- [Dokumen #{idx}: {chunk['title']} (Sumber: {chunk['doc_path']})] ---\n"
+            rag_context_text += f"\n--- [Referensi #{idx}: {chunk['title']} (Sumber Buku: {chunk['source']})] ---\n"
             rag_context_text += f"{chunk['content']}\n"
-        rag_context_text += "\n=== [AKHIR REFERENSI PENGETAHUAN] ===\n"
+        rag_context_text += "\n=== [AKHIR REFERENSI LITERATUR] ===\n"
 
     system_prompt = BASE_SYSTEM_PROMPT
     if rag_context_text:
-        system_prompt += f"\nBerikut adalah referensi materi akademik terverifikasi yang relevan dengan pertanyaan user. Gunakan referensi ini untuk memastikan jawabanmu 100% akurat dan matematis:\n{rag_context_text}"
+        system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
 
     messages = [{"role": "system", "content": system_prompt}]
     
@@ -55,7 +55,6 @@ async def stream_grok_ai_response(
             
     messages.append({"role": "user", "content": prompt})
 
-    # Kirim ke 9Router
     payload = {
         "model": ROUTER_9_MODEL,
         "messages": messages,

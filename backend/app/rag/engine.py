@@ -2,21 +2,68 @@ import os
 import re
 import json
 import sqlite3
-import math
-from typing import List, Dict, Any, Tuple
-from collections import Counter
+from typing import List, Dict, Any
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "ruangti_rag.db")
-ACADEMIC_PATH = "D:/Software/Hermes Workspace/projects/academic/teknik-industri"
+KNOWLEDGE_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "knowledge")
+
+# Thesaurus & Sinonim Teknik Industri untuk Query Expansion
+IE_THESAURUS = {
+    "ptlf": ["tata letak fasilitas", "plant layout", "from-to chart", "activity relationship chart", "arc", "mhc", "material handling cost", "craft", "muther", "slp"],
+    "tata letak": ["ptlf", "plant layout", "from-to chart", "activity relationship chart", "arc", "mhc", "craft", "slp"],
+    "mhc": ["ongkos material handling", "material handling cost", "from-to chart", "ptlf", "jarak rectilinear"],
+    "arc": ["activity relationship chart", "tcr", "total closeness rating", "muther", "closeness rating", "sandi a e i o u x"],
+    "craft": ["layout optimization", "pairwise interchange", "ptlf", "heuristic layout"],
+    "spc": ["statistical process control", "peta kendali", "control chart", "x-bar r", "x-bar s", "ucl", "lcl", "nelson rules", "montgomery"],
+    "peta kendali": ["spc", "statistical process control", "x-bar r", "x-bar s", "ucl", "lcl", "nelson rules", "cp", "cpk"],
+    "six sigma": ["dpmo", "dmaic", "cpk", "sigma level", "quality control", "cacat per sejuta peluang"],
+    "dpmo": ["defects per million opportunities", "six sigma", "dpo", "yield", "cacat"],
+    "cpk": ["process capability", "kapabilitas proses", "cp", "usl", "lsl", "montgomery"],
+    "waktu baku": ["time study", "jam henti", "waktu siklus", "waktu normal", "westinghouse", "allowance", "kelonggaran", "barnes"],
+    "jam henti": ["stopwatch time study", "waktu baku", "uji keseragaman data", "uji kecukupan data", "westinghouse"],
+    "westinghouse": ["rating factor", "penyesuaian performa", "skill effort conditions consistency", "waktu normal"],
+    "allowance": ["kelonggaran", "waktu baku", "ilo allowance", "fatigue", "personal needs"],
+    "reba": ["rapid entire body assessment", "biomekanika", "postur kerja", "ergonomi", "risiko musculoskeletal"],
+    "rula": ["rapid upper limb assessment", "ergonomi", "postur kerja", "anggota gerak atas"],
+    "antropometri": ["persentil 5 50 95", "dimensi stasiun kerja", "ergonomi desain meja", "clearance reach"],
+    "eoq": ["economic order quantity", "persediaan", "inventory control", "holding cost", "ordering cost", "tic"],
+    "rop": ["reorder point", "titik pemesanan kembali", "safety stock", "lead time", "service level z"],
+    "safety stock": ["persediaan pengaman", "rop", "service level", "faktor z normal", "lead time"],
+    "simplex": ["simpleks", "linear programming", "pemrograman linier", "fungsi tujuan", "slack variable", "shadow price", "taha"],
+    "transportasi": ["model distribusi", "vam", "vogel", "modi", "stepping stone", "north west corner"],
+    "antrian": ["queueing theory", "m/m/1", "laju kedatangan lambda", "laju pelayanan mu", "utilisasi rho", "panjang antrian lq"],
+    "npv": ["net present value", "present worth", "kelayakan investasi", "marr", "cash flow", "ekonomi teknik"],
+    "irr": ["internal rate of return", "suku bunga pengembalian", "npv 0", "ekonomi teknik", "interpolasi linier"],
+    "depresiasi": ["penyusutan aset", "straight line", "double declining balance", "nilai buku", "salvage value"]
+}
 
 def clean_text(text: str) -> str:
-    # Normalize whitespaces
     return re.sub(r'\s+', ' ', text).strip()
 
 def tokenize(text: str) -> List[str]:
-    # Lowercase, retain alphanumeric and math symbols
-    words = re.findall(r'[a-zA-Z0-9_\-\$\\]+', text.lower())
+    words = re.findall(r'[a-zA-Z0-9_\-\$\\\%]+', text.lower())
     return [w for w in words if len(w) > 1]
+
+def expand_query(query: str) -> str:
+    """
+    Ekspansi query menggunakan IE Thesaurus agar menangkap sinonim & istilah teknis standar industri.
+    """
+    q_lower = query.lower()
+    terms = set(tokenize(q_lower))
+    
+    expanded_terms = set(terms)
+    for key, synonyms in IE_THESAURUS.items():
+        if key in q_lower or any(t in terms for t in key.split()):
+            for syn in synonyms:
+                expanded_terms.update(tokenize(syn))
+
+    # Bangun query FTS5 berbobot
+    fts_parts = []
+    for t in list(expanded_terms)[:15]:
+        if len(t) > 1:
+            fts_parts.append(f'"{t}"*')
+            
+    return " OR ".join(fts_parts) if fts_parts else query
 
 class IndustrialEngineeringRAG:
     def __init__(self, db_path: str = DB_PATH):
@@ -27,36 +74,34 @@ class IndustrialEngineeringRAG:
     def _init_db(self):
         with sqlite3.connect(self.db_path) as conn:
             c = conn.cursor()
-            # Table chunks
             c.execute("""
                 CREATE TABLE IF NOT EXISTS knowledge_chunks (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    doc_path TEXT,
-                    category TEXT,
-                    title TEXT,
+                    topic_title TEXT,
+                    reference_source TEXT,
                     chunk_index INTEGER,
                     content TEXT,
+                    has_formula INTEGER,
                     token_count INTEGER,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
             """)
-            # FTS5 Virtual Table for full-text BM25 search
             c.execute("""
                 CREATE VIRTUAL TABLE IF NOT EXISTS knowledge_fts USING fts5(
-                    title,
-                    category,
+                    topic_title,
+                    reference_source,
                     content,
                     tokenize='porter unicode61'
                 )
             """)
             conn.commit()
 
-    def build_index(self, academic_dir: str = ACADEMIC_PATH):
+    def build_index(self, knowledge_dir: str = KNOWLEDGE_DIR):
         """
-        Scan all 74+ markdown files, extract semantic chunks with formulas, and index to FTS5 & SQLite.
+        Scan modul ilmu teknik industri murni & buku referensi internasional, indeks ke SQLite FTS5.
         """
-        if not os.path.exists(academic_dir):
-            print(f"Directory not found: {academic_dir}")
+        if not os.path.exists(knowledge_dir):
+            print(f"Directory not found: {knowledge_dir}")
             return
 
         with sqlite3.connect(self.db_path) as conn:
@@ -68,16 +113,11 @@ class IndustrialEngineeringRAG:
             indexed_files = 0
             indexed_chunks = 0
 
-            for root, _, files in os.walk(academic_dir):
+            for root, _, files in os.walk(knowledge_dir):
                 for file in files:
                     if not file.endswith(".md"):
                         continue
                     full_path = os.path.join(root, file)
-                    rel_path = os.path.relpath(full_path, academic_dir)
-
-                    # Determine category (Semester / Peminatan / Dasar)
-                    parts = rel_path.split(os.sep)
-                    category = parts[0] if len(parts) > 1 else "Fondasi Umum"
 
                     try:
                         with open(full_path, "r", encoding="utf-8") as f:
@@ -86,37 +126,40 @@ class IndustrialEngineeringRAG:
                         print(f"Error reading {full_path}: {e}")
                         continue
 
-                    # Extract Document Title
+                    # Extract Topic Title
                     title_match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
-                    doc_title = title_match.group(1) if title_match else file.replace(".md", "").replace("-", " ").title()
+                    main_topic = title_match.group(1) if title_match else file.replace(".md", "").title()
 
-                    # Chunk by Sections (## / ###) to preserve formulas and tabular contexts
+                    # Extract Reference Source
+                    ref_match = re.search(r'\*\*Sumber Referensi:\*\*\s*(.+)$', text, re.MULTILINE)
+                    ref_source = ref_match.group(1) if ref_match else "Standard Industrial Engineering Textbook & Handbook"
+
+                    # Chunk by Sections (##)
                     sections = re.split(r'\n(?=##+\s+)', text)
                     chunk_idx = 0
 
                     for section in sections:
                         sec_text = section.strip()
-                        if len(sec_text) < 50:
+                        if len(sec_text) < 40:
                             continue
 
-                        # Sub-header extraction
-                        sub_header_match = re.search(r'^##+\s+(.+)$', sec_text, re.MULTILINE)
-                        chunk_title = f"{doc_title} — {sub_header_match.group(1)}" if sub_header_match else doc_title
+                        sub_match = re.search(r'^##+\s+(.+)$', sec_text, re.MULTILINE)
+                        chunk_topic = f"{main_topic} — {sub_match.group(1)}" if sub_match else main_topic
 
+                        has_formula = 1 if "$$" in sec_text or "$" in sec_text or "∑" in sec_text or "√" in sec_text else 0
                         tokens = tokenize(sec_text)
-                        
+
                         c.execute("""
-                            INSERT INTO knowledge_chunks (doc_path, category, title, chunk_index, content, token_count)
+                            INSERT INTO knowledge_chunks (topic_title, reference_source, chunk_index, content, has_formula, token_count)
                             VALUES (?, ?, ?, ?, ?, ?)
-                        """, (rel_path, category, chunk_title, chunk_idx, sec_text, len(tokens)))
-                        
+                        """, (chunk_topic, ref_source, chunk_idx, sec_text, has_formula, len(tokens)))
+
                         chunk_id = c.lastrowid
 
-                        # Insert into FTS5
                         c.execute("""
-                            INSERT INTO knowledge_fts (rowid, title, category, content)
+                            INSERT INTO knowledge_fts (rowid, topic_title, reference_source, content)
                             VALUES (?, ?, ?, ?)
-                        """, (chunk_id, chunk_title, category, sec_text))
+                        """, (chunk_id, chunk_topic, ref_source, sec_text))
 
                         chunk_idx += 1
                         indexed_chunks += 1
@@ -124,45 +167,38 @@ class IndustrialEngineeringRAG:
                     indexed_files += 1
 
             conn.commit()
-            print(f"✅ RAG Indexed: {indexed_files} files, {indexed_chunks} semantic chunks stored in SQLite FTS5.")
+            print(f"✅ RAG Indexed: {indexed_files} pure IE master modules, {indexed_chunks} semantic sections indexed.")
 
-    def search(self, query: str, top_k: int = 4) -> List[Dict[str, Any]]:
+    def search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
         """
-        BM25 + Semantic scoring search on knowledge_fts.
+        High-Precision Industrial Engineering BM25 + Thesaurus Re-ranking.
         """
-        # Clean query for FTS5
-        clean_q = re.sub(r'[^a-zA-Z0-9\s]', ' ', query)
-        words = clean_q.split()
-        if not words:
-            return []
-
-        fts_query = " OR ".join([f'"{w}"*' for w in words if len(w) > 1])
+        fts_query = expand_query(query)
 
         results = []
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = sqlite3.Row
             c = conn.cursor()
             try:
-                # FTS5 bm25 ranking
                 c.execute("""
-                    SELECT c.id, c.doc_path, c.category, c.title, c.content, bm25(knowledge_fts) as rank
+                    SELECT c.id, c.topic_title, c.reference_source, c.content, c.has_formula, bm25(knowledge_fts) as rank
                     FROM knowledge_fts f
                     JOIN knowledge_chunks c ON f.rowid = c.id
                     WHERE knowledge_fts MATCH ?
                     ORDER BY rank ASC
                     LIMIT ?
-                """, (fts_query, top_k * 2))
-                
+                """, (fts_query, top_k * 3))
+
                 rows = c.fetchall()
-                
-                # Re-rank based on keyword match density & formula density
-                q_tokens = set(tokenize(query))
+
+                q_tokens = set(tokenize(query.lower()))
                 scored_rows = []
                 for row in rows:
-                    content_tokens = tokenize(row["content"])
+                    content_tokens = tokenize(row["content"].lower())
                     overlap = sum(1 for t in q_tokens if t in content_tokens)
-                    formula_bonus = 1.2 if "$$" in row["content"] or "$" in row["content"] else 1.0
-                    final_score = (1.0 / (abs(row["rank"]) + 1.0)) * (overlap + 1) * formula_bonus
+                    formula_multiplier = 1.3 if row["has_formula"] else 1.0
+                    
+                    final_score = (1.0 / (abs(row["rank"]) + 1.0)) * (overlap + 2) * formula_multiplier
                     scored_rows.append((final_score, row))
 
                 scored_rows.sort(key=lambda x: x[0], reverse=True)
@@ -170,42 +206,43 @@ class IndustrialEngineeringRAG:
                 for score, row in scored_rows[:top_k]:
                     results.append({
                         "id": row["id"],
-                        "doc_path": row["doc_path"],
-                        "category": row["category"],
-                        "title": row["title"],
+                        "title": row["topic_title"],
+                        "source": row["reference_source"],
                         "content": row["content"],
+                        "has_formula": bool(row["has_formula"]),
                         "score": round(score, 3)
                     })
 
             except Exception as e:
                 print(f"Search error: {e}")
-                # Fallback to LIKE query if FTS syntax error
+                # Fallback to pure substring match
+                first_word = tokenize(query)[0] if tokenize(query) else "teknik"
                 c.execute("""
-                    SELECT id, doc_path, category, title, content
+                    SELECT id, topic_title, reference_source, content, has_formula
                     FROM knowledge_chunks
-                    WHERE content LIKE ? OR title LIKE ?
+                    WHERE content LIKE ? OR topic_title LIKE ?
                     LIMIT ?
-                """, (f"%{words[0]}%", f"%{words[0]}%", top_k))
+                """, (f"%{first_word}%", f"%{first_word}%", top_k))
                 for row in c.fetchall():
                     results.append({
                         "id": row["id"],
-                        "doc_path": row["doc_path"],
-                        "category": row["category"],
-                        "title": row["title"],
+                        "title": row["topic_title"],
+                        "source": row["reference_source"],
                         "content": row["content"],
+                        "has_formula": bool(row["has_formula"]),
                         "score": 1.0
                     })
 
         return results
 
-# Singleton instance
 rag_engine = IndustrialEngineeringRAG()
 
 if __name__ == "__main__":
-    print("Building RAG Index from Academic Knowledge Base...")
+    print("Rebuilding RAG with Pure Industrial Engineering Master Modules...")
     rag_engine.build_index()
-    print("\nTesting Search Query: 'Hitung EOQ dan Safety Stock'")
-    res = rag_engine.search("Hitung EOQ dan Safety Stock", top_k=2)
-    for idx, r in enumerate(res, 1):
-        print(f"\n--- Result #{idx}: {r['title']} (Score: {r['score']}) ---")
-        print(r['content'][:300] + "...")
+    print("\n--- Test 1: Query 'cara hitung waktu baku dan allowance jam henti' ---")
+    for r in rag_engine.search("cara hitung waktu baku dan allowance jam henti", top_k=2):
+        print(f"[{r['score']}] {r['title']} -> Sumber: {r['source']}")
+    print("\n--- Test 2: Query 'tabel batas kendali spc x-bar r konstanta A2 D4' ---")
+    for r in rag_engine.search("tabel batas kendali spc x-bar r konstanta A2 D4", top_k=2):
+        print(f"[{r['score']}] {r['title']} -> Sumber: {r['source']}")
