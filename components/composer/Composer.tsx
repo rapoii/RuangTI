@@ -125,9 +125,9 @@ export function Composer({
         {/* Web Search Status Indicator */}
         {webSearchEnabled && (
           <div className="text-center mt-1">
-            <span className="text-[10px] sm:text-[11px] text-accent font-medium tracking-wide inline-flex items-center gap-1.5">
+            <span className="text-[10px] sm:text-[11px] text-accent font-medium inline-flex items-center gap-1.5 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              Live Web Search Multi-Crawl Aktif (Top 5 Sumber + Deep Extract)
+              Smart & Dynamic Web Search Aktif (Memindai hingga 50 Website + Kurasi Otomatis)
             </span>
           </div>
         )}

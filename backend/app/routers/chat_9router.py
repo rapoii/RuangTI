@@ -55,11 +55,12 @@ async def stream_grok_ai_response(
             rag_context_text += f"{chunk['content']}\n"
         rag_context_text += "\n=== [AKHIR REFERENSI LITERATUR] ===\n"
 
-    # 2. Web Search via Multi-Source Crawler (Parallel Top-2 Deep Extract)
+    # 2. Web Search via Smart & Dynamic Multi-Page Crawler (Up to 50 Candidates, Dynamic Filtering)
     web_context_text = ""
+    websources_meta_tag = ""
     if web_search_enabled:
         try:
-            # Query Formulation: If user prompt is a follow-up ("cari lagi", "sumber lain", etc.), combine with previous context
+            # Query Formulation: Follow-up handling
             effective_search_query = prompt
             followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain", "website lain", "cari yang lain", "coba cari lagi"]
             if history and any(t in prompt.lower() for t in followup_triggers):
@@ -67,19 +68,36 @@ async def stream_grok_ai_response(
                 if prev_user_queries:
                     effective_search_query = f"{prev_user_queries[-1]} {prompt}"
 
-            search_results = await cdp_manager.search_google(effective_search_query, max_results=5)
-            if search_results:
-                # Kirim status live sources ke stream SSE sebelum token AI mulai
-                yield f"<!--WEBSOURCES:{json.dumps(search_results[:5])}-->"
+            try:
+                search_candidates = await cdp_manager.search_smart(effective_search_query, max_candidate_limit=50)
+            except Exception as e:
+                logger.warning(f"search_smart error: {e}")
+                search_candidates = []
 
-                web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU & DAFTAR SITASI (LIVE)] ===\n"
-                for i, res in enumerate(search_results, 1):
+            if search_candidates:
+                prompt_word_count = len(prompt.split())
+                is_complex = any(k in prompt.lower() for k in ["bandingkan", "vs", "komparasi", "analisis", "perbedaan", "standar", "metode", "optimasi"]) or prompt_word_count > 6
+
+                if is_complex:
+                    selected_sources_count = min(len(search_candidates), 6)
+                elif prompt_word_count <= 4:
+                    selected_sources_count = min(len(search_candidates), 3)
+                else:
+                    selected_sources_count = min(len(search_candidates), 4)
+
+                final_sources = search_candidates[:selected_sources_count]
+
+                # Simpan metadata visual sources tag untuk disuntikkan di awal token
+                websources_meta_tag = f"<!--WEBSOURCES:{json.dumps(final_sources)}-->"
+
+                web_context_text = f"\n\n=== [HASIL SMART WEB SEARCH: {len(search_candidates)} WEBSITE DIPINDAI, {len(final_sources)} SUMBER UTAMA DIPILIH SECARA DINAMIS] ===\n"
+                for i, res in enumerate(final_sources, 1):
                     web_context_text += f"\n[Sumber #{i}]: {res.get('title', 'Unknown Source')}\n"
                     web_context_text += f"URL: {res.get('url', '')}\n"
                     web_context_text += f"Snippet: {res.get('snippet', '')}\n"
 
-                # Parallel Deep Crawl Top 2 URLs with tight 4s timeout per page
-                deep_urls = [r['url'] for r in search_results[:2] if r.get('url')]
+                # Parallel Deep Crawl Top 2-3 Selected URLs (timeout 4s)
+                deep_urls = [r['url'] for r in final_sources[:3] if r.get('url')]
                 if deep_urls:
                     crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=4.0) for u in deep_urls]
                     pages_content = await asyncio.gather(*crawl_tasks, return_exceptions=True)
@@ -91,7 +109,7 @@ async def stream_grok_ai_response(
                 web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
                 web_context_text += """
 *ATURAN PENULISAN SITASI & SUMBER WEB:*
-1. Apabila kamu mengutip data/fakta dari hasil pencarian web di atas, gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)`, `[2](URL_SUMBER_2)` (gunakan satu pasang kurung siku biasa).
+1. Apabila kamu mengutip data/fakta dari hasil pencarian web di atas, gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)`, `[2](URL_SUMBER_2)`.
 2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian **Sumber Web Terkini:** dengan format bersih:
    - [1] [Judul Sumber Web 1](URL_SUMBER_1)
    - [2] [Judul Sumber Web 2](URL_SUMBER_2)
@@ -131,6 +149,10 @@ async def stream_grok_ai_response(
 
     async with httpx.AsyncClient(timeout=90.0) as client:
         try:
+            # Emit websources meta tag SEBELUM AI response streaming dimulai
+            if websources_meta_tag:
+                yield websources_meta_tag
+
             async with client.stream("POST", url, json=payload, headers={"Content-Type": "application/json"}) as response:
                 if response.status_code != 200:
                     err_text = await response.aread()

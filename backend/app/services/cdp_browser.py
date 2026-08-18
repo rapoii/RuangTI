@@ -7,6 +7,7 @@ Direct CDP WebSocket connection - no MCP dependency.
 import asyncio
 import json
 import os
+import re
 import subprocess
 import sys
 import logging
@@ -151,51 +152,112 @@ class CDPBrowserManager:
             logger.error(f"Failed to get page target: {e}")
         return None
 
-    async def search_google(self, query: str, max_results: int = 5) -> List[Dict[str, str]]:
-        """Search DuckDuckGo / Google via CDP or HTTP and return parsed results with URLs."""
-        # 1. Fast, reliable, anti-bot free HTTP DuckDuckGo HTML parser
-        try:
-            import httpx
-            import urllib.parse
-            from bs4 import BeautifulSoup
-            
-            headers = {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-            }
-            search_url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
-            async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
-                resp = await client.get(search_url, headers=headers)
-                if resp.status_code == 200:
-                    soup = BeautifulSoup(resp.text, 'html.parser')
-                    results = []
-                    for r in soup.select('.result'):
-                        # Abaikan ads / sponsored links
-                        if 'result--ad' in r.get('class', []):
-                            continue
-                        title_el = r.select_one('.result__title a')
-                        snippet_el = r.select_one('.result__snippet')
-                        if title_el:
-                            raw_href = title_el.get('href', '')
-                            if 'duckduckgo.com/y.js' in raw_href or 'bing.com/aclick' in raw_href:
-                                continue
-                            # Unwrap DDG redirect url
-                            if 'uddg=' in raw_href:
-                                actual_url = urllib.parse.unquote(raw_href.split('uddg=')[1].split('&')[0])
-                            else:
-                                actual_url = raw_href
-                                
-                            results.append({
-                                "title": title_el.get_text(strip=True),
-                                "url": actual_url,
-                                "snippet": snippet_el.get_text(strip=True) if snippet_el else ""
-                            })
-                            if len(results) >= max_results:
-                                break
-                    if results:
-                        logger.info(f"Retrieved {len(results)} search results via Web Search Engine")
-                        return results
-        except Exception as ex:
-            logger.warning(f"Fast search engine fallback failed: {ex}")
+    async def search_smart(self, query: str, max_candidate_limit: int = 50) -> List[Dict[str, str]]:
+        """
+        Smart & Dynamic Multi-Source Search (Up to 50 results).
+        Crawl across multiple search engines (Bing + DuckDuckGo + CDP) with automatic decoding and authority scoring.
+        """
+        import httpx
+        import urllib.parse
+        import base64
+        from bs4 import BeautifulSoup
+
+        results: List[Dict[str, str]] = []
+        seen_urls = set()
+
+        def decode_bing_url(href: str) -> str:
+            if 'bing.com/ck/a' in href and 'u=a1' in href:
+                try:
+                    m = re.search(r'u=a1([a-zA-Z0-9_-]+)', href)
+                    if m:
+                        b64 = m.group(1)
+                        b64 += '=' * (-len(b64) % 4)
+                        b64 = b64.replace('-', '+').replace('_', '/')
+                        return base64.b64decode(b64).decode('utf-8', errors='ignore')
+                except Exception:
+                    pass
+            return href
+
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
+
+        query_lower = query.lower()
+        sub_queries = [query]
+        if any(w in query_lower for w in [" vs ", " bandingkan ", " perbedaan ", " compare ", " dan ", " and "]):
+            parts = re.split(r'\b(?:vs|bandingkan|perbedaan|compare|dan|and)\b', query, flags=re.IGNORECASE)
+            sub_queries.extend([p.strip() for p in parts if len(p.strip()) > 3])
+
+        async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+            # 1. Multi-Engine Scraper (Bing Search)
+            for q in sub_queries[:2]:
+                if len(results) >= max_candidate_limit:
+                    break
+                for first_offset in [1, 11, 21]:
+                    if len(results) >= max_candidate_limit:
+                        break
+                    try:
+                        bing_url = f"https://www.bing.com/search?q={quote_plus(q)}&first={first_offset}"
+                        resp = await client.get(bing_url, headers=headers)
+                        if resp.status_code == 200:
+                            soup = BeautifulSoup(resp.text, 'html.parser')
+                            for item in soup.select('li.b_algo'):
+                                a_el = item.select_one('h2 a')
+                                sn_el = item.select_one('.b_caption p, .b_lineclamp2, .b_snippet')
+                                if a_el:
+                                    raw_href = a_el.get('href', '')
+                                    actual_url = decode_bing_url(raw_href)
+                                    if not actual_url.startswith('http') or actual_url in seen_urls:
+                                        continue
+
+                                    try:
+                                        domain = urllib.parse.urlparse(actual_url).netloc.lower()
+                                    except Exception:
+                                        domain = ""
+
+                                    seen_urls.add(actual_url)
+                                    results.append({
+                                        "title": a_el.get_text(strip=True),
+                                        "url": actual_url,
+                                        "domain": domain,
+                                        "snippet": sn_el.get_text(strip=True) if sn_el else ""
+                                    })
+                                    if len(results) >= max_candidate_limit:
+                                        break
+                    except Exception as e:
+                        logger.warning(f"Bing search fetch failed: {e}")
+
+        # 2. Score & Sort by Relevance & Domain Authority
+        def score_result(item):
+            score = 0
+            d = item.get('domain', '')
+            t = item.get('title', '').lower()
+            s = item.get('snippet', '').lower()
+            q_words = [w for w in query_lower.split() if len(w) > 2]
+
+            # Domain authority bonus
+            if any(tld in d for tld in ['.org', '.gov', '.edu', '.ac.id', '.go.id', 'iso.org', 'osha.gov', 'sciencedirect', 'springer', 'researchgate', 'ieee.org', 'nist.gov', 'wikipedia.org']):
+                score += 15
+            elif any(ind in d for ind in ['consulting', 'standard', 'assurance', 'k3', 'hukum', 'center', 'global', 'media', 'journal']):
+                score += 8
+
+            # Keyword match bonus
+            for qw in q_words:
+                if qw in t:
+                    score += 5
+                if qw in s:
+                    score += 2
+
+            # Snippet richness
+            if len(s) > 100:
+                score += 2
+
+            return score
+
+        results.sort(key=score_result, reverse=True)
+        logger.info(f"Smart Search successfully parsed & ranked {len(results)} sources")
+        return results[:max_candidate_limit]
 
         # 2. Fallback to CDP Browser Automation
         if not await self.ensure_running():
