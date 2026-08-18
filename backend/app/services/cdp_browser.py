@@ -2,6 +2,13 @@
 CDP Browser Manager for RuangTI Web Search.
 Auto-start, health check, and auto-restart Chrome/Edge with remote debugging.
 Direct CDP WebSocket connection - no MCP dependency.
+
+v2.0 — Smart & Dynamic Multi-Source Search Engine
+  - OpenAlex Academic API (primary, 300M+ peer-reviewed papers)
+  - DuckDuckGo HTML Scraper (secondary web)
+  - Brave Search API fallback (tertiary, if DDG fails)
+  - Global timeout protection per pipeline
+  - Smart content extraction with proper BeautifulSoup selectors
 """
 
 import asyncio
@@ -18,6 +25,9 @@ logger = logging.getLogger(__name__)
 
 CDP_PORT = 9222
 CHROME_USER_DATA_DIR = os.path.join(os.path.expanduser("~"), ".ruangti-cdp-profile")
+
+# Brave Search API key (optional fallback — set in .env)
+BRAVE_SEARCH_API_KEY = os.getenv("BRAVE_SEARCH_API_KEY", "")
 
 
 class CDPBrowserManager:
@@ -152,18 +162,30 @@ class CDPBrowserManager:
             logger.error(f"Failed to get page target: {e}")
         return None
 
+    # =========================================================================
+    #  SMART & DYNAMIC MULTI-SOURCE SEARCH ENGINE
+    # =========================================================================
+
     async def search_smart(self, query: str, max_candidate_limit: int = 50) -> List[Dict[str, str]]:
         """
-        Smart & Dynamic Multi-Source Academic & Web Search Engine (Up to 50 results).
-        Combines OpenAlex Academic Index (300M+ peer-reviewed papers) + Direct Web Scraper.
-        Guarantees up to 50 rich, authoritative sources for comprehensive literature reviews.
+        Smart & Dynamic Multi-Source Academic & Web Search Engine.
+
+        Pipeline:
+          1. OpenAlex Academic API (primary — 300M+ peer-reviewed papers)
+          2. DuckDuckGo HTML Scraper (secondary — general web)
+          3. Brave Search API (tertiary fallback — if DDG fails/blocked)
+
+        Each pipeline has individual timeout protection (6s).
+        Total search is capped at 12s via asyncio.wait_for wrapper.
+
+        Returns up to max_candidate_limit results (default 50).
         """
         import httpx
         import urllib.parse
         from bs4 import BeautifulSoup
 
         results: List[Dict[str, str]] = []
-        seen_urls = set()
+        seen_urls: set = set()
 
         # Clean search query from filler follow-up words
         clean_query = re.sub(
@@ -172,58 +194,63 @@ class CDPBrowserManager:
             query,
             flags=re.IGNORECASE
         ).strip()
-        # Clean extra spaces & punctuation
         clean_query = re.sub(r'\s+', ' ', clean_query).strip()
         if not clean_query or len(clean_query) < 3:
             clean_query = query
 
-        query_lower = clean_query.lower()
-
-        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
-            # 1. Primary Academic Pipeline: OpenAlex API (50 peer-reviewed papers & international journals)
+        # --- Pipeline 1: OpenAlex Academic API ---
+        async def _fetch_openalex() -> List[Dict[str, str]]:
+            pipeline_results = []
             try:
-                openalex_url = f"https://api.openalex.org/works?search={urllib.parse.quote_plus(clean_query)}&per_page=50"
-                resp = await client.get(openalex_url, headers={"User-Agent": "RuangTI-Platform/1.0 (mailto:admin@ruangti.ac.id)"})
-                if resp.status_code == 200:
-                    data = resp.json()
-                    for it in data.get("results", []):
-                        title = it.get("title")
-                        doi = it.get("doi")
-                        openalex_id = it.get("id", "")
-                        actual_url = doi if doi else openalex_id
-                        
-                        if not title or not actual_url or actual_url in seen_urls:
-                            continue
-                        
-                        host_venue = it.get("primary_location", {}) or {}
-                        source_obj = host_venue.get("source", {}) or {}
-                        host_name = source_obj.get("display_name", "") if isinstance(source_obj, dict) else ""
-                        
-                        try:
-                            domain = urllib.parse.urlparse(actual_url).netloc.replace("www.", "")
-                        except Exception:
-                            domain = host_name or "journal"
+                async with httpx.AsyncClient(timeout=6.0, follow_redirects=True) as client:
+                    openalex_url = f"https://api.openalex.org/works?search={urllib.parse.quote_plus(clean_query)}&per_page={max_candidate_limit}"
+                    resp = await client.get(openalex_url, headers={
+                        "User-Agent": "RuangTI-Platform/1.0 (mailto:admin@ruangti.ac.id)"
+                    })
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        for it in data.get("results", []):
+                            title = it.get("title")
+                            doi = it.get("doi")
+                            openalex_id = it.get("id", "")
+                            actual_url = doi if doi else openalex_id
 
-                        pub_year = it.get("publication_year", "")
-                        snippet = f"Diterbitkan di {host_name} ({pub_year}). Karya ilmiah peer-reviewed terindeks internasional." if host_name else f"Publikasi ilmiah ({pub_year})."
-                        
-                        seen_urls.add(actual_url)
-                        results.append({
-                            "title": title,
-                            "url": actual_url,
-                            "domain": domain or "doi.org",
-                            "snippet": snippet
-                        })
-                        if len(results) >= max_candidate_limit:
-                            break
+                            if not title or not actual_url or actual_url in seen_urls:
+                                continue
+
+                            host_venue = it.get("primary_location", {}) or {}
+                            source_obj = host_venue.get("source", {}) or {}
+                            host_name = source_obj.get("display_name", "") if isinstance(source_obj, dict) else ""
+
+                            try:
+                                domain = urllib.parse.urlparse(actual_url).netloc.replace("www.", "")
+                            except Exception:
+                                domain = host_name or "journal"
+
+                            pub_year = it.get("publication_year", "")
+                            cited_count = it.get("cited_by_count", 0)
+                            snippet = f"Diterbitkan di {host_name} ({pub_year}), {cited_count} sitasi." if host_name else f"Publikasi ilmiah ({pub_year}), {cited_count} sitasi."
+
+                            seen_urls.add(actual_url)
+                            pipeline_results.append({
+                                "title": title,
+                                "url": actual_url,
+                                "domain": domain or "doi.org",
+                                "snippet": snippet
+                            })
+                            if len(pipeline_results) >= max_candidate_limit:
+                                break
             except Exception as e:
-                logger.warning(f"OpenAlex academic fetch error: {repr(e)}")
+                logger.warning(f"OpenAlex pipeline error: {repr(e)}")
+            return pipeline_results
 
-            # 2. Secondary Web Pipeline: DDG Direct Search if results < max_candidate_limit
-            if len(results) < max_candidate_limit:
-                try:
+        # --- Pipeline 2: DuckDuckGo HTML Scraper ---
+        async def _fetch_duckduckgo() -> List[Dict[str, str]]:
+            pipeline_results = []
+            try:
+                async with httpx.AsyncClient(timeout=6.0, follow_redirects=True) as client:
                     headers = {
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
                         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                         "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
                         "Referer": "https://html.duckduckgo.com/"
@@ -246,7 +273,9 @@ class CDPBrowserManager:
                                 if not actual_url.startswith('http') or actual_url in seen_urls:
                                     continue
 
-                                if any(b in actual_url.lower() for b in ['images.google', 'google.com/imghp', 'pinterest.com', 'youtube.com', 'instagram.com']):
+                                blocked_domains = ['images.google', 'google.com/imghp', 'pinterest.com',
+                                                   'youtube.com', 'instagram.com', 'tiktok.com', 'facebook.com']
+                                if any(b in actual_url.lower() for b in blocked_domains):
                                     continue
 
                                 try:
@@ -255,119 +284,141 @@ class CDPBrowserManager:
                                     domain = ""
 
                                 seen_urls.add(actual_url)
-                                results.append({
+                                pipeline_results.append({
                                     "title": t_el.get_text(strip=True),
                                     "url": actual_url,
                                     "domain": domain,
                                     "snippet": s_el.get_text(strip=True) if s_el else ""
                                 })
-                                if len(results) >= max_candidate_limit:
-                                    break
-                except Exception as e:
-                    logger.warning(f"Secondary web fetch error: {e}")
+            except Exception as e:
+                logger.warning(f"DuckDuckGo pipeline error: {e}")
+            return pipeline_results
 
-        logger.info(f"Smart Search successfully parsed & retrieved {len(results)} sources (target: {max_candidate_limit})")
+        # --- Pipeline 3: Brave Search API (fallback if DDG yields 0) ---
+        async def _fetch_brave(ddg_count: int) -> List[Dict[str, str]]:
+            """Only activates if DDG returned 0 results AND Brave API key is configured."""
+            if ddg_count > 0 or not BRAVE_SEARCH_API_KEY:
+                return []
+            pipeline_results = []
+            try:
+                async with httpx.AsyncClient(timeout=6.0, follow_redirects=True) as client:
+                    resp = await client.get(
+                        "https://api.search.brave.com/res/v1/web/search",
+                        params={"q": clean_query, "count": 20},
+                        headers={
+                            "Accept": "application/json",
+                            "Accept-Encoding": "gzip",
+                            "X-Subscription-Token": BRAVE_SEARCH_API_KEY
+                        }
+                    )
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        for item in data.get("web", {}).get("results", []):
+                            actual_url = item.get("url", "")
+                            title = item.get("title", "")
+                            if not actual_url or not title or actual_url in seen_urls:
+                                continue
+                            try:
+                                domain = urllib.parse.urlparse(actual_url).netloc.replace("www.", "")
+                            except Exception:
+                                domain = ""
+                            seen_urls.add(actual_url)
+                            pipeline_results.append({
+                                "title": title,
+                                "url": actual_url,
+                                "domain": domain,
+                                "snippet": item.get("description", "")
+                            })
+            except Exception as e:
+                logger.warning(f"Brave Search fallback error: {e}")
+            return pipeline_results
+
+        # --- Execute pipelines with global 12s timeout ---
+        try:
+            # Run OpenAlex + DDG in parallel (both are independent)
+            openalex_task = asyncio.create_task(_fetch_openalex())
+            ddg_task = asyncio.create_task(_fetch_duckduckgo())
+
+            openalex_results, ddg_results = await asyncio.wait_for(
+                asyncio.gather(openalex_task, ddg_task, return_exceptions=True),
+                timeout=12.0
+            )
+
+            # Handle exceptions from gather
+            if isinstance(openalex_results, Exception):
+                logger.warning(f"OpenAlex task failed: {openalex_results}")
+                openalex_results = []
+            if isinstance(ddg_results, Exception):
+                logger.warning(f"DDG task failed: {ddg_results}")
+                ddg_results = []
+
+            # Merge: academic first, then web
+            results.extend(openalex_results)
+            results.extend(ddg_results)
+
+            # Pipeline 3: Brave fallback only if DDG returned nothing
+            if len(ddg_results) == 0 and BRAVE_SEARCH_API_KEY:
+                try:
+                    brave_results = await asyncio.wait_for(_fetch_brave(len(ddg_results)), timeout=6.0)
+                    results.extend(brave_results)
+                except asyncio.TimeoutError:
+                    logger.warning("Brave Search fallback timed out")
+
+        except asyncio.TimeoutError:
+            logger.warning("Global search_smart timeout (12s) reached — returning partial results")
+
+        logger.info(f"Smart Search retrieved {len(results)} sources (target: {max_candidate_limit})")
         return results[:max_candidate_limit]
 
-        # 2. Fallback to CDP Browser Automation
-        if not await self.ensure_running():
-            return []
-
-        try:
-            import websockets
-        except ImportError:
-            logger.error("websockets package not installed.")
-            return []
-
-        ws_url = await self._get_page_ws()
-        if not ws_url:
-            return []
-
-        results = []
-        try:
-            async with websockets.connect(ws_url, max_size=10 * 1024 * 1024) as ws:
-                msg_id = 1
-                search_url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
-
-                await ws.send(json.dumps({
-                    "id": msg_id,
-                    "method": "Page.navigate",
-                    "params": {"url": search_url}
-                }))
-                msg_id += 1
-                await asyncio.sleep(2)
-
-                extract_js = (
-                    "(() => {"
-                    "const results = [];"
-                    "const items = document.querySelectorAll('.result');"
-                    "for (const item of items) {"
-                    "const titleEl = item.querySelector('.result__title a');"
-                    "const snippetEl = item.querySelector('.result__snippet');"
-                    "if (titleEl) {"
-                    "let href = titleEl.href;"
-                    "if (href.includes('uddg=')) {"
-                    "href = decodeURIComponent(href.split('uddg=')[1].split('&')[0]);"
-                    "}"
-                    "results.push({"
-                    "title: titleEl.innerText.trim(),"
-                    "url: href,"
-                    "snippet: snippetEl ? snippetEl.innerText.trim() : ''"
-                    "});"
-                    "}"
-                    "}"
-                    f"return JSON.stringify(results.slice(0, {max_results}));"
-                    "})()"
-                )
-
-                await ws.send(json.dumps({
-                    "id": msg_id,
-                    "method": "Runtime.evaluate",
-                    "params": {"expression": extract_js, "returnByValue": True}
-                }))
-                msg_id += 1
-
-                while True:
-                    try:
-                        raw = await asyncio.wait_for(ws.recv(), timeout=10)
-                        data = json.loads(raw)
-                        if data.get("id") == msg_id - 1:
-                            val = data.get("result", {}).get("result", {}).get("value", "[]")
-                            results = json.loads(val)
-                            break
-                    except asyncio.TimeoutError:
-                        break
-
-        except Exception as e:
-            logger.error(f"CDP search failed: {e}")
-
-        return results
+    # =========================================================================
+    #  SMART CONTENT EXTRACTION (fetch_page)
+    # =========================================================================
 
     async def fetch_page(self, url: str) -> str:
-        """Fetch and extract clean text content from a URL via fast HTTP or CDP."""
+        """
+        Fetch and extract clean text content from a URL.
+        Pipeline: Fast HTTP + BeautifulSoup (primary) → CDP headless (fallback for JS-rendered pages).
+        """
         # 1. Try Fast HTTP client first
         try:
             import httpx
             from bs4 import BeautifulSoup
-            
+
             headers = {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
             }
             async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
                 resp = await client.get(url, headers=headers)
                 if resp.status_code == 200:
                     soup = BeautifulSoup(resp.text, 'html.parser')
-                    for s in soup(['script', 'style', 'nav', 'footer', 'header', 'aside', 'noscript', 'svg']):
+
+                    # Remove noise elements
+                    for s in soup(['script', 'style', 'nav', 'footer', 'header', 'aside', 'noscript', 'svg', 'form', 'iframe']):
                         s.decompose()
-                    main_content = soup.find(['main', 'article', '.content', '#content']) or soup.body
+
+                    # Smart content extraction with proper selectors (FIX #2)
+                    main_content = (
+                        soup.find('main') or
+                        soup.find('article') or
+                        soup.find(class_='content') or
+                        soup.find(id='content') or
+                        soup.find(class_='post-content') or
+                        soup.find(class_='article-body') or
+                        soup.find(class_='entry-content') or
+                        soup.find(id='main-content') or
+                        soup.body
+                    )
+
                     if main_content:
                         text = main_content.get_text(separator=' ', strip=True)
+                        # Clean excessive whitespace
+                        text = re.sub(r'\s+', ' ', text).strip()
                         if len(text) > 100:
                             return text[:6000]
         except Exception as e:
             logger.debug(f"HTTP fetch fallback to CDP for {url}: {e}")
 
-        # 2. Fallback to CDP Browser Automation
+        # 2. Fallback to CDP Browser Automation (for JS-rendered pages)
         if not await self.ensure_running():
             return ""
 
@@ -394,8 +445,8 @@ class CDPBrowserManager:
 
                 extract_js = (
                     "(() => {"
-                    "document.querySelectorAll('script,style,nav,footer,header,aside').forEach(e=>e.remove());"
-                    "const m=document.querySelector('main,article,.content,#content,body');"
+                    "document.querySelectorAll('script,style,nav,footer,header,aside,form,iframe').forEach(e=>e.remove());"
+                    "const m=document.querySelector('main,article,[class*=\"content\"],[id*=\"content\"],body');"
                     "return m?m.innerText.substring(0,6000):document.body.innerText.substring(0,6000);"
                     "})()"
                 )
@@ -424,4 +475,3 @@ class CDPBrowserManager:
 
 # Singleton instance
 cdp_manager = CDPBrowserManager()
-

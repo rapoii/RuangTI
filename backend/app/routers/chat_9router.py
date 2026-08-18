@@ -33,6 +33,74 @@ Karakteristik & Prinsip Menjawab:
 """
 
 
+def _classify_query_intent(prompt: str) -> dict:
+    """
+    Smart & Dynamic Query Intent Classifier.
+    Analyzes the prompt to determine optimal source count and deep crawl depth.
+
+    Returns:
+        {
+            "source_count": int (3-50),
+            "deep_crawl_count": int (2-8),
+            "intent": str (label for logging)
+        }
+    """
+    prompt_lower = prompt.lower().strip()
+    word_count = len(prompt.split())
+
+    # Tier 1: Explicit large-scale request (25-50 sumber)
+    explicit_large_keywords = [
+        "50 sumber", "40 sumber", "30 sumber", "25 sumber",
+        "banyak sumber", "semua sumber", "sebanyak mungkin",
+        "literature review", "tinjauan pustaka", "systematic review",
+        "meta-analysis", "meta analisis", "state of the art",
+        "komprehensif", "comprehensive"
+    ]
+    for kw in explicit_large_keywords:
+        if kw in prompt_lower:
+            # Extract explicit number if present
+            num_match = re.search(r'(\d+)\s*sumber', prompt_lower)
+            count = int(num_match.group(1)) if num_match else 50
+            count = min(max(count, 10), 50)
+            return {"source_count": count, "deep_crawl_count": 5, "intent": "literature_review"}
+
+    # Tier 2: Comparative / analytical (8-15 sumber)
+    comparative_keywords = [
+        "bandingkan", "perbandingan", "komparasi", "compare", "comparison",
+        "vs", "versus", "dibandingkan", "perbedaan", "keunggulan",
+        "kelebihan dan kekurangan", "pro dan kontra", "pros and cons",
+        "studi kasus", "case study", "implementasi", "penerapan di",
+        "evaluasi", "analisis mendalam", "deep analysis"
+    ]
+    if any(kw in prompt_lower for kw in comparative_keywords):
+        return {"source_count": 10, "deep_crawl_count": 5, "intent": "comparative_analysis"}
+
+    # Tier 3: Methodology / multi-step (6-10 sumber)
+    methodology_keywords = [
+        "bagaimana cara", "how to", "langkah", "steps", "prosedur", "procedure",
+        "metode", "method", "metodologi", "methodology", "framework",
+        "standar", "standard", "iso", "regulasi", "regulation",
+        "optimasi", "optimization", "simulasi", "simulation"
+    ]
+    if any(kw in prompt_lower for kw in methodology_keywords) or word_count > 10:
+        return {"source_count": 8, "deep_crawl_count": 4, "intent": "methodology"}
+
+    # Tier 4: Conceptual / exploratory (4-6 sumber)
+    conceptual_keywords = [
+        "jelaskan", "explain", "apa itu", "what is", "pengertian", "definisi",
+        "definition", "konsep", "concept", "teori", "theory", "prinsip", "principle"
+    ]
+    if any(kw in prompt_lower for kw in conceptual_keywords):
+        return {"source_count": 5, "deep_crawl_count": 3, "intent": "conceptual"}
+
+    # Tier 5: Simple / quick factual (3-4 sumber)
+    if word_count <= 5:
+        return {"source_count": 3, "deep_crawl_count": 2, "intent": "quick_factual"}
+
+    # Default: moderate (5-6 sumber)
+    return {"source_count": 6, "deep_crawl_count": 3, "intent": "general"}
+
+
 async def stream_grok_ai_response(
     prompt: str,
     history: List[Dict[str, str]] = None,
@@ -40,7 +108,7 @@ async def stream_grok_ai_response(
     web_search_enabled: bool = False
 ) -> AsyncGenerator[str, None]:
     """
-    Streaming AI response dari 9Router LLM Proxy dengan opsi Hybrid RAG + Web Search via CDP.
+    Streaming AI response dari 9Router LLM Proxy dengan opsi Hybrid RAG + Web Search.
     """
     # 1. Retrieve Knowledge Base Chunks (RAG) - Always active
     rag_chunks = rag_engine.search(prompt, top_k=3)
@@ -55,60 +123,54 @@ async def stream_grok_ai_response(
             rag_context_text += f"{chunk['content']}\n"
         rag_context_text += "\n=== [AKHIR REFERENSI LITERATUR] ===\n"
 
-    # 2. Web Search via Smart & Dynamic Multi-Page Crawler (Up to 50 Candidates, Dynamic Filtering)
+    # 2. Web Search via Smart & Dynamic Multi-Source Engine
     web_context_text = ""
     websources_meta_tag = ""
     if web_search_enabled:
         try:
             # Query Formulation: Follow-up handling
             effective_search_query = prompt
-            followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain", "website lain", "cari yang lain", "coba cari lagi", "50 sumber"]
+            followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain",
+                                 "website lain", "cari yang lain", "coba cari lagi", "50 sumber"]
             if history and any(t in prompt.lower() for t in followup_triggers):
                 prev_user_queries = [m.get("content", "") for m in history if m.get("role") == "user"]
                 if prev_user_queries:
                     effective_search_query = f"{prev_user_queries[-1]} {prompt}"
 
+            # Smart & Dynamic Intent Classification
+            intent = _classify_query_intent(prompt)
+            target_source_count = intent["source_count"]
+            deep_crawl_count = intent["deep_crawl_count"]
+            logger.info(f"Query intent: {intent['intent']} → target {target_source_count} sources, deep crawl {deep_crawl_count} URLs")
+
             try:
-                search_candidates = await cdp_manager.search_smart(effective_search_query, max_candidate_limit=50)
+                search_candidates = await cdp_manager.search_smart(effective_search_query, max_candidate_limit=target_source_count)
             except Exception as e:
                 logger.warning(f"search_smart error: {e}")
                 search_candidates = []
 
             if search_candidates:
-                prompt_lower = prompt.lower()
-                # Jika user meminta banyak sumber / 50 sumber secara eksplisit
-                if any(w in prompt_lower for w in ["50 sumber", "banyak sumber", "literature review", "tinjauan pustaka", "komprehensif", "semua sumber"]):
-                    selected_sources_count = min(len(search_candidates), 50)
-                else:
-                    prompt_word_count = len(prompt.split())
-                    is_complex = any(k in prompt_lower for k in ["bandingkan", "vs", "komparasi", "analisis", "perbedaan", "standar", "metode", "optimasi"]) or prompt_word_count > 6
-
-                    if is_complex:
-                        selected_sources_count = min(len(search_candidates), 6)
-                    elif prompt_word_count <= 4:
-                        selected_sources_count = min(len(search_candidates), 3)
-                    else:
-                        selected_sources_count = min(len(search_candidates), 4)
-
-                final_sources = search_candidates[:selected_sources_count]
+                final_sources = search_candidates[:target_source_count]
 
                 # Simpan metadata visual sources tag untuk disuntikkan di awal token
                 websources_meta_tag = f"<!--WEBSOURCES:{json.dumps(final_sources)}-->"
 
                 web_context_text = f"\n\n=== [HASIL INFORMASI SUMBER WEB ({len(final_sources)} SUMBER DIPINDAI)] ===\n"
+                # Inject up to 20 source summaries into LLM context
                 for i, res in enumerate(final_sources[:20], 1):
                     web_context_text += f"\n- {res.get('title', 'Unknown Source')} (Domain: {res.get('domain', '')})\n"
                     web_context_text += f"  Snippet: {res.get('snippet', '')}\n"
 
-                # Parallel Deep Crawl Top 2-3 Selected URLs (timeout 3s)
-                deep_urls = [r['url'] for r in final_sources[:3] if r.get('url') and 'doi.org' not in r.get('url')]
+                # Smart Parallel Deep Crawl (dynamic count based on intent)
+                deep_urls = [r['url'] for r in final_sources[:deep_crawl_count]
+                             if r.get('url') and 'doi.org' not in r.get('url')]
                 if deep_urls:
-                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=3.0) for u in deep_urls]
+                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=4.0) for u in deep_urls]
                     pages_content = await asyncio.gather(*crawl_tasks, return_exceptions=True)
-                    
-                    for idx, content in enumerate(pages_content, 1):
-                        if isinstance(content, str) and content.strip():
-                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:2000]}...\n"
+
+                    for idx, page_content in enumerate(pages_content, 1):
+                        if isinstance(page_content, str) and page_content.strip() and len(page_content) > 100:
+                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{page_content[:2500]}...\n"
 
                 web_context_text += "\n=== [AKHIR HASIL INFORMASI SUMBER WEB] ===\n"
         except Exception as e:
