@@ -116,7 +116,7 @@ export function MessageRow({
           </div>
 
           {/* Assistant Markdown Content */}
-          <div className="w-full pl-0 sm:pl-8 text-xs sm:text-sm text-text-primary leading-relaxed">
+          <div className="w-full text-xs sm:text-sm text-text-primary leading-relaxed">
             {message.content ? (
               <MarkdownContent content={message.content} />
             ) : (
@@ -128,7 +128,7 @@ export function MessageRow({
 
           {/* Action Bar (Copy, Regenerate, Feedback) */}
           {!isStreaming && message.content && (
-            <div className="pl-0 sm:pl-8 mt-3">
+            <div className="mt-3">
               <ActionBar
                 content={message.content}
                 role={message.role}

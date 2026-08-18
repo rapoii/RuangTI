@@ -44,33 +44,42 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
 
   return (
     <div className="prose prose-sm dark:prose-invert max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
-      {/* Visual Live Source Carousel / Pills */}
+      {/* Visual Live Source Carousel / Full Width Equalized Grid */}
       {webSources.length > 0 && (
-        <div className="mb-4 not-prose">
-          <div className="flex items-center gap-1.5 text-[11px] font-medium text-text-secondary uppercase tracking-wider mb-2">
+        <div className="mb-5 not-prose w-full">
+          <div className="flex items-center gap-1.5 text-[11px] font-medium text-text-secondary uppercase tracking-wider mb-2.5">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span>{webSources.length} Sumber Web Ditemukan & Dirayapi:</span>
           </div>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 w-full">
             {webSources.map((ws, idx) => (
               <a
                 key={idx}
                 href={ws.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs bg-surface border border-border hover:border-accent/50 hover:bg-surface-hover text-text-primary transition-all shadow-xs group"
+                className="flex flex-col justify-between p-2.5 rounded-xl bg-surface border border-border hover:border-accent/50 hover:bg-surface-hover text-text-primary transition-all shadow-xs group w-full h-[64px] min-w-0"
                 title={`${ws.title} (${ws.url})`}
               >
-                <img
-                  src={`https://www.google.com/s2/favicons?domain=${getDomain(ws.url)}&sz=32`}
-                  alt=""
-                  className="w-3.5 h-3.5 rounded-xs shrink-0 opacity-80 group-hover:opacity-100"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = "none";
-                  }}
-                />
-                <span className="font-medium text-accent text-[11px] font-mono">[{idx + 1}]</span>
-                <span className="max-w-[140px] sm:max-w-[200px] truncate text-[12px]">
+                <div className="flex items-center justify-between gap-1.5 w-full">
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <img
+                      src={`https://www.google.com/s2/favicons?domain=${getDomain(ws.url)}&sz=32`}
+                      alt=""
+                      className="w-3.5 h-3.5 rounded-xs shrink-0 opacity-85 group-hover:opacity-100"
+                      onError={(e) => {
+                        (e.target as HTMLElement).style.display = "none";
+                      }}
+                    />
+                    <span className="text-[10px] text-text-muted font-mono truncate">
+                      {getDomain(ws.url)}
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-mono text-accent font-semibold px-1 py-0.2 rounded bg-accent/10 shrink-0">
+                    [{idx + 1}]
+                  </span>
+                </div>
+                <span className="text-[11px] font-medium text-text-primary truncate w-full group-hover:text-accent transition-colors">
                   {ws.title || getDomain(ws.url)}
                 </span>
               </a>
