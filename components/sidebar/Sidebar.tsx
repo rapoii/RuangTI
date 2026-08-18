@@ -8,7 +8,7 @@ import { ConversationList } from "./ConversationList";
 import { ProfileModal } from "@/components/profile/ProfileModal";
 import { useConversations } from "@/hooks/use-conversations";
 import { UserProfile } from "@/lib/types";
-import { PanelLeftClose, PanelLeft, X, User, LogIn } from "lucide-react";
+import { PanelLeftClose, PanelLeftOpen, X, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -21,6 +21,8 @@ interface SidebarProps {
     login: (name: string, email: string) => void;
     logout: () => void;
   };
+  isCollapsed?: boolean;
+  onToggleCollapse?: () => void;
 }
 
 export function Sidebar({
@@ -28,8 +30,9 @@ export function Sidebar({
   isMobileOpen,
   onCloseMobile,
   profileState,
+  isCollapsed = false,
+  onToggleCollapse,
 }: SidebarProps) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const { profile, updateProfile, login, logout } = profileState;
 
@@ -137,29 +140,44 @@ export function Sidebar({
 
       {/* Desktop Sidebar (Collapsible with smooth animation) */}
       <motion.aside
-        animate={{ width: isCollapsed ? 64 : 260 }}
+        animate={{ width: isCollapsed ? 68 : 260 }}
         transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
         className="hidden md:flex flex-col h-full bg-canvas-subtle border-r border-border select-none shrink-0 relative transition-colors duration-200"
       >
         {/* Top Action Bar */}
-        <div className="p-3 flex items-center gap-2">
-          <div className="flex-1 min-w-0">
-            <NewChatButton onClick={handleNewChat} isCollapsed={isCollapsed} />
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-text-tertiary hover:text-text-primary hover:bg-surface transition-all active:scale-95 shrink-0"
-            aria-label={isCollapsed ? "Buka sidebar" : "Lipat sidebar"}
-            title={isCollapsed ? "Buka sidebar" : "Lipat sidebar"}
-          >
-            {isCollapsed ? (
-              <PanelLeft className="w-4 h-4" />
-            ) : (
-              <PanelLeftClose className="w-4 h-4" />
-            )}
-          </button>
+        <div className={cn("p-3 flex items-center gap-2", isCollapsed ? "flex-col justify-center gap-2.5 px-2" : "")}>
+          {/* When collapsed: show expand / maximize button prominently at the top */}
+          {isCollapsed ? (
+            <>
+              <button
+                type="button"
+                onClick={onToggleCollapse}
+                className="w-10 h-10 rounded-xl flex items-center justify-center text-accent hover:text-white bg-accent/10 hover:bg-accent border border-accent/30 hover:border-accent shadow-sm transition-all duration-150 active:scale-95 shrink-0 group"
+                aria-label="Perbesar / Maximize sidebar"
+                title="Perbesar / Maximize sidebar"
+              >
+                <PanelLeftOpen className="w-4 h-4 transition-transform group-hover:scale-110" />
+              </button>
+              <div className="w-full">
+                <NewChatButton onClick={handleNewChat} isCollapsed={isCollapsed} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex-1 min-w-0">
+                <NewChatButton onClick={handleNewChat} isCollapsed={isCollapsed} />
+              </div>
+              <button
+                type="button"
+                onClick={onToggleCollapse}
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-text-tertiary hover:text-text-primary hover:bg-surface transition-all active:scale-95 shrink-0"
+                aria-label="Lipat sidebar (Minimize)"
+                title="Lipat sidebar (Minimize)"
+              >
+                <PanelLeftClose className="w-4 h-4" />
+              </button>
+            </>
+          )}
         </div>
 
         {/* Search Bar (Only shown when expanded) */}

@@ -3,13 +3,15 @@
 import React, { useState } from "react";
 import { UserProfile } from "@/lib/types";
 import { ProfileModal } from "@/components/profile/ProfileModal";
-import { Moon, Sun, Menu, Layers, User } from "lucide-react";
+import { Moon, Sun, Menu, Layers, User, PanelLeftOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
   theme: "light" | "dark";
   onToggleTheme: () => void;
   onToggleMobileSidebar: () => void;
+  isSidebarCollapsed?: boolean;
+  onToggleSidebarCollapse?: () => void;
   profile: UserProfile;
   onUpdateProfile: (data: Partial<UserProfile>) => void;
   onLogout: () => void;
@@ -20,6 +22,8 @@ export function Header({
   theme,
   onToggleTheme,
   onToggleMobileSidebar,
+  isSidebarCollapsed = false,
+  onToggleSidebarCollapse,
   profile,
   onUpdateProfile,
   onLogout,
@@ -30,8 +34,9 @@ export function Header({
   return (
     <>
       <header className="h-14 w-full flex items-center justify-between px-3 sm:px-6 sticky top-0 z-30 glass-header select-none transition-colors duration-200">
-        {/* Left: Mobile Drawer Trigger + Brand */}
+        {/* Left: Mobile Drawer Trigger + Desktop Maximize Sidebar Toggle + Brand */}
         <div className="flex items-center gap-2 sm:gap-3">
+          {/* Mobile Drawer Button */}
           <button
             type="button"
             onClick={onToggleMobileSidebar}
@@ -40,6 +45,19 @@ export function Header({
           >
             <Menu className="w-4 h-4" />
           </button>
+
+          {/* Desktop Maximize Sidebar Button (Always visible / highlighted when sidebar is collapsed) */}
+          {isSidebarCollapsed && onToggleSidebarCollapse && (
+            <button
+              type="button"
+              onClick={onToggleSidebarCollapse}
+              className="hidden md:flex w-9 h-9 rounded-xl items-center justify-center text-text-secondary hover:text-accent bg-surface/80 hover:bg-surface border border-border/80 hover:border-accent/40 active:scale-95 transition-all duration-150 shadow-sm"
+              aria-label="Buka sidebar penuh (Maximize)"
+              title="Buka sidebar penuh (Maximize)"
+            >
+              <PanelLeftOpen className="w-4 h-4 text-accent" />
+            </button>
+          )}
 
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/30 text-accent flex items-center justify-center font-display font-bold text-xs">

@@ -27,6 +27,11 @@ export function Shell({
   profileState,
 }: ShellProps) {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
+  const [isDesktopCollapsed, setIsDesktopCollapsed] = useState(false);
+
+  const toggleDesktopSidebar = () => {
+    setIsDesktopCollapsed((prev) => !prev);
+  };
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-canvas text-text-primary">
@@ -36,6 +41,8 @@ export function Shell({
         isMobileOpen={isMobileSidebarOpen}
         onCloseMobile={() => setIsMobileSidebarOpen(false)}
         profileState={profileState}
+        isCollapsed={isDesktopCollapsed}
+        onToggleCollapse={toggleDesktopSidebar}
       />
 
       {/* Main App Canvas */}
@@ -44,6 +51,8 @@ export function Shell({
           theme={theme}
           onToggleTheme={onToggleTheme}
           onToggleMobileSidebar={() => setIsMobileSidebarOpen(true)}
+          isSidebarCollapsed={isDesktopCollapsed}
+          onToggleSidebarCollapse={toggleDesktopSidebar}
           profile={profileState.profile}
           onUpdateProfile={profileState.updateProfile}
           onLogout={profileState.logout}
