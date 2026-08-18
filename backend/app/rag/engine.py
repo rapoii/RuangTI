@@ -93,7 +93,14 @@ IE_THESAURUS = {
     "center of gravity": ["titik berat", "facility location", "lokasi pabrik", "koordinat euclidean", "tonase jarak", "lokasi gudang"],
     "p-median": ["p median", "facility location", "hakimi", "integer programming", "jarak tertimbang", "network location"],
     "reverse logistics": ["logistik balik", "closed loop supply chain", "clsc", "remanufaktur", "remanufacturing", "end of life", "disassembly", "pemulihan produk", "van wassenhove"],
-    "remanufaktur": ["remanufacturing", "reverse logistics", "closed loop supply chain", "core grade", "disassembly line balancing", "daur ulang produk"]
+    "remanufaktur": ["remanufacturing", "reverse logistics", "closed loop supply chain", "core grade", "disassembly line balancing", "daur ulang produk"],
+    "msa": ["measurement systems analysis", "analisis sistem pengukuran", "gage r&r", "repeatability", "reproducibility", "ndc", "number of distinct categories", "aiag", "variasi alat ukur"],
+    "gage rr": ["gage r&r", "msa", "repeatability", "reproducibility", "evaluasi alat ukur", "part to part variation", "aiag"],
+    "biaya kualitas": ["cost of quality", "coq", "paf model", "feigenbaum", "prevention cost", "appraisal cost", "internal failure", "external failure", "biaya cacat"],
+    "cost of quality": ["biaya kualitas", "coq", "paf model", "feigenbaum", "prevention appraisal failure", "scrap rework"],
+    "acceptance sampling": ["sampling penerimaan", "oc curve", "operating characteristic", "aql", "ltpd", "mil std 105e", "aoq", "aoql", "ati", "single sampling", "inspeksi lot"],
+    "aql": ["acceptable quality level", "ltpd", "acceptance sampling", "sampling penerimaan", "oc curve", "risiko produsen alpha", "risiko konsumen beta"],
+    "oc curve": ["operating characteristic curve", "kurva karakteristik operasi", "acceptance sampling", "pa", "probabilitas penerimaan", "aql", "ltpd"]
 }
 
 def clean_text(text: str) -> str:
