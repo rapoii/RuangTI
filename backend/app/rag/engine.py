@@ -127,7 +127,10 @@ IE_THESAURUS = {
     "aldep": ["automated layout design program", "construction algorithm", "sweep method", "closeness rating", "arc", "tata letak fasilitas"],
     "corelap": ["computerized relationship layout planning", "tcr", "total closeness rating", "construction algorithm", "tata letak fasilitas"],
     "game theory": ["teori permainan", "supply chain coordination", "nash equilibrium", "stackelberg", "double marginalization", "cournot", "bertrand", "shapley value"],
-    "teori permainan": ["game theory", "nash equilibrium", "shapley value", "double marginalization", "supply chain contracts", "revenue sharing contract"]
+    "teori permainan": ["game theory", "nash equilibrium", "shapley value", "double marginalization", "supply chain contracts", "revenue sharing contract"],
+    "system dynamics": ["dinamika sistem", "jay forrester", "causal loop diagram", "cld", "stock and flow", "sfd", "balancing loop", "reinforcing loop", "bullwhip effect simulation"],
+    "fault tree analysis": ["fta", "top event", "logic gates", "minimal cut sets", "mcs", "analisis pohon kesalahan", "keandalan sistem", "maintenance 4.0"],
+    "metaheuristik vrp": ["vehicle routing problem", "simulated annealing", "tabu search", "cvrp", "vrptw", "metropolis acceptance", "cooling schedule", "tabu list", "aspiration criterion", "local optima"]
 }
 
 def clean_text(text: str) -> str:
