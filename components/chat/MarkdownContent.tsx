@@ -94,7 +94,8 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
             const label = String(children).trim();
             const isCitation = /^\[?\d+\]?$/.test(label);
             if (isCitation) {
-              const displayLabel = label.startsWith("[") ? label : `[${label}]`;
+              const numMatch = label.match(/\d+/);
+              const cleanNumber = numMatch ? `[${numMatch[0]}]` : label;
               return (
                 <a
                   href={href}
@@ -103,7 +104,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                   className="inline-flex items-center justify-center font-mono text-[11px] font-semibold text-accent bg-accent/15 hover:bg-accent hover:text-white border border-accent/30 rounded px-1.5 py-0.5 mx-0.5 no-underline transition-all align-baseline cursor-pointer hover:shadow-xs"
                   title={`Buka sumber referensi: ${href || "Web Source"}`}
                 >
-                  {displayLabel}
+                  {cleanNumber}
                 </a>
               );
             }
@@ -112,7 +113,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors font-medium"
+                className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors font-medium break-all"
               >
                 {children}
               </a>

@@ -71,11 +71,11 @@ async def stream_grok_ai_response(
 
                 web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
                 web_context_text += """
-*ATURAN WAJIB SITASI & SUMBER WEB:*
-1. Apabila kamu mengutip, menyebutkan data statistik, standar terbaru, regulasi, fakta, atau informasi dari hasil pencarian web di atas, WAJIB sertakan penanda sitasi tepat di akhir klausa/kalimat yang dikutip menggunakan format link markdown: `[[1]](URL_SUMBER_1)`, `[[2]](URL_SUMBER_2)`, dst.
-2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian khusus **Sumber Web Terkini:** dan cantumkan daftar sitasi lengkap dengan format:
-   - [[1]](URL_SUMBER_1) **Judul Sumber Web** - URL
-   - [[2]](URL_SUMBER_2) **Judul Sumber Web** - URL
+*ATURAN PENULISAN SITASI & SUMBER WEB:*
+1. Apabila kamu mengutip data/fakta dari hasil pencarian web di atas, gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)`, `[2](URL_SUMBER_2)` (gunakan satu kurung siku biasa, BUKAN double bracket).
+2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian **Sumber Web Terkini:** dengan format bersih tanpa format berlebihan:
+   - [1] [Judul Sumber Web 1](URL_SUMBER_1)
+   - [2] [Judul Sumber Web 2](URL_SUMBER_2)
 """
         except Exception as e:
             web_context_text = f"\n*(Catatan: Fitur pencarian web sedang mengalami kendala teknis: {str(e)})*\n"
@@ -86,11 +86,11 @@ async def stream_grok_ai_response(
         system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
     if web_context_text:
         system_prompt += f"""\n\n{web_context_text}
-\n\n=== PANDUAN PENULISAN SITASI SUMBER WEB (SANGAT KETAT & WAJIB) ===
-Setiap kali kamu menyampaikan fakta, data tahun rilis, linimasa revisi standar, atau detail hasil pencarian web di atas, kamu WAJIB membubuhkan nomor sitasi berkurung siku berformat markdown link tepat di sebelah klausa/kalimat tersebut, contoh: `[[1]](URL_SUMBER_1)` atau `[[2]](URL_SUMBER_2)`.
-Dan pada bagian akhir respons (di bawah judul **Referensi Literatur Ilmiah Terkait**), buat sub-bagian **Sumber Web Terkini:** yang memuat daftar sitasi tersebut:
-- [[1]](URL_SUMBER_1) - Judul Sumber 1
-- [[2]](URL_SUMBER_2) - Judul Sumber 2
+\n\n=== PANDUAN PENULISAN SITASI SUMBER WEB ===
+- Gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)` atau `[2](URL_SUMBER_2)` (satu pasang tanda kurung siku [ ], jangan gunakan double bracket [[ ]]).
+- Pada bagian akhir respons di sub-bagian **Sumber Web Terkini:**, tuliskan:
+  - [1] [Judul Sumber 1](URL_SUMBER_1)
+  - [2] [Judul Sumber 2](URL_SUMBER_2)
 """
 
     messages = [{"role": "system", "content": system_prompt}]
