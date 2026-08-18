@@ -1,7 +1,7 @@
 import os
 import re
 import sqlite3
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "ruangti_rag.db")
 KNOWLEDGE_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "knowledge")
@@ -216,14 +216,39 @@ IE_THESAURUS = {
 
 
 def expand_query(query: str) -> str:
-    """Expand query using IE Thesaurus synonyms."""
-    tokens = query.lower().split()
+    """
+    Expand query using IE Thesaurus synonyms.
+    v2.0 — supports bigram/phrase matching (e.g. "waktu baku", "six sigma",
+    "line balancing") so multi-word IE concepts are recognized as single units.
+    """
+    query_lower = query.lower()
+    tokens = query_lower.split()
     expanded = list(tokens)
-    for token in tokens:
+
+    # Phase 1: Bigram / trigram phrase matching (check 3-word, then 2-word windows)
+    matched_phrase_indices: set = set()  # track token positions already matched by phrase
+    for window_size in (3, 2):
+        for i in range(len(tokens) - window_size + 1):
+            if any(j in matched_phrase_indices for j in range(i, i + window_size)):
+                continue
+            phrase = " ".join(tokens[i:i + window_size])
+            for key, synonyms in IE_THESAURUS.items():
+                if phrase == key or phrase in synonyms:
+                    expanded.extend(synonyms)
+                    expanded.append(key)
+                    for j in range(i, i + window_size):
+                        matched_phrase_indices.add(j)
+                    break
+
+    # Phase 2: Single-token matching (skip tokens already consumed by phrase)
+    for idx, token in enumerate(tokens):
+        if idx in matched_phrase_indices:
+            continue
         for key, synonyms in IE_THESAURUS.items():
             if token == key or token in synonyms:
                 expanded.extend(synonyms)
                 expanded.append(key)
+
     return " ".join(list(dict.fromkeys(expanded)))
 
 
@@ -287,38 +312,79 @@ def build_index():
 
 
 class RAGEngine:
-    """Wrapper class for RAG engine to support import from chat_9router."""
+    """
+    RAG Engine v2.0 — Cached connection + Phrase-boosted FTS5 search.
+    - Persistent SQLite connection (thread-safe via check_same_thread=False)
+    - Two-pass FTS5 query: exact phrase match boosted, then OR fallback
+    """
 
     def __init__(self):
         self.db_path = DB_PATH
         self.thesaurus = IE_THESAURUS
+        self._conn: Optional[sqlite3.Connection] = None
+
+    def _get_conn(self) -> sqlite3.Connection:
+        """Get or create a cached SQLite connection."""
+        if self._conn is None:
+            self._conn = sqlite3.connect(self.db_path, check_same_thread=False)
+            self._conn.row_factory = sqlite3.Row
+        return self._conn
 
     def expand_query(self, query: str) -> str:
         return expand_query(query)
 
     def search(self, query: str, top_k: int = 5) -> List[Dict]:
+        """
+        Two-pass FTS5 search with phrase boosting.
+        Pass 1: Try exact phrase match on original query (highest relevance).
+        Pass 2: Expanded OR query with thesaurus synonyms (broad recall).
+        Results are merged with phrase matches prioritized (deduplicated).
+        """
         clean_query = re.sub(r'[^\w\s]', ' ', query).strip()
-        expanded = self.expand_query(clean_query)
-        # Sanitize for FTS5 boolean query
-        terms = [re.sub(r'[^\w]', '', t) for t in expanded.split() if re.sub(r'[^\w]', '', t)]
-        if not terms:
+        if not clean_query:
             return []
-        fts_query = " OR ".join(terms)
-        
-        conn = sqlite3.connect(self.db_path)
-        conn.row_factory = sqlite3.Row
+
+        conn = self._get_conn()
         cur = conn.cursor()
+        results_map: dict = {}  # key: (module_id, section_title) -> row dict
+
+        # Pass 1: Exact phrase match (quoted) — highest quality signal
         try:
+            phrase_fts = f'"{clean_query}"'
             cur.execute(
                 "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
-                (fts_query, top_k)
+                (phrase_fts, top_k)
             )
-            results = [dict(row) for row in cur.fetchall()]
+            for row in cur.fetchall():
+                d = dict(row)
+                key = (d['module_id'], d['section_title'])
+                # Boost phrase match rank by 2x (more negative = higher rank in FTS5)
+                d['rank'] = d['rank'] * 2.0
+                results_map[key] = d
         except Exception:
-            results = []
-        finally:
-            conn.close()
-        return results
+            pass
+
+        # Pass 2: Expanded OR query with thesaurus (broad recall)
+        try:
+            expanded = self.expand_query(clean_query)
+            terms = [re.sub(r'[^\w]', '', t) for t in expanded.split() if re.sub(r'[^\w]', '', t)]
+            if terms:
+                fts_query = " OR ".join(terms)
+                cur.execute(
+                    "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
+                    (fts_query, top_k * 2)
+                )
+                for row in cur.fetchall():
+                    d = dict(row)
+                    key = (d['module_id'], d['section_title'])
+                    if key not in results_map:
+                        results_map[key] = d
+        except Exception:
+            pass
+
+        # Sort by rank (most negative = best match) and return top_k
+        sorted_results = sorted(results_map.values(), key=lambda x: x['rank'])
+        return sorted_results[:top_k]
 
 
 rag_engine = RAGEngine()
