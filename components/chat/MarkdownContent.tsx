@@ -43,28 +43,37 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     }
   };
 
-  // Hitung grid columns class secara dinamis agar selalu penuh rata (full width)
-  const getGridColsStyle = (count: number) => {
-    // Pada desktop/tablet gunakan CSS Grid template dinamis agar selalu 100% full width membagi rata
-    return {
-      gridTemplateColumns: `repeat(${Math.min(count, 6)}, minmax(0, 1fr))`
-    };
-  };
+  // State untuk expand/collapse jika sumber > 6 (Perplexity Pro UX)
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const visibleSources = isExpanded ? webSources : webSources.slice(0, 6);
 
   return (
     <div className="prose prose-sm dark:prose-invert max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
       {/* Visual Live Source Carousel / Dynamic Full Width Adaptive Grid */}
       {webSources.length > 0 && (
         <div className="mb-5 not-prose w-full">
-          <div className="flex items-center gap-1.5 text-[11px] font-medium text-text-secondary uppercase tracking-wider mb-2.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span>{webSources.length} Sumber Web Terkurasi:</span>
+          <div className="flex items-center justify-between gap-1.5 text-[11px] font-medium text-text-secondary uppercase tracking-wider mb-2.5">
+            <div className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              <span>{webSources.length} Sumber Web Terkurasi:</span>
+            </div>
+            {webSources.length > 6 && (
+              <button
+                type="button"
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-[11px] font-medium text-accent hover:underline flex items-center gap-1 cursor-pointer bg-accent/5 px-2 py-0.5 rounded-full border border-accent/20 transition-all hover:bg-accent/10"
+              >
+                {isExpanded ? "Tampilkan Lebih Sedikit ▴" : `+${webSources.length - 6} Sumber Lainnya ▾`}
+              </button>
+            )}
           </div>
           <div 
-            className="grid gap-2.5 w-full"
-            style={getGridColsStyle(webSources.length)}
+            className="grid gap-2.5 w-full transition-all duration-300"
+            style={{
+              gridTemplateColumns: `repeat(${Math.min(visibleSources.length > 6 ? 4 : visibleSources.length, 6)}, minmax(0, 1fr))`
+            }}
           >
-            {webSources.map((ws, idx) => (
+            {visibleSources.map((ws, idx) => (
               <a
                 key={idx}
                 href={ws.url}

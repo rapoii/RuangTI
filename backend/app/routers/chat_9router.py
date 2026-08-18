@@ -62,7 +62,7 @@ async def stream_grok_ai_response(
         try:
             # Query Formulation: Follow-up handling
             effective_search_query = prompt
-            followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain", "website lain", "cari yang lain", "coba cari lagi"]
+            followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain", "website lain", "cari yang lain", "coba cari lagi", "50 sumber"]
             if history and any(t in prompt.lower() for t in followup_triggers):
                 prev_user_queries = [m.get("content", "") for m in history if m.get("role") == "user"]
                 if prev_user_queries:
@@ -75,15 +75,20 @@ async def stream_grok_ai_response(
                 search_candidates = []
 
             if search_candidates:
-                prompt_word_count = len(prompt.split())
-                is_complex = any(k in prompt.lower() for k in ["bandingkan", "vs", "komparasi", "analisis", "perbedaan", "standar", "metode", "optimasi"]) or prompt_word_count > 6
-
-                if is_complex:
-                    selected_sources_count = min(len(search_candidates), 6)
-                elif prompt_word_count <= 4:
-                    selected_sources_count = min(len(search_candidates), 3)
+                prompt_lower = prompt.lower()
+                # Jika user meminta banyak sumber / 50 sumber secara eksplisit
+                if any(w in prompt_lower for w in ["50 sumber", "banyak sumber", "literature review", "tinjauan pustaka", "komprehensif", "semua sumber"]):
+                    selected_sources_count = min(len(search_candidates), 50)
                 else:
-                    selected_sources_count = min(len(search_candidates), 4)
+                    prompt_word_count = len(prompt.split())
+                    is_complex = any(k in prompt_lower for k in ["bandingkan", "vs", "komparasi", "analisis", "perbedaan", "standar", "metode", "optimasi"]) or prompt_word_count > 6
+
+                    if is_complex:
+                        selected_sources_count = min(len(search_candidates), 6)
+                    elif prompt_word_count <= 4:
+                        selected_sources_count = min(len(search_candidates), 3)
+                    else:
+                        selected_sources_count = min(len(search_candidates), 4)
 
                 final_sources = search_candidates[:selected_sources_count]
 
@@ -91,20 +96,20 @@ async def stream_grok_ai_response(
                 websources_meta_tag = f"<!--WEBSOURCES:{json.dumps(final_sources)}-->"
 
                 web_context_text = f"\n\n=== [HASIL SMART WEB SEARCH: {len(search_candidates)} WEBSITE DIPINDAI, {len(final_sources)} SUMBER UTAMA DIPILIH SECARA DINAMIS] ===\n"
-                for i, res in enumerate(final_sources, 1):
+                for i, res in enumerate(final_sources[:15], 1):
                     web_context_text += f"\n[Sumber #{i}]: {res.get('title', 'Unknown Source')}\n"
                     web_context_text += f"URL: {res.get('url', '')}\n"
                     web_context_text += f"Snippet: {res.get('snippet', '')}\n"
 
-                # Parallel Deep Crawl Top 2-3 Selected URLs (timeout 4s)
-                deep_urls = [r['url'] for r in final_sources[:3] if r.get('url')]
+                # Parallel Deep Crawl Top 2-3 Selected URLs (timeout 3s)
+                deep_urls = [r['url'] for r in final_sources[:3] if r.get('url') and 'doi.org' not in r.get('url')]
                 if deep_urls:
-                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=4.0) for u in deep_urls]
+                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=3.0) for u in deep_urls]
                     pages_content = await asyncio.gather(*crawl_tasks, return_exceptions=True)
                     
                     for idx, content in enumerate(pages_content, 1):
                         if isinstance(content, str) and content.strip():
-                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:3500]}...\n"
+                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:2000]}...\n"
 
                 web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
                 web_context_text += """
