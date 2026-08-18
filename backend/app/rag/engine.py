@@ -130,7 +130,10 @@ IE_THESAURUS = {
     "teori permainan": ["game theory", "nash equilibrium", "shapley value", "double marginalization", "supply chain contracts", "revenue sharing contract"],
     "system dynamics": ["dinamika sistem", "jay forrester", "causal loop diagram", "cld", "stock and flow", "sfd", "balancing loop", "reinforcing loop", "bullwhip effect simulation"],
     "fault tree analysis": ["fta", "top event", "logic gates", "minimal cut sets", "mcs", "analisis pohon kesalahan", "keandalan sistem", "maintenance 4.0"],
-    "metaheuristik vrp": ["vehicle routing problem", "simulated annealing", "tabu search", "cvrp", "vrptw", "metropolis acceptance", "cooling schedule", "tabu list", "aspiration criterion", "local optima"]
+    "metaheuristik vrp": ["vehicle routing problem", "simulated annealing", "tabu search", "cvrp", "vrptw", "metropolis acceptance", "cooling schedule", "tabu list", "aspiration criterion", "local optima"],
+    "desain eksperimen": ["design of experiments", "doe", "response surface methodology", "rsm", "desain faktorial", "central composite design", "box behnken", "anova", "taguchi orthogonal"],
+    "kapabilitas proses": ["process capability index", "cp", "cpk", "pp", "ppk", "process performance", "short term capability", "long term capability", "batas spesifikasi", "six sigma metrics"],
+    "kenyamanan termal": ["thermal comfort", "ergonomi lingkungan", "pmv", "ppd", "predicted mean vote", "fanger model", "heat stress", "wbgt", "laju metabolisme", "insulasi pakaian"]
 }
 
 def clean_text(text: str) -> str:
