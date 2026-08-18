@@ -1,21 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { UserProfile, Conversation } from "@/lib/types";
-import { ProfileModal } from "@/components/profile/ProfileModal";
+import { Conversation } from "@/lib/types";
 import { ShareModal } from "@/components/chat/ShareModal";
-import { Menu, Layers, User, PanelLeftOpen, Share2 } from "lucide-react";
+import { Menu, Layers, PanelLeftOpen, Share2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
   onToggleMobileSidebar: () => void;
   isSidebarCollapsed?: boolean;
   onToggleSidebarCollapse?: () => void;
-  profile: UserProfile;
   activeConversation?: Conversation | null;
-  onUpdateProfile: (data: Partial<UserProfile>) => void;
-  onLogout: () => void;
-  onLogin: (name: string, email: string) => void;
   onShareStatusChanged?: (isPublic: boolean, shareId?: string) => void;
 }
 
@@ -23,14 +18,9 @@ export function Header({
   onToggleMobileSidebar,
   isSidebarCollapsed = false,
   onToggleSidebarCollapse,
-  profile,
   activeConversation,
-  onUpdateProfile,
-  onLogout,
-  onLogin,
   onShareStatusChanged,
 }: HeaderProps) {
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isShareOpen, setIsShareOpen] = useState(false);
 
   return (
@@ -71,7 +61,7 @@ export function Header({
           </div>
         </div>
 
-        {/* Right: Share Button & User Profile Button */}
+        {/* Right: Share Button only */}
         <div className="flex items-center gap-2">
           {/* Claude-style Share Button */}
           {activeConversation && (
@@ -91,41 +81,8 @@ export function Header({
               <span>{activeConversation.isPublic ? "Dibagikan" : "Bagikan"}</span>
             </button>
           )}
-
-          {/* User Profile Trigger Button */}
-          <button
-            type="button"
-            onClick={() => setIsProfileOpen(true)}
-            aria-label={profile.isLoggedIn ? `Buka profil ${profile.name}` : "Masuk akun"}
-            className={cn(
-              "h-9 px-2.5 sm:px-3 rounded-xl flex items-center gap-2 border transition-all duration-150 active:scale-95 shadow-sm",
-              profile.isLoggedIn
-                ? "bg-surface hover:bg-surface-hover border-border text-text-primary"
-                : "bg-accent text-white border-accent-hover hover:bg-accent-hover"
-            )}
-          >
-            <div className={cn(
-              "w-5 h-5 rounded-lg flex items-center justify-center text-[10px] font-bold font-display",
-              profile.isLoggedIn ? "bg-accent/15 text-accent" : "bg-white/20 text-white"
-            )}>
-              {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-3 h-3" />}
-            </div>
-            <span className="text-xs font-medium max-w-[160px] truncate hidden sm:inline-block">
-              {profile.isLoggedIn ? profile.name : "Masuk"}
-            </span>
-          </button>
         </div>
       </header>
-
-      {/* Profile / Auth Modal */}
-      <ProfileModal
-        isOpen={isProfileOpen}
-        onClose={() => setIsProfileOpen(false)}
-        profile={profile}
-        onUpdateProfile={onUpdateProfile}
-        onLogout={onLogout}
-        onLogin={onLogin}
-      />
 
       {/* Share Conversation Modal (Claude style) */}
       {activeConversation && (

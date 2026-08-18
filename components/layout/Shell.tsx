@@ -41,7 +41,7 @@ export function Shell({
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-canvas text-text-primary">
-      {/* Responsive Collapsible Sidebar with integrated Theme Switcher */}
+      {/* Responsive Collapsible Sidebar with integrated Profile & Theme Switcher */}
       <Sidebar
         conversationsState={conversationsState}
         isMobileOpen={isMobileSidebarOpen}
@@ -59,11 +59,7 @@ export function Shell({
           onToggleMobileSidebar={() => setIsMobileSidebarOpen(true)}
           isSidebarCollapsed={isDesktopCollapsed}
           onToggleSidebarCollapse={toggleDesktopSidebar}
-          profile={profileState.profile}
           activeConversation={conversationsState.activeConversation}
-          onUpdateProfile={profileState.updateProfile}
-          onLogout={profileState.logout}
-          onLogin={profileState.login}
           onShareStatusChanged={handleShareStatusChanged}
         />
 
