@@ -9,7 +9,6 @@ import "katex/dist/katex.min.css";
 import { CodeBlock } from "./CodeBlock";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 interface MarkdownContentProps {
   content: string;
@@ -81,13 +80,8 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
             )}
           </div>
 
-          {/* Grid 6 Sumber Pertama */}
-          <div
-            className="grid gap-2.5 w-full"
-            style={{
-              gridTemplateColumns: `repeat(${Math.min(initialSources.length, 6)}, minmax(0, 1fr))`,
-            }}
-          >
+          {/* Grid 6 Sumber Pertama (Responsif: 2 kolom di mobile, 3 di tablet, 6 di desktop) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5 w-full">
             {initialSources.map((ws, idx) => (
               <a
                 key={idx}
@@ -122,7 +116,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
             ))}
           </div>
 
-          {/* Animated Accordion untuk Sumber Tambahan (>6) */}
+          {/* Animated Accordion untuk Sumber Tambahan (>6) - Menggunakan CSS Grid yang identik persis */}
           <AnimatePresence initial={false}>
             {isExpanded && extraSources.length > 0 && (
               <motion.div
@@ -132,12 +126,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                 transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                 className="overflow-hidden"
               >
-                <div
-                  className="grid gap-2.5 w-full pt-2.5"
-                  style={{
-                    gridTemplateColumns: `repeat(${Math.min(extraSources.length > 6 ? 4 : extraSources.length, 6)}, minmax(0, 1fr))`,
-                  }}
-                >
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5 w-full pt-2.5">
                   {extraSources.map((ws, extraIdx) => {
                     const actualIdx = 6 + extraIdx;
                     return (
