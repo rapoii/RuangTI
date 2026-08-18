@@ -114,7 +114,11 @@ IE_THESAURUS = {
     "hotelling": ["hotelling t2", "t2 hotelling", "multivariate spc", "mspc", "vektor rata-rata", "matriks kovarians s", "f-distribusi ucl"],
     "dfss": ["design for six sigma", "dmadv", "iddov", "desain six sigma", "define measure analyze design verify", "identify design optimize validate", "six sigma design"],
     "dmadv": ["define measure analyze design verify", "dfss", "design for six sigma", "roadmap desain produk six sigma"],
-    "multi echelon inventory": ["meio", "stochastic inventory", "inventory optimization", "supply chain network design", "scnd", "guaranteed service model", "echelon stock", "base stock policy"]
+    "multi echelon inventory": ["meio", "stochastic inventory", "inventory optimization", "supply chain network design", "scnd", "guaranteed service model", "echelon stock", "base stock policy"],
+    "manufaktur berkelanjutan": ["sustainable manufacturing", "green supply chain", "carbon footprint", "jejak karbon", "lca", "dekarbonisasi", "circular material use", "gscm"],
+    "green supply chain": ["gscm", "manufaktur berkelanjutan", "green procurement", "green logistics", "carbon footprint", "emisi karbon", "sustainability"],
+    "makroergonomi": ["macroergonomics", "sistem sosioteknis", "sociotechnical systems", "mead", "desain organisasi", "hendrick", "joint optimization"],
+    "sistem sosioteknis": ["sociotechnical systems", "sts", "makroergonomi", "joint optimization", "variance control", "participative design", "trist bamforth"]
 }
 
 def clean_text(text: str) -> str:
