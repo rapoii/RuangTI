@@ -1,10 +1,13 @@
 import os
 import json
 import httpx
+import logging
 from typing import AsyncGenerator, List, Dict, Any
 
 from app.rag.engine import rag_engine
 from app.services.cdp_browser import cdp_manager
+
+logger = logging.getLogger(__name__)
 
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://localhost:20128/v1")
 ROUTER_9_MODEL = "gcli/grok-4.6-high(xhigh)"
@@ -53,9 +56,9 @@ async def stream_grok_ai_response(
         try:
             search_results = await cdp_manager.search_google(prompt, max_results=3)
             if search_results:
-                web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU (LIVE)] ===\n"
+                web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU & DAFTAR SITASI (LIVE)] ===\n"
                 for i, res in enumerate(search_results, 1):
-                    web_context_text += f"\n--- [Web Source #{i}: {res.get('title', '')}] ---\n"
+                    web_context_text += f"\n[Sumber #{i}]: {res.get('title', 'Unknown Source')}\n"
                     web_context_text += f"URL: {res.get('url', '')}\n"
                     web_context_text += f"Snippet: {res.get('snippet', '')}\n"
 
@@ -64,10 +67,16 @@ async def stream_grok_ai_response(
                 if top_url:
                     page_content = await cdp_manager.fetch_page(top_url)
                     if page_content:
-                        web_context_text += f"\n--- [KONTEN LENGKAP DARI SUMBER UTAMA] ---\n{page_content[:4000]}...\n"
+                        web_context_text += f"\n--- [KONTEN LENGKAP DARI SUMBER #1] ---\n{page_content[:4000]}...\n"
 
                 web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
-                web_context_text += "\n*Instruksi: Integrasikan informasi terbaru dari hasil pencarian web ini dengan pengetahuan dasar teknik industri. Prioritaskan data terkini jika ada pembaruan standar/regulasi.*\n"
+                web_context_text += """
+*ATURAN WAJIB SITASI & SUMBER WEB:*
+1. Apabila kamu mengutip, menyebutkan data statistik, standar terbaru, regulasi, fakta, atau informasi dari hasil pencarian web di atas, WAJIB sertakan penanda sitasi tepat di akhir klausa/kalimat yang dikutip menggunakan format link markdown: `[[1]](URL_SUMBER_1)`, `[[2]](URL_SUMBER_2)`, dst.
+2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian khusus **Sumber Web Terkini:** dan cantumkan daftar sitasi lengkap dengan format:
+   - [[1]](URL_SUMBER_1) **Judul Sumber Web** - URL
+   - [[2]](URL_SUMBER_2) **Judul Sumber Web** - URL
+"""
         except Exception as e:
             web_context_text = f"\n*(Catatan: Fitur pencarian web sedang mengalami kendala teknis: {str(e)})*\n"
 
@@ -76,7 +85,13 @@ async def stream_grok_ai_response(
     if rag_context_text:
         system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
     if web_context_text:
-        system_prompt += web_context_text
+        system_prompt += f"""\n\n{web_context_text}
+\n\n=== PANDUAN PENULISAN SITASI SUMBER WEB (SANGAT KETAT & WAJIB) ===
+Setiap kali kamu menyampaikan fakta, data tahun rilis, linimasa revisi standar, atau detail hasil pencarian web di atas, kamu WAJIB membubuhkan nomor sitasi berkurung siku berformat markdown link tepat di sebelah klausa/kalimat tersebut, contoh: `[[1]](URL_SUMBER_1)` atau `[[2]](URL_SUMBER_2)`.
+Dan pada bagian akhir respons (di bawah judul **Referensi Literatur Ilmiah Terkait**), buat sub-bagian **Sumber Web Terkini:** yang memuat daftar sitasi tersebut:
+- [[1]](URL_SUMBER_1) - Judul Sumber 1
+- [[2]](URL_SUMBER_2) - Judul Sumber 2
+"""
 
     messages = [{"role": "system", "content": system_prompt}]
 

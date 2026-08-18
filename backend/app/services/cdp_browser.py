@@ -152,14 +152,59 @@ class CDPBrowserManager:
         return None
 
     async def search_google(self, query: str, max_results: int = 5) -> List[Dict[str, str]]:
-        """Search Google via CDP and return parsed results."""
+        """Search DuckDuckGo / Google via CDP or HTTP and return parsed results with URLs."""
+        # 1. Fast, reliable, anti-bot free HTTP DuckDuckGo HTML parser
+        try:
+            import httpx
+            import urllib.parse
+            from bs4 import BeautifulSoup
+            
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            }
+            search_url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
+            async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+                resp = await client.get(search_url, headers=headers)
+                if resp.status_code == 200:
+                    soup = BeautifulSoup(resp.text, 'html.parser')
+                    results = []
+                    for r in soup.select('.result'):
+                        # Abaikan ads / sponsored links
+                        if 'result--ad' in r.get('class', []):
+                            continue
+                        title_el = r.select_one('.result__title a')
+                        snippet_el = r.select_one('.result__snippet')
+                        if title_el:
+                            raw_href = title_el.get('href', '')
+                            if 'duckduckgo.com/y.js' in raw_href or 'bing.com/aclick' in raw_href:
+                                continue
+                            # Unwrap DDG redirect url
+                            if 'uddg=' in raw_href:
+                                actual_url = urllib.parse.unquote(raw_href.split('uddg=')[1].split('&')[0])
+                            else:
+                                actual_url = raw_href
+                                
+                            results.append({
+                                "title": title_el.get_text(strip=True),
+                                "url": actual_url,
+                                "snippet": snippet_el.get_text(strip=True) if snippet_el else ""
+                            })
+                            if len(results) >= max_results:
+                                break
+                    if results:
+                        logger.info(f"Retrieved {len(results)} search results via Web Search Engine")
+                        return results
+        except Exception as ex:
+            logger.warning(f"Fast search engine fallback failed: {ex}")
+
+        # 2. Fallback to CDP Browser Automation
         if not await self.ensure_running():
             return []
 
         try:
             import websockets
         except ImportError:
-            logger.error("websockets package not installed. Run: pip install websockets")
+            logger.error("websockets package not installed.")
             return []
 
         ws_url = await self._get_page_ws()
@@ -170,7 +215,7 @@ class CDPBrowserManager:
         try:
             async with websockets.connect(ws_url, max_size=10 * 1024 * 1024) as ws:
                 msg_id = 1
-                search_url = f"https://www.google.com/search?q={quote_plus(query)}&hl=en&num={max_results}"
+                search_url = f"https://html.duckduckgo.com/html/?q={quote_plus(query)}"
 
                 await ws.send(json.dumps({
                     "id": msg_id,
@@ -178,20 +223,23 @@ class CDPBrowserManager:
                     "params": {"url": search_url}
                 }))
                 msg_id += 1
-                await asyncio.sleep(3)
+                await asyncio.sleep(2)
 
                 extract_js = (
                     "(() => {"
                     "const results = [];"
-                    "const items = document.querySelectorAll('div.g');"
+                    "const items = document.querySelectorAll('.result');"
                     "for (const item of items) {"
-                    "const titleEl = item.querySelector('h3');"
-                    "const linkEl = item.querySelector('a[href]');"
-                    "const snippetEl = item.querySelector('.VwiC3b, span.st, div.IsZvec');"
-                    "if (titleEl && linkEl) {"
+                    "const titleEl = item.querySelector('.result__title a');"
+                    "const snippetEl = item.querySelector('.result__snippet');"
+                    "if (titleEl) {"
+                    "let href = titleEl.href;"
+                    "if (href.includes('uddg=')) {"
+                    "href = decodeURIComponent(href.split('uddg=')[1].split('&')[0]);"
+                    "}"
                     "results.push({"
                     "title: titleEl.innerText.trim(),"
-                    "url: linkEl.href,"
+                    "url: href,"
                     "snippet: snippetEl ? snippetEl.innerText.trim() : ''"
                     "});"
                     "}"

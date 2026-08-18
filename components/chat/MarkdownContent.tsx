@@ -90,16 +90,34 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
               {children}
             </td>
           ),
-          a: ({ href, children }) => (
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors"
-            >
-              {children}
-            </a>
-          ),
+          a: ({ href, children }) => {
+            const label = String(children).trim();
+            const isCitation = /^\[?\d+\]?$/.test(label);
+            if (isCitation) {
+              const displayLabel = label.startsWith("[") ? label : `[${label}]`;
+              return (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-mono text-[11px] font-semibold text-accent bg-accent/15 hover:bg-accent hover:text-white border border-accent/30 rounded px-1.5 py-0.5 mx-0.5 no-underline transition-all align-baseline cursor-pointer hover:shadow-xs"
+                  title={`Buka sumber referensi: ${href || "Web Source"}`}
+                >
+                  {displayLabel}
+                </a>
+              );
+            }
+            return (
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent underline underline-offset-2 hover:text-accent-hover transition-colors font-medium"
+              >
+                {children}
+              </a>
+            );
+          },
         }}
       >
         {content}

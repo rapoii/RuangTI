@@ -297,16 +297,27 @@ class RAGEngine:
         return expand_query(query)
 
     def search(self, query: str, top_k: int = 5) -> List[Dict]:
-        expanded = self.expand_query(query)
+        clean_query = re.sub(r'[^\w\s]', ' ', query).strip()
+        expanded = self.expand_query(clean_query)
+        # Sanitize for FTS5 boolean query
+        terms = [re.sub(r'[^\w]', '', t) for t in expanded.split() if re.sub(r'[^\w]', '', t)]
+        if not terms:
+            return []
+        fts_query = " OR ".join(terms)
+        
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         cur = conn.cursor()
-        cur.execute(
-            "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
-            (expanded, top_k)
-        )
-        results = [dict(row) for row in cur.fetchall()]
-        conn.close()
+        try:
+            cur.execute(
+                "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
+                (fts_query, top_k)
+            )
+            results = [dict(row) for row in cur.fetchall()]
+        except Exception:
+            results = []
+        finally:
+            conn.close()
         return results
 
 
