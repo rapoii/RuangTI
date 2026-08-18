@@ -19,6 +19,10 @@ interface UseChatProps {
   onUpdateTitle?: (title: string) => void;
 }
 
+export interface SendMessageOptions {
+  webSearch?: boolean;
+}
+
 export function useChat({ conversationId, initialMessages = [], onMessagesChange, onUpdateTitle }: UseChatProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [isStreaming, setIsStreaming] = useState<boolean>(false);
@@ -52,7 +56,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
   }, []);
 
   const sendMessage = useCallback(
-    async (content: string, customModel?: string) => {
+    async (content: string, customModel?: string, options?: { webSearch?: boolean }) => {
       if (!content.trim() || isStreaming || !conversationId) return;
 
       const userMsgId = `msg_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
@@ -94,7 +98,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
       abortControllerRef.current = controller;
 
       try {
-        const targetModel = customModel || selectedModel || "gcli/grok-4.5-high(xhigh)";
+        const targetModel = selectedModel || "gcli/grok-4.5-high(xhigh)";
         const res = await fetch(`${getApiBase()}/api/chat/stream`, {
           method: "POST",
           headers: {
@@ -105,6 +109,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
             model_id: targetModel,
             conversation_id: conversationId,
             history: historyContext,
+            web_search: options?.webSearch || false,
           }),
           signal: controller.signal,
         });

@@ -68,12 +68,12 @@ export default function ChatPage() {
     },
   });
 
-  const handleSendMessage = (text: string) => {
-    sendMessage(text, selectedModel);
+  const handleSendMessage = (text: string, options?: { webSearch?: boolean }) => {
+    sendMessage(text, selectedModel, options);
   };
 
   const handleSelectPrompt = (promptText: string) => {
-    sendMessage(promptText, selectedModel);
+    sendMessage(promptText);
   };
 
   if (!isMounted || !profileState.isLoaded) {

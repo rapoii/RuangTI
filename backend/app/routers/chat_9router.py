@@ -4,6 +4,7 @@ import httpx
 from typing import AsyncGenerator, List, Dict, Any
 
 from app.rag.engine import rag_engine
+from app.services.cdp_browser import cdp_manager
 
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://localhost:20128/v1")
 ROUTER_9_MODEL = "gcli/grok-4.5-high(xhigh)"
@@ -23,36 +24,66 @@ Karakteristik & Prinsip Menjawab:
    - **Referensi Literatur Ilmiah Terkait** (Cantumkan referensi buku/jurnal standar internasional yang relevan)
 """
 
+
 async def stream_grok_ai_response(
     prompt: str,
     history: List[Dict[str, str]] = None,
-    model_name: str = ROUTER_9_MODEL
+    model_name: str = ROUTER_9_MODEL,
+    web_search_enabled: bool = False
 ) -> AsyncGenerator[str, None]:
     """
-    Streaming AI response langsung dari 9Router LLM Proxy menggunakan model 'gcli/grok-4.5-high(xhigh)'
-    diperkaya dengan RAG dari buku referensi & modul keilmuan Teknik Industri internasional.
+    Streaming AI response dari 9Router LLM Proxy dengan opsi Hybrid RAG + Web Search via CDP.
     """
-    # 1. Retrieve Knowledge Base Chunks (RAG)
+    # 1. Retrieve Knowledge Base Chunks (RAG) - Always active
     rag_chunks = rag_engine.search(prompt, top_k=3)
-    
+
     rag_context_text = ""
     if rag_chunks:
         rag_context_text = "\n\n=== [REFERENSI LITERATUR & BUKU TEKS STANDAR TEKNIK INDUSTRI] ===\n"
         for idx, chunk in enumerate(rag_chunks, 1):
-            rag_context_text += f"\n--- [Referensi #{idx}: {chunk['title']} (Sumber Buku: {chunk['source']})] ---\n"
+            title = chunk.get('section_title', chunk.get('title', 'Unknown'))
+            source = chunk.get('module_id', 'N/A')
+            rag_context_text += f"\n--- [Referensi #{idx}: {title} (Modul: {source})] ---\n"
             rag_context_text += f"{chunk['content']}\n"
         rag_context_text += "\n=== [AKHIR REFERENSI LITERATUR] ===\n"
 
+    # 2. Web Search via CDP (Optional)
+    web_context_text = ""
+    if web_search_enabled:
+        try:
+            search_results = await cdp_manager.search_google(prompt, max_results=3)
+            if search_results:
+                web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU (LIVE)] ===\n"
+                for i, res in enumerate(search_results, 1):
+                    web_context_text += f"\n--- [Web Source #{i}: {res.get('title', '')}] ---\n"
+                    web_context_text += f"URL: {res.get('url', '')}\n"
+                    web_context_text += f"Snippet: {res.get('snippet', '')}\n"
+
+                # Fetch top result content for deeper context
+                top_url = search_results[0].get('url')
+                if top_url:
+                    page_content = await cdp_manager.fetch_page(top_url)
+                    if page_content:
+                        web_context_text += f"\n--- [KONTEN LENGKAP DARI SUMBER UTAMA] ---\n{page_content[:4000]}...\n"
+
+                web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
+                web_context_text += "\n*Instruksi: Integrasikan informasi terbaru dari hasil pencarian web ini dengan pengetahuan dasar teknik industri. Prioritaskan data terkini jika ada pembaruan standar/regulasi.*\n"
+        except Exception as e:
+            web_context_text = f"\n*(Catatan: Fitur pencarian web sedang mengalami kendala teknis: {str(e)})*\n"
+
+    # 3. Assemble System Prompt
     system_prompt = BASE_SYSTEM_PROMPT
     if rag_context_text:
         system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
+    if web_context_text:
+        system_prompt += web_context_text
 
     messages = [{"role": "system", "content": system_prompt}]
-    
+
     if history:
         for msg in history:
             messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
-            
+
     messages.append({"role": "user", "content": prompt})
 
     payload = {
@@ -89,3 +120,4 @@ async def stream_grok_ai_response(
                             continue
         except Exception as e:
             yield f"\n\n*(Gagal terhubung ke 9Router di {ROUTER_9_BASE_URL}: {str(e)})*"
+

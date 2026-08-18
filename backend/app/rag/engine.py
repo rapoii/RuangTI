@@ -286,7 +286,32 @@ def build_index():
     print(f"✅ RAG Indexed: {len(files)} pure IE master modules, {total_chunks} semantic sections indexed.")
 
 
+class RAGEngine:
+    """Wrapper class for RAG engine to support import from chat_9router."""
+
+    def __init__(self):
+        self.db_path = DB_PATH
+        self.thesaurus = IE_THESAURUS
+
+    def expand_query(self, query: str) -> str:
+        return expand_query(query)
+
+    def search(self, query: str, top_k: int = 5) -> List[Dict]:
+        expanded = self.expand_query(query)
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
+            (expanded, top_k)
+        )
+        results = [dict(row) for row in cur.fetchall()]
+        conn.close()
+        return results
+
+
+rag_engine = RAGEngine()
+
 if __name__ == "__main__":
     print("Rebuilding RAG with Pure Industrial Engineering Master Modules...")
     build_index()
-

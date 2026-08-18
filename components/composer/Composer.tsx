@@ -2,11 +2,11 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { SendStopButton } from "./SendStopButton";
-import { Paperclip } from "lucide-react";
+import { Paperclip, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ComposerProps {
-  onSendMessage: (text: string) => void;
+  onSendMessage: (text: string, options?: { webSearch?: boolean }) => void;
   onStopStreaming: () => void;
   isStreaming: boolean;
   disabled?: boolean;
@@ -21,6 +21,7 @@ export function Composer({
   const [text, setText] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [isFocused, setIsFocused] = useState(false);
+  const [webSearchEnabled, setWebSearchEnabled] = useState(false);
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -38,7 +39,7 @@ export function Composer({
       return;
     }
     if (text.trim() && !disabled) {
-      onSendMessage(text.trim());
+      onSendMessage(text.trim(), { webSearch: webSearchEnabled });
       setText("");
       if (textareaRef.current) {
         textareaRef.current.style.height = "auto";
@@ -56,7 +57,7 @@ export function Composer({
   return (
     <div className="w-full px-3 sm:px-6 pb-2 pt-1 select-none">
       <div className="max-w-chat mx-auto w-full">
-        {/* Floating Composer Container with Exact Mathematical Center */}
+        {/* Floating Composer Container */}
         <div
           className={cn(
             "relative rounded-2xl bg-surface transition-all duration-200 border px-3 sm:px-4 flex items-center gap-2.5 shadow-sm min-h-[52px] py-1.5",
@@ -93,6 +94,24 @@ export function Composer({
             />
           </div>
 
+          {/* Web Search Toggle */}
+          <div className="flex items-center justify-center shrink-0">
+            <button
+              type="button"
+              onClick={() => setWebSearchEnabled((prev) => !prev)}
+              className={cn(
+                "w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors m-0 p-0",
+                webSearchEnabled
+                  ? "bg-accent/15 text-accent hover:bg-accent/25"
+                  : "text-text-tertiary hover:text-text-primary hover:bg-surface-hover"
+              )}
+              aria-label={webSearchEnabled ? "Matikan pencarian web" : "Nyalakan pencarian web"}
+              title={webSearchEnabled ? "Pencarian Web: AKTIF (RAG + Live Web)" : "Pencarian Web: NONAKTIF (RAG saja)"}
+            >
+              <Globe className="w-4 h-4" />
+            </button>
+          </div>
+
           {/* Send / Stop Action Button */}
           <div className="flex items-center justify-center shrink-0">
             <SendStopButton
@@ -102,6 +121,15 @@ export function Composer({
             />
           </div>
         </div>
+
+        {/* Web Search Status Indicator */}
+        {webSearchEnabled && (
+          <div className="text-center mt-1">
+            <span className="text-[10px] sm:text-[11px] text-accent/80 font-medium tracking-wide">
+              🌐 Pencarian Web Aktif — RAG + Live Search via CDP
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
