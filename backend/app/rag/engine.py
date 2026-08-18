@@ -52,7 +52,12 @@ IE_THESAURUS = {
     "industry 5.0": ["industri 5.0", "human centric", "human-in-the-loop", "cobot", "collaborative robot", "human robot collaboration", "hrc", "resilience", "human digital twin", "sustainability"],
     "cobot": ["collaborative robot", "robot kolaboratif", "human robot collaboration", "hrc", "industry 5.0", "ergonomi kognitif", "wearable sensors"],
     "circular economy": ["ekonomi sirkular", "circular supply chain", "cscm", "lca", "life cycle assessment", "iso 14040", "cradle to cradle", "9r strategy", "karbon net zero", "green scm"],
-    "lca": ["life cycle assessment", "analisis daur hidup", "iso 14040", "iso 14044", "gwp", "global warming potential", "jejak karbon", "lci", "lcia", "circular economy"]
+    "lca": ["life cycle assessment", "analisis daur hidup", "iso 14040", "iso 14044", "gwp", "global warming potential", "jejak karbon", "lci", "lcia", "circular economy"],
+    "simulasi": ["discrete event simulation", "des", "pemodelan simulasi", "averill law", "arena", "promodel", "flexsim", "verifikasi validasi", "uji t-test", "warm-up period", "replikasi"],
+    "des": ["discrete event simulation", "simulasi diskrit", "antrian", "buffer", "averill law", "entities", "resources", "steady state"],
+    "penjadwalan": ["production scheduling", "flow shop", "job shop", "makespan", "cmax", "aturan johnson", "johnson rule", "neh", "nawaz enscore ham", "spt", "edd", "cds", "tardiness"],
+    "scheduling": ["production scheduling", "flow shop", "job shop", "makespan", "aturan johnson", "neh algorithm", "spt", "edd", "critical ratio", "flow time"],
+    "neh": ["nawaz enscore ham", "neh algorithm", "flow shop scheduling", "makespan", "permutation flow shop", "johnson rule"]
 }
 
 def clean_text(text: str) -> str:
