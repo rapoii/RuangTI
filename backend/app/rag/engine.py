@@ -78,7 +78,17 @@ IE_THESAURUS = {
     "mps": ["master production schedule", "jadwal induk produksi", "available to promise", "atp", "perencanaan produksi", "vollmann"],
     "group technology": ["gt", "cellular manufacturing", "manufaktur seluler", "part families", "machine cells", "rank order clustering", "roc", "king algorithm", "groover"],
     "roc": ["rank order clustering", "king algorithm", "group technology", "matriks insidensi mesin part", "bobot biner", "manufaktur seluler"],
-    "bpr": ["business process reengineering", "rekayasa proses bisnis", "michael hammer", "radikal fundamental", "pemetaan proses asme", "littles law", "bpmn"]
+    "bpr": ["business process reengineering", "rekayasa proses bisnis", "michael hammer", "radikal fundamental", "pemetaan proses asme", "littles law", "bpmn"],
+    "doe": ["design of experiments", "desain eksperimen", "taguchi", "rancangan percobaan", "faktorial", "anova", "f-hitung", "signal to noise ratio", "s/n ratio", "loss function", "montgomery"],
+    "taguchi": ["metode taguchi", "signal to noise", "sn ratio", "loss function", "orthogonal array", "robust design", "doe"],
+    "pergudangan": ["warehousing", "gudang", "order picking", "cube per order index", "coi", "storage policy", "pallet", "toth vigo"],
+    "vrp": ["vehicle routing problem", "rute kendaraan", "clarke wright savings", "depo", "kapasitas armada", "optimasi distribusi", "logistik"],
+    "nasa tlx": ["nasa-tlx", "beban kerja mental", "mental workload", "ergonomi kognitif", "hart staveland", "human error", "frustrasi", "effort"],
+    "ergonomi kognitif": ["mental workload", "nasa tlx", "beban kerja mental", "human error", "wickens", "therp", "human reliability"],
+    "work sampling": ["uji petik kerja", "sampling kerja", "pengukuran kerja", "proporsi produktif", "ukuran sampel barnes", "batas kendali p-chart"],
+    "most": ["maynard operation sequence technique", "mtm", "methods time measurement", "tmu", "predetermined motion time", "pmts", "zandin"],
+    "tmu": ["time measurement unit", "mtm", "most", "waktu standar gerakan", "pmts", "0.036 detik"],
+    "audit energi": ["manajemen energi", "iso 50001", "intensitas konsumsi energi", "ike", "sec", "sankey diagram", "boiler efficiency", "utilitas pabrik"]
 }
 
 def clean_text(text: str) -> str:
