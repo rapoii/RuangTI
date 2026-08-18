@@ -41,6 +41,18 @@ export interface AuthSuccessResponse {
   };
 }
 
+export interface PublicSharedConversation {
+  id: string;
+  title: string;
+  model_id: string;
+  created_at: string;
+  updated_at: string;
+  is_public: boolean;
+  share_id?: string;
+  author_name: string;
+  messages: Message[];
+}
+
 export async function registerToBackend(payload: RegisterPayload): Promise<AuthSuccessResponse> {
   const res = await fetch(`${getApiBase()}/api/auth/register`, {
     method: "POST",
@@ -92,6 +104,8 @@ export async function fetchConversationsFromBackend(): Promise<Conversation[]> {
       modelId: item.model_id,
       isPinned: item.is_pinned,
       pinned: item.is_pinned,
+      isPublic: item.is_public,
+      shareId: item.share_id,
       createdAt: new Date(item.created_at).getTime(),
       updatedAt: new Date(item.updated_at).getTime(),
     }));
@@ -119,6 +133,8 @@ export async function createConversationOnBackend(
       modelId: item.model_id,
       isPinned: item.is_pinned,
       pinned: item.is_pinned,
+      isPublic: item.is_public,
+      shareId: item.share_id,
       createdAt: new Date(item.created_at).getTime(),
       updatedAt: new Date(item.updated_at).getTime(),
     };
@@ -130,18 +146,56 @@ export async function createConversationOnBackend(
 
 export async function updateConversationOnBackend(
   conversationId: string,
-  updates: { title?: string; is_pinned?: boolean; model_id?: string }
+  updates: { title?: string; is_pinned?: boolean; model_id?: string; is_public?: boolean; share_id?: string }
 ): Promise<boolean> {
   try {
     const res = await fetch(`${getApiBase()}/api/conversations/${conversationId}`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...getAuthHeader() },
       body: JSON.stringify(updates),
     });
     return res.ok;
   } catch (err) {
     console.error("Backend update conversation error:", err);
     return false;
+  }
+}
+
+export async function toggleShareConversationOnBackend(
+  conversationId: string,
+  isPublic: boolean
+): Promise<{ success: boolean; is_public: boolean; share_id?: string; share_url?: string } | null> {
+  try {
+    const res = await fetch(`${getApiBase()}/api/conversations/${conversationId}/share`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...getAuthHeader() },
+      body: JSON.stringify({ is_public: isPublic }),
+    });
+    if (!res.ok) throw new Error("Failed to update share status");
+    return await res.json();
+  } catch (err) {
+    console.error("Backend toggle share error:", err);
+    return null;
+  }
+}
+
+export async function fetchPublicSharedConversation(identifier: string): Promise<PublicSharedConversation | null> {
+  try {
+    const res = await fetch(`${getApiBase()}/api/conversations/public/${identifier}`);
+    if (!res.ok) throw new Error("Shared conversation not found");
+    const data = await res.json();
+    return {
+      ...data,
+      messages: (data.messages || []).map((item: any) => ({
+        id: item.id,
+        role: item.role,
+        content: item.content,
+        createdAt: new Date(item.created_at).getTime(),
+      })),
+    };
+  } catch (err) {
+    console.error("Fetch public shared conversation error:", err);
+    return null;
   }
 }
 
@@ -163,6 +217,7 @@ export async function deleteConversationOnBackend(conversationId: string): Promi
   try {
     const res = await fetch(`${getApiBase()}/api/conversations/${conversationId}`, {
       method: "DELETE",
+      headers: { ...getAuthHeader() },
     });
     return res.ok;
   } catch (err) {
@@ -173,7 +228,9 @@ export async function deleteConversationOnBackend(conversationId: string): Promi
 
 export async function fetchMessagesFromBackend(conversationId: string): Promise<Message[]> {
   try {
-    const res = await fetch(`${getApiBase()}/api/messages/${conversationId}`);
+    const res = await fetch(`${getApiBase()}/api/messages/${conversationId}`, {
+      headers: { ...getAuthHeader() },
+    });
     if (!res.ok) throw new Error("Failed to fetch messages");
     const data = await res.json();
     return data.map((item: any) => ({
@@ -196,7 +253,7 @@ export async function saveMessageToBackend(
   try {
     const res = await fetch(`${getApiBase()}/api/messages/${conversationId}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...getAuthHeader() },
       body: JSON.stringify({ role, content }),
     });
     if (!res.ok) throw new Error("Failed to save message");

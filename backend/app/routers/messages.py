@@ -1,19 +1,42 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Header
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
-from typing import List
+from typing import List, Optional
 from datetime import datetime
 
 from app.core.database import get_session
+from app.core.security import decode_access_token
 from app.models.schema import Message, MessageCreate, Conversation
 
 router = APIRouter(prefix="/api/messages", tags=["Messages"])
 
+async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> Optional[str]:
+    if not authorization or not authorization.startswith("Bearer "):
+        return None
+    token = authorization.split(" ")[1]
+    payload = decode_access_token(token)
+    if payload:
+        return payload.get("sub")
+    return None
+
 @router.get("/{conversation_id}", response_model=List[Message])
 async def get_messages_by_conversation(
     conversation_id: str,
-    session: AsyncSession = Depends(get_session)
+    session: AsyncSession = Depends(get_session),
+    user_id: Optional[str] = Depends(get_optional_user_id)
 ):
+    conversation = await session.get(Conversation, conversation_id)
+    if not conversation:
+        raise HTTPException(status_code=404, detail="Conversation not found")
+
+    # Guard: if private and owned by a user, ensure requester is the owner
+    if not conversation.is_public and conversation.user_id is not None:
+        if not user_id or user_id != conversation.user_id:
+            raise HTTPException(
+                status_code=403,
+                detail="Akses ditolak: Percakapan ini bersifat privat."
+            )
+
     query = (
         select(Message)
         .where(Message.conversation_id == conversation_id)
@@ -26,12 +49,17 @@ async def get_messages_by_conversation(
 async def create_message(
     conversation_id: str,
     payload: MessageCreate,
-    session: AsyncSession = Depends(get_session)
+    session: AsyncSession = Depends(get_session),
+    user_id: Optional[str] = Depends(get_optional_user_id)
 ):
     # Verify conversation exists
     conversation = await session.get(Conversation, conversation_id)
     if not conversation:
         raise HTTPException(status_code=404, detail="Conversation not found")
+
+    # Guard: only owner can write new messages
+    if conversation.user_id and (not user_id or user_id != conversation.user_id):
+        raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menambahkan pesan ke percakapan ini")
 
     message = Message(
         conversation_id=conversation_id,

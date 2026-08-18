@@ -22,6 +22,8 @@ export interface Conversation {
   modelId: string;
   isPinned?: boolean;
   pinned?: boolean;
+  isPublic?: boolean;
+  shareId?: string;
   messages?: Message[];
 }
 

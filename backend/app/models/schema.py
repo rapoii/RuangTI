@@ -33,6 +33,8 @@ class Conversation(SQLModel, table=True):
     title: str = Field(default="Konsultasi TI Baru")
     model_id: str = Field(default="TI-Optima Pro")
     is_pinned: bool = Field(default=False)
+    is_public: bool = Field(default=False)
+    share_id: Optional[str] = Field(default=None, index=True)
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
@@ -94,8 +96,24 @@ class ConversationUpdate(SQLModel):
     title: Optional[str] = None
     is_pinned: Optional[bool] = None
     model_id: Optional[str] = None
+    is_public: Optional[bool] = None
+    share_id: Optional[str] = None
+
+class ShareStatusUpdate(SQLModel):
+    is_public: bool
 
 class MessageCreate(SQLModel):
     role: str
     content: str
     tool_calls: Optional[str] = None
+
+class SharedConversationResponse(SQLModel):
+    id: str
+    title: str
+    model_id: str
+    created_at: datetime
+    updated_at: datetime
+    is_public: bool
+    share_id: Optional[str]
+    author_name: str
+    messages: List[Message]

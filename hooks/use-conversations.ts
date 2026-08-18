@@ -153,6 +153,17 @@ export function useConversations(props?: UseConversationsProps) {
     [conversations]
   );
 
+  const updateShareStatus = useCallback(
+    (id: string, isPublic: boolean, shareId?: string) => {
+      setConversations((prev) =>
+        prev.map((c) =>
+          c.id === id ? { ...c, isPublic, shareId: shareId || c.shareId } : c
+        )
+      );
+    },
+    []
+  );
+
   const updateMessages = useCallback(
     (id: string, messages: Message[]) => {
       setConversations((prev) => {
@@ -208,6 +219,7 @@ export function useConversations(props?: UseConversationsProps) {
     deleteConversation,
     renameConversation,
     togglePinConversation,
+    updateShareStatus,
     updateMessages,
     mounted,
   };

@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { UserProfile } from "@/lib/types";
+import { UserProfile, Conversation } from "@/lib/types";
 import { ProfileModal } from "@/components/profile/ProfileModal";
-import { Menu, Layers, User, PanelLeftOpen } from "lucide-react";
+import { ShareModal } from "@/components/chat/ShareModal";
+import { Menu, Layers, User, PanelLeftOpen, Share2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
@@ -11,9 +12,11 @@ interface HeaderProps {
   isSidebarCollapsed?: boolean;
   onToggleSidebarCollapse?: () => void;
   profile: UserProfile;
+  activeConversation?: Conversation | null;
   onUpdateProfile: (data: Partial<UserProfile>) => void;
   onLogout: () => void;
   onLogin: (name: string, email: string) => void;
+  onShareStatusChanged?: (isPublic: boolean, shareId?: string) => void;
 }
 
 export function Header({
@@ -21,11 +24,14 @@ export function Header({
   isSidebarCollapsed = false,
   onToggleSidebarCollapse,
   profile,
+  activeConversation,
   onUpdateProfile,
   onLogout,
   onLogin,
+  onShareStatusChanged,
 }: HeaderProps) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isShareOpen, setIsShareOpen] = useState(false);
 
   return (
     <>
@@ -65,8 +71,28 @@ export function Header({
           </div>
         </div>
 
-        {/* Right: User Profile Trigger Button */}
+        {/* Right: Share Button & User Profile Button */}
         <div className="flex items-center gap-2">
+          {/* Claude-style Share Button */}
+          {activeConversation && (
+            <button
+              type="button"
+              onClick={() => setIsShareOpen(true)}
+              className={cn(
+                "h-9 px-3 rounded-xl flex items-center gap-1.5 text-xs font-medium border transition-all duration-150 active:scale-95 shadow-sm",
+                activeConversation.isPublic
+                  ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/15"
+                  : "bg-surface hover:bg-surface-hover text-text-secondary hover:text-text-primary border-border"
+              )}
+              aria-label="Bagikan obrolan ini"
+              title="Bagikan obrolan ini"
+            >
+              <Share2 className="w-3.5 h-3.5 shrink-0" />
+              <span>{activeConversation.isPublic ? "Dibagikan" : "Bagikan"}</span>
+            </button>
+          )}
+
+          {/* User Profile Trigger Button */}
           <button
             type="button"
             onClick={() => setIsProfileOpen(true)}
@@ -100,6 +126,19 @@ export function Header({
         onLogout={onLogout}
         onLogin={onLogin}
       />
+
+      {/* Share Conversation Modal (Claude style) */}
+      {activeConversation && (
+        <ShareModal
+          isOpen={isShareOpen}
+          onClose={() => setIsShareOpen(false)}
+          conversationId={activeConversation.id}
+          conversationTitle={activeConversation.title}
+          isInitiallyPublic={activeConversation.isPublic || false}
+          initialShareId={activeConversation.shareId}
+          onShareStatusChanged={onShareStatusChanged}
+        />
+      )}
     </>
   );
 }
