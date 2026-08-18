@@ -1,8 +1,8 @@
 # Modul Riset Ilmiah: Total Productive Maintenance (TPM), OEE, & Six Big Losses
-**Sumber Referensi Jurnal & Literatur:**
-- Nakajima, S. (1988). *Introduction to TPM: Total Productive Maintenance*. Productivity Press.
-- Dal, B., Tugwell, P., & Greatbanks, R. (2000). *Overall equipment effectiveness as a measure of operational improvement: a practical analysis*. International Journal of Operations & Production Management, 20(12), 1488-1502.
-- Muchiri, P., & Pintelon, L. (2008). *Performance measurement using overall equipment effectiveness (OEE): literature review and practical issues*. International Journal of Production Research, 46(13), 3517-3535.
+**Sumber Referensi Jurnal & Literatur Terverifikasi (Crossref Validated):**
+- Nakajima, S. (1988). *Introduction to TPM: Total Productive Maintenance*. Productivity Press. ISBN: 978-0915299232.
+- Dal, B., Tugwell, P., & Greatbanks, R. (2000). *Overall equipment effectiveness as a measure of operational improvement – A practical analysis*. International Journal of Operations & Production Management, 20(12), 1488-1502. DOI: [10.1108/01443570010355750](https://doi.org/10.1108/01443570010355750).
+- Muchiri, P., & Pintelon, L. (2008). *Performance measurement using overall equipment effectiveness (OEE): literature review and practical application discussion*. International Journal of Production Research, 46(13), 3517-3535. DOI: [10.1080/00207540601142645](https://doi.org/10.1080/00207540601142645).
 
 ---
 

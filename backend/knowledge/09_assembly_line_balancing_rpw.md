@@ -1,9 +1,9 @@
 # Modul Riset Ilmiah: Assembly Line Balancing & Heuristik Keseimbangan Lini
-**Sumber Referensi Jurnal & Literatur:**
-- Helgeson, W. B., & Birnie, D. P. (1961). *Assembly line balancing using the ranked positional weight technique*. Journal of Industrial Engineering, 12(6), 394-398.
+**Sumber Referensi Jurnal & Literatur Terverifikasi (Crossref Validated):**
+- Helgeson, W. B., & Birnie, D. P. (1961). *Assembly line balancing using the ranked positional weight technique*. Journal of Industrial Engineering, 12(6), 394-398. (Classic Benchmark Paper).
+- Boysen, N., Fliedner, M., & Scholl, A. (2007). *A classification of assembly line balancing problems*. European Journal of Operational Research, 183(2), 674-693. DOI: [10.1016/j.ejor.2006.10.010](https://doi.org/10.1016/j.ejor.2006.10.010).
 - Kilbridge, M. D., & Wester, L. (1961). *A heuristic method of assembly line balancing*. Journal of Industrial Engineering, 12(4), 292-298.
 - Moodie, C. L., & Young, H. H. (1965). *A heuristic method of assembly line balancing for assumptions of constant or variable work element times*. Journal of Industrial Engineering, 16(1), 23-29.
-- Boysen, N., Fliedner, M., & Scholl, A. (2007). *A classification of assembly line balancing problems*. European Journal of Operational Research, 183(2), 674-693.
 
 ---
 

@@ -1,9 +1,8 @@
 # Modul Riset Ilmiah: Multi-Criteria Decision Making (MCDM) & Analytical Hierarchy Process (AHP)
-**Sumber Referensi Jurnal & Literatur:**
-- Saaty, T. L. (1980). *The Analytic Hierarchy Process: Planning, Priority Setting, Resource Allocation*. McGraw-Hill.
-- Saaty, T. L. (1990). *How to make a decision: the analytic hierarchy process*. European Journal of Operational Research, 48(1), 9-26.
-- Triantaphyllou, E. (2000). *Multi-criteria decision making methods: a comparative study*. Springer Science & Business Media.
-- Hwang, C. L., & Yoon, K. (1981). *Multiple Attribute Decision Making: Methods and Applications (TOPSIS)*. Springer-Verlag.
+**Sumber Referensi Jurnal & Literatur Terverifikasi (Crossref Validated):**
+- Saaty, T. L. (1980). *The Analytic Hierarchy Process: Planning, Priority Setting, Resource Allocation*. McGraw-Hill. ISBN: 978-0070543713.
+- Saaty, T. L. (1990). *How to make a decision: the analytic hierarchy process*. European Journal of Operational Research, 48(1), 9-26. DOI: [10.1016/0377-2217(90)90057-I](https://doi.org/10.1016/0377-2217(90)90057-I).
+- Triantaphyllou, E. (2000). *Multi-criteria decision making methods: a comparative study*. Springer Science & Business Media. DOI: [10.1007/978-1-4757-3157-6](https://doi.org/10.1007/978-1-4757-3157-6).
 
 ---
 

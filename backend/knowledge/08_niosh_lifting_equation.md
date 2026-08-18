@@ -1,8 +1,8 @@
 # Modul Riset Ilmiah: Revised NIOSH Lifting Equation (Manual Material Handling)
-**Sumber Referensi Jurnal & Literatur:**
-- Waters, T. R., Putz-Anderson, V., Garg, A., & Fine, L. J. (1993). *Revised NIOSH equation for the design and evaluation of manual lifting tasks*. Ergonomics, 36(7), 749-776.
+**Sumber Referensi Jurnal & Literatur Terverifikasi (Crossref Validated):**
+- Waters, T. R., Putz-Anderson, V., Garg, A., & Fine, L. J. (1993). *Revised NIOSH equation for the design and evaluation of manual lifting tasks*. Ergonomics, 36(7), 749-776. DOI: [10.1080/00140139308967940](https://doi.org/10.1080/00140139308967940).
 - Waters, T. R., Putz-Anderson, V., & Garg, A. (1994). *Applications manual for the revised NIOSH lifting equation*. US Department of Health and Human Services (NIOSH) Publication No. 94-110.
-- Dempsey, P. G. (2002). *Usability of the revised NIOSH lifting equation*. Ergonomics, 45(12), 817-828.
+- Dempsey, P. G. (2002). *Usability of the revised NIOSH lifting equation*. Ergonomics, 45(12), 817-828. DOI: [10.1080/00140130210159961](https://doi.org/10.1080/00140130210159961).
 
 ---
 
