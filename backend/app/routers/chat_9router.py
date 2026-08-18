@@ -22,14 +22,14 @@ Karakteristik & Prinsip Menjawab:
 3. Basis Pengetahuan Terverifikasi (RAG Context): Manfaatkan buku teks dan standar industri internasional yang disertakan (Montgomery, Tompkins, Ralph Barnes, Hamdy Taha, Heizer-Render, Blank-Tarquin) untuk memberikan jawaban matematis yang presisi beserta nilai konstanta tabel yang tepat.
 4. Adaptasi Bahasa Otomatis (Multilingual & Language Mirroring):
    - Jawablah menggunakan bahasa yang sama persis dengan yang digunakan oleh pengguna (Bahasa Indonesia, English, 日本語, Deutsch, Español, dll).
-   - Jika pengguna bertanya dalam bahasa Inggris, seluruh struktur heading, penjelasan teknis, rekomendasi, dan sitasi wajib disajikan secara profesional dalam bahasa Inggris.
+   - Jika pengguna bertanya dalam bahasa Inggris, seluruh struktur heading, penjelasan teknis, dan rekomendasi wajib disajikan secara profesional dalam bahasa Inggris.
    - Jika pengguna bertanya dalam bahasa Indonesia, gunakan bahasa Indonesia teknis yang baku dan profesional.
 5. Struktur Jawaban (Sesuaikan bahasanya dengan bahasa pertanyaan pengguna):
    - **Identifikasi Masalah / Pendekatan Metodologi** (Problem Identification / Methodology)
    - **Formulasi Matematis & Parameter** (Mathematical Formulation & Parameters - gunakan $$ ... $$)
    - **Langkah Komputasi & Solusi** (Computational Steps & Solution)
    - **Interpretasi & Rekomendasi Manajerial / Implementasi Lapangan** (Interpretation & Managerial Recommendations)
-   - **Referensi Literatur Ilmiah Terkait** (Related Scientific Literature References)
+   *(Catatan: Tidak perlu menuliskan daftar pustaka atau sitasi teks manual di akhir jawaban, karena seluruh kartu sumber web/jurnal sudah otomatis ditampilkan oleh sistem di kartu sumber atas).*
 """
 
 
@@ -95,11 +95,10 @@ async def stream_grok_ai_response(
                 # Simpan metadata visual sources tag untuk disuntikkan di awal token
                 websources_meta_tag = f"<!--WEBSOURCES:{json.dumps(final_sources)}-->"
 
-                web_context_text = f"\n\n=== [HASIL SMART WEB SEARCH: {len(search_candidates)} WEBSITE DIPINDAI, {len(final_sources)} SUMBER UTAMA DIPILIH SECARA DINAMIS] ===\n"
-                for i, res in enumerate(final_sources[:15], 1):
-                    web_context_text += f"\n[Sumber #{i}]: {res.get('title', 'Unknown Source')}\n"
-                    web_context_text += f"URL: {res.get('url', '')}\n"
-                    web_context_text += f"Snippet: {res.get('snippet', '')}\n"
+                web_context_text = f"\n\n=== [HASIL INFORMASI SUMBER WEB ({len(final_sources)} SUMBER DIPINDAI)] ===\n"
+                for i, res in enumerate(final_sources[:20], 1):
+                    web_context_text += f"\n- {res.get('title', 'Unknown Source')} (Domain: {res.get('domain', '')})\n"
+                    web_context_text += f"  Snippet: {res.get('snippet', '')}\n"
 
                 # Parallel Deep Crawl Top 2-3 Selected URLs (timeout 3s)
                 deep_urls = [r['url'] for r in final_sources[:3] if r.get('url') and 'doi.org' not in r.get('url')]
@@ -111,14 +110,7 @@ async def stream_grok_ai_response(
                         if isinstance(content, str) and content.strip():
                             web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:2000]}...\n"
 
-                web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
-                web_context_text += """
-*ATURAN PENULISAN SITASI & SUMBER WEB:*
-1. Apabila kamu mengutip data/fakta dari hasil pencarian web di atas, gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)`, `[2](URL_SUMBER_2)`.
-2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian **Sumber Web Terkini:** dengan format bersih:
-   - [1] [Judul Sumber Web 1](URL_SUMBER_1)
-   - [2] [Judul Sumber Web 2](URL_SUMBER_2)
-"""
+                web_context_text += "\n=== [AKHIR HASIL INFORMASI SUMBER WEB] ===\n"
         except Exception as e:
             web_context_text = f"\n*(Catatan: Fitur pencarian web sedang mengalami kendala teknis: {str(e)})*\n"
 
@@ -128,11 +120,9 @@ async def stream_grok_ai_response(
         system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
     if web_context_text:
         system_prompt += f"""\n\n{web_context_text}
-\n\n=== PANDUAN PENULISAN SITASI SUMBER WEB ===
-- Gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)` atau `[2](URL_SUMBER_2)` (satu pasang tanda kurung siku [ ], jangan gunakan double bracket [[ ]]).
-- Pada bagian akhir respons di sub-bagian **Sumber Web Terkini:**, tuliskan:
-  - [1] [Judul Sumber 1](URL_SUMBER_1)
-  - [2] [Judul Sumber 2](URL_SUMBER_2)
+\n\n=== ATURAN PENGGUNAAN SUMBER WEB ===
+- Gunakan data dan fakta dari sumber di atas untuk memperkaya isi analisis dan solusi.
+- Dilarang menuliskan daftar pustaka atau daftar URL berulang di akhir jawaban, karena seluruh sumber web (termasuk hingga 50 tautan) telah disajikan otomatis dalam komponen kartu visual di bagian atas percakapan.
 """
 
     messages = [{"role": "system", "content": system_prompt}]
