@@ -78,7 +78,7 @@ export function MessageRow({
             </div>
           ) : (
             <div className="flex flex-col items-end gap-1.5">
-              <div className="px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl rounded-tr-sm bg-surface-active/90 border border-border/80 text-text-primary text-xs sm:text-sm font-sans leading-relaxed shadow-xs">
+              <div className="px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl rounded-tr-sm bg-surface dark:bg-surface-active/80 border border-border-strong/70 dark:border-border text-text-primary text-xs sm:text-sm font-sans leading-relaxed shadow-sm dark:shadow-none">
                 <p className="whitespace-pre-wrap break-words">{message.content}</p>
               </div>
 
