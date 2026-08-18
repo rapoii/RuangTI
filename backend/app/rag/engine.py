@@ -100,7 +100,13 @@ IE_THESAURUS = {
     "cost of quality": ["biaya kualitas", "coq", "paf model", "feigenbaum", "prevention appraisal failure", "scrap rework"],
     "acceptance sampling": ["sampling penerimaan", "oc curve", "operating characteristic", "aql", "ltpd", "mil std 105e", "aoq", "aoql", "ati", "single sampling", "inspeksi lot"],
     "aql": ["acceptable quality level", "ltpd", "acceptance sampling", "sampling penerimaan", "oc curve", "risiko produsen alpha", "risiko konsumen beta"],
-    "oc curve": ["operating characteristic curve", "kurva karakteristik operasi", "acceptance sampling", "pa", "probabilitas penerimaan", "aql", "ltpd"]
+    "oc curve": ["operating characteristic curve", "kurva karakteristik operasi", "acceptance sampling", "pa", "probabilitas penerimaan", "aql", "ltpd"],
+    "peramalan": ["demand forecasting", "forecasting", "exponential smoothing", "holt winters", "moving average", "mape", "mad", "mse", "tracking signal", "box jenkins"],
+    "forecasting": ["peramalan permintaan", "deret waktu", "time series", "exponential smoothing", "holt winters", "mape", "mad", "tracking signal"],
+    "bullwhip effect": ["efek cambuk", "distorsi informasi", "variabilitas pesanan", "lee 1997", "supply chain amplification", "vmi", "variance of orders"],
+    "tqm": ["total quality management", "manajemen mutu terpadu", "deming", "pdca", "malcolm baldrige", "mbnqa", "iso 9001", "kaizen", "kepuasan pelanggan"],
+    "baldrige": ["malcolm baldrige", "mbnqa", "baldrige excellence", "kriteria kinerja unggul", "tqm", "1000 poin", "leadership results"],
+    "iso 9001": ["iso 9001 2015", "sistem manajemen mutu", "smm", "risk based thinking", "klausul 4-10", "audit internal", "pdca", "tqm"]
 }
 
 def clean_text(text: str) -> str:
