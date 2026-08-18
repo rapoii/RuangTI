@@ -62,7 +62,23 @@ IE_THESAURUS = {
     "hiradc": ["hazard identification risk assessment", "k3", "penilaian risiko", "hierarki kendali", "eliminasi substitusi engineering", "keselamatan kerja pabrik"],
     "hazop": ["hazard and operability study", "guide words", "k3", "analisis deviasi proses", "keselamatan operasi"],
     "rekayasa nilai": ["value engineering", "ve", "analisis nilai", "fast diagram", "lawrence miles", "function analysis", "verb noun", "cost to function ratio"],
-    "value engineering": ["rekayasa nilai", "fast diagram", "lawrence miles", "save international", "analisis fungsi", "fungsi biaya", "target costing"]
+    "value engineering": ["rekayasa nilai", "fast diagram", "lawrence miles", "save international", "analisis fungsi", "fungsi biaya", "target costing"],
+    "qfd": ["quality function deployment", "house of quality", "hoq", "voice of customer", "voc", "whats hows", "ulrich eppinger", "desain produk", "matriks korelasi"],
+    "dfma": ["design for manufacture and assembly", "boothroyd dewhurst", "efisiensi perakitan", "design efficiency", "part count reduction", "perancangan produk"],
+    "triz": ["altshuller", "inventive principles", "matriks kontradiksi", "kontradiksi teknis", "pemecahan masalah inventif", "teori inovasi"],
+    "keandalan": ["reliability", "rekayasa keandalan", "failure rate", "laju kegagalan", "weibull", "mtbf", "mttr", "availability", "rbd", "reliability block diagram", "ebeling"],
+    "reliability": ["rekayasa keandalan", "failure rate", "weibull", "mtbf", "mttr", "availability", "bathtub curve", "fta", "fmeca", "ebeling"],
+    "cpm": ["critical path method", "lintasan kritis", "forward pass", "backward pass", "total float", "slack", "manajemen proyek", "kerzner"],
+    "pert": ["program evaluation and review technique", "waktu optimis pesimis", "varians proyek", "beta distribution", "manajemen proyek"],
+    "evm": ["earned value management", "planned value", "earned value", "actual cost", "cpi", "spi", "cost variance", "schedule variance", "eac"],
+    "metaheuristik": ["genetic algorithm", "algoritma genetika", "pso", "particle swarm optimization", "simulated annealing", "tabu search", "optimasi np-hard", "goldberg"],
+    "ga": ["genetic algorithm", "algoritma genetika", "crossover", "mutasi", "fitness function", "roulette wheel", "metaheuristik"],
+    "pso": ["particle swarm optimization", "kawanan partikel", "pbest", "gbest", "kecepatan partikel", "metaheuristik"],
+    "mrp": ["material requirements planning", "bom explosion", "bill of materials", "net requirements", "gross requirements", "lead time offset", "mps", "apics", "orlicky"],
+    "mps": ["master production schedule", "jadwal induk produksi", "available to promise", "atp", "perencanaan produksi", "vollmann"],
+    "group technology": ["gt", "cellular manufacturing", "manufaktur seluler", "part families", "machine cells", "rank order clustering", "roc", "king algorithm", "groover"],
+    "roc": ["rank order clustering", "king algorithm", "group technology", "matriks insidensi mesin part", "bobot biner", "manufaktur seluler"],
+    "bpr": ["business process reengineering", "rekayasa proses bisnis", "michael hammer", "radikal fundamental", "pemetaan proses asme", "littles law", "bpmn"]
 }
 
 def clean_text(text: str) -> str:
