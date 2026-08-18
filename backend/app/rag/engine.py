@@ -106,7 +106,12 @@ IE_THESAURUS = {
     "bullwhip effect": ["efek cambuk", "distorsi informasi", "variabilitas pesanan", "lee 1997", "supply chain amplification", "vmi", "variance of orders"],
     "tqm": ["total quality management", "manajemen mutu terpadu", "deming", "pdca", "malcolm baldrige", "mbnqa", "iso 9001", "kaizen", "kepuasan pelanggan"],
     "baldrige": ["malcolm baldrige", "mbnqa", "baldrige excellence", "kriteria kinerja unggul", "tqm", "1000 poin", "leadership results"],
-    "iso 9001": ["iso 9001 2015", "sistem manajemen mutu", "smm", "risk based thinking", "klausul 4-10", "audit internal", "pdca", "tqm"]
+    "iso 9001": ["iso 9001 2015", "sistem manajemen mutu", "smm", "risk based thinking", "klausul 4-10", "audit internal", "pdca", "tqm"],
+    "abc": ["activity based costing", "activity-based costing", "biaya berbasis aktivitas", "tdabc", "time driven abc", "cost driver", "cost pool", "kaplan cooper", "analisis biaya"],
+    "cvp": ["cost volume profit", "analisis biaya volume laba", "break even point", "bep", "titik impas", "margin of safety", "contribution margin", "fixed cost variable cost"],
+    "bep": ["break even point", "titik impas", "cvp", "fixed cost", "variable cost", "contribution margin ratio", "analisis biaya industri"],
+    "multivariate spc": ["mspc", "hotelling t2", "t2 hotelling", "mewma", "peta kendali multivariat", "matriks kovarians", "mahalanobis distance", "lowry 1992", "pengendalian mutu multivariat"],
+    "hotelling": ["hotelling t2", "t2 hotelling", "multivariate spc", "mspc", "vektor rata-rata", "matriks kovarians s", "f-distribusi ucl"]
 }
 
 def clean_text(text: str) -> str:
