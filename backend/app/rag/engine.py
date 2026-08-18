@@ -118,7 +118,12 @@ IE_THESAURUS = {
     "manufaktur berkelanjutan": ["sustainable manufacturing", "green supply chain", "carbon footprint", "jejak karbon", "lca", "dekarbonisasi", "circular material use", "gscm"],
     "green supply chain": ["gscm", "manufaktur berkelanjutan", "green procurement", "green logistics", "carbon footprint", "emisi karbon", "sustainability"],
     "makroergonomi": ["macroergonomics", "sistem sosioteknis", "sociotechnical systems", "mead", "desain organisasi", "hendrick", "joint optimization"],
-    "sistem sosioteknis": ["sociotechnical systems", "sts", "makroergonomi", "joint optimization", "variance control", "participative design", "trist bamforth"]
+    "sistem sosioteknis": ["sociotechnical systems", "sts", "makroergonomi", "joint optimization", "variance control", "participative design", "trist bamforth"],
+    "fmea": ["failure mode and effects analysis", "fmeca", "rpn", "risk priority number", "action priority", "severity occurrence detection", "aiag vda", "dfmea", "pfmea"],
+    "rcm": ["reliability centered maintenance", "perawatan berbasis keandalan", "moubray", "cbm", "condition based maintenance", "run to failure", "failure finding", "p-f interval", "rcm 4.0"],
+    "craft": ["computerized relative allocation of facilities technique", "pairwise interchange", "ptlf", "mhc", "material handling cost", "improvement algorithm", "armour buffa", "jarak rectilinear"],
+    "aldep": ["automated layout design program", "construction algorithm", "sweep method", "closeness rating", "arc", "tata letak fasilitas"],
+    "corelap": ["computerized relationship layout planning", "tcr", "total closeness rating", "construction algorithm", "tata letak fasilitas"]
 }
 
 def clean_text(text: str) -> str:
