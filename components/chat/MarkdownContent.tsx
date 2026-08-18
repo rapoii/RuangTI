@@ -56,6 +56,8 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
               {children}
             </h3>
           ),
+          em: ({ children }) => <em className="italic text-text-primary/90">{children}</em>,
+          strong: ({ children }) => <strong className="font-semibold text-text-primary">{children}</strong>,
           p: ({ children }) => <p className="mb-3.5 last:mb-0">{children}</p>,
           ul: ({ children }) => (
             <ul className="list-disc list-outside pl-5 mb-3.5 space-y-1">
