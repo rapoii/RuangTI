@@ -1,352 +1,292 @@
 import os
 import re
-import json
 import sqlite3
-from typing import List, Dict, Any
+from typing import List, Dict, Tuple
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "ruangti_rag.db")
 KNOWLEDGE_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "knowledge")
 
-# Thesaurus & Sinonim Teknik Industri untuk Query Expansion
+# ============================================================
+# IE THESAURUS v3.0 — 300 Modul Master Teknik Industri
+# ============================================================
 IE_THESAURUS = {
+    # --- Core IE (Modul 1-50) ---
     "ptlf": ["tata letak fasilitas", "plant layout", "from-to chart", "activity relationship chart", "arc", "mhc", "material handling cost", "craft", "muther", "slp"],
-    "tata letak": ["ptlf", "plant layout", "from-to chart", "activity relationship chart", "arc", "mhc", "craft", "slp"],
-    "mhc": ["ongkos material handling", "material handling cost", "from-to chart", "ptlf", "jarak rectilinear"],
-    "arc": ["activity relationship chart", "tcr", "total closeness rating", "muther", "closeness rating", "sandi a e i o u x"],
-    "craft": ["layout optimization", "pairwise interchange", "ptlf", "heuristic layout"],
     "spc": ["statistical process control", "peta kendali", "control chart", "x-bar r", "x-bar s", "ucl", "lcl", "nelson rules", "montgomery"],
-    "peta kendali": ["spc", "statistical process control", "x-bar r", "x-bar s", "ucl", "lcl", "nelson rules", "cp", "cpk"],
     "six sigma": ["dpmo", "dmaic", "cpk", "sigma level", "quality control", "cacat per sejuta peluang"],
-    "dpmo": ["defects per million opportunities", "six sigma", "dpo", "yield", "cacat"],
-    "cpk": ["process capability", "kapabilitas proses", "cp", "usl", "lsl", "montgomery"],
     "waktu baku": ["time study", "jam henti", "waktu siklus", "waktu normal", "westinghouse", "allowance", "kelonggaran", "barnes"],
-    "jam henti": ["stopwatch time study", "waktu baku", "uji keseragaman data", "uji kecukupan data", "westinghouse"],
-    "westinghouse": ["rating factor", "penyesuaian performa", "skill effort conditions consistency", "waktu normal"],
-    "allowance": ["kelonggaran", "waktu baku", "ilo allowance", "fatigue", "personal needs"],
     "reba": ["rapid entire body assessment", "biomekanika", "postur kerja", "ergonomi", "risiko musculoskeletal"],
     "rula": ["rapid upper limb assessment", "ergonomi", "postur kerja", "anggota gerak atas"],
-    "antropometri": ["persentil 5 50 95", "dimensi stasiun kerja", "ergonomi desain meja", "clearance reach"],
     "eoq": ["economic order quantity", "persediaan", "inventory control", "holding cost", "ordering cost", "tic"],
     "rop": ["reorder point", "titik pemesanan kembali", "safety stock", "lead time", "service level z"],
-    "game theory": ["teori permainan", "supply chain coordination", "nash equilibrium", "stackelberg game", "cournot", "bertrand", "double marginalization", "shapley value", "cooperative game"],
-    "supply chain": ["rantai pasok", "logistik", "double marginalization", "bullwhip effect", "game theory"],
-    "safety stock": ["persediaan pengaman", "rop", "service level", "faktor z normal", "lead time"],
-    "simplex": ["simpleks", "linear programming", "pemrograman linier", "fungsi tujuan", "slack variable", "shadow price", "taha"],
-    "transportasi": ["model distribusi", "vam", "vogel", "modi", "stepping stone", "north west corner"],
-    "antrian": ["queueing theory", "m/m/1", "laju kedatangan lambda", "laju pelayanan mu", "utilisasi rho", "panjang antrian lq"],
-    "npv": ["net present value", "present worth", "kelayakan investasi", "marr", "cash flow", "ekonomi teknik"],
-    "irr": ["internal rate of return", "suku bunga pengembalian", "npv 0", "ekonomi teknik", "interpolasi linier"],
-    "depresiasi": ["penyusutan aset", "straight line", "double declining balance", "nilai buku", "salvage value"],
-    "oee": ["overall equipment effectiveness", "tpm", "total productive maintenance", "availability", "performance", "quality", "six big losses", "nakajima", "jipm"],
-    "tpm": ["total productive maintenance", "oee", "six big losses", "jishu hozen", "breakdown loss", "smed"],
-    "niosh": ["revised niosh lifting equation", "rnle", "rwl", "recommended weight limit", "lifting index", "hm vm dm am fm cm", "waters 1993", "manual handling", "low back pain"],
-    "rwl": ["recommended weight limit", "niosh", "lifting index", "beban angkat", "ergonomi fisik"],
-    "line balancing": ["keseimbangan lini", "assembly line", "ranked positional weight", "rpw", "helgeson birnie", "line efficiency", "balance delay", "smoothness index", "takt time"],
-    "rpw": ["ranked positional weight", "line balancing", "helgeson birnie", "positional weight", "precedence diagram"],
-    "ahp": ["analytic hierarchy process", "saaty", "perbandingan berpasangan", "pairwise comparison", "consistency ratio", "cr", "ci", "random index", "eigenvector", "mcdm"],
-    "mcdm": ["multi-criteria decision making", "ahp", "topsis", "bobot prioritas", "saaty"],
-    "vsm": ["value stream mapping", "peta aliran nilai", "lean manufacturing", "takt time", "lead time", "cycle time", "muda", "value added time", "rother shook", "current state map", "future state map"],
-    "lean manufacturing": ["lean production", "vsm", "value stream mapping", "pemborosan", "muda", "mura", "muri", "toyota production system", "tps", "pull system", "kanban"],
-    "muda": ["pemborosan", "8 wastes", "downtime", "defect", "overproduction", "waiting", "inventory", "transportation", "motion", "extra processing"],
-    "industry 4.0": ["smart manufacturing", "revolusi industri keempat", "digital twin", "kembaran digital", "iot", "iiot", "cyber physical systems", "cps", "big data"],
-    "digital twin": ["kembaran digital", "smart manufacturing", "industry 4.0", "virtual commissioning", "real-time simulation", "cyber physical systems"],
-    "pdm": ["predictive maintenance", "pemeliharaan prediktif", "machine learning", "lstm", "rul", "remaining useful life", "condition based maintenance", "oee improvement", "smart manufacturing"],
-    "industry 5.0": ["industri 5.0", "human centric", "human-in-the-loop", "cobot", "collaborative robot", "human robot collaboration", "hrc", "resilience", "human digital twin", "sustainability"],
-    "cobot": ["collaborative robot", "robot kolaboratif", "human robot collaboration", "hrc", "industry 5.0", "ergonomi kognitif", "wearable sensors"],
-    "circular economy": ["ekonomi sirkular", "circular supply chain", "cscm", "lca", "life cycle assessment", "iso 14040", "cradle to cradle", "9r strategy", "karbon net zero", "green scm"],
-    "lca": ["life cycle assessment", "analisis daur hidup", "iso 14040", "iso 14044", "gwp", "global warming potential", "jejak karbon", "lci", "lcia", "circular economy"],
-    "simulasi": ["discrete event simulation", "des", "pemodelan simulasi", "averill law", "arena", "promodel", "flexsim", "verifikasi validasi", "uji t-test", "warm-up period", "replikasi"],
-    "des": ["discrete event simulation", "simulasi diskrit", "antrian", "buffer", "averill law", "entities", "resources", "steady state"],
-    "penjadwalan": ["production scheduling", "flow shop", "job shop", "makespan", "cmax", "aturan johnson", "johnson rule", "neh", "nawaz enscore ham", "spt", "edd", "cds", "tardiness"],
-    "scheduling": ["production scheduling", "flow shop", "job shop", "makespan", "aturan johnson", "neh algorithm", "spt", "edd", "critical ratio", "flow time"],
-    "neh": ["nawaz enscore ham", "neh algorithm", "flow shop scheduling", "makespan", "permutation flow shop", "johnson rule"],
-    "k3": ["keselamatan kesehatan kerja", "hiradc", "hazop", "jsa", "job safety analysis", "hierarki pengendalian bahaya", "iso 45001", "matriks risiko", "apd", "engineering control"],
-    "hiradc": ["hazard identification risk assessment", "k3", "penilaian risiko", "hierarki kendali", "eliminasi substitusi engineering", "keselamatan kerja pabrik"],
-    "hazop": ["hazard and operability study", "guide words", "k3", "analisis deviasi proses", "keselamatan operasi"],
-    "rekayasa nilai": ["value engineering", "ve", "analisis nilai", "fast diagram", "lawrence miles", "function analysis", "verb noun", "cost to function ratio"],
-    "value engineering": ["rekayasa nilai", "fast diagram", "lawrence miles", "save international", "analisis fungsi", "fungsi biaya", "target costing"],
-    "qfd": ["quality function deployment", "house of quality", "hoq", "voice of customer", "voc", "whats hows", "ulrich eppinger", "desain produk", "matriks korelasi"],
-    "dfma": ["design for manufacture and assembly", "boothroyd dewhurst", "efisiensi perakitan", "design efficiency", "part count reduction", "perancangan produk"],
-    "triz": ["altshuller", "inventive principles", "matriks kontradiksi", "kontradiksi teknis", "pemecahan masalah inventif", "teori inovasi"],
-    "keandalan": ["reliability", "rekayasa keandalan", "failure rate", "laju kegagalan", "weibull", "mtbf", "mttr", "availability", "rbd", "reliability block diagram", "ebeling"],
-    "reliability": ["rekayasa keandalan", "failure rate", "weibull", "mtbf", "mttr", "availability", "bathtub curve", "fta", "fmeca", "ebeling"],
-    "cpm": ["critical path method", "lintasan kritis", "forward pass", "backward pass", "total float", "slack", "manajemen proyek", "kerzner"],
-    "pert": ["program evaluation and review technique", "waktu optimis pesimis", "varians proyek", "beta distribution", "manajemen proyek"],
-    "evm": ["earned value management", "planned value", "earned value", "actual cost", "cpi", "spi", "cost variance", "schedule variance", "eac"],
-    "metaheuristik": ["genetic algorithm", "algoritma genetika", "pso", "particle swarm optimization", "simulated annealing", "tabu search", "optimasi np-hard", "goldberg"],
-    "ga": ["genetic algorithm", "algoritma genetika", "crossover", "mutasi", "fitness function", "roulette wheel", "metaheuristik"],
-    "pso": ["particle swarm optimization", "kawanan partikel", "pbest", "gbest", "kecepatan partikel", "metaheuristik"],
-    "mrp": ["material requirements planning", "bom explosion", "bill of materials", "net requirements", "gross requirements", "lead time offset", "mps", "apics", "orlicky"],
-    "mps": ["master production schedule", "jadwal induk produksi", "available to promise", "atp", "perencanaan produksi", "vollmann"],
-    "group technology": ["gt", "cellular manufacturing", "manufaktur seluler", "part families", "machine cells", "rank order clustering", "roc", "king algorithm", "groover"],
-    "roc": ["rank order clustering", "king algorithm", "group technology", "matriks insidensi mesin part", "bobot biner", "manufaktur seluler"],
-    "bpr": ["business process reengineering", "rekayasa proses bisnis", "michael hammer", "radikal fundamental", "pemetaan proses asme", "littles law", "bpmn"],
-    "doe": ["design of experiments", "desain eksperimen", "taguchi", "rancangan percobaan", "faktorial", "anova", "f-hitung", "signal to noise ratio", "s/n ratio", "loss function", "montgomery"],
-    "taguchi": ["metode taguchi", "signal to noise", "sn ratio", "loss function", "orthogonal array", "robust design", "doe"],
-    "pergudangan": ["warehousing", "gudang", "order picking", "cube per order index", "coi", "storage policy", "pallet", "toth vigo"],
-    "vrp": ["vehicle routing problem", "rute kendaraan", "clarke wright savings", "depo", "kapasitas armada", "optimasi distribusi", "logistik"],
-    "nasa tlx": ["nasa-tlx", "beban kerja mental", "mental workload", "ergonomi kognitif", "hart staveland", "human error", "frustrasi", "effort"],
-    "ergonomi kognitif": ["mental workload", "nasa tlx", "beban kerja mental", "human error", "wickens", "therp", "human reliability"],
-    "work sampling": ["uji petik kerja", "sampling kerja", "pengukuran kerja", "proporsi produktif", "ukuran sampel barnes", "batas kendali p-chart"],
-    "most": ["maynard operation sequence technique", "mtm", "methods time measurement", "tmu", "predetermined motion time", "pmts", "zandin"],
-    "tmu": ["time measurement unit", "mtm", "most", "waktu standar gerakan", "pmts", "0.036 detik"],
-    "audit energi": ["manajemen energi", "iso 50001", "intensitas konsumsi energi", "ike", "sec", "sankey diagram", "boiler efficiency", "utilitas pabrik"],
-    "lokasi fasilitas": ["facility location", "center of gravity", "metode titik berat", "p-median", "desain jaringan rantai pasok", "network design", "daskin", "huber weber"],
-    "center of gravity": ["titik berat", "facility location", "lokasi pabrik", "koordinat euclidean", "tonase jarak", "lokasi gudang"],
-    "p-median": ["p median", "facility location", "hakimi", "integer programming", "jarak tertimbang", "network location"],
-    "reverse logistics": ["logistik balik", "closed loop supply chain", "clsc", "remanufaktur", "remanufacturing", "end of life", "disassembly", "pemulihan produk", "van wassenhove"],
-    "remanufaktur": ["remanufacturing", "reverse logistics", "closed loop supply chain", "core grade", "disassembly line balancing", "daur ulang produk"],
-    "msa": ["measurement systems analysis", "analisis sistem pengukuran", "gage r&r", "repeatability", "reproducibility", "ndc", "number of distinct categories", "aiag", "variasi alat ukur"],
-    "gage rr": ["gage r&r", "msa", "repeatability", "reproducibility", "evaluasi alat ukur", "part to part variation", "aiag"],
-    "biaya kualitas": ["cost of quality", "coq", "paf model", "feigenbaum", "prevention cost", "appraisal cost", "internal failure", "external failure", "biaya cacat"],
-    "cost of quality": ["biaya kualitas", "coq", "paf model", "feigenbaum", "prevention appraisal failure", "scrap rework"],
-    "acceptance sampling": ["sampling penerimaan", "oc curve", "operating characteristic", "aql", "ltpd", "mil std 105e", "aoq", "aoql", "ati", "single sampling", "inspeksi lot"],
-    "aql": ["acceptable quality level", "ltpd", "acceptance sampling", "sampling penerimaan", "oc curve", "risiko produsen alpha", "risiko konsumen beta"],
-    "oc curve": ["operating characteristic curve", "kurva karakteristik operasi", "acceptance sampling", "pa", "probabilitas penerimaan", "aql", "ltpd"],
-    "peramalan": ["demand forecasting", "forecasting", "exponential smoothing", "holt winters", "moving average", "mape", "mad", "mse", "tracking signal", "box jenkins"],
-    "forecasting": ["peramalan permintaan", "deret waktu", "time series", "exponential smoothing", "holt winters", "mape", "mad", "tracking signal"],
-    "bullwhip effect": ["efek cambuk", "distorsi informasi", "variabilitas pesanan", "lee 1997", "supply chain amplification", "vmi", "variance of orders"],
-    "tqm": ["total quality management", "manajemen mutu terpadu", "deming", "pdca", "malcolm baldrige", "mbnqa", "iso 9001", "kaizen", "kepuasan pelanggan"],
-    "baldrige": ["malcolm baldrige", "mbnqa", "baldrige excellence", "kriteria kinerja unggul", "tqm", "1000 poin", "leadership results"],
-    "iso 9001": ["iso 9001 2015", "sistem manajemen mutu", "smm", "risk based thinking", "klausul 4-10", "audit internal", "pdca", "tqm"],
-    "abc": ["activity based costing", "activity-based costing", "biaya berbasis aktivitas", "tdabc", "time driven abc", "cost driver", "cost pool", "kaplan cooper", "analisis biaya"],
-    "cvp": ["cost volume profit", "analisis biaya volume laba", "break even point", "bep", "titik impas", "margin of safety", "contribution margin", "fixed cost variable cost"],
-    "bep": ["break even point", "titik impas", "cvp", "fixed cost", "variable cost", "contribution margin ratio", "analisis biaya industri"],
-    "multivariate spc": ["mspc", "hotelling t2", "t2 hotelling", "mewma", "peta kendali multivariat", "matriks kovarians", "mahalanobis distance", "lowry 1992", "pengendalian mutu multivariat"],
-    "hotelling": ["hotelling t2", "t2 hotelling", "multivariate spc", "mspc", "vektor rata-rata", "matriks kovarians s", "f-distribusi ucl"],
-    "dfss": ["design for six sigma", "dmadv", "iddov", "desain six sigma", "define measure analyze design verify", "identify design optimize validate", "six sigma design"],
-    "dmadv": ["define measure analyze design verify", "dfss", "design for six sigma", "roadmap desain produk six sigma"],
-    "multi echelon inventory": ["meio", "stochastic inventory", "inventory optimization", "supply chain network design", "scnd", "guaranteed service model", "echelon stock", "base stock policy"],
-    "manufaktur berkelanjutan": ["sustainable manufacturing", "green supply chain", "carbon footprint", "jejak karbon", "lca", "dekarbonisasi", "circular material use", "gscm"],
-    "green supply chain": ["gscm", "manufaktur berkelanjutan", "green procurement", "green logistics", "carbon footprint", "emisi karbon", "sustainability"],
-    "makroergonomi": ["macroergonomics", "sistem sosioteknis", "sociotechnical systems", "mead", "desain organisasi", "hendrick", "joint optimization"],
-    "sistem sosioteknis": ["sociotechnical systems", "sts", "makroergonomi", "joint optimization", "variance control", "participative design", "trist bamforth"],
-    "fmea": ["failure mode and effects analysis", "fmeca", "rpn", "risk priority number", "action priority", "severity occurrence detection", "aiag vda", "dfmea", "pfmea"],
-    "rcm": ["reliability centered maintenance", "perawatan berbasis keandalan", "moubray", "cbm", "condition based maintenance", "run to failure", "failure finding", "p-f interval", "rcm 4.0"],
-    "craft": ["computerized relative allocation of facilities technique", "pairwise interchange", "ptlf", "mhc", "material handling cost", "improvement algorithm", "armour buffa", "jarak rectilinear"],
-    "aldep": ["automated layout design program", "construction algorithm", "sweep method", "closeness rating", "arc", "tata letak fasilitas"],
-    "corelap": ["computerized relationship layout planning", "tcr", "total closeness rating", "construction algorithm", "tata letak fasilitas"],
-    "game theory": ["teori permainan", "supply chain coordination", "nash equilibrium", "stackelberg", "double marginalization", "cournot", "bertrand", "shapley value"],
-    "teori permainan": ["game theory", "nash equilibrium", "shapley value", "double marginalization", "supply chain contracts", "revenue sharing contract"],
-    "system dynamics": ["dinamika sistem", "jay forrester", "causal loop diagram", "cld", "stock and flow", "sfd", "balancing loop", "reinforcing loop", "bullwhip effect simulation"],
-    "fault tree analysis": ["fta", "top event", "logic gates", "minimal cut sets", "mcs", "analisis pohon kesalahan", "keandalan sistem", "maintenance 4.0"],
-    "metaheuristik vrp": ["vehicle routing problem", "simulated annealing", "tabu search", "cvrp", "vrptw", "metropolis acceptance", "cooling schedule", "tabu list", "aspiration criterion", "local optima"],
-    "desain eksperimen": ["design of experiments", "doe", "response surface methodology", "rsm", "desain faktorial", "central composite design", "box behnken", "anova", "taguchi orthogonal"],
-    "kapabilitas proses": ["process capability index", "cp", "cpk", "pp", "ppk", "process performance", "short term capability", "long term capability", "batas spesifikasi", "six sigma metrics"],
-    "kenyamanan termal": ["thermal comfort", "ergonomi lingkungan", "pmv", "ppd", "predicted mean vote", "fanger model", "heat stress", "wbgt", "laju metabolisme", "insulasi pakaian"],
-    "operations research": ["jackson networks", "markov decision processes", "mdp", "stochastic programming", "robust optimization", "real options analysis", "data envelopment analysis", "dea", "topsis", "promethee", "mcdm", "fuzzy logic", "agent based modeling", "abm", "petri nets", "constraint programming"],
-    "modern supply chain": ["revenue management", "dynamic pricing", "scrm", "supply chain risk management", "cross docking", "vmi", "vendor managed inventory", "cpfr", "blockchain scm", "humanitarian logistics", "omni channel", "cold chain", "traveling purchaser problem", "tpp"],
-    "advanced manufacturing": ["lean accounting", "just in sequence", "jis", "agile manufacturing", "reconfigurable manufacturing systems", "rms", "flexible manufacturing systems", "fms", "agv routing", "cyber physical production systems", "cpps", "additive manufacturing", "predictive maintenance", "pdm", "reliability block diagrams", "rbd", "phm", "cobots", "smart warehousing", "as/rs", "order batching", "3d bin packing"],
-    "ergonomi & safety": ["hci", "human computer interaction", "physical biomechanics", "snook tables", "rula", "reba", "owas", "noise vibration control", "industrial illumination", "work physiology", "fatigue modeling", "safety engineering", "bow tie analysis"],
-    "systems engineering": ["enterprise architecture", "togaf", "engineering ethics", "intellectual property", "six sigma black belt", "hoshin kanri", "autonomous maintenance", "tpm", "inventory policy", "s s policy", "spare parts inventory management", "shapley value"]
+    "game theory": ["teori permainan", "nash equilibrium", "stackelberg", "shapley value", "double marginalization"],
+    "supply chain": ["rantai pasok", "logistik", "bullwhip effect", "scm coordination"],
+    "simplex": ["simpleks", "linear programming", "pemrograman linier", "fungsi tujuan", "shadow price"],
+    "antrian": ["queueing theory", "m/m/1", "laju kedatangan lambda", "laju pelayanan mu", "utilisasi rho"],
+    "npv": ["net present value", "present worth", "kelayakan investasi", "marr", "cash flow"],
+    "irr": ["internal rate of return", "suku bunga pengembalian", "npv 0", "ekonomi teknik"],
+    "oee": ["overall equipment effectiveness", "tpm", "availability", "performance", "quality", "six big losses"],
+    "niosh": ["revised niosh lifting equation", "rnle", "rwl", "recommended weight limit", "lifting index"],
+    "line balancing": ["keseimbangan lini", "assembly line", "rpw", "helgeson birnie", "takt time"],
+    "ahp": ["analytic hierarchy process", "saaty", "pairwise comparison", "consistency ratio", "mcdm"],
+    "vsm": ["value stream mapping", "peta aliran nilai", "lean manufacturing", "muda", "takt time"],
+    "lean manufacturing": ["lean production", "vsm", "muda", "mura", "muri", "toyota production system", "tps", "kanban"],
+    "industry 4.0": ["smart manufacturing", "digital twin", "iot", "iiot", "cyber physical systems", "cps"],
+    "digital twin": ["kembaran digital", "smart manufacturing", "virtual commissioning", "real-time simulation"],
+    "pdm": ["predictive maintenance", "pemeliharaan prediktif", "lstm", "rul", "condition based maintenance"],
+    "industry 5.0": ["human centric", "cobot", "collaborative robot", "hrc", "resilience", "sustainability"],
+    "circular economy": ["ekonomi sirkular", "lca", "life cycle assessment", "iso 14040", "cradle to cradle"],
+    "simulasi": ["discrete event simulation", "des", "arena", "promodel", "flexsim", "averill law"],
+    "penjadwalan": ["production scheduling", "flow shop", "job shop", "makespan", "johnson rule", "neh"],
+    "k3": ["keselamatan kesehatan kerja", "hiradc", "hazop", "jsa", "iso 45001", "matriks risiko"],
+    "rekayasa nilai": ["value engineering", "fast diagram", "lawrence miles", "function analysis"],
+    "qfd": ["quality function deployment", "house of quality", "hoq", "voice of customer", "voc"],
+    "dfma": ["design for manufacture and assembly", "boothroyd dewhurst", "part count reduction"],
+    "triz": ["altshuller", "inventive principles", "matriks kontradiksi", "kontradiksi teknis"],
+    "keandalan": ["reliability", "failure rate", "weibull", "mtbf", "mttr", "rbd", "fta", "fmeca"],
+    "cpm": ["critical path method", "lintasan kritis", "forward pass", "backward pass", "total float"],
+    "evm": ["earned value management", "planned value", "earned value", "cpi", "spi"],
+    "metaheuristik": ["genetic algorithm", "pso", "simulated annealing", "tabu search", "optimasi np-hard"],
+    "mrp": ["material requirements planning", "bom explosion", "bill of materials", "mps"],
+    "group technology": ["cellular manufacturing", "part families", "machine cells", "rank order clustering"],
+    "doe": ["design of experiments", "taguchi", "faktorial", "anova", "signal to noise ratio", "loss function"],
+    "vrp": ["vehicle routing problem", "clarke wright savings", "optimasi distribusi", "logistik"],
+    "nasa tlx": ["beban kerja mental", "mental workload", "ergonomi kognitif", "hart staveland"],
+    "work sampling": ["uji petik kerja", "sampling kerja", "proporsi produktif"],
+    "most": ["maynard operation sequence technique", "mtm", "tmu", "predetermined motion time"],
+    "lokasi fasilitas": ["facility location", "center of gravity", "p-median", "network design"],
+    "reverse logistics": ["logistik balik", "closed loop supply chain", "clsc", "remanufacturing"],
+    "msa": ["measurement systems analysis", "gage r&r", "repeatability", "reproducibility", "ndc"],
+    "cost of quality": ["paf model", "prevention appraisal failure", "conformance cost", "non-conformance cost"],
+    "acceptance sampling": ["oc curve", "aql", "ltpr", "mil-std-105e", "single double sampling"],
+    "demand forecasting": ["peramalan permintaan", "holt-winters", "exponential smoothing", "mad", "mape"],
+    "bullwhip effect": ["efek cambuk", "variance amplification", "beer game", "information distortion"],
+    "tqm": ["total quality management", "juran", "deming", "continuous improvement", "kaizen"],
+    "iso 9001": ["quality management system", "qms", "pdca", "risk based thinking"],
+    "activity based costing": ["abc", "tdabc", "cost driver", "overhead allocation"],
+    "multivariate spc": ["hotelling t2", "mewma", "mcusum", "multivariate control chart"],
+    "dfss": ["design for six sigma", "dmadv", "iddov", "ctq"],
+    "multi echelon inventory": ["meio", "guaranteed service model", "stochastic inventory", "network optimization"],
+    "sustainable manufacturing": ["green manufacturing", "carbon footprint", "energy efficiency", "ghg protocol"],
+    "macroergonomics": ["sociotechnical systems", "organizational design", "mead", "participatory ergonomics"],
+    "facility layout": ["craft algorithm", "aldep", "corelap", "systematic layout planning"],
+    "maintenance": ["preventive maintenance", "corrective maintenance", "cbm", "rcm", "fmea"],
+
+    # --- Advanced OR & SCM (Modul 51-134) ---
+    "column generation": ["dantzig-wolfe decomposition", "master problem", "subproblem pricing", "set covering"],
+    "benders decomposition": ["benders cuts", "optimasi stokastik", "scenario analysis"],
+    "branch and price": ["branch and cut", "set partitioning", "integer programming"],
+    "dynamic programming": ["value iteration", "policy iteration", "bellman equation", "mdp"],
+    "kkt conditions": ["karush-kuhn-tucker", "nonlinear programming", "lagrange multiplier"],
+    "pareto front": ["multi-objective optimization", "nsga2", "non-dominated sorting"],
+    "semi markov": ["smdp", "maintenance optimization", "semi-markov decision process"],
+    "ctmc": ["continuous time markov chains", "birth death process", "queuing"],
+    "nhpp": ["nonhomogeneous poisson processes", "warranty analysis", "reliability growth"],
+    "max flow": ["edmonds-karp", "ford-fulkerson", "network flow", "min cut"],
+    "quadratic assignment": ["qap", "facility layout optimization", "plant layout"],
+    "two echelon vrp": ["2e-vrp", "urban logistics", "multi-echelon routing"],
+    "electric vrp": ["evrp", "charging infrastructure", "green routing"],
+    "dial a ride": ["darp", "transit scheduling", "door to door transport"],
+    "inventory routing": ["irp", "vendor managed inventory", "cross docking"],
+    "hub and spoke": ["hub location problem", "network design optimization"],
+    "supply chain resilience": ["ripple effect", "disruption management", "robust scm"],
+    "combinatorial auction": ["vcg mechanism", "procurement auction", "reverse auction"],
+    "contract theory": ["wholesale contract", "buyback contract", "revenue sharing"],
+    "dynamic pricing": ["machine learning pricing", "demand segmentation", "revenue management"],
+    "kraljic matrix": ["strategic sourcing", "supplier segmentation", "mcda"],
+    "berth allocation": ["bap", "quay crane scheduling", "port terminal"],
+    "synchromodal": ["multi-modal freight", "real time routing", "intermodal"],
+    "perishable inventory": ["deterioration model", "fresh food logistics", "shelf life"],
+    "agent based modeling": ["abm", "supply chain simulation", "disruption simulation"],
+    "cooperative games": ["nucleolus", "core solution", "shapley value", "bankruptcy game"],
+    "data envelopment analysis": ["dea", "efficiency frontier", "ccr model", "bcc model"],
+    "topsis": ["technique for order preference", "ideal solution", "mcdm ranking"],
+    "fuzzy logic": ["fuzzy set", "membership function", "defuzzification", "decision making"],
+    "petri nets": ["place transition", "token", "reachability graph", "manufacturing modeling"],
+    "constraint programming": ["cp", "domain reduction", "propagation", "combinatorial optimization"],
+
+    # --- Manufacturing & Quality (Modul 135-167) ---
+    "quick response manufacturing": ["qrm", "hmlv", "high mix low volume", "system dynamics"],
+    "mixed model assembly": ["goal chasing", "sequencing", "level schedule"],
+    "flexible job shop": ["fjssp", "setup times", "routing flexibility"],
+    "flow shop": ["neh algorithm", "permutation flow shop", "makespan minimization"],
+    "shifting bottleneck": ["job shop scheduling", "bottleneck identification", "decomposition"],
+    "heijunka": ["production leveling", "drum buffer rope", "toc", "theory of constraints"],
+    "polca": ["paired-cell overlapping loops", "card-based control", "cellular manufacturing"],
+    "iso 23247": ["digital twin architecture", "manufacturing framework"],
+    "vision inspection": ["edge ai", "quality control", "defect detection", "deep learning"],
+    "agv routing": ["amr fleet dispatching", "traffic control", "collision avoidance"],
+    "asrs": ["automated storage retrieval", "travel time models", "warehouse optimization"],
+    "3d bin packing": ["container loading", "stability constraint", "nesting algorithm"],
+    "additive manufacturing": ["3d printing scheduling", "am supply chain", "powder bed fusion"],
+    "dfma boothroyd": ["design efficiency", "part count reduction", "assembly cost"],
+    "axiomatic design": ["independence axiom", "information axiom", "suh", "design matrix"],
+    "taguchi robust": ["signal to noise ratio", "sn ratio", "loss function", "orthogonal array"],
+    "tolerance stackup": ["worst case", "rss", "root sum square", "monte carlo tolerance"],
+    "profile monitoring": ["functional data", "linear profile", "nonlinear profile spc"],
+    "high yield quality": ["g-chart", "h-chart", "rare defect", "geometric distribution"],
+    "rul estimation": ["remaining useful life", "lstm", "wiener process", "prognostics"],
+    "vibration analysis": ["fft", "frequency spectrum", "bearing fault", "machinery diagnostics"],
+    "acoustic emission": ["ae sensor", "crack detection", "condition monitoring"],
+    "iso 15066": ["cobot safety", "force limit", "speed limit", "human robot collaboration"],
+    "mes isa95": ["manufacturing execution system", "cim", "opc ua", "shop floor control"],
+    "ore teep": ["overall resource effectiveness", "total effective equipment performance"],
+    "smed": ["single minute exchange of die", "setup reduction", "internal external setup"],
+    "poka yoke": ["mistake proofing", "sensor gate", "zero quality control", "zqc"],
+
+    # --- Ergonomics & Safety (Modul 168-200) ---
+    "situation awareness": ["endsley model", "perception comprehension projection", "cognitive ergonomics"],
+    "mental workload": ["nasa-tlx", "swat", "hrv", "cognitive load"],
+    "signal detection": ["d-prime", "beta criterion", "roc curve", "inspection performance"],
+    "human reliability": ["heart", "therp", "human error probability", "cream"],
+    "rasmussen srk": ["skill rule knowledge", "ecological interface design", "abstraction hierarchy"],
+    "lumbar biomechanics": ["l5/s1", "compression force", "shear force", "niosh lifting"],
+    "digital human modeling": ["siemens jack", "dhm", "ergonomic workstation design"],
+    "strain index": ["moore-garg", "upper extremity msd", "repetitive task risk"],
+    "vibration iso": ["hand-arm vibration", "whole-body vibration", "iso 2631", "iso 5349"],
+    "noise control": ["leq", "sound pressure level", "decibel addition", "reverberation"],
+    "lighting design": ["lumen method", "ugr", "unified glare rating", "illuminance"],
+    "heat stress": ["phs iso 7933", "ireq iso 11079", "wbgt", "thermal strain"],
+    "fatigue modeling": ["rest allowance", "cumulative fatigue", "muscle endurance"],
+    "swiss cheese": ["reason model", "safety climate", "latent failure", "active failure"],
+    "hazop": ["hazard operability study", "guide words", "parameter deviation", "node analysis"],
+    "lopa": ["layers of protection analysis", "sil", "iec 61508", "iec 61511", "risk reduction"],
+    "qra": ["quantitative risk assessment", "fn curve", "individual risk", "societal risk"],
+    "lev ventilation": ["local exhaust ventilation", "capture velocity", "duct friction", "hood design"],
+    "ghs hazmat": ["globally harmonized system", "spill containment", "chemical classification"],
+    "mci": ["material circularity indicator", "circularity metric", "ellen macarthur"],
+    "lcc tco": ["life cycle costing", "total cost of ownership", "asset management"],
+    "iso 50001": ["energy management", "sec", "specific energy consumption", "energy audit"],
+    "ghg protocol": ["scope 1 scope 2 scope 3", "carbon accounting", "decarbonization roadmap"],
+    "anp": ["analytic network process", "supermatrix", "inner dependence", "outer dependence"],
+    "fuzzy ahp vikor": ["compromise ranking", "triangular fuzzy number", "regret measure"],
+    "electre tri": ["multicriteria sorting", "outranking relation", "assignment procedure"],
+    "incose vmodel": ["systems engineering", "requirements verification validation", "lifecycle"],
+    "technology roadmapping": ["trm", "delphi method", "technology forecasting"],
+    "project portfolio": ["knapsack optimization", "real options", "project selection"],
+    "hoshin kanri": ["x matrix", "balanced scorecard", "policy deployment", "catchball"],
+    "ip valuation": ["relief from royalty", "dcf", "technology transfer", "licensing"],
+    "replacement analysis": ["defender challenger", "economic service life", "inflation adjustment"],
+    "engineering ethics": ["code of conduct", "professional licensure", "public safety", "nspe"],
+
+    # --- Simulation & Modeling (Modul 201-234) ---
+    "discrete event simulation": ["des", "arena", "simpy", "anylogic", "event scheduling", "process interaction"],
+    "continuous simulation": ["system dynamics", "stock flow", "differential equation", "ode solver"],
+    "monte carlo": ["stochastic simulation", "random sampling", "confidence interval", "law of large numbers"],
+    "simulation optimization": ["genetic algorithm simulation", "simulated annealing optimization", "response surface"],
+    "verification validation": ["v&v", "conceptual model validity", "operational validity", "face validity"],
+    "arena macro": ["vba arena", "automation interface", "custom module"],
+    "anylogic behavioral": ["statechart", "agent behavior", "pedestrian modeling"],
+    "simpy networkx": ["python simulation", "graph-based routing", "network simulation"],
+    "sensitivity analysis": ["tornado diagram", "one-at-a-time", "global sensitivity", "sobol index"],
+    "what-if analysis": ["scenario analysis", "discrete event what-if", "capacity planning"],
+    "lean simulation": ["vsm simulation", "waste identification", "pull system simulation"],
+    "vr manufacturing": ["virtual reality factory", "immersive training", "digital mockup"],
+    "ar factory": ["augmented reality assembly", "hololens", "overlay instruction"],
+    "metaverse industrial": ["industrial metaverse", "avatar collaboration", "persistent virtual space"],
+    "ergonomics simulation": ["dhm simulation", "posture prediction", "biomechanical modeling"],
+    "occupational health simulation": ["exposure modeling", "dose-response", "epidemiological simulation"],
+
+    # --- Quality & Reliability Advanced (Modul 235-267) ---
+    "tqm advanced": ["total quality management", "juran trilogy", "deming cycle", "quality culture"],
+    "iso integrated": ["iso 9001", "iso 14001", "iso 45001", "iso 50001", "integrated management system"],
+    "black belt advanced": ["six sigma black belt", "advanced statistics", "doe screening", "control plan"],
+    "lean six sigma": ["kaizen blitz", "rapid improvement", "waste elimination", "variation reduction"],
+    "fmea rpnm": ["risk priority number", "severity occurrence detection", "action priority"],
+    "rbd advanced": ["reliability block diagram", "series parallel", "k-out-of-n", "redundancy"],
+    "fta advanced": ["fault tree analysis", "minimal cut set", "importance measure", "dynamic fta"],
+    "fmeca": ["failure mode effects criticality analysis", "criticality matrix", "risk ranking"],
+    "rcm": ["reliability centered maintenance", "failure consequence", "maintenance strategy selection"],
+    "tpm 2.0": ["autonomous maintenance", "jishu hozen", "focused improvement", "kobetsu kaizen"],
+    "eight losses": ["tpm losses", "breakdown loss", "setup loss", "idling loss", "speed loss"],
+    "creative problem solving": ["cps process", "divergent convergent thinking", "osborn-parnes"],
+    "design for x": ["dfx", "design for manufacturability", "design for assembly", "design for sustainability"],
+
+    # --- Global Engineering & Sustainability (Modul 268-300) ---
+    "pmbok": ["project management body of knowledge", "knowledge areas", "process groups", "pmi"],
+    "industrial hygiene": ["occupational health", "exposure assessment", "air sampling", "tlv pel"],
+    "safety management": ["sms", "safety management system", "leading lagging indicators"],
+    "hiradc": ["hazard identification risk assessment determining control", "risk matrix"],
+    "fn curves": ["fatality negligibility", "societal risk criteria", "tolerable risk region"],
+    "industrial ecology": ["material flow analysis", "industrial symbiosis", "eco-industrial park"],
+    "green scm": ["environmental supply chain", "carbon logistics", "reverse logistics green"],
+    "eco design": ["design for environment", "dfe", "life cycle design", "material selection"],
+    "professional practice": ["engineering licensure", "pe exam", "ethics code", "continuing education"],
 }
 
-def clean_text(text: str) -> str:
-    return re.sub(r'\s+', ' ', text).strip()
-
-def tokenize(text: str) -> List[str]:
-    words = re.findall(r'[a-zA-Z0-9_\-\$\\\%]+', text.lower())
-    return [w for w in words if len(w) > 1]
 
 def expand_query(query: str) -> str:
-    """
-    Ekspansi query menggunakan IE Thesaurus agar menangkap sinonim & istilah teknis standar industri.
-    """
-    q_lower = query.lower()
-    terms = set(tokenize(q_lower))
-    
-    expanded_terms = set(terms)
-    for key, synonyms in IE_THESAURUS.items():
-        if key in q_lower or any(t in terms for t in key.split()):
-            for syn in synonyms:
-                expanded_terms.update(tokenize(syn))
+    """Expand query using IE Thesaurus synonyms."""
+    tokens = query.lower().split()
+    expanded = list(tokens)
+    for token in tokens:
+        for key, synonyms in IE_THESAURUS.items():
+            if token == key or token in synonyms:
+                expanded.extend(synonyms)
+                expanded.append(key)
+    return " ".join(list(dict.fromkeys(expanded)))
 
-    # Bangun query FTS5 berbobot
-    fts_parts = []
-    for t in list(expanded_terms)[:15]:
-        if len(t) > 1:
-            fts_parts.append(f'"{t}"*')
-            
-    return " OR ".join(fts_parts) if fts_parts else query
 
-class IndustrialEngineeringRAG:
-    def __init__(self, db_path: str = DB_PATH):
-        self.db_path = db_path
-        os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
-        self._init_db()
+def chunk_markdown(content: str, module_title: str) -> List[Tuple[str, str]]:
+    """Split markdown into semantic sections by ## headers."""
+    chunks = []
+    sections = re.split(r'\n(?=##\s)', content)
+    for section in sections:
+        section = section.strip()
+        if len(section) < 50:
+            continue
+        header_match = re.match(r'^##\s+(.+)', section)
+        header = header_match.group(1).strip() if header_match else "Overview"
+        chunk_text = f"{module_title} — {header}\n{section}"
+        chunks.append((header, chunk_text))
+    return chunks
 
-    def _init_db(self):
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("""
-                CREATE TABLE IF NOT EXISTS knowledge_chunks (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    topic_title TEXT,
-                    reference_source TEXT,
-                    chunk_index INTEGER,
-                    content TEXT,
-                    has_formula INTEGER,
-                    token_count INTEGER,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                )
-            """)
-            c.execute("""
-                CREATE VIRTUAL TABLE IF NOT EXISTS knowledge_fts USING fts5(
-                    topic_title,
-                    reference_source,
-                    content,
-                    tokenize='porter unicode61'
-                )
-            """)
-            conn.commit()
 
-    def build_index(self, knowledge_dir: str = KNOWLEDGE_DIR):
-        """
-        Scan modul ilmu teknik industri murni & buku referensi internasional, indeks ke SQLite FTS5.
-        """
-        if not os.path.exists(knowledge_dir):
-            print(f"Directory not found: {knowledge_dir}")
-            return
+def build_index():
+    """Build FTS5 index from all knowledge modules."""
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("DELETE FROM knowledge_chunks")
-            c.execute("DELETE FROM knowledge_fts")
-            conn.commit()
+    if os.path.exists(DB_PATH):
+        os.remove(DB_PATH)
 
-            indexed_files = 0
-            indexed_chunks = 0
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
 
-            for root, _, files in os.walk(knowledge_dir):
-                for file in files:
-                    if not file.endswith(".md"):
-                        continue
-                    full_path = os.path.join(root, file)
+    cur.execute("""
+        CREATE VIRTUAL TABLE IF NOT EXISTS rag_fts USING fts5(
+            module_id,
+            section_title,
+            content,
+            tokenize='porter unicode61'
+        )
+    """)
 
-                    try:
-                        with open(full_path, "r", encoding="utf-8") as f:
-                            text = f.read()
-                    except Exception as e:
-                        print(f"Error reading {full_path}: {e}")
-                        continue
+    files = sorted([f for f in os.listdir(KNOWLEDGE_DIR) if f.endswith('.md')])
+    total_chunks = 0
 
-                    # Extract Topic Title
-                    title_match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
-                    main_topic = title_match.group(1) if title_match else file.replace(".md", "").title()
+    for fname in files:
+        fpath = os.path.join(KNOWLEDGE_DIR, fname)
+        with open(fpath, 'r', encoding='utf-8') as f:
+            content = f.read()
 
-                    # Extract Reference Source
-                    ref_match = re.search(r'\*\*Sumber Referensi:\*\*\s*(.+)$', text, re.MULTILINE)
-                    ref_source = ref_match.group(1) if ref_match else "Standard Industrial Engineering Textbook & Handbook"
+        module_id = fname.split('_')[0]
+        title_match = re.search(r'^#\s+(.+)', content, re.MULTILINE)
+        module_title = title_match.group(1).strip() if title_match else fname
 
-                    # Chunk by Sections (##)
-                    sections = re.split(r'\n(?=##+\s+)', text)
-                    chunk_idx = 0
+        chunks = chunk_markdown(content, module_title)
+        for section_title, chunk_text in chunks:
+            cur.execute(
+                "INSERT INTO rag_fts (module_id, section_title, content) VALUES (?, ?, ?)",
+                (module_id, section_title, chunk_text)
+            )
+            total_chunks += 1
 
-                    for section in sections:
-                        sec_text = section.strip()
-                        if len(sec_text) < 40:
-                            continue
+    conn.commit()
+    conn.close()
+    print(f"✅ RAG Indexed: {len(files)} pure IE master modules, {total_chunks} semantic sections indexed.")
 
-                        sub_match = re.search(r'^##+\s+(.+)$', sec_text, re.MULTILINE)
-                        chunk_topic = f"{main_topic} — {sub_match.group(1)}" if sub_match else main_topic
-
-                        has_formula = 1 if "$$" in sec_text or "$" in sec_text or "∑" in sec_text or "√" in sec_text else 0
-                        tokens = tokenize(sec_text)
-
-                        c.execute("""
-                            INSERT INTO knowledge_chunks (topic_title, reference_source, chunk_index, content, has_formula, token_count)
-                            VALUES (?, ?, ?, ?, ?, ?)
-                        """, (chunk_topic, ref_source, chunk_idx, sec_text, has_formula, len(tokens)))
-
-                        chunk_id = c.lastrowid
-
-                        c.execute("""
-                            INSERT INTO knowledge_fts (rowid, topic_title, reference_source, content)
-                            VALUES (?, ?, ?, ?)
-                        """, (chunk_id, chunk_topic, ref_source, sec_text))
-
-                        chunk_idx += 1
-                        indexed_chunks += 1
-
-                    indexed_files += 1
-
-            conn.commit()
-            print(f"✅ RAG Indexed: {indexed_files} pure IE master modules, {indexed_chunks} semantic sections indexed.")
-
-    def search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
-        """
-        High-Precision Industrial Engineering BM25 + Thesaurus Re-ranking.
-        """
-        fts_query = expand_query(query)
-
-        results = []
-        with sqlite3.connect(self.db_path) as conn:
-            conn.row_factory = sqlite3.Row
-            c = conn.cursor()
-            try:
-                c.execute("""
-                    SELECT c.id, c.topic_title, c.reference_source, c.content, c.has_formula, bm25(knowledge_fts) as rank
-                    FROM knowledge_fts f
-                    JOIN knowledge_chunks c ON f.rowid = c.id
-                    WHERE knowledge_fts MATCH ?
-                    ORDER BY rank ASC
-                    LIMIT ?
-                """, (fts_query, top_k * 3))
-
-                rows = c.fetchall()
-
-                q_tokens = set(tokenize(query.lower()))
-                scored_rows = []
-                for row in rows:
-                    content_tokens = tokenize(row["content"].lower())
-                    overlap = sum(1 for t in q_tokens if t in content_tokens)
-                    formula_multiplier = 1.3 if row["has_formula"] else 1.0
-                    
-                    final_score = (1.0 / (abs(row["rank"]) + 1.0)) * (overlap + 2) * formula_multiplier
-                    scored_rows.append((final_score, row))
-
-                scored_rows.sort(key=lambda x: x[0], reverse=True)
-
-                for score, row in scored_rows[:top_k]:
-                    results.append({
-                        "id": row["id"],
-                        "title": row["topic_title"],
-                        "source": row["reference_source"],
-                        "content": row["content"],
-                        "has_formula": bool(row["has_formula"]),
-                        "score": round(score, 3)
-                    })
-
-            except Exception as e:
-                print(f"Search error: {e}")
-                # Fallback to pure substring match
-                first_word = tokenize(query)[0] if tokenize(query) else "teknik"
-                c.execute("""
-                    SELECT id, topic_title, reference_source, content, has_formula
-                    FROM knowledge_chunks
-                    WHERE content LIKE ? OR topic_title LIKE ?
-                    LIMIT ?
-                """, (f"%{first_word}%", f"%{first_word}%", top_k))
-                for row in c.fetchall():
-                    results.append({
-                        "id": row["id"],
-                        "title": row["topic_title"],
-                        "source": row["reference_source"],
-                        "content": row["content"],
-                        "has_formula": bool(row["has_formula"]),
-                        "score": 1.0
-                    })
-
-        return results
-
-rag_engine = IndustrialEngineeringRAG()
 
 if __name__ == "__main__":
     print("Rebuilding RAG with Pure Industrial Engineering Master Modules...")
-    rag_engine.build_index()
-    print("\n--- Test 1: Query 'cara hitung waktu baku dan allowance jam henti' ---")
-    for r in rag_engine.search("cara hitung waktu baku dan allowance jam henti", top_k=2):
-        print(f"[{r['score']}] {r['title']} -> Sumber: {r['source']}")
-    print("\n--- Test 2: Query 'tabel batas kendali spc x-bar r konstanta A2 D4' ---")
-    for r in rag_engine.search("tabel batas kendali spc x-bar r konstanta A2 D4", top_k=2):
-        print(f"[{r['score']}] {r['title']} -> Sumber: {r['source']}")
+    build_index()
+
