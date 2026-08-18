@@ -88,7 +88,12 @@ IE_THESAURUS = {
     "work sampling": ["uji petik kerja", "sampling kerja", "pengukuran kerja", "proporsi produktif", "ukuran sampel barnes", "batas kendali p-chart"],
     "most": ["maynard operation sequence technique", "mtm", "methods time measurement", "tmu", "predetermined motion time", "pmts", "zandin"],
     "tmu": ["time measurement unit", "mtm", "most", "waktu standar gerakan", "pmts", "0.036 detik"],
-    "audit energi": ["manajemen energi", "iso 50001", "intensitas konsumsi energi", "ike", "sec", "sankey diagram", "boiler efficiency", "utilitas pabrik"]
+    "audit energi": ["manajemen energi", "iso 50001", "intensitas konsumsi energi", "ike", "sec", "sankey diagram", "boiler efficiency", "utilitas pabrik"],
+    "lokasi fasilitas": ["facility location", "center of gravity", "metode titik berat", "p-median", "desain jaringan rantai pasok", "network design", "daskin", "huber weber"],
+    "center of gravity": ["titik berat", "facility location", "lokasi pabrik", "koordinat euclidean", "tonase jarak", "lokasi gudang"],
+    "p-median": ["p median", "facility location", "hakimi", "integer programming", "jarak tertimbang", "network location"],
+    "reverse logistics": ["logistik balik", "closed loop supply chain", "clsc", "remanufaktur", "remanufacturing", "end of life", "disassembly", "pemulihan produk", "van wassenhove"],
+    "remanufaktur": ["remanufacturing", "reverse logistics", "closed loop supply chain", "core grade", "disassembly line balancing", "daur ulang produk"]
 }
 
 def clean_text(text: str) -> str:
