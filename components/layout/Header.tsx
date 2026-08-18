@@ -3,12 +3,10 @@
 import React, { useState } from "react";
 import { UserProfile } from "@/lib/types";
 import { ProfileModal } from "@/components/profile/ProfileModal";
-import { Moon, Sun, Menu, Layers, User, PanelLeftOpen } from "lucide-react";
+import { Menu, Layers, User, PanelLeftOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
-  theme: "light" | "dark";
-  onToggleTheme: () => void;
   onToggleMobileSidebar: () => void;
   isSidebarCollapsed?: boolean;
   onToggleSidebarCollapse?: () => void;
@@ -19,8 +17,6 @@ interface HeaderProps {
 }
 
 export function Header({
-  theme,
-  onToggleTheme,
   onToggleMobileSidebar,
   isSidebarCollapsed = false,
   onToggleSidebarCollapse,
@@ -46,7 +42,7 @@ export function Header({
             <Menu className="w-4 h-4" />
           </button>
 
-          {/* Desktop Maximize Sidebar Button (Always visible / highlighted when sidebar is collapsed) */}
+          {/* Desktop Maximize Sidebar Button (Always visible when sidebar is collapsed) */}
           {isSidebarCollapsed && onToggleSidebarCollapse && (
             <button
               type="button"
@@ -69,22 +65,8 @@ export function Header({
           </div>
         </div>
 
-        {/* Right: Theme Toggle & User Profile Button */}
+        {/* Right: User Profile Trigger Button */}
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={onToggleTheme}
-            className="w-9 h-9 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary bg-surface/60 hover:bg-surface border border-transparent hover:border-border transition-all duration-150 active:scale-95 shadow-sm"
-            aria-label={theme === "dark" ? "Ganti ke mode terang" : "Ganti ke mode gelap"}
-          >
-            {theme === "dark" ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-text-primary" />
-            )}
-          </button>
-
-          {/* User Profile Trigger Button */}
           <button
             type="button"
             onClick={() => setIsProfileOpen(true)}

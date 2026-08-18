@@ -35,7 +35,7 @@ export function Shell({
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-canvas text-text-primary">
-      {/* Responsive Collapsible Sidebar */}
+      {/* Responsive Collapsible Sidebar with integrated Theme Switcher */}
       <Sidebar
         conversationsState={conversationsState}
         isMobileOpen={isMobileSidebarOpen}
@@ -43,13 +43,13 @@ export function Shell({
         profileState={profileState}
         isCollapsed={isDesktopCollapsed}
         onToggleCollapse={toggleDesktopSidebar}
+        theme={theme}
+        onToggleTheme={onToggleTheme}
       />
 
       {/* Main App Canvas */}
       <div className="flex-1 flex flex-col h-full min-w-0 overflow-hidden relative">
         <Header
-          theme={theme}
-          onToggleTheme={onToggleTheme}
           onToggleMobileSidebar={() => setIsMobileSidebarOpen(true)}
           isSidebarCollapsed={isDesktopCollapsed}
           onToggleSidebarCollapse={toggleDesktopSidebar}
