@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import { CodeBlock } from "./CodeBlock";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface MarkdownContentProps {
@@ -43,15 +45,17 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     }
   };
 
-  // State untuk expand/collapse jika sumber > 6 (Perplexity Pro UX)
-  const [isExpanded, setIsExpanded] = React.useState(false);
-  const visibleSources = isExpanded ? webSources : webSources.slice(0, 6);
+  // State untuk expand/collapse jika sumber > 6
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const initialSources = webSources.slice(0, 6);
+  const extraSources = webSources.slice(6);
 
   return (
     <div className="prose prose-sm dark:prose-invert max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
       {/* Visual Live Source Carousel / Dynamic Full Width Adaptive Grid */}
       {webSources.length > 0 && (
-        <div className="mb-5 not-prose w-full">
+        <div className="mb-5 not-prose w-full select-none">
           <div className="flex items-center justify-between gap-1.5 text-[11px] font-medium text-text-secondary uppercase tracking-wider mb-2.5">
             <div className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
@@ -61,25 +65,36 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
               <button
                 type="button"
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="text-[11px] font-medium text-accent hover:underline flex items-center gap-1 cursor-pointer bg-accent/5 px-2 py-0.5 rounded-full border border-accent/20 transition-all hover:bg-accent/10"
+                className="h-7 px-3 rounded-full flex items-center justify-center gap-1.5 text-xs font-medium text-accent bg-accent/10 hover:bg-accent/20 border border-accent/25 hover:border-accent/40 active:scale-95 transition-all shadow-xs cursor-pointer select-none no-underline outline-none"
               >
-                {isExpanded ? "Tampilkan Lebih Sedikit ▴" : `+${webSources.length - 6} Sumber Lainnya ▾`}
+                <span>
+                  {isExpanded
+                    ? "Tampilkan Lebih Sedikit"
+                    : `+${webSources.length - 6} Sumber Lainnya`}
+                </span>
+                {isExpanded ? (
+                  <ChevronUp className="w-3.5 h-3.5 shrink-0" />
+                ) : (
+                  <ChevronDown className="w-3.5 h-3.5 shrink-0" />
+                )}
               </button>
             )}
           </div>
-          <div 
-            className="grid gap-2.5 w-full transition-all duration-300"
+
+          {/* Grid 6 Sumber Pertama */}
+          <div
+            className="grid gap-2.5 w-full"
             style={{
-              gridTemplateColumns: `repeat(${Math.min(visibleSources.length > 6 ? 4 : visibleSources.length, 6)}, minmax(0, 1fr))`
+              gridTemplateColumns: `repeat(${Math.min(initialSources.length, 6)}, minmax(0, 1fr))`,
             }}
           >
-            {visibleSources.map((ws, idx) => (
+            {initialSources.map((ws, idx) => (
               <a
                 key={idx}
                 href={ws.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col justify-between p-2.5 rounded-xl bg-surface border border-border hover:border-accent/50 hover:bg-surface-hover text-text-primary transition-all shadow-xs group w-full h-[64px] min-w-0"
+                className="flex flex-col justify-between p-2.5 rounded-xl bg-surface border border-border hover:border-accent/50 hover:bg-surface-hover text-text-primary transition-all shadow-xs group w-full h-[64px] min-w-0 no-underline"
                 title={`${ws.title} (${ws.url})`}
               >
                 <div className="flex items-center justify-between gap-1.5 w-full">
@@ -92,7 +107,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                         (e.target as HTMLElement).style.display = "none";
                       }}
                     />
-                    <span className="text-[10px] text-text-muted font-mono truncate">
+                    <span className="text-[10px] text-text-secondary font-mono truncate">
                       {getDomain(ws.url)}
                     </span>
                   </div>
@@ -106,6 +121,65 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
               </a>
             ))}
           </div>
+
+          {/* Animated Accordion untuk Sumber Tambahan (>6) */}
+          <AnimatePresence initial={false}>
+            {isExpanded && extraSources.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                className="overflow-hidden"
+              >
+                <div
+                  className="grid gap-2.5 w-full pt-2.5"
+                  style={{
+                    gridTemplateColumns: `repeat(${Math.min(extraSources.length > 6 ? 4 : extraSources.length, 6)}, minmax(0, 1fr))`,
+                  }}
+                >
+                  {extraSources.map((ws, extraIdx) => {
+                    const actualIdx = 6 + extraIdx;
+                    return (
+                      <motion.a
+                        key={actualIdx}
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.2, delay: Math.min(extraIdx * 0.015, 0.2) }}
+                        href={ws.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col justify-between p-2.5 rounded-xl bg-surface border border-border hover:border-accent/50 hover:bg-surface-hover text-text-primary transition-all shadow-xs group w-full h-[64px] min-w-0 no-underline"
+                        title={`${ws.title} (${ws.url})`}
+                      >
+                        <div className="flex items-center justify-between gap-1.5 w-full">
+                          <div className="flex items-center gap-1.5 min-w-0">
+                            <img
+                              src={`https://www.google.com/s2/favicons?domain=${getDomain(ws.url)}&sz=32`}
+                              alt=""
+                              className="w-3.5 h-3.5 rounded-xs shrink-0 opacity-85 group-hover:opacity-100"
+                              onError={(e) => {
+                                (e.target as HTMLElement).style.display = "none";
+                              }}
+                            />
+                            <span className="text-[10px] text-text-secondary font-mono truncate">
+                              {getDomain(ws.url)}
+                            </span>
+                          </div>
+                          <span className="text-[10px] font-mono text-accent font-semibold px-1 py-0.2 rounded bg-accent/10 shrink-0">
+                            [{actualIdx + 1}]
+                          </span>
+                        </div>
+                        <span className="text-[11px] font-medium text-text-primary truncate w-full group-hover:text-accent transition-colors">
+                          {ws.title || getDomain(ws.url)}
+                        </span>
+                      </motion.a>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       )}
 
