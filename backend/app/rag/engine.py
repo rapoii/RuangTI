@@ -28,6 +28,8 @@ IE_THESAURUS = {
     "antropometri": ["persentil 5 50 95", "dimensi stasiun kerja", "ergonomi desain meja", "clearance reach"],
     "eoq": ["economic order quantity", "persediaan", "inventory control", "holding cost", "ordering cost", "tic"],
     "rop": ["reorder point", "titik pemesanan kembali", "safety stock", "lead time", "service level z"],
+    "game theory": ["teori permainan", "supply chain coordination", "nash equilibrium", "stackelberg game", "cournot", "bertrand", "double marginalization", "shapley value", "cooperative game"],
+    "supply chain": ["rantai pasok", "logistik", "double marginalization", "bullwhip effect", "game theory"],
     "safety stock": ["persediaan pengaman", "rop", "service level", "faktor z normal", "lead time"],
     "simplex": ["simpleks", "linear programming", "pemrograman linier", "fungsi tujuan", "slack variable", "shadow price", "taha"],
     "transportasi": ["model distribusi", "vam", "vogel", "modi", "stepping stone", "north west corner"],
