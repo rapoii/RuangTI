@@ -4,15 +4,13 @@ import React, { useState } from "react";
 import { Header } from "./Header";
 import { Sidebar } from "../sidebar/Sidebar";
 import { useConversations } from "@/hooks/use-conversations";
-import { ModelOption, UserProfile } from "@/lib/types";
+import { UserProfile } from "@/lib/types";
 
 interface ShellProps {
   children: React.ReactNode;
   theme: "light" | "dark";
   onToggleTheme: () => void;
   conversationsState: ReturnType<typeof useConversations>;
-  selectedModel: ModelOption;
-  onSelectModel: (model: ModelOption) => void;
   profileState: {
     profile: UserProfile;
     updateProfile: (data: Partial<UserProfile>) => void;
@@ -26,8 +24,6 @@ export function Shell({
   theme,
   onToggleTheme,
   conversationsState,
-  selectedModel,
-  onSelectModel,
   profileState,
 }: ShellProps) {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
@@ -45,8 +41,6 @@ export function Shell({
       {/* Main App Canvas */}
       <div className="flex-1 flex flex-col h-full min-w-0 overflow-hidden relative">
         <Header
-          currentModel={selectedModel}
-          onSelectModel={onSelectModel}
           theme={theme}
           onToggleTheme={onToggleTheme}
           onToggleMobileSidebar={() => setIsMobileSidebarOpen(true)}

@@ -1,15 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { ModelOption, UserProfile } from "@/lib/types";
-import { Dropdown } from "@/components/ui/DropdownMenu";
+import { UserProfile } from "@/lib/types";
 import { ProfileModal } from "@/components/profile/ProfileModal";
-import { ChevronDown, Moon, Sun, Menu, Cpu, Factory, Activity, Layers, User } from "lucide-react";
+import { Moon, Sun, Menu, Layers, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
-  currentModel: ModelOption;
-  onSelectModel: (model: ModelOption) => void;
   theme: "light" | "dark";
   onToggleTheme: () => void;
   onToggleMobileSidebar: () => void;
@@ -19,35 +16,7 @@ interface HeaderProps {
   onLogin: (name: string, email: string) => void;
 }
 
-const AVAILABLE_MODELS: {
-  id: ModelOption;
-  label: string;
-  description: string;
-  icon: React.ReactNode;
-}[] = [
-  {
-    id: "ti-optima",
-    label: "TI-Optima Pro",
-    description: "Model spesialis Riset Operasi, Formulasi Linier & Optimasi SCM",
-    icon: <Cpu className="w-4 h-4 text-accent" />,
-  },
-  {
-    id: "ti-lean",
-    label: "TI-Lean Six Sigma",
-    description: "Analisis Kualitas SPC, Kaizen, 5S, DMAIC & Eliminasi Waste",
-    icon: <Factory className="w-4 h-4 text-emerald-500" />,
-  },
-  {
-    id: "ti-sim",
-    label: "TI-Simulasi & Ergonomi",
-    description: "Perhitungan Waktu Baku, Antropometri, RULA/REBA & Simulasi Pabrik",
-    icon: <Activity className="w-4 h-4 text-blue-500" />,
-  },
-];
-
 export function Header({
-  currentModel,
-  onSelectModel,
   theme,
   onToggleTheme,
   onToggleMobileSidebar,
@@ -57,17 +26,6 @@ export function Header({
   onLogin,
 }: HeaderProps) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-
-  const activeModelObj =
-    AVAILABLE_MODELS.find((m) => m.id === currentModel) || AVAILABLE_MODELS[0];
-
-  const modelDropdownItems = AVAILABLE_MODELS.map((m) => ({
-    id: m.id,
-    label: m.label,
-    description: m.description,
-    icon: m.icon,
-    active: m.id === currentModel,
-  }));
 
   return (
     <>
@@ -87,27 +45,10 @@ export function Header({
             <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/30 text-accent flex items-center justify-center font-display font-bold text-xs">
               <Layers className="w-3.5 h-3.5" />
             </div>
-            <span className="font-display font-bold text-sm tracking-tight text-text-primary hidden xs:inline-block">
+            <span className="font-display font-bold text-sm tracking-tight text-text-primary">
               RuangTI
             </span>
           </div>
-
-          {/* Model Selector Dropdown with micro-interaction */}
-          <Dropdown
-            trigger={
-              <button
-                type="button"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface/80 hover:bg-surface border border-border text-xs sm:text-sm font-medium text-text-primary shadow-sm hover:border-border-strong transition-all duration-150 active:scale-[0.98]"
-                aria-label="Pilih model kecerdasan buatan"
-              >
-                <span className="truncate max-w-[120px] sm:max-w-none">{activeModelObj.label}</span>
-                <ChevronDown className="w-3.5 h-3.5 text-text-secondary opacity-70" />
-              </button>
-            }
-            items={modelDropdownItems}
-            onSelect={(id) => onSelectModel(id as ModelOption)}
-            widthClass="w-72"
-          />
         </div>
 
         {/* Right: Theme Toggle & User Profile Button */}

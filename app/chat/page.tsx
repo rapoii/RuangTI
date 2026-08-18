@@ -94,8 +94,6 @@ export default function ChatPage() {
       theme={theme}
       onToggleTheme={toggleTheme}
       conversationsState={conversationsState}
-      selectedModel={selectedModel}
-      onSelectModel={setSelectedModel}
       profileState={profileState}
     >
       <div className="flex-1 flex flex-col h-full min-h-0 overflow-hidden relative">
