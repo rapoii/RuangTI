@@ -50,11 +50,11 @@ async def stream_grok_ai_response(
             rag_context_text += f"{chunk['content']}\n"
         rag_context_text += "\n=== [AKHIR REFERENSI LITERATUR] ===\n"
 
-    # 2. Web Search via CDP (Optional)
+    # 2. Web Search via Multi-Source Crawler (Parallel Top-2 Deep Extract)
     web_context_text = ""
     if web_search_enabled:
         try:
-            search_results = await cdp_manager.search_google(prompt, max_results=3)
+            search_results = await cdp_manager.search_google(prompt, max_results=5)
             if search_results:
                 web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU & DAFTAR SITASI (LIVE)] ===\n"
                 for i, res in enumerate(search_results, 1):
@@ -62,18 +62,21 @@ async def stream_grok_ai_response(
                     web_context_text += f"URL: {res.get('url', '')}\n"
                     web_context_text += f"Snippet: {res.get('snippet', '')}\n"
 
-                # Fetch top result content for deeper context
-                top_url = search_results[0].get('url')
-                if top_url:
-                    page_content = await cdp_manager.fetch_page(top_url)
-                    if page_content:
-                        web_context_text += f"\n--- [KONTEN LENGKAP DARI SUMBER #1] ---\n{page_content[:4000]}...\n"
+                # Parallel Deep Crawl Top 2 URLs
+                deep_urls = [r['url'] for r in search_results[:2] if r.get('url')]
+                if deep_urls:
+                    crawl_tasks = [cdp_manager.fetch_page(u) for u in deep_urls]
+                    pages_content = await asyncio.gather(*crawl_tasks, return_exceptions=True)
+                    
+                    for idx, content in enumerate(pages_content, 1):
+                        if isinstance(content, str) and content.strip():
+                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:4500]}...\n"
 
                 web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
                 web_context_text += """
 *ATURAN PENULISAN SITASI & SUMBER WEB:*
-1. Apabila kamu mengutip data/fakta dari hasil pencarian web di atas, gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)`, `[2](URL_SUMBER_2)` (gunakan satu kurung siku biasa, BUKAN double bracket).
-2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian **Sumber Web Terkini:** dengan format bersih tanpa format berlebihan:
+1. Apabila kamu mengutip data/fakta dari hasil pencarian web di atas, gunakan penanda sitasi link markdown standar: `[1](URL_SUMBER_1)`, `[2](URL_SUMBER_2)` (gunakan satu pasang kurung siku biasa).
+2. Di akhir jawaban pada bagian **Referensi Literatur Ilmiah Terkait**, buat sub-bagian **Sumber Web Terkini:** dengan format bersih:
    - [1] [Judul Sumber Web 1](URL_SUMBER_1)
    - [2] [Judul Sumber Web 2](URL_SUMBER_2)
 """

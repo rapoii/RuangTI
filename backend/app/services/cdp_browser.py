@@ -272,7 +272,30 @@ class CDPBrowserManager:
         return results
 
     async def fetch_page(self, url: str) -> str:
-        """Fetch and extract text content from a URL via CDP."""
+        """Fetch and extract clean text content from a URL via fast HTTP or CDP."""
+        # 1. Try Fast HTTP client first
+        try:
+            import httpx
+            from bs4 import BeautifulSoup
+            
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+            }
+            async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+                resp = await client.get(url, headers=headers)
+                if resp.status_code == 200:
+                    soup = BeautifulSoup(resp.text, 'html.parser')
+                    for s in soup(['script', 'style', 'nav', 'footer', 'header', 'aside', 'noscript', 'svg']):
+                        s.decompose()
+                    main_content = soup.find(['main', 'article', '.content', '#content']) or soup.body
+                    if main_content:
+                        text = main_content.get_text(separator=' ', strip=True)
+                        if len(text) > 100:
+                            return text[:6000]
+        except Exception as e:
+            logger.debug(f"HTTP fetch fallback to CDP for {url}: {e}")
+
+        # 2. Fallback to CDP Browser Automation
         if not await self.ensure_running():
             return ""
 
@@ -295,13 +318,13 @@ class CDPBrowserManager:
                     "params": {"url": url}
                 }))
                 msg_id += 1
-                await asyncio.sleep(4)
+                await asyncio.sleep(3)
 
                 extract_js = (
                     "(() => {"
                     "document.querySelectorAll('script,style,nav,footer,header,aside').forEach(e=>e.remove());"
                     "const m=document.querySelector('main,article,.content,#content,body');"
-                    "return m?m.innerText.substring(0,8000):document.body.innerText.substring(0,8000);"
+                    "return m?m.innerText.substring(0,6000):document.body.innerText.substring(0,6000);"
                     "})()"
                 )
 
