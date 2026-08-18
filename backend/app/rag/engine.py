@@ -57,7 +57,12 @@ IE_THESAURUS = {
     "des": ["discrete event simulation", "simulasi diskrit", "antrian", "buffer", "averill law", "entities", "resources", "steady state"],
     "penjadwalan": ["production scheduling", "flow shop", "job shop", "makespan", "cmax", "aturan johnson", "johnson rule", "neh", "nawaz enscore ham", "spt", "edd", "cds", "tardiness"],
     "scheduling": ["production scheduling", "flow shop", "job shop", "makespan", "aturan johnson", "neh algorithm", "spt", "edd", "critical ratio", "flow time"],
-    "neh": ["nawaz enscore ham", "neh algorithm", "flow shop scheduling", "makespan", "permutation flow shop", "johnson rule"]
+    "neh": ["nawaz enscore ham", "neh algorithm", "flow shop scheduling", "makespan", "permutation flow shop", "johnson rule"],
+    "k3": ["keselamatan kesehatan kerja", "hiradc", "hazop", "jsa", "job safety analysis", "hierarki pengendalian bahaya", "iso 45001", "matriks risiko", "apd", "engineering control"],
+    "hiradc": ["hazard identification risk assessment", "k3", "penilaian risiko", "hierarki kendali", "eliminasi substitusi engineering", "keselamatan kerja pabrik"],
+    "hazop": ["hazard and operability study", "guide words", "k3", "analisis deviasi proses", "keselamatan operasi"],
+    "rekayasa nilai": ["value engineering", "ve", "analisis nilai", "fast diagram", "lawrence miles", "function analysis", "verb noun", "cost to function ratio"],
+    "value engineering": ["rekayasa nilai", "fast diagram", "lawrence miles", "save international", "analisis fungsi", "fungsi biaya", "target costing"]
 }
 
 def clean_text(text: str) -> str:
