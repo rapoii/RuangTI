@@ -155,36 +155,29 @@ class CDPBrowserManager:
     async def search_smart(self, query: str, max_candidate_limit: int = 50) -> List[Dict[str, str]]:
         """
         Smart & Dynamic Multi-Source Search (Up to 50 results).
-        Crawl across multiple search engines (Bing + DuckDuckGo + CDP) with automatic decoding and authority scoring.
+        Crawl across DDG Direct POST Engine with automatic decoding and domain authority scoring.
         """
         import httpx
         import urllib.parse
-        import base64
         from bs4 import BeautifulSoup
 
         results: List[Dict[str, str]] = []
         seen_urls = set()
 
-        def decode_bing_url(href: str) -> str:
-            if 'bing.com/ck/a' in href and 'u=a1' in href:
-                try:
-                    m = re.search(r'u=a1([a-zA-Z0-9_-]+)', href)
-                    if m:
-                        b64 = m.group(1)
-                        b64 += '=' * (-len(b64) % 4)
-                        b64 = b64.replace('-', '+').replace('_', '/')
-                        return base64.b64decode(b64).decode('utf-8', errors='ignore')
-                except Exception:
-                    pass
-            return href
-
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Referer": "https://html.duckduckgo.com/"
         }
 
         # Sub-queries if the query is complex (multi-faceted)
-        clean_query = re.sub(r'\b(?:cari lagi|sumber lain|cari sumber lain|referensi lain|website lain|cari yang lain|coba cari lagi|jangan pakai website yang tadi)\b', '', query, flags=re.IGNORECASE).strip()
+        clean_query = re.sub(
+            r'\b(?:cari lagi|sumber lain|cari sumber lain|referensi lain|website lain|cari yang lain|coba cari lagi|jangan pakai website yang tadi|yang berbeda|beda)\b',
+            '',
+            query,
+            flags=re.IGNORECASE
+        ).strip()
         if not clean_query:
             clean_query = query
 
@@ -194,48 +187,51 @@ class CDPBrowserManager:
             parts = re.split(r'\b(?:vs|bandingkan|perbedaan|compare|dan|and)\b', clean_query, flags=re.IGNORECASE)
             sub_queries.extend([p.strip() for p in parts if len(p.strip()) > 3])
 
-        async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
-            # 1. Multi-Engine Scraper (Bing Search)
-            for q in sub_queries[:2]:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+            for q in sub_queries[:3]:
                 if len(results) >= max_candidate_limit:
                     break
-                for first_offset in [1, 11, 21, 31, 41]:
-                    if len(results) >= max_candidate_limit:
-                        break
-                    try:
-                        bing_url = f"https://www.bing.com/search?q={quote_plus(q)}&first={first_offset}"
-                        resp = await client.get(bing_url, headers=headers)
-                        if resp.status_code == 200:
-                            soup = BeautifulSoup(resp.text, 'html.parser')
-                            for item in soup.select('li.b_algo'):
-                                a_el = item.select_one('h2 a')
-                                sn_el = item.select_one('.b_caption p, .b_lineclamp2, .b_snippet')
-                                if a_el:
-                                    raw_href = a_el.get('href', '')
-                                    actual_url = decode_bing_url(raw_href)
-                                    if not actual_url.startswith('http') or actual_url in seen_urls:
-                                        continue
+                try:
+                    resp = await client.post("https://html.duckduckgo.com/html/", data={"q": q}, headers=headers)
+                    if resp.status_code == 200:
+                        soup = BeautifulSoup(resp.text, 'html.parser')
+                        for r in soup.select('.result'):
+                            if 'result--ad' in r.get('class', []):
+                                continue
+                            title_el = r.select_one('.result__title a')
+                            snippet_el = r.select_one('.result__snippet')
+                            if title_el:
+                                raw_href = title_el.get('href', '')
+                                if 'duckduckgo.com/y.js' in raw_href or 'bing.com/aclick' in raw_href:
+                                    continue
+                                if 'uddg=' in raw_href:
+                                    actual_url = urllib.parse.unquote(raw_href.split('uddg=')[1].split('&')[0])
+                                else:
+                                    actual_url = raw_href
 
-                                    try:
-                                        domain = urllib.parse.urlparse(actual_url).netloc.lower()
-                                    except Exception:
-                                        domain = ""
+                                if not actual_url.startswith('http') or actual_url in seen_urls:
+                                    continue
 
-                                    # Filter domain non-relevant / spam
-                                    if any(bad in domain for bad in ['instagram.com', 'whatsapp.com', 'youtube.com', 'facebook.com', 'tiktok.com', 'twitter.com', 'x.com']):
-                                        continue
+                                # Filter unwanted noise
+                                if any(bad in actual_url.lower() for bad in ['images.google', 'google.com/imghp', 'pinterest.com', 'youtube.com', 'instagram.com', 'facebook.com']):
+                                    continue
 
-                                    seen_urls.add(actual_url)
-                                    results.append({
-                                        "title": a_el.get_text(strip=True),
-                                        "url": actual_url,
-                                        "domain": domain,
-                                        "snippet": sn_el.get_text(strip=True) if sn_el else ""
-                                    })
-                                    if len(results) >= max_candidate_limit:
-                                        break
-                    except Exception as e:
-                        logger.warning(f"Bing search fetch failed: {e}")
+                                try:
+                                    domain = urllib.parse.urlparse(actual_url).netloc.lower()
+                                except Exception:
+                                    domain = ""
+
+                                seen_urls.add(actual_url)
+                                results.append({
+                                    "title": title_el.get_text(strip=True),
+                                    "url": actual_url,
+                                    "domain": domain,
+                                    "snippet": snippet_el.get_text(strip=True) if snippet_el else ""
+                                })
+                                if len(results) >= max_candidate_limit:
+                                    break
+                except Exception as e:
+                    logger.warning(f"Search fetch error ({q}): {e}")
 
         # 2. Score & Sort by Relevance & Domain Authority
         def score_result(item):
@@ -245,26 +241,18 @@ class CDPBrowserManager:
             s = item.get('snippet', '').lower()
             q_words = [w for w in query_lower.split() if len(w) > 2]
 
-            # Domain authority bonus
-            if any(tld in d for tld in ['.org', '.gov', '.edu', '.ac.id', '.go.id', 'iso.org', 'osha.gov', 'sciencedirect', 'springer', 'researchgate', 'ieee.org', 'nist.gov', 'wikipedia.org']):
+            # Domain authority bonus (Indonesian Journals & International Standards)
+            if any(tld in d for tld in ['.ac.id', '.edu', '.org', '.gov', '.go.id', 'researchgate', 'sciencedirect', 'neliti.com', 'jurnal', 'ejournal', 'iso.org', 'osha.gov']):
+                score += 30
+            elif any(ind in d for ind in ['pqm', 'scaleocean', 'sasanadigital', 'hashmicro', 'prieds', 'accurate', 'lean', 'sixsigma', 'industry', 'engineering']):
                 score += 15
-            elif any(ind in d for ind in ['consulting', 'standard', 'assurance', 'k3', 'hukum', 'center', 'global', 'media', 'journal', 'lean', 'sixsigma', 'industry', 'engineering']):
-                score += 8
 
             # Keyword match bonus (Title & Snippet)
             for qw in q_words:
                 if qw in t:
-                    score += 25
+                    score += 15
                 if qw in s:
-                    score += 10
-
-            # Penalize generic dictionary/social sites if query is technical
-            if any(bad in d for bad in ['wiktionary.org', 'dictionary.cambridge.org', 'thebittimes.com', 'travel', 'translate.google']):
-                score -= 40
-
-            # Snippet richness
-            if len(s) > 100:
-                score += 2
+                    score += 8
 
             return score
 
