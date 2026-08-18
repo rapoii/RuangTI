@@ -7,7 +7,7 @@ from app.rag.engine import rag_engine
 from app.services.cdp_browser import cdp_manager
 
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://localhost:20128/v1")
-ROUTER_9_MODEL = "gcli/grok-4.5-high(xhigh)"
+ROUTER_9_MODEL = "gcli/grok-4.6-high(xhigh)"
 
 BASE_SYSTEM_PROMPT = """Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri kelas dunia.
 

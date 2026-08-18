@@ -26,7 +26,7 @@ export interface SendMessageOptions {
 export function useChat({ conversationId, initialMessages = [], onMessagesChange, onUpdateTitle }: UseChatProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [isStreaming, setIsStreaming] = useState<boolean>(false);
-  const [selectedModel, setSelectedModel] = useState<string>("gcli/grok-4.5-high(xhigh)");
+  const [selectedModel, setSelectedModel] = useState<string>("gcli/grok-4.6-high(xhigh)");
   const abortControllerRef = useRef<AbortController | null>(null);
 
   // Load messages from backend whenever conversationId changes
@@ -98,7 +98,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
       abortControllerRef.current = controller;
 
       try {
-        const targetModel = selectedModel || "gcli/grok-4.5-high(xhigh)";
+        const targetModel = selectedModel || "gcli/grok-4.6-high(xhigh)";
         const res = await fetch(`${getApiBase()}/api/chat/stream`, {
           method: "POST",
           headers: {
