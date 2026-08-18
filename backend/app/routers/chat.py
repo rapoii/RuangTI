@@ -29,14 +29,18 @@ async def sse_generator(
     web_search: bool = False
 ) -> AsyncGenerator[str, None]:
     history_dicts = [{"role": h.role, "content": h.content} for h in history] if history else []
-    async for chunk in stream_grok_ai_response(
-        prompt,
-        history=history_dicts,
-        model_name=model_id or ROUTER_9_MODEL,
-        web_search_enabled=web_search
-    ):
-        payload = json.dumps({"chunk": chunk})
-        yield f"data: {payload}\n\n"
+    try:
+        async for chunk in stream_grok_ai_response(
+            prompt,
+            history=history_dicts,
+            model_name=model_id or ROUTER_9_MODEL,
+            web_search_enabled=web_search
+        ):
+            payload = json.dumps({"chunk": chunk})
+            yield f"data: {payload}\n\n"
+    except Exception as e:
+        err_payload = json.dumps({"chunk": f"\n\n*(Terjadi kendala pada backend streaming: {str(e)})*"})
+        yield f"data: {err_payload}\n\n"
     yield "data: [DONE]\n\n"
 
 

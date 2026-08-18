@@ -12,9 +12,73 @@ interface MarkdownContentProps {
   content: string;
 }
 
+interface WebSourceMeta {
+  title: string;
+  url: string;
+  snippet?: string;
+}
+
 export function MarkdownContent({ content }: MarkdownContentProps) {
+  // Extract WebSources meta if present
+  let cleanContent = content;
+  let webSources: WebSourceMeta[] = [];
+
+  const sourceMatch = cleanContent.match(/<!--WEBSOURCES:(.*?)-->/);
+  if (sourceMatch) {
+    try {
+      webSources = JSON.parse(sourceMatch[1]);
+      cleanContent = cleanContent.replace(sourceMatch[0], "");
+    } catch {
+      // ignore
+    }
+  }
+
+  // Helper untuk mendapatkan favicon/domain
+  const getDomain = (urlStr: string) => {
+    try {
+      return new URL(urlStr).hostname.replace("www.", "");
+    } catch {
+      return "web";
+    }
+  };
+
   return (
     <div className="prose prose-sm dark:prose-invert max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
+      {/* Visual Live Source Carousel / Pills */}
+      {webSources.length > 0 && (
+        <div className="mb-4 not-prose">
+          <div className="flex items-center gap-1.5 text-[11px] font-medium text-text-secondary uppercase tracking-wider mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            <span>{webSources.length} Sumber Web Ditemukan & Dirayapi:</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {webSources.map((ws, idx) => (
+              <a
+                key={idx}
+                href={ws.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs bg-surface border border-border hover:border-accent/50 hover:bg-surface-hover text-text-primary transition-all shadow-xs group"
+                title={`${ws.title} (${ws.url})`}
+              >
+                <img
+                  src={`https://www.google.com/s2/favicons?domain=${getDomain(ws.url)}&sz=32`}
+                  alt=""
+                  className="w-3.5 h-3.5 rounded-xs shrink-0 opacity-80 group-hover:opacity-100"
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = "none";
+                  }}
+                />
+                <span className="font-medium text-accent text-[11px] font-mono">[{idx + 1}]</span>
+                <span className="max-w-[140px] sm:max-w-[200px] truncate text-[12px]">
+                  {ws.title || getDomain(ws.url)}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex]}
@@ -123,7 +187,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
           },
         }}
       >
-        {content}
+        {cleanContent}
       </ReactMarkdown>
     </div>
   );

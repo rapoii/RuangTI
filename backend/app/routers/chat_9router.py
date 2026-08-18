@@ -1,6 +1,8 @@
 import os
 import json
+import re
 import httpx
+import asyncio
 import logging
 from typing import AsyncGenerator, List, Dict, Any
 
@@ -20,7 +22,7 @@ Karakteristik & Prinsip Menjawab:
 3. Basis Pengetahuan Terverifikasi (RAG Context): Manfaatkan buku teks dan standar industri internasional yang disertakan (Montgomery, Tompkins, Ralph Barnes, Hamdy Taha, Heizer-Render, Blank-Tarquin) untuk memberikan jawaban matematis yang presisi beserta nilai konstanta tabel yang tepat.
 4. Adaptasi Bahasa Otomatis (Multilingual & Language Mirroring):
    - Jawablah menggunakan bahasa yang sama persis dengan yang digunakan oleh pengguna (Bahasa Indonesia, English, 日本語, Deutsch, Español, dll).
-   - Jika pengguna bertanya dalam bahasa Inggris, seluruh struktur heading, penjelasan teknis, rekomendasi, dan sitasi wajib disajikan secara profesional dalam bahasa Inggris (misalnya: Problem Identification / Methodology, Mathematical Formulation, Computation Steps, Managerial Recommendations, Scientific Literature References, Latest Web Sources).
+   - Jika pengguna bertanya dalam bahasa Inggris, seluruh struktur heading, penjelasan teknis, rekomendasi, dan sitasi wajib disajikan secara profesional dalam bahasa Inggris.
    - Jika pengguna bertanya dalam bahasa Indonesia, gunakan bahasa Indonesia teknis yang baku dan profesional.
 5. Struktur Jawaban (Sesuaikan bahasanya dengan bahasa pertanyaan pengguna):
    - **Identifikasi Masalah / Pendekatan Metodologi** (Problem Identification / Methodology)
@@ -61,28 +63,30 @@ async def stream_grok_ai_response(
             effective_search_query = prompt
             followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain", "website lain", "cari yang lain", "coba cari lagi"]
             if history and any(t in prompt.lower() for t in followup_triggers):
-                # Ambil pertanyaan user terakhir sebelumnya
                 prev_user_queries = [m.get("content", "") for m in history if m.get("role") == "user"]
                 if prev_user_queries:
                     effective_search_query = f"{prev_user_queries[-1]} {prompt}"
 
             search_results = await cdp_manager.search_google(effective_search_query, max_results=5)
             if search_results:
+                # Kirim status live sources ke stream SSE sebelum token AI mulai
+                yield f"<!--WEBSOURCES:{json.dumps(search_results[:5])}-->"
+
                 web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU & DAFTAR SITASI (LIVE)] ===\n"
                 for i, res in enumerate(search_results, 1):
                     web_context_text += f"\n[Sumber #{i}]: {res.get('title', 'Unknown Source')}\n"
                     web_context_text += f"URL: {res.get('url', '')}\n"
                     web_context_text += f"Snippet: {res.get('snippet', '')}\n"
 
-                # Parallel Deep Crawl Top 2 URLs
+                # Parallel Deep Crawl Top 2 URLs with tight 4s timeout per page
                 deep_urls = [r['url'] for r in search_results[:2] if r.get('url')]
                 if deep_urls:
-                    crawl_tasks = [cdp_manager.fetch_page(u) for u in deep_urls]
+                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=4.0) for u in deep_urls]
                     pages_content = await asyncio.gather(*crawl_tasks, return_exceptions=True)
                     
                     for idx, content in enumerate(pages_content, 1):
                         if isinstance(content, str) and content.strip():
-                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:4500]}...\n"
+                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{content[:3500]}...\n"
 
                 web_context_text += "\n=== [AKHIR HASIL PENCARIAN WEB] ===\n"
                 web_context_text += """
@@ -147,7 +151,7 @@ async def stream_grok_ai_response(
                             if content:
                                 yield content
                         except Exception:
-                            continue
+                            pass
         except Exception as e:
-            yield f"\n\n*(Gagal terhubung ke 9Router di {ROUTER_9_BASE_URL}: {str(e)})*"
-
+            logger.error(f"Error streaming from 9Router: {e}")
+            yield f"\n\n*(Koneksi terputus saat streaming dari 9Router Gateway: {str(e)})*"
