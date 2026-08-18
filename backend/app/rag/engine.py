@@ -42,7 +42,10 @@ IE_THESAURUS = {
     "line balancing": ["keseimbangan lini", "assembly line", "ranked positional weight", "rpw", "helgeson birnie", "line efficiency", "balance delay", "smoothness index", "takt time"],
     "rpw": ["ranked positional weight", "line balancing", "helgeson birnie", "positional weight", "precedence diagram"],
     "ahp": ["analytic hierarchy process", "saaty", "perbandingan berpasangan", "pairwise comparison", "consistency ratio", "cr", "ci", "random index", "eigenvector", "mcdm"],
-    "mcdm": ["multi-criteria decision making", "ahp", "topsis", "bobot prioritas", "saaty"]
+    "mcdm": ["multi-criteria decision making", "ahp", "topsis", "bobot prioritas", "saaty"],
+    "vsm": ["value stream mapping", "peta aliran nilai", "lean manufacturing", "takt time", "lead time", "cycle time", "muda", "value added time", "rother shook", "current state map", "future state map"],
+    "lean manufacturing": ["lean production", "vsm", "value stream mapping", "pemborosan", "muda", "mura", "muri", "toyota production system", "tps", "pull system", "kanban"],
+    "muda": ["pemborosan", "8 wastes", "downtime", "defect", "overproduction", "waiting", "inventory", "transportation", "motion", "extra processing"]
 }
 
 def clean_text(text: str) -> str:
