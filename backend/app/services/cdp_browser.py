@@ -183,10 +183,15 @@ class CDPBrowserManager:
             "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
         }
 
-        query_lower = query.lower()
-        sub_queries = [query]
+        # Sub-queries if the query is complex (multi-faceted)
+        clean_query = re.sub(r'\b(?:cari lagi|sumber lain|cari sumber lain|referensi lain|website lain|cari yang lain|coba cari lagi|jangan pakai website yang tadi)\b', '', query, flags=re.IGNORECASE).strip()
+        if not clean_query:
+            clean_query = query
+
+        query_lower = clean_query.lower()
+        sub_queries = [clean_query]
         if any(w in query_lower for w in [" vs ", " bandingkan ", " perbedaan ", " compare ", " dan ", " and "]):
-            parts = re.split(r'\b(?:vs|bandingkan|perbedaan|compare|dan|and)\b', query, flags=re.IGNORECASE)
+            parts = re.split(r'\b(?:vs|bandingkan|perbedaan|compare|dan|and)\b', clean_query, flags=re.IGNORECASE)
             sub_queries.extend([p.strip() for p in parts if len(p.strip()) > 3])
 
         async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
@@ -194,7 +199,7 @@ class CDPBrowserManager:
             for q in sub_queries[:2]:
                 if len(results) >= max_candidate_limit:
                     break
-                for first_offset in [1, 11, 21]:
+                for first_offset in [1, 11, 21, 31, 41]:
                     if len(results) >= max_candidate_limit:
                         break
                     try:
@@ -215,6 +220,10 @@ class CDPBrowserManager:
                                         domain = urllib.parse.urlparse(actual_url).netloc.lower()
                                     except Exception:
                                         domain = ""
+
+                                    # Filter domain non-relevant / spam
+                                    if any(bad in domain for bad in ['instagram.com', 'whatsapp.com', 'youtube.com', 'facebook.com', 'tiktok.com', 'twitter.com', 'x.com']):
+                                        continue
 
                                     seen_urls.add(actual_url)
                                     results.append({
@@ -239,15 +248,19 @@ class CDPBrowserManager:
             # Domain authority bonus
             if any(tld in d for tld in ['.org', '.gov', '.edu', '.ac.id', '.go.id', 'iso.org', 'osha.gov', 'sciencedirect', 'springer', 'researchgate', 'ieee.org', 'nist.gov', 'wikipedia.org']):
                 score += 15
-            elif any(ind in d for ind in ['consulting', 'standard', 'assurance', 'k3', 'hukum', 'center', 'global', 'media', 'journal']):
+            elif any(ind in d for ind in ['consulting', 'standard', 'assurance', 'k3', 'hukum', 'center', 'global', 'media', 'journal', 'lean', 'sixsigma', 'industry', 'engineering']):
                 score += 8
 
-            # Keyword match bonus
+            # Keyword match bonus (Title & Snippet)
             for qw in q_words:
                 if qw in t:
-                    score += 5
+                    score += 25
                 if qw in s:
-                    score += 2
+                    score += 10
+
+            # Penalize generic dictionary/social sites if query is technical
+            if any(bad in d for bad in ['wiktionary.org', 'dictionary.cambridge.org', 'thebittimes.com', 'travel', 'translate.google']):
+                score -= 40
 
             # Snippet richness
             if len(s) > 100:
