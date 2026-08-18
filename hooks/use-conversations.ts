@@ -12,12 +12,25 @@ import {
 } from "@/lib/api-client";
 import { generateTitleFromMessage } from "@/lib/utils";
 
-export function useConversations() {
+interface UseConversationsProps {
+  initialActiveId?: string;
+  onNavigate?: (id: string | null) => void;
+}
+
+export function useConversations(props?: UseConversationsProps) {
+  const { initialActiveId, onNavigate } = props || {};
   const [conversations, setConversations] = useState<Conversation[]>([]);
-  const [activeId, setActiveIdState] = useState<string | null>(null);
+  const [activeId, setActiveIdState] = useState<string | null>(initialActiveId || null);
   const [searchQuery, setSearchQuery] = useState("");
   const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Sync if initialActiveId changes from URL
+  useEffect(() => {
+    if (initialActiveId && initialActiveId !== activeId) {
+      setActiveIdState(initialActiveId);
+    }
+  }, [initialActiveId]);
 
   // Load conversations from backend on mount
   useEffect(() => {
@@ -26,13 +39,29 @@ export function useConversations() {
       setIsLoading(true);
       const list = await fetchConversationsFromBackend();
       setConversations(list);
-      
-      if (list.length > 0) {
-        setActiveIdState(list[0].id);
-        // Load messages for the first conversation
-        const msgs = await fetchMessagesFromBackend(list[0].id);
+
+      // Tentukan active ID target
+      let targetId = initialActiveId;
+
+      if (targetId) {
+        // Cek apakah targetId ada di list
+        const exists = list.some((c) => c.id === targetId);
+        if (!exists && list.length > 0) {
+          // Jika ID URL tidak valid di backend, fallback ke percakapan pertama
+          targetId = list[0].id;
+          if (onNavigate) onNavigate(targetId);
+        }
+      } else if (list.length > 0) {
+        targetId = list[0].id;
+        if (onNavigate) onNavigate(targetId);
+      }
+
+      if (targetId) {
+        setActiveIdState(targetId);
+        // Load messages for the active conversation
+        const msgs = await fetchMessagesFromBackend(targetId);
         setConversations((prev) =>
-          prev.map((c) => (c.id === list[0].id ? { ...c, messages: msgs } : c))
+          prev.map((c) => (c.id === targetId ? { ...c, messages: msgs } : c))
         );
       } else {
         // If empty, create a fresh initial conversation on backend
@@ -40,6 +69,7 @@ export function useConversations() {
         if (newConv) {
           setConversations([newConv]);
           setActiveIdState(newConv.id);
+          if (onNavigate) onNavigate(newConv.id);
         }
       }
       setIsLoading(false);
@@ -50,6 +80,9 @@ export function useConversations() {
   const selectConversation = useCallback(
     async (id: string) => {
       setActiveIdState(id);
+      if (onNavigate) {
+        onNavigate(id);
+      }
       // Fetch messages for selected conversation if not loaded yet
       const current = conversations.find((c) => c.id === id);
       if (current && (!current.messages || current.messages.length === 0)) {
@@ -59,7 +92,7 @@ export function useConversations() {
         );
       }
     },
-    [conversations]
+    [conversations, onNavigate]
   );
 
   const startNewConversation = useCallback(async () => {
@@ -67,10 +100,13 @@ export function useConversations() {
     if (newConv) {
       setConversations((prev) => [newConv, ...prev]);
       setActiveIdState(newConv.id);
+      if (onNavigate) {
+        onNavigate(newConv.id);
+      }
       return newConv.id;
     }
     return null;
-  }, []);
+  }, [onNavigate]);
 
   const deleteConversation = useCallback(
     async (id: string) => {

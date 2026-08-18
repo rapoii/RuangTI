@@ -11,16 +11,21 @@ import { useTheme } from "@/hooks/use-theme";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { ModelOption } from "@/lib/types";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
-export default function ChatPage() {
+export default function DynamicChatPage() {
   const router = useRouter();
+  const rawParams = useParams();
+  const conversationIdFromUrl =
+    typeof rawParams?.id === "string" ? rawParams.id : undefined;
+
   const { theme, toggleTheme } = useTheme();
   const profileState = useProfile();
   const [selectedModel, setSelectedModel] = useState<ModelOption>("ti-optima");
   const [isMounted, setIsMounted] = useState(false);
 
   const conversationsState = useConversations({
+    initialActiveId: conversationIdFromUrl,
     onNavigate: (id) => {
       if (id) {
         router.push(`/chat/${id}`);
