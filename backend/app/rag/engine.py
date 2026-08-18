@@ -111,7 +111,10 @@ IE_THESAURUS = {
     "cvp": ["cost volume profit", "analisis biaya volume laba", "break even point", "bep", "titik impas", "margin of safety", "contribution margin", "fixed cost variable cost"],
     "bep": ["break even point", "titik impas", "cvp", "fixed cost", "variable cost", "contribution margin ratio", "analisis biaya industri"],
     "multivariate spc": ["mspc", "hotelling t2", "t2 hotelling", "mewma", "peta kendali multivariat", "matriks kovarians", "mahalanobis distance", "lowry 1992", "pengendalian mutu multivariat"],
-    "hotelling": ["hotelling t2", "t2 hotelling", "multivariate spc", "mspc", "vektor rata-rata", "matriks kovarians s", "f-distribusi ucl"]
+    "hotelling": ["hotelling t2", "t2 hotelling", "multivariate spc", "mspc", "vektor rata-rata", "matriks kovarians s", "f-distribusi ucl"],
+    "dfss": ["design for six sigma", "dmadv", "iddov", "desain six sigma", "define measure analyze design verify", "identify design optimize validate", "six sigma design"],
+    "dmadv": ["define measure analyze design verify", "dfss", "design for six sigma", "roadmap desain produk six sigma"],
+    "multi echelon inventory": ["meio", "stochastic inventory", "inventory optimization", "supply chain network design", "scnd", "guaranteed service model", "echelon stock", "base stock policy"]
 }
 
 def clean_text(text: str) -> str:
