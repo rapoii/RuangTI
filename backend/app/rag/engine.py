@@ -133,7 +133,12 @@ IE_THESAURUS = {
     "metaheuristik vrp": ["vehicle routing problem", "simulated annealing", "tabu search", "cvrp", "vrptw", "metropolis acceptance", "cooling schedule", "tabu list", "aspiration criterion", "local optima"],
     "desain eksperimen": ["design of experiments", "doe", "response surface methodology", "rsm", "desain faktorial", "central composite design", "box behnken", "anova", "taguchi orthogonal"],
     "kapabilitas proses": ["process capability index", "cp", "cpk", "pp", "ppk", "process performance", "short term capability", "long term capability", "batas spesifikasi", "six sigma metrics"],
-    "kenyamanan termal": ["thermal comfort", "ergonomi lingkungan", "pmv", "ppd", "predicted mean vote", "fanger model", "heat stress", "wbgt", "laju metabolisme", "insulasi pakaian"]
+    "kenyamanan termal": ["thermal comfort", "ergonomi lingkungan", "pmv", "ppd", "predicted mean vote", "fanger model", "heat stress", "wbgt", "laju metabolisme", "insulasi pakaian"],
+    "operations research": ["jackson networks", "markov decision processes", "mdp", "stochastic programming", "robust optimization", "real options analysis", "data envelopment analysis", "dea", "topsis", "promethee", "mcdm", "fuzzy logic", "agent based modeling", "abm", "petri nets", "constraint programming"],
+    "modern supply chain": ["revenue management", "dynamic pricing", "scrm", "supply chain risk management", "cross docking", "vmi", "vendor managed inventory", "cpfr", "blockchain scm", "humanitarian logistics", "omni channel", "cold chain", "traveling purchaser problem", "tpp"],
+    "advanced manufacturing": ["lean accounting", "just in sequence", "jis", "agile manufacturing", "reconfigurable manufacturing systems", "rms", "flexible manufacturing systems", "fms", "agv routing", "cyber physical production systems", "cpps", "additive manufacturing", "predictive maintenance", "pdm", "reliability block diagrams", "rbd", "phm", "cobots", "smart warehousing", "as/rs", "order batching", "3d bin packing"],
+    "ergonomi & safety": ["hci", "human computer interaction", "physical biomechanics", "snook tables", "rula", "reba", "owas", "noise vibration control", "industrial illumination", "work physiology", "fatigue modeling", "safety engineering", "bow tie analysis"],
+    "systems engineering": ["enterprise architecture", "togaf", "engineering ethics", "intellectual property", "six sigma black belt", "hoshin kanri", "autonomous maintenance", "tpm", "inventory policy", "s s policy", "spare parts inventory management", "shapley value"]
 }
 
 def clean_text(text: str) -> str:
