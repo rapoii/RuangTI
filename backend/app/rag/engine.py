@@ -34,7 +34,15 @@ IE_THESAURUS = {
     "antrian": ["queueing theory", "m/m/1", "laju kedatangan lambda", "laju pelayanan mu", "utilisasi rho", "panjang antrian lq"],
     "npv": ["net present value", "present worth", "kelayakan investasi", "marr", "cash flow", "ekonomi teknik"],
     "irr": ["internal rate of return", "suku bunga pengembalian", "npv 0", "ekonomi teknik", "interpolasi linier"],
-    "depresiasi": ["penyusutan aset", "straight line", "double declining balance", "nilai buku", "salvage value"]
+    "depresiasi": ["penyusutan aset", "straight line", "double declining balance", "nilai buku", "salvage value"],
+    "oee": ["overall equipment effectiveness", "tpm", "total productive maintenance", "availability", "performance", "quality", "six big losses", "nakajima", "jipm"],
+    "tpm": ["total productive maintenance", "oee", "six big losses", "jishu hozen", "breakdown loss", "smed"],
+    "niosh": ["revised niosh lifting equation", "rnle", "rwl", "recommended weight limit", "lifting index", "hm vm dm am fm cm", "waters 1993", "manual handling", "low back pain"],
+    "rwl": ["recommended weight limit", "niosh", "lifting index", "beban angkat", "ergonomi fisik"],
+    "line balancing": ["keseimbangan lini", "assembly line", "ranked positional weight", "rpw", "helgeson birnie", "line efficiency", "balance delay", "smoothness index", "takt time"],
+    "rpw": ["ranked positional weight", "line balancing", "helgeson birnie", "positional weight", "precedence diagram"],
+    "ahp": ["analytic hierarchy process", "saaty", "perbandingan berpasangan", "pairwise comparison", "consistency ratio", "cr", "ci", "random index", "eigenvector", "mcdm"],
+    "mcdm": ["multi-criteria decision making", "ahp", "topsis", "bobot prioritas", "saaty"]
 }
 
 def clean_text(text: str) -> str:
