@@ -54,7 +54,16 @@ async def stream_grok_ai_response(
     web_context_text = ""
     if web_search_enabled:
         try:
-            search_results = await cdp_manager.search_google(prompt, max_results=5)
+            # Query Formulation: If user prompt is a follow-up ("cari lagi", "sumber lain", etc.), combine with previous context
+            effective_search_query = prompt
+            followup_triggers = ["cari lagi", "sumber lain", "cari sumber lain", "ada referensi lain", "website lain", "cari yang lain", "coba cari lagi"]
+            if history and any(t in prompt.lower() for t in followup_triggers):
+                # Ambil pertanyaan user terakhir sebelumnya
+                prev_user_queries = [m.get("content", "") for m in history if m.get("role") == "user"]
+                if prev_user_queries:
+                    effective_search_query = f"{prev_user_queries[-1]} {prompt}"
+
+            search_results = await cdp_manager.search_google(effective_search_query, max_results=5)
             if search_results:
                 web_context_text = "\n\n=== [HASIL PENCARIAN WEB TERBARU & DAFTAR SITASI (LIVE)] ===\n"
                 for i, res in enumerate(search_results, 1):
