@@ -48,7 +48,11 @@ IE_THESAURUS = {
     "muda": ["pemborosan", "8 wastes", "downtime", "defect", "overproduction", "waiting", "inventory", "transportation", "motion", "extra processing"],
     "industry 4.0": ["smart manufacturing", "revolusi industri keempat", "digital twin", "kembaran digital", "iot", "iiot", "cyber physical systems", "cps", "big data"],
     "digital twin": ["kembaran digital", "smart manufacturing", "industry 4.0", "virtual commissioning", "real-time simulation", "cyber physical systems"],
-    "pdm": ["predictive maintenance", "pemeliharaan prediktif", "machine learning", "lstm", "rul", "remaining useful life", "condition based maintenance", "oee improvement", "smart manufacturing"]
+    "pdm": ["predictive maintenance", "pemeliharaan prediktif", "machine learning", "lstm", "rul", "remaining useful life", "condition based maintenance", "oee improvement", "smart manufacturing"],
+    "industry 5.0": ["industri 5.0", "human centric", "human-in-the-loop", "cobot", "collaborative robot", "human robot collaboration", "hrc", "resilience", "human digital twin", "sustainability"],
+    "cobot": ["collaborative robot", "robot kolaboratif", "human robot collaboration", "hrc", "industry 5.0", "ergonomi kognitif", "wearable sensors"],
+    "circular economy": ["ekonomi sirkular", "circular supply chain", "cscm", "lca", "life cycle assessment", "iso 14040", "cradle to cradle", "9r strategy", "karbon net zero", "green scm"],
+    "lca": ["life cycle assessment", "analisis daur hidup", "iso 14040", "iso 14044", "gwp", "global warming potential", "jejak karbon", "lci", "lcia", "circular economy"]
 }
 
 def clean_text(text: str) -> str:
