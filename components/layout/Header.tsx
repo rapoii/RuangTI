@@ -84,7 +84,7 @@ export function Header({
             )}>
               {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-3 h-3" />}
             </div>
-            <span className="text-xs font-medium max-w-[100px] truncate hidden sm:inline-block">
+            <span className="text-xs font-medium max-w-[160px] truncate hidden sm:inline-block">
               {profile.isLoggedIn ? profile.name : "Masuk"}
             </span>
           </button>
