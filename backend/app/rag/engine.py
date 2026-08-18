@@ -45,7 +45,10 @@ IE_THESAURUS = {
     "mcdm": ["multi-criteria decision making", "ahp", "topsis", "bobot prioritas", "saaty"],
     "vsm": ["value stream mapping", "peta aliran nilai", "lean manufacturing", "takt time", "lead time", "cycle time", "muda", "value added time", "rother shook", "current state map", "future state map"],
     "lean manufacturing": ["lean production", "vsm", "value stream mapping", "pemborosan", "muda", "mura", "muri", "toyota production system", "tps", "pull system", "kanban"],
-    "muda": ["pemborosan", "8 wastes", "downtime", "defect", "overproduction", "waiting", "inventory", "transportation", "motion", "extra processing"]
+    "muda": ["pemborosan", "8 wastes", "downtime", "defect", "overproduction", "waiting", "inventory", "transportation", "motion", "extra processing"],
+    "industry 4.0": ["smart manufacturing", "revolusi industri keempat", "digital twin", "kembaran digital", "iot", "iiot", "cyber physical systems", "cps", "big data"],
+    "digital twin": ["kembaran digital", "smart manufacturing", "industry 4.0", "virtual commissioning", "real-time simulation", "cyber physical systems"],
+    "pdm": ["predictive maintenance", "pemeliharaan prediktif", "machine learning", "lstm", "rul", "remaining useful life", "condition based maintenance", "oee improvement", "smart manufacturing"]
 }
 
 def clean_text(text: str) -> str:
