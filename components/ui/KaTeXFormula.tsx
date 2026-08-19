@@ -7,12 +7,17 @@ import "katex/dist/katex.min.css";
 interface KaTeXFormulaProps {
   math: string;
   className?: string;
+  display?: boolean;
 }
 
-export function KaTeXFormula({ math, className = "" }: KaTeXFormulaProps) {
+export function KaTeXFormula({
+  math,
+  className = "",
+  display = false,
+}: KaTeXFormulaProps) {
   try {
     const html = katex.renderToString(math, {
-      displayMode: false,
+      displayMode: display,
       throwOnError: false,
     });
 

@@ -1,0 +1,151 @@
+"use client";
+
+import React, { useState } from "react";
+import {
+  Compass,
+  Cpu,
+  HardHat,
+  Binary,
+  HelpCircle,
+  ChevronDown,
+  ChevronRight,
+  Sparkles,
+} from "lucide-react";
+import { DOCS_CATEGORIES, DocArticle } from "@/lib/docs-data";
+
+interface DocsSidebarProps {
+  currentArticleId: string;
+  onSelectArticle: (articleId: string) => void;
+  filterText: string;
+  onCloseMobile?: () => void;
+}
+
+export function DocsSidebar({
+  currentArticleId,
+  onSelectArticle,
+  filterText,
+  onCloseMobile,
+}: DocsSidebarProps) {
+  // Simpan state accordion yang terbuka
+  const [openCategories, setOpenCategories] = useState<Record<string, boolean>>({
+    "getting-started": true,
+    "core-features": true,
+    "industrial-roles": true,
+    "technical-specs": true,
+    "faq-troubleshooting": true,
+  });
+
+  const toggleCategory = (catId: string) => {
+    setOpenCategories((prev) => ({
+      ...prev,
+      [catId]: !prev[catId],
+    }));
+  };
+
+  const getCategoryIcon = (iconName: string) => {
+    switch (iconName) {
+      case "Compass":
+        return <Compass size={16} className="text-accent shrink-0" />;
+      case "Cpu":
+        return <Cpu size={16} className="text-amber-600 shrink-0" />;
+      case "HardHat":
+        return <HardHat size={16} className="text-amber-700 shrink-0" />;
+      case "Binary":
+        return <Binary size={16} className="text-accent shrink-0" />;
+      case "HelpCircle":
+        return <HelpCircle size={16} className="text-text-secondary shrink-0" />;
+      default:
+        return <Sparkles size={16} className="text-accent shrink-0" />;
+    }
+  };
+
+  return (
+    <aside className="w-full h-full flex flex-col py-4 px-3 sm:px-4 overflow-y-auto">
+      {/* Search status / stats */}
+      <div className="mb-4 px-2 flex items-center justify-between">
+        <span className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+          Navigasi Dokumentasi
+        </span>
+        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface border border-border/50 text-text-secondary">
+          12 Panduan
+        </span>
+      </div>
+
+      {/* Hierarchical Categories */}
+      <div className="space-y-4">
+        {DOCS_CATEGORIES.map((category) => {
+          const isCategoryOpen = openCategories[category.id] ?? true;
+
+          // Filter artikel jika ada filterText
+          const filteredArticles = category.articles.filter(
+            (art) =>
+              art.title.toLowerCase().includes(filterText.toLowerCase()) ||
+              art.description.toLowerCase().includes(filterText.toLowerCase())
+          );
+
+          if (filterText && filteredArticles.length === 0) {
+            return null;
+          }
+
+          return (
+            <div key={category.id} className="space-y-1">
+              {/* Category Header Button */}
+              <button
+                type="button"
+                onClick={() => toggleCategory(category.id)}
+                className="w-full flex items-center justify-between px-2 py-1.5 rounded-lg text-xs font-semibold text-text-primary hover:bg-surface/80 transition-colors group text-left"
+              >
+                <div className="flex items-center gap-2">
+                  {getCategoryIcon(category.iconName)}
+                  <span className="truncate">{category.title}</span>
+                </div>
+                {isCategoryOpen ? (
+                  <ChevronDown size={14} className="text-text-secondary group-hover:text-text-primary transition-transform" />
+                ) : (
+                  <ChevronRight size={14} className="text-text-secondary group-hover:text-text-primary transition-transform" />
+                )}
+              </button>
+
+              {/* Category Articles List */}
+              {isCategoryOpen && (
+                <div className="pl-6 space-y-0.5 border-l border-border/40 ml-4 mt-1">
+                  {filteredArticles.map((article) => {
+                    const isActive = currentArticleId === article.id;
+                    return (
+                      <button
+                        key={article.id}
+                        type="button"
+                        onClick={() => {
+                          onSelectArticle(article.id);
+                          if (onCloseMobile) onCloseMobile();
+                        }}
+                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between group ${
+                          isActive
+                            ? "bg-accent/10 font-semibold text-accent border border-accent/20"
+                            : "text-text-secondary hover:text-text-primary hover:bg-surface/60 font-normal"
+                        }`}
+                      >
+                        <span className="truncate">{article.title}</span>
+                        {article.badge && (
+                          <span
+                            className={`text-[10px] px-1.5 py-0.2 rounded font-medium shrink-0 ml-1.5 ${
+                              isActive
+                                ? "bg-accent text-white"
+                                : "bg-surface border border-border text-text-secondary group-hover:text-text-primary"
+                            }`}
+                          >
+                            {article.badge}
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </aside>
+  );
+}

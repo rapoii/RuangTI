@@ -43,6 +43,12 @@ export function Navbar({ onOpenLogin, profile }: NavbarProps) {
           >
             Solver Matematis
           </a>
+          <Link
+            href="/docs"
+            className="hover:text-accent font-semibold transition-colors hover:underline underline-offset-4 flex items-center gap-1 text-accent/90"
+          >
+            <span>Dokumentasi</span>
+          </Link>
         </nav>
 
         {/* Right Actions */}

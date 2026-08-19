@@ -63,12 +63,15 @@ projects/web/RuangTI/
 ├── app/
 │   ├── layout.tsx         # Root font loaders (Space Grotesk, Manrope, IBM Plex Mono)
 │   ├── page.tsx           # Landing page publik (Hero, Demo, Feature Cards, CTA, Footer)
+│   ├── docs/              # Dokumentasi resmi RuangTI (3-kolom, Search Ctrl+K, 434 Modul RAG)
+│   │   └── page.tsx       # Docs Hub dengan reactive category switching & TOC
 │   ├── chat/              # Workspace chat utama
 │   │   ├── page.tsx       # New session launcher
 │   │   └── [id]/page.tsx  # Dynamic multi-thread session
 │   ├── share/[id]/        # Halaman publik percakapan terbagikan (Read-only)
 │   └── globals.css        # Pure Light Mode semantic tokens, KaTeX typography, animations
 ├── components/
+│   ├── docs/              # DocsNavbar, DocsSidebar, DocsContent, DocsTOC, DocsSearchModal
 │   ├── landing/           # LandingNavbar, Hero, FeatureGrid, InteractiveDemo, AuthModal
 │   ├── layout/            # Header, Shell
 │   ├── sidebar/           # Sidebar, NewChatButton, ConversationList, UserProfile/SignOut

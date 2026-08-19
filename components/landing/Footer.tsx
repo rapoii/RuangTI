@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Github, Heart } from "lucide-react";
 
 export function Footer() {
@@ -22,6 +23,12 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-6 text-xs text-text-secondary text-center sm:text-left">
+          <Link
+            href="/docs"
+            className="flex items-center gap-1.5 hover:text-accent font-medium transition-colors"
+          >
+            <span>Dokumentasi Resmi</span>
+          </Link>
           <a
             href="https://github.com/rapoii/RuangTI"
             target="_blank"
