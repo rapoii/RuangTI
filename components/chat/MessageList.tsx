@@ -60,7 +60,7 @@ export function MessageList({
     <div
       ref={containerRef}
       onScroll={handleScroll}
-      className="flex-1 overflow-y-auto px-4 sm:px-6 pt-4 pb-28 sm:pb-32 scroll-smooth"
+      className="flex-1 overflow-y-auto px-4 sm:px-6 pt-3 pb-24 sm:pb-28 scroll-smooth"
     >
       <div className="max-w-chat mx-auto w-full flex flex-col justify-start">
         {messages.map((message, index) => {

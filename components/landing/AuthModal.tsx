@@ -261,10 +261,10 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 20 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] as const }}
-            className="relative w-full max-w-lg rounded-t-3xl sm:rounded-2xl bg-surface border border-border/80 shadow-2xl z-10 flex flex-col max-h-[92vh] sm:max-h-[88vh] overflow-hidden"
+            className="relative w-full max-w-lg rounded-t-3xl sm:rounded-2xl bg-surface border border-border/80 shadow-2xl z-10 flex flex-col max-h-[92vh] sm:max-h-[90vh] overflow-hidden"
           >
             {/* Header / Brand & Close Button */}
-            <div className="p-4 sm:p-5 border-b border-border/60 flex items-center justify-between shrink-0 bg-surface">
+            <div className="p-3.5 sm:p-4 border-b border-border/60 flex items-center justify-between shrink-0 bg-surface">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-bold text-xs shadow-sm shadow-accent/20">
                   TI
@@ -282,19 +282,19 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
               <button
                 onClick={onClose}
                 aria-label="Tutup dialog"
-                className="w-10 h-10 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors active:scale-95"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors active:scale-95"
               >
                 <X size={18} />
               </button>
             </div>
 
             {/* Tab Selector Segmented Control */}
-            <div className="p-3 sm:p-4 pb-0 shrink-0 bg-surface">
+            <div className="p-3 sm:p-3.5 pb-0 shrink-0 bg-surface">
               <div className="grid grid-cols-2 p-1 rounded-xl bg-canvas-subtle border border-border/60 text-xs font-semibold select-none">
                 <button
                   type="button"
                   onClick={() => handleTabSwitch("login")}
-                  className={`py-2 px-2.5 rounded-lg transition-all text-center flex items-center justify-center gap-1.5 ${
+                  className={`py-1.5 sm:py-2 px-2.5 rounded-lg transition-all text-center flex items-center justify-center gap-1.5 ${
                     tab === "login"
                       ? "bg-surface text-text-primary shadow-sm border border-border/80 font-bold"
                       : "text-text-secondary hover:text-text-primary"
@@ -306,7 +306,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                 <button
                   type="button"
                   onClick={() => handleTabSwitch("signup")}
-                  className={`py-2 px-2.5 rounded-lg transition-all text-center flex items-center justify-center gap-1.5 ${
+                  className={`py-1.5 sm:py-2 px-2.5 rounded-lg transition-all text-center flex items-center justify-center gap-1.5 ${
                     tab === "signup"
                       ? "bg-surface text-accent shadow-sm border border-accent/40 font-bold"
                       : "text-text-secondary hover:text-text-primary"
@@ -320,21 +320,21 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
             </div>
 
             {/* Scrollable Form Body */}
-            <div className="p-4 sm:p-5 overflow-y-auto flex-1 custom-scrollbar">
+            <div className="p-3.5 sm:p-4 overflow-y-auto flex-1 custom-scrollbar">
               
               {/* SSO SOCIAL LOGIN SECTION (GOOGLE & MICROSOFT) */}
-              <div className="flex flex-col gap-2.5 mb-4">
+              <div className="flex flex-col gap-2 mb-3">
                 {/* Google OAuth Button (@untirta.ac.id) */}
                 <button
                   type="button"
                   onClick={handleGoogleLogin}
                   disabled={isSocialLoading !== null || isLoading}
-                  className="w-full flex items-center justify-center gap-3 py-2.5 px-4 rounded-xl border border-border/90 bg-surface hover:bg-canvas-subtle text-text-primary text-xs font-semibold shadow-sm transition-all hover:border-text-secondary active:scale-[0.99] disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-2.5 py-2 px-3.5 rounded-xl border border-border/90 bg-surface hover:bg-canvas-subtle text-text-primary text-xs font-semibold shadow-sm transition-all hover:border-text-secondary active:scale-[0.99] disabled:opacity-50"
                 >
                   {isSocialLoading === "google" ? (
-                    <Loader2 size={16} className="animate-spin text-accent" />
+                    <Loader2 size={15} className="animate-spin text-accent" />
                   ) : (
-                    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24">
                       <path
                         fill="#4285F4"
                         d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -361,12 +361,12 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   type="button"
                   onClick={handleMicrosoftLogin}
                   disabled={isSocialLoading !== null || isLoading}
-                  className="w-full flex items-center justify-center gap-3 py-2.5 px-4 rounded-xl border border-border/90 bg-surface hover:bg-canvas-subtle text-text-primary text-xs font-semibold shadow-sm transition-all hover:border-text-secondary active:scale-[0.99] disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-2.5 py-2 px-3.5 rounded-xl border border-border/90 bg-surface hover:bg-canvas-subtle text-text-primary text-xs font-semibold shadow-sm transition-all hover:border-text-secondary active:scale-[0.99] disabled:opacity-50"
                 >
                   {isSocialLoading === "microsoft" ? (
-                    <Loader2 size={16} className="animate-spin text-accent" />
+                    <Loader2 size={15} className="animate-spin text-accent" />
                   ) : (
-                    <svg className="w-4 h-4 shrink-0" viewBox="0 0 21 21">
+                    <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 21 21">
                       <rect x="1" y="1" width="9" height="9" fill="#f25022" />
                       <rect x="1" y="11" width="9" height="9" fill="#00a4ef" />
                       <rect x="11" y="1" width="9" height="9" fill="#7fba00" />
@@ -378,7 +378,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
               </div>
 
               {/* OR DIVIDER */}
-              <div className="relative flex py-2 items-center mb-3.5">
+              <div className="relative flex py-1.5 items-center mb-2.5">
                 <div className="flex-grow border-t border-border/80"></div>
                 <span className="flex-shrink mx-3 text-[10px] uppercase font-semibold tracking-wider text-text-tertiary">
                   atau gunakan email Untirta
@@ -388,8 +388,8 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
 
               {tab === "login" ? (
                 /* LOGIN FORM */
-                <form onSubmit={handleLogin} className="flex flex-col gap-3.5">
-                  <div className="flex flex-col gap-1.5">
+                <form onSubmit={handleLogin} className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-1">
                     <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Email Untirta
                     </label>
@@ -401,12 +401,12 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                         value={loginEmail}
                         onChange={(e) => setLoginEmail(e.target.value)}
                         placeholder="contoh: rafi.permana@untirta.ac.id"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                       />
                     </div>
                   </div>
 
-                  <div className="flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-1">
                     <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Kata Sandi
                     </label>
@@ -418,13 +418,13 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                         value={loginPassword}
                         onChange={(e) => setLoginPassword(e.target.value)}
                         placeholder="Masukkan kata sandi akun"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                       />
                     </div>
                   </div>
 
                   {errorMessage && (
-                    <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600 dark:text-red-400">
+                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600 dark:text-red-400">
                       <AlertCircle size={15} className="shrink-0 mt-0.5" />
                       <span>{errorMessage}</span>
                     </div>
@@ -433,7 +433,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-1 disabled:opacity-50"
+                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
                   >
                     {isLoading ? (
                       <Loader2 size={16} className="animate-spin text-slate-950" />
@@ -447,7 +447,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                 </form>
               ) : (
                 /* SIGNUP FORM */
-                <form onSubmit={handleSignup} className="flex flex-col gap-3">
+                <form onSubmit={handleSignup} className="flex flex-col gap-2.5">
                   <div className="flex flex-col gap-1">
                     <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Nama Lengkap
@@ -460,7 +460,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Nama Mahasiswa / Dosen"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                       />
                     </div>
                   </div>
@@ -477,15 +477,15 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                         value={signupEmail}
                         onChange={(e) => setSignupEmail(e.target.value)}
                         placeholder="nama@untirta.ac.id atau @student.untirta.ac.id"
-                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                       />
                     </div>
                     <p className="text-[10px] text-text-tertiary leading-tight">
-                      *Wajib menggunakan domain resmi @untirta.ac.id atau @student.untirta.ac.id
+                      *Wajib domain resmi @untirta.ac.id atau @student.untirta.ac.id
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="flex flex-col gap-1">
                       <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Peran (Role)
@@ -495,7 +495,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                         <select
                           value={role}
                           onChange={(e) => setRole(e.target.value)}
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all appearance-none cursor-pointer"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all appearance-none cursor-pointer"
                         >
                           <option value="Mahasiswa">Mahasiswa</option>
                           <option value="Dosen">Dosen</option>
@@ -516,13 +516,13 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                           value={institution}
                           onChange={(e) => setInstitution(e.target.value)}
                           placeholder="FT Teknik Industri"
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
                         />
                       </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="flex flex-col gap-1">
                       <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         No. HP (WhatsApp)
@@ -534,7 +534,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder="081234567890"
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
                         />
                       </div>
                     </div>
@@ -550,13 +550,13 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                           value={postalCode}
                           onChange={(e) => setPostalCode(e.target.value)}
                           placeholder="42435"
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
                         />
                       </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="flex flex-col gap-1">
                       <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Kata Sandi
@@ -569,7 +569,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                           value={signupPassword}
                           onChange={(e) => setSignupPassword(e.target.value)}
                           placeholder="Min. 8 karakter"
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
                         />
                       </div>
                     </div>
@@ -586,14 +586,14 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                           value={confirmPassword}
                           onChange={(e) => setConfirmPassword(e.target.value)}
                           placeholder="Konfirmasi sandi"
-                          className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
                         />
                       </div>
                     </div>
                   </div>
 
                   {errorMessage && (
-                    <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600 dark:text-red-400">
+                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600 dark:text-red-400">
                       <AlertCircle size={15} className="shrink-0 mt-0.5" />
                       <span>{errorMessage}</span>
                     </div>
@@ -602,7 +602,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-1 disabled:opacity-50"
+                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
                   >
                     {isLoading ? (
                       <Loader2 size={16} className="animate-spin text-slate-950" />
@@ -618,7 +618,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
             </div>
 
             {/* Footer Notice */}
-            <div className="p-3 sm:p-4 bg-canvas-subtle border-t border-border/60 text-center shrink-0">
+            <div className="p-2.5 sm:p-3 bg-canvas-subtle border-t border-border/60 text-center shrink-0">
               <p className="text-[11px] text-text-tertiary">
                 Keamanan data terenkripsi. Akses eksklusif dibatasi khusus mahasiswa & civitas Untirta.
               </p>

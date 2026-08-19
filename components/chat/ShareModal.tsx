@@ -103,7 +103,7 @@ export function ShareModal({
       title="Bagikan obrolan"
       description="Hanya pesan hingga titik ini yang akan dibagikan."
     >
-      <div className="flex flex-col gap-4 py-1 select-none">
+      <div className="flex flex-col gap-3 py-0.5 select-none">
         {/* Option List (Claude style) */}
         <div className="flex flex-col rounded-2xl border border-border overflow-hidden divide-y divide-border/70 bg-canvas/40">
           {/* Option 1: Keep Private */}
@@ -111,22 +111,22 @@ export function ShareModal({
             type="button"
             onClick={() => setSelectedOption("private")}
             className={cn(
-              "w-full flex items-start gap-3.5 p-3.5 sm:p-4 text-left transition-all",
+              "w-full flex items-start gap-3 p-3 sm:p-3.5 text-left transition-all",
               selectedOption === "private"
                 ? "bg-surface hover:bg-surface-hover"
                 : "hover:bg-surface/50 opacity-80"
             )}
           >
-            <div className="w-8 h-8 rounded-xl bg-canvas flex items-center justify-center text-text-secondary shrink-0 border border-border/80 mt-0.5">
-              <Lock className="w-4 h-4" />
+            <div className="w-7 h-7 rounded-lg bg-canvas flex items-center justify-center text-text-secondary shrink-0 border border-border/80 mt-0.5">
+              <Lock className="w-3.5 h-3.5" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-text-primary">Tetap privat</p>
-              <p className="text-xs text-text-secondary mt-0.5">Hanya Anda yang memiliki akses</p>
+              <p className="text-xs sm:text-sm font-semibold text-text-primary">Tetap privat</p>
+              <p className="text-[11px] text-text-secondary mt-0.5">Hanya Anda yang memiliki akses</p>
             </div>
             {selectedOption === "private" && (
-              <div className="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center shrink-0 mt-1">
-                <Check className="w-3 h-3 stroke-[3]" />
+              <div className="w-4 h-4 rounded-full bg-accent text-white flex items-center justify-center shrink-0 mt-1">
+                <Check className="w-2.5 h-2.5 stroke-[3]" />
               </div>
             )}
           </button>
@@ -136,22 +136,22 @@ export function ShareModal({
             type="button"
             onClick={() => setSelectedOption("public")}
             className={cn(
-              "w-full flex items-start gap-3.5 p-3.5 sm:p-4 text-left transition-all",
+              "w-full flex items-start gap-3 p-3 sm:p-3.5 text-left transition-all",
               selectedOption === "public"
                 ? "bg-surface hover:bg-surface-hover"
                 : "hover:bg-surface/50 opacity-80"
             )}
           >
-            <div className="w-8 h-8 rounded-xl bg-accent/15 text-accent flex items-center justify-center shrink-0 border border-accent/20 mt-0.5">
-              <Globe className="w-4 h-4" />
+            <div className="w-7 h-7 rounded-lg bg-accent/15 text-accent flex items-center justify-center shrink-0 border border-accent/20 mt-0.5">
+              <Globe className="w-3.5 h-3.5" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold text-text-primary">Buat tautan publik</p>
-              <p className="text-xs text-text-secondary mt-0.5">Siapa saja dengan tautan dapat melihat</p>
+              <p className="text-xs sm:text-sm font-semibold text-text-primary">Buat tautan publik</p>
+              <p className="text-[11px] text-text-secondary mt-0.5">Siapa saja dengan tautan dapat melihat</p>
             </div>
             {selectedOption === "public" && (
-              <div className="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center shrink-0 mt-1">
-                <Check className="w-3 h-3 stroke-[3]" />
+              <div className="w-4 h-4 rounded-full bg-accent text-white flex items-center justify-center shrink-0 mt-1">
+                <Check className="w-2.5 h-2.5 stroke-[3]" />
               </div>
             )}
           </button>
@@ -159,26 +159,26 @@ export function ShareModal({
 
         {/* Public Link Box (If already public or public option active) */}
         {isPublicState && (
-          <div className="flex flex-col gap-2 p-3 rounded-xl bg-surface border border-border">
+          <div className="flex flex-col gap-1.5 p-2.5 sm:p-3 rounded-xl bg-surface border border-border">
             <div className="flex items-center justify-between text-xs text-text-secondary">
               <span className="flex items-center gap-1.5 font-medium text-emerald-600">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Tautan publik aktif
               </span>
-              {copied && <span className="text-accent font-semibold">Tautan disalin!</span>}
+              {copied && <span className="text-accent font-semibold text-[11px]">Tautan disalin!</span>}
             </div>
             <div className="flex items-center gap-2">
               <input
                 type="text"
                 readOnly
                 value={shareLink}
-                className="flex-1 min-w-0 px-3 py-2 text-xs rounded-lg bg-canvas border border-border text-text-primary outline-none focus:border-accent font-mono truncate"
+                className="flex-1 min-w-0 px-2.5 py-1.5 text-xs rounded-lg bg-canvas border border-border text-text-primary outline-none focus:border-accent font-mono truncate"
               />
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleCopyLink}
-                className="shrink-0 flex items-center gap-1.5 text-xs h-9 px-3"
+                className="shrink-0 flex items-center gap-1.5 text-xs h-8 px-2.5"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{copied ? "Disalin" : "Salin Link"}</span>
@@ -188,14 +188,13 @@ export function ShareModal({
         )}
 
         {/* Disclaimer / Footer info */}
-        <p className="text-[11px] leading-relaxed text-text-tertiary">
-          Jangan membagikan informasi pribadi atau konten sensitif tanpa izin, dan perhatikan etika integritas akademik
-          serta rekayasa sistem Teknik Industri.
+        <p className="text-[10.5px] leading-relaxed text-text-tertiary">
+          Perhatikan etika integritas akademik dan hindari membagikan data pribadi tanpa izin.
         </p>
 
         {/* Action Buttons */}
-        <div className="flex items-center justify-end gap-2.5 pt-2 border-t border-border/70 mt-1">
-          <Button variant="ghost" size="sm" onClick={onClose}>
+        <div className="flex items-center justify-end gap-2 pt-2 border-t border-border/70">
+          <Button variant="ghost" size="sm" onClick={onClose} className="h-8 text-xs">
             Batal
           </Button>
           <Button
@@ -203,7 +202,7 @@ export function ShareModal({
             variant="primary"
             onClick={handleApplyShare}
             disabled={isSaving}
-            className="bg-accent hover:bg-accent-hover text-white flex items-center gap-1.5 shadow-sm px-4"
+            className="h-8 text-xs bg-accent hover:bg-accent-hover text-white flex items-center gap-1.5 shadow-sm px-3.5"
           >
             {isSaving
               ? "Menyimpan..."

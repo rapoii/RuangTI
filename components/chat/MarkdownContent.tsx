@@ -202,40 +202,40 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
             );
           },
           h1: ({ children }) => (
-            <h1 className="text-[20px] font-semibold text-text-primary mt-6 mb-3 font-sans leading-tight">
+            <h1 className="text-[19px] sm:text-[20px] font-semibold text-text-primary mt-4 mb-2 font-sans leading-tight">
               {children}
             </h1>
           ),
           h2: ({ children }) => (
-            <h2 className="text-[17px] font-semibold text-text-primary mt-5 mb-2 font-sans leading-snug">
+            <h2 className="text-[16px] sm:text-[17px] font-semibold text-text-primary mt-3.5 mb-1.5 font-sans leading-snug">
               {children}
             </h2>
           ),
           h3: ({ children }) => (
-            <h3 className="text-[15px] font-semibold text-text-primary mt-4 mb-2 font-sans">
+            <h3 className="text-[14px] sm:text-[15px] font-semibold text-text-primary mt-3 mb-1 font-sans">
               {children}
             </h3>
           ),
           em: ({ children }) => <em className="italic text-text-primary/90">{children}</em>,
           strong: ({ children }) => <strong className="font-semibold text-text-primary">{children}</strong>,
-          p: ({ children }) => <p className="mb-4 last:mb-0 leading-[1.8]">{children}</p>,
+          p: ({ children }) => <p className="mb-2.5 last:mb-0 leading-[1.75]">{children}</p>,
           ul: ({ children }) => (
-            <ul className="list-disc list-outside pl-5 mb-4 space-y-1.5 leading-[1.8]">
+            <ul className="list-disc list-outside pl-5 mb-2.5 space-y-1 leading-[1.75]">
               {children}
             </ul>
           ),
           ol: ({ children }) => (
-            <ol className="list-decimal list-outside pl-5 mb-4 space-y-1.5 leading-[1.8]">
+            <ol className="list-decimal list-outside pl-5 mb-2.5 space-y-1 leading-[1.75]">
               {children}
             </ol>
           ),
           blockquote: ({ children }) => (
-            <blockquote className="border-l-2 border-accent pl-3.5 py-0.5 my-3.5 text-text-secondary italic">
+            <blockquote className="border-l-2 border-accent pl-3.5 py-0.5 my-2.5 text-text-secondary italic">
               {children}
             </blockquote>
           ),
           table: ({ children }) => (
-            <div className="overflow-x-auto my-4 border border-border rounded-md">
+            <div className="overflow-x-auto my-2.5 border border-border rounded-md">
               <table className="w-full text-left text-sm border-collapse">
                 {children}
               </table>

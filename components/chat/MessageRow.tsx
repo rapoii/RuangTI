@@ -54,7 +54,7 @@ export function MessageRow({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "group w-full flex flex-col my-3.5 transition-all select-text",
+        "group w-full flex flex-col my-2 sm:my-2.5 transition-all select-text",
         isUser ? "items-end" : "items-start"
       )}
     >
@@ -132,7 +132,7 @@ export function MessageRow({
         /* Assistant Message: Clean Editorial Full Width */
         <div className="w-full flex flex-col items-start">
           {/* Assistant Header Branding */}
-          <div className="flex items-center gap-2 mb-2 select-none">
+          <div className="flex items-center gap-2 mb-1.5 select-none">
             <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/30 text-accent flex items-center justify-center font-display font-bold text-xs shadow-xs">
               <Layers className="w-3.5 h-3.5" />
             </div>

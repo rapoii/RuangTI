@@ -60,34 +60,34 @@ const SECONDARY_FEATURES = [
 
 export function Features() {
   return (
-    <section id="features" className="py-12 sm:py-16 border-t border-border/40 w-full">
-      <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+    <section id="features" className="py-10 sm:py-12 border-t border-border/40 w-full">
+      <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
         <span className="text-[11px] font-bold text-accent tracking-wider uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/20 select-none">
           Domain Spesifik TI
         </span>
-        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mt-4 tracking-tight leading-tight">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary mt-3.5 tracking-tight leading-tight">
           Empat Pilar Utama Rekayasa Sistem Industri
         </h2>
-        <p className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed max-w-lg mx-auto">
+        <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed max-w-lg mx-auto">
           Bukan sekadar chatbot generik — RuangTI memahami standar kurikulum, metodologi formal, dan formulasi eksak Teknik Industri.
         </p>
       </div>
 
       {/* 4 Main Core Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-6 sm:mb-8">
         {PILLARS.map((p, idx) => {
           const Icon = p.icon;
           return (
             <div
               key={idx}
-              className="p-5 sm:p-7 rounded-2xl bg-surface border border-border hover:border-accent/50 transition-all group flex flex-col justify-between shadow-sm relative overflow-hidden"
+              className="p-5 sm:p-6 rounded-2xl bg-surface border border-border hover:border-accent/50 transition-all group flex flex-col justify-between shadow-sm relative overflow-hidden"
             >
               <div className="absolute -right-8 -top-8 w-24 h-24 bg-accent/5 rounded-full blur-xl group-hover:bg-accent/10 transition-colors pointer-events-none" />
 
               <div>
-                <div className="flex items-center justify-between mb-3.5 sm:mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/30 text-accent flex items-center justify-center">
-                    <Icon size={20} />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-accent/10 border border-accent/30 text-accent flex items-center justify-center">
+                    <Icon size={19} />
                   </div>
                   <span className="text-[11px] font-semibold text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full select-none">
                     {p.tag}
@@ -97,13 +97,13 @@ export function Features() {
                 <h3 className="font-display text-base sm:text-lg font-bold text-text-primary group-hover:text-accent transition-colors">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-text-secondary leading-relaxed max-w-prose">
+                <p className="mt-1.5 text-xs sm:text-sm text-text-secondary leading-relaxed max-w-prose">
                   {p.desc}
                 </p>
               </div>
 
               {/* KaTeX Formula Box with clean flat divider and high contrast */}
-              <div className="mt-4 sm:mt-5 pt-3.5 border-t border-border/40 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
+              <div className="mt-4 pt-3 border-t border-border/40 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
                 <span className="text-text-secondary text-[11px] font-sans shrink-0">Formula Acuan</span>
                 <span className="text-text-primary font-medium tracking-wide text-xs sm:text-sm shrink-0">
                   <KaTeXFormula math={p.formula} />
@@ -115,7 +115,7 @@ export function Features() {
       </div>
 
       {/* Secondary Feature Grid */}
-      <div id="solvers" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div id="solvers" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
         {SECONDARY_FEATURES.map((item, idx) => {
           const ItemIcon = item.icon;
           return (
