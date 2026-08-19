@@ -174,13 +174,13 @@ export function DocsContent({
 
             {/* Formula Block jika ada */}
             {section.formula && (
-              <div className="my-4 p-4 rounded-xl bg-surface border border-border/60 space-y-2">
-                <div className="overflow-x-auto py-2">
+              <div className="my-4 p-4 sm:p-5 rounded-2xl bg-surface/70 border border-border/60 shadow-2xs space-y-3">
+                <div className="overflow-x-auto py-2 sm:py-3 flex items-center justify-center text-center">
                   <KaTeXFormula math={section.formula.math} display />
                 </div>
-                <div className="pt-2 border-t border-border/40 text-[11px] sm:text-xs text-text-secondary flex items-start gap-1.5">
+                <div className="pt-2.5 border-t border-border/40 text-[11px] sm:text-xs text-text-secondary flex items-start gap-2">
                   <Sparkles size={13} className="text-accent shrink-0 mt-0.5" />
-                  <span>
+                  <span className="leading-relaxed">
                     <FormattedText text={section.formula.explanation} />
                   </span>
                 </div>

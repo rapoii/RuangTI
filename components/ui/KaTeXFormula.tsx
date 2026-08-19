@@ -23,7 +23,7 @@ export function KaTeXFormula({
 
     return (
       <span
-        className={`inline-block font-normal ${className}`}
+        className={`${display ? "block w-full text-center" : "inline-block"} font-normal ${className}`}
         dangerouslySetInnerHTML={{ __html: html }}
       />
     );
