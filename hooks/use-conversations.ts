@@ -37,42 +37,55 @@ export function useConversations(props?: UseConversationsProps) {
     setMounted(true);
     async function loadData() {
       setIsLoading(true);
-      const list = await fetchConversationsFromBackend();
-      setConversations(list);
+      try {
+        const list = await fetchConversationsFromBackend();
+        setConversations(list || []);
 
-      // Tentukan active ID target
-      let targetId = initialActiveId;
+        // Tentukan active ID target
+        let targetId = initialActiveId;
 
-      if (targetId) {
-        // Cek apakah targetId ada di list
-        const exists = list.some((c) => c.id === targetId);
-        if (!exists && list.length > 0) {
-          // Jika ID URL tidak valid di backend, fallback ke percakapan pertama
+        if (targetId) {
+          // Cek apakah targetId ada di list
+          const exists = list.some((c) => c.id === targetId);
+          if (!exists && list.length > 0) {
+            // Jika ID URL tidak valid di backend, fallback ke percakapan pertama
+            targetId = list[0].id;
+            if (onNavigate) onNavigate(targetId);
+          }
+        } else if (list.length > 0) {
           targetId = list[0].id;
           if (onNavigate) onNavigate(targetId);
         }
-      } else if (list.length > 0) {
-        targetId = list[0].id;
-        if (onNavigate) onNavigate(targetId);
-      }
 
-      if (targetId) {
-        setActiveIdState(targetId);
-        // Load messages for the active conversation
-        const msgs = await fetchMessagesFromBackend(targetId);
-        setConversations((prev) =>
-          prev.map((c) => (c.id === targetId ? { ...c, messages: msgs } : c))
-        );
-      } else {
-        // If empty, create a fresh initial conversation on backend
-        const newConv = await createConversationOnBackend("Konsultasi TI Baru");
-        if (newConv) {
-          setConversations([newConv]);
-          setActiveIdState(newConv.id);
-          if (onNavigate) onNavigate(newConv.id);
+        if (targetId) {
+          setActiveIdState(targetId);
+          // Load messages for the active conversation
+          try {
+            const msgs = await fetchMessagesFromBackend(targetId);
+            setConversations((prev) =>
+              prev.map((c) => (c.id === targetId ? { ...c, messages: msgs || [] } : c))
+            );
+          } catch (e) {
+            console.error("Failed to load messages for conversation:", e);
+          }
+        } else {
+          // If empty, create a fresh initial conversation on backend
+          try {
+            const newConv = await createConversationOnBackend("Konsultasi TI Baru");
+            if (newConv) {
+              setConversations([newConv]);
+              setActiveIdState(newConv.id);
+              if (onNavigate) onNavigate(newConv.id);
+            }
+          } catch (e) {
+            console.error("Failed to create initial conversation:", e);
+          }
         }
+      } catch (err) {
+        console.error("Failed to load conversations:", err);
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     }
     loadData();
   }, []);
