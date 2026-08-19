@@ -105,7 +105,8 @@ async def stream_grok_ai_response(
     prompt: str,
     history: List[Dict[str, str]] = None,
     model_name: str = ROUTER_9_MODEL,
-    web_search_enabled: bool = False
+    web_search_enabled: bool = False,
+    images: List[str] = None
 ) -> AsyncGenerator[str, None]:
     """
     Streaming AI response dari 9Router LLM Proxy dengan opsi Hybrid RAG + Web Search.
@@ -193,7 +194,21 @@ async def stream_grok_ai_response(
         for msg in history:
             messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
 
-    messages.append({"role": "user", "content": prompt})
+    if images and len(images) > 0:
+        content_items = []
+        if prompt.strip():
+            content_items.append({"type": "text", "text": prompt})
+        else:
+            content_items.append({"type": "text", "text": "Tolong analisis dan berikan solusi untuk gambar teknik industri ini."})
+
+        for img in images:
+            content_items.append({
+                "type": "image_url",
+                "image_url": {"url": img}
+            })
+        messages.append({"role": "user", "content": content_items})
+    else:
+        messages.append({"role": "user", "content": prompt})
 
     payload = {
         "model": ROUTER_9_MODEL,

@@ -49,6 +49,7 @@ class Message(SQLModel, table=True):
     conversation_id: str = Field(foreign_key="conversations.id", index=True)
     role: str = Field(description="'user' or 'assistant' or 'system'")
     content: str = Field(description="Content with Markdown & KaTeX formulas")
+    images: Optional[str] = Field(default=None, description="Serialized JSON array of base64/URL images")
     tool_calls: Optional[str] = Field(default=None, description="Serialized JSON of tool executions")
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
@@ -105,6 +106,7 @@ class ShareStatusUpdate(SQLModel):
 class MessageCreate(SQLModel):
     role: str
     content: str
+    images: Optional[str] = None
     tool_calls: Optional[str] = None
 
 class SharedConversationResponse(SQLModel):

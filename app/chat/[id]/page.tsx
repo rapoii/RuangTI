@@ -80,7 +80,10 @@ export default function DynamicChatPage() {
     },
   });
 
-  const handleSendMessage = (text: string, options?: { webSearch?: boolean }) => {
+  const handleSendMessage = (
+    text: string,
+    options?: { webSearch?: boolean; images?: string[] }
+  ) => {
     sendMessage(text, selectedModel, options);
   };
 

@@ -10,6 +10,7 @@ export interface Message {
   id: string;
   role: Role;
   content: string;
+  images?: string[];
   createdAt: number;
   feedback?: "up" | "down" | null;
 }

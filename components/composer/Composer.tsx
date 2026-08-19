@@ -2,11 +2,14 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { SendStopButton } from "./SendStopButton";
-import { Paperclip, Globe } from "lucide-react";
+import { Paperclip, Globe, X, Image as ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ComposerProps {
-  onSendMessage: (text: string, options?: { webSearch?: boolean }) => void;
+  onSendMessage: (
+    text: string,
+    options?: { webSearch?: boolean; images?: string[] }
+  ) => void;
   onStopStreaming: () => void;
   isStreaming: boolean;
   disabled?: boolean;
@@ -19,7 +22,9 @@ export function Composer({
   disabled = false,
 }: ComposerProps) {
   const [text, setText] = useState("");
+  const [images, setImages] = useState<string[]>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [webSearchEnabled, setWebSearchEnabled] = useState(false);
 
@@ -33,14 +38,65 @@ export function Composer({
     }
   }, [text]);
 
+  // Handle file selection from input
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+
+    Array.from(files).forEach((file) => {
+      if (file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          if (event.target?.result) {
+            setImages((prev) => [...prev, event.target!.result as string]);
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Reset input value so same file can be selected again
+    e.target.value = "";
+  };
+
+  // Handle paste image from clipboard
+  const handlePaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+    const items = e.clipboardData.items;
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].type.indexOf("image") !== -1) {
+        const file = items[i].getAsFile();
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            if (event.target?.result) {
+              setImages((prev) => [...prev, event.target!.result as string]);
+            }
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+    }
+  };
+
+  const removeImage = (index: number) => {
+    setImages((prev) => prev.filter((_, i) => i !== index));
+  };
+
   const handleSubmit = () => {
     if (isStreaming) {
       onStopStreaming();
       return;
     }
-    if (text.trim() && !disabled) {
-      onSendMessage(text.trim(), { webSearch: webSearchEnabled });
+    const hasText = text.trim().length > 0;
+    const hasImages = images.length > 0;
+
+    if ((hasText || hasImages) && !disabled) {
+      onSendMessage(text.trim(), {
+        webSearch: webSearchEnabled,
+        images: images.length > 0 ? images : undefined,
+      });
       setText("");
+      setImages([]);
       if (textareaRef.current) {
         textareaRef.current.style.height = "auto";
       }
@@ -54,71 +110,140 @@ export function Composer({
     }
   };
 
+  const canSubmit = (text.trim().length > 0 || images.length > 0) && !disabled;
+
   return (
     <div className="w-full px-3 sm:px-6 pb-2 pt-1 select-none">
       <div className="max-w-chat mx-auto w-full">
+        {/* Hidden File Input */}
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          accept="image/png,image/jpeg,image/webp,image/gif"
+          multiple
+          className="hidden"
+        />
+
         {/* Floating Composer Container */}
         <div
           className={cn(
-            "relative rounded-2xl bg-surface transition-all duration-200 border px-3 sm:px-4 flex items-center gap-2.5 shadow-sm min-h-[52px] py-1.5",
+            "relative rounded-2xl bg-surface transition-all duration-200 border px-3 sm:px-4 flex flex-col shadow-sm py-1.5",
             isFocused
               ? "border-accent/80 shadow-md ring-2 ring-accent/10"
               : "border-border/80 hover:border-border-strong"
           )}
         >
-          {/* File Attachment Button */}
-          <div className="flex items-center justify-center shrink-0">
-            <button
-              type="button"
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center text-text-tertiary hover:text-text-primary hover:bg-surface-hover transition-colors m-0 p-0"
-              aria-label="Lampirkan berkas studi kasus (Fase 2)"
-              title="Lampirkan berkas"
-            >
-              <Paperclip className="w-4 h-4" />
-            </button>
-          </div>
+          {/* Attached Images Thumbnail Strip */}
+          {images.length > 0 && (
+            <div className="flex items-center gap-2.5 pt-1.5 pb-2.5 overflow-x-auto no-scrollbar border-b border-border/60 mb-1.5">
+              {images.map((imgSrc, idx) => (
+                <div
+                  key={idx}
+                  className="relative group shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-border/80 bg-canvas-subtle shadow-sm"
+                >
+                  <img
+                    src={imgSrc}
+                    alt={`Attachment preview ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => removeImage(idx)}
+                    className="absolute top-1 right-1 w-5 h-5 rounded-full bg-slate-950/80 text-white flex items-center justify-center hover:bg-rose-600 transition-colors shadow-sm"
+                    title="Hapus gambar"
+                  >
+                    <X size={11} />
+                  </button>
+                </div>
+              ))}
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-dashed border-border/90 hover:border-accent/80 bg-surface flex flex-col items-center justify-center text-text-tertiary hover:text-accent transition-colors gap-1"
+                title="Tambah gambar lain"
+              >
+                <ImageIcon size={16} />
+                <span className="text-[10px] font-medium">+ Tambah</span>
+              </button>
+            </div>
+          )}
 
-          {/* Multi-line Auto-resizing Textarea */}
-          <div className="flex-1 flex items-center min-h-[36px]">
-            <textarea
-              ref={textareaRef}
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              onKeyDown={handleKeyDown}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-              rows={1}
-              placeholder="Tanyakan masalah optimasi, lean, atau sistem industri..."
-              disabled={disabled}
-              className="w-full bg-transparent text-text-primary text-xs sm:text-sm placeholder:text-text-tertiary resize-none outline-none py-1.5 px-1 max-h-[220px] leading-normal font-sans block m-0"
-            />
-          </div>
+          {/* Main Input Row */}
+          <div className="flex items-center gap-2.5 min-h-[44px]">
+            {/* File Attachment Button */}
+            <div className="flex items-center justify-center shrink-0">
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                className={cn(
+                  "w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors m-0 p-0",
+                  images.length > 0
+                    ? "bg-accent/15 text-accent hover:bg-accent/25"
+                    : "text-text-tertiary hover:text-text-primary hover:bg-surface-hover"
+                )}
+                aria-label="Lampirkan berkas gambar/foto tugas"
+                title="Lampirkan foto studi kasus / soal ujian"
+              >
+                <Paperclip className="w-4 h-4" />
+              </button>
+            </div>
 
-          {/* Web Search Toggle */}
-          <div className="flex items-center justify-center shrink-0">
-            <button
-              type="button"
-              onClick={() => setWebSearchEnabled((prev) => !prev)}
-              className={cn(
-                "w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors m-0 p-0",
-                webSearchEnabled
-                  ? "bg-accent/15 text-accent hover:bg-accent/25"
-                  : "text-text-tertiary hover:text-text-primary hover:bg-surface-hover"
-              )}
-              aria-label={webSearchEnabled ? "Matikan pencarian web" : "Nyalakan pencarian web"}
-              title={webSearchEnabled ? "Pencarian Web: AKTIF (RAG + Live Web)" : "Pencarian Web: NONAKTIF (RAG saja)"}
-            >
-              <Globe className="w-4 h-4" />
-            </button>
-          </div>
+            {/* Multi-line Auto-resizing Textarea */}
+            <div className="flex-1 flex items-center min-h-[36px]">
+              <textarea
+                ref={textareaRef}
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                onKeyDown={handleKeyDown}
+                onPaste={handlePaste}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                rows={1}
+                placeholder={
+                  images.length > 0
+                    ? "Tulis instruksi tambahan untuk gambar ini..."
+                    : "Tanyakan masalah optimasi, lean, atau upload gambar soal..."
+                }
+                disabled={disabled}
+                className="w-full bg-transparent text-text-primary text-xs sm:text-sm placeholder:text-text-tertiary resize-none outline-none py-1.5 px-1 max-h-[220px] leading-normal font-sans block m-0"
+              />
+            </div>
 
-          {/* Send / Stop Action Button */}
-          <div className="flex items-center justify-center shrink-0">
-            <SendStopButton
-              isStreaming={isStreaming}
-              disabled={!text.trim() || disabled}
-              onClick={handleSubmit}
-            />
+            {/* Web Search Toggle */}
+            <div className="flex items-center justify-center shrink-0">
+              <button
+                type="button"
+                onClick={() => setWebSearchEnabled((prev) => !prev)}
+                className={cn(
+                  "w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors m-0 p-0",
+                  webSearchEnabled
+                    ? "bg-accent/15 text-accent hover:bg-accent/25"
+                    : "text-text-tertiary hover:text-text-primary hover:bg-surface-hover"
+                )}
+                aria-label={
+                  webSearchEnabled
+                    ? "Matikan pencarian web"
+                    : "Nyalakan pencarian web"
+                }
+                title={
+                  webSearchEnabled
+                    ? "Pencarian Web: AKTIF (RAG + Live Web)"
+                    : "Pencarian Web: NONAKTIF (RAG saja)"
+                }
+              >
+                <Globe className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Send / Stop Action Button */}
+            <div className="flex items-center justify-center shrink-0">
+              <SendStopButton
+                isStreaming={isStreaming}
+                disabled={!canSubmit}
+                onClick={handleSubmit}
+              />
+            </div>
           </div>
         </div>
 

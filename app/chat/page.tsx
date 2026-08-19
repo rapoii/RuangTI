@@ -75,7 +75,10 @@ export default function ChatPage() {
     },
   });
 
-  const handleSendMessage = (text: string, options?: { webSearch?: boolean }) => {
+  const handleSendMessage = (
+    text: string,
+    options?: { webSearch?: boolean; images?: string[] }
+  ) => {
     sendMessage(text, selectedModel, options);
   };
 

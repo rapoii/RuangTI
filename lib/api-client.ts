@@ -233,12 +233,23 @@ export async function fetchMessagesFromBackend(conversationId: string): Promise<
     });
     if (!res.ok) throw new Error("Failed to fetch messages");
     const data = await res.json();
-    return data.map((item: any) => ({
-      id: item.id,
-      role: item.role,
-      content: item.content,
-      createdAt: new Date(item.created_at).getTime(),
-    }));
+    return data.map((item: any) => {
+      let parsedImages: string[] | undefined = undefined;
+      if (item.images) {
+        try {
+          parsedImages = JSON.parse(item.images);
+        } catch {
+          parsedImages = [item.images];
+        }
+      }
+      return {
+        id: item.id,
+        role: item.role,
+        content: item.content,
+        images: parsedImages,
+        createdAt: new Date(item.created_at).getTime(),
+      };
+    });
   } catch (err) {
     console.error("Backend fetch messages error:", err);
     return [];
@@ -248,20 +259,31 @@ export async function fetchMessagesFromBackend(conversationId: string): Promise<
 export async function saveMessageToBackend(
   conversationId: string,
   role: "user" | "assistant" | "system",
-  content: string
+  content: string,
+  images?: string[]
 ): Promise<Message | null> {
   try {
+    const serializedImages = images && images.length > 0 ? JSON.stringify(images) : undefined;
     const res = await fetch(`${getApiBase()}/api/messages/${conversationId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", ...getAuthHeader() },
-      body: JSON.stringify({ role, content }),
+      body: JSON.stringify({ role, content, images: serializedImages }),
     });
     if (!res.ok) throw new Error("Failed to save message");
     const item = await res.json();
+    let parsedImages: string[] | undefined = undefined;
+    if (item.images) {
+      try {
+        parsedImages = JSON.parse(item.images);
+      } catch {
+        parsedImages = [item.images];
+      }
+    }
     return {
       id: item.id,
       role: item.role,
       content: item.content,
+      images: parsedImages,
       createdAt: new Date(item.created_at).getTime(),
     };
   } catch (err) {

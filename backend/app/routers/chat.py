@@ -16,6 +16,7 @@ class ChatMessageItem(BaseModel):
 
 class ChatStreamRequest(BaseModel):
     message: str
+    images: Optional[List[str]] = []
     model_id: Optional[str] = ROUTER_9_MODEL
     conversation_id: Optional[str] = None
     history: Optional[List[ChatMessageItem]] = []
@@ -26,7 +27,8 @@ async def sse_generator(
     prompt: str,
     model_id: str,
     history: List[ChatMessageItem],
-    web_search: bool = False
+    web_search: bool = False,
+    images: Optional[List[str]] = None
 ) -> AsyncGenerator[str, None]:
     history_dicts = [{"role": h.role, "content": h.content} for h in history] if history else []
     try:
@@ -34,7 +36,8 @@ async def sse_generator(
             prompt,
             history=history_dicts,
             model_name=model_id or ROUTER_9_MODEL,
-            web_search_enabled=web_search
+            web_search_enabled=web_search,
+            images=images or []
         ):
             payload = json.dumps({"chunk": chunk})
             yield f"data: {payload}\n\n"
@@ -46,15 +49,16 @@ async def sse_generator(
 
 @router.post("/stream")
 async def stream_chat(payload: ChatStreamRequest):
-    if not payload.message.strip():
-        raise HTTPException(status_code=400, detail="Pesan tidak boleh kosong")
+    if not payload.message.strip() and not payload.images:
+        raise HTTPException(status_code=400, detail="Pesan atau gambar tidak boleh kosong")
 
     return StreamingResponse(
         sse_generator(
             payload.message,
             payload.model_id or ROUTER_9_MODEL,
             payload.history or [],
-            payload.web_search or False
+            payload.web_search or False,
+            payload.images or []
         ),
         media_type="text/event-stream",
         headers={

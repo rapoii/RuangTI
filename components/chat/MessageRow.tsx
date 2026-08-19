@@ -78,9 +78,30 @@ export function MessageRow({
             </div>
           ) : (
             <div className="flex flex-col items-end gap-1.5">
-              <div className="px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl rounded-tr-sm bg-surface border border-border text-text-primary text-xs sm:text-sm font-sans leading-relaxed shadow-sm">
-                <p className="whitespace-pre-wrap break-words">{message.content}</p>
-              </div>
+              {/* Attached Images Grid */}
+              {message.images && message.images.length > 0 && (
+                <div className="flex flex-wrap justify-end gap-2 mb-1">
+                  {message.images.map((imgSrc, idx) => (
+                    <div
+                      key={idx}
+                      className="relative rounded-xl overflow-hidden border border-border bg-canvas-subtle shadow-sm max-w-[240px] sm:max-w-[300px] max-h-[220px]"
+                    >
+                      <img
+                        src={imgSrc}
+                        alt={`Attachment ${idx + 1}`}
+                        className="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-transform"
+                        onClick={() => window.open(imgSrc, "_blank")}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {message.content && (
+                <div className="px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl rounded-tr-sm bg-surface border border-border text-text-primary text-xs sm:text-sm font-sans leading-relaxed shadow-sm">
+                  <p className="whitespace-pre-wrap break-words">{message.content}</p>
+                </div>
+              )}
 
               {/* Action bar for user message */}
               <div className="opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">

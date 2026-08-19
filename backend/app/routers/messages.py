@@ -65,6 +65,7 @@ async def create_message(
         conversation_id=conversation_id,
         role=payload.role,
         content=payload.content,
+        images=payload.images,
         tool_calls=payload.tool_calls,
         created_at=datetime.utcnow()
     )
