@@ -64,69 +64,24 @@
 }
 
 /* ==========================================================================
-   KaTeX & Mathematical Formula Typography (Editorial Scientific Style)
-   Presisi baseline alami KaTeX & Spacing Lega untuk Rumus Pecahan (\frac)
+   KaTeX Formula Styling (Pure Official KaTeX Standard - Stable & Untampered)
    ========================================================================== */
 
-/* Formula Matematika Inline */
-.katex {
-  font-size: 1.05em;
-  text-rendering: auto;
-  white-space: nowrap;
-}
-
-.katex .katex-html {
-  white-space: normal;
-}
-
-/* ==========================================================================
-   Spacious Fraction (Pembilang, Garis Bagi, dan Penyebut yang Lapang)
-   Mencegah teks pembilang dan penyebut menempel pada garis bagi (\frac)
-   ========================================================================== */
-.katex .frac-line {
-  border-bottom-width: 0.08em !important;
-  margin-top: 0.22em !important;
-  margin-bottom: 0.22em !important;
-  display: block !important;
-  border-color: currentColor !important;
-}
-
-/* Berikan padding vertikal pada pembilang (atas) dan penyebut (bawah) */
-.katex .vlist-t2 .vlist-r .vlist > span > .sizing {
-  padding-top: 0.22em !important;
-  padding-bottom: 0.22em !important;
-  display: inline-block !important;
-  line-height: 1.25 !important;
-}
-
-/* Formula Matematika Blok / Display ($$ ... $$) */
+/* Formula Matematika Display / Blok ($$ ... $$) */
 .katex-display {
-  display: block !important;
-  margin: 1.25rem 0 !important;
-  padding: 0.85rem 1.25rem !important;
-  background-color: #FFFFFF !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 0.75rem !important;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03) !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  text-align: center !important;
+  display: block;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
 }
 
-.katex-display > .katex {
-  display: inline-block !important;
-  text-align: initial !important;
-  padding: 0.25rem 0 !important;
-  white-space: nowrap;
-}
-
-/* Spacing Subscript & Superscript */
-.katex .msupsub {
-  text-align: left;
-}
-
-/* Line-height aman untuk paragraf dan list yang memuat rumus matematika */
+/* Line-height paragraf dan list yang lapang agar formula tidak berhimpitan */
 .prose p,
 .prose li {
-  line-height: 1.8 !important;
+  line-height: 1.8;
 }
