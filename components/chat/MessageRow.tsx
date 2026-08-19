@@ -18,6 +18,9 @@ import {
   FileArchive,
   File as FileIcon,
   Download,
+  Box,
+  Activity,
+  Terminal,
 } from "lucide-react";
 
 interface MessageRowProps {
@@ -99,6 +102,18 @@ export function MessageRow({
     }
     if (["zip", "tar", "gz", "7z", "rar"].includes(ext)) {
       return <FileArchive className="w-4 h-4 text-amber-600" />;
+    }
+    if (["dwg", "dxf"].includes(ext)) {
+      return <Layers className="w-4 h-4 text-teal-600" />;
+    }
+    if (["step", "stp", "stl", "obj", "sldprt", "sldasm", "ipt", "iam"].includes(ext)) {
+      return <Box className="w-4 h-4 text-indigo-600" />;
+    }
+    if (["gcode", "nc", "cnc", "tap"].includes(ext)) {
+      return <Terminal className="w-4 h-4 text-emerald-700" />;
+    }
+    if (["fsm", "fsx"].includes(ext)) {
+      return <Activity className="w-4 h-4 text-orange-600" />;
     }
     if (
       [
