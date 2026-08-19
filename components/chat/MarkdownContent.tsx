@@ -101,11 +101,11 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                         (e.target as HTMLElement).style.display = "none";
                       }}
                     />
-                    <span className="text-[10px] text-text-secondary font-mono truncate">
+                    <span className="text-[11px] text-text-secondary font-mono truncate">
                       {getDomain(ws.url)}
                     </span>
                   </div>
-                  <span className="text-[10px] font-mono text-accent font-semibold px-1 py-0.2 rounded bg-accent/10 shrink-0">
+                  <span className="text-[11px] font-mono text-accent font-semibold px-1 py-0.2 rounded bg-accent/10 shrink-0">
                     [{idx + 1}]
                   </span>
                 </div>
@@ -151,13 +151,13 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
                                 (e.target as HTMLElement).style.display = "none";
                               }}
                             />
-                            <span className="text-[10px] text-text-secondary font-mono truncate">
+                            <span className="text-[11px] text-text-secondary font-mono truncate">
                               {getDomain(ws.url)}
                             </span>
-                          </div>
-                          <span className="text-[10px] font-mono text-accent font-semibold px-1 py-0.2 rounded bg-accent/10 shrink-0">
+                            </div>
+                            <span className="text-[11px] font-mono text-accent font-semibold px-1 py-0.2 rounded bg-accent/10 shrink-0">
                             [{actualIdx + 1}]
-                          </span>
+                            </span>
                         </div>
                         <span className="text-[11px] font-medium text-text-primary truncate w-full group-hover:text-accent transition-colors">
                           {ws.title || getDomain(ws.url)}

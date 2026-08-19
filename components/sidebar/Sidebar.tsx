@@ -8,7 +8,7 @@ import { ConversationList } from "./ConversationList";
 import { ProfileModal } from "@/components/profile/ProfileModal";
 import { useConversations } from "@/hooks/use-conversations";
 import { UserProfile } from "@/lib/types";
-import { PanelLeftClose, PanelLeftOpen, X, User } from "lucide-react";
+import { PanelLeftClose, PanelLeftOpen, X, User, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -113,27 +113,39 @@ export function Sidebar({
                 />
               </div>
 
-              {/* Mobile Footer: Profile & Theme Switcher */}
-              <div className="p-3 border-t border-border/60 bg-canvas/40 flex items-center gap-2">
+              {/* Mobile Footer: RuangTI Brand on Left + Clickable Circular Profile Avatar on Right */}
+              <div className="p-3 border-t border-border/60 bg-canvas/40 flex items-center justify-between gap-2 select-none">
+                {/* Brand Logo & Name */}
+                <div className="flex items-center gap-2 min-w-0">
+                  <div className="w-7 h-7 rounded-lg bg-accent/15 border border-accent/30 text-accent flex items-center justify-center font-display font-bold text-xs shrink-0 shadow-xs">
+                    <Layers className="w-4 h-4" />
+                  </div>
+                  <div className="flex flex-col min-w-0">
+                    <span className="font-display font-bold text-xs text-text-primary tracking-tight leading-tight">
+                      RuangTI
+                    </span>
+                    <span className="text-[11px] text-text-secondary font-medium truncate">
+                      Teknik Industri
+                    </span>
+                  </div>
+                </div>
+
+                {/* Clickable Animated Circular Profile Avatar */}
                 <button
                   type="button"
                   onClick={() => setIsProfileModalOpen(true)}
-                  className="flex-1 flex items-center gap-2.5 p-1.5 rounded-xl hover:bg-surface transition-colors text-left"
+                  title={profile.isLoggedIn ? `${profile.name} (${profile.plan} Plan)` : "Masuk Akun"}
+                  className="w-8 h-8 rounded-full bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/30"
+                  aria-label="Buka profil akun"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20">
-                    {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-4 h-4" />}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs font-semibold text-text-primary truncate">
-                      {profile.isLoggedIn ? profile.name : "Masuk Akun"}
-                    </p>
-                    <p className="text-[11px] text-text-secondary truncate">
-                      {profile.isLoggedIn ? `${profile.plan} Plan` : "Tamu"}
-                    </p>
-                  </div>
-                  </button>
-                  </div>
-                  </motion.aside>
+                  {profile.isLoggedIn ? (
+                    profile.name.charAt(0).toUpperCase()
+                  ) : (
+                    <User className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
+            </motion.aside>
           </div>
         )}
       </AnimatePresence>
@@ -220,40 +232,58 @@ export function Sidebar({
           )}
         </div>
 
-        {/* Desktop Sidebar Bottom Footer: Profile + Theme Switcher */}
-        {/* Bottom Profile Section */}
+        {/* Desktop Sidebar Bottom Footer: RuangTI Brand + Clickable Circular Profile Avatar */}
         <div className="p-3 border-t border-border/80 bg-surface/50">
           {!isCollapsed ? (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-between gap-2 px-1">
+              {/* Left: Brand Logo & Text */}
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="w-7 h-7 rounded-lg bg-accent/15 border border-accent/30 text-accent flex items-center justify-center font-display font-bold text-xs shrink-0 shadow-xs">
+                  <Layers className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="font-display font-bold text-xs text-text-primary tracking-tight leading-tight">
+                    RuangTI
+                  </span>
+                  <span className="text-[11px] text-text-secondary font-medium truncate">
+                    Teknik Industri
+                  </span>
+                </div>
+              </div>
+
+              {/* Right: Clickable Circular Profile Avatar with smooth animation */}
               <button
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
-                title={profile.isLoggedIn ? `${profile.name} (${profile.plan})` : "Masuk Akun"}
-                className="flex-1 min-w-0 flex items-center gap-2 p-1.5 rounded-xl hover:bg-surface transition-all text-left group"
+                title={profile.isLoggedIn ? `${profile.name} (${profile.plan} Plan)` : "Masuk Akun"}
+                className="w-8 h-8 rounded-full bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/40 cursor-pointer"
+                aria-label="Buka profil akun"
               >
-                <div className="w-8 h-8 rounded-xl bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20">
-                  {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-4 h-4" />}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs font-semibold text-text-primary truncate">
-                    {profile.isLoggedIn ? profile.name : "Masuk Akun"}
-                  </p>
-                  <p className="text-[11px] text-text-secondary truncate">
-                    {profile.isLoggedIn ? `${profile.plan} Plan` : "Tamu"}
-                  </p>
-                </div>
+                {profile.isLoggedIn ? (
+                  profile.name.charAt(0).toUpperCase()
+                ) : (
+                  <User className="w-4 h-4" />
+                )}
               </button>
             </div>
           ) : (
-            /* Collapsed State: Stacked Profile */
-            <div className="flex flex-col items-center gap-2 py-1">
+            /* Collapsed State: Stacked Brand and Profile */
+            <div className="flex flex-col items-center gap-2.5 py-1">
+              <div className="w-8 h-8 rounded-lg bg-accent/15 border border-accent/30 text-accent flex items-center justify-center font-display font-bold text-xs shrink-0 shadow-xs">
+                <Layers className="w-4 h-4" />
+              </div>
               <button
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
-                title={profile.isLoggedIn ? `${profile.name} (${profile.plan})` : "Masuk Akun"}
-                className="w-9 h-9 rounded-xl bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 transition-transform"
+                title={profile.isLoggedIn ? `${profile.name} (${profile.plan} Plan)` : "Masuk Akun"}
+                className="w-8 h-8 rounded-full bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-110 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/40 cursor-pointer"
+                aria-label="Buka profil akun"
               >
-                {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-4 h-4" />}
+                {profile.isLoggedIn ? (
+                  profile.name.charAt(0).toUpperCase()
+                ) : (
+                  <User className="w-4 h-4" />
+                )}
               </button>
             </div>
           )}
