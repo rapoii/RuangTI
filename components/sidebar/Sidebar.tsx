@@ -8,8 +8,9 @@ import { ConversationList } from "./ConversationList";
 import { ProfileModal } from "@/components/profile/ProfileModal";
 import { useConversations } from "@/hooks/use-conversations";
 import { UserProfile } from "@/lib/types";
-import { PanelLeftClose, PanelLeftOpen, X, User, Layers } from "lucide-react";
+import { PanelLeftClose, PanelLeftOpen, X, User, Layers, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface SidebarProps {
   conversationsState: ReturnType<typeof useConversations>;
@@ -111,6 +112,23 @@ export function Sidebar({
                   onTogglePinConversation={togglePinConversation}
                   onDeleteConversation={deleteConversation}
                 />
+              </div>
+
+              {/* Mobile Navigation Links */}
+              <div className="p-3 border-t border-border/40">
+                <Link
+                  href="/docs"
+                  target="_blank"
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-surface hover:bg-surface-hover border border-border text-xs font-medium text-text-secondary hover:text-text-primary transition-colors group"
+                >
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="w-3.5 h-3.5 text-text-secondary group-hover:text-accent transition-colors" />
+                    <span>Dokumentasi Resmi</span>
+                  </div>
+                  <span className="px-1.5 py-0.5 rounded bg-canvas text-[10px] font-mono text-accent border border-accent/20">
+                    434 Modul
+                  </span>
+                </Link>
               </div>
 
               {/* Mobile Footer: RuangTI Brand on Left + Clickable Circular Profile Avatar on Right */}
@@ -229,6 +247,34 @@ export function Sidebar({
                 </button>
               ))}
             </div>
+          )}
+        </div>
+
+        {/* Desktop Sidebar Middle Action: Docs Link */}
+        <div className={cn("border-t border-border/60", isCollapsed ? "p-2 flex justify-center" : "px-3 py-2")}>
+          {!isCollapsed ? (
+            <Link
+              href="/docs"
+              target="_blank"
+              className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-surface/70 hover:bg-surface border border-border/60 hover:border-accent/40 text-xs font-medium text-text-secondary hover:text-text-primary transition-all duration-150 group shadow-2xs"
+            >
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-3.5 h-3.5 text-text-secondary group-hover:text-accent transition-colors" />
+                <span>Dokumentasi</span>
+              </div>
+              <span className="px-1.5 py-0.2 rounded bg-canvas text-[10px] font-mono text-accent border border-accent/20 font-semibold">
+                434 Modul
+              </span>
+            </Link>
+          ) : (
+            <Link
+              href="/docs"
+              target="_blank"
+              className="w-9 h-9 rounded-xl flex items-center justify-center text-text-secondary hover:text-accent hover:bg-surface border border-transparent hover:border-border transition-all duration-150 group"
+              title="Dokumentasi Resmi RuangTI (434 Modul)"
+            >
+              <BookOpen className="w-4 h-4 text-text-secondary group-hover:text-accent transition-colors" />
+            </Link>
           )}
         </div>
 

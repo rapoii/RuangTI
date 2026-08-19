@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Sparkles, Terminal, Activity, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle, Sparkles, Terminal, Activity, ShieldCheck, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { UserProfile } from "@/lib/types";
 
@@ -59,12 +59,13 @@ export function Hero({ profile, onOpenLogin }: HeroProps) {
             </button>
           )}
 
-          <a
-            href="#features"
-            className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-surface border border-border text-text-primary font-semibold text-sm hover:border-accent/40 hover:bg-canvas transition-all active:scale-[0.97] flex items-center justify-center gap-2"
+          <Link
+            href="/docs"
+            className="w-full sm:w-auto px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-surface border border-border text-text-primary font-semibold text-sm hover:border-accent/40 hover:bg-canvas transition-all active:scale-[0.97] flex items-center justify-center gap-2 group shadow-2xs"
           >
-            <span>Pelajari Modul Keilmuan</span>
-          </a>
+            <BookOpen size={16} className="text-text-secondary group-hover:text-accent transition-colors" />
+            <span>Dokumentasi Resmi</span>
+          </Link>
         </div>
 
         {/* Trust & Spec Micro-Badges */}

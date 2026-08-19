@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import { Conversation } from "@/lib/types";
 import { ShareModal } from "@/components/chat/ShareModal";
-import { Menu, PanelLeftOpen, Share2, MessageSquare, Pin } from "lucide-react";
+import { Menu, PanelLeftOpen, Share2, MessageSquare, Pin, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface HeaderProps {
   onToggleMobileSidebar: () => void;
@@ -70,8 +71,18 @@ export function Header({
           </div>
         </div>
 
-        {/* Right: Claude-style Share Button */}
+        {/* Right: Docs Link + Share Button */}
         <div className="flex items-center gap-2 shrink-0">
+          <Link
+            href="/docs"
+            target="_blank"
+            className="h-9 px-2.5 sm:px-3 rounded-xl flex items-center gap-1.5 text-xs font-medium bg-surface hover:bg-surface-hover text-text-secondary hover:text-accent border border-border transition-all duration-150 active:scale-95 shadow-sm group"
+            title="Buka Dokumentasi Resmi RuangTI"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-text-secondary group-hover:text-accent transition-colors" />
+            <span className="hidden sm:inline">Dokumentasi</span>
+          </Link>
+
           {activeConversation && (
             <button
               type="button"
