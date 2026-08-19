@@ -341,12 +341,12 @@ export function Composer({
         )}
 
         {/* Input Area */}
-        <div className="flex items-end px-3.5 sm:px-4 py-2.5 sm:py-3 gap-2">
+        <div className="flex items-center px-3 sm:px-4 py-2 sm:py-2.5 gap-1.5 sm:gap-2">
           {/* Paperclip Button (Attach Images, Docs, Excel, Code, Zip) */}
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors shrink-0 mb-0.5"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors shrink-0"
             title="Lampirkan dokumen, spreadsheet, kodingan, zip, atau gambar"
             aria-label="Lampirkan berkas"
           >
@@ -354,29 +354,31 @@ export function Composer({
           </button>
 
           {/* Textarea */}
-          <textarea
-            ref={textareaRef}
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            onKeyDown={handleKeyDown}
-            onPaste={handlePaste}
-            onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
-            placeholder="Tulis pesan..."
-            disabled={disabled}
-            rows={1}
-            className={cn(
-              "flex-1 max-h-[220px] resize-none border-0 bg-transparent py-1 text-sm text-text-primary placeholder:text-text-tertiary",
-              "focus:outline-none focus:ring-0 leading-relaxed font-sans"
-            )}
-          />
+          <div className="flex-1 min-w-0 flex items-center">
+            <textarea
+              ref={textareaRef}
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              onKeyDown={handleKeyDown}
+              onPaste={handlePaste}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
+              placeholder="Tulis pesan..."
+              disabled={disabled}
+              rows={1}
+              className={cn(
+                "w-full max-h-[220px] resize-none border-0 bg-transparent py-1.5 sm:py-2 text-sm text-text-primary placeholder:text-text-tertiary",
+                "focus:outline-none focus:ring-0 leading-normal font-sans"
+              )}
+            />
+          </div>
 
           {/* Web Search Toggle Button */}
           <button
             type="button"
             onClick={() => setWebSearchEnabled((prev) => !prev)}
             className={cn(
-              "w-8 h-8 rounded-lg flex items-center justify-center transition-colors shrink-0 mb-0.5",
+              "w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center transition-colors shrink-0",
               webSearchEnabled
                 ? "bg-accent/15 text-accent border border-accent/25"
                 : "text-text-secondary hover:text-text-primary hover:bg-surface-hover"
@@ -399,7 +401,7 @@ export function Composer({
           />
 
           {/* Send / Stop Action Button */}
-          <div className="shrink-0 mb-0.5">
+          <div className="shrink-0 flex items-center">
             <SendStopButton
               isStreaming={isStreaming}
               onClick={handleSubmit}

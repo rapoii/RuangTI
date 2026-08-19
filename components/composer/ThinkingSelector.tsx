@@ -48,7 +48,7 @@ export function ThinkingSelector({
         onClick={() => !disabled && setIsOpen((prev) => !prev)}
         disabled={disabled}
         className={cn(
-          "h-8 px-2.5 rounded-lg flex items-center gap-1.5 transition-all text-xs font-medium shrink-0 mb-0.5",
+          "h-8 sm:h-9 px-2.5 rounded-lg flex items-center gap-1.5 transition-all text-xs font-medium shrink-0",
           isThinkingActive
             ? "bg-accent/15 text-accent border border-accent/30 shadow-xs hover:bg-accent/20"
             : "text-text-secondary hover:text-text-primary hover:bg-surface-hover border border-transparent",
