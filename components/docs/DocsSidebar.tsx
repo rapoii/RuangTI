@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   Compass,
   Cpu,
@@ -12,7 +11,7 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { DOCS_CATEGORIES, DocArticle } from "@/lib/docs-data";
+import { DOCS_CATEGORIES } from "@/lib/docs-data";
 
 interface DocsSidebarProps {
   currentArticleId: string;
@@ -87,7 +86,7 @@ export function DocsSidebar({
       </div>
 
       {/* Hierarchical Categories */}
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {DOCS_CATEGORIES.map((category) => {
           const isCategoryOpen = openCategories[category.id] ?? true;
 
@@ -110,62 +109,61 @@ export function DocsSidebar({
                 onClick={() => toggleCategory(category.id)}
                 className="w-full flex items-center justify-between px-2 py-1.5 rounded-lg text-xs font-semibold text-text-primary hover:bg-surface/80 transition-colors group text-left"
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 min-w-0">
                   {getCategoryIcon(category.iconName)}
                   <span className="truncate">{category.title}</span>
                 </div>
-                <motion.div
-                  animate={{ rotate: isCategoryOpen ? 90 : 0 }}
-                  transition={{ duration: 0.18, ease: "easeInOut" }}
-                >
-                  <ChevronRight size={13} className="text-text-secondary group-hover:text-text-primary transition-colors" />
-                </motion.div>
+                <ChevronRight
+                  size={13}
+                  className={`text-text-secondary group-hover:text-text-primary transition-transform duration-200 shrink-0 ${
+                    isCategoryOpen ? "rotate-90 text-accent" : "rotate-0"
+                  }`}
+                  style={{ willChange: "transform" }}
+                />
               </button>
 
-              {/* Category Articles List with Smooth Collapse/Expand */}
-              <AnimatePresence initial={false}>
-                {isCategoryOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="overflow-hidden pl-4 ml-3 border-l border-border/40 space-y-0.5"
-                  >
-                    {filteredArticles.map((article) => {
-                      const isActive = currentArticleId === article.id;
-                      return (
-                        <button
-                          key={article.id}
-                          type="button"
-                          onClick={() => {
-                            onSelectArticle(article.id);
-                            if (onCloseMobile) onCloseMobile();
-                          }}
-                          className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all duration-150 flex items-center justify-between gap-1.5 ${
-                            isActive
-                              ? "bg-accent/10 text-accent font-semibold shadow-2xs"
-                              : "text-text-secondary hover:text-text-primary hover:bg-surface/60 font-normal"
-                          }`}
-                        >
-                          <span className="truncate">{article.title}</span>
-                          {article.badge && (
-                            <span
-                              className={`text-[9px] px-1 py-0.2 rounded border font-mono shrink-0 ${
-                                isActive
+              {/* Category Articles List with Zero-Lag Native CSS Grid Accordion */}
+              <div
+                className={`grid transition-[grid-template-rows,opacity] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  isCategoryOpen
+                    ? "grid-rows-[1fr] opacity-100"
+                    : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                }`}
+              >
+                <div className="overflow-hidden pl-4 ml-3 border-l border-border/40 space-y-0.5">
+                  {filteredArticles.map((article) => {
+                    const isActive = currentArticleId === article.id;
+                    return (
+                      <button
+                        key={article.id}
+                        type="button"
+                        onClick={() => {
+                          onSelectArticle(article.id);
+                          if (onCloseMobile) onCloseMobile();
+                        }}
+                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all duration-150 flex items-center justify-between gap-1.5 ${
+                          isActive
+                            ? "bg-accent/10 text-accent font-semibold shadow-2xs"
+                            : "text-text-secondary hover:text-text-primary hover:bg-surface/60 font-normal"
+                        }`}
+                      >
+                        <span className="truncate">{article.title}</span>
+                        {article.badge && (
+                          <span
+                            className={`text-[9px] px-1 py-0.2 rounded border font-mono shrink-0 ${
+                              isActive
                                 ? "bg-accent/15 border-accent/30 text-accent"
                                 : "bg-surface border-border/60 text-text-secondary"
-                              }`}
-                            >
-                              {article.badge}
-                            </span>
-                          )}
-                        </button>
-                      );
-                    })}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                            }`}
+                          >
+                            {article.badge}
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           );
         })}

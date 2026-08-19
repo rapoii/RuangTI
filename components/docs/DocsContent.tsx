@@ -1,17 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Clock,
   Check,
   Copy,
+  ChevronRight,
+  Sparkles,
+  ArrowLeft,
+  ArrowRight,
   Info,
   AlertTriangle,
   Lightbulb,
   CheckCircle2,
-  ArrowLeft,
-  ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import { DocArticle } from "@/lib/docs-data";
 import { KaTeXFormula } from "@/components/ui/KaTeXFormula";
@@ -130,7 +132,14 @@ export function DocsContent({
   };
 
   return (
-    <article className="w-full max-w-4xl mx-auto pt-4 sm:pt-6 pb-2 px-4 sm:px-6 md:px-8 space-y-5 sm:space-y-6">
+    <motion.article
+      key={article.id}
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.16, ease: "easeOut" }}
+      style={{ willChange: "transform, opacity" }}
+      className="w-full max-w-4xl mx-auto pt-4 sm:pt-6 pb-2 px-4 sm:px-6 md:px-8 space-y-5 sm:space-y-6"
+    >
       {/* Header Artikel */}
       <div className="space-y-3 pb-6 border-b border-border/40">
         <div className="flex flex-wrap items-center gap-2">
@@ -286,6 +295,6 @@ export function DocsContent({
           </button>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }

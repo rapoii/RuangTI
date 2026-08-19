@@ -96,7 +96,7 @@ export default function DocsPage() {
           />
         </div>
 
-        {/* Mobile Navigation Drawer Overlay + Slide Panel (Animated with Framer Motion) */}
+        {/* Mobile Navigation Drawer Overlay + Slide Panel (GPU Accelerated Framer Motion) */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <div className="fixed inset-0 z-50 md:hidden flex">
@@ -105,8 +105,9 @@ export default function DocsPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.18, ease: "easeOut" }}
-                className="fixed inset-0 bg-slate-950/45 backdrop-blur-sm"
+                transition={{ duration: 0.16, ease: "easeOut" }}
+                style={{ willChange: "opacity" }}
+                className="fixed inset-0 bg-slate-950/40 backdrop-blur-[2px]"
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-hidden="true"
               />
@@ -116,7 +117,8 @@ export default function DocsPage() {
                 initial={{ x: "-100%" }}
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
-                transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                style={{ willChange: "transform" }}
                 className="relative w-[285px] max-w-[85vw] h-full bg-canvas border-r border-border shadow-2xl flex flex-col z-10 select-none"
                 onClick={(e) => e.stopPropagation()}
                 role="dialog"

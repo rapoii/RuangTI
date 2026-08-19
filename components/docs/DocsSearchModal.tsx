@@ -67,17 +67,19 @@ export function DocsSearchModal({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.16, ease: "easeOut" }}
-            className="fixed inset-0 bg-slate-950/45 backdrop-blur-sm"
+            transition={{ duration: 0.14, ease: "easeOut" }}
+            style={{ willChange: "opacity" }}
+            className="fixed inset-0 bg-slate-950/40 backdrop-blur-[2px]"
             aria-hidden="true"
           />
 
           {/* Modal Container with Scale + Fade Animation */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: -10 }}
+            initial={{ opacity: 0, scale: 0.97, y: -8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: -10 }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            exit={{ opacity: 0, scale: 0.97, y: -8 }}
+            transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="w-full max-w-xl bg-canvas border border-border rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] z-10 select-none"
             onClick={(e) => e.stopPropagation()}
           >
