@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { DocsNavbar } from "@/components/docs/DocsNavbar";
 import { DocsSidebar } from "@/components/docs/DocsSidebar";
 import { DocsTOC } from "@/components/docs/DocsTOC";
@@ -95,27 +96,42 @@ export default function DocsPage() {
           />
         </div>
 
-        {/* Mobile Navigation Drawer Overlay + Slide Panel */}
-        {isMobileMenuOpen && (
-          <div
-            className="fixed inset-0 z-50 md:hidden bg-slate-950/50 backdrop-blur-sm animate-in fade-in duration-150"
-            onClick={() => setIsMobileMenuOpen(false)}
-            aria-modal="true"
-            role="dialog"
-          >
-            <div
-              className="w-4/5 max-w-xs h-full bg-canvas border-r border-border shadow-2xl flex flex-col animate-in slide-in-from-left duration-200"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <DocsSidebar
-                currentArticleId={currentArticle.id}
-                onSelectArticle={handleSelectArticle}
-                filterText={filterText}
-                onCloseMobile={() => setIsMobileMenuOpen(false)}
+        {/* Mobile Navigation Drawer Overlay + Slide Panel (Animated with Framer Motion) */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <div className="fixed inset-0 z-50 md:hidden flex">
+              {/* Backdrop Dimmer */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.18, ease: "easeOut" }}
+                className="fixed inset-0 bg-slate-950/45 backdrop-blur-sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-hidden="true"
               />
+
+              {/* Sliding Sidebar Drawer */}
+              <motion.aside
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
+                className="relative w-[285px] max-w-[85vw] h-full bg-canvas border-r border-border shadow-2xl flex flex-col z-10 select-none"
+                onClick={(e) => e.stopPropagation()}
+                role="dialog"
+                aria-modal="true"
+              >
+                <DocsSidebar
+                  currentArticleId={currentArticle.id}
+                  onSelectArticle={handleSelectArticle}
+                  filterText={filterText}
+                  onCloseMobile={() => setIsMobileMenuOpen(false)}
+                />
+              </motion.aside>
             </div>
-          </div>
-        )}
+          )}
+        </AnimatePresence>
 
         {/* Center Column: Main Article Content */}
         <main className="flex-1 min-w-0 pb-16">

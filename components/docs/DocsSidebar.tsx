@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Compass,
   Cpu,
   HardHat,
   Binary,
   HelpCircle,
-  ChevronDown,
   ChevronRight,
   Sparkles,
   X,
@@ -46,24 +46,24 @@ export function DocsSidebar({
   const getCategoryIcon = (iconName: string) => {
     switch (iconName) {
       case "Compass":
-        return <Compass size={16} className="text-accent shrink-0" />;
+        return <Compass size={15} className="text-accent shrink-0" />;
       case "Cpu":
-        return <Cpu size={16} className="text-amber-600 shrink-0" />;
+        return <Cpu size={15} className="text-amber-600 shrink-0" />;
       case "HardHat":
-        return <HardHat size={16} className="text-amber-700 shrink-0" />;
+        return <HardHat size={15} className="text-amber-700 shrink-0" />;
       case "Binary":
-        return <Binary size={16} className="text-accent shrink-0" />;
+        return <Binary size={15} className="text-accent shrink-0" />;
       case "HelpCircle":
-        return <HelpCircle size={16} className="text-text-secondary shrink-0" />;
+        return <HelpCircle size={15} className="text-text-secondary shrink-0" />;
       default:
-        return <Sparkles size={16} className="text-accent shrink-0" />;
+        return <Sparkles size={15} className="text-accent shrink-0" />;
     }
   };
 
   return (
     <aside className="w-full h-full flex flex-col py-4 px-3 sm:px-4 overflow-y-auto">
       {/* Search status / stats / Mobile Close Button */}
-      <div className="mb-4 px-2 flex items-center justify-between">
+      <div className="mb-3 px-2 flex items-center justify-between pb-2 border-b border-border/40">
         <div className="flex items-center gap-2">
           <span className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
             Navigasi Docs
@@ -87,7 +87,7 @@ export function DocsSidebar({
       </div>
 
       {/* Hierarchical Categories */}
-      <div className="space-y-4">
+      <div className="space-y-3">
         {DOCS_CATEGORIES.map((category) => {
           const isCategoryOpen = openCategories[category.id] ?? true;
 
@@ -114,49 +114,58 @@ export function DocsSidebar({
                   {getCategoryIcon(category.iconName)}
                   <span className="truncate">{category.title}</span>
                 </div>
-                {isCategoryOpen ? (
-                  <ChevronDown size={14} className="text-text-secondary group-hover:text-text-primary transition-transform" />
-                ) : (
-                  <ChevronRight size={14} className="text-text-secondary group-hover:text-text-primary transition-transform" />
-                )}
+                <motion.div
+                  animate={{ rotate: isCategoryOpen ? 90 : 0 }}
+                  transition={{ duration: 0.18, ease: "easeInOut" }}
+                >
+                  <ChevronRight size={13} className="text-text-secondary group-hover:text-text-primary transition-colors" />
+                </motion.div>
               </button>
 
-              {/* Category Articles List */}
-              {isCategoryOpen && (
-                <div className="pl-6 space-y-0.5 border-l border-border/40 ml-4 mt-1">
-                  {filteredArticles.map((article) => {
-                    const isActive = currentArticleId === article.id;
-                    return (
-                      <button
-                        key={article.id}
-                        type="button"
-                        onClick={() => {
-                          onSelectArticle(article.id);
-                          if (onCloseMobile) onCloseMobile();
-                        }}
-                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors flex items-center justify-between gap-1.5 ${
-                          isActive
-                            ? "bg-accent/10 text-accent font-semibold"
-                            : "text-text-secondary hover:text-text-primary hover:bg-surface/60 font-normal"
-                        }`}
-                      >
-                        <span className="truncate">{article.title}</span>
-                        {article.badge && (
-                          <span
-                            className={`text-[9px] px-1 py-0.2 rounded border font-mono shrink-0 ${
-                              isActive
+              {/* Category Articles List with Smooth Collapse/Expand */}
+              <AnimatePresence initial={false}>
+                {isCategoryOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="overflow-hidden pl-4 ml-3 border-l border-border/40 space-y-0.5"
+                  >
+                    {filteredArticles.map((article) => {
+                      const isActive = currentArticleId === article.id;
+                      return (
+                        <button
+                          key={article.id}
+                          type="button"
+                          onClick={() => {
+                            onSelectArticle(article.id);
+                            if (onCloseMobile) onCloseMobile();
+                          }}
+                          className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all duration-150 flex items-center justify-between gap-1.5 ${
+                            isActive
+                              ? "bg-accent/10 text-accent font-semibold shadow-2xs"
+                              : "text-text-secondary hover:text-text-primary hover:bg-surface/60 font-normal"
+                          }`}
+                        >
+                          <span className="truncate">{article.title}</span>
+                          {article.badge && (
+                            <span
+                              className={`text-[9px] px-1 py-0.2 rounded border font-mono shrink-0 ${
+                                isActive
                                 ? "bg-accent/15 border-accent/30 text-accent"
                                 : "bg-surface border-border/60 text-text-secondary"
-                            }`}
-                          >
-                            {article.badge}
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
+                              }`}
+                            >
+                              {article.badge}
+                            </span>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}
