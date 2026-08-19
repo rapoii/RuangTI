@@ -12,7 +12,7 @@ from app.services.cdp_browser import cdp_manager
 logger = logging.getLogger(__name__)
 
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://localhost:20128/v1")
-ROUTER_9_MODEL = os.getenv("ROUTER_9_MODEL", "Hermes")
+ROUTER_9_MODEL = "gcli/grok-4.6-high(xhigh)"
 
 BASE_SYSTEM_PROMPT = """Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri kelas dunia (World-Class Industrial Engineering & Systems Engineering AI Co-Pilot).
 
