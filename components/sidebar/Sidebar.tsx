@@ -135,7 +135,7 @@ export function Sidebar({
                   type="button"
                   onClick={() => setIsProfileModalOpen(true)}
                   title={profile.isLoggedIn ? `${profile.name} (${profile.plan} Plan)` : "Masuk Akun"}
-                  className="w-8 h-8 rounded-full bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/30"
+                  className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/30"
                   aria-label="Buka profil akun"
                 >
                   {profile.isLoggedIn ? (
@@ -256,7 +256,7 @@ export function Sidebar({
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
                 title={profile.isLoggedIn ? `${profile.name} (${profile.plan} Plan)` : "Masuk Akun"}
-                className="w-8 h-8 rounded-full bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/40 cursor-pointer"
+                className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/40 cursor-pointer"
                 aria-label="Buka profil akun"
               >
                 {profile.isLoggedIn ? (
@@ -276,7 +276,7 @@ export function Sidebar({
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
                 title={profile.isLoggedIn ? `${profile.name} (${profile.plan} Plan)` : "Masuk Akun"}
-                className="w-8 h-8 rounded-full bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-110 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/40 cursor-pointer"
+                className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-110 active:scale-95 transition-all duration-200 ring-2 ring-transparent hover:ring-accent/40 cursor-pointer"
                 aria-label="Buka profil akun"
               >
                 {profile.isLoggedIn ? (

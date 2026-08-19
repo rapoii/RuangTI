@@ -16,7 +16,7 @@ export function Navbar({ onOpenLogin, profile }: NavbarProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         {/* Brand Logo & Tagline */}
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-bold text-sm shadow-sm shadow-accent/20 group-hover:scale-105 transition-transform">
+          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-accent/20 group-hover:scale-105 transition-transform">
             TI
           </div>
           <div className="flex flex-col">
@@ -50,7 +50,7 @@ export function Navbar({ onOpenLogin, profile }: NavbarProps) {
           {profile.isLoggedIn ? (
             <Link
               href="/chat"
-              className="px-3.5 sm:px-4 py-2 rounded-xl bg-accent text-slate-950 font-bold text-xs hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center gap-1.5 active:scale-[0.97]"
+              className="px-3.5 sm:px-4 py-2 rounded-xl bg-accent text-white font-bold text-xs hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center gap-1.5 active:scale-[0.97]"
             >
               <span className="hidden sm:inline">Buka Workspace</span>
               <span className="sm:hidden">Workspace</span>
@@ -59,7 +59,7 @@ export function Navbar({ onOpenLogin, profile }: NavbarProps) {
           ) : (
             <button
               onClick={onOpenLogin}
-              className="px-3.5 sm:px-4 py-2 rounded-xl bg-accent text-slate-950 font-bold text-xs hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center gap-1.5 active:scale-[0.97]"
+              className="px-3.5 sm:px-4 py-2 rounded-xl bg-accent text-white font-bold text-xs hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center gap-1.5 active:scale-[0.97]"
             >
               <User size={13} />
               <span>Masuk</span>

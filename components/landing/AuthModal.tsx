@@ -266,7 +266,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
             {/* Header / Brand & Close Button */}
             <div className="p-3.5 sm:p-4 border-b border-border/60 flex items-center justify-between shrink-0 bg-surface">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-bold text-xs shadow-sm shadow-accent/20">
+                <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-white font-bold text-xs shadow-sm shadow-accent/20">
                   TI
                 </div>
                 <div>
@@ -433,10 +433,10 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
+                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-white font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
                   >
                     {isLoading ? (
-                      <Loader2 size={16} className="animate-spin text-slate-950" />
+                      <Loader2 size={16} className="animate-spin text-white" />
                     ) : (
                       <>
                         <span>Masuk ke RuangTI</span>
@@ -602,10 +602,10 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
+                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-white font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
                   >
                     {isLoading ? (
-                      <Loader2 size={16} className="animate-spin text-slate-950" />
+                      <Loader2 size={16} className="animate-spin text-white" />
                     ) : (
                       <>
                         <span>Buat Akun RuangTI</span>

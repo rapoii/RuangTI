@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-border/40 bg-surface/30 py-8 sm:py-9 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3 text-center sm:text-left">
-          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-display font-bold text-sm shrink-0">
+          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-white font-display font-bold text-sm shrink-0">
             TI
           </div>
           <div className="flex flex-col text-left">
@@ -34,7 +34,7 @@ export function Footer() {
           <span className="flex items-center gap-1">
             <span>Dibuat dengan</span>
             <Heart size={13} className="text-rose-500 fill-rose-500 inline-block" />
-            <span>untuk mahasiswa & civitas Untirta</span>
+            <span>untuk mahasiswa & praktisi TI</span>
           </span>
         </div>
       </div>

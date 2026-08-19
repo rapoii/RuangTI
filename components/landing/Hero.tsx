@@ -44,7 +44,7 @@ export function Hero({ profile, onOpenLogin }: HeroProps) {
           {profile.isLoggedIn ? (
             <Link
               href="/chat"
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-accent text-slate-950 font-bold text-sm sm:text-base hover:brightness-110 shadow-lg shadow-accent/20 transition-all active:scale-[0.97] flex items-center justify-center gap-2.5"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-accent text-white font-bold text-sm sm:text-base hover:brightness-110 shadow-lg shadow-accent/20 transition-all active:scale-[0.97] flex items-center justify-center gap-2.5"
             >
               <span>Buka Workspace RuangTI</span>
               <ArrowRight size={17} />
@@ -52,7 +52,7 @@ export function Hero({ profile, onOpenLogin }: HeroProps) {
           ) : (
             <button
               onClick={onOpenLogin}
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-accent text-slate-950 font-bold text-sm sm:text-base hover:brightness-110 shadow-lg shadow-accent/20 transition-all active:scale-[0.97] flex items-center justify-center gap-2.5"
+              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-accent text-white font-bold text-sm sm:text-base hover:brightness-110 shadow-lg shadow-accent/20 transition-all active:scale-[0.97] flex items-center justify-center gap-2.5"
             >
               <span>Mulai Konsultasi Gratis</span>
               <ArrowRight size={17} />
