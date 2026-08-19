@@ -71,7 +71,7 @@ export function Header({
               className={cn(
                 "h-9 px-3 rounded-xl flex items-center gap-1.5 text-xs font-medium border transition-all duration-150 active:scale-95 shadow-sm",
                 activeConversation.isPublic
-                  ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/15"
+                  ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/30 hover:bg-emerald-500/15"
                   : "bg-surface hover:bg-surface-hover text-text-secondary hover:text-text-primary border-border"
               )}
               aria-label="Bagikan obrolan ini"

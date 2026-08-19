@@ -109,7 +109,7 @@ export function Features() {
               {/* KaTeX Formula Box with clean flat divider and high contrast */}
               <div className="mt-4 sm:mt-5 pt-3.5 border-t border-border/40 flex items-center justify-between gap-2 flex-wrap">
                 <span className="text-text-secondary text-[11px] font-sans">Formula Acuan</span>
-                <span className="text-text-primary dark:text-accent font-medium tracking-wide text-xs sm:text-sm">
+                <span className="text-text-primary font-medium tracking-wide text-xs sm:text-sm">
                   <KaTeXFormula math={p.formula} />
                 </span>
               </div>

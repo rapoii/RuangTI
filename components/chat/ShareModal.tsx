@@ -161,7 +161,7 @@ export function ShareModal({
         {isPublicState && (
           <div className="flex flex-col gap-2 p-3 rounded-xl bg-surface border border-border">
             <div className="flex items-center justify-between text-xs text-text-secondary">
-              <span className="flex items-center gap-1.5 font-medium text-emerald-600 dark:text-emerald-400">
+              <span className="flex items-center gap-1.5 font-medium text-emerald-600">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Tautan publik aktif
               </span>

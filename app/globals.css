@@ -21,22 +21,6 @@
     --accent-subtle: rgba(224, 159, 62, 0.12);
   }
 
-  .dark {
-    --canvas: #0F1115;
-    --canvas-subtle: #14171D;
-    --surface: #181B22;
-    --surface-hover: #20242D;
-    --surface-active: #272C37;
-    --border: #282D37;
-    --border-strong: #383F4D;
-    --text-primary: #F0F2F5;
-    --text-secondary: #9AA0AD;
-    --text-tertiary: #646B79;
-    --accent: #F2A93B;
-    --accent-hover: #FFAE42;
-    --accent-subtle: rgba(242, 169, 59, 0.15);
-  }
-
   body {
     background-color: var(--canvas);
     color: var(--text-primary);
@@ -73,14 +57,8 @@
 
 /* Glassmorphism Header */
 .glass-header {
-  background: rgba(15, 17, 21, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-
-:root:not(.dark) .glass-header {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 }

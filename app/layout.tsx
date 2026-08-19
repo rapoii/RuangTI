@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${spaceGrotesk.variable} ${manrope.variable} ${ibmPlexMono.variable} dark`}
+      className={`${spaceGrotesk.variable} ${manrope.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-canvas text-text-primary antialiased flex flex-col">

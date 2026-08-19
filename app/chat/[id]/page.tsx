@@ -7,7 +7,6 @@ import { EmptyState } from "@/components/chat/EmptyState";
 import { Composer } from "@/components/composer/Composer";
 import { useConversations } from "@/hooks/use-conversations";
 import { useChat } from "@/hooks/use-chat";
-import { useTheme } from "@/hooks/use-theme";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { ModelOption } from "@/lib/types";
@@ -19,7 +18,6 @@ export default function DynamicChatPage() {
   const conversationIdFromUrl =
     typeof rawParams?.id === "string" ? rawParams.id : undefined;
 
-  const { theme, toggleTheme } = useTheme();
   const profileState = useProfile();
   const [selectedModel, setSelectedModel] = useState<ModelOption>("ti-optima");
   const [isMounted, setIsMounted] = useState(false);
@@ -92,7 +90,7 @@ export default function DynamicChatPage() {
 
   if (!isMounted || !profileState.isLoaded) {
     return (
-      <div className="h-screen w-screen bg-[#0F1115] flex items-center justify-center text-accent">
+      <div className="h-screen w-screen bg-canvas flex items-center justify-center text-accent">
         <div className="flex flex-col items-center gap-3">
           <div className="w-8 h-8 rounded-xl bg-accent/20 border border-accent flex items-center justify-center animate-pulse">
             <span className="font-bold text-sm">TI</span>
@@ -105,8 +103,6 @@ export default function DynamicChatPage() {
 
   return (
     <Shell
-      theme={theme}
-      onToggleTheme={toggleTheme}
       conversationsState={conversationsState}
       profileState={profileState}
     >

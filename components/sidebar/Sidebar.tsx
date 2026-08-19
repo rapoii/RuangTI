@@ -8,7 +8,7 @@ import { ConversationList } from "./ConversationList";
 import { ProfileModal } from "@/components/profile/ProfileModal";
 import { useConversations } from "@/hooks/use-conversations";
 import { UserProfile } from "@/lib/types";
-import { PanelLeftClose, PanelLeftOpen, X, User, Sun, Moon } from "lucide-react";
+import { PanelLeftClose, PanelLeftOpen, X, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -21,10 +21,8 @@ interface SidebarProps {
     login: (name: string, email: string) => void;
     logout: () => void;
   };
-  isCollapsed?: boolean;
-  onToggleCollapse?: () => void;
-  theme?: "light" | "dark";
-  onToggleTheme?: () => void;
+  isCollapsed: boolean;
+  onToggleCollapse: () => void;
 }
 
 export function Sidebar({
@@ -32,10 +30,8 @@ export function Sidebar({
   isMobileOpen,
   onCloseMobile,
   profileState,
-  isCollapsed = false,
+  isCollapsed,
   onToggleCollapse,
-  theme = "light",
-  onToggleTheme,
 }: SidebarProps) {
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const { profile, updateProfile, login, logout } = profileState;
@@ -124,36 +120,20 @@ export function Sidebar({
                   onClick={() => setIsProfileModalOpen(true)}
                   className="flex-1 flex items-center gap-2.5 p-1.5 rounded-xl hover:bg-surface transition-colors text-left"
                 >
-                  <div className="w-8 h-8 rounded-xl bg-accent/15 text-accent flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20">
                     {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-4 h-4" />}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs font-semibold text-text-primary truncate">
                       {profile.isLoggedIn ? profile.name : "Masuk Akun"}
                     </p>
-                    <p className="text-[10px] text-text-secondary truncate">
+                    <p className="text-[11px] text-text-secondary truncate">
                       {profile.isLoggedIn ? `${profile.plan} Plan` : "Tamu"}
                     </p>
                   </div>
-                </button>
-
-                {onToggleTheme && (
-                  <button
-                    type="button"
-                    onClick={onToggleTheme}
-                    className="w-9 h-9 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary bg-surface/80 hover:bg-surface border border-border/60 transition-all active:scale-95 shrink-0"
-                    aria-label={theme === "dark" ? "Ganti ke mode terang" : "Ganti ke mode gelap"}
-                    title={theme === "dark" ? "Mode Terang" : "Mode Gelap"}
-                  >
-                    {theme === "dark" ? (
-                      <Sun className="w-4 h-4 text-amber-400" />
-                    ) : (
-                      <Moon className="w-4 h-4 text-text-primary" />
-                    )}
                   </button>
-                )}
-              </div>
-            </motion.aside>
+                  </div>
+                  </motion.aside>
           </div>
         )}
       </AnimatePresence>
@@ -241,69 +221,37 @@ export function Sidebar({
         </div>
 
         {/* Desktop Sidebar Bottom Footer: Profile + Theme Switcher */}
-        <div className="p-2 border-t border-border/70 bg-canvas/30">
+        {/* Bottom Profile Section */}
+        <div className="p-3 border-t border-border/80 bg-surface/50">
           {!isCollapsed ? (
-            <div className="flex items-center gap-1.5">
-              {/* User Profile Button */}
+            <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
                 title={profile.isLoggedIn ? `${profile.name} (${profile.plan})` : "Masuk Akun"}
                 className="flex-1 min-w-0 flex items-center gap-2 p-1.5 rounded-xl hover:bg-surface transition-all text-left group"
               >
-                <div className="w-8 h-8 rounded-xl bg-accent/15 text-accent flex items-center justify-center font-bold text-xs shrink-0">
+                <div className="w-8 h-8 rounded-xl bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20">
                   {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-4 h-4" />}
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold text-text-primary truncate">
                     {profile.isLoggedIn ? profile.name : "Masuk Akun"}
                   </p>
-                  <p className="text-[10px] text-text-secondary truncate">
+                  <p className="text-[11px] text-text-secondary truncate">
                     {profile.isLoggedIn ? `${profile.plan} Plan` : "Tamu"}
                   </p>
                 </div>
               </button>
-
-              {/* Theme Switcher Button */}
-              {onToggleTheme && (
-                <button
-                  type="button"
-                  onClick={onToggleTheme}
-                  className="w-8 h-8 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary bg-surface/60 hover:bg-surface border border-transparent hover:border-border transition-all duration-150 active:scale-95 shrink-0 shadow-sm"
-                  aria-label={theme === "dark" ? "Ganti ke mode terang" : "Ganti ke mode gelap"}
-                  title={theme === "dark" ? "Mode Terang" : "Mode Gelap"}
-                >
-                  {theme === "dark" ? (
-                    <Sun className="w-4 h-4 text-amber-400" />
-                  ) : (
-                    <Moon className="w-4 h-4 text-text-primary" />
-                  )}
-                </button>
-              )}
             </div>
           ) : (
-            /* Collapsed State: Stacked Profile & Theme Toggle */
+            /* Collapsed State: Stacked Profile */
             <div className="flex flex-col items-center gap-2 py-1">
-              {onToggleTheme && (
-                <button
-                  type="button"
-                  onClick={onToggleTheme}
-                  className="w-9 h-9 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary bg-surface/60 hover:bg-surface border border-transparent hover:border-border transition-all duration-150 active:scale-95 shadow-sm"
-                  aria-label={theme === "dark" ? "Ganti ke mode terang" : "Ganti ke mode gelap"}
-                  title={theme === "dark" ? "Mode Terang" : "Mode Gelap"}
-                >
-                  {theme === "dark" ? (
-                    <Sun className="w-4 h-4 text-amber-400" />
-                  ) : (
-                    <Moon className="w-4 h-4 text-text-primary" />
-                  )}
-                </button>
-              )}
               <button
                 type="button"
                 onClick={() => setIsProfileModalOpen(true)}
                 title={profile.isLoggedIn ? `${profile.name} (${profile.plan})` : "Masuk Akun"}
-                className="w-9 h-9 rounded-xl bg-accent/15 text-accent flex items-center justify-center font-bold text-xs shrink-0 hover:scale-105 transition-transform"
+                className="w-9 h-9 rounded-xl bg-accent text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 shadow-sm shadow-accent/20 hover:scale-105 transition-transform"
               >
                 {profile.isLoggedIn ? profile.name.charAt(0).toUpperCase() : <User className="w-4 h-4" />}
               </button>

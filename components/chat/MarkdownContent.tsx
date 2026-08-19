@@ -51,7 +51,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
   const extraSources = webSources.slice(6);
 
   return (
-    <div className="prose prose-sm dark:prose-invert max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
+    <div className="prose prose-sm max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
       {/* Visual Live Source Carousel / Dynamic Full Width Adaptive Grid */}
       {webSources.length > 0 && (
         <div className="mb-5 not-prose w-full select-none">

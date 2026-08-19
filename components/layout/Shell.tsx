@@ -8,8 +8,6 @@ import { UserProfile } from "@/lib/types";
 
 interface ShellProps {
   children: React.ReactNode;
-  theme: "light" | "dark";
-  onToggleTheme: () => void;
   conversationsState: ReturnType<typeof useConversations>;
   profileState: {
     profile: UserProfile;
@@ -21,8 +19,6 @@ interface ShellProps {
 
 export function Shell({
   children,
-  theme,
-  onToggleTheme,
   conversationsState,
   profileState,
 }: ShellProps) {
@@ -41,7 +37,7 @@ export function Shell({
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-canvas text-text-primary">
-      {/* Responsive Collapsible Sidebar with integrated Profile & Theme Switcher */}
+      {/* Responsive Collapsible Sidebar with integrated Profile */}
       <Sidebar
         conversationsState={conversationsState}
         isMobileOpen={isMobileSidebarOpen}
@@ -49,8 +45,6 @@ export function Shell({
         profileState={profileState}
         isCollapsed={isDesktopCollapsed}
         onToggleCollapse={toggleDesktopSidebar}
-        theme={theme}
-        onToggleTheme={onToggleTheme}
       />
 
       {/* Main App Canvas */}
