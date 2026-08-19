@@ -102,4 +102,8 @@ projects/web/RuangTI/
   - Format `.stl` / `.obj`: Mesh analysis via `trimesh` untuk membaca volume 3D printing dan bounding box.
 - **Otomasi CNC & CAM (Mastercam / SolidCAM / Fusion CAM)**:
   - Format `.gcode` / `.nc` / `.tap`: Parser lintasan pahat (G0/G1/G2), spindle speed, dan feed rate.
+- **Simulasi Sistem Diskrit (Autodesk FlexSim)**:
+  - Format `.fsm` (Binary Model): Engine GZIP stream decompressor (offset byte ke-72 `0x48`) via Python stdlib `gzip` untuk membaca 100% pohon node objek (`Source`, `Queue`, `Processor`, `Sink`, `Conveyor`, `AGV`, `ASRS`), distribusi waktu matematis (`exponential`, `triangular`, `normal`), dan skrip logika `FlexScript` / `ProcessFlow`.
+  - Format `.fsx` (XML Model): XML ElementTree parser untuk membaca objek, routing port, dan global tables.
+
 
