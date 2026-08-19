@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "better-auth": "^1.7.1",
+    "better-sqlite3": "^13.0.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.7",
     "katex": "^0.18.4",
@@ -24,6 +26,7 @@
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
     "@types/katex": "^0.16.8",
     "@types/node": "^20.12.11",
     "@types/react": "^18.3.1",
