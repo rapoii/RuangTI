@@ -415,12 +415,16 @@ def build_index():
     """Build FTS5 index from all knowledge modules."""
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
-    if os.path.exists(DB_PATH):
-        os.remove(DB_PATH)
+    try:
+        if os.path.exists(DB_PATH):
+            os.remove(DB_PATH)
+    except Exception as e:
+        print(f"Notice: Cannot remove DB file directly ({e}), dropping tables via SQLite connection instead.")
 
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
 
+    cur.execute("DROP TABLE IF EXISTS rag_fts;")
     cur.execute("""
         CREATE VIRTUAL TABLE IF NOT EXISTS rag_fts USING fts5(
             module_id,
