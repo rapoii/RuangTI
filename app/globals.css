@@ -65,19 +65,38 @@
 
 /* ==========================================================================
    KaTeX & Mathematical Formula Typography (Editorial Scientific Style)
-   Presisi baseline alami KaTeX: sejajar sempurna dengan kurung (), teks biasa,
-   dan simbol tanpa melorot ke bawah.
+   Presisi baseline alami KaTeX & Spacing Lega untuk Rumus Pecahan (\frac)
    ========================================================================== */
 
-/* Pastikan KaTeX inline sejajar alami dengan baseline teks */
+/* Formula Matematika Inline */
 .katex {
-  font-size: 1.02em;
+  font-size: 1.05em;
   text-rendering: auto;
   white-space: nowrap;
 }
 
 .katex .katex-html {
   white-space: normal;
+}
+
+/* ==========================================================================
+   Spacious Fraction (Pembilang, Garis Bagi, dan Penyebut yang Lapang)
+   Mencegah teks pembilang dan penyebut menempel pada garis bagi (\frac)
+   ========================================================================== */
+.katex .frac-line {
+  border-bottom-width: 0.08em !important;
+  margin-top: 0.22em !important;
+  margin-bottom: 0.22em !important;
+  display: block !important;
+  border-color: currentColor !important;
+}
+
+/* Berikan padding vertikal pada pembilang (atas) dan penyebut (bawah) */
+.katex .vlist-t2 .vlist-r .vlist > span > .sizing {
+  padding-top: 0.22em !important;
+  padding-bottom: 0.22em !important;
+  display: inline-block !important;
+  line-height: 1.25 !important;
 }
 
 /* Formula Matematika Blok / Display ($$ ... $$) */
@@ -97,7 +116,7 @@
 .katex-display > .katex {
   display: inline-block !important;
   text-align: initial !important;
-  padding: 0.2rem 0 !important;
+  padding: 0.25rem 0 !important;
   white-space: nowrap;
 }
 
@@ -109,5 +128,5 @@
 /* Line-height aman untuk paragraf dan list yang memuat rumus matematika */
 .prose p,
 .prose li {
-  line-height: 1.75 !important;
+  line-height: 1.8 !important;
 }
