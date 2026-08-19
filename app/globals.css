@@ -65,24 +65,25 @@
 
 /* ==========================================================================
    KaTeX & Mathematical Formula Typography (Editorial Scientific Style)
-   Memberikan breathing room vertikal yang lega untuk pecahan (\frac), integral,
-   subscript/superscript, dan formula matematika Teknik Industri.
+   Presisi baseline alami KaTeX: sejajar sempurna dengan kurung (), teks biasa,
+   dan simbol tanpa melorot ke bawah.
    ========================================================================== */
 
-/* Formula Matematika Inline */
+/* Pastikan KaTeX inline sejajar alami dengan baseline teks */
 .katex {
-  font-size: 1.04em !important;
+  font-size: 1.02em;
   text-rendering: auto;
-  line-height: normal !important;
-  display: inline-block;
-  padding: 0.15em 0.2em;
-  vertical-align: -0.18em;
+  white-space: nowrap;
+}
+
+.katex .katex-html {
+  white-space: normal;
 }
 
 /* Formula Matematika Blok / Display ($$ ... $$) */
 .katex-display {
   display: block !important;
-  margin: 1.15rem 0 !important;
+  margin: 1.25rem 0 !important;
   padding: 0.85rem 1.25rem !important;
   background-color: #FFFFFF !important;
   border: 1px solid var(--border) !important;
@@ -96,29 +97,17 @@
 .katex-display > .katex {
   display: inline-block !important;
   text-align: initial !important;
-  padding: 0.25rem 0 !important;
-}
-
-/* Spacing Vertikal Pecahan (Fractions / \frac) */
-.katex .vlist-t {
-  border-collapse: collapse;
-}
-
-.katex .frac-line {
-  margin-top: 0.18em !important;
-  margin-bottom: 0.18em !important;
-  border-bottom-width: 0.06em !important;
+  padding: 0.2rem 0 !important;
+  white-space: nowrap;
 }
 
 /* Spacing Subscript & Superscript */
 .katex .msupsub {
   text-align: left;
-  margin-left: 0.06em;
 }
 
-/* Line-height aman untuk paragraf dan list yang memuat rumus */
-.prose p:has(.katex),
-.prose li:has(.katex) {
-  line-height: 1.85 !important;
-  margin-bottom: 0.75rem;
+/* Line-height aman untuk paragraf dan list yang memuat rumus matematika */
+.prose p,
+.prose li {
+  line-height: 1.75 !important;
 }
