@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
 
 interface DialogProps {
@@ -44,14 +43,15 @@ export function Dialog({
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          {/* Backdrop overlay */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4">
+          {/* Backdrop overlay (Low-End Optimized) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.18 }}
-            className="fixed inset-0 bg-black/45 backdrop-blur-sm"
+            transition={{ duration: 0.16, ease: "easeOut" }}
+            style={{ willChange: "opacity" }}
+            className="fixed inset-0 bg-black/45 backdrop-blur-[2px]"
             onClick={onClose}
             aria-hidden="true"
           />
@@ -59,16 +59,17 @@ export function Dialog({
           {/* Modal Container */}
           <motion.div
             ref={dialogRef}
-            initial={{ opacity: 0, scale: 0.96, y: 8 }}
+            initial={{ opacity: 0, scale: 0.97, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 6 }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-md rounded-2xl bg-surface border border-border/80 p-5 sm:p-6 shadow-2xl z-10"
+            exit={{ opacity: 0, scale: 0.97, y: 8 }}
+            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+            style={{ willChange: "transform, opacity" }}
+            className="relative w-full max-w-md rounded-2xl bg-surface border border-border/80 p-4 sm:p-5 shadow-2xl z-10 select-none overflow-hidden"
             role="dialog"
             aria-modal="true"
           >
             <div className="flex items-center justify-between pb-3 border-b border-border/60">
-              <h3 className="text-base font-semibold text-text-primary tracking-tight font-display">
+              <h3 className="text-sm sm:text-base font-semibold text-text-primary tracking-tight font-display">
                 {title}
               </h3>
               <button
@@ -82,12 +83,12 @@ export function Dialog({
             </div>
 
             {description && (
-              <p className="text-xs text-text-secondary mt-2.5 leading-relaxed">
+              <p className="text-xs text-text-secondary mt-2 leading-relaxed">
                 {description}
               </p>
             )}
 
-            <div className="mt-3.5">{children}</div>
+            <div className="mt-3">{children}</div>
 
             {footer && <div className="mt-4 pt-3 border-t border-border/60 flex justify-end gap-2.5">{footer}</div>}
           </motion.div>

@@ -69,8 +69,9 @@ export function Sidebar({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+              transition={{ duration: 0.16, ease: "easeOut" }}
+              style={{ willChange: "opacity" }}
+              className="fixed inset-0 bg-black/45 backdrop-blur-[2px]"
               onClick={onCloseMobile}
               aria-hidden="true"
             />
@@ -79,8 +80,9 @@ export function Sidebar({
               initial={{ x: -280 }}
               animate={{ x: 0 }}
               exit={{ x: -280 }}
-              transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-[280px] max-w-[85vw] h-full bg-surface border-r border-border/80 flex flex-col z-10 shadow-floating"
+              transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              style={{ willChange: "transform" }}
+              className="relative w-[280px] max-w-[85vw] h-full bg-surface border-r border-border/80 flex flex-col z-10 shadow-floating select-none"
             >
               {/* Mobile Sidebar Header */}
               <div className="p-3.5 border-b border-border/60 flex items-center gap-2">

@@ -135,9 +135,10 @@ export function MessageRow({
 
   return (
     <motion.div
-      initial={false}
+      initial={{ opacity: 0, y: 4 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.15, ease: "easeOut" }}
+      style={{ willChange: "transform, opacity" }}
       className={cn(
         "group w-full flex flex-col my-2 sm:my-2.5 transition-all select-text",
         isUser ? "items-end" : "items-start"
