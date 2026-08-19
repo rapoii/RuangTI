@@ -35,10 +35,12 @@ Dokumen ini ditujukan untuk agen AI (seperti Hermes, Claude Code, Cursor, Codex,
     4. `gcli/grok-4.6-high(xhigh)` — **High Effort**: Penalaran mendalam untuk simulasi & optimasi kompleks.
     5. `gcli/grok-4.6-xhigh(xhigh)` — **Extra High Effort**: Riset operasi tingkat lanjut & pembuktian matematis.
   - **Autentikasi**: Better Auth SSO Untirta (Google `@untirta.ac.id` & Microsoft `@student.untirta.ac.id` yang independen) + Email/Password.
-  - **Penyimpanan Dokumen (Zero-DB-Bloat Storage)**:
-    - File fisik (Word, Excel, Zip, Code, PDF, CSV, Gambar WebP) disimpan di disk server `uploads/documents/` dan `uploads/images/`.
+  - **Penyimpanan & Generator Dokumen (Zero-DB-Bloat Storage & Auto-Generator)**:
+    - File fisik (Word, Excel, PPT, Zip, Code, PDF, CSV, Gambar WebP) disimpan di disk server `uploads/documents/` dan `uploads/generated/`.
     - SQLite hanya menyimpan array JSON metadata ringkas (~60B per file).
     - Background task otomatis membersihkan (*auto-prune*) file yang berusia > 14 hari.
+    - **Binary File Generator Engine** (`backend/app/services/file_generator.py` & `routers/export.py`): Otomatis memproduksi file `.xlsx` (High-End Styling + Auto-Fit Width), `.docx` (Hierarchical Headings + Tables), `.pptx` (16:9 Modern Presentation Cards), dan `.pdf` (ReportLab Flowable Formal Print).
+    - **Interactive Download Cards** (`components/chat/FileDownloadCard.tsx`): Menampilkan kartu unduhan interaktif dengan 1-klik direct binary download di antarmuka chat.
 
 ---
 

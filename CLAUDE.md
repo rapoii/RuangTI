@@ -52,7 +52,9 @@ curl -s http://localhost:20128/v1/models
 
 - **Backend Services**:
   - `backend/app/routers/chat_9router.py`: Streaming SSE proxy ke 9Router dengan dynamic model routing & tag `<think>` handling.
-  - `backend/app/services/document_parser.py`: Ekstraksi teks & tabel instan dari Word, Excel, CSV, PDF, Zip, CAD, FlexSim, dan file source code.
+  - `backend/app/routers/export.py`: Router pembuatan & pengunduhan berkas fisik biner instan (`.xlsx`, `.docx`, `.pptx`, `.pdf`).
+  - `backend/app/services/file_generator.py`: Mesin generator dokumen dengan styling profesional (Excel high-end headers, Word hierarchical sections, PPT 16:9 widescreen cards, PDF ReportLab print layout).
+  - `backend/app/services/document_parser.py`: Ekstraksi teks & tabel instan dari Word, Excel, PowerPoint, CSV, PDF, Zip, CAD, FlexSim, dan file source code.
   - `backend/app/services/media_cleaner.py`: Async background worker untuk auto-pruning berkas lampiran > 14 hari.
   - `backend/knowledge/`: 434 Modul Knowledge Base Teknik Industri untuk konteks RAG.
 

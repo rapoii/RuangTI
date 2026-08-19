@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 
 from app.core.config import settings
 from app.core.database import init_db
-from app.routers import health, conversations, messages, chat, auth, upload
+from app.routers import health, conversations, messages, chat, auth, upload, export
 from app.services.media_cleaner import periodic_prune_task, prune_old_uploaded_images
 
 UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
@@ -56,6 +56,7 @@ app.include_router(conversations.router)
 app.include_router(messages.router)
 app.include_router(chat.router)
 app.include_router(upload.router)
+app.include_router(export.router)
 
 if __name__ == "__main__":
     import uvicorn

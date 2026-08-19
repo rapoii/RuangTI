@@ -102,22 +102,65 @@ def parse_csv_file(file_path: str, max_chars: int = MAX_TEXT_CHAR_LIMIT) -> str:
         return f"[Gagal membaca file CSV: {e}]"
 
 def parse_pdf_file(file_path: str, max_chars: int = MAX_TEXT_CHAR_LIMIT) -> str:
-    """Extracts plain text from PDF documents using pypdf."""
+    """Extracts plain text and tabular data from PDF documents using PyMuPDF (fitz) or pypdf fallback."""
     try:
-        from pypdf import PdfReader
-        reader = PdfReader(file_path)
+        import fitz  # PyMuPDF
+        doc = fitz.open(file_path)
         parts = []
-        for page_idx, page in enumerate(reader.pages):
-            text = page.extract_text()
+        for page_idx, page in enumerate(doc):
+            text = page.get_text("text").strip()
             if text:
-                parts.append(f"\n--- Halaman {page_idx + 1} ---\n{text.strip()}")
+                parts.append(f"\n--- Halaman {page_idx + 1} ---\n{text}")
             if sum(len(p) for p in parts) >= max_chars:
                 break
         full_text = "\n".join(parts)
         return full_text[:max_chars]
+    except Exception as e_fitz:
+        try:
+            from pypdf import PdfReader
+            reader = PdfReader(file_path)
+            parts = []
+            for page_idx, page in enumerate(reader.pages):
+                text = page.extract_text()
+                if text:
+                    parts.append(f"\n--- Halaman {page_idx + 1} ---\n{text.strip()}")
+                if sum(len(p) for p in parts) >= max_chars:
+                    break
+            full_text = "\n".join(parts)
+            return full_text[:max_chars]
+        except Exception as e_pypdf:
+            logger.error(f"Error parsing PDF {file_path}: fitz({e_fitz}), pypdf({e_pypdf})")
+            return f"[Gagal membaca dokumen PDF: {e_fitz}]"
+
+def parse_pptx_file(file_path: str, max_chars: int = MAX_TEXT_CHAR_LIMIT) -> str:
+    """Extracts text, slide titles, bullet points, and tables from PowerPoint (.pptx) presentations."""
+    try:
+        from pptx import Presentation
+        prs = Presentation(file_path)
+        parts = ["=== ANALISIS PRESENTASI POWERPOINT (.PPTX) ==="]
+        
+        for slide_idx, slide in enumerate(prs.slides, 1):
+            slide_parts = [f"\n--- Slide {slide_idx} ---"]
+            for shape in slide.shapes:
+                if shape.has_text_frame:
+                    for paragraph in shape.text_frame.paragraphs:
+                        text = paragraph.text.strip()
+                        if text:
+                            slide_parts.append(f"- {text}")
+                elif shape.has_table:
+                    slide_parts.append("[Tabel Slide]")
+                    for row in shape.table.rows:
+                        row_vals = [c.text.strip().replace("\n", " ") for c in row.cells]
+                        slide_parts.append("| " + " | ".join(row_vals) + " |")
+                        
+            parts.append("\n".join(slide_parts))
+            if sum(len(p) for p in parts) >= max_chars:
+                break
+                
+        return "\n".join(parts)[:max_chars]
     except Exception as e:
-        logger.error(f"Error parsing PDF {file_path}: {e}")
-        return f"[Gagal membaca dokumen PDF: {e}]"
+        logger.error(f"Error parsing PPTX {file_path}: {e}")
+        return f"[Gagal membaca file presentasi PowerPoint: {e}]"
 
 # ---------------------------------------------------------------------------
 # 3. Archive Files (ZIP, TAR, GZ, 7Z)
@@ -520,6 +563,8 @@ def extract_document_content(file_path: str, original_filename: str) -> str:
     # 1. Office & Text Docs
     if ext in ["docx"]:
         parsed = parse_docx_file(file_path)
+    elif ext in ["pptx", "ppt"]:
+        parsed = parse_pptx_file(file_path)
     elif ext in ["xlsx", "xls"]:
         parsed = parse_excel_file(file_path)
     elif ext in ["csv"]:

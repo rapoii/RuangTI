@@ -37,6 +37,15 @@ Karakteristik & Prinsip Menjawab:
    - **Langkah Komputasi & Solusi** (Computational Steps & Solution)
    - **Interpretasi & Rekomendasi Manajerial / Implementasi Lapangan** (Interpretation & Managerial Recommendations)
    *(Catatan: Tidak perlu menuliskan daftar pustaka atau sitasi teks manual di akhir jawaban, karena seluruh kartu sumber web/jurnal sudah otomatis ditampilkan oleh sistem di kartu sumber atas).*
+
+6. Kemampuan Ekspor & Pembuatan File Fisik (Excel, Word, PPT, PDF Generator Protocol):
+   - Ketika pengguna meminta dibuatkan atau dieditkan file Excel (.xlsx), Word (.docx), PowerPoint (.pptx), atau PDF (.pdf), berikan penjelasan dan tabel di teks chat seperti biasa.
+   - DI BAGIAN PALING AKHIR PESAN (tanpa markdown backtick), SERTAKAN TAG METADATA PEMBUATAN FILE:
+     * Untuk Excel: `<!--RUANGTI_GENERATE_FILE:{"file_type":"excel","filename":"Rekap_Stok.xlsx","title":"Judul Tabel","headers":["Kolom A","Kolom B"],"rows":[["Val 1","Val 2"]]}-->`
+     * Untuk Word: `<!--RUANGTI_GENERATE_FILE:{"file_type":"docx","filename":"Laporan.docx","title":"Judul Dokumen","sections":[{"heading":"Bab 1","paragraphs":["Teks paragraf..."],"bullets":["Poin 1"]}]}-->`
+     * Untuk PowerPoint: `<!--RUANGTI_GENERATE_FILE:{"file_type":"pptx","filename":"Presentasi.pptx","title":"Judul Slide Utama","subtitle":"Subjudul","slides":[{"title":"Slide 1","points":["Poin A","Poin B"]}]}-->`
+     * Untuk PDF: `<!--RUANGTI_GENERATE_FILE:{"file_type":"pdf","filename":"Laporan_Resmi.pdf","title":"Judul Laporan","sections":[{"heading":"Bab 1","paragraphs":["Teks..."]}]}-->`
+   - Sistem secara otomatis akan memproses tag tersebut menjadi file fisik nyata dan menampilkan tombol unduhan langsung kepada pengguna.
 """
 
 

@@ -7,6 +7,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import "katex/dist/katex.min.css";
 import { CodeBlock } from "./CodeBlock";
+import { FileDownloadCard, GenerateFileMeta } from "./FileDownloadCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -24,6 +25,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
   // Extract WebSources meta if present
   let cleanContent = content;
   let webSources: WebSourceMeta[] = [];
+  let generatedFiles: GenerateFileMeta[] = [];
 
   const sourceMatch = cleanContent.match(/<!--WEBSOURCES:(.*?)-->/);
   if (sourceMatch) {
@@ -34,6 +36,21 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
       // ignore
     }
   }
+
+  // Extract RUANGTI_GENERATE_FILE meta if present
+  const fileRegex = /<!--RUANGTI_GENERATE_FILE:(.*?)-->/g;
+  let fileMatch;
+  while ((fileMatch = fileRegex.exec(cleanContent)) !== null) {
+    try {
+      const parsedFileMeta = JSON.parse(fileMatch[1]);
+      if (parsedFileMeta && parsedFileMeta.file_type) {
+        generatedFiles.push(parsedFileMeta);
+      }
+    } catch (e) {
+      console.warn("Failed to parse RUANGTI_GENERATE_FILE meta:", e);
+    }
+  }
+  cleanContent = cleanContent.replace(fileRegex, "");
 
   // Helper untuk mendapatkan favicon/domain
   const getDomain = (urlStr: string) => {
@@ -285,6 +302,15 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
       >
         {processedContent}
       </ReactMarkdown>
+
+      {/* Generated File Download Cards */}
+      {generatedFiles.length > 0 && (
+        <div className="mt-4 space-y-3">
+          {generatedFiles.map((fileMeta, fIdx) => (
+            <FileDownloadCard key={fIdx} meta={fileMeta} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

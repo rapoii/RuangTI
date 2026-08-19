@@ -48,6 +48,10 @@ venv/
 *.tsbuildinfo
 next-env.d.ts
 
+# Uploads directory
+backend/uploads/
+uploads/
+
 # CodeGraph & Tool Index Data
 .codegraph/
 .hermes/
