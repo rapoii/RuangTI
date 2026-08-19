@@ -134,7 +134,7 @@ export default function DocsPage() {
         </AnimatePresence>
 
         {/* Center Column: Main Article Content */}
-        <main className="flex-1 min-w-0 pb-16">
+        <main className="flex-1 min-w-0 pb-1 sm:pb-2">
           <DocsContent
             article={currentArticle}
             onNavigateArticle={handleSelectArticle}

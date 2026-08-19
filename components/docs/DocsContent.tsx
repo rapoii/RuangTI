@@ -130,7 +130,7 @@ export function DocsContent({
   };
 
   return (
-    <article className="w-full max-w-4xl mx-auto py-6 sm:py-8 px-4 sm:px-6 md:px-8 space-y-8">
+    <article className="w-full max-w-4xl mx-auto pt-4 sm:pt-6 pb-2 px-4 sm:px-6 md:px-8 space-y-5 sm:space-y-6">
       {/* Header Artikel */}
       <div className="space-y-3 pb-6 border-b border-border/40">
         <div className="flex flex-wrap items-center gap-2">
@@ -251,7 +251,7 @@ export function DocsContent({
       </div>
 
       {/* Navigasi Artikel Sebelumnya & Berikutnya */}
-      <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="pt-4 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4">
         {prevArticle ? (
           <button
             type="button"
