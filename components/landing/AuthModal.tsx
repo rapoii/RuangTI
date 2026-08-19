@@ -424,7 +424,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   </div>
 
                   {errorMessage && (
-                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600 dark:text-red-400">
+                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600">
                       <AlertCircle size={15} className="shrink-0 mt-0.5" />
                       <span>{errorMessage}</span>
                     </div>
@@ -593,7 +593,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                   </div>
 
                   {errorMessage && (
-                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600 dark:text-red-400">
+                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600">
                       <AlertCircle size={15} className="shrink-0 mt-0.5" />
                       <span>{errorMessage}</span>
                     </div>
@@ -608,7 +608,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                       <Loader2 size={16} className="animate-spin text-slate-950" />
                     ) : (
                       <>
-                        <span>Buat Akun Civitas Untirta</span>
+                        <span>Buat Akun RuangTI</span>
                         <Sparkles size={14} />
                       </>
                     )}

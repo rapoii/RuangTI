@@ -43,8 +43,8 @@ const SECONDARY_FEATURES = [
   },
   {
     icon: Cpu,
-    title: "Multi-Model AI Selector",
-    desc: "Dukungan TI-Optima Pro untuk analisis mendalam dan TI-Lean Speed untuk ringkasan cepat.",
+    title: "Multi-Tier Thinking Effort",
+    desc: "Dukungan 5 tingkat penalaran: Non-Thinking cepat hingga Extra High Effort untuk kalkulasi mendalam.",
   },
   {
     icon: Layers,
