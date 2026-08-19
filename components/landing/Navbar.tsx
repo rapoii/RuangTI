@@ -5,6 +5,7 @@ import { useTheme } from "@/hooks/use-theme";
 import { Moon, Sun, ArrowRight, User } from "lucide-react";
 import { UserProfile } from "@/lib/types";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface NavbarProps {
   profile: UserProfile;
@@ -15,7 +16,12 @@ export function Navbar({ profile, onOpenLogin }: NavbarProps) {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 inset-x-0 z-40 bg-canvas/85 backdrop-blur-md border-b border-border/50">
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed top-0 inset-x-0 z-40 bg-canvas/85 backdrop-blur-md border-b border-border/50"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo & Brand */}
         <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
@@ -26,7 +32,8 @@ export function Navbar({ profile, onOpenLogin }: NavbarProps) {
             <span className="font-display font-bold text-sm sm:text-base tracking-tight text-text-primary">
               Ruang<span className="text-accent">TI</span>
             </span>
-            <span className="text-[9px] sm:text-[10px] text-text-secondary -mt-1 tracking-wider uppercase font-mono">
+            {/* FIX: undersized-ui-text — 10px → 11px */}
+            <span className="text-[11px] text-text-secondary -mt-0.5 tracking-wider font-mono">
               Engineering AI
             </span>
           </div>
@@ -46,7 +53,7 @@ export function Navbar({ profile, onOpenLogin }: NavbarProps) {
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <button
             onClick={toggleTheme}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-border bg-surface text-text-secondary hover:text-text-primary hover:border-accent/40 flex items-center justify-center transition-all"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl border border-border bg-surface text-text-secondary hover:text-text-primary hover:border-accent/40 flex items-center justify-center transition-all active:scale-95"
             title="Ganti Tema"
           >
             {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
@@ -55,7 +62,7 @@ export function Navbar({ profile, onOpenLogin }: NavbarProps) {
           {profile.isLoggedIn ? (
             <Link
               href="/chat"
-              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-accent text-slate-950 font-semibold text-xs sm:text-sm hover:brightness-110 shadow-sm shadow-accent/20 transition-all"
+              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-accent text-slate-950 font-semibold text-xs sm:text-sm hover:brightness-110 shadow-sm shadow-accent/20 transition-all active:scale-95"
             >
               <span className="hidden sm:inline">Buka Workspace</span>
               <span className="sm:hidden">Workspace</span>
@@ -64,7 +71,7 @@ export function Navbar({ profile, onOpenLogin }: NavbarProps) {
           ) : (
             <button
               onClick={onOpenLogin}
-              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-accent text-slate-950 font-semibold text-xs sm:text-sm hover:brightness-110 shadow-sm shadow-accent/20 transition-all"
+              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-accent text-slate-950 font-semibold text-xs sm:text-sm hover:brightness-110 shadow-sm shadow-accent/20 transition-all active:scale-95"
             >
               <User size={14} />
               <span>Masuk</span>
@@ -72,6 +79,6 @@ export function Navbar({ profile, onOpenLogin }: NavbarProps) {
           )}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
