@@ -54,7 +54,7 @@ export function ThinkingSelector({
             : "text-text-secondary hover:text-text-primary hover:bg-surface-hover border border-transparent",
           disabled && "opacity-50 cursor-not-allowed"
         )}
-        title={`Model: ${selectedOption.modelId} (${selectedOption.label})`}
+        title={`Tingkat Penalaran: ${selectedOption.label}`}
         aria-label="Pilih Thinking Effort"
       >
         {currentEffort === "none" ? (
@@ -87,8 +87,8 @@ export function ThinkingSelector({
                 <Brain className="w-3.5 h-3.5 text-accent" />
                 Thinking Effort Mode
               </span>
-              <span className="text-[10px] text-text-tertiary font-mono">
-                grok-4.6
+              <span className="text-[10px] text-accent font-medium px-1.5 py-0.5 rounded-md bg-accent/10 border border-accent/20">
+                RuangTI Engine
               </span>
             </div>
             <p className="text-[11px] text-text-secondary mt-0.5 leading-tight">

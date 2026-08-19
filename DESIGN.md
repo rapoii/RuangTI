@@ -54,13 +54,13 @@ RuangTI menggunakan 3 font Google via `next/font/google`:
 - **20px / 24px (`rounded-2xl` & `rounded-3xl`)**: Composer input dock, user chat bubble.
 
 ---
-
-## 6. Model & Thinking Effort Hierarchy
-1. **Non-Thinking (Default)**: `gcli/grok-4.6(xhigh)` — Respon cepat & instan.
-2. **Low Effort**: `gcli/grok-4.6-low(xhigh)` — Penalaran ringan untuk kueri sederhana.
-3. **Medium Effort**: `gcli/grok-4.6-medium(xhigh)` — Penalaran berimbang untuk analisis terstruktur.
-4. **High Effort**: `gcli/grok-4.6-high(xhigh)` — Penalaran mendalam untuk optimasi & simulasi kompleks.
-5. **Extra High Effort**: `gcli/grok-4.6-xhigh(xhigh)` — Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis.
+### 5. Multi-Tier Thinking Effort Selector
+Tersedia 5 level reasoning model RuangTI Neural Engine:
+1. **Non-Thinking (Default)**: Respon cepat & instan tanpa penalaran bertahap.
+2. **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas.
+3. **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur.
+4. **High Effort**: Penalaran mendalam untuk optimasi sistem & simulasi kompleks.
+5. **Extra High Effort**: Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis.
 
 ---
 
