@@ -6,6 +6,7 @@ import { Message } from "@/lib/types";
 import { MarkdownContent } from "./MarkdownContent";
 import { ActionBar } from "./ActionBar";
 import { TheGlow } from "./TheGlow";
+import { ThinkingBlock } from "./ThinkingBlock";
 import { cn } from "@/lib/utils";
 import {
   Cpu,
@@ -37,6 +38,34 @@ export function MessageRow({
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(message.content);
   const isUser = message.role === "user";
+
+  // Helper function to extract <think>...</think> blocks from content
+  const extractThinkingAndContent = (text: string) => {
+    let thinking = "";
+    let main = text;
+    let isThinkingInProgress = false;
+
+    if (text.includes("<think>")) {
+      const thinkStart = text.indexOf("<think>") + 7;
+      const thinkEnd = text.indexOf("</think>");
+
+      if (thinkEnd !== -1) {
+        thinking = text.substring(thinkStart, thinkEnd).trim();
+        main = (text.substring(0, text.indexOf("<think>")) + text.substring(thinkEnd + 8)).trim();
+      } else {
+        // Tag <think> is still open (streaming)
+        thinking = text.substring(thinkStart).trim();
+        main = text.substring(0, text.indexOf("<think>")).trim();
+        isThinkingInProgress = true;
+      }
+    }
+
+    return { thinking, main, isThinkingInProgress };
+  };
+
+  const { thinking: thinkingText, main: cleanedContent, isThinkingInProgress } = !isUser && message.content
+    ? extractThinkingAndContent(message.content)
+    : { thinking: "", main: message.content, isThinkingInProgress: false };
 
   const handleSaveEdit = () => {
     if (editText.trim() && editText !== message.content && onEdit) {
@@ -218,13 +247,23 @@ export function MessageRow({
 
           {/* Assistant Markdown Content */}
           <div className="w-full text-xs sm:text-sm text-text-primary leading-relaxed relative">
-            {message.content ? (
+            {/* Render Thinking Block if available */}
+            {thinkingText && (
+              <ThinkingBlock
+                content={thinkingText}
+                isStreaming={isStreaming && isThinkingInProgress}
+              />
+            )}
+
+            {cleanedContent ? (
               <>
-                <MarkdownContent content={message.content} />
-                {isStreaming && (
+                <MarkdownContent content={cleanedContent} />
+                {isStreaming && !isThinkingInProgress && (
                   <span className="inline-block w-2 h-4 ml-1 align-middle bg-accent rounded-xs animate-pulse" />
                 )}
               </>
+            ) : isThinkingInProgress ? (
+              null
             ) : (
               <div className="py-2">
                 <TheGlow message="RuangTI sedang merumuskan solusi teknik industri..." />

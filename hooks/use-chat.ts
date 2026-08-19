@@ -23,6 +23,7 @@ export interface SendMessageOptions {
   webSearch?: boolean;
   images?: string[];
   documents?: AttachedDocument[];
+  model_id?: string;
 }
 
 export function useChat({ conversationId, initialMessages = [], onMessagesChange, onUpdateTitle }: UseChatProps) {
@@ -105,7 +106,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
       abortControllerRef.current = controller;
 
       try {
-        const targetModel = selectedModel || "gcli/grok-4.6-high(xhigh)";
+        const targetModel = options?.model_id || customModel || selectedModel || "gcli/grok-4.6(xhigh)";
         const res = await fetch(`${getApiBase()}/api/chat/stream`, {
           method: "POST",
           headers: {

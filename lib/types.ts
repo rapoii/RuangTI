@@ -1,5 +1,59 @@
 export type Role = "user" | "assistant" | "system";
 
+export type ThinkingEffort = "none" | "low" | "medium" | "high" | "xhigh";
+
+export interface ThinkingOption {
+  id: ThinkingEffort;
+  modelId: string;
+  label: string;
+  shortLabel: string;
+  description: string;
+  badge: string;
+}
+
+export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
+  {
+    id: "none",
+    modelId: "gcli/grok-4.6(xhigh)",
+    label: "Non-Thinking (Default)",
+    shortLabel: "Non-Thinking",
+    description: "Model gcli/grok-4.6(xhigh) tanpa proses penalaran bertahap",
+    badge: "Cepat"
+  },
+  {
+    id: "low",
+    modelId: "gcli/grok-4.6-low(xhigh)",
+    label: "Low Effort",
+    shortLabel: "Low",
+    description: "Model gcli/grok-4.6-low(xhigh) penalaran ringan untuk kueri ringkas",
+    badge: "Low"
+  },
+  {
+    id: "medium",
+    modelId: "gcli/grok-4.6-medium(xhigh)",
+    label: "Medium Effort",
+    shortLabel: "Medium",
+    description: "Model gcli/grok-4.6-medium(xhigh) penalaran terstruktur & seimbang",
+    badge: "Medium"
+  },
+  {
+    id: "high",
+    modelId: "gcli/grok-4.6-high(xhigh)",
+    label: "High Effort",
+    shortLabel: "High",
+    description: "Model gcli/grok-4.6-high(xhigh) penalaran mendalam untuk optimasi rumit",
+    badge: "High"
+  },
+  {
+    id: "xhigh",
+    modelId: "gcli/grok-4.6-xhigh(xhigh)",
+    label: "Extra High Effort",
+    shortLabel: "X-High",
+    description: "Model gcli/grok-4.6-xhigh(xhigh) komputasi mendalam & pembuktian matematis",
+    badge: "X-High"
+  }
+];
+
 export type ModelOption = "ti-optima" | "ti-lean" | "ti-sim";
 
 export type Theme = "light" | "dark";

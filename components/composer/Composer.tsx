@@ -17,7 +17,8 @@ import {
 import { cn } from "@/lib/utils";
 import { compressImageFile } from "@/lib/image-compressor";
 import { uploadImageToBackend, uploadDocumentToBackend } from "@/lib/api-client";
-import { AttachedDocument } from "@/lib/types";
+import { AttachedDocument, ThinkingEffort, THINKING_EFFORT_OPTIONS } from "@/lib/types";
+import { ThinkingSelector } from "./ThinkingSelector";
 
 interface ComposerProps {
   onSendMessage: (
@@ -26,6 +27,7 @@ interface ComposerProps {
       webSearch?: boolean;
       images?: string[];
       documents?: AttachedDocument[];
+      model_id?: string;
     }
   ) => void;
   onStopStreaming: () => void;
@@ -55,6 +57,28 @@ export function Composer({
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [webSearchEnabled, setWebSearchEnabled] = useState(false);
+  const [thinkingEffort, setThinkingEffort] = useState<ThinkingEffort>("none");
+
+  // Load saved thinking effort preference from localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("ruangti_thinking_effort") as ThinkingEffort;
+      if (saved && ["none", "low", "medium", "high", "xhigh"].includes(saved)) {
+        setThinkingEffort(saved);
+      }
+    } catch {
+      // Ignore localStorage errors
+    }
+  }, []);
+
+  const handleChangeEffort = (effort: ThinkingEffort) => {
+    setThinkingEffort(effort);
+    try {
+      localStorage.setItem("ruangti_thinking_effort", effort);
+    } catch {
+      // Ignore
+    }
+  };
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -209,10 +233,15 @@ export function Composer({
         }
       }
 
+      // Resolve model based on selected thinking effort
+      const currentThinkingOption = THINKING_EFFORT_OPTIONS.find((opt) => opt.id === thinkingEffort);
+      const selectedModelId = currentThinkingOption ? currentThinkingOption.modelId : "gcli/grok-4.6(xhigh)";
+
       onSendMessage(text.trim(), {
         webSearch: webSearchEnabled,
         images: uploadedUrls.length > 0 ? uploadedUrls : undefined,
         documents: uploadedDocuments.length > 0 ? uploadedDocuments : undefined,
+        model_id: selectedModelId,
       });
 
       setText("");
@@ -361,6 +390,13 @@ export function Composer({
           >
             <Globe className="w-4 h-4" />
           </button>
+
+          {/* Thinking Effort Selector Pill */}
+          <ThinkingSelector
+            currentEffort={thinkingEffort}
+            onChangeEffort={handleChangeEffort}
+            disabled={disabled || isStreaming}
+          />
 
           {/* Send / Stop Action Button */}
           <div className="shrink-0 mb-0.5">

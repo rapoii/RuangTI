@@ -279,17 +279,18 @@ async def stream_grok_ai_response(
     else:
         messages.append({"role": "user", "content": prompt})
 
+    target_model = model_name if model_name else ROUTER_9_MODEL
     payload = {
-        "model": ROUTER_9_MODEL,
+        "model": target_model,
         "messages": messages,
         "stream": True,
         "temperature": 0.2,
     }
 
     url = f"{ROUTER_9_BASE_URL}/chat/completions"
-    logger.info(f"Sending payload to 9Router with {len(messages)} messages. Last msg content types: {[type(m.get('content')) for m in messages]}")
+    logger.info(f"Sending payload to 9Router with model '{target_model}' and {len(messages)} messages.")
 
-    async with httpx.AsyncClient(timeout=90.0) as client:
+    async with httpx.AsyncClient(timeout=120.0) as client:
         try:
             # Emit websources meta tag SEBELUM AI response streaming dimulai
             if websources_meta_tag:
@@ -301,21 +302,37 @@ async def stream_grok_ai_response(
                     yield f"\n\n*(Terjadi kendala pada 9Router AI Gateway [Status {response.status_code}]: {err_text.decode('utf-8', errors='ignore')})*"
                     return
 
+                in_reasoning = False
                 async for line in response.aiter_lines():
                     if not line:
                         continue
                     if line.startswith("data: "):
                         data_str = line[6:].strip()
                         if data_str == "[DONE]":
+                            if in_reasoning:
+                                yield "</think>\n\n"
+                                in_reasoning = False
                             break
                         try:
                             data_json = json.loads(data_str)
                             delta = data_json.get("choices", [{}])[0].get("delta", {})
                             content = delta.get("content", "")
-                            if content:
+                            reasoning = delta.get("reasoning_content", "") or delta.get("thinking", "")
+                            
+                            if reasoning:
+                                if not in_reasoning:
+                                    yield "<think>\n"
+                                    in_reasoning = True
+                                yield reasoning
+                            elif content:
+                                if in_reasoning:
+                                    yield "\n</think>\n\n"
+                                    in_reasoning = False
                                 yield content
                         except Exception:
                             pass
+                if in_reasoning:
+                    yield "\n</think>\n\n"
         except Exception as e:
             logger.error(f"Error streaming from 9Router: {e}")
             yield f"\n\n*(Koneksi terputus saat streaming dari 9Router Gateway: {str(e)})*"
