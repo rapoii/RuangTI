@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import base64
 import httpx
 import asyncio
 import logging
@@ -201,15 +202,26 @@ async def stream_grok_ai_response(
         else:
             content_items.append({"type": "text", "text": "Tolong analisis dan berikan solusi untuk gambar teknik industri ini."})
 
-        uploads_base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "uploads")
+        # Base directory of backend
+        backend_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
         for img in images:
             img_url = img
-            # If relative URL pointing to local uploads, read file and convert to base64
-            if img.startswith("/uploads/"):
+            # If relative URL pointing to local uploads, resolve and convert to data URI
+            if img.startswith("/uploads/") or img.startswith("uploads/"):
                 rel_path = img.lstrip("/")
-                full_img_path = os.path.join(os.path.dirname(uploads_base_dir), rel_path)
-                if os.path.exists(full_img_path):
+                candidate_paths = [
+                    os.path.join(backend_root, rel_path),
+                    os.path.join(backend_root, "backend", rel_path),
+                    os.path.abspath(rel_path)
+                ]
+                full_img_path = None
+                for p in candidate_paths:
+                    if os.path.exists(p):
+                        full_img_path = p
+                        break
+
+                if full_img_path and os.path.exists(full_img_path):
                     try:
                         ext = full_img_path.split(".")[-1].lower()
                         mime_type = f"image/{ext}" if ext in ["png", "jpeg", "webp", "gif"] else "image/jpeg"
@@ -219,7 +231,9 @@ async def stream_grok_ai_response(
                             b64 = base64.b64encode(f.read()).decode("utf-8")
                         img_url = f"data:{mime_type};base64,{b64}"
                     except Exception as e:
-                        logger.warning(f"Failed to read local upload image {full_img_path}: {e}")
+                        logger.error(f"Failed to read and base64-encode local upload image {full_img_path}: {e}")
+                else:
+                    logger.error(f"Local upload image not found on disk: {img} (searched {candidate_paths})")
 
             content_items.append({
                 "type": "image_url",
@@ -237,6 +251,7 @@ async def stream_grok_ai_response(
     }
 
     url = f"{ROUTER_9_BASE_URL}/chat/completions"
+    logger.info(f"Sending payload to 9Router with {len(messages)} messages. Last msg content types: {[type(m.get('content')) for m in messages]}")
 
     async with httpx.AsyncClient(timeout=90.0) as client:
         try:
