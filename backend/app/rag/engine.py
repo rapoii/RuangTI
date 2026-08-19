@@ -322,6 +322,21 @@ IE_THESAURUS = {
     "ergonomi kognitif": ["mental workload", "nasa-tlx", "situational awareness", "eye tracking", "operator 4.0"],
     "tpm 4.0": ["prescriptive maintenance", "digital machine health index", "composite health index", "chi", "oee 4.0"],
     "smart factory": ["arsitektur smart factory", "unified namespace", "uns", "industrial metaverse", "smart factory maturity index", "sfmi", "zero emission plant"],
+    "hse smk3 iso45001": ["smk3", "pp 50/2012", "iso 45001", "hiradc", "ibprp", "ltir", "trir", "severity rate", "scat", "loto", "izin kerja ptw", "segitiga heinrich"],
+    "higiene industri": ["higiene industri", "permenaker 5/2018", "dosis kebisingan", "twa kebisingan", "isbb", "wbgt", "debu gravimetri", "intensitas penerangan lux", "acgih tlv"],
+    "rekayasa lingkungan b3": ["limbah b3", "pp 22/2021", "tps b3", "festronik", "ipal", "wwtp", "hrt", "rasio f/m", "proper klhk", "ghg protocol", "scope 1 2 3"],
+    "drafter gdt asme": ["gd&t", "asme y14.5", "iso 1101", "feature control frame", "datum 3-2-1", "tolerance stack-up", "worst case", "rss", "bonus tolerance", "mmc", "lmc"],
+    "dfma plant piping": ["dfma", "design for assembly", "boothroyd dewhurst", "dfa index", "sheet metal k-factor", "bend allowance", "asme b31.3", "p&id", "isa 5.1", "darcy-weisbach"],
+    "warehouse slotting wms": ["warehouse management system", "wms", "slotting optimization", "coi index", "cube utilization", "abc velocity", "order picking", "s-shape routing", "ira cycle counting"],
+    "logistik tms vrp": ["transportation management system", "tms", "clarke-wright savings", "vrp", "cvrp", "mhe sizing", "forklift sizing", "antrean m/m/c", "cold chain", "mkt mean kinetic temperature"],
+    "ppic s&op mps": ["ppic", "sales and operations planning", "s&op", "agregat planning", "mps", "master production schedule", "pab", "atp", "rccp", "bill of resources", "silver-meal", "wagner-whitin"],
+    "penjadwalan toc dbr": ["finite capacity scheduling", "theory of constraints", "toc", "drum buffer rope", "dbr", "buffer management", "algoritma johnson", "dispatching rules", "spt", "edd", "critical ratio"],
+    "qa qc iatf core tools": ["iatf 16949", "apqp", "ppap", "ppap level 3", "msa gage r&r", "gage r&r anova", "ndc", "process capability", "cp cpk", "pp ppk", "aiag-vda fmea", "action priority"],
+    "sampling penerimaan 8d": ["sampling penerimaan", "acceptance sampling", "iso 2859-1", "mil-std-105e", "kurva oc", "aql", "ltpd", "aoq", "aoql", "8d problem solving", "5w2h", "5-why", "fishbone 6m", "capa"],
+    "strategic procurement kraljic": ["strategic procurement", "matriks kraljic", "strategic items", "bottleneck items", "leverage items", "tco", "total cost of ownership", "incoterms 2020", "fob", "cif", "ddp", "exw", "evaluasi vendor"],
+    "lean ie vsm smed": ["continuous improvement", "lean ie", "vsm", "value stream mapping", "takt time", "production lead time", "smed", "changeover", "yamazumi chart", "maynard most", "basic most", "tmu"],
+    "maintenance rcm ii": ["reliability centered maintenance", "rcm ii", "sae ja1011", "distribusi weibull", "modulus weibull beta", "characteristic life eta", "hazard rate", "mtbf", "ketersediaan ao", "iso 55001"],
+    "tpm jishu hozen oee": ["total productive maintenance", "tpm", "jishu hozen", "7 langkah jishu hozen", "autonomous maintenance", "oee", "six big losses", "red tag fuguai", "soc iac", "teep"],
 }
 
 
