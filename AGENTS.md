@@ -90,3 +90,16 @@ projects/web/RuangTI/
 1. **Type-Check**: Jalankan `npx tsc --noEmit` -> harus **0 error**.
 2. **Build Test**: Pastikan aplikasi dapat di-build dengan lancar (`npm run build`).
 3. **Verifikasi Visual**: Uji menggunakan browser Playwright MCP pada resolusi desktop dan mobile, lalu periksa hasil tangkapan layarnya.
+
+---
+
+## 5. Rencana & Spesifikasi Ekstraksi CAD/CAM/CAE (Roadmap)
+- **2D CAD (AutoCAD / DraftSight / BricsCAD)**:
+  - Format `.dwg`: Engine `ezdwg` (Rust core + PyO3) untuk membaca entitas modelspace, etiket, dimensi, dan teks.
+  - Format `.dxf`: Engine `ezdxf` (MIT) untuk parsing geometri vektor dan layer.
+- **3D Parametric CAD (SolidWorks / Inventor / Fusion360 / Creo / NX / CATIA)**:
+  - Format `.step` / `.stp`: Standar ISO-10303-21 via `steputils` untuk membaca nama part, hierarki assembly, dan spesifikasi material.
+  - Format `.stl` / `.obj`: Mesh analysis via `trimesh` untuk membaca volume 3D printing dan bounding box.
+- **Otomasi CNC & CAM (Mastercam / SolidCAM / Fusion CAM)**:
+  - Format `.gcode` / `.nc` / `.tap`: Parser lintasan pahat (G0/G1/G2), spindle speed, dan feed rate.
+
