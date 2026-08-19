@@ -130,7 +130,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "langkah-1-autentikasi",
               title: "1. Masuk & Autentikasi Akun",
               paragraphs: [
-                "Kunjungi halaman beranda RuangTI dan klik tombol 'Masuk' di sudut kanan atas.",
+                "Kunjungi halaman beranda RuangTI dan klik tombol **Masuk** di sudut kanan atas.",
                 "Anda dapat mendaftar menggunakan email kampus UNTIRTA atau akun personal. Sistem autentikasi Better Auth menjamin keamanan sesi dengan enkripsi password standar industri (bcrypt).",
               ],
             },
@@ -157,10 +157,10 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               paragraphs: [
                 "Klik ikon Paperclip di sebelah kiri composer untuk melampirkan berkas.",
                 "RuangTI secara otomatis mengekstrak konten teknis berkas Anda:",
-                "- Berkas CAD (.dwg, .dxf, .step, .stl): Ekstraksi geometri, layer, volume bounding box, dan entitas gambar.",
-                "- Berkas Simulasi FlexSim (.fsm, .fsx): Dekompresi biner gzip 0x48 dan ekstraksi hirarki Source, Queue, Processor, Sink, dan waktu siklus.",
-                "- Berkas Tabular (.xlsx, .csv): Ekstraksi ringkasan dataset, jumlah kolom/baris, dan sampel data.",
-                "- Berkas Gambar (.png, .jpg, .webp): Otomatis dikompresi di sisi klien via Canvas menjadi WebP 85KB sebelum dikirim.",
+                "- Berkas CAD (`.dwg`, `.dxf`, `.step`, `.stl`): Ekstraksi geometri, layer, volume bounding box, dan entitas gambar.",
+                "- Berkas Simulasi FlexSim (`.fsm`, `.fsx`): Dekompresi biner gzip 0x48 dan ekstraksi hirarki Source, Queue, Processor, Sink, dan waktu siklus.",
+                "- Berkas Tabular (`.xlsx`, `.csv`): Ekstraksi ringkasan dataset, jumlah kolom/baris, dan sampel data.",
+                "- Berkas Gambar (`.png`, `.jpg`, `.webp`): Otomatis dikompresi di sisi klien via Canvas menjadi WebP 85KB sebelum dikirim.",
               ],
             },
             {
@@ -200,13 +200,13 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "konsep-thinking-tier",
               title: "Konsep Multi-Tier Thinking Effort",
               paragraphs: [
-                "Dalam rekayasa sistem industri, tidak semua pertanyaan membutuhkan kedalaman analisis yang sama. Pertanyaan definisi singkat seperti 'Apa kepanjangan OEE?' dapat diselesaikan seketika, sementara perancangan jadwal finite capacity dengan algoritma Shifting Bottleneck membutuhkan waktu penalaran mendalam untuk mengevaluasi batasan waktu luang (*slack time*).",
+                "Dalam rekayasa sistem industri, tidak semua pertanyaan membutuhkan kedalaman analisis yang sama. Pertanyaan definisi singkat seperti *\"Apa kepanjangan OEE?\"* dapat diselesaikan seketika, sementara perancangan jadwal finite capacity dengan algoritma Shifting Bottleneck membutuhkan waktu penalaran mendalam untuk mengevaluasi batasan waktu luang (*slack time*).",
                 "Dengan selector Thinking Effort, pengguna memiliki kendali penuh atas trade-off antara kecepatan respon (*latency*) dan kedalaman analisis (*thoroughness*).",
               ],
               callout: {
                 type: "tip",
                 title: "Tips Produktivitas",
-                message: "Gunakan tier 'Balanced' untuk 80% kebutuhan harian Anda. Tingkatkan ke 'Deep' atau 'Ultra Deep' saat menangani kasus multi-kriteria atau laporan resmi.",
+                message: "Gunakan tier **Balanced** untuk 80% kebutuhan harian Anda. Tingkatkan ke **Deep** atau **Ultra Deep** saat menangani kasus multi-kriteria atau laporan resmi.",
               },
             },
             {
@@ -308,9 +308,9 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               title: "Visual Badging pada Pesan Chat",
               paragraphs: [
                 "Di antarmuka pesan chat, setiap berkas teknik yang dilampirkan akan ditampilkan dengan badge visual yang intuitif:",
-                "- Berkas CAD 2D/3D: Badge oranye dengan ikon Kubus (`Box`) dan label 'CAD Drawing / Model'.",
-                "- Berkas CNC G-Code: Badge hijau dengan ikon Terminal (`Terminal`) dan label 'CNC Program'.",
-                "- Berkas FlexSim: Badge ungu dengan ikon Gelombang Sinyal (`Activity`) dan label 'FlexSim Simulation Model'.",
+                "- Berkas CAD 2D/3D: Badge oranye dengan ikon Kubus (`Box`) dan label **CAD Drawing / Model**.",
+                "- Berkas CNC G-Code: Badge hijau dengan ikon Terminal (`Terminal`) dan label **CNC Program**.",
+                "- Berkas FlexSim: Badge ungu dengan ikon Gelombang Sinyal (`Activity`) dan label **FlexSim Simulation Model**.",
               ],
             },
           ],
@@ -364,7 +364,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "thesaurus-expansion",
               title: "FTS5 Query Expansion & Thesaurus",
               paragraphs: [
-                "Untuk menjamin pencarian akurat meskipun pengguna menggunakan istilah singkatan (misal: 'dbr' atau 'hiradc'), mesin RAG secara otomatis memperluas kueri dengan padanan kata kunci resmi sebelum dieksekusi di SQLite FTS5 index.",
+                "Untuk menjamin pencarian akurat meskipun pengguna menggunakan istilah singkatan (misal: `dbr` atau `hiradc`), mesin RAG secara otomatis memperluas kueri dengan padanan kata kunci resmi sebelum dieksekusi di SQLite FTS5 index.",
               ],
             },
           ],
@@ -406,7 +406,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "format-sitasi",
               title: "Format Visual Kartu Sitasi Sumber",
               paragraphs: [
-                "Di bagian atas respon AI yang menggunakan pencarian web, RuangTI menampilkan grid kartu sumber interaktif berukuran 115x64px dengan favicon website dan judul ringkas. Pengguna dapat mengklik tombol 'Semua Sumber' untuk membuka akordeon daftar pustaka lengkap beserta link DOI.",
+                "Di bagian atas respon AI yang menggunakan pencarian web, RuangTI menampilkan grid kartu sumber interaktif berukuran 115x64px dengan favicon website dan judul ringkas. Pengguna dapat mengklik tombol **Semua Sumber** untuk membuka akordeon daftar pustaka lengkap beserta link DOI.",
               ],
             },
           ],
@@ -692,7 +692,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
                   ["CAD 2D Drafting", ".dwg, .dxf", "ezdxf & ezdwg parser", "Daftar Layer, Entitas Garis/Busur/Teks, Dimensi, Bounding Box."],
                   ["CAD 3D Modeling", ".step, .stp, .stl, .obj", "steputils & trimesh", "Struktur Solid Body, Protokol AP214, Volume, Facet Mesh."],
                   ["CNC G-Code", ".gcode, .nc, .cnc, .tap", "G-code interpreter", "Program Toolpath, Spindle Speed, Feed Rate, Range Sumbu X/Y/Z."],
-                  ["Simulasi Diskrit", ".fsm, .fsx", "FlexSim GZIP 0x48 decompressor", "Objek Source/Queue/Processor/Sink, Cycle Time, Routing."],
+                  ["Simulasi Diskrit", "`.fsm`, `.fsx`", "FlexSim GZIP 0x48 decompressor", "Objek Source/Queue/Processor/Sink, Cycle Time, Routing."],
                   ["Data Tabular", ".xlsx, .xls, .csv", "openpyxl & csv parser", "Jumlah Baris/Kolom, Header Kolom, Sampel Dataset 5 Baris."],
                   ["Dokumen Teks", ".pdf, .docx, .txt, .md", "pdfplumber & docx parser", "Teks Paragraf Utuh, Tabel Dokumen, Struktur Heading."],
                   ["Arsip Berkas", ".zip, .tar, .gz, .7z", "zipfile extractor", "Pohon Direktori, Daftar File, Ekstraksi otomatis file di dalamnya."],
