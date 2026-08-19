@@ -8,16 +8,18 @@ Dokumen ini ditujukan untuk agen AI (seperti Hermes, Claude Code, Cursor, Codex,
 - **Nama Aplikasi**: RuangTI
 - **Tujuan**: Platform Web AI Workspace & Konsultasi Spesialis Teknik Industri (*Industrial Engineering Workspace & Knowledge Hub*) bagi sivitas akademika dan praktisi.
 - **Filosofi UI/UX**: *Pure Light Mode*, Clean, Minimalist, Precision-Engineered, Anti-AI Slop, Multi-Device Responsive (Desktop & Mobile 390x844).
-- **Cakupan Domain Teknik Industri (415 Modul Knowledge Base Spesialis & Profesi Industri)**:
+- **Cakupan Domain Teknik Industri (425 Modul Knowledge Base Spesialis & Profesi Industri)**:
   - Riset Operasi & Optimasi Matematis (Linier/Integer Programming, Antrian, Transportasi, Game Theory)
-  - Lean Six Sigma & Manajemen Kualitas (Kaizen, 5S, DMAIC, SPC, FMEA AIAG-VDA, VSM, IATF 16949, MSA Gage R&R, APQP, PPAP, 8D Problem Solving)
+  - Lean Six Sigma & Manajemen Kualitas (Kaizen, 5S, DMAIC, SPC, FMEA AIAG-VDA, VSM, IATF 16949, MSA Gage R&R, APQP, PPAP, 8D Problem Solving, Hoshin Kanri X-Matrix, A3 Toyota Problem Solving)
   - Perancangan Tata Letak Fasilitas & Pemindahan Bahan (PTLF, From-To Chart, ARC, CRAFT, ASRS)
-  - Ergonomi & Higiene Industri (Permenaker 5/2018, OSHA Noise TWA, ISBB/WBGT, NIOSH Lifting, Waktu Baku, MOST TMU, REBA/RULA, NASA-TLX)
-  - Keselamatan Kerja & Lingkungan (SMK3 PP 50/2012, ISO 45001, HIRADC, SCAT Incident Investigation, LOTO 1910.147, B3 PP 22/2021, IPAL/WWTP, PROPER KLHK, GHG Protocol Scope 1-3)
+  - Ergonomi & Higiene Industri (Permenaker 5/2018, OSHA Noise TWA, ISBB/WBGT, NIOSH Lifting, Waktu Baku, MOST TMU, REBA/RULA, NASA-TLX, Biomekanik Chaffin 2D/3D L5/S1, OWAS, Moore-Garg Strain Index, Shiftwork FRMS, Ritme Sirkadian, Karasek Model)
+  - Keselamatan Kerja & Lingkungan (SMK3 PP 50/2012, ISO 45001, HIRADC, SCAT Incident Investigation, LOTO 1910.147, B3 PP 22/2021, IPAL/WWTP, PROPER KLHK, GHG Protocol Scope 1-3, Audit Energi ISO 50002, Pinch Analysis HEN Synthesis, Boiler ASME PTC 4.1)
   - Drafter & Desain Manufaktur (ASME Y14.5-2018 GD&T, Tolerance Stack-Up Worst Case & RSS, DFMA Boothroyd, ASME B31.3 Piping, ISA 5.1 P&ID)
-  - Supply Chain Management, Logistik & Pergudangan (EOQ, ROP, WMS Slotting COI Index, Cube Utilization %, S-Shape Picking, TMS VRP Clarke-Wright, Forklift Sizing M/M/c, Cold Chain MKT, Pengadaan Strategis Matriks Kraljic, TCO, Incoterms 2020)
+  - Supply Chain Management, Logistik & Pergudangan (EOQ, ROP, WMS Slotting COI Index, Cube Utilization %, S-Shape Picking, TMS VRP Clarke-Wright, Forklift Sizing M/M/c, Cold Chain MKT, Pengadaan Strategis Matriks Kraljic, TCO, Incoterms 2020, Supply Chain Control Tower, CPFR GS1, Multi-Echelon Inventory MEIO, Closed-Loop Supply Chain CLSC, Remanufacturing DLBP, WEEE/EPR, Supply Chain Risk Management SCRM, TTR vs TTS)
   - Perencanaan Produksi & PPIC (S&OP Agregat Planning, MPS, RCCP Bill of Resources, MRP Silver-Meal / Wagner-Whitin, Penjadwalan Mesin Terbatas TOC Drum-Buffer-Rope, Algoritma Johnson)
-  - Pemeliharaan & Keandalan Mesin (TPM 8 Pilar, 7 Langkah Jishu Hozen, Six Big Losses OEE, RCM II SAE JA1011, Distribusi Keandalan Weibull Beta/Eta, ISO 55001)
+  - Pemeliharaan & Keandalan Mesin (TPM 8 Pilar, 7 Langkah Jishu Hozen, Six Big Losses OEE, RCM II SAE JA1011, Distribusi Keandalan Weibull Beta/Eta, ISO 55001, Predictive Maintenance 4.0 Getaran FFT, Envelope Analysis Bearing BPFO/BPFI, RUL Estimation, Cox Proportional Hazards)
+  - Otomasi Industri & Smart Manufacturing (ANSI/ISA-95 Level 0-4, MES MESA-11, B2MML XML, Real-Time OEE Tracking, OPC-UA)
+  - Manajemen Proyek Rekayasa Industri (PMBOK 7th Ed, Earned Value Management EVM PV/EV/AC/CPI/SPI/EAC/TCPI, Critical Path Method CPM, PERT Beta Distribution, Project Crashing Linear Programming)
   - Simulasi Sistem Industri & Manufaktur Cerdas (Arena, FlexSim Binary/XML, AnyLogic, Digital Twin, TPM 4.0)
 
 - **Stack & Arsitektur Utama**:

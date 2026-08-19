@@ -337,6 +337,16 @@ IE_THESAURUS = {
     "lean ie vsm smed": ["continuous improvement", "lean ie", "vsm", "value stream mapping", "takt time", "production lead time", "smed", "changeover", "yamazumi chart", "maynard most", "basic most", "tmu"],
     "maintenance rcm ii": ["reliability centered maintenance", "rcm ii", "sae ja1011", "distribusi weibull", "modulus weibull beta", "characteristic life eta", "hazard rate", "mtbf", "ketersediaan ao", "iso 55001"],
     "tpm jishu hozen oee": ["total productive maintenance", "tpm", "jishu hozen", "7 langkah jishu hozen", "autonomous maintenance", "oee", "six big losses", "red tag fuguai", "soc iac", "teep"],
+    "control tower cpfr meio": ["supply chain control tower", "scct", "cpfr", "bullwhip ratio", "meio", "multi-echelon inventory", "echelon stock", "risk pooling effect", "clark scarf"],
+    "circular economy clsc remanufaktur": ["circular economy", "closed-loop supply chain", "clsc", "remanufacturing", "disassembly line balancing", "dlbp", "epr", "weee", "life cycle costing", "iso 15686-5"],
+    "hoshin kanri a3 problem solving": ["hoshin kanri", "x-matrix", "catchball process", "a3 problem solving", "a3 toyota", "true north", "practical problem solving", "policy deployment"],
+    "biomekanik chaffin owas": ["biomekanik", "chaffin", "torsi sendi l5/s1", "gaya kompresi lumbal", "owas", "moore-garg", "strain index", "msds", "ergonomi makro", "odam"],
+    "audit energi pinch analysis": ["audit energi", "iso 50002", "permen esdm 14/2012", "sec", "specific energy consumption", "cusum", "pinch analysis", "jaringan penukar panas", "hen", "waste heat recovery", "efisiensi boiler asme ptc 4.1"],
+    "smart manufacturing isa95 mes": ["isa-95", "ansi/isa-95", "purdue model", "mes", "manufacturing execution system", "mesa-11", "b2mml", "genealogy part", "work order dispatching", "opc-ua"],
+    "supply chain risk scrm": ["supply chain risk management", "scrm", "time to recover", "ttr", "time to survive", "tts", "financial impact of disruption", "fid", "dual sourcing", "iso 28000", "iso 22301"],
+    "predictive maintenance getaran fft": ["predictive maintenance", "analisis getaran", "vibration analysis", "fft", "envelope analysis", "bpfo", "bpfi", "bsf", "ftf", "remaining useful life", "rul", "cox proportional hazards", "iso 10816-3"],
+    "project management evm cpm": ["project management", "pmbok 7th", "earned value management", "evm", "planned value pv", "earned value ev", "actual cost ac", "cpi", "spi", "eac", "critical path method", "cpm", "pert", "project crashing"],
+    "shiftwork frms sirkadian": ["shift kerja", "rotasi forward phase delay", "ritme sirkadian", "fatigue risk management system", "frms", "skala samn-perelli", "sleep debt", "model karasek", "job demand control"],
 }
 
 
