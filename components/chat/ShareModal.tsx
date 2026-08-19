@@ -205,7 +205,7 @@ export function ShareModal({
             type="button"
             onClick={handleApplyShare}
             disabled={isSaving}
-            className="px-4 py-2 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-sm shadow-accent/20 hover:brightness-105 active:scale-[0.98] transition-all flex items-center gap-1.5 disabled:opacity-50"
+            className="px-4 py-2 rounded-xl bg-accent text-white font-semibold text-xs shadow-sm shadow-accent/25 hover:brightness-105 active:scale-[0.98] transition-all flex items-center gap-1.5 disabled:opacity-50"
           >
             {isSaving
               ? "Menyimpan..."
