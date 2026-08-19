@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Factory, Boxes, RotateCcw, Timer, Binary, Cpu, Layers, LineChart } from "lucide-react";
 import { KaTeXFormula } from "@/components/ui/KaTeXFormula";
 
@@ -61,8 +60,8 @@ const SECONDARY_FEATURES = [
 
 export function Features() {
   return (
-    <section id="features" className="py-14 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-border/40 w-full">
-      <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+    <section id="features" className="py-12 sm:py-16 border-t border-border/40 w-full">
+      <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
         <span className="text-[11px] font-bold text-accent tracking-wider uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/20 select-none">
           Domain Spesifik TI
         </span>
@@ -79,11 +78,8 @@ export function Features() {
         {PILLARS.map((p, idx) => {
           const Icon = p.icon;
           return (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + idx * 0.08, duration: 0.45, ease: [0.16, 1, 0.3, 1] as const }}
               className="p-5 sm:p-7 rounded-2xl bg-surface border border-border hover:border-accent/50 transition-all group flex flex-col justify-between shadow-sm relative overflow-hidden"
             >
               <div className="absolute -right-8 -top-8 w-24 h-24 bg-accent/5 rounded-full blur-xl group-hover:bg-accent/10 transition-colors pointer-events-none" />
@@ -113,7 +109,7 @@ export function Features() {
                   <KaTeXFormula math={p.formula} />
                 </span>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>
@@ -123,11 +119,8 @@ export function Features() {
         {SECONDARY_FEATURES.map((item, idx) => {
           const ItemIcon = item.icon;
           return (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + idx * 0.06, duration: 0.45, ease: [0.16, 1, 0.3, 1] as const }}
               className="p-4 sm:p-5 rounded-xl bg-surface border border-border hover:border-accent/30 transition-all flex flex-col gap-2 shadow-sm"
             >
               <ItemIcon size={18} className="text-accent" />
@@ -137,7 +130,7 @@ export function Features() {
               <p className="text-xs text-text-primary/70 leading-relaxed">
                 {item.desc}
               </p>
-            </motion.div>
+            </div>
           );
         })}
       </div>

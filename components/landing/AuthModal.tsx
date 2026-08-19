@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
@@ -45,6 +45,17 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
   // Status & Validation States
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Lock background body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalStyle || "";
+      };
+    }
+  }, [isOpen]);
 
   // Reset errors when switching tabs
   const handleTabSwitch = (newTab: "login" | "signup") => {

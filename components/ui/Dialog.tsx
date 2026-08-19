@@ -32,8 +32,13 @@ export function Dialog({
     }
     if (isOpen) {
       window.addEventListener("keydown", handleKeyDown);
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+        document.body.style.overflow = originalStyle || "";
+      };
     }
-    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
   return (

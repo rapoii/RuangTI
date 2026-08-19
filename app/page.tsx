@@ -27,7 +27,7 @@ export default function LandingPage() {
         onOpenLogin={() => setIsAuthOpen(true)}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6">
         <Hero
           profile={profileState.profile}
           onOpenLogin={() => setIsAuthOpen(true)}
