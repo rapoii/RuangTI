@@ -44,6 +44,9 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     }
   };
 
+  // Pre-process content: Ubah \frac menjadi \dfrac agar pembilang dan penyebut memiliki jarak vertikal luas alami
+  const processedContent = cleanContent.replace(/\\frac(?=\{)/g, "\\dfrac");
+
   // State untuk expand/collapse jika sumber > 6
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -280,7 +283,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
           },
         }}
       >
-        {cleanContent}
+        {processedContent}
       </ReactMarkdown>
     </div>
   );
