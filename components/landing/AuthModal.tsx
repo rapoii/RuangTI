@@ -40,7 +40,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
   const [address, setAddress] = useState("");
   const [postalCode, setPostalCode] = useState("");
   const [role, setRole] = useState("Mahasiswa");
-  const [institution, setInstitution] = useState("FT Untirta");
+  const [institution, setInstitution] = useState("Untirta");
   const [signupPassword, setSignupPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -620,7 +620,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
             {/* Footer Notice */}
             <div className="p-3 sm:p-4 bg-canvas-subtle border-t border-border/60 text-center shrink-0">
               <p className="text-[11px] text-text-tertiary">
-                Keamanan data terenkripsi. Sesuai standar tata kelola komputasi FT Untirta.
+                Keamanan data terenkripsi. Akses eksklusif dibatasi khusus mahasiswa & civitas Untirta.
               </p>
             </div>
           </motion.div>

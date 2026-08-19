@@ -34,7 +34,7 @@ export function Footer() {
           <span className="flex items-center gap-1">
             <span>Dibuat dengan</span>
             <Heart size={13} className="text-rose-500 fill-rose-500 inline-block" />
-            <span>untuk Teknik Industri FT Untirta</span>
+            <span>untuk mahasiswa & civitas Untirta</span>
           </span>
         </div>
       </div>
