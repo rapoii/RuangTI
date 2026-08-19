@@ -26,28 +26,50 @@ curl -s http://localhost:20128/v1/models
 ---
 
 ## 2. Struktur Modul & Konvensi
-- **Frontend Components**:
-  - `components/landing/`: Landing page (Navbar, Hero, Feature Grid, Interactive Demo, Auth Modal SSO Untirta).
-  - `components/layout/Header.tsx`: Header kaca atas dengan branding **RuangTI**, Dynamic Title, Tombol Share (hijau teks putih), dan Sidebar Toggle.
+- **Rute Dokumentasi (`app/docs/` & `components/docs/`)**:
+  - `app/docs/page.tsx`: Layout 3-kolom ala Claude Docs / Stripe Docs dengan kategori accordion, reactive dynamic article viewer, dan mobile sliding drawer.
+  - `components/docs/DocsSidebar.tsx`: Navigasi sidebar dengan Zero-Reflow CSS Grid Accordion dan icon chevron rotasi berbasis GPU.
+  - `components/docs/DocsContent.tsx`: Render artikel Markdown + KaTeX formula terpusat (`text-center`) dan transisi halus pergantian halaman.
+  - `components/docs/DocsTOC.tsx`: Table of Contents kanan dengan scrollspy presisi dan lock-scroll.
+  - `components/docs/DocsSearchModal.tsx`: Spotlight search instan dengan keyboard shortcuts (`Ctrl+K` / `⌘K`) tanpa footer hint berlebih.
+
+- **Landing Page (`components/landing/`)**:
+  - `Navbar.tsx`: Header kaca atas dengan branding **RuangTI**, status auth, dan transisi reveal saat load.
+  - `Hero.tsx`: Staggered orchestration reveal untuk badge, headline H1, sub-copy, CTA, dan 4 micro-badges spek TI.
+  - `Features.tsx`: Scroll reveal untuk 4 Pilar Keilmuan TI (PTLF, Rantai Pasok, Kualitas, Ergonomi) dan 4 Solvers Sekunder.
+  - `AuthModal.tsx`: Dialog autentikasi SSO Untirta & Email dengan transisi mulus pergantian tab Masuk $\leftrightarrow$ Daftar Baru (`AnimatePresence mode="wait"`).
+  - `Footer.tsx`: Baris hak cipta tunggal ultra-minimalis: `© {new Date().getFullYear()} RuangTI. All rights reserved. Dikembangkan oleh rapoi.`
+
+- **Workspace Chat (`components/chat/`, `components/composer/`, `components/sidebar/`, `components/profile/`)**:
+  - `components/chat/MessageRow.tsx`: Render chat bubble user/assistant dengan kartu lampiran dokumen/gambar, formula KaTeX, dan GPU micro-fade entrance (`y: 4 -> 0`, `150ms`).
+  - `components/chat/ThinkingBlock.tsx`: Collapsible accordion *"Proses Berpikir & Penalaran Sistem"* berbasis Zero-Lag CSS Grid Hardware Transition.
+  - `components/chat/EmptyState.tsx`: Welcome banner dengan staggered suggestion cards 4 pilar TI.
+  - `components/chat/ShareModal.tsx`: Dialog bagikan percakapan dengan tautan publik read-only.
+  - `components/composer/Composer.tsx`: Input dock melayang dengan vertical center alignment dan preview chips dokumen/foto.
+  - `components/composer/ThinkingSelector.tsx`: Pill selector 5 tingkat Thinking Effort (`none`, `low`, `medium`, `high`, `xhigh`) dengan popover Framer Motion yang ringan.
+  - `components/profile/ProfileModal.tsx`: Modal profil pengguna dengan transisi mode lihat profil, edit profil, dan masuk akun.
   - `components/sidebar/Sidebar.tsx`: Multi-thread drawer & desktop panel dengan search, pin/rename/delete conversation, dan User Profile/Logout.
-  - `components/chat/`:
-    - `MessageRow.tsx`: Render chat bubble user/assistant dengan kartu lampiran dokumen/gambar, formula KaTeX, dan action bar.
-    - `ThinkingBlock.tsx`: Collapsible accordion *"Proses Berpikir & Penalaran Sistem"* untuk output penalaran AI.
-    - `ShareModal.tsx`: Dialog bagikan percakapan dengan tautan publik read-only.
-  - `components/composer/`:
-    - `Composer.tsx`: Input dock melayang dengan vertical center alignment, placeholder `"Tulis pesan..."`, dan preview chips dokumen/foto.
-    - `ThinkingSelector.tsx`: Pill selector 5 tingkat Thinking Effort (`none`, `low`, `medium`, `high`, `xhigh`) dengan mobile popover anti-clipping.
 
 - **Backend Services**:
   - `backend/app/routers/chat_9router.py`: Streaming SSE proxy ke 9Router dengan dynamic model routing & tag `<think>` handling.
-  - `backend/app/services/document_parser.py`: Ekstraksi teks & tabel instan dari Word, Excel, CSV, PDF, Zip, dan file source code.
+  - `backend/app/services/document_parser.py`: Ekstraksi teks & tabel instan dari Word, Excel, CSV, PDF, Zip, CAD, FlexSim, dan file source code.
   - `backend/app/services/media_cleaner.py`: Async background worker untuk auto-pruning berkas lampiran > 14 hari.
-  - `backend/knowledge/`: 400 Modul Knowledge Base Teknik Industri untuk konteks RAG.
+  - `backend/knowledge/`: 434 Modul Knowledge Base Teknik Industri untuk konteks RAG.
 
 ---
 
-## 3. Checklist Sebelum Commit
+## 3. Standar Animasi & Kinerja Low-End Devices
+1. **GPU-Accelerated**: Selalu gunakan properti `transform` dan `opacity` dengan kurva `[0.16, 1, 0.3, 1]`.
+2. **Zero Reflow Accordion**: Gunakan CSS Grid `grid-template-rows: 1fr` vs `0fr` (bukan `height: auto` Framer Motion).
+3. **Hardware Acceleration Marker**: Tambahkan `style={{ willChange: "transform, opacity" }}` pada elemen dinamis.
+4. **Lightweight Backdrop**: Gunakan `backdrop-blur-[2px] bg-black/45` untuk overlay modal/drawer.
+5. **Scroll Triggers**: Pasang `viewport={{ once: true }}` pada komponen animasi scroll.
+
+---
+
+## 4. Checklist Sebelum Commit
 1. Jalankan `npx tsc --noEmit` -> harus **0 error**.
 2. Pastikan tidak ada class `dark:` (Sistem 100% Pure Light Mode).
-3. Verifikasi responsivitas pada viewport Desktop (1280x800) dan Mobile (390x844 / 375x667).
-4. Pastikan file dokumen/foto tidak disimpan sebagai base64/blob mentah di SQLite melainkan di folder `uploads/` dengan metadata JSON ringkas.
+3. Pastikan elemen bernuansa emas (`bg-accent` / `#E09F3E`) menggunakan teks putih tegas (`text-white font-bold`).
+4. Verifikasi responsivitas pada viewport Desktop (1280x800) dan Mobile (390x844 / 375x667).
+5. Pastikan file dokumen/foto tidak disimpan sebagai base64/blob mentah di SQLite melainkan di folder `uploads/` dengan metadata JSON ringkas.
