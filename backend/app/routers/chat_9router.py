@@ -9,11 +9,12 @@ from typing import AsyncGenerator, List, Dict, Any
 
 from app.rag.engine import rag_engine
 from app.services.cdp_browser import cdp_manager
+from app.services.document_parser import extract_document_content
 
 logger = logging.getLogger(__name__)
 
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://localhost:20128/v1")
-ROUTER_9_MODEL = "gcli/grok-4.6-high(xhigh)"
+ROUTER_9_MODEL = os.getenv("ROUTER_9_MODEL", "xr/x-ai/grok-4.6")
 
 BASE_SYSTEM_PROMPT = """Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri kelas dunia (World-Class Industrial Engineering & Systems Engineering AI Co-Pilot).
 
@@ -107,10 +108,11 @@ async def stream_grok_ai_response(
     history: List[Dict[str, str]] = None,
     model_name: str = ROUTER_9_MODEL,
     web_search_enabled: bool = False,
-    images: List[str] = None
+    images: List[str] = None,
+    documents: List[Dict[str, Any]] = None
 ) -> AsyncGenerator[str, None]:
     """
-    Streaming AI response dari 9Router LLM Proxy dengan opsi Hybrid RAG + Web Search.
+    Streaming AI response dari 9Router LLM Proxy dengan opsi Hybrid RAG + Web Search + Document Intelligence.
     """
     # 1. Retrieve Knowledge Base Chunks (RAG) - Always active
     rag_chunks = rag_engine.search(prompt, top_k=3)
@@ -124,6 +126,38 @@ async def stream_grok_ai_response(
             rag_context_text += f"\n--- [Referensi #{idx}: {title} (Modul: {source})] ---\n"
             rag_context_text += f"{chunk['content']}\n"
         rag_context_text += "\n=== [AKHIR REFERENSI LITERATUR] ===\n"
+
+    # 1b. Process Attached Documents (Spreadsheet, Word, Code, ZIP, etc.)
+    doc_context_text = ""
+    backend_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    if documents and len(documents) > 0:
+        doc_context_text = "\n\n=== [BERKAS & DOKUMEN LAMPIRAN PENGGUNA] ==="
+        for doc in documents:
+            doc_url = doc.get("url", "")
+            doc_name = doc.get("name", "lampiran")
+            
+            # Resolve disk path
+            if doc_url.startswith("/uploads/") or doc_url.startswith("uploads/"):
+                rel_path = doc_url.lstrip("/")
+                candidate_paths = [
+                    os.path.join(backend_root, rel_path),
+                    os.path.join(backend_root, "backend", rel_path),
+                    os.path.abspath(rel_path)
+                ]
+                full_doc_path = None
+                for p in candidate_paths:
+                    if os.path.exists(p):
+                        full_doc_path = p
+                        break
+                
+                if full_doc_path and os.path.exists(full_doc_path):
+                    parsed_doc = extract_document_content(full_doc_path, doc_name)
+                    doc_context_text += parsed_doc
+                else:
+                    doc_context_text += f"\n[Dokumen {doc_name} ({doc_url}) tidak ditemukan pada storage server]\n"
+            else:
+                doc_context_text += f"\n[Dokumen {doc_name}]: {doc_url}\n"
+        doc_context_text += "\n=== [AKHIR BERKAS LAMPIRAN PENGGUNA] ===\n"
 
     # 2. Web Search via Smart & Dynamic Multi-Source Engine
     web_context_text = ""
@@ -182,6 +216,8 @@ async def stream_grok_ai_response(
     system_prompt = BASE_SYSTEM_PROMPT
     if rag_context_text:
         system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
+    if doc_context_text:
+        system_prompt += f"\n{doc_context_text}\n"
     if web_context_text:
         system_prompt += f"""\n\n{web_context_text}
 \n\n=== ATURAN PENGGUNAAN SUMBER WEB ===

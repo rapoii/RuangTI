@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Message } from "@/lib/types";
+import { Message, AttachedDocument } from "@/lib/types";
 import { saveMessageToBackend, fetchMessagesFromBackend } from "@/lib/api-client";
 import { useProfile } from "@/hooks/use-profile";
 
@@ -22,6 +22,7 @@ interface UseChatProps {
 export interface SendMessageOptions {
   webSearch?: boolean;
   images?: string[];
+  documents?: AttachedDocument[];
 }
 
 export function useChat({ conversationId, initialMessages = [], onMessagesChange, onUpdateTitle }: UseChatProps) {
@@ -60,7 +61,8 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
     async (content: string, customModel?: string, options?: SendMessageOptions) => {
       const hasContent = content.trim().length > 0;
       const hasImages = options?.images && options.images.length > 0;
-      if ((!hasContent && !hasImages) || isStreaming || !conversationId) return;
+      const hasDocs = options?.documents && options.documents.length > 0;
+      if ((!hasContent && !hasImages && !hasDocs) || isStreaming || !conversationId) return;
 
       const userMsgId = `msg_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
       const userMsg: Message = {
@@ -68,11 +70,12 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
         role: "user",
         content,
         images: options?.images,
+        documents: options?.documents,
         createdAt: Date.now(),
       };
 
       // Simpan user message ke backend database
-      await saveMessageToBackend(conversationId, "user", content, options?.images);
+      await saveMessageToBackend(conversationId, "user", content, options?.images, options?.documents);
 
       // Sediakan history percakapan terkini untuk context LLM
       const historyContext = messages.slice(-8).map((m) => ({
@@ -111,6 +114,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
           body: JSON.stringify({
             message: content,
             images: options?.images || [],
+            documents: options?.documents || [],
             model_id: targetModel,
             conversation_id: conversationId,
             history: historyContext,

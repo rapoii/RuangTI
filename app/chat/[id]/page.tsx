@@ -6,7 +6,7 @@ import { MessageList } from "@/components/chat/MessageList";
 import { EmptyState } from "@/components/chat/EmptyState";
 import { Composer } from "@/components/composer/Composer";
 import { useConversations } from "@/hooks/use-conversations";
-import { useChat } from "@/hooks/use-chat";
+import { useChat, SendMessageOptions } from "@/hooks/use-chat";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { ModelOption } from "@/lib/types";
@@ -82,7 +82,7 @@ export default function DynamicChatPage() {
 
   const handleSendMessage = (
     text: string,
-    options?: { webSearch?: boolean; images?: string[] }
+    options?: SendMessageOptions
   ) => {
     sendMessage(text, selectedModel, options);
   };

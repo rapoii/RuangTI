@@ -7,7 +7,17 @@ import { MarkdownContent } from "./MarkdownContent";
 import { ActionBar } from "./ActionBar";
 import { TheGlow } from "./TheGlow";
 import { cn } from "@/lib/utils";
-import { Cpu, User, Layers } from "lucide-react";
+import {
+  Cpu,
+  User,
+  Layers,
+  FileText,
+  FileSpreadsheet,
+  FileCode2,
+  FileArchive,
+  File as FileIcon,
+  Download,
+} from "lucide-react";
 
 interface MessageRowProps {
   message: Message;
@@ -46,6 +56,37 @@ export function MessageRow({
       return `${apiBase}${url}`;
     }
     return url;
+  };
+
+  const getDocIcon = (ext: string) => {
+    if (["xlsx", "xls", "csv"].includes(ext)) {
+      return <FileSpreadsheet className="w-4 h-4 text-emerald-600" />;
+    }
+    if (["docx", "doc", "rtf", "txt", "md"].includes(ext)) {
+      return <FileText className="w-4 h-4 text-sky-600" />;
+    }
+    if (["pdf"].includes(ext)) {
+      return <FileText className="w-4 h-4 text-rose-600" />;
+    }
+    if (["zip", "tar", "gz", "7z", "rar"].includes(ext)) {
+      return <FileArchive className="w-4 h-4 text-amber-600" />;
+    }
+    if (
+      [
+        "py", "js", "ts", "tsx", "jsx", "json", "sql", "yaml", "yml", "html",
+        "css", "sh", "cpp", "c", "java", "r", "m"
+      ].includes(ext)
+    ) {
+      return <FileCode2 className="w-4 h-4 text-violet-600" />;
+    }
+    return <FileIcon className="w-4 h-4 text-slate-600" />;
+  };
+
+  const formatFileSize = (bytes?: number) => {
+    if (!bytes) return "";
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
   };
 
   return (
@@ -104,6 +145,34 @@ export function MessageRow({
                         onClick={() => window.open(resolveImageUrl(imgSrc), "_blank")}
                       />
                     </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Attached Documents List */}
+              {message.documents && message.documents.length > 0 && (
+                <div className="flex flex-col items-end gap-1.5 mb-1 w-full">
+                  {message.documents.map((doc, idx) => (
+                    <a
+                      key={doc.id || idx}
+                      href={resolveImageUrl(doc.url)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-canvas/90 hover:bg-canvas border border-border text-left shadow-xs transition-colors group/doc max-w-[280px] sm:max-w-[340px]"
+                    >
+                      <div className="p-1.5 rounded-lg bg-surface border border-border/70 shrink-0">
+                        {getDocIcon(doc.ext)}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-xs font-semibold text-text-primary truncate group-hover/doc:text-accent transition-colors">
+                          {doc.name}
+                        </p>
+                        <p className="text-[10px] text-text-tertiary">
+                          {doc.ext.toUpperCase()} • {formatFileSize(doc.size)}
+                        </p>
+                      </div>
+                      <Download className="w-3.5 h-3.5 text-text-tertiary group-hover/doc:text-text-primary shrink-0 opacity-0 group-hover/doc:opacity-100 transition-opacity" />
+                    </a>
                   ))}
                 </div>
               )}

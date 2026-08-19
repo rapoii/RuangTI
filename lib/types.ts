@@ -6,11 +6,21 @@ export type Theme = "light" | "dark";
 
 export type TimeBucket = "Hari ini" | "Kemarin" | "7 hari terakhir" | "Lebih lama";
 
+export interface AttachedDocument {
+  id: string;
+  name: string;
+  size: number;
+  ext: string;
+  url: string;
+  type: string;
+}
+
 export interface Message {
   id: string;
   role: Role;
   content: string;
   images?: string[];
+  documents?: AttachedDocument[];
   createdAt: number;
   feedback?: "up" | "down" | null;
 }

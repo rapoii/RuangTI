@@ -1,0 +1,6 @@
+Stasiun_Kerja,Waktu_Siklus_Menit,Tingkat_Kerusakan_Persen,Kapasitas_Buffer
+Stasiun_A_CNC,4.5,2.1,50
+Stasiun_B_Lathe,6.2,3.4,30
+Stasiun_C_Milling,5.8,1.8,40
+Stasiun_D_Assembly,7.1,0.9,60
+Stasiun_E_QualityControl,3.2,0.5,25

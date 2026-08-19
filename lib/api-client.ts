@@ -242,11 +242,20 @@ export async function fetchMessagesFromBackend(conversationId: string): Promise<
           parsedImages = [item.images];
         }
       }
+      let parsedDocuments: any[] | undefined = undefined;
+      if (item.documents) {
+        try {
+          parsedDocuments = JSON.parse(item.documents);
+        } catch {
+          parsedDocuments = undefined;
+        }
+      }
       return {
         id: item.id,
         role: item.role,
         content: item.content,
         images: parsedImages,
+        documents: parsedDocuments,
         createdAt: new Date(item.created_at).getTime(),
       };
     });
@@ -272,18 +281,39 @@ export async function uploadImageToBackend(base64Data: string): Promise<string |
   }
 }
 
+export async function uploadDocumentToBackend(file: File): Promise<any | null> {
+  try {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const res = await fetch(`${getApiBase()}/api/upload/document`, {
+      method: "POST",
+      headers: { ...getAuthHeader() },
+      body: formData,
+    });
+    if (!res.ok) throw new Error("Document upload failed");
+    const data = await res.json();
+    return data; // { success: true, id, name, size, ext, url, type }
+  } catch (err) {
+    console.error("Backend document upload error:", err);
+    return null;
+  }
+}
+
 export async function saveMessageToBackend(
   conversationId: string,
   role: "user" | "assistant" | "system",
   content: string,
-  images?: string[]
+  images?: string[],
+  documents?: any[]
 ): Promise<Message | null> {
   try {
     const serializedImages = images && images.length > 0 ? JSON.stringify(images) : undefined;
+    const serializedDocuments = documents && documents.length > 0 ? JSON.stringify(documents) : undefined;
     const res = await fetch(`${getApiBase()}/api/messages/${conversationId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", ...getAuthHeader() },
-      body: JSON.stringify({ role, content, images: serializedImages }),
+      body: JSON.stringify({ role, content, images: serializedImages, documents: serializedDocuments }),
     });
     if (!res.ok) throw new Error("Failed to save message");
     const item = await res.json();
@@ -295,11 +325,20 @@ export async function saveMessageToBackend(
         parsedImages = [item.images];
       }
     }
+    let parsedDocuments: any[] | undefined = undefined;
+    if (item.documents) {
+      try {
+        parsedDocuments = JSON.parse(item.documents);
+      } catch {
+        parsedDocuments = undefined;
+      }
+    }
     return {
       id: item.id,
       role: item.role,
       content: item.content,
       images: parsedImages,
+      documents: parsedDocuments,
       createdAt: new Date(item.created_at).getTime(),
     };
   } catch (err) {

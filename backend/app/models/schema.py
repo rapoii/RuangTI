@@ -50,6 +50,7 @@ class Message(SQLModel, table=True):
     role: str = Field(description="'user' or 'assistant' or 'system'")
     content: str = Field(description="Content with Markdown & KaTeX formulas")
     images: Optional[str] = Field(default=None, description="Serialized JSON array of base64/URL images")
+    documents: Optional[str] = Field(default=None, description="Serialized JSON array of attached documents metadata")
     tool_calls: Optional[str] = Field(default=None, description="Serialized JSON of tool executions")
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
@@ -107,6 +108,7 @@ class MessageCreate(SQLModel):
     role: str
     content: str
     images: Optional[str] = None
+    documents: Optional[str] = None
     tool_calls: Optional[str] = None
 
 class SharedConversationResponse(SQLModel):
