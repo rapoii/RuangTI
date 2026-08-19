@@ -23,6 +23,59 @@ interface DocsContentProps {
   nextArticle?: DocArticle | null;
 }
 
+/**
+ * Helper untuk merender inline markdown sederhana:
+ * - **bold**
+ * - *italic*
+ * - `code`
+ * - $math$ (inline KaTeX)
+ */
+function FormattedText({ text }: { text: string }) {
+  if (!text) return null;
+
+  // Split berdasarkan token: **bold**, *italic*, `code`, dan $math$
+  const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`|\$.*?\$)/g);
+
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (part.startsWith("**") && part.endsWith("**") && part.length >= 4) {
+          return (
+            <strong key={index} className="font-semibold text-text-primary">
+              {part.slice(2, -2)}
+            </strong>
+          );
+        }
+        if (part.startsWith("*") && part.endsWith("*") && part.length >= 2) {
+          return (
+            <em key={index} className="italic text-text-primary">
+              {part.slice(1, -1)}
+            </em>
+          );
+        }
+        if (part.startsWith("`") && part.endsWith("`") && part.length >= 2) {
+          return (
+            <code
+              key={index}
+              className="px-1.5 py-0.5 rounded bg-surface border border-border/70 font-mono text-[11px] sm:text-xs text-accent font-medium"
+            >
+              {part.slice(1, -1)}
+            </code>
+          );
+        }
+        if (part.startsWith("$") && part.endsWith("$") && part.length >= 2) {
+          return (
+            <span key={index} className="inline-block mx-0.5 align-middle">
+              <KaTeXFormula math={part.slice(1, -1)} display={false} />
+            </span>
+          );
+        }
+        return <span key={index}>{part}</span>;
+      })}
+    </>
+  );
+}
+
 export function DocsContent({
   article,
   onNavigateArticle,
@@ -68,7 +121,9 @@ export function DocsContent({
         {config.icon}
         <div className="flex flex-col gap-1 text-xs">
           <span className="font-bold">{callout.title}</span>
-          <p className="leading-relaxed text-text-secondary">{callout.message}</p>
+          <p className="leading-relaxed text-text-secondary">
+            <FormattedText text={callout.message} />
+          </p>
         </div>
       </div>
     );
@@ -95,7 +150,7 @@ export function DocsContent({
         </h1>
 
         <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-3xl">
-          {article.content.lead}
+          <FormattedText text={article.content.lead} />
         </p>
       </div>
 
@@ -111,7 +166,9 @@ export function DocsContent({
             {/* Paragraphs */}
             <div className="space-y-3 text-xs sm:text-sm text-text-secondary leading-relaxed">
               {section.paragraphs.map((p, idx) => (
-                <p key={idx}>{p}</p>
+                <p key={idx}>
+                  <FormattedText text={p} />
+                </p>
               ))}
             </div>
 
@@ -123,7 +180,9 @@ export function DocsContent({
                 </div>
                 <div className="pt-2 border-t border-border/40 text-[11px] sm:text-xs text-text-secondary flex items-start gap-1.5">
                   <Sparkles size={13} className="text-accent shrink-0 mt-0.5" />
-                  <span>{section.formula.explanation}</span>
+                  <span>
+                    <FormattedText text={section.formula.explanation} />
+                  </span>
                 </div>
               </div>
             )}
@@ -146,7 +205,7 @@ export function DocsContent({
                       <tr key={rIdx} className="hover:bg-surface/40 transition-colors">
                         {row.map((cell, cIdx) => (
                           <td key={cIdx} className="px-3.5 py-2.5 text-text-secondary align-top">
-                            {cell}
+                            <FormattedText text={cell} />
                           </td>
                         ))}
                       </tr>
@@ -156,34 +215,30 @@ export function DocsContent({
               </div>
             )}
 
-            {/* Code Snippet Block jika ada */}
+            {/* Code Snippet jika ada */}
             {section.codeSnippet && (
-              <div className="my-4 rounded-xl border border-border/60 bg-surface/50 overflow-hidden text-xs">
-                <div className="px-3.5 py-2 bg-surface border-b border-border/40 flex items-center justify-between">
-                  <span className="font-mono text-[11px] text-text-secondary">
-                    {section.codeSnippet.caption || section.codeSnippet.language}
-                  </span>
+              <div className="my-4 rounded-xl border border-border overflow-hidden bg-slate-950 text-slate-100 text-xs shadow-sm">
+                <div className="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800 text-[11px] font-mono text-slate-400">
+                  <span>{section.codeSnippet.language}</span>
                   <button
                     type="button"
-                    onClick={() =>
-                      handleCopy(section.codeSnippet!.code, section.id)
-                    }
-                    className="flex items-center gap-1 text-[11px] text-text-secondary hover:text-text-primary px-2 py-0.5 rounded hover:bg-canvas transition-colors"
+                    onClick={() => handleCopy(section.codeSnippet!.code, section.id)}
+                    className="flex items-center gap-1 hover:text-slate-200 transition-colors"
                   >
                     {copiedCode === section.id ? (
                       <>
-                        <Check size={12} className="text-emerald-600" />
-                        <span className="text-emerald-600">Tersalin</span>
+                        <Check size={13} className="text-emerald-400" />
+                        <span className="text-emerald-400">Tersalin</span>
                       </>
                     ) : (
                       <>
-                        <Copy size={12} />
-                        <span>Salin Kode</span>
+                        <Copy size={13} />
+                        <span>Salin</span>
                       </>
                     )}
                   </button>
                 </div>
-                <pre className="p-4 overflow-x-auto font-mono text-[12px] leading-relaxed text-text-primary bg-surface/30">
+                <pre className="p-4 overflow-x-auto font-mono text-[11px] sm:text-xs leading-relaxed">
                   <code>{section.codeSnippet.code}</code>
                 </pre>
               </div>
@@ -195,39 +250,39 @@ export function DocsContent({
         ))}
       </div>
 
-      {/* Navigasi Artikel Sebelumnya & Selanjutnya */}
-      <div className="pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* Navigasi Artikel Sebelumnya & Berikutnya */}
+      <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
         {prevArticle ? (
           <button
             type="button"
             onClick={() => onNavigateArticle(prevArticle.id)}
-            className="w-full sm:w-auto p-3.5 rounded-xl border border-border/60 bg-surface hover:border-accent/40 text-left flex items-center gap-3 transition-all group max-w-xs"
+            className="w-full sm:w-auto p-3.5 rounded-xl border border-border/70 hover:border-accent/40 bg-surface/50 hover:bg-surface text-left flex items-center gap-3 transition-all group active:scale-[0.98]"
           >
-            <ArrowLeft size={16} className="text-text-secondary group-hover:-translate-x-1 group-hover:text-accent transition-transform shrink-0" />
+            <ArrowLeft size={16} className="text-text-secondary group-hover:-translate-x-1 group-hover:text-accent transition-all shrink-0" />
             <div className="flex flex-col">
-              <span className="text-[10px] text-text-secondary uppercase tracking-wider">Sebelumnya</span>
-              <span className="text-xs font-semibold text-text-primary group-hover:text-accent transition-colors truncate">
+              <span className="text-[10px] text-text-secondary uppercase font-semibold">Sebelumnya</span>
+              <span className="text-xs font-bold text-text-primary group-hover:text-accent transition-colors">
                 {prevArticle.title}
               </span>
             </div>
           </button>
         ) : (
-          <div />
+          <div className="hidden sm:block" />
         )}
 
         {nextArticle && (
           <button
             type="button"
             onClick={() => onNavigateArticle(nextArticle.id)}
-            className="w-full sm:w-auto p-3.5 rounded-xl border border-border/60 bg-surface hover:border-accent/40 text-right flex items-center justify-end gap-3 transition-all group max-w-xs ml-auto"
+            className="w-full sm:w-auto p-3.5 rounded-xl border border-border/70 hover:border-accent/40 bg-surface/50 hover:bg-surface text-right flex items-center justify-end gap-3 transition-all group active:scale-[0.98]"
           >
-            <div className="flex flex-col text-right">
-              <span className="text-[10px] text-text-secondary uppercase tracking-wider">Selanjutnya</span>
-              <span className="text-xs font-semibold text-text-primary group-hover:text-accent transition-colors truncate">
+            <div className="flex flex-col">
+              <span className="text-[10px] text-text-secondary uppercase font-semibold">Berikutnya</span>
+              <span className="text-xs font-bold text-text-primary group-hover:text-accent transition-colors">
                 {nextArticle.title}
               </span>
             </div>
-            <ArrowRight size={16} className="text-text-secondary group-hover:translate-x-1 group-hover:text-accent transition-transform shrink-0" />
+            <ArrowRight size={16} className="text-text-secondary group-hover:translate-x-1 group-hover:text-accent transition-all shrink-0" />
           </button>
         )}
       </div>

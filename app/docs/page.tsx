@@ -26,6 +26,17 @@ export default function DocsPage() {
   const nextArticle =
     currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
 
+  // Lock body scroll saat mobile menu drawer terbuka
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalStyle;
+      };
+    }
+  }, [isMobileMenuOpen]);
+
   // Shortcut Ctrl+K / Cmd+K untuk search
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -50,6 +61,7 @@ export default function DocsPage() {
 
   const handleSelectArticle = (articleId: string) => {
     setSelectedArticleId(articleId);
+    setIsMobileMenuOpen(false);
     if (typeof window !== "undefined") {
       window.location.hash = articleId;
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -83,10 +95,18 @@ export default function DocsPage() {
           />
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Navigation Drawer Overlay + Slide Panel */}
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 z-40 md:hidden bg-slate-950/40 backdrop-blur-sm animate-in fade-in duration-150">
-            <div className="w-4/5 max-w-xs h-full bg-canvas border-r border-border shadow-xl flex flex-col animate-in slide-in-from-left duration-200">
+          <div
+            className="fixed inset-0 z-50 md:hidden bg-slate-950/50 backdrop-blur-sm animate-in fade-in duration-150"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-modal="true"
+            role="dialog"
+          >
+            <div
+              className="w-4/5 max-w-xs h-full bg-canvas border-r border-border shadow-2xl flex flex-col animate-in slide-in-from-left duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
               <DocsSidebar
                 currentArticleId={currentArticle.id}
                 onSelectArticle={handleSelectArticle}

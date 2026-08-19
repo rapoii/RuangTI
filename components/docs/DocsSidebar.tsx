@@ -10,6 +10,7 @@ import {
   ChevronDown,
   ChevronRight,
   Sparkles,
+  X,
 } from "lucide-react";
 import { DOCS_CATEGORIES, DocArticle } from "@/lib/docs-data";
 
@@ -61,14 +62,28 @@ export function DocsSidebar({
 
   return (
     <aside className="w-full h-full flex flex-col py-4 px-3 sm:px-4 overflow-y-auto">
-      {/* Search status / stats */}
+      {/* Search status / stats / Mobile Close Button */}
       <div className="mb-4 px-2 flex items-center justify-between">
-        <span className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-          Navigasi Dokumentasi
-        </span>
-        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface border border-border/50 text-text-secondary">
-          12 Panduan
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+            Navigasi Docs
+          </span>
+          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface border border-border/50 text-text-secondary">
+            12 Panduan
+          </span>
+        </div>
+
+        {/* Mobile Close X Button */}
+        {onCloseMobile && (
+          <button
+            type="button"
+            onClick={onCloseMobile}
+            className="md:hidden w-7 h-7 rounded-lg border border-border/60 flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface transition-colors"
+            aria-label="Tutup menu navigasi"
+          >
+            <X size={15} />
+          </button>
+        )}
       </div>
 
       {/* Hierarchical Categories */}
@@ -119,19 +134,19 @@ export function DocsSidebar({
                           onSelectArticle(article.id);
                           if (onCloseMobile) onCloseMobile();
                         }}
-                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between group ${
+                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors flex items-center justify-between gap-1.5 ${
                           isActive
-                            ? "bg-accent/10 font-semibold text-accent border border-accent/20"
+                            ? "bg-accent/10 text-accent font-semibold"
                             : "text-text-secondary hover:text-text-primary hover:bg-surface/60 font-normal"
                         }`}
                       >
                         <span className="truncate">{article.title}</span>
                         {article.badge && (
                           <span
-                            className={`text-[10px] px-1.5 py-0.2 rounded font-medium shrink-0 ml-1.5 ${
+                            className={`text-[9px] px-1 py-0.2 rounded border font-mono shrink-0 ${
                               isActive
-                                ? "bg-accent text-white"
-                                : "bg-surface border border-border text-text-secondary group-hover:text-text-primary"
+                                ? "bg-accent/15 border-accent/30 text-accent"
+                                : "bg-surface border-border/60 text-text-secondary"
                             }`}
                           >
                             {article.badge}
