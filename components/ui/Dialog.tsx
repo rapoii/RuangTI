@@ -59,11 +59,11 @@ export function Dialog({
           {/* Modal Container */}
           <motion.div
             ref={dialogRef}
-            initial={{ opacity: 0, scale: 0.95, y: 8 }}
+            initial={{ opacity: 0, scale: 0.96, y: 8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 6 }}
+            exit={{ opacity: 0, scale: 0.96, y: 6 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-md rounded-2xl bg-surface border border-border/80 p-6 shadow-floating z-10"
+            className="relative w-full max-w-md rounded-2xl bg-surface border border-border/80 p-5 sm:p-6 shadow-2xl z-10"
             role="dialog"
             aria-modal="true"
           >
@@ -74,7 +74,7 @@ export function Dialog({
               <button
                 type="button"
                 onClick={onClose}
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors active:scale-95"
                 aria-label="Tutup dialog"
               >
                 <X className="w-4 h-4" />
@@ -82,14 +82,14 @@ export function Dialog({
             </div>
 
             {description && (
-              <p className="text-xs sm:text-sm text-text-secondary mt-3 leading-relaxed">
+              <p className="text-xs text-text-secondary mt-2.5 leading-relaxed">
                 {description}
               </p>
             )}
 
-            <div className="mt-4">{children}</div>
+            <div className="mt-3.5">{children}</div>
 
-            {footer && <div className="mt-6 flex justify-end gap-2.5">{footer}</div>}
+            {footer && <div className="mt-4 pt-3 border-t border-border/60 flex justify-end gap-2.5">{footer}</div>}
           </motion.div>
         </div>
       )}

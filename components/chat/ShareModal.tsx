@@ -188,21 +188,24 @@ export function ShareModal({
         )}
 
         {/* Disclaimer / Footer info */}
-        <p className="text-[10.5px] leading-relaxed text-text-tertiary pt-0.5">
+        <p className="text-[11px] leading-relaxed text-text-tertiary">
           Perhatikan etika integritas akademik dan hindari membagikan data pribadi tanpa izin.
         </p>
 
-        {/* Action Buttons Footer Bar (Symmetrical Padding & Border) */}
-        <div className="-mx-6 -mb-6 mt-1 p-3.5 sm:p-4 bg-canvas-subtle border-t border-border/70 rounded-b-2xl flex items-center justify-end gap-2.5">
-          <Button variant="ghost" size="sm" onClick={onClose} className="h-8.5 text-xs px-3">
+        {/* Action Buttons */}
+        <div className="flex items-center justify-end gap-2.5 pt-3 mt-1 border-t border-border/60">
+          <button
+            type="button"
+            onClick={onClose}
+            className="px-4 py-2 rounded-xl text-xs font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors"
+          >
             Batal
-          </Button>
-          <Button
-            size="sm"
-            variant="primary"
+          </button>
+          <button
+            type="button"
             onClick={handleApplyShare}
             disabled={isSaving}
-            className="h-8.5 text-xs bg-accent hover:bg-accent-hover text-white flex items-center gap-1.5 shadow-sm px-4 font-semibold"
+            className="px-4 py-2 rounded-xl bg-accent text-slate-950 font-bold text-xs shadow-sm shadow-accent/20 hover:brightness-105 active:scale-[0.98] transition-all flex items-center gap-1.5 disabled:opacity-50"
           >
             {isSaving
               ? "Menyimpan..."
@@ -211,7 +214,7 @@ export function ShareModal({
                 ? "Perbarui & Salin Link"
                 : "Buat link berbagi"
               : "Simpan sebagai Privat"}
-          </Button>
+          </button>
         </div>
       </div>
     </Dialog>
