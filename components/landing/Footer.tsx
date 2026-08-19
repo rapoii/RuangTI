@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { Github, Heart, BookOpen, Sparkles } from "lucide-react";
+import { Github, Heart } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-surface/30 py-12 px-4 sm:px-6">
+    <footer className="border-t border-border/40 bg-surface/30 py-10 sm:py-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-display font-bold text-sm">
+        <div className="flex items-center gap-3 text-center sm:text-left">
+          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-display font-bold text-sm shrink-0">
             TI
           </div>
           <div className="flex flex-col text-left">
@@ -21,7 +21,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex items-center gap-6 text-xs text-text-secondary">
+        <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-6 text-xs text-text-secondary text-center sm:text-left">
           <a
             href="https://github.com/rapoii/RuangTI"
             target="_blank"
@@ -33,7 +33,7 @@ export function Footer() {
           </a>
           <span className="flex items-center gap-1">
             <span>Dibuat dengan</span>
-            <Heart size={13} className="text-rose-500 fill-rose-500" />
+            <Heart size={13} className="text-rose-500 fill-rose-500 inline-block" />
             <span>untuk Teknik Industri FT Untirta</span>
           </span>
         </div>
