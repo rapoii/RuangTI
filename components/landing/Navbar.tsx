@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { ArrowRight, User } from "lucide-react";
 import { UserProfile } from "@/lib/types";
 import Link from "next/link";
@@ -12,11 +13,17 @@ interface NavbarProps {
 
 export function Navbar({ onOpenLogin, profile }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-40 w-full glass-header">
+    <motion.header
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      style={{ willChange: "transform, opacity" }}
+      className="sticky top-0 z-40 w-full glass-header"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         {/* Brand Logo & Tagline */}
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-accent/20 group-hover:scale-105 transition-transform">
+          <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-accent/20 group-hover:scale-105 transition-transform duration-150">
             TI
           </div>
           <div className="flex flex-col">
@@ -73,6 +80,6 @@ export function Navbar({ onOpenLogin, profile }: NavbarProps) {
           )}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

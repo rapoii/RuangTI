@@ -245,22 +245,24 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
-          {/* Backdrop Blur */}
+          {/* Backdrop Blur (Low-End Optimized) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/45 backdrop-blur-md"
+            transition={{ duration: 0.16, ease: "easeOut" }}
+            style={{ willChange: "opacity" }}
+            className="fixed inset-0 bg-black/45 backdrop-blur-[2px]"
             onClick={onClose}
           />
 
           {/* Modal Card / Responsive Bottom-Sheet on Mobile */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 20 }}
+            initial={{ opacity: 0, scale: 0.97, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 20 }}
-            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] as const }}
+            exit={{ opacity: 0, scale: 0.97, y: 12 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="relative w-full max-w-lg rounded-t-3xl sm:rounded-2xl bg-surface border border-border/80 shadow-2xl z-10 flex flex-col max-h-[92vh] sm:max-h-[90vh] overflow-hidden"
           >
             {/* Header / Brand & Close Button */}
@@ -319,7 +321,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
               </div>
             </div>
 
-            {/* Scrollable Form Body */}
+            {/* Scrollable Form Body with Smooth Tab Switch */}
             <div className="p-3.5 sm:p-4 overflow-y-auto flex-1 custom-scrollbar">
               
               {/* SSO SOCIAL LOGIN SECTION (GOOGLE & MICROSOFT) */}
@@ -386,177 +388,36 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                 <div className="flex-grow border-t border-border/80"></div>
               </div>
 
-              {tab === "login" ? (
-                /* LOGIN FORM */
-                <form onSubmit={handleLogin} className="flex flex-col gap-3">
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                      Email Untirta
-                    </label>
-                    <div className="relative">
-                      <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                      <input
-                        type="email"
-                        required
-                        value={loginEmail}
-                        onChange={(e) => setLoginEmail(e.target.value)}
-                        placeholder="contoh: rafi.permana@untirta.ac.id"
-                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                      Kata Sandi
-                    </label>
-                    <div className="relative">
-                      <Lock size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                      <input
-                        type="password"
-                        required
-                        value={loginPassword}
-                        onChange={(e) => setLoginPassword(e.target.value)}
-                        placeholder="Masukkan kata sandi akun"
-                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  {errorMessage && (
-                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600">
-                      <AlertCircle size={15} className="shrink-0 mt-0.5" />
-                      <span>{errorMessage}</span>
-                    </div>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-white font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
+              <AnimatePresence mode="wait">
+                {tab === "login" ? (
+                  /* LOGIN FORM (Fast Slide-Fade) */
+                  <motion.form
+                    key="login-form"
+                    initial={{ opacity: 0, x: -6 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 6 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    style={{ willChange: "transform, opacity" }}
+                    onSubmit={handleLogin}
+                    className="flex flex-col gap-3"
                   >
-                    {isLoading ? (
-                      <Loader2 size={16} className="animate-spin text-white" />
-                    ) : (
-                      <>
-                        <span>Masuk ke RuangTI</span>
-                        <CheckCircle2 size={14} />
-                      </>
-                    )}
-                  </button>
-                </form>
-              ) : (
-                /* SIGNUP FORM */
-                <form onSubmit={handleSignup} className="flex flex-col gap-2.5">
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                      Nama Lengkap
-                    </label>
-                    <div className="relative">
-                      <User size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                      <input
-                        type="text"
-                        required
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="Nama Mahasiswa / Dosen"
-                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                      Email Untirta Resmi
-                    </label>
-                    <div className="relative">
-                      <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                      <input
-                        type="email"
-                        required
-                        value={signupEmail}
-                        onChange={(e) => setSignupEmail(e.target.value)}
-                        placeholder="nama@untirta.ac.id atau @student.untirta.ac.id"
-                        className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                      />
-                    </div>
-                    <p className="text-[10px] text-text-tertiary leading-tight">
-                      *Wajib domain resmi @untirta.ac.id atau @student.untirta.ac.id
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="flex flex-col gap-1">
                       <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                        Peran (Role)
+                        Email Untirta
                       </label>
                       <div className="relative">
-                        <GraduationCap size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                        <select
-                          value={role}
-                          onChange={(e) => setRole(e.target.value)}
-                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all appearance-none cursor-pointer"
-                        >
-                          <option value="Mahasiswa">Mahasiswa</option>
-                          <option value="Dosen">Dosen</option>
-                          <option value="Alumni">Alumni Untirta</option>
-                          <option value="Peneliti">Peneliti Lab TI</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                        Fakultas / Jurusan
-                      </label>
-                      <div className="relative">
-                        <Building size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                        <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
                         <input
-                          type="text"
-                          value={institution}
-                          onChange={(e) => setInstitution(e.target.value)}
-                          placeholder="FT Teknik Industri"
-                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                        No. HP (WhatsApp)
-                      </label>
-                      <div className="relative">
-                        <Phone size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                        <input
-                          type="tel"
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          placeholder="081234567890"
-                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          type="email"
+                          required
+                          value={loginEmail}
+                          onChange={(e) => setLoginEmail(e.target.value)}
+                          placeholder="contoh: rafi.permana@untirta.ac.id"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                         />
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                        Kode Pos
-                      </label>
-                      <div className="relative">
-                        <MapPin size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
-                        <input
-                          type="text"
-                          value={postalCode}
-                          onChange={(e) => setPostalCode(e.target.value)}
-                          placeholder="42435"
-                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="flex flex-col gap-1">
                       <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Kata Sandi
@@ -566,55 +427,216 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
                         <input
                           type="password"
                           required
-                          value={signupPassword}
-                          onChange={(e) => setSignupPassword(e.target.value)}
-                          placeholder="Min. 8 karakter"
-                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          value={loginPassword}
+                          onChange={(e) => setLoginPassword(e.target.value)}
+                          placeholder="Masukkan kata sandi akun"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    {errorMessage && (
+                      <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600">
+                        <AlertCircle size={15} className="shrink-0 mt-0.5" />
+                        <span>{errorMessage}</span>
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full py-2.5 px-4 rounded-xl bg-accent text-white font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
+                    >
+                      {isLoading ? (
+                        <Loader2 size={16} className="animate-spin text-white" />
+                      ) : (
+                        <>
+                          <span>Masuk ke RuangTI</span>
+                          <CheckCircle2 size={14} />
+                        </>
+                      )}
+                    </button>
+                  </motion.form>
+                ) : (
+                  /* SIGNUP FORM (Fast Slide-Fade) */
+                  <motion.form
+                    key="signup-form"
+                    initial={{ opacity: 0, x: 6 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -6 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    style={{ willChange: "transform, opacity" }}
+                    onSubmit={handleSignup}
+                    className="flex flex-col gap-2.5"
+                  >
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                        Nama Lengkap
+                      </label>
+                      <div className="relative">
+                        <User size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                        <input
+                          type="text"
+                          required
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          placeholder="Nama Mahasiswa / Dosen"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                         />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
-                        Ulangi Sandi
+                        Email Untirta Resmi
                       </label>
                       <div className="relative">
-                        <Lock size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                        <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
                         <input
-                          type="password"
+                          type="email"
                           required
-                          value={confirmPassword}
-                          onChange={(e) => setConfirmPassword(e.target.value)}
-                          placeholder="Konfirmasi sandi"
-                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          value={signupEmail}
+                          onChange={(e) => setSignupEmail(e.target.value)}
+                          placeholder="nama@untirta.ac.id atau @student.untirta.ac.id"
+                          className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                         />
                       </div>
+                      <p className="text-[10px] text-text-tertiary leading-tight">
+                        *Wajib domain resmi @untirta.ac.id atau @student.untirta.ac.id
+                      </p>
                     </div>
-                  </div>
 
-                  {errorMessage && (
-                    <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600">
-                      <AlertCircle size={15} className="shrink-0 mt-0.5" />
-                      <span>{errorMessage}</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="flex flex-col gap-1">
+                        <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                          Peran (Role)
+                        </label>
+                        <div className="relative">
+                          <GraduationCap size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                          <select
+                            value={role}
+                            onChange={(e) => setRole(e.target.value)}
+                            className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="Mahasiswa">Mahasiswa</option>
+                            <option value="Dosen">Dosen</option>
+                            <option value="Alumni">Alumni Untirta</option>
+                            <option value="Peneliti">Peneliti Lab TI</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-1">
+                        <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                          Fakultas / Jurusan
+                        </label>
+                        <div className="relative">
+                          <Building size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                          <input
+                            type="text"
+                            value={institution}
+                            onChange={(e) => setInstitution(e.target.value)}
+                            placeholder="FT Teknik Industri"
+                            className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  )}
 
-                  <button
-                    type="submit"
-                    disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-white font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
-                  >
-                    {isLoading ? (
-                      <Loader2 size={16} className="animate-spin text-white" />
-                    ) : (
-                      <>
-                        <span>Buat Akun RuangTI</span>
-                        <Sparkles size={14} />
-                      </>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="flex flex-col gap-1">
+                        <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                          No. HP (WhatsApp)
+                        </label>
+                        <div className="relative">
+                          <Phone size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                          <input
+                            type="tel"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            placeholder="081234567890"
+                            className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-1">
+                        <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                          Kode Pos
+                        </label>
+                        <div className="relative">
+                          <MapPin size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                          <input
+                            type="text"
+                            value={postalCode}
+                            onChange={(e) => setPostalCode(e.target.value)}
+                            placeholder="42435"
+                            className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="flex flex-col gap-1">
+                        <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                          Kata Sandi
+                        </label>
+                        <div className="relative">
+                          <Lock size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                          <input
+                            type="password"
+                            required
+                            value={signupPassword}
+                            onChange={(e) => setSignupPassword(e.target.value)}
+                            placeholder="Min. 8 karakter"
+                            className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-1">
+                        <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                          Ulangi Sandi
+                        </label>
+                        <div className="relative">
+                          <Lock size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                          <input
+                            type="password"
+                            required
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            placeholder="Konfirmasi sandi"
+                            className="w-full pl-10 pr-3.5 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent transition-all"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {errorMessage && (
+                      <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 flex items-start gap-2 text-xs text-red-600">
+                        <AlertCircle size={15} className="shrink-0 mt-0.5" />
+                        <span>{errorMessage}</span>
+                      </div>
                     )}
-                  </button>
-                </form>
-              )}
+
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full py-2.5 px-4 rounded-xl bg-accent text-white font-bold text-xs shadow-md shadow-accent/20 hover:brightness-105 active:scale-[0.99] transition-all flex items-center justify-center gap-2 mt-0.5 disabled:opacity-50"
+                    >
+                      {isLoading ? (
+                        <Loader2 size={16} className="animate-spin text-white" />
+                      ) : (
+                        <>
+                          <span>Buat Akun RuangTI</span>
+                          <Sparkles size={14} />
+                        </>
+                      )}
+                    </button>
+                  </motion.form>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* Footer Notice */}

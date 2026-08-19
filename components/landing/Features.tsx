@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { Factory, Boxes, RotateCcw, Timer, Binary, Cpu, Layers, LineChart } from "lucide-react";
 import { KaTeXFormula } from "@/components/ui/KaTeXFormula";
 
@@ -60,8 +61,16 @@ const SECONDARY_FEATURES = [
 
 export function Features() {
   return (
-    <section id="features" className="py-10 sm:py-12 border-t border-border/40 w-full">
-      <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+    <section id="features" className="py-8 sm:py-10 border-t border-border/40 w-full">
+      {/* Section Header with Scroll Reveal */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-30px" }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
+        style={{ willChange: "transform, opacity" }}
+        className="text-center max-w-2xl mx-auto mb-7 sm:mb-9"
+      >
         <span className="text-[11px] font-bold text-accent tracking-wider uppercase bg-accent/10 px-3 py-1 rounded-full border border-accent/20 select-none">
           Domain Spesifik TI
         </span>
@@ -71,16 +80,21 @@ export function Features() {
         <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed max-w-lg mx-auto">
           Bukan sekadar chatbot generik — RuangTI memahami standar kurikulum, metodologi formal, dan formulasi eksak Teknik Industri.
         </p>
-      </div>
+      </motion.div>
 
-      {/* 4 Main Core Cards */}
+      {/* 4 Main Core Cards with Staggered Scroll Reveal */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-6 sm:mb-8">
         {PILLARS.map((p, idx) => {
           const Icon = p.icon;
           return (
-            <div
+            <motion.div
               key={idx}
-              className="p-5 sm:p-6 rounded-2xl bg-surface border border-border hover:border-accent/50 transition-all group flex flex-col justify-between shadow-sm relative overflow-hidden"
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.25, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              style={{ willChange: "transform, opacity" }}
+              className="p-5 sm:p-6 rounded-2xl bg-surface border border-border hover:border-accent/50 transition-colors group flex flex-col justify-between shadow-sm relative overflow-hidden"
             >
               <div className="absolute -right-8 -top-8 w-24 h-24 bg-accent/5 rounded-full blur-xl group-hover:bg-accent/10 transition-colors pointer-events-none" />
 
@@ -109,7 +123,7 @@ export function Features() {
                   <KaTeXFormula math={p.formula} />
                 </span>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
@@ -119,9 +133,14 @@ export function Features() {
         {SECONDARY_FEATURES.map((item, idx) => {
           const ItemIcon = item.icon;
           return (
-            <div
+            <motion.div
               key={idx}
-              className="p-4 sm:p-5 rounded-xl bg-surface border border-border hover:border-accent/30 transition-all flex flex-col gap-2 shadow-sm"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10px" }}
+              transition={{ duration: 0.2, delay: idx * 0.04, ease: "easeOut" }}
+              style={{ willChange: "transform, opacity" }}
+              className="p-4 sm:p-5 rounded-xl bg-surface border border-border hover:border-accent/30 transition-colors flex flex-col gap-2 shadow-sm"
             >
               <ItemIcon size={18} className="text-accent" />
               <h4 className="font-display text-sm font-bold text-text-primary">
@@ -130,7 +149,7 @@ export function Features() {
               <p className="text-xs text-text-primary/70 leading-relaxed">
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           );
         })}
       </div>

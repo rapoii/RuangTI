@@ -13,34 +13,64 @@ interface HeroProps {
 
 export function Hero({ profile, onOpenLogin }: HeroProps) {
   return (
-    <section className="pt-14 sm:pt-20 pb-10 sm:pb-12 w-full flex flex-col items-center text-center relative overflow-hidden">
-      {/* Background Subtle Ambient Glow */}
-      <div className="absolute top-6 w-96 h-96 bg-accent/8 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section className="pt-12 sm:pt-16 pb-8 sm:pb-10 w-full flex flex-col items-center text-center relative overflow-hidden">
+      {/* Background Subtle Ambient Glow with Fade-In */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        style={{ willChange: "transform, opacity" }}
+        className="absolute top-4 w-96 h-96 bg-accent/8 rounded-full blur-3xl pointer-events-none -z-10"
+      />
 
       <div className="flex flex-col items-center w-full">
         {/* Top Pill Badge */}
-        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-surface border border-accent/30 text-accent text-[11px] sm:text-xs font-semibold tracking-wide mb-4 max-w-full text-center justify-center select-none shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
+          className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-surface border border-accent/30 text-accent text-[11px] sm:text-xs font-semibold tracking-wide mb-4 max-w-full text-center justify-center select-none shadow-sm"
+        >
           <Sparkles size={13} className="text-accent shrink-0" />
           <span className="hidden sm:inline">Platform AI Co-Pilot Rekayasa Sistem Industri</span>
           <span className="sm:hidden">AI Co-Pilot Teknik Industri</span>
-        </div>
+        </motion.div>
 
         {/* Main Headline */}
-        <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-text-primary max-w-4xl leading-[1.18] sm:leading-[1.12]">
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+          style={{ willChange: "transform, opacity" }}
+          className="font-display text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-text-primary max-w-4xl leading-[1.18] sm:leading-[1.12]"
+        >
           Transformasi Analisis & Pemecahan Masalah{" "}
           <span className="text-accent">
             Teknik Industri
           </span>{" "}
           dengan Presisi AI.
-        </h1>
+        </motion.h1>
 
         {/* Subheadline Description */}
-        <p className="mt-3.5 sm:mt-4 text-sm sm:text-base md:text-lg text-text-secondary max-w-xl font-normal leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          style={{ willChange: "transform, opacity" }}
+          className="mt-3.5 sm:mt-4 text-sm sm:text-base md:text-lg text-text-secondary max-w-xl font-normal leading-relaxed"
+        >
           Dirancang khusus untuk mahasiswa dan praktisi Teknik Industri. Solver matematis, formula KaTeX, analisis PTLF, riset operasi, dan ergonomi kerja.
-        </p>
+        </motion.p>
 
         {/* CTA Buttons */}
-        <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-center gap-3 sm:gap-3.5 w-full sm:w-auto max-w-md sm:max-w-none">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          style={{ willChange: "transform, opacity" }}
+          className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-center gap-3 sm:gap-3.5 w-full sm:w-auto max-w-md sm:max-w-none"
+        >
           {profile.isLoggedIn ? (
             <Link
               href="/chat"
@@ -66,10 +96,16 @@ export function Hero({ profile, onOpenLogin }: HeroProps) {
             <BookOpen size={16} className="text-text-secondary group-hover:text-accent transition-colors" />
             <span>Dokumentasi Resmi</span>
           </Link>
-        </div>
+        </motion.div>
 
-        {/* Trust & Spec Micro-Badges */}
-        <div className="mt-8 sm:mt-9 pt-5 sm:pt-6 border-t border-border/40 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 text-left max-w-3xl w-full">
+        {/* Trust & Spec Micro-Badges with Fast Staggered Reveal */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, delay: 0.2, ease: "easeOut" }}
+          style={{ willChange: "transform, opacity" }}
+          className="mt-8 sm:mt-9 pt-5 sm:pt-6 border-t border-border/40 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5 text-left max-w-3xl w-full"
+        >
           {[
             { icon: CheckCircle, text: "Formula KaTeX" },
             { icon: Terminal, text: "FastAPI Engine" },
@@ -78,15 +114,22 @@ export function Hero({ profile, onOpenLogin }: HeroProps) {
           ].map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div key={idx} className="flex items-center gap-2 px-3 py-2 sm:py-2.5 rounded-lg bg-surface/50 border border-border/30">
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.22 + idx * 0.04 }}
+                style={{ willChange: "transform, opacity" }}
+                className="flex items-center gap-2 px-3 py-2 sm:py-2.5 rounded-lg bg-surface/50 border border-border/30 hover:border-accent/30 transition-colors"
+              >
                 <Icon size={14} className="text-accent shrink-0" />
                 <span className="text-xs text-text-secondary font-medium leading-none truncate">
                   {item.text}
                 </span>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
