@@ -201,10 +201,29 @@ async def stream_grok_ai_response(
         else:
             content_items.append({"type": "text", "text": "Tolong analisis dan berikan solusi untuk gambar teknik industri ini."})
 
+        uploads_base_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "uploads")
+
         for img in images:
+            img_url = img
+            # If relative URL pointing to local uploads, read file and convert to base64
+            if img.startswith("/uploads/"):
+                rel_path = img.lstrip("/")
+                full_img_path = os.path.join(os.path.dirname(uploads_base_dir), rel_path)
+                if os.path.exists(full_img_path):
+                    try:
+                        ext = full_img_path.split(".")[-1].lower()
+                        mime_type = f"image/{ext}" if ext in ["png", "jpeg", "webp", "gif"] else "image/jpeg"
+                        if ext == "jpg":
+                            mime_type = "image/jpeg"
+                        with open(full_img_path, "rb") as f:
+                            b64 = base64.b64encode(f.read()).decode("utf-8")
+                        img_url = f"data:{mime_type};base64,{b64}"
+                    except Exception as e:
+                        logger.warning(f"Failed to read local upload image {full_img_path}: {e}")
+
             content_items.append({
                 "type": "image_url",
-                "image_url": {"url": img}
+                "image_url": {"url": img_url}
             })
         messages.append({"role": "user", "content": content_items})
     else:

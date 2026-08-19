@@ -2,8 +2,10 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { SendStopButton } from "./SendStopButton";
-import { Paperclip, Globe, X, Image as ImageIcon } from "lucide-react";
+import { Paperclip, Globe, X, Image as ImageIcon, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { compressImageFile } from "@/lib/image-compressor";
+import { uploadImageToBackend } from "@/lib/api-client";
 
 interface ComposerProps {
   onSendMessage: (
@@ -22,7 +24,9 @@ export function Composer({
   disabled = false,
 }: ComposerProps) {
   const [text, setText] = useState("");
-  const [images, setImages] = useState<string[]>([]);
+  // Store compressed base64 data URLs for instant local previews
+  const [previewImages, setPreviewImages] = useState<string[]>([]);
+  const [isUploading, setIsUploading] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -38,65 +42,82 @@ export function Composer({
     }
   }, [text]);
 
+  // Process and compress image file (client-side resize + webp compression)
+  const processAndAddImage = async (file: File) => {
+    try {
+      const compressedDataUrl = await compressImageFile(file, 1280, 1280, 0.82);
+      setPreviewImages((prev) => [...prev, compressedDataUrl]);
+    } catch (err) {
+      console.error("Compression error:", err);
+    }
+  };
+
   // Handle file selection from input
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
-    Array.from(files).forEach((file) => {
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
       if (file.type.startsWith("image/")) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          if (event.target?.result) {
-            setImages((prev) => [...prev, event.target!.result as string]);
-          }
-        };
-        reader.readAsDataURL(file);
+        await processAndAddImage(file);
       }
-    });
+    }
 
     // Reset input value so same file can be selected again
     e.target.value = "";
   };
 
   // Handle paste image from clipboard
-  const handlePaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+  const handlePaste = async (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
     const items = e.clipboardData.items;
     for (let i = 0; i < items.length; i++) {
       if (items[i].type.indexOf("image") !== -1) {
         const file = items[i].getAsFile();
         if (file) {
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            if (event.target?.result) {
-              setImages((prev) => [...prev, event.target!.result as string]);
-            }
-          };
-          reader.readAsDataURL(file);
+          await processAndAddImage(file);
         }
       }
     }
   };
 
   const removeImage = (index: number) => {
-    setImages((prev) => prev.filter((_, i) => i !== index));
+    setPreviewImages((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (isStreaming) {
       onStopStreaming();
       return;
     }
     const hasText = text.trim().length > 0;
-    const hasImages = images.length > 0;
+    const hasImages = previewImages.length > 0;
 
-    if ((hasText || hasImages) && !disabled) {
+    if ((hasText || hasImages) && !disabled && !isUploading) {
+      let uploadedUrls: string[] = [];
+
+      if (hasImages) {
+        setIsUploading(true);
+        try {
+          const uploadPromises = previewImages.map((b64) => uploadImageToBackend(b64));
+          const results = await Promise.all(uploadPromises);
+          uploadedUrls = results.filter((url): url is string => Boolean(url));
+        } catch (err) {
+          console.error("Upload error before sending message:", err);
+          // Fallback to base64 if backend upload failed
+          uploadedUrls = previewImages;
+        } finally {
+          setIsUploading(false);
+        }
+      }
+
       onSendMessage(text.trim(), {
         webSearch: webSearchEnabled,
-        images: images.length > 0 ? images : undefined,
+        images: uploadedUrls.length > 0 ? uploadedUrls : undefined,
       });
+
       setText("");
-      setImages([]);
+      setPreviewImages([]);
       if (textareaRef.current) {
         textareaRef.current.style.height = "auto";
       }
@@ -110,7 +131,7 @@ export function Composer({
     }
   };
 
-  const canSubmit = (text.trim().length > 0 || images.length > 0) && !disabled;
+  const canSubmit = (text.trim().length > 0 || previewImages.length > 0) && !disabled && !isUploading;
 
   return (
     <div className="w-full px-3 sm:px-6 pb-2 pt-1 select-none">
@@ -135,9 +156,9 @@ export function Composer({
           )}
         >
           {/* Attached Images Thumbnail Strip */}
-          {images.length > 0 && (
+          {previewImages.length > 0 && (
             <div className="flex items-center gap-2.5 pt-1.5 pb-2.5 overflow-x-auto no-scrollbar border-b border-border/60 mb-1.5">
-              {images.map((imgSrc, idx) => (
+              {previewImages.map((imgSrc, idx) => (
                 <div
                   key={idx}
                   className="relative group shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-border/80 bg-canvas-subtle shadow-sm"
@@ -164,7 +185,7 @@ export function Composer({
                 title="Tambah gambar lain"
               >
                 <ImageIcon size={16} />
-                <span className="text-[10px] font-medium">+ Tambah</span>
+                <span className="text-[11px] font-medium">+ Tambah</span>
               </button>
             </div>
           )}
@@ -178,7 +199,7 @@ export function Composer({
                 onClick={() => fileInputRef.current?.click()}
                 className={cn(
                   "w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors m-0 p-0",
-                  images.length > 0
+                  previewImages.length > 0
                     ? "bg-accent/15 text-accent hover:bg-accent/25"
                     : "text-text-tertiary hover:text-text-primary hover:bg-surface-hover"
                 )}
@@ -201,11 +222,11 @@ export function Composer({
                 onBlur={() => setIsFocused(false)}
                 rows={1}
                 placeholder={
-                  images.length > 0
+                  previewImages.length > 0
                     ? "Tulis instruksi tambahan untuk gambar ini..."
                     : "Tanyakan masalah optimasi, lean, atau upload gambar soal..."
                 }
-                disabled={disabled}
+                disabled={disabled || isUploading}
                 className="w-full bg-transparent text-text-primary text-xs sm:text-sm placeholder:text-text-tertiary resize-none outline-none py-1.5 px-1 max-h-[220px] leading-normal font-sans block m-0"
               />
             </div>
@@ -238,11 +259,17 @@ export function Composer({
 
             {/* Send / Stop Action Button */}
             <div className="flex items-center justify-center shrink-0">
-              <SendStopButton
-                isStreaming={isStreaming}
-                disabled={!canSubmit}
-                onClick={handleSubmit}
-              />
+              {isUploading ? (
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center text-accent">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                </div>
+              ) : (
+                <SendStopButton
+                  isStreaming={isStreaming}
+                  disabled={!canSubmit}
+                  onClick={handleSubmit}
+                />
+              )}
             </div>
           </div>
         </div>

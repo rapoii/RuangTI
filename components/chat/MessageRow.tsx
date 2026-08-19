@@ -37,6 +37,17 @@ export function MessageRow({
     }
   };
 
+  const resolveImageUrl = (url: string) => {
+    if (url.startsWith("/uploads/")) {
+      const apiBase =
+        typeof window !== "undefined"
+          ? `${window.location.protocol}//${window.location.hostname}:8000`
+          : "http://localhost:8000";
+      return `${apiBase}${url}`;
+    }
+    return url;
+  };
+
   return (
     <motion.div
       initial={false}
@@ -87,10 +98,10 @@ export function MessageRow({
                       className="relative rounded-xl overflow-hidden border border-border bg-canvas-subtle shadow-sm max-w-[240px] sm:max-w-[300px] max-h-[220px]"
                     >
                       <img
-                        src={imgSrc}
+                        src={resolveImageUrl(imgSrc)}
                         alt={`Attachment ${idx + 1}`}
                         className="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-transform"
-                        onClick={() => window.open(imgSrc, "_blank")}
+                        onClick={() => window.open(resolveImageUrl(imgSrc), "_blank")}
                       />
                     </div>
                   ))}
@@ -137,9 +148,14 @@ export function MessageRow({
           </div>
 
           {/* Assistant Markdown Content */}
-          <div className="w-full text-xs sm:text-sm text-text-primary leading-relaxed">
+          <div className="w-full text-xs sm:text-sm text-text-primary leading-relaxed relative">
             {message.content ? (
-              <MarkdownContent content={message.content} />
+              <>
+                <MarkdownContent content={message.content} />
+                {isStreaming && (
+                  <span className="inline-block w-2 h-4 ml-1 align-middle bg-accent rounded-xs animate-pulse" />
+                )}
+              </>
             ) : (
               <div className="py-2">
                 <TheGlow message="RuangTI sedang merumuskan solusi teknik industri..." />

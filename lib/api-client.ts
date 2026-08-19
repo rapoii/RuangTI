@@ -256,6 +256,22 @@ export async function fetchMessagesFromBackend(conversationId: string): Promise<
   }
 }
 
+export async function uploadImageToBackend(base64Data: string): Promise<string | null> {
+  try {
+    const res = await fetch(`${getApiBase()}/api/upload/image`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...getAuthHeader() },
+      body: JSON.stringify({ image_data: base64Data }),
+    });
+    if (!res.ok) throw new Error("Upload failed");
+    const data = await res.json();
+    return data.url; // e.g. "/uploads/images/img_123456_abcd.webp"
+  } catch (err) {
+    console.error("Backend image upload error:", err);
+    return null;
+  }
+}
+
 export async function saveMessageToBackend(
   conversationId: string,
   role: "user" | "assistant" | "system",
