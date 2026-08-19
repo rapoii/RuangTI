@@ -9,6 +9,7 @@ export function useProfile() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    setProfile(getUserProfile());
     setIsLoaded(true);
     const handleStorage = () => {
       setProfile(getUserProfile());

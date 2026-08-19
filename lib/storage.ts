@@ -27,13 +27,13 @@ export const DEFAULT_USER: UserProfile = {
 const USER_PROFILE_KEY = "ruangti_user_profile_v2";
 
 export function getUserProfile(): UserProfile {
-  if (typeof window === "undefined") return DEFAULT_USER;
+  if (typeof window === "undefined") return GUEST_USER;
   try {
     const raw = localStorage.getItem(USER_PROFILE_KEY);
-    if (!raw) return DEFAULT_USER;
+    if (!raw) return GUEST_USER;
     return JSON.parse(raw);
   } catch {
-    return DEFAULT_USER;
+    return GUEST_USER;
   }
 }
 

@@ -107,6 +107,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
     if (signupPassword !== confirmPassword) {
       setIsLoading(false);
       setErrorMessage("Konfirmasi kata sandi tidak cocok.");
+      return;
     }
 
     if (signupPassword.length < 8) {
@@ -118,7 +119,7 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
     try {
       const res = await registerToBackend({
         name,
-        email: signupEmail,
+        email: emailTrimmed,
         password: signupPassword,
         confirm_password: confirmPassword,
         phone,
@@ -145,359 +146,355 @@ export function AuthModal({ isOpen, onClose, onLoginSuccess }: AuthModalProps) {
       onClose();
     } catch (err: any) {
       setIsLoading(false);
-      setErrorMessage(err.message || "Gagal melakukan pendaftaran akun.");
+      setErrorMessage(err.message || "Gagal melakukan pendaftaran. Coba lagi nanti.");
     }
   };
 
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-          {/* Backdrop */}
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+          {/* Backdrop Blur */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/45 backdrop-blur-md"
             onClick={onClose}
-            className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm"
           />
 
-          {/* Modal Container */}
+          {/* Modal Card / Responsive Bottom-Sheet on Mobile */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 8 }}
+            initial={{ opacity: 0, scale: 0.96, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: 8 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg bg-surface border border-border rounded-2xl shadow-2xl overflow-hidden z-10 my-auto max-h-[90vh] flex flex-col"
+            exit={{ opacity: 0, scale: 0.96, y: 20 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] as const }}
+            className="relative w-full max-w-lg rounded-t-3xl sm:rounded-2xl bg-surface border border-border/80 shadow-2xl z-10 flex flex-col max-h-[92vh] sm:max-h-[88vh] overflow-hidden"
           >
-            {/* Header with Brand & Tabs */}
-            <div className="px-5 sm:px-6 pt-5 pb-3 border-b border-border/40 shrink-0 bg-surface">
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-bold text-sm shadow-sm shadow-accent/20">
-                    TI
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-base text-text-primary">
-                      Ruang<span className="text-accent">TI</span> Auth
-                    </h3>
-                    <p className="text-[11px] text-text-secondary">
-                      Portal Khusus Sivitas Akademika Untirta
-                    </p>
-                  </div>
+            {/* Header / Brand & Close Button with 44px Touch Target */}
+            <div className="p-4 sm:p-5 border-b border-border/60 flex items-center justify-between shrink-0 bg-surface">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center text-slate-950 font-bold text-xs shadow-sm shadow-accent/20">
+                  TI
                 </div>
-                <button
-                  onClick={onClose}
-                  className="w-8 h-8 rounded-lg text-text-secondary hover:text-text-primary hover:bg-canvas flex items-center justify-center transition-colors"
-                  aria-label="Tutup Dialog"
-                >
-                  <X size={16} />
-                </button>
+                <div>
+                  <h3 className="font-display font-bold text-sm sm:text-base text-text-primary leading-tight">
+                    Ruang<span className="text-accent">TI</span> Auth
+                  </h3>
+                  <p className="text-[11px] text-text-secondary">
+                    Portal Khusus Sivitas Akademika Untirta
+                  </p>
+                </div>
               </div>
 
-              {/* Tab Switcher with High-Contrast Active Indicator */}
-              <div className="grid grid-cols-2 p-1 bg-canvas rounded-xl border border-border">
+              <button
+                onClick={onClose}
+                aria-label="Tutup dialog"
+                className="w-10 h-10 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors active:scale-95"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Tab Selector Segmented Control */}
+            <div className="p-3 sm:p-4 pb-0 shrink-0 bg-surface">
+              <div className="grid grid-cols-2 p-1 rounded-xl bg-canvas-subtle border border-border/60 text-xs font-semibold select-none">
                 <button
                   type="button"
                   onClick={() => handleTabSwitch("login")}
-                  className={`py-1.5 text-xs font-semibold rounded-lg transition-all ${
+                  className={`py-2 px-2.5 rounded-lg transition-all text-center flex items-center justify-center gap-1.5 ${
                     tab === "login"
                       ? "bg-surface text-text-primary shadow-sm border border-border/80 font-bold"
                       : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
-                  Masuk Akun
+                  <User size={13} />
+                  <span>Masuk Akun</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => handleTabSwitch("signup")}
-                  className={`py-1.5 text-xs font-semibold rounded-lg transition-all ${
+                  className={`py-2 px-2.5 rounded-lg transition-all text-center flex items-center justify-center gap-1.5 ${
                     tab === "signup"
                       ? "bg-surface text-accent shadow-sm border border-accent/40 font-bold"
                       : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
-                  Daftar Baru (Untirta)
+                  <Sparkles size={13} />
+                  <span className="hidden sm:inline">Daftar Baru (Untirta)</span>
+                  <span className="sm:hidden">Daftar Baru</span>
                 </button>
               </div>
             </div>
 
-            {/* Error Message Toast Inline */}
-            {errorMessage && (
-              <div className="mx-5 sm:mx-6 mt-3.5 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-start gap-2.5 shrink-0">
-                <AlertCircle size={15} className="shrink-0 mt-0.5" />
-                <span className="leading-relaxed">{errorMessage}</span>
-              </div>
-            )}
-
-            {/* Scrollable Form Content */}
-            <div className="p-5 sm:p-6 overflow-y-auto flex-1 overscroll-contain">
+            {/* Scrollable Form Body */}
+            <div className="p-4 sm:p-5 overflow-y-auto flex-1 custom-scrollbar">
               {tab === "login" ? (
-                /* ================= LOGIN TAB ================= */
-                <form onSubmit={handleLogin} className="space-y-4">
-                  <div>
-                    <label className="block text-[11px] font-semibold text-text-secondary mb-1.5 uppercase tracking-wider">
+                /* LOGIN FORM */
+                <form onSubmit={handleLogin} className="flex flex-col gap-3.5">
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Email Untirta
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                        <Mail size={15} />
-                      </div>
+                      <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
                       <input
                         type="email"
                         required
                         value={loginEmail}
                         onChange={(e) => setLoginEmail(e.target.value)}
-                        placeholder="nama@untirta.ac.id"
-                        className="w-full pl-9 pr-3.5 py-2.5 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-secondary/50"
+                        placeholder="contoh: rafi.permana@untirta.ac.id"
+                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                       />
                     </div>
                   </div>
 
-                  <div>
-                    <label className="block text-[11px] font-semibold text-text-secondary mb-1.5 uppercase tracking-wider">
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Kata Sandi
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                        <Lock size={15} />
-                      </div>
+                      <Lock size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
                       <input
                         type="password"
                         required
                         value={loginPassword}
                         onChange={(e) => setLoginPassword(e.target.value)}
-                        className="w-full pl-9 pr-3.5 py-2.5 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-secondary/50"
+                        placeholder="Masukkan kata sandi..."
+                        className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                       />
                     </div>
                   </div>
 
+                  {errorMessage && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 text-xs flex items-center gap-2"
+                    >
+                      <AlertCircle size={15} className="shrink-0" />
+                      <span>{errorMessage}</span>
+                    </motion.div>
+                  )}
+
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-sm hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center justify-center gap-2 mt-2 active:scale-[0.98]"
+                    className="w-full mt-2 py-3 rounded-xl bg-accent text-slate-950 font-bold text-xs hover:brightness-110 shadow-md shadow-accent/20 transition-all flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-50"
                   >
                     {isLoading ? (
-                      <div className="w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full animate-spin" />
+                      <span className="animate-pulse">Memproses...</span>
                     ) : (
                       <>
                         <span>Masuk ke Workspace RuangTI</span>
-                        <CheckCircle2 size={16} />
+                        <CheckCircle2 size={15} />
                       </>
                     )}
                   </button>
 
-                  <div className="pt-3 border-t border-border/40 text-center">
-                    <span className="text-xs text-text-secondary">
-                      Belum memiliki akun?{" "}
-                      <button
-                        type="button"
-                        onClick={() => handleTabSwitch("signup")}
-                        className="text-accent font-semibold hover:underline ml-1"
-                      >
-                        Daftar sekarang
-                      </button>
-                    </span>
-                  </div>
+                  <p className="text-center text-[11px] text-text-secondary mt-2">
+                    Belum memiliki akun?{" "}
+                    <button
+                      type="button"
+                      onClick={() => handleTabSwitch("signup")}
+                      className="text-accent font-semibold hover:underline"
+                    >
+                      Daftar sekarang
+                    </button>
+                  </p>
                 </form>
               ) : (
-                /* ================= SIGNUP TAB ================= */
-                <form onSubmit={handleSignup} className="space-y-3.5 pb-2">
-                  {/* Domain Untirta Notice */}
+                /* SIGNUP FORM */
+                <form onSubmit={handleSignup} className="flex flex-col gap-3">
+                  {/* Banner untirta requirement */}
                   <div className="p-2.5 rounded-xl bg-accent/10 border border-accent/20 text-accent text-[11px] flex items-center gap-2">
-                    <Sparkles size={14} className="shrink-0" />
+                    <Sparkles size={13} className="shrink-0" />
                     <span>Hanya email @untirta.ac.id atau @student.untirta.ac.id yang valid.</span>
                   </div>
 
-                  {/* 1. Nama Lengkap */}
-                  <div>
-                    <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                  <div className="flex flex-col gap-1">
+                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Nama Lengkap *
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                        <User size={15} />
-                      </div>
+                      <User size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
                       <input
                         type="text"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Rafi Permana"
-                        className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40"
+                        className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                       />
                     </div>
                   </div>
 
-                  {/* 2. Email Untirta */}
-                  <div>
-                    <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                  <div className="flex flex-col gap-1">
+                    <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                       Email Institusi Untirta *
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                        <Mail size={15} />
-                      </div>
+                      <Mail size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
                       <input
                         type="email"
                         required
                         value={signupEmail}
                         onChange={(e) => setSignupEmail(e.target.value)}
                         placeholder="3333200001@student.untirta.ac.id"
-                        className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40"
+                        className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                       />
                     </div>
                   </div>
 
-                  {/* 3. Nomor WhatsApp & Peran (Grid 2 Kolom) */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                  {/* Grid WhatsApp & Role */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Nomor WhatsApp *
                       </label>
                       <div className="relative">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                          <Phone size={15} />
-                        </div>
+                        <Phone size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
                         <input
                           type="tel"
                           required
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder="08123456789"
-                          className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40"
+                          className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                         />
                       </div>
                     </div>
 
-                    <div>
-                      <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Peran Akademik
                       </label>
-                      <select
-                        value={role}
-                        onChange={(e) => setRole(e.target.value)}
-                        className="w-full px-3 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all"
-                      >
-                        <option value="Mahasiswa">Mahasiswa</option>
-                        <option value="Dosen">Dosen / Peneliti</option>
-                        <option value="Alumni">Alumni / Praktisi</option>
-                      </select>
+                      <div className="relative">
+                        <GraduationCap size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                        <select
+                          value={role}
+                          onChange={(e) => setRole(e.target.value)}
+                          className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent appearance-none cursor-pointer"
+                        >
+                          <option value="Mahasiswa">Mahasiswa</option>
+                          <option value="Dosen">Dosen / Peneliti</option>
+                          <option value="Alumni">Alumni / Praktisi</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
 
-                  {/* 4. Alamat & Kode Pos (Dikelompokkan Logis) */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div className="sm:col-span-2">
-                      <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                  {/* Grid Address & Postal Code */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <div className="sm:col-span-2 flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Alamat Domisili / Kampus *
                       </label>
                       <div className="relative">
-                        <div className="absolute top-2.5 left-0 pl-3 flex items-start pointer-events-none text-text-secondary">
-                          <MapPin size={15} />
-                        </div>
-                        <textarea
+                        <MapPin size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
+                        <input
+                          type="text"
                           required
-                          rows={2}
                           value={address}
                           onChange={(e) => setAddress(e.target.value)}
                           placeholder="Jl. Jenderal Sudirman Km 3, Cilegon"
-                          className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40 resize-none"
+                          className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                         />
                       </div>
                     </div>
 
-                    <div>
-                      <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Kode Pos *
                       </label>
                       <div className="relative">
-                        <div className="absolute top-2.5 left-0 pl-3 flex items-start pointer-events-none text-text-secondary">
-                          <Building size={15} />
-                        </div>
+                        <Building size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
                         <input
                           type="text"
                           required
                           value={postalCode}
                           onChange={(e) => setPostalCode(e.target.value)}
                           placeholder="42435"
-                          className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40"
+                          className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                         />
                       </div>
                     </div>
                   </div>
 
-                  {/* 5. Password & Confirm Password (Grid 2 Kolom) */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
+                  {/* Grid Passwords */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
                         Kata Sandi *
                       </label>
                       <div className="relative">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                          <Lock size={15} />
-                        </div>
+                        <Lock size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
                         <input
                           type="password"
                           required
                           value={signupPassword}
                           onChange={(e) => setSignupPassword(e.target.value)}
                           placeholder="Min. 8 karakter"
-                          className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40"
+                          className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                         />
                       </div>
                     </div>
 
-                    <div>
-                      <label className="block text-[11px] font-semibold text-text-secondary mb-1 uppercase tracking-wider">
-                        Konfirmasi Sandi *
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[11px] font-semibold text-text-secondary uppercase tracking-wider">
+                        Ulangi Kata Sandi *
                       </label>
                       <div className="relative">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-text-secondary">
-                          <Lock size={15} />
-                        </div>
+                        <Lock size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
                         <input
                           type="password"
                           required
                           value={confirmPassword}
                           onChange={(e) => setConfirmPassword(e.target.value)}
-                          placeholder="Ulangi sandi..."
-                          className="w-full pl-9 pr-3.5 py-2 bg-canvas border border-border rounded-xl text-sm text-text-primary focus:outline-none focus:border-accent transition-all placeholder:text-text-secondary/40"
+                          placeholder="Ulangi sandi"
+                          className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border text-text-primary text-xs focus:outline-none focus:border-accent"
                         />
                       </div>
                     </div>
                   </div>
 
-                  {/* Submit Signup Button (Spaced & Never Cut Off) */}
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      disabled={isLoading}
-                      className="w-full py-2.5 px-4 rounded-xl bg-accent text-slate-950 font-bold text-sm hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
+                  {errorMessage && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 text-xs flex items-center gap-2 mt-1"
                     >
-                      {isLoading ? (
-                        <div className="w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full animate-spin" />
-                      ) : (
-                        <>
-                          <span>Daftar Akun Mahasiswa Untirta</span>
-                          <CheckCircle2 size={16} />
-                        </>
-                      )}
-                    </button>
-                  </div>
+                      <AlertCircle size={15} className="shrink-0" />
+                      <span>{errorMessage}</span>
+                    </motion.div>
+                  )}
 
-                  <div className="pt-2 border-t border-border/40 text-center">
-                    <span className="text-xs text-text-secondary">
-                      Sudah punya akun?{" "}
-                      <button
-                        type="button"
-                        onClick={() => handleTabSwitch("login")}
-                        className="text-accent font-semibold hover:underline ml-1"
-                      >
-                        Masuk di sini
-                      </button>
-                    </span>
-                  </div>
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full mt-2 py-3 rounded-xl bg-accent text-slate-950 font-bold text-xs hover:brightness-110 shadow-md shadow-accent/20 transition-all flex items-center justify-center gap-2 active:scale-[0.98] disabled:opacity-50"
+                  >
+                    {isLoading ? (
+                      <span className="animate-pulse">Mendaftarkan...</span>
+                    ) : (
+                      <>
+                        <span>Daftar Akun Mahasiswa Untirta</span>
+                        <CheckCircle2 size={15} />
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-center text-[11px] text-text-secondary mt-1 pb-2">
+                    Sudah memiliki akun?{" "}
+                    <button
+                      type="button"
+                      onClick={() => handleTabSwitch("login")}
+                      className="text-accent font-semibold hover:underline"
+                    >
+                      Masuk sekarang
+                    </button>
+                  </p>
                 </form>
               )}
             </div>
