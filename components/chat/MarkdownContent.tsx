@@ -51,7 +51,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
   const extraSources = webSources.slice(6);
 
   return (
-    <div className="prose prose-sm max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.65]">
+    <div className="prose prose-sm max-w-none text-text-primary text-[15px] sm:text-[16px] leading-[1.8]">
       {/* Visual Live Source Carousel / Dynamic Full Width Adaptive Grid */}
       {webSources.length > 0 && (
         <div className="mb-5 not-prose w-full select-none">
@@ -215,14 +215,14 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
           ),
           em: ({ children }) => <em className="italic text-text-primary/90">{children}</em>,
           strong: ({ children }) => <strong className="font-semibold text-text-primary">{children}</strong>,
-          p: ({ children }) => <p className="mb-3.5 last:mb-0">{children}</p>,
+          p: ({ children }) => <p className="mb-4 last:mb-0 leading-[1.8]">{children}</p>,
           ul: ({ children }) => (
-            <ul className="list-disc list-outside pl-5 mb-3.5 space-y-1">
+            <ul className="list-disc list-outside pl-5 mb-4 space-y-1.5 leading-[1.8]">
               {children}
             </ul>
           ),
           ol: ({ children }) => (
-            <ol className="list-decimal list-outside pl-5 mb-3.5 space-y-1">
+            <ol className="list-decimal list-outside pl-5 mb-4 space-y-1.5 leading-[1.8]">
               {children}
             </ol>
           ),
