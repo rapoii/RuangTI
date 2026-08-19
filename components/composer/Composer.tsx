@@ -333,7 +333,7 @@ export function Composer({
             onPaste={handlePaste}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            placeholder="Tanyakan analisis TI, sertakan formula, lampirkan dokumen / spreadsheet..."
+            placeholder="Tulis pesan..."
             disabled={disabled}
             rows={1}
             className={cn(
