@@ -154,13 +154,6 @@ export function DocsSearchModal({
                 </div>
               )}
             </div>
-
-            {/* Footer Hint */}
-            <div className="px-4 py-2.5 bg-surface/40 border-t border-border/40 text-[11px] text-text-secondary flex items-center justify-between select-none">
-              <span className="hidden sm:inline">Tekan ESC atau klik di luar untuk menutup</span>
-              <span className="sm:hidden">Klik X untuk menutup</span>
-              <span className="font-mono">{filteredResults.length} hasil</span>
-            </div>
           </motion.div>
         </div>
       )}
