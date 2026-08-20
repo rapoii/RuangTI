@@ -24,7 +24,7 @@ Langkah standar ilmiah untuk menentukan Waktu Baku ($W_b$) bagi seorang operator
 4. **Waktu Baku / Waktu Standar ($W_b$):**
    - **Metode Rumus 1 (Basis Waktu Kerja):**
      $$W_b = W_n \times (1 + \% \text{Allowance})$$
-   - **Metode Rumus 2 (Basis Waktu Total / Rekomendasi ILO & Untirta):**
+   - **Metode Rumus 2 (Basis Waktu Total / Rekomendasi ILO):**
      $$W_b = W_n \times \left( \frac{100\%}{100\% - \% \text{Allowance}} \right)$$
 
 5. **Output Standar ($O_s$):**
