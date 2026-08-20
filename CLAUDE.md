@@ -56,7 +56,7 @@ curl -s http://localhost:20128/v1/models
   - `backend/app/services/file_generator.py`: Mesin generator dokumen dengan styling profesional (Excel high-end headers, Word hierarchical sections, PPT 16:9 widescreen cards, PDF ReportLab print layout).
   - `backend/app/services/document_parser.py`: Ekstraksi teks & tabel instan dari Word, Excel, PowerPoint, CSV, PDF, Zip, CAD, FlexSim, dan file source code.
   - `backend/app/services/media_cleaner.py`: Async background worker untuk auto-pruning berkas lampiran > 14 hari.
-  - `backend/knowledge/`: 434 Modul Knowledge Base Teknik Industri untuk konteks RAG.
+  - `backend/knowledge/`: 476 Modul Knowledge Base Teknik Industri untuk konteks RAG (3.106+ seksi FTS5 terindeks).
 
 ---
 
