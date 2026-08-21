@@ -78,25 +78,36 @@
 
 /* Formula Matematika Display / Blok ($$ ... $$) */
 .katex-display {
-  display: block;
-  margin: 1.25rem 0;
-  padding: 0.85rem 1rem;
-  background-color: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
-  text-align: center;
+  display: block !important;
+  margin: 1.25rem 0 !important;
+  padding: 0.85rem 1rem !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0.75rem !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  text-align: center !important;
+}
+
+/* Scroll Container untuk rumus inline yang panjang di dalam paragraf */
+span.katex {
+  display: inline-block !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  vertical-align: middle !important;
 }
 
 /* Pastikan KaTeX inner rendering menggunakan visual HTML yang bersih */
 .katex-display > .katex {
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
+  display: inline-block !important;
+  text-align: center !important;
+  white-space: nowrap !important;
 }
 
 /* KaTeX Base elements harus inline-block dan static agar pecahan dan teks tidak overlap */
