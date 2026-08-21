@@ -7,14 +7,20 @@ import { useProfile } from "@/hooks/use-profile";
 
 function getApiBase(): string {
   if (typeof window !== "undefined") {
-    return `${window.location.protocol}//${window.location.hostname}:8000`;
+    // Check if running in browser (either on custom domain or localhost)
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      return `${window.location.protocol}//${window.location.hostname}:8000`;
+    }
+    // In production domain (ruangti.varevastudio.tech), use Next.js rewrites proxy (same origin)
+    return "";
   }
-  return process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  return process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 }
 
 interface UseChatProps {
   conversationId: string | null;
   initialMessages?: Message[];
+  isAnonymous?: boolean;
   onMessagesChange?: (messages: Message[]) => void;
   onUpdateTitle?: (title: string) => void;
 }
@@ -26,14 +32,21 @@ export interface SendMessageOptions {
   model_id?: string;
 }
 
-export function useChat({ conversationId, initialMessages = [], onMessagesChange, onUpdateTitle }: UseChatProps) {
+export function useChat({
+  conversationId,
+  initialMessages = [],
+  isAnonymous = false,
+  onMessagesChange,
+  onUpdateTitle,
+}: UseChatProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [isStreaming, setIsStreaming] = useState<boolean>(false);
-  const [selectedModel, setSelectedModel] = useState<string>("gcli/grok-4.6-high(xhigh)");
+  const [selectedModel, setSelectedModel] = useState<string>("gcli/grok-4.6-high");
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  // Load messages from backend whenever conversationId changes
+  // Load messages from backend whenever conversationId changes (skip for anonymous)
   useEffect(() => {
+    if (isAnonymous) return;
     if (!conversationId) {
       setMessages([]);
       return;
@@ -48,7 +61,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
       }
     }
     load();
-  }, [conversationId]);
+  }, [conversationId, isAnonymous]);
 
   const stopStreaming = useCallback(() => {
     if (abortControllerRef.current) {
@@ -75,8 +88,10 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
         createdAt: Date.now(),
       };
 
-      // Simpan user message ke backend database
-      await saveMessageToBackend(conversationId, "user", content, options?.images, options?.documents);
+      // Simpan user message ke backend database (hanya jika BUKAN mode anonymous)
+      if (!isAnonymous && conversationId) {
+        await saveMessageToBackend(conversationId, "user", content, options?.images, options?.documents);
+      }
 
       // Sediakan history percakapan terkini untuk context LLM
       const historyContext = messages.slice(-8).map((m) => ({
@@ -106,7 +121,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
       abortControllerRef.current = controller;
 
       try {
-        const targetModel = options?.model_id || customModel || selectedModel || "gcli/grok-4.6(xhigh)";
+        const targetModel = options?.model_id || customModel || selectedModel || "gcli/grok-4.6";
         const res = await fetch(`${getApiBase()}/api/chat/stream`, {
           method: "POST",
           headers: {
@@ -166,8 +181,8 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
           }
         }
 
-        // Persist final assistant response to backend SQLite
-        if (assistantFullContent.trim()) {
+        // Persist final assistant response to backend SQLite (hanya jika BUKAN mode anonymous)
+        if (!isAnonymous && conversationId && assistantFullContent.trim()) {
           await saveMessageToBackend(conversationId, "assistant", assistantFullContent);
         }
       } catch (err: any) {
@@ -176,7 +191,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
         } else {
           console.error("Stream error:", err);
           const errorMsgContent =
-            "*(Maaf, terjadi kendala saat menghubungi AI Gateway 9Router. Pastikan 9Router aktif di port 20128)*";
+            "*(Koneksi ke server AI Gateway terputus atau membutuhkan waktu lebih lama. Silakan klik tombol 'Coba Lagi' di bawah.)*";
           setMessages((prev) => {
             const updated = prev.map((msg) =>
               msg.id === assistantMsgId ? { ...msg, content: errorMsgContent } : msg
@@ -190,7 +205,7 @@ export function useChat({ conversationId, initialMessages = [], onMessagesChange
         abortControllerRef.current = null;
       }
     },
-    [conversationId, isStreaming, messages, onMessagesChange, selectedModel]
+    [conversationId, isAnonymous, isStreaming, messages, onMessagesChange, selectedModel]
   );
 
   const editMessage = useCallback((id: string, newContent: string) => {

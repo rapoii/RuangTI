@@ -251,7 +251,7 @@ export function Composer({
 
       // Resolve model based on selected thinking effort
       const currentThinkingOption = THINKING_EFFORT_OPTIONS.find((opt) => opt.id === thinkingEffort);
-      const selectedModelId = currentThinkingOption ? currentThinkingOption.modelId : "gcli/grok-4.6(xhigh)";
+      const selectedModelId = currentThinkingOption ? currentThinkingOption.modelId : "gcli/grok-4.6";
 
       onSendMessage(text.trim(), {
         webSearch: webSearchEnabled,
@@ -277,7 +277,7 @@ export function Composer({
   };
 
   return (
-    <div className="relative w-full max-w-chat mx-auto select-none">
+    <div className="relative w-full select-none">
       {/* Hidden File Input for Any Document, Image, Code, or Archive */}
       <input
         type="file"

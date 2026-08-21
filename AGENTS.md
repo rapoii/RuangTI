@@ -6,10 +6,10 @@ Dokumen ini ditujukan untuk agen AI (seperti Hermes, Claude Code, Cursor, Codex,
 
 ## 1. Ikhtisar Proyek & Arsitektur
 - **Nama Aplikasi**: RuangTI
-- **Tujuan**: Platform Web AI Workspace & Konsultasi Spesialis Teknik Industri (*Industrial Engineering Workspace & Knowledge Hub*) bagi sivitas akademika dan praktisi.
-- **Filosofi UI/UX**: *Pure Light Mode*, Clean, Minimalist, Precision-Engineered, Anti-AI Slop, Multi-Device Responsive (Desktop & Mobile 390x844), dan **Ultra-Smooth Low-End Device Friendly (60fps)**.
-- **Cakupan Domain Teknik Industri (476 Modul Knowledge Base Spesialis, Profesi Industri & Kurikulum Fundamental TI)**:
-  - Kurikulum Fundamental Teknik Industri (Menggambar Teknik ISO 128/5456, Praktikum CAD SolidWorks/Inventor Parametric Mating, Pengantar Teknik Industri IISE BoK Taylor/Gilbreth, Material Teknik Fe-Fe3C ASTM E8 Heat Treatment, Fisika Dasar Dinamika Newton Fluid Bernoulli Carnot, Kalkulus 1 Optimasi Marginal & EOQ Integral Surplus, Kimia Dasar Termokimia Hess Korosi Besi ICCP GHS SDS, Agama & Etika Keinsinyuran PII UU 11/2014 ABET NSPE Whistleblowing, Pancasila & Kebijakan Ketahanan Industri Nasional TKDN BMP PP 29/2018 RIPIN 2015-2035).
+- **Tujuan**: Platform Web AI Workspace & Chat Assistant Spesialis Teknik Industri (*Industrial Engineering Workspace & Knowledge Hub*) bagi mahasiswa, akademisi, dan praktisi industri secara universal.
+- **Filosofi UI/UX**: *Pure Light Mode*, Clean, Minimalist, Precision-Engineered, Anti-AI Slop, Multi-Device Responsive (Desktop & Mobile 390x844 / 403x881), dan **Ultra-Smooth Low-End Device Friendly (60fps)**.
+- **Cakupan Domain Teknik Industri (656 Modul Knowledge Base Spesialis, Profesi Industri & Kurikulum Fundamental TI)**:
+  - Kurikulum Fundamental Teknik Industri (Menggambar Teknik ISO 128/5456, Praktikum CAD SolidWorks/Inventor Parametric Mating, Pengantar Teknik Industri IISE BoK Taylor/Gilbreth, Material Teknik Fe-Fe3C ASTM E8 Heat Treatment, Fisika Dasar Dinamika Newton Fluid Bernoulli Carnot, Kalkulus 1 Optimasi Marginal & EOQ Integral Surplus, Kimia Dasar Termokimia Hess Korosi Besi ICCP GHS SDS, Etika Keinsinyuran PII UU 11/2014 ABET NSPE Whistleblowing, Kebijakan Ketahanan Industri Nasional TKDN BMP PP 29/2018 RIPIN 2015-2035).
   - Riset Operasi & Optimasi Matematis (Linier/Integer Programming, Antrian, Transportasi, Game Theory).
   - Lean Six Sigma & Manajemen Kualitas (Kaizen, 5S, DMAIC, SPC, FMEA AIAG-VDA, VSM, IATF 16949, MSA Gage R&R, APQP, PPAP, 8D Problem Solving, Hoshin Kanri X-Matrix, A3 Toyota Problem Solving).
   - Perancangan Tata Letak Fasilitas & Pemindahan Bahan (PTLF, From-To Chart, ARC, CRAFT, ASRS).
@@ -29,12 +29,12 @@ Dokumen ini ditujukan untuk agen AI (seperti Hermes, Claude Code, Cursor, Codex,
   - **Backend**: FastAPI (Python 3.10+, Port 8000) dengan Async SQLModel / SQLite.
   - **AI Gateway & Proxy**: 9Router (Port 20128) menghubungkan model penalaran tinggi.
   - **Model & Thinking Hierarchy**:
-    1. `gcli/grok-4.6(xhigh)` — **Non-Thinking (Default)**: Respon kilat & tangkas tanpa penundaan.
-    2. `gcli/grok-4.6-low(xhigh)` — **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas.
-    3. `gcli/grok-4.6-medium(xhigh)` — **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur.
-    4. `gcli/grok-4.6-high(xhigh)` — **High Effort**: Penalaran mendalam untuk simulasi & optimasi kompleks.
-    5. `gcli/grok-4.6-xhigh(xhigh)` — **Extra High Effort**: Riset operasi tingkat lanjut & pembuktian matematis.
-  - **Autentikasi**: Better Auth SSO Untirta (Google `@untirta.ac.id` & Microsoft `@student.untirta.ac.id` yang independen) + Email/Password.
+    1. `gcli/grok-4.6` — **Non-Thinking (Default)**: Respon kilat & tangkas tanpa penundaan.
+    2. `gcli/grok-4.6-low` — **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas.
+    3. `gcli/grok-4.6-medium` — **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur.
+    4. `gcli/grok-4.6-high` — **High Effort**: Penalaran mendalam untuk simulasi & optimasi kompleks.
+    5. `gcli/grok-4.6-xhigh` — **Extra High Effort**: Riset operasi tingkat lanjut & pembuktian matematis.
+  - **Autentikasi**: Better Auth Universal Google OAuth (1-klik instan untuk seluruh akun Google/Gmail sivitas maupun praktisi tanpa batasan domain) dengan SQLite Auth DB (`data/ruangti_auth.db`).
   - **Penyimpanan & Generator Dokumen (Zero-DB-Bloat Storage & Auto-Generator)**:
     - File fisik (Word, Excel, PPT, Zip, Code, PDF, CSV, Gambar WebP) disimpan di disk server `uploads/documents/` dan `uploads/generated/`.
     - SQLite hanya menyimpan array JSON metadata ringkas (~60B per file).
@@ -61,8 +61,9 @@ Dokumen ini ditujukan untuk agen AI (seperti Hermes, Claude Code, Cursor, Codex,
 4. **Editorial & Formatting Formula**:
    - Istilah teknis / UI token dalam naskah dokumentasi wajib ditulis dalam format semantik tebal `**Token**` atau inline code `` `token` ``.
    - Seluruh display math KaTeX wajib diposisikan persis di tengah (`block w-full text-center`) untuk mengeliminasi deadspace asimetris.
-5. **Standar Footer**:
-   - Footer aplikasi berformat satu baris hak cipta ultra-minimalis tanpa logo/link atas:
+5. **Standar Footer & Penamaan Navigasi**:
+   - Navigasi tombol CTA teratas konsisten berlabel **"Buka Workspace"** (Desktop) dan **"Workspace"** (Mobile) menuju `/chat`.
+   - Footer aplikasi berformat satu baris hak cipta ultra-minimalis:
      `© {new Date().getFullYear()} RuangTI. All rights reserved. Dikembangkan oleh rapoi.`
 
 ---
@@ -74,7 +75,7 @@ projects/web/RuangTI/
 ├── app/
 │   ├── layout.tsx         # Root font loaders (Space Grotesk, Manrope, IBM Plex Mono)
 │   ├── page.tsx           # Landing page publik (Hero, Feature Cards, Auth Modal, Footer)
-│   ├── docs/              # Dokumentasi resmi RuangTI (3-kolom, Search Ctrl+K, 434 Modul RAG)
+│   ├── docs/              # Dokumentasi resmi RuangTI (3-kolom, Search Ctrl+K, 656 Modul RAG)
 │   │   └── page.tsx       # Docs Hub dengan reactive category switching, mobile drawer & TOC
 │   ├── chat/              # Workspace chat utama
 │   │   ├── page.tsx       # New session launcher
@@ -86,20 +87,21 @@ projects/web/RuangTI/
 │   ├── landing/           # LandingNavbar, Hero, Features, AuthModal, Footer
 │   ├── layout/            # Header, Shell
 │   ├── sidebar/           # Sidebar, NewChatButton, ConversationList, ConversationSearch
-│   ├── profile/           # ProfileModal (Tab view, edit profile, & SSO login)
+│   ├── profile/           # ProfileModal (Edit profile & Google account info)
 │   ├── chat/              # MessageList, MessageRow, MarkdownContent, ThinkingBlock, ShareModal, EmptyState
 │   └── composer/          # Composer, ThinkingSelector, SendStopButton, Paperclip/Document chips
 ├── backend/
 │   ├── app/
 │   │   ├── main.py        # FastAPI server & lifespan background media cleaner
 │   │   ├── models/        # SQLModel schema (User, Session, Conversation, Message)
-│   │   ├── routers/       # auth, chat, chat_9router, upload, share
-│   │   └── services/      # document_parser, rag_service, media_cleaner
-│   └── knowledge/         # 434 Modul Markdown Knowledge Base Teknik Industri
+│   │   ├── routers/       # auth, chat, chat_9router, upload, share, export
+│   │   └── services/      # document_parser, rag_service, media_cleaner, file_generator
+│   └── knowledge/         # 656 Modul Markdown Knowledge Base Teknik Industri
 ├── lib/
 │   ├── api-client.ts      # Backend REST & SSE client helper
+│   ├── auth.ts            # Better Auth server configuration (Universal Google OAuth)
 │   ├── auth-client.ts     # Better Auth client instance
-│   ├── docs-data.ts       # Database 14 artikel dokumentasi komprehensif
+│   ├── docs-data.ts       # Database artikel dokumentasi komprehensif
 │   ├── image-compressor.ts# Client-side HTML5 Canvas WebP compressor (~85KB)
 │   └── types.ts           # Strict TypeScript interfaces & Thinking options
 ├── DESIGN.md              # Single source of truth untuk UI/UX RuangTI
@@ -112,19 +114,4 @@ projects/web/RuangTI/
 ## 4. Alur Kerja Sebelum Selesai (Definition of Done)
 1. **Type-Check**: Jalankan `npx tsc --noEmit` -> harus **0 error**.
 2. **Build Test**: Pastikan aplikasi dapat di-build dengan lancar (`npm run build`).
-3. **Verifikasi Visual**: Uji menggunakan browser Playwright MCP pada resolusi desktop (1280x800) dan mobile (390x844), lalu periksa hasil tangkapan layarnya.
-
----
-
-## 5. Rencana & Spesifikasi Ekstraksi CAD/CAM/CAE (Roadmap)
-- **2D CAD (AutoCAD / DraftSight / BricsCAD)**:
-  - Format `.dwg`: Engine `ezdwg` (Rust core + PyO3) untuk membaca entitas modelspace, etiket, dimensi, dan teks.
-  - Format `.dxf`: Engine `ezdxf` (MIT) untuk parsing geometri vektor dan layer.
-- **3D Parametric CAD (SolidWorks / Inventor / Fusion360 / Creo / NX / CATIA)**:
-  - Format `.step` / `.stp`: Standar ISO-10303-21 via `steputils` untuk membaca nama part, hierarki assembly, dan spesifikasi material.
-  - Format `.stl` / `.obj`: Mesh analysis via `trimesh` untuk membaca volume 3D printing dan bounding box.
-- **Otomasi CNC & CAM (Mastercam / SolidCAM / Fusion CAM)**:
-  - Format `.gcode` / `.nc` / `.tap`: Parser lintasan pahat (G0/G1/G2), spindle speed, dan feed rate.
-- **Simulasi Sistem Diskrit (Autodesk FlexSim)**:
-  - Format `.fsm` (Binary Model): Engine GZIP stream decompressor (offset byte ke-72 `0x48`) via Python stdlib `gzip` untuk membaca 100% pohon node objek (`Source`, `Queue`, `Processor`, `Sink`, `Conveyor`, `AGV`, `ASRS`), distribusi waktu matematis (`exponential`, `triangular`, `normal`), dan skrip logika `FlexScript` / `ProcessFlow`.
-  - Format `.fsx` (XML Model): XML ElementTree parser untuk membaca objek, routing port, dan global tables.
+3. **Verifikasi Visual**: Uji menggunakan browser Playwright MCP pada resolusi desktop (1280x800) dan mobile (403x881 / 390x844), lalu periksa hasil tangkapan layarnya.

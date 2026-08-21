@@ -14,21 +14,27 @@ const sqliteDb = new Database(dbPath);
 
 export const auth = betterAuth({
   database: sqliteDb,
-  baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3005",
-  secret: process.env.BETTER_AUTH_SECRET || "ruangti_better_auth_secret_key_untirta_2026_industrial_engineering",
+  trustedOrigins: [
+    "http://localhost:3005",
+    "http://127.0.0.1:3005",
+    "https://*.trycloudflare.com",
+    "https://trycloudflare.com"
+  ],
+  baseURL: process.env.BETTER_AUTH_URL || (typeof window !== "undefined" ? window.location.origin : undefined),
+  secret: process.env.BETTER_AUTH_SECRET || "ruangti_better_auth_secret_key_universal_2026_industrial_engineering",
   
-  // Custom user fields untuk profil mahasiswa/dosen Untirta
+  // Custom user fields untuk profil praktisi & mahasiswa Teknik Industri
   user: {
     additionalFields: {
       role: {
         type: "string",
         required: false,
-        defaultValue: "Mahasiswa",
+        defaultValue: "Praktisi",
       },
       institution: {
         type: "string",
         required: false,
-        defaultValue: "Untirta",
+        defaultValue: "Teknik Industri",
       },
       phone: {
         type: "string",
@@ -62,37 +68,29 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
       enabled: !!process.env.GOOGLE_CLIENT_ID,
     },
-    microsoft: {
-      clientId: process.env.MICROSOFT_CLIENT_ID || "",
-      clientSecret: process.env.MICROSOFT_CLIENT_SECRET || "",
-      tenantId: process.env.MICROSOFT_TENANT_ID || "common",
-      enabled: !!process.env.MICROSOFT_CLIENT_ID,
+  },
+
+  account: {
+    accountLinking: {
+      enabled: true,
+      trustedProviders: ["google"],
+      requireLocalEmailVerified: false,
     },
   },
 
-  // Strict Domain Validation Hooks
+  // Database Hooks
   databaseHooks: {
     user: {
       create: {
         before: async (user) => {
           const email = user.email.toLowerCase().trim();
 
-          // Cek domain email
-          const isUntirtaStaff = email.endsWith("@untirta.ac.id");
-          const isUntirtaStudent = email.endsWith("@student.untirta.ac.id");
-
-          if (!isUntirtaStaff && !isUntirtaStudent) {
-            throw new Error(
-              "Akses Ditolak: Pendaftaran RuangTI hanya diizinkan untuk civitas akademika UNTIRTA (@untirta.ac.id atau @student.untirta.ac.id)."
-            );
-          }
-
           return {
             data: {
               ...user,
               email,
-              role: user.role || (isUntirtaStudent ? "Mahasiswa" : "Dosen/Staff"),
-              institution: user.institution || "Untirta",
+              role: user.role || "Praktisi TI",
+              institution: user.institution || "Teknik Industri",
               plan: "Pro",
             },
           };

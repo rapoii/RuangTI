@@ -71,7 +71,7 @@ export function useConversations(props?: UseConversationsProps) {
         } else {
           // If empty, create a fresh initial conversation on backend
           try {
-            const newConv = await createConversationOnBackend("Konsultasi TI Baru");
+            const newConv = await createConversationOnBackend("Percakapan Baru");
             if (newConv) {
               setConversations([newConv]);
               setActiveIdState(newConv.id);
@@ -109,7 +109,7 @@ export function useConversations(props?: UseConversationsProps) {
   );
 
   const startNewConversation = useCallback(async () => {
-    const newConv = await createConversationOnBackend("Konsultasi TI Baru");
+    const newConv = await createConversationOnBackend("Percakapan Baru");
     if (newConv) {
       setConversations((prev) => [newConv, ...prev]);
       setActiveIdState(newConv.id);

@@ -196,16 +196,9 @@ export function ShareModal({
         <div className="flex items-center justify-end gap-2.5 pt-3 mt-1 border-t border-border/60">
           <button
             type="button"
-            onClick={onClose}
-            className="px-4 py-2 rounded-xl text-xs font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors"
-          >
-            Batal
-          </button>
-          <button
-            type="button"
             onClick={handleApplyShare}
             disabled={isSaving}
-            className="px-4 py-2 rounded-xl bg-accent text-white font-semibold text-xs shadow-sm shadow-accent/25 hover:brightness-105 active:scale-[0.98] transition-all flex items-center gap-1.5 disabled:opacity-50"
+            className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-accent text-white font-semibold text-xs shadow-sm shadow-accent/25 hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 disabled:opacity-50"
           >
             {isSaving
               ? "Menyimpan..."

@@ -21,6 +21,15 @@
     --accent-subtle: rgba(224, 159, 62, 0.12);
   }
 
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
   body {
     background-color: var(--canvas);
     color: var(--text-primary);
@@ -78,6 +87,14 @@
   overflow-x: auto;
   overflow-y: hidden;
   text-align: center;
+}
+
+/* Sembunyikan error merah KaTeX jika terjadi minor parse warning dan fallback ke rendering rapi */
+.katex-error {
+  color: var(--text-primary) !important;
+  font-family: inherit !important;
+  border: none !important;
+  background: transparent !important;
 }
 
 /* Line-height paragraf dan list yang lapang agar formula tidak berhimpitan */

@@ -100,7 +100,7 @@ export function ProfileModal({
                   required
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
-                  placeholder="nama@untirta.ac.id"
+                  placeholder="nama@email.com"
                   className="w-full pl-9 pr-3 py-2 rounded-xl bg-canvas border border-border focus:border-accent text-xs sm:text-sm text-text-primary outline-none transition-colors"
                 />
               </div>
@@ -193,7 +193,7 @@ export function ProfileModal({
                     {profile.name}
                   </h4>
                   <p className="text-[11px] text-text-secondary">
-                    {profile.email || "Civitas Akademika Untirta"}
+                    {profile.email || "Praktisi / Peneliti Teknik Industri"}
                   </p>
                 </div>
               </div>
@@ -213,24 +213,14 @@ export function ProfileModal({
             </div>
 
             {/* Spec & Plan Info */}
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div className="p-2.5 rounded-xl bg-surface border border-border/60">
-                <span className="text-[10px] text-text-secondary uppercase font-semibold">
-                  Akses Model
-                </span>
-                <p className="font-semibold text-accent mt-0.5 flex items-center gap-1">
-                  <Sparkles size={13} />
-                  <span>RuangTI Neural Pro</span>
-                </p>
-              </div>
-              <div className="p-2.5 rounded-xl bg-surface border border-border/60">
-                <span className="text-[10px] text-text-secondary uppercase font-semibold">
-                  Institusi
-                </span>
-                <p className="font-semibold text-text-primary mt-0.5 truncate">
-                  {profile.institution || "Untirta Cilegon"}
-                </p>
-              </div>
+            <div className="p-2.5 rounded-xl bg-surface border border-border/60 text-xs flex items-center justify-between">
+              <span className="text-[10px] text-text-secondary uppercase font-semibold">
+                Akses Model
+              </span>
+              <p className="font-semibold text-accent flex items-center gap-1">
+                <Sparkles size={13} />
+                <span>RuangTI Neural Pro</span>
+              </p>
             </div>
 
             {/* Logout Action */}
@@ -246,9 +236,6 @@ export function ProfileModal({
                 <LogOut size={14} />
                 <span>Keluar Akun</span>
               </button>
-              <Button type="button" variant="ghost" onClick={onClose}>
-                Tutup
-              </Button>
             </div>
           </motion.div>
         )}

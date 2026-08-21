@@ -61,8 +61,26 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     }
   };
 
-  // Pre-process content: Ubah \frac menjadi \dfrac agar pembilang dan penyebut memiliki jarak vertikal luas alami
-  const processedContent = cleanContent.replace(/\\frac(?=\{)/g, "\\dfrac");
+  // Pre-process content untuk normalisasi KaTeX:
+  // 1. Transform delimiter standar LaTeX \[ ... \] dan \( ... \) menjadi $$ ... $$ dan $ ... $
+  let processedContent = cleanContent
+    .replace(/\\\[([\s\S]*?)\\\]/g, "\n\n$$$$$1$$$$\n\n")
+    .replace(/\\\(([\s\S]*?)\\\)/g, " $$$1$$ ");
+
+  // 2. Normalisasi formula \frac menjadi \dfrac agar visual KaTeX memiliki clearance pembilang/penyebut luas alami
+  processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac");
+
+  // 3. Normalisasi formula yang dibungkus tanda kurung biasa: ( \dfrac{...}{...} ... )
+  processedContent = processedContent.replace(
+    /\(\s*(\\(?:d?frac|sqrt|sum|prod|int|sigma|alpha|beta|gamma|theta|lambda|mu|times|text)[\s\S]*?)\)/g,
+    " $$$1$$ "
+  );
+
+  // 4. Perbaiki jika ada simbol persentase mentah di dalam \text{...}
+  processedContent = processedContent.replace(/\\text\{([^}]+)\}/g, (match, inner) => {
+    const safeInner = inner.replace(/(?<!\\)%/g, "\\%");
+    return `\\text{${safeInner}}`;
+  });
 
   // State untuk expand/collapse jika sumber > 6
   const [isExpanded, setIsExpanded] = useState(false);
@@ -194,7 +212,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeKatex]}
+        rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}
         components={{
           code({ node, inline, className, children, ...props }: any) {
             const match = /language-(\w+)/.exec(className || "");

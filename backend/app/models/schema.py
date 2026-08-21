@@ -17,8 +17,8 @@ class User(SQLModel, table=True):
     phone: Optional[str] = Field(default=None)
     address: Optional[str] = Field(default=None)
     postal_code: Optional[str] = Field(default=None)
-    role: str = Field(default="Mahasiswa")
-    institution: str = Field(default="Untirta")
+    role: str = Field(default="Praktisi")
+    institution: str = Field(default="Teknik Industri")
     active_model: str = Field(default="TI-Optima Pro")
     created_at: datetime = Field(default_factory=datetime.utcnow)
     
@@ -30,7 +30,7 @@ class Conversation(SQLModel, table=True):
 
     id: str = Field(default_factory=generate_uuid, primary_key=True)
     user_id: Optional[str] = Field(default=None, foreign_key="users.id")
-    title: str = Field(default="Konsultasi TI Baru")
+    title: str = Field(default="Percakapan Baru")
     model_id: str = Field(default="TI-Optima Pro")
     is_pinned: bool = Field(default=False)
     is_public: bool = Field(default=False)
@@ -65,8 +65,8 @@ class UserRegisterRequest(SQLModel):
     phone: Optional[str] = None
     address: Optional[str] = None
     postal_code: Optional[str] = None
-    role: Optional[str] = "Mahasiswa"
-    institution: Optional[str] = "Untirta"
+    role: Optional[str] = "Praktisi"
+    institution: Optional[str] = "Teknik Industri"
 
 class UserLoginRequest(SQLModel):
     email: str
@@ -91,7 +91,7 @@ class AuthResponse(SQLModel):
 
 # ================= CONVERSATION / MESSAGE DTOs =================
 class ConversationCreate(SQLModel):
-    title: Optional[str] = "Konsultasi TI Baru"
+    title: Optional[str] = "Percakapan Baru"
     model_id: Optional[str] = "TI-Optima Pro"
 
 class ConversationUpdate(SQLModel):

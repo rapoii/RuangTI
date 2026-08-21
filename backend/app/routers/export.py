@@ -52,7 +52,7 @@ async def generate_file_endpoint(payload: ExportPayload):
             file_path = generate_pptx_file(
                 filename=filename,
                 title=payload.title or "Presentasi RuangTI",
-                subtitle=payload.subtitle or "Teknik Industri Untirta",
+                subtitle=payload.subtitle or "Spesialis Teknik Industri & Rekayasa Sistem",
                 slides_data=payload.slides or []
             )
         elif file_type in ["pdf"]:

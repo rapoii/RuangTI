@@ -89,7 +89,7 @@ export function ThinkingSelector({
             exit={{ opacity: 0, scale: 0.96, y: 6 }}
             transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
             style={{ willChange: "transform, opacity" }}
-            className="absolute bottom-full left-0 mb-2 w-72 sm:w-80 rounded-2xl bg-surface border border-border shadow-xl p-2 z-50 select-none overflow-hidden"
+            className="absolute bottom-full right-0 sm:left-0 sm:right-auto mb-2 w-[calc(100vw-2rem)] max-w-[300px] sm:w-80 rounded-2xl bg-surface border border-border shadow-xl p-2 z-50 select-none overflow-hidden"
           >
             <div className="px-2.5 py-1.5 border-b border-border/60 mb-1">
               <div className="flex items-center justify-between">

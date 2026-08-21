@@ -79,7 +79,7 @@ async def generate_ai_response(prompt: str, model_id: str) -> AsyncGenerator[str
     else:
         response = (
             f"### ⚙️ Analisis Rekayasa Sistem & Teknik Industri ({model_id})\n\n"
-            f"Menerima konsultasi mengenai: **\"{prompt}\"**\n\n"
+            f"Menerima pertanyaan mengenai: **\"{prompt}\"**\n\n"
             "Sebagai asisten AI spesialis Teknik Industri, saya menganalisis permasalahan ini dengan pendekatan sistem terpadu (*Integrated System Approach*):\n\n"
             "1. **Identifikasi Komponen 5M + 1E**: Meninjau interaksi antara *Man, Machine, Material, Method, Money, & Environment*.\n"
             "2. **Formulasi Model & Efisiensi**: Menetapkan fungsi tujuan (*Objective Function*) baik minimasi biaya maupun maksimasi utilitas kapasitas lini produksi.\n"

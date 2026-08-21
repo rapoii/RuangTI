@@ -14,7 +14,7 @@ export interface ThinkingOption {
 export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
   {
     id: "none",
-    modelId: "gcli/grok-4.6(xhigh)",
+    modelId: "gcli/grok-4.6",
     label: "Non-Thinking (Default)",
     shortLabel: "Non-Thinking",
     description: "Respon instan & tangkas tanpa proses penalaran bertahap",
@@ -22,7 +22,7 @@ export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
   },
   {
     id: "low",
-    modelId: "gcli/grok-4.6-low(xhigh)",
+    modelId: "gcli/grok-4.6-low",
     label: "Low Effort",
     shortLabel: "Low",
     description: "Penalaran ringan untuk kueri ringkas & kalkulasi sederhana",
@@ -30,7 +30,7 @@ export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
   },
   {
     id: "medium",
-    modelId: "gcli/grok-4.6-medium(xhigh)",
+    modelId: "gcli/grok-4.6-medium",
     label: "Medium Effort",
     shortLabel: "Medium",
     description: "Penalaran berimbang untuk analisis & metode terstruktur",
@@ -38,7 +38,7 @@ export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
   },
   {
     id: "high",
-    modelId: "gcli/grok-4.6-high(xhigh)",
+    modelId: "gcli/grok-4.6-high",
     label: "High Effort",
     shortLabel: "High",
     description: "Penalaran mendalam untuk optimasi sistem & simulasi kompleks",
@@ -46,10 +46,10 @@ export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
   },
   {
     id: "xhigh",
-    modelId: "gcli/grok-4.6-xhigh(xhigh)",
+    modelId: "gcli/grok-4.6-xhigh",
     label: "Extra High Effort",
     shortLabel: "X-High",
-    description: "Komputasi analitis mendalam & pembuktian matematis",
+    description: "Penalaran maksimal untuk riset operasi & pembuktian matematis",
     badge: "X-High"
   }
 ];

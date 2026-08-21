@@ -49,7 +49,7 @@ export function DocsNavbar({
               <span>Dokumentasi Resmi</span>
             </div>
             <span className="px-2 py-0.5 rounded-full bg-surface border border-border/50 text-text-secondary font-mono text-[11px]">
-              v1.0 (434 Modul)
+              v1.0 (670 Modul)
             </span>
           </div>
         </div>
@@ -98,7 +98,7 @@ export function DocsNavbar({
             className="px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-accent text-white font-bold text-xs hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center gap-1 active:scale-[0.97] shrink-0"
           >
             <span className="hidden sm:inline">Buka Workspace</span>
-            <span className="sm:hidden text-[11px]">Chat</span>
+            <span className="sm:hidden text-[11px]">Workspace</span>
             <ArrowRight size={12} className="shrink-0" />
           </Link>
         </div>

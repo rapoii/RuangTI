@@ -55,3 +55,10 @@ uploads/
 # CodeGraph & Tool Index Data
 .codegraph/
 .hermes/
+
+# Temporary visual test screenshots & artifacts
+*.png
+*.jpg
+*.jpeg
+*.webp
+/projects/

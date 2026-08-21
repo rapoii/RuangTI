@@ -42,7 +42,7 @@ export function ActionBar({
   return (
     <div
       className={cn(
-        "flex items-center gap-1 mt-2 text-text-tertiary select-none transition-opacity duration-150",
+        "flex items-center gap-1 mt-1 text-text-tertiary select-none transition-opacity duration-150",
         isUser ? "justify-end" : "justify-start"
       )}
     >
@@ -50,7 +50,7 @@ export function ActionBar({
       <button
         type="button"
         onClick={handleCopy}
-        className="h-7 px-2 rounded-lg flex items-center gap-1.5 text-xs text-text-secondary hover:text-text-primary hover:bg-surface border border-transparent hover:border-border transition-all active:scale-95"
+        className="h-6 px-1.5 rounded-md flex items-center gap-1 text-[11px] text-text-secondary hover:text-text-primary hover:bg-surface border border-transparent hover:border-border transition-all active:scale-95 cursor-pointer"
         aria-label="Salin teks pesan"
         title="Salin teks"
       >
@@ -72,7 +72,7 @@ export function ActionBar({
         <button
           type="button"
           onClick={onEdit}
-          className="h-7 px-2 rounded-lg flex items-center gap-1.5 text-xs text-text-secondary hover:text-text-primary hover:bg-surface border border-transparent hover:border-border transition-all active:scale-95"
+          className="h-6 px-1.5 rounded-md flex items-center gap-1 text-[11px] text-text-secondary hover:text-text-primary hover:bg-surface border border-transparent hover:border-border transition-all active:scale-95 cursor-pointer"
           aria-label="Edit pesan ini"
           title="Edit pesan"
         >

@@ -5,18 +5,34 @@ from typing import List, Optional
 from datetime import datetime
 
 from app.core.database import get_session
-from app.core.security import decode_access_token
+from app.core.security import decode_access_token, verify_better_auth_session
 from app.models.schema import Message, MessageCreate, Conversation
 
 router = APIRouter(prefix="/api/messages", tags=["Messages"])
 
 async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> Optional[str]:
-    if not authorization or not authorization.startswith("Bearer "):
+    if not authorization:
         return None
-    token = authorization.split(" ")[1]
+    
+    # 1. Bearer token format
+    if authorization.startswith("Bearer "):
+        token = authorization.split(" ")[1].strip()
+    else:
+        token = authorization.strip()
+
+    if not token:
+        return None
+
+    # A. Coba verifikasi via Better Auth session token (SQLite table session)
+    better_auth_user_id = verify_better_auth_session(token)
+    if better_auth_user_id:
+        return better_auth_user_id
+
+    # B. Coba decode via custom JWT token
     payload = decode_access_token(token)
     if payload:
         return payload.get("sub")
+    
     return None
 
 @router.get("/{conversation_id}", response_model=List[Message])

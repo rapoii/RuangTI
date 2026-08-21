@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,9 +23,18 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  interactiveWidget: "resizes-content",
+};
+
 export const metadata: Metadata = {
-  title: "RuangTI — AI Assistant & Konsultasi Teknik Industri",
-  description: "Platform Kecerdasan Buatan untuk Riset Operasi, Lean Manufacturing, Ergonomi, Supply Chain, dan Optimasi Sistem Industri.",
+  title: "RuangTI — AI Assistant & Workspace Teknik Industri",
+  description:
+    "Platform AI Assistant & Workspace spesialis Teknik Industri & Rekayasa Sistem. Dilengkapi 670 modul knowledge base, solver matematis, formula KaTeX, dan penalaran multi-tier.",
 };
 
 export default function RootLayout({
@@ -36,10 +45,10 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${spaceGrotesk.variable} ${manrope.variable} ${ibmPlexMono.variable}`}
+      className={`${spaceGrotesk.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full overflow-hidden`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-canvas text-text-primary antialiased flex flex-col">
+      <body className="h-full overflow-hidden bg-canvas text-text-primary antialiased flex flex-col fixed inset-0">
         {children}
       </body>
     </html>

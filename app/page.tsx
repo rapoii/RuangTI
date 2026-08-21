@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
 import { Features } from "@/components/landing/Features";
@@ -13,6 +13,21 @@ export default function LandingPage() {
   const router = useRouter();
   const profileState = useProfile();
   const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [domainError, setDomainError] = useState<string | undefined>(undefined);
+
+  // Tangkap parameter error domain dari URL jika ditolak (Client-only safe)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const search = window.location.search;
+      if (search.includes("error=domain_rejected")) {
+        setDomainError(
+          // Generic error message if any
+          "Gagal masuk. Pastikan menggunakan akun Google yang valid."
+        );
+        setIsAuthOpen(true);
+      }
+    }
+  }, []);
 
   const handleLoginSuccess = (userProfileData: any) => {
     profileState.login(userProfileData);
@@ -39,7 +54,14 @@ export default function LandingPage() {
 
       <AuthModal
         isOpen={isAuthOpen}
-        onClose={() => setIsAuthOpen(false)}
+        onClose={() => {
+          setIsAuthOpen(false);
+          setDomainError(undefined);
+          if (typeof window !== "undefined" && window.location.search.includes("error")) {
+            router.replace("/");
+          }
+        }}
+        initialError={domainError}
         onLoginSuccess={handleLoginSuccess}
       />
       {/* Scrollbar Custom & Anti-Slop Tokens */}

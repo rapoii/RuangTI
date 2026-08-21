@@ -84,7 +84,7 @@ export function Hero({ profile, onOpenLogin }: HeroProps) {
               onClick={onOpenLogin}
               className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-accent text-white font-bold text-sm sm:text-base hover:brightness-110 shadow-lg shadow-accent/20 transition-all active:scale-[0.97] flex items-center justify-center gap-2.5"
             >
-              <span>Mulai Konsultasi Gratis</span>
+              <span>Mulai Percakapan AI</span>
               <ArrowRight size={17} />
             </button>
           )}

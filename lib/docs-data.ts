@@ -56,7 +56,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       {
         id: "overview",
         title: "Pengenalan RuangTI",
-        description: "Platform AI Workspace & Konsultasi Spesialis Teknik Industri pertama di Indonesia dengan 434 Modul RAG Eksak.",
+        description: "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri pertama di Indonesia dengan 670 Modul RAG Eksak.",
         category: "getting-started",
         badge: "Pondasi",
         readTime: "4 min",
@@ -72,8 +72,8 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "apa-itu-ruangti",
               title: "Apa itu RuangTI?",
               paragraphs: [
-                "Berbeda dengan model AI generik konvensional yang kerap berhalusinasi saat dihadapkan pada kalkulasi eksak dan regulasi industri spesifik, RuangTI menggabungkan Neural Reasoning Engine mutakhir dengan Retrieval-Augmented Generation (RAG) FTS5 berkekuatan 434 modul master ilmiah.",
-                "RuangTI dirancang khusus untuk sivitas akademika (mahasiswa dan dosen Teknik Industri UNTIRTA) serta para profesional industri di bidang HSE, Perencanaan Produksi (PPIC), Quality Assurance/Control (QA/QC), Desain CAD/CAM, Manajemen Pergudangan (WMS), dan Rekayasa Keandalan Fasilitas.",
+                "Berbeda dengan model AI generik konvensional yang kerap berhalusinasi saat dihadapkan pada kalkulasi eksak dan regulasi industri spesifik, RuangTI menggabungkan Neural Reasoning Engine mutakhir dengan Retrieval-Augmented Generation (RAG) FTS5 berkekuatan 656 modul master ilmiah.",
+                "RuangTI dirancang khusus untuk mahasiswa, akademisi, dan praktisi Teknik Industri di bidang HSE, Perencanaan Produksi (PPIC), Quality Assurance/Control (QA/QC), Desain CAD/CAM, Manajemen Pergudangan (WMS), dan Rekayasa Keandalan Fasilitas.",
               ],
               callout: {
                 type: "info",
@@ -90,7 +90,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               table: {
                 headers: ["Dimensi Keunggulan", "RuangTI Engineering AI", "AI Generik Konvensional"],
                 rows: [
-                  ["Basis Pengetahuan (RAG)", "434 Modul Terverifikasi (ISO, ASME, PP, SNI, APICS, IISE)", "Pengetahuan umum tanpa sumber terindeks"],
+                  ["Basis Pengetahuan (RAG)", "670 Modul Terverifikasi (ISO, ASME, PP, SNI, APICS, IISE)", "Pengetahuan umum tanpa sumber terindeks"],
                   ["Parser File Khusus", "Universal CAD (DWG, DXF, STEP, STL), CNC (G-Code), FlexSim (.fsm/.fsx)", "Hanya PDF dan Teks biasa"],
                   ["Rendering Formula", "KaTeX Editorial Precision dengan baseline alignment & display math", "Teks ASCII kasar atau pecahan bertumpuk"],
                   ["Penyimpanan Berkas", "Zero-DB-Bloat (WebP 85KB, 60B SQLite metadata, 14d auto-prune)", "Database membengkak dengan binary blob"],
@@ -113,7 +113,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       {
         id: "quickstart",
         title: "Panduan Cepat (Quickstart)",
-        description: "Langkah mudah memulai sesi konsultasi keteknikan dan mengunggah berkas rancangan di RuangTI.",
+        description: "Langkah mudah memulai sesi percakapan dan mengunggah berkas rancangan di RuangTI.",
         category: "getting-started",
         badge: "Panduan",
         readTime: "3 min",
@@ -131,7 +131,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               title: "1. Masuk & Autentikasi Akun",
               paragraphs: [
                 "Kunjungi halaman beranda RuangTI dan klik tombol **Masuk** di sudut kanan atas.",
-                "Anda dapat mendaftar menggunakan email kampus UNTIRTA atau akun personal. Sistem autentikasi Better Auth menjamin keamanan sesi dengan enkripsi password standar industri (bcrypt).",
+                "Anda dapat mendaftar dan masuk secara instan menggunakan akun Google. Sistem autentikasi menjamin keamanan sesi dengan enkripsi standar industri.",
               ],
             },
             {
@@ -318,45 +318,45 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       },
       {
         id: "rag-knowledge-base",
-        title: "434 Modul RAG Knowledge Base Eksak",
+        title: "670 Modul RAG Knowledge Base Eksak",
         description: "Repositori pengetahuan komprehensif berstandar ilmiah terindeks FTS5 SQLite untuk seluruh domain Teknik Industri.",
         category: "core-features",
         badge: "RAG Hub",
-        readTime: "7 min",
+        readTime: "8 min",
         subsections: [
           { id: "struktur-rag", title: "Arsitektur RAG & FTS5 Indexing" },
-          { id: "taksonomi-keilmuan", title: "Taksonomi 434 Modul Master" },
+          { id: "taksonomi-keilmuan", title: "Taksonomi 670 Modul Master" },
           { id: "thesaurus-expansion", title: "FTS5 Query Expansion & Thesaurus" },
         ],
         content: {
-          lead: "RuangTI mengintegrasikan 434 modul master pengetahuan Teknik Industri yang diteliti dari jurnal peer-reviewed, standar internasional (ISO, ASME, OSHA, APICS, IISE), dan regulasi perundang-undangan nasional.",
+          lead: "RuangTI mengintegrasikan 670 modul master pengetahuan Teknik Industri yang diteliti dari jurnal peer-reviewed, standar internasional (ISO, ASME, OSHA, APICS, IISE), dan regulasi perundang-undangan nasional.",
           sections: [
             {
               id: "struktur-rag",
               title: "Arsitektur RAG & FTS5 Indexing",
               paragraphs: [
-                "Seluruh 434 modul pengetahuan diurai ke dalam 2.766 bagian semantik (*semantic sections*) dan disimpan dalam database SQLite lokal berkecepatan tinggi dengan ekstensi FTS5 (*Full-Text Search 5*).",
+                "Seluruh 670 modul pengetahuan diurai ke dalam 4.760 bagian semantik (*semantic sections*) dan disimpan dalam database SQLite lokal berkecepatan tinggi dengan ekstensi FTS5 (*Full-Text Search 5*).",
                 "Saat pengguna mengirimkan pertanyaan, mesin pencari RAG melakukan ekspansi kueri melalui kamus sinonim istilah teknik (*Industrial Engineering Thesaurus*), menjalankan pencarian BM25 tertimbang, dan menyuntikkan 3 bagian pengetahuan paling relevan langsung ke dalam konteks prompt AI.",
               ],
             },
             {
               id: "taksonomi-keilmuan",
-              title: "Taksonomi 434 Modul Master",
+              title: "Taksonomi 670 Modul Master",
               paragraphs: [
                 "Cakupan disiplin ilmu dalam RAG RuangTI terbagi ke dalam kluster-kluster strategis berikut:",
               ],
               table: {
                 headers: ["Kluster Bidang Keilmuan", "Rentang Modul", "Contoh Standar & Topik Utama"],
                 rows: [
+                  ["Riset Operasi & Fasilitas", "Modul 001 - 100", "PTLF Facilities Layout, Riset Operasi Deterministik & Stokastik, Antrian, Transportasi, Game Theory."],
+                  ["SCM & Manajemen Energi", "Modul 101 - 200", "Reverse Logistics, Multi-Echelon SCND, GHS Hazmat, LCC TCO, Audit Energi ISO 50001 SEC, Dekarbonisasi."],
+                  ["Simulasi & Quality Eng.", "Modul 201 - 300", "Simulasi Diskrit & Kontinu (DES/System Dynamics), Kaizen, Six Sigma DMAIC, Taguchi Robust Design."],
+                  ["Reliability & Optimasi", "Modul 301 - 400", "Distribusi Weibull, FTA, FMEA AIAG-VDA, Taguchi Orthogonal Arrays, Optimasi Stokastik."],
+                  ["Spesialisasi Profesi Industri", "Modul 401 - 425", "SMK3 PP 50/2012, ASME Y14.5 GD&T, WMS Slotting COI, S&OP DBR, IATF 16949 Core Tools, RCM II SAE JA1011."],
                   ["Kurikulum Fundamental TI", "Modul 426 - 434", "Menggambar Teknik ISO 128, Material Fe-Fe3C ASTM E8, Fisika Fluida/Carnot, Kalkulus Marginal EOQ, Kimia Korosi ICCP, Etika PII/ABET, Pancasila TKDN."],
-                  ["HSE & Keselamatan Industri", "Modul 401 - 403", "SMK3 PP 50/2012, ISO 45001:2018, HIRADC 5x5, LOTO OSHA 1910.147, Permenaker 5/2018 NAB Kebisingan, IPAL WWTP, B3 PP 22/2021."],
-                  ["Drafter, GD&T & DFMA", "Modul 404 - 405", "ASME Y14.5-2018 GD&T, Toleransi ISO 286, Tolerance Stack-Up RSS, DFMA Boothroyd DFA Index, Piping ASME B31.3, P&ID ISA 5.1."],
-                  ["Warehouse, Logistik & SCM", "Modul 406 - 407, 416 - 417, 422", "WMS Slotting COI Index, Cube Utilization %, TMS VRP Clarke-Wright, MHE Sizing M/M/c, Control Tower CPFR, MEIO, SCRM TTR/TTS."],
-                  ["PPIC & Finite Scheduling", "Modul 408 - 409", "S&OP Agregat Planning, MPS, Rough-Cut Capacity Bill of Resources, MRP Wagner-Whitin, Theory of Constraints DBR, Johnson Flow Shop."],
-                  ["Quality Engineering & Six Sigma", "Modul 410 - 411, 418", "IATF 16949 Core Tools (APQP, PPAP, MSA Gage R&R, SPC Cp/Cpk, AIAG-VDA FMEA), Sampling ISO 2859-1 (MIL-STD-105E), 8D RCA, Hoshin Kanri."],
-                  ["Maintenance & Reliability", "Modul 414 - 415, 423", "RCM II SAE JA1011, Distribusi Weibull Beta/Eta, ISO 55001, TPM 7 Langkah Jishu Hozen, Six Big Losses OEE, Vibrasi FFT Bearing BPFO/BPFI."],
-                  ["Ergonomi & Pengukuran Kerja", "Modul 413, 419, 425", "Maynard MOST TMU, SMED 4-Tahap, VSM Takt Time, Biomekanik Chaffin 2D/3D L5/S1, OWAS, Moore-Garg SI, Shiftwork FRMS Sirkadian."],
-                  ["Otomasi & Manajemen Proyek", "Modul 420, 421, 424", "Purdue Model ANSI/ISA-95 Level 0-4, MES MESA-11, B2MML XML, Audit Energi ISO 50002 Pinch Analysis, EVM PMBOK 7th Ed, CPM/PERT Crashing."],
+                  ["Smart Manufacturing & Metaheuristik", "Modul 435 - 523", "Purdue ANSI/ISA-95, MES MESA-11, ALNS, Production Routing Problem (PRP), Overhead Crane Scheduling."],
+                  ["Industri Berat & Metalurgi Lanjut", "Modul 524 - 600", "Manufaktur Baja & Pengecoran, Perlakuan Panas Lanjut, NDT Uji Ultrasonik/Radiografi, Friction Stir Welding ISO 25239."],
+                  ["Advanced Joining & Emerging Tech", "Modul 601 - 670", "Tandem SAW, Laser-Arc Hybrid Welding (LAHW), Cavitation Peening Rayleigh-Plesset ASTM G32/E466, EPD Koloid, UVAC/EVC Elliptical Kinematics ISO 3002."],
                 ],
               },
             },
@@ -399,7 +399,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "integrasi-openalex",
               title: "Pencarian Literatur Ilmiah Terbuka (OpenAlex & Crossref)",
               paragraphs: [
-                "RuangTI memfilter hasil pencarian agar hanya menyajikan referensi peer-reviewed dengan reputasi tinggi. Jika dokumen memiliki status Open Access (OA), tautan PDF langsung akan disertakan dalam hasil konsultasi.",
+                "RuangTI memfilter hasil pencarian agar hanya menyajikan referensi peer-reviewed dengan reputasi tinggi. Jika dokumen memiliki status Open Access (OA), tautan PDF langsung akan disertakan dalam hasil jawaban AI.",
               ],
             },
             {
@@ -767,32 +767,32 @@ export const DOCS_CATEGORIES: DocCategory[] = [
   },
   {
     id: "faq-troubleshooting",
-    title: "FAQ & Bantuan",
+    title: "FAQ & Kebijakan",
     iconName: "HelpCircle",
     articles: [
       {
         id: "faq",
         title: "Pertanyaan Umum (FAQ)",
-        description: "Jawaban atas pertanyaan seputar akun, privasi data, ekspor chat, dan integrasi kurikulum UNTIRTA.",
+        description: "Jawaban atas pertanyaan seputar akun, privasi data, ekspor chat, dan metodologi Teknik Industri.",
         category: "faq-troubleshooting",
         badge: "FAQ",
         readTime: "4 min",
         subsections: [
           { id: "faq-akun", title: "Akun & Autentikasi" },
           { id: "faq-privasi", title: "Privasi Data & Berkas" },
-          { id: "faq-kurikulum", title: "Integrasi Kurikulum UNTIRTA" },
+          { id: "faq-kurikulum", title: "Standar Kurikulum Teknik Industri" },
         ],
         content: {
-          lead: "Temukan jawaban cepat atas pertanyaan yang sering diajukan oleh mahasiswa, dosen, dan praktisi pengguna RuangTI.",
+          lead: "Temukan jawaban cepat atas pertanyaan yang sering diajukan oleh mahasiswa dan praktisi pengguna RuangTI.",
           sections: [
             {
               id: "faq-akun",
               title: "Akun & Autentikasi",
               paragraphs: [
-                "Q: Apakah saya harus memiliki email UNTIRTA untuk menggunakan RuangTI?",
-                "A: Tidak. RuangTI terbuka untuk seluruh mahasiswa, akademisi, dan praktisi umum. Namun, pengguna dengan email institusi UNTIRTA mendapatkan akses langsung ke modul kurikulum lokal.",
-                "Q: Bagaimana jika saya lupa password akun saya?",
-                "A: Anda dapat melakukan reset password melalui menu login atau menghubungi administrator lab sistem informasi industri.",
+                "Q: Apakah saya harus memiliki email kampus tertentu untuk menggunakan RuangTI?",
+                "A: Tidak. RuangTI terbuka secara universal untuk seluruh mahasiswa, akademisi, dan praktisi Teknik Industri menggunakan akun Google apa pun.",
+                "Q: Bagaimana cara masuk ke sistem?",
+                "A: Anda cukup mengklik tombol Masuk dan melanjutkan dengan akun Google 1-klik.",
               ],
             },
             {
@@ -805,10 +805,94 @@ export const DOCS_CATEGORIES: DocCategory[] = [
             },
             {
               id: "faq-kurikulum",
-              title: "Integrasi Kurikulum UNTIRTA",
+              title: "Standar Kurikulum Teknik Industri",
               paragraphs: [
-                "Q: Apakah modul RAG RuangTI selaras dengan silabus mata kuliah Teknik Industri UNTIRTA?",
-                "A: Ya. Modul 426 s.d. 434 secara khusus disusun mengikuti Rencana Pembelajaran Semester (RPS) resmi Jurusan Teknik Industri Fakultas Teknik UNTIRTA, mencakup Menggambar Teknik, Pengantar TI, Material Teknik, Fisika Dasar, Kalkulus, Kimia Dasar, Etika Keinsinyuran PII, dan Kebijakan TKDN Pancasila.",
+                "Q: Apakah modul RAG RuangTI selaras dengan kurikulum baku Teknik Industri?",
+                "A: Ya. Seluruh modul disusun mengikuti Body of Knowledge IISE (Institute of Industrial and Systems Engineers), standar ISO, ABET, dan kurikulum fundamental Teknik Industri nasional, mencakup Menggambar Teknik, Pengantar TI, Material Teknik, Fisika Dasar, Riset Operasi, Ergonomi, Kalkulus, Kimia Dasar, dan Manajemen Kualitas.",
+              ],
+            },
+          ],
+        },
+      },
+      {
+        id: "terms",
+        title: "Syarat dan Ketentuan",
+        description: "Ketentuan penggunaan platform, hak kekayaan intelektual, batas tanggung jawab, dan kebijakan etika AI di RuangTI.",
+        category: "faq-troubleshooting",
+        badge: "Legal",
+        readTime: "5 min",
+        subsections: [
+          { id: "penerimaan-ketentuan", title: "1. Penerimaan Ketentuan" },
+          { id: "layanan-tujuan", title: "2. Deskripsi & Batasan Layanan" },
+          { id: "hak-kekayaan-intelektual", title: "3. Hak Kekayaan Intelektual" },
+          { id: "kebijakan-data-privasi", title: "4. Kebijakan Berkas & Privasi Data" },
+          { id: "etika-penggunaan", title: "5. Etika Penggunaan & Larangan" },
+          { id: "batasan-tanggung-jawab", title: "6. Batasan Tanggung Jawab (Disclaimer)" },
+        ],
+        content: {
+          lead: "Selamat datang di RuangTI. Dengan mengakses dan menggunakan platform RuangTI, Anda menyatakan telah membaca, memahami, dan menyetujui untuk terikat secara hukum oleh Syarat dan Ketentuan Penggunaan berikut.",
+          sections: [
+            {
+              id: "penerimaan-ketentuan",
+              title: "1. Penerimaan Ketentuan",
+              paragraphs: [
+                "Syarat dan Ketentuan ini mengatur seluruh akses dan penggunaan platform RuangTI, termasuk situs web, antarmuka chat AI, portal dokumentasi, generator berkas, dan layanan terkait lainnya.",
+                "Jika Anda tidak menyetujui salah satu bagian dari ketentuan ini, Anda disarankan untuk tidak menggunakan atau mengakses platform RuangTI.",
+              ],
+              callout: {
+                type: "info",
+                title: "Pembaruan Ketentuan",
+                message: "RuangTI berhak memperbarui syarat dan ketentuan ini sewaktu-waktu demi meningkatkan keamanan, kepatuhan hukum, dan kualitas layanan bagi seluruh pengguna.",
+              },
+            },
+            {
+              id: "layanan-tujuan",
+              title: "2. Deskripsi & Batasan Layanan",
+              paragraphs: [
+                "RuangTI beroperasi sebagai platform AI Workspace & Chat Assistant yang dirancang untuk mendukung pembelajaran akademik, komputasi eksak, dan eksplorasi keilmuan Teknik Industri (Industrial & Systems Engineering).",
+                "RuangTI berfungsi sebagai alat bantu asistensi cerdas (co-pilot), BUKAN lembaga pemberi sertifikasi insinyur profesional independen atau pengganti pertimbangan keselamatan kerja di lapangan fisik nyata.",
+              ],
+            },
+            {
+              id: "hak-kekayaan-intelektual",
+              title: "3. Hak Kekayaan Intelektual",
+              paragraphs: [
+                "1. Hak Milik Pengguna: Anda memegang hak kepemilikan penuh atas data masukan (prompt), dokumen, gambar, atau berkas CAD yang Anda unggah ke RuangTI.",
+                "2. Hak Luaran (Output): Seluruh hasil kalkulasi, ringkasan, kode pemrograman, dan laporan dokumen biner (.xlsx, .docx, .pdf, .pptx) yang di-generate oleh sistem menjadi milik Anda dan dapat digunakan untuk keperluan akademik maupun profesional.",
+                "3. Hak Platform: Kode sumber platform RuangTI, arsitektur UI/UX, logo, 670 modul knowledge base, dan dokumentasi resmi dilindungi oleh hak cipta pengembang.",
+              ],
+            },
+            {
+              id: "kebijakan-data-privasi",
+              title: "4. Kebijakan Berkas & Privasi Data",
+              paragraphs: [
+                "RuangTI menerapkan arsitektur Zero-DB-Bloat yang mengedepankan privasi data tingkat tinggi:",
+                "- Berkas fisik yang diunggah diproses dalam lingkungan terisolasi dan dihapus secara otomatis (auto-pruned) dari server disk setelah 14 hari.",
+                "- Database sistem hanya menyimpan metadata ringan tanpa menyimpan isi berkas biner secara permanen.",
+                "- RuangTI tidak menjual data pribadi atau konten percakapan Anda kepada pihak ketiga.",
+              ],
+            },
+            {
+              id: "etika-penggunaan",
+              title: "5. Etika Penggunaan & Larangan",
+              paragraphs: [
+                "Dalam menggunakan RuangTI, pengguna dilarang keras untuk:",
+                "1. Mengunggah berkas yang mengandung kode berbahaya, malware, virus, atau upaya eksploitasi celah keamanan sistem.",
+                "2. Melakukan tindakan scraping agresif, serangan Denial-of-Service (DoS), atau penyalahgunaan kuota API yang mengganggu integritas server.",
+                "3. Memanfaatkan luaran sistem untuk tindakan yang melanggar hukum Republik Indonesia, etika akademik (plagiarisme murni tanpa atribusi), atau keselamatan kerja industri.",
+              ],
+              callout: {
+                type: "warning",
+                title: "Integritas Akademik",
+                message: "Pengguna diharapkan tetap menjunjung tinggi prinsip kejujuran ilmiah, etika keinsinyuran PII/ABET, dan melakukan cross-check mandiri terhadap seluruh formula serta kalkulasi matematis.",
+              },
+            },
+            {
+              id: "batasan-tanggung-jawab",
+              title: "6. Batasan Tanggung Jawab (Disclaimer)",
+              paragraphs: [
+                "Layanan RuangTI disediakan atas dasar 'sebagaimana adanya' (as is) dan 'sebagaimana tersedia' (as available).",
+                "Meskipun RuangTI didukung oleh 670 modul terverifikasi dan formula KaTeX eksak, pengembang tidak bertanggung jawab atas segala kerugian finansial, kegagalan operasional fisik pabrik, atau keputusan bisnis kritis yang diambil semata-mata berdasarkan luaran komputasi AI tanpa validasi ahli insinyur di lapangan.",
               ],
             },
           ],

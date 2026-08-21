@@ -228,8 +228,8 @@ export function MessageRow({
                 </div>
               )}
 
-              {/* Action bar for user message */}
-              <div className="opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
+              {/* Action bar for user message (Always visible, compact spacing) */}
+              <div className="opacity-100 mt-0.5">
                 <ActionBar
                   content={message.content}
                   role={message.role}

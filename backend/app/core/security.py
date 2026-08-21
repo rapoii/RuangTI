@@ -1,8 +1,53 @@
 import jwt
 import bcrypt
+import sqlite3
+import os
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
 from app.core.config import settings
+
+def get_auth_db_path() -> str:
+    # Cari ruangti_auth.db baik di root ./data/ maupun ./backend/data/
+    paths = [
+        os.path.join(os.getcwd(), "data", "ruangti_auth.db"),
+        os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data", "ruangti_auth.db"),
+        os.path.join(os.getcwd(), "backend", "data", "ruangti_auth.db")
+    ]
+    for p in paths:
+        if os.path.exists(p):
+            return p
+    return paths[0]
+
+def verify_better_auth_session(token: str) -> Optional[str]:
+    """
+    Validasi session token dari Better Auth SQLite DB (tabel session).
+    Mengembalikan user_id (str) jika valid & belum expired, None jika tidak valid.
+    """
+    if not token:
+        return None
+    try:
+        db_path = get_auth_db_path()
+        if not os.path.exists(db_path):
+            return None
+        conn = sqlite3.connect(db_path)
+        cur = conn.cursor()
+        cur.execute("SELECT userId, expiresAt FROM session WHERE token = ?;", (token,))
+        row = cur.fetchone()
+        conn.close()
+        if not row:
+            return None
+        user_id, expires_at_str = row
+        # Parse ISO expiresAt (e.g. '2026-08-28T09:51:58.245Z')
+        if expires_at_str:
+            clean_exp = expires_at_str.replace("Z", "+00:00")
+            exp_dt = datetime.fromisoformat(clean_exp)
+            # Bandingkan dengan current UTC
+            now_dt = datetime.now(exp_dt.tzinfo) if exp_dt.tzinfo else datetime.utcnow()
+            if now_dt > exp_dt:
+                return None
+        return user_id
+    except Exception:
+        return None
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     try:
@@ -41,5 +86,4 @@ def is_allowed_untirta_email(email: str) -> bool:
     clean_email = email.strip().lower()
     if "@" not in clean_email:
         return False
-    domain = clean_email.split("@")[-1]
-    return domain in settings.ALLOWED_EMAIL_DOMAINS
+    return True

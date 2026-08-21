@@ -74,8 +74,9 @@ export function Navbar({ onOpenLogin, profile }: NavbarProps) {
               onClick={onOpenLogin}
               className="px-3.5 sm:px-4 py-2 rounded-xl bg-accent text-white font-bold text-xs hover:brightness-110 shadow-sm shadow-accent/20 transition-all flex items-center gap-1.5 active:scale-[0.97]"
             >
-              <User size={13} />
-              <span>Masuk</span>
+              <span className="hidden sm:inline">Buka Workspace</span>
+              <span className="sm:hidden">Workspace</span>
+              <ArrowRight size={14} />
             </button>
           )}
         </div>

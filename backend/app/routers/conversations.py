@@ -6,7 +6,7 @@ from datetime import datetime
 import uuid
 
 from app.core.database import get_session
-from app.core.security import decode_access_token
+from app.core.security import decode_access_token, verify_better_auth_session
 from app.models.schema import (
     Conversation,
     ConversationCreate,
@@ -20,12 +20,28 @@ from app.models.schema import (
 router = APIRouter(prefix="/api/conversations", tags=["Conversations"])
 
 async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> Optional[str]:
-    if not authorization or not authorization.startswith("Bearer "):
+    if not authorization:
         return None
-    token = authorization.split(" ")[1]
+    
+    # 1. Bearer token format
+    if authorization.startswith("Bearer "):
+        token = authorization.split(" ")[1].strip()
+    else:
+        token = authorization.strip()
+
+    if not token:
+        return None
+
+    # A. Coba verifikasi via Better Auth session token (SQLite table session)
+    better_auth_user_id = verify_better_auth_session(token)
+    if better_auth_user_id:
+        return better_auth_user_id
+
+    # B. Coba decode via custom JWT token
     payload = decode_access_token(token)
     if payload:
         return payload.get("sub")
+    
     return None
 
 @router.get("", response_model=List[Conversation])
@@ -57,7 +73,7 @@ async def create_conversation(
     user_id: Optional[str] = Depends(get_optional_user_id)
 ):
     conversation = Conversation(
-        title=payload.title or "Konsultasi TI Baru",
+        title=payload.title or "Percakapan Baru",
         model_id=payload.model_id or "TI-Optima Pro",
         user_id=user_id,
         is_public=False,

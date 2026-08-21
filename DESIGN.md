@@ -1,11 +1,11 @@
-# DESIGN.md — Sistem Desain RuangTI (Versi 3.5 - Pure Light Architecture)
+# DESIGN.md — Sistem Desain RuangTI (Versi 4.0 - Pure Light Universal Industrial Engineering)
 
-Dokumen ini adalah **satu-satunya sumber kebenaran (single source of truth)** untuk seluruh keputusan visual, antarmuka, token warna, tipografi, dan interaksi web app **RuangTI** (Platform AI Konsultasi & Rekayasa Teknik Industri).
+Dokumen ini adalah **satu-satunya sumber kebenaran (single source of truth)** untuk seluruh keputusan visual, antarmuka, token warna, tipografi, dan interaksi web app **RuangTI** (Platform AI Chat & Workspace Rekayasa Teknik Industri).
 
 ---
 
 ## 1. Filosofi & Esensi Desain
-RuangTI dirancang sebagai **"Ruang Konsultasi & Berpikir Rekayasa Sistem yang Tenang"** (*Industrial Engineering Workspace & Knowledge Hub*).
+RuangTI dirancang sebagai **"Ruang Kerja AI & Berpikir Rekayasa Sistem yang Tenang"** (*Industrial Engineering Workspace & Knowledge Hub*).
 - **Pendekatan Visual**: Pure Light Mode, Clean, Minimalist, Precision-Engineered, Human-Centric, Anti-AI Slop, dan **High-Performance 60fps Low-End Device Ready**.
 - **Karakter Antarmuka**: Tenang seperti ruang studio laboratorium teknik, tajam dan terstruktur, fokus pada konten matematis, formula optimasi, grafik alir, dan logika sistem tanpa distraksi visual.
 
@@ -29,7 +29,7 @@ RuangTI mengadopsi tema terang murni (*Pure Light Theme*) dengan kontras tinggi 
   - ⚠️ **Aturan Wajib Kontras**: Seluruh tombol, badge, dan pill dengan latar belakang `bg-accent` / `#E09F3E` **WAJIB** menggunakan teks putih tebal (`text-white font-bold`).
 - **Accent Subtle**: `rgba(224, 159, 62, 0.12)`
 - **Accent Hover**: `#C98B32`
-- **Emerald Primary (Share / Action)**: `#16A34A` (*Untirta Campus Emerald* — Tombol aksi publik & share)
+- **Emerald Primary (Share / Action)**: `#16A34A` (*Emerald Green* — Tombol aksi publik & status aman)
 
 ---
 
@@ -51,7 +51,7 @@ RuangTI menggunakan 3 font Google via `next/font/google`:
 ## 5. Rute Dokumentasi Resmi (`/docs`) — 3-Kolom Modern
 Dokumentasi RuangTI dirancang setara dengan standar dokumentasi modern kelas dunia (Claude Docs & Stripe Docs):
 1. **Kolom Kiri (Sidebar Navigasi)**: Kategori accordion dengan Zero-Reflow CSS Grid Transition, indikator aktif bernuansa emas, dan mobile drawer responsif dengan tombol close 'X' yang tegas.
-2. **Kolom Tengah (Area Konten Utama)**: Artikel teknis komprehensif (14 panduan resmi + 434 modul RAG), rendering semantik tebal/code untuk token UI, dan transisi pergantian halaman yang gesit.
+2. **Kolom Tengah (Area Konten Utama)**: Artikel teknis komprehensif (14 panduan resmi + 656 modul RAG), rendering semantik tebal/code untuk token UI, dan transisi pergantian halaman yang gesit.
 3. **Kolom Kanan (Table of Contents)**: Scrollspy dinamis dengan pelacakan judul aktif dan layout lock-scroll.
 4. **Spotlight Search Modal (`Ctrl+K` / `⌘K`)**: Dialog pencarian instan minimalis tanpa footer hint yang mengganggu.
 
@@ -68,8 +68,6 @@ Untuk memastikan antarmuka berjalan sangat lancar di segala jenis perangkat (ter
    - Menyertakan `style={{ willChange: "transform, opacity" }}` pada seluruh komponen bergerak dinamis.
 4. **Lightweight Backdrop Blur**:
    - Menggunakan filter ringan `backdrop-blur-[2px] bg-black/45` untuk mencegah beban berat pada chip grafis ponsel saat membuka modal atau drawer.
-5. **Form Tab Transition**:
-   - Pergantian mode form (Signin $\leftrightarrow$ Signup pada AuthModal, atau View $\leftrightarrow$ Edit pada ProfileModal) menggunakan `<AnimatePresence mode="wait">` dengan transisi *slide-fade horizontal* (`150ms`).
 
 ---
 
@@ -83,16 +81,17 @@ Untuk memastikan antarmuka berjalan sangat lancar di segala jenis perangkat (ter
 
 ## 8. Multi-Tier Thinking Effort Selector
 Tersedia 5 level reasoning model RuangTI Neural Engine:
-1. **Non-Thinking (Default)**: Respon cepat & instan tanpa penalaran bertahap (`gcli/grok-4.6(xhigh)`).
-2. **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas (`gcli/grok-4.6-low(xhigh)`).
-3. **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur (`gcli/grok-4.6-medium(xhigh)`).
-4. **High Effort**: Penalaran mendalam untuk optimasi sistem & simulasi kompleks (`gcli/grok-4.6-high(xhigh)`).
-5. **Extra High Effort**: Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis (`gcli/grok-4.6-xhigh(xhigh)`).
+1. **Non-Thinking (Default)**: Respon cepat & instan tanpa penalaran bertahap (`gcli/grok-4.6`).
+2. **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas (`gcli/grok-4.6-low`).
+3. **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur (`gcli/grok-4.6-medium`).
+4. **High Effort**: Penalaran mendalam untuk optimasi sistem & simulasi kompleks (`gcli/grok-4.6-high`).
+5. **Extra High Effort**: Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis (`gcli/grok-4.6-xhigh`).
 
 ---
 
-## 9. Standar Footer Aplikasi
-Footer aplikasi di seluruh halaman publik disederhanakan menjadi baris hak cipta tunggal yang ultra-bersih:
+## 9. Standar Footer & Penamaan Navigasi
+- Tombol aksi navigasi utama konsisten menggunakan label **"Buka Workspace"** (Desktop) dan **"Workspace"** (Mobile).
+- Footer aplikasi di seluruh halaman publik disederhanakan menjadi baris hak cipta tunggal yang ultra-bersih:
 ```
 © {new Date().getFullYear()} RuangTI. All rights reserved. Dikembangkan oleh rapoi.
 ```

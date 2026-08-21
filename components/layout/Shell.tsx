@@ -15,12 +15,18 @@ interface ShellProps {
     login: (name: string, email: string) => void;
     logout: () => void;
   };
+  isAnonymous?: boolean;
+  onToggleAnonymous?: () => void;
+  hasMessages?: boolean;
 }
 
 export function Shell({
   children,
   conversationsState,
   profileState,
+  isAnonymous = false,
+  onToggleAnonymous,
+  hasMessages = false,
 }: ShellProps) {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isDesktopCollapsed, setIsDesktopCollapsed] = useState(false);
@@ -36,7 +42,7 @@ export function Shell({
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-canvas text-text-primary">
+    <div className="flex h-full w-full overflow-hidden bg-canvas text-text-primary fixed inset-0">
       {/* Responsive Collapsible Sidebar with integrated Profile */}
       <Sidebar
         conversationsState={conversationsState}
@@ -55,6 +61,9 @@ export function Shell({
           onToggleSidebarCollapse={toggleDesktopSidebar}
           activeConversation={conversationsState.activeConversation}
           onShareStatusChanged={handleShareStatusChanged}
+          isAnonymous={isAnonymous}
+          onToggleAnonymous={onToggleAnonymous}
+          hasMessages={hasMessages}
         />
 
         {/* Content View */}

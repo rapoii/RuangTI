@@ -9,17 +9,25 @@ import { useConversations } from "@/hooks/use-conversations";
 import { useChat, SendMessageOptions } from "@/hooks/use-chat";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
-import { ModelOption } from "@/lib/types";
+import { ModelOption, Message } from "@/lib/types";
 import { useRouter } from "next/navigation";
+import { Ghost, ShieldAlert } from "lucide-react";
 
 export default function ChatPage() {
   const router = useRouter();
   const profileState = useProfile();
   const [selectedModel, setSelectedModel] = useState<ModelOption>("ti-optima");
   const [isMounted, setIsMounted] = useState(false);
+  const [isAnonymous, setIsAnonymous] = useState(false);
+  const [anonymousMessages, setAnonymousMessages] = useState<Message[]>([]);
 
   const conversationsState = useConversations({
     onNavigate: (id) => {
+      // Jika bernavigasi ke percakapan lain, otomatis keluar dari mode anonim
+      if (isAnonymous) {
+        setIsAnonymous(false);
+        setAnonymousMessages([]);
+      }
       if (id) {
         router.push(`/chat/${id}`);
       } else {
@@ -54,14 +62,29 @@ export default function ChatPage() {
     editMessage,
     regenerateMessage,
   } = useChat({
-    initialMessages: activeConversation?.messages || [],
-    conversationId: activeId,
+    initialMessages: isAnonymous ? anonymousMessages : (activeConversation?.messages || []),
+    conversationId: isAnonymous ? null : activeId,
+    isAnonymous,
     onMessagesChange: (msgs) => {
-      if (activeId) {
+      if (isAnonymous) {
+        setAnonymousMessages(msgs);
+      } else if (activeId) {
         updateMessages(activeId, msgs);
       }
     },
   });
+
+  const handleToggleAnonymous = () => {
+    if (!isAnonymous) {
+      // Masuk mode anonim: mulai percakapan bersih di memori
+      setIsAnonymous(true);
+      setAnonymousMessages([]);
+    } else {
+      // Keluar mode anonim: bersihkan memori anonim
+      setIsAnonymous(false);
+      setAnonymousMessages([]);
+    }
+  };
 
   // Handle Global Shortcuts
   useKeyboardShortcuts({
@@ -103,16 +126,38 @@ export default function ChatPage() {
     <Shell
       conversationsState={conversationsState}
       profileState={profileState}
+      isAnonymous={isAnonymous}
+      onToggleAnonymous={handleToggleAnonymous}
+      hasMessages={messages.length > 0}
     >
       <div className="flex-1 flex flex-col h-full min-h-0 overflow-hidden relative">
+        {/* Anonymous Mode Active Banner */}
+        {isAnonymous && (
+          <div className="bg-stone-900 border-b border-stone-800 px-3 sm:px-4 py-2 flex items-center justify-between text-xs text-stone-300 select-none animate-in fade-in slide-in-from-top-1 duration-200">
+            <div className="flex items-center gap-2 max-w-[85%]">
+              <Ghost className="w-4 h-4 text-purple-400 shrink-0" />
+              <span className="truncate text-[11px] sm:text-xs">
+                <strong className="text-purple-300 font-semibold">Mode Anonim Aktif:</strong> Obrolan tidak dicatat ke riwayat/database dan akan terhapus otomatis saat Anda berpindah atau menutup halaman.
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={handleToggleAnonymous}
+              className="text-[11px] font-medium text-stone-400 hover:text-stone-100 hover:underline shrink-0 ml-2"
+            >
+              Keluar
+            </button>
+          </div>
+        )}
+
         {/* Scrollable View (Empty State / Message List) */}
         {messages.length === 0 ? (
           <div
             id="empty-state-scroll"
-            className="flex-1 overflow-y-auto px-4 pb-28 sm:pb-32 pt-2 flex flex-col items-center justify-center no-scrollbar"
+            className="flex-1 overflow-hidden px-4 pb-24 sm:pb-28 pt-2 flex flex-col items-center justify-center"
           >
-            <div className="w-full max-w-chat my-auto py-2">
-              <EmptyState onSelectPrompt={handleSelectPrompt} />
+            <div className="w-full max-w-chat flex flex-col justify-center my-auto py-1">
+              <EmptyState onSelectPrompt={handleSelectPrompt} userName={profileState.profile?.name} />
             </div>
           </div>
         ) : (
@@ -128,8 +173,8 @@ export default function ChatPage() {
         )}
 
         {/* Floating Fixed-Position Composer (Always visible on mobile & desktop without scrolling) */}
-        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none bg-gradient-to-t from-canvas via-canvas/80 to-transparent pt-6 pb-2 sm:pb-3">
-          <div className="pointer-events-auto">
+        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none bg-gradient-to-t from-canvas via-canvas/90 to-transparent pt-6 pb-2 sm:pb-3 px-3 sm:px-4">
+          <div className="pointer-events-auto w-full max-w-chat mx-auto">
             <Composer
               onSendMessage={handleSendMessage}
               onStopStreaming={stopStreaming}
