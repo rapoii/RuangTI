@@ -70,13 +70,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
   // 2. Normalisasi formula \frac menjadi \dfrac agar visual KaTeX memiliki clearance pembilang/penyebut luas alami
   processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac");
 
-  // 3. Normalisasi formula yang dibungkus tanda kurung biasa: ( \dfrac{...}{...} ... )
-  processedContent = processedContent.replace(
-    /\(\s*(\\(?:d?frac|sqrt|sum|prod|int|sigma|alpha|beta|gamma|theta|lambda|mu|times|text)[\s\S]*?)\)/g,
-    " $$$1$$ "
-  );
-
-  // 4. Perbaiki jika ada simbol persentase mentah di dalam \text{...}
+  // 3. Perbaiki jika ada simbol persentase mentah di dalam \text{...}
   processedContent = processedContent.replace(/\\text\{([^}]+)\}/g, (match, inner) => {
     const safeInner = inner.replace(/(?<!\\)%/g, "\\%");
     return `\\text{${safeInner}}`;
