@@ -100,7 +100,7 @@ export function Header({
           </div>
         </div>
 
-        {/* Right: Anonymous Mode Toggle + Docs Link + Share Button */}
+        {/* Right: Anonymous Mode Toggle + Share Button */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Incognito / Anonymous Mode Toggle:
               1. Hanya tampil jika belum mulai percakapan biasa (hasMessages == false)
@@ -124,27 +124,13 @@ export function Header({
             </button>
           )}
 
-          <Link
-            href="/docs"
-            target="_blank"
-            className={cn(
-              "h-9 px-2.5 sm:px-3 rounded-xl flex items-center gap-1.5 text-xs font-medium border transition-all duration-150 active:scale-95 shadow-sm group",
-              isAnonymous
-                ? "bg-stone-800 hover:bg-stone-700 text-stone-300 border-stone-700 hover:text-white"
-                : "bg-surface hover:bg-surface-hover text-text-secondary hover:text-accent border-border"
-            )}
-            title="Buka Dokumentasi Resmi RuangTI"
-          >
-            <BookOpen className={cn("w-3.5 h-3.5 transition-colors", isAnonymous ? "text-stone-400 group-hover:text-white" : "text-text-secondary group-hover:text-accent")} />
-            <span className="hidden md:inline">Dokumentasi</span>
-          </Link>
-
-          {!isAnonymous && activeConversation && (
+          {/* Share Button (Hanya tampil jika bukan mode anonim, ada activeConversation, dan sudah ada pesan) */}
+          {!isAnonymous && activeConversation && hasMessages && (
             <button
               type="button"
               onClick={() => setIsShareOpen(true)}
               className={cn(
-                "h-9 px-3 rounded-xl flex items-center gap-1.5 text-xs font-medium border transition-all duration-150 active:scale-95 shadow-sm",
+                "h-9 px-3 rounded-xl flex items-center gap-1.5 text-xs font-medium border transition-all duration-150 active:scale-95 shadow-sm cursor-pointer",
                 activeConversation.isPublic
                   ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/30 hover:bg-emerald-500/15"
                   : "bg-surface hover:bg-surface-hover text-text-secondary hover:text-text-primary border-border"

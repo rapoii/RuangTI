@@ -187,19 +187,19 @@ export function EmptyState({ onSelectPrompt, userName }: EmptyStateProps) {
   }, []);
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center py-4 sm:py-10 max-w-2xl mx-auto w-full select-none px-2">
-      {/* Claude-style Clean Minimalist Greeting */}
+    <div className="flex-1 flex flex-col items-center justify-center py-4 sm:py-10 max-w-2xl mx-auto w-full select-none px-2 text-center">
+      {/* Claude-style Clean Minimalist Greeting (Centered) */}
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.22, ease: "easeOut" }}
-        className="w-full flex items-start sm:items-center gap-3 sm:gap-3.5 mb-5 sm:mb-8 text-left"
+        className="w-full flex flex-col items-center justify-center gap-3 sm:gap-3.5 mb-6 sm:mb-8 text-center"
       >
-        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-accent/10 border border-accent/25 text-accent flex items-center justify-center shrink-0 shadow-2xs mt-0.5 sm:mt-0">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-accent/10 border border-accent/25 text-accent flex items-center justify-center shrink-0 shadow-2xs">
           <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
         </div>
 
-        <div>
+        <div className="text-center">
           <h1 className="font-display font-medium text-2xl sm:text-3xl text-text-primary tracking-tight leading-tight">
             {greeting ? greeting.title1 : "Selamat datang,"}
             <br />
@@ -210,12 +210,12 @@ export function EmptyState({ onSelectPrompt, userName }: EmptyStateProps) {
         </div>
       </motion.div>
 
-      {/* Suggestion Action Chips (Claude-style Pills) */}
+      {/* Suggestion Action Chips (Centered Pills) */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.25, delay: 0.05, ease: "easeOut" }}
-        className="w-full flex flex-wrap items-center gap-2 sm:gap-2.5 pb-2"
+        className="w-full flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 pb-2"
       >
         {ACTION_CATEGORIES.map((cat, index) => {
           const isSelected = activeCategory?.id === cat.id;
