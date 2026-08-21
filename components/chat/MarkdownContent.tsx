@@ -209,7 +209,7 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false, output: "html" }]]}
+        rehypePlugins={[[rehypeKatex, { throwOnError: false, strict: false }]]}
         components={{
           code({ node, inline, className, children, ...props }: any) {
             const match = /language-(\w+)/.exec(className || "");
