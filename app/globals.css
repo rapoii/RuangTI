@@ -96,6 +96,20 @@
   white-space: nowrap;
 }
 
+/* KaTeX Base elements harus inline-block dan static agar pecahan dan teks tidak overlap */
+.katex .katex-html {
+  display: inline-block !important;
+  position: relative !important;
+  white-space: nowrap !important;
+}
+
+.katex .katex-html > .base {
+  display: inline-block !important;
+  position: relative !important;
+  margin-right: 0.25em !important;
+  vertical-align: middle !important;
+}
+
 /* Sembunyikan layer MathML agar teksnya tidak dobel/menumpuk dengan layer HTML */
 .katex-mathml {
   position: absolute !important;
