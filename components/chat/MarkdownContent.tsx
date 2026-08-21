@@ -67,10 +67,13 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     .replace(/\\\[([\s\S]*?)\\\]/g, "\n\n$$$$$1$$$$\n\n")
     .replace(/\\\(([\s\S]*?)\\\)/g, " $$$1$$ ");
 
-  // 2. Normalisasi formula \frac menjadi \dfrac agar visual KaTeX memiliki clearance pembilang/penyebut luas alami
+  // 2. Normalisasi blok math display ($$) yang berdekatan tanpa baris kosong agar remark-math tidak menggabungkannya
+  processedContent = processedContent.replace(/\$\$\s*\n\s*\$\$/g, "$$\n\n$$");
+
+  // 3. Normalisasi formula \frac menjadi \dfrac agar visual KaTeX memiliki clearance pembilang/penyebut luas alami
   processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac");
 
-  // 3. Perbaiki jika ada simbol persentase mentah di dalam \text{...}
+  // 4. Perbaiki jika ada simbol persentase mentah di dalam \text{...}
   processedContent = processedContent.replace(/\\text\{([^}]+)\}/g, (match, inner) => {
     const safeInner = inner.replace(/(?<!\\)%/g, "\\%");
     return `\\text{${safeInner}}`;
