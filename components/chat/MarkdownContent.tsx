@@ -67,19 +67,15 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     .replace(/\\\[([\s\S]*?)\\\]/g, "\n\n$$$$$1$$$$\n\n")
     .replace(/\\\(([\s\S]*?)\\\)/g, " $$$1$$ ");
 
-  // 2. Format blok display math agar memiliki baris kosong pemisah
-  processedContent = processedContent.replace(/\$\$\s*\n\s*\$\$/g, "$$\n\n$$");
+  // 2. Normalisasi semua blok display math ($$ ... $$) agar selalu berdiri sendiri dengan baris kosong di atas dan bawahnya
+  processedContent = processedContent.replace(/\$\$\s*([\s\S]*?)\s*\$\$/g, (match, formula) => {
+    return `\n\n$$\n${formula.trim()}\n$$\n\n`;
+  });
 
-  // 3. Tambahkan jarak atas vertikal pada formula pecahan bertingkat (\sum/\int di dalam pembilang)
-  processedContent = processedContent.replace(/\\sum_\{([^}]+)\}\^\{([^}]+)\}/g, "\\sum\\limits_{$1}^{$2}");
+  // 3. Konversi standar \frac menjadi \dfrac agar ekspresi pecahan tampil proporsional
+  processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac");
 
-  // 4. Tambahkan strut pembuka untuk memberi ruang vertikal ekstra di atas formula pecahan
-  processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac{\\rule{0pt}{1.2em}");
-
-  // 4. Standarisasi formula display yang berdiri sendiri dalam paragraf menjadi blok display $$ ... $$
-  processedContent = processedContent.replace(/(^|\n\n)\s*\$([^$\n]+)\$\s*(?=\n\n|$)/g, "$1$$$$ $2 $$$$");
-
-  // 5. Sanitasi teks multibahasa di dalam \text{...} agar aman dari karakter anomali
+  // 4. Sanitasi teks multibahasa di dalam \text{...} agar aman dari karakter anomali
   processedContent = processedContent.replace(/\\text\{([^}]+)\}/g, (match, inner) => {
     const safeInner = inner.replace(/(?<!\\)%/g, "\\%");
     return `\\text{${safeInner}}`;
