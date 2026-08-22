@@ -211,6 +211,10 @@ export function useChat({
               try {
                 const parsed = JSON.parse(dataStr);
                 if (parsed.chunk) {
+                  // Abaikan token internal keep-alive ping
+                  if (parsed.chunk.trim() === ": ping" || parsed.chunk === ": ping\n\n") {
+                    continue;
+                  }
                   assistantFullContent += parsed.chunk;
                 }
               } catch {
