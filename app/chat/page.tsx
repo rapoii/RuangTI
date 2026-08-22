@@ -102,11 +102,31 @@ export default function ChatPage() {
     text: string,
     options?: SendMessageOptions
   ) => {
+    // Di halaman /chat (tanpa ID), buat percakapan baru di backend lalu redirect ke /chat/[id]
+    // dan biarkan pengiriman pesan terjadi di halaman dynamic chat [id]
+    if (!isAnonymous) {
+      startNewConversation().then((newId) => {
+        if (newId) {
+          // Navigasi ke /chat/[newId] dengan parameter state atau otomatis mengirim
+          // Atau simpan draf pesan untuk dikirim langsung saat mount
+          sessionStorage.setItem("ruangti_pending_prompt", JSON.stringify({ text, options }));
+        }
+      });
+      return;
+    }
     sendMessage(text, selectedModel, options);
   };
 
   const handleSelectPrompt = (promptText: string) => {
-    sendMessage(promptText);
+    if (!isAnonymous) {
+      startNewConversation().then((newId) => {
+        if (newId) {
+          sessionStorage.setItem("ruangti_pending_prompt", JSON.stringify({ text: promptText }));
+        }
+      });
+      return;
+    }
+    sendMessage(promptText, selectedModel);
   };
 
   if (!isMounted || !profileState.isLoaded) {

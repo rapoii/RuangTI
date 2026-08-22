@@ -52,6 +52,9 @@ export function useChat({
       return;
     }
 
+    // Hindari menimpa (overwrite) state pesan jika sedang aktif melakukan streaming
+    if (isStreaming) return;
+
     async function load() {
       if (!conversationId) return;
       const msgs = await fetchMessagesFromBackend(conversationId);
@@ -61,7 +64,7 @@ export function useChat({
       }
     }
     load();
-  }, [conversationId, isAnonymous]);
+  }, [conversationId, isAnonymous, isStreaming]);
 
   const stopStreaming = useCallback(() => {
     if (abortControllerRef.current) {
@@ -72,11 +75,13 @@ export function useChat({
   }, []);
 
   const sendMessage = useCallback(
-    async (content: string, customModel?: string, options?: SendMessageOptions) => {
+    async (content: string, customModel?: string, options?: SendMessageOptions, overrideConvId?: string) => {
+      const targetConvId = overrideConvId || conversationId;
       const hasContent = content.trim().length > 0;
       const hasImages = options?.images && options.images.length > 0;
       const hasDocs = options?.documents && options.documents.length > 0;
-      if ((!hasContent && !hasImages && !hasDocs) || isStreaming || !conversationId) return;
+      if ((!hasContent && !hasImages && !hasDocs) || isStreaming) return;
+      if (!isAnonymous && !targetConvId) return;
 
       const userMsgId = `msg_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
       const userMsg: Message = {
@@ -89,8 +94,8 @@ export function useChat({
       };
 
       // Simpan user message ke backend database (hanya jika BUKAN mode anonymous)
-      if (!isAnonymous && conversationId) {
-        await saveMessageToBackend(conversationId, "user", content, options?.images, options?.documents);
+      if (!isAnonymous && targetConvId) {
+        await saveMessageToBackend(targetConvId, "user", content, options?.images, options?.documents);
       }
 
       // Sediakan history percakapan terkini untuk context LLM (filter pesan error gateway)
@@ -135,7 +140,7 @@ export function useChat({
             images: options?.images || [],
             documents: options?.documents || [],
             model_id: targetModel,
-            conversation_id: conversationId,
+            conversation_id: targetConvId,
             history: historyContext,
             web_search: options?.webSearch || false,
           }),
@@ -253,9 +258,9 @@ export function useChat({
           return updated;
         });
 
-        // Persist final assistant response to backend SQLite (hanya jika BUKAN mode anonymous)
-        if (!isAnonymous && conversationId && assistantFullContent.trim()) {
-          await saveMessageToBackend(conversationId, "assistant", assistantFullContent);
+        // Simpan assistant message ke database setelah streaming selesai
+        if (!isAnonymous && targetConvId && assistantFullContent.trim().length > 0) {
+          await saveMessageToBackend(targetConvId, "assistant", assistantFullContent);
         }
       } catch (err: any) {
         if (err.name === "AbortError") {

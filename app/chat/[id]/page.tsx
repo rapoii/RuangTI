@@ -21,7 +21,7 @@ export default function DynamicChatPage() {
 
   const profileState = useProfile();
   const [selectedModel, setSelectedModel] = useState<ModelOption>("ti-optima");
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(true);
   const [isAnonymous, setIsAnonymous] = useState(false);
   const [anonymousMessages, setAnonymousMessages] = useState<Message[]>([]);
 
@@ -39,17 +39,6 @@ export default function DynamicChatPage() {
       }
     },
   });
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // Redirect to landing page if user is not logged in
-  useEffect(() => {
-    if (profileState.isLoaded && !profileState.profile.isLoggedIn) {
-      router.push("/");
-    }
-  }, [profileState.isLoaded, profileState.profile.isLoggedIn, router]);
 
   const {
     activeConversation,
@@ -78,6 +67,27 @@ export default function DynamicChatPage() {
     },
   });
 
+  // Auto-send pending prompt if redirected from /chat empty state
+  useEffect(() => {
+    if (typeof window !== "undefined" && conversationIdFromUrl && !isStreaming) {
+      const raw = sessionStorage.getItem("ruangti_pending_prompt");
+      if (raw) {
+        try {
+          sessionStorage.removeItem("ruangti_pending_prompt");
+          const parsed = JSON.parse(raw);
+          if (parsed && parsed.text) {
+            // Tunggu sesaat agar state hook siap
+            setTimeout(() => {
+              sendMessage(parsed.text, selectedModel, parsed.options, conversationIdFromUrl);
+            }, 50);
+          }
+        } catch (e) {
+          console.error("Failed to parse pending prompt:", e);
+        }
+      }
+    }
+  }, [conversationIdFromUrl, selectedModel, sendMessage, isStreaming]);
+
   const handleToggleAnonymous = () => {
     if (!isAnonymous) {
       setIsAnonymous(true);
@@ -100,15 +110,23 @@ export default function DynamicChatPage() {
     },
   });
 
-  const handleSendMessage = (
+  const handleSendMessage = async (
     text: string,
     options?: SendMessageOptions
   ) => {
-    sendMessage(text, selectedModel, options);
+    let convId = conversationIdFromUrl || activeId;
+    if (!convId && !isAnonymous) {
+      convId = await startNewConversation();
+    }
+    await sendMessage(text, selectedModel, options, convId || undefined);
   };
 
-  const handleSelectPrompt = (promptText: string) => {
-    sendMessage(promptText);
+  const handleSelectPrompt = async (promptText: string) => {
+    let convId = conversationIdFromUrl || activeId;
+    if (!convId && !isAnonymous) {
+      convId = await startNewConversation();
+    }
+    await sendMessage(promptText, selectedModel, undefined, convId || undefined);
   };
 
   if (!isMounted || !profileState.isLoaded) {
