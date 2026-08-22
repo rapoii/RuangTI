@@ -29,7 +29,7 @@ async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> O
     else:
         token = authorization.strip()
 
-    if not token:
+    if not token or token == "undefined" or token == "null":
         return None
 
     # A. Coba verifikasi via Better Auth session token (SQLite table session)
@@ -50,17 +50,17 @@ async def list_conversations(
     user_id: Optional[str] = Depends(get_optional_user_id)
 ):
     if user_id:
-        # Jika user login, hanya ambil percakapan milik user_id tersebut
+        # Jika user login, HANYA ambil percakapan milik user_id tersebut
         query = (
             select(Conversation)
             .where(Conversation.user_id == user_id)
             .order_by(Conversation.updated_at.desc())
         )
     else:
-        # Percakapan publik / guest
+        # Guest tanpa login tidak membaca percakapan user lain (hanya milik guest/None)
         query = (
             select(Conversation)
-            .where(Conversation.user_id == None)
+            .where(Conversation.user_id.is_(None))
             .order_by(Conversation.updated_at.desc())
         )
     result = await session.execute(query)

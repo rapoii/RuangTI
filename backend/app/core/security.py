@@ -7,16 +7,24 @@ from typing import Optional, Dict, Any
 from app.core.config import settings
 
 def get_auth_db_path() -> str:
-    # Cari ruangti_auth.db baik di root ./data/ maupun ./backend/data/
+    # Path absolut yang tepat ke root ./data/ruangti_auth.db
+    # __file__ = backend/app/core/security.py -> dirname x 3 = root project
+    current_file_dir = os.path.dirname(os.path.abspath(__file__))
+    root_project = os.path.abspath(os.path.join(current_file_dir, "..", "..", ".."))
+    root_db = os.path.join(root_project, "data", "ruangti_auth.db")
+    if os.path.exists(root_db):
+        return root_db
+    
+    # Fallback paths
     paths = [
+        root_db,
         os.path.join(os.getcwd(), "data", "ruangti_auth.db"),
-        os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data", "ruangti_auth.db"),
         os.path.join(os.getcwd(), "backend", "data", "ruangti_auth.db")
     ]
     for p in paths:
         if os.path.exists(p):
             return p
-    return paths[0]
+    return root_db
 
 def verify_better_auth_session(token: str) -> Optional[str]:
     """

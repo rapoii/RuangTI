@@ -2,6 +2,10 @@ import os
 from pydantic_settings import BaseSettings
 from typing import List
 
+# Path absolut ke root data/ruangti_auth.db
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+_ROOT_DB_PATH = os.path.join(_PROJECT_ROOT, "data", "ruangti_auth.db")
+
 class Settings(BaseSettings):
     PROJECT_NAME: str = "RuangTI Backend"
     VERSION: str = "1.0.0"
@@ -9,7 +13,12 @@ class Settings(BaseSettings):
     PORT: int = 8000
     
     # SQLite Database URI (Async) - ruangti_auth.db
-    DATABASE_URL: str = "sqlite+aiosqlite:///./data/ruangti_auth.db"
+    DATABASE_URL: str = ""
+    
+    def __init__(self, **values):
+        super().__init__(**values)
+        if not self.DATABASE_URL or self.DATABASE_URL == "sqlite+aiosqlite:///./data/ruangti_auth.db":
+            self.DATABASE_URL = f"sqlite+aiosqlite:///{_ROOT_DB_PATH.replace(os.sep, '/')}"
     
     # JWT Auth Configuration
     JWT_SECRET_KEY: str = "ruangti_secret_super_key_jwt_untirta_2026_industrial"
