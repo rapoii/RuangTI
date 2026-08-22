@@ -258,7 +258,12 @@ export function useChat({
           console.log("Stream aborted by user");
         } else {
           console.error("Stream error:", err);
-          const errorMsgContent = `*(Koneksi terputus: ${err.message || String(err)} - Silakan klik tombol 'Coba Lagi' di bawah.)*`;
+          let errDetail = err.message || String(err);
+          // Jika memuat halaman HTML Cloudflare Timeout 524, bersihkan menjadi pesan yang ramah
+          if (errDetail.includes("524") || errDetail.includes("<!DOCTYPE") || errDetail.includes("timeout")) {
+            errDetail = "Koneksi gateway Cloudflare timeout saat menunggu komputasi model AI";
+          }
+          const errorMsgContent = `*(Koneksi terputus: ${errDetail} - Silakan klik tombol 'Coba Lagi' di bawah.)*`;
           setMessages((prev) => {
             const updated = prev.map((msg) =>
               msg.id === assistantMsgId ? { ...msg, content: errorMsgContent } : msg

@@ -313,6 +313,9 @@ Setelah tag penutup `</think>`, sajikan jawaban komprehensif, langsung to-the-po
             # Emit websources meta tag SEBELUM AI response streaming dimulai
             if websources_meta_tag:
                 yield websources_meta_tag
+            else:
+                # Heartbeat awal agar koneksi Cloudflare Tunnel / Reverse Proxy tidak terkena HTTP 524 Timeout
+                yield ": ping\n\n"
 
             async with client.stream("POST", url, json=payload, headers={"Content-Type": "application/json"}) as response:
                 if response.status_code != 200:
