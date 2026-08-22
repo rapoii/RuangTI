@@ -198,7 +198,6 @@ export function useConversations(props?: UseConversationsProps) {
             ...c,
             title: newTitle,
             messages,
-            updatedAt: Date.now(),
           };
         });
       });
