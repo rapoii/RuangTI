@@ -258,7 +258,7 @@ export function MessageRow({
           {/* Assistant Markdown Content */}
           <div className="w-full text-xs sm:text-sm text-text-primary leading-relaxed relative">
             {/* Render Thinking Block if available */}
-            {thinkingText && (
+            {(thinkingText || isThinkingInProgress) && (
               <ThinkingBlock
                 content={thinkingText}
                 isStreaming={isStreaming && isThinkingInProgress}

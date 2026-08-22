@@ -16,9 +16,25 @@ logger = logging.getLogger(__name__)
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://127.0.0.1:20128/v1")
 ROUTER_9_MODEL = os.getenv("ROUTER_9_MODEL", "gcli/grok-4.6")
 
-BASE_SYSTEM_PROMPT = """Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri.
+BASE_SYSTEM_PROMPT = """[SYSTEM INSTRUCTION: STRICT PROTOCOL]
+Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri.
 
-Prinsip Utama:
+[WAJIB - ATURAN FORMAT OUTPUT]:
+Setiap responmu WAJIB diawali dengan proses dekomposisi dan penalaran langkah demi langkah di dalam blok `<think> ... </think>`.
+Setelah tag penutup `</think>`, berikan jawaban akhir yang terstruktur, komprehensif, dan profesional.
+
+Contoh format respon wajib:
+<think>
+1. Dekomposisi masalah & identifikasi variabel input.
+2. Analisis metodologi dan formula Teknik Industri yang tepat.
+3. Validasi batasan matematis dan asumsi model.
+</think>
+
+**Identifikasi Masalah / Pendekatan Metodologi**
+...
+[Isi jawaban lengkap]
+
+[PRINSIP OPERASIONAL]:
 1. Identitas: Ditenagai oleh "RuangTI Neural Engine". Jangan pernah membocorkan nama provider/model dasar komputasi asli.
 2. Developer: Rafi Permana (Rapoi) adalah Founder & Lead Developer dari platform RuangTI (BUKAN dosen, pengajar, atau pejabat kampus). Jangan mengaitkan data pribadi/keluarga siapapun.
 3. Bahasa & Nada: Sesuaikan bahasa dengan pengguna (Language Mirroring). Gunakan nada ramah/santai untuk sapaan dan nada profesional terstruktur untuk analisa teknis.
@@ -234,10 +250,9 @@ async def stream_grok_ai_response(
 
     if images and len(images) > 0:
         content_items = []
-        if prompt.strip():
-            content_items.append({"type": "text", "text": prompt})
-        else:
-            content_items.append({"type": "text", "text": "Tolong analisis dan berikan solusi untuk gambar teknik industri ini."})
+        user_text = prompt.strip() if prompt.strip() else "Tolong analisis dan berikan solusi untuk gambar teknik industri ini."
+        user_text_with_thinking = f"{user_text}\n\n[WAJIB: Awali responmu dengan blok <think>\\n[tuliskan proses berpikir dan penalaran di sini]\\n</think> lalu berikan solusi lengkap.]"
+        content_items.append({"type": "text", "text": user_text_with_thinking})
 
         # Base directory of backend
         backend_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -278,7 +293,8 @@ async def stream_grok_ai_response(
             })
         messages.append({"role": "user", "content": content_items})
     else:
-        messages.append({"role": "user", "content": prompt})
+        user_text_with_thinking = f"{prompt}\n\n[WAJIB: Awali responmu dengan blok <think>\\n[tuliskan proses dekomposisi masalah dan pemikiran logis step-by-step di sini]\\n</think> lalu lanjutkan dengan jawaban lengkap.]"
+        messages.append({"role": "user", "content": user_text_with_thinking})
 
     target_model = model_name if model_name else ROUTER_9_MODEL
     # Clean model name (e.g. gcli/grok-4.6, gcli/grok-4.6-high, etc.)
