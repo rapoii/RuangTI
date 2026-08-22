@@ -56,8 +56,6 @@ export const THINKING_EFFORT_OPTIONS: ThinkingOption[] = [
 
 export type ModelOption = "ti-optima" | "ti-lean" | "ti-sim";
 
-export type Theme = "light" | "dark";
-
 export type TimeBucket = "Hari ini" | "Kemarin" | "7 hari terakhir" | "Lebih lama";
 
 export interface AttachedDocument {
@@ -108,9 +106,3 @@ export interface UserProfile {
   token?: string;
 }
 
-export interface PresetPrompt {
-  title: string;
-  prompt: string;
-  category: "PTLF" | "Lean" | "Inventory" | "Ergonomi" | "Umum";
-  iconName: string;
-}

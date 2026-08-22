@@ -1,12 +1,10 @@
 import os
-import io
 import zipfile
 import csv
 import gzip
 import re
-import xml.etree.ElementTree as ET
 import logging
-from typing import Dict, Any, Optional
+from typing import Dict
 
 logger = logging.getLogger("RuangTI.DocParser")
 

@@ -19,7 +19,7 @@ import subprocess
 import sys
 import logging
 from typing import Optional, Dict, List
-from urllib.parse import quote_plus
+from urllib.parse import quote_plus, urlparse, unquote
 
 logger = logging.getLogger(__name__)
 
@@ -181,7 +181,6 @@ class CDPBrowserManager:
         Returns up to max_candidate_limit results (default 50).
         """
         import httpx
-        import urllib.parse
         from bs4 import BeautifulSoup
 
         results: List[Dict[str, str]] = []
@@ -203,7 +202,7 @@ class CDPBrowserManager:
             pipeline_results = []
             try:
                 async with httpx.AsyncClient(timeout=6.0, follow_redirects=True) as client:
-                    openalex_url = f"https://api.openalex.org/works?search={urllib.parse.quote_plus(clean_query)}&per_page={max_candidate_limit}"
+                    openalex_url = f"https://api.openalex.org/works?search={quote_plus(clean_query)}&per_page={max_candidate_limit}"
                     resp = await client.get(openalex_url, headers={
                         "User-Agent": "RuangTI-Platform/1.0 (mailto:admin@ruangti.ac.id)"
                     })
@@ -223,7 +222,7 @@ class CDPBrowserManager:
                             host_name = source_obj.get("display_name", "") if isinstance(source_obj, dict) else ""
 
                             try:
-                                domain = urllib.parse.urlparse(actual_url).netloc.replace("www.", "")
+                                domain = urlparse(actual_url).netloc.replace("www.", "")
                             except Exception:
                                 domain = host_name or "journal"
 
@@ -266,7 +265,7 @@ class CDPBrowserManager:
                             if t_el:
                                 raw_href = t_el.get('href', '')
                                 if 'uddg=' in raw_href:
-                                    actual_url = urllib.parse.unquote(raw_href.split('uddg=')[1].split('&')[0])
+                                    actual_url = unquote(raw_href.split('uddg=')[1].split('&')[0])
                                 else:
                                     actual_url = raw_href
 
@@ -279,7 +278,7 @@ class CDPBrowserManager:
                                     continue
 
                                 try:
-                                    domain = urllib.parse.urlparse(actual_url).netloc.replace("www.", "")
+                                    domain = urlparse(actual_url).netloc.replace("www.", "")
                                 except Exception:
                                     domain = ""
 
@@ -319,7 +318,7 @@ class CDPBrowserManager:
                             if not actual_url or not title or actual_url in seen_urls:
                                 continue
                             try:
-                                domain = urllib.parse.urlparse(actual_url).netloc.replace("www.", "")
+                                domain = urlparse(actual_url).netloc.replace("www.", "")
                             except Exception:
                                 domain = ""
                             seen_urls.add(actual_url)

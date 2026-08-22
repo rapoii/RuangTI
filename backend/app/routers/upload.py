@@ -3,9 +3,9 @@ import uuid
 import base64
 import time
 import re
-from fastapi import APIRouter, HTTPException, UploadFile, File, Form
+from fastapi import APIRouter, HTTPException, UploadFile, File
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional
 
 router = APIRouter(prefix="/api/upload", tags=["Upload"])
 

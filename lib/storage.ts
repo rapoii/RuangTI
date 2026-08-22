@@ -10,19 +10,6 @@ export const GUEST_USER: UserProfile = {
   institution: "Teknik Industri",
 };
 
-export const DEFAULT_USER: UserProfile = {
-  id: "usr_guest",
-  name: "Praktisi TI",
-  email: "praktisi@teknik-industri.id",
-  phone: "081298765432",
-  address: "Laboratorium Riset Operasi & Rekayasa Industri",
-  postalCode: "40132",
-  role: "Praktisi",
-  institution: "Teknik Industri",
-  plan: "Pro",
-  isLoggedIn: true,
-  activeModel: "TI-Optima Pro",
-};
 
 const USER_PROFILE_KEY = "ruangti_user_profile_v2";
 

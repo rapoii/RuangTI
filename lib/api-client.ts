@@ -274,10 +274,6 @@ export async function toggleShareConversationOnBackend(
   }
 }
 
-export async function fetchPublicSharedConversation(identifier: string): Promise<PublicSharedConversation | null> {
-  return getPublicConversationFromBackend(identifier);
-}
-
 export async function saveMessageToBackend(
   conversationId: string,
   role: "user" | "assistant" | "system",
@@ -313,7 +309,7 @@ export async function saveMessageToBackend(
   }
 }
 
-export async function getPublicConversationFromBackend(
+export async function fetchPublicSharedConversation(
   shareId: string
 ): Promise<PublicSharedConversation | null> {
   try {
@@ -347,24 +343,6 @@ export async function getPublicConversationFromBackend(
   }
 }
 
-export async function setConversationPublicShare(
-  conversationId: string,
-  isPublic: boolean
-): Promise<{ is_public: boolean; share_id?: string } | null> {
-  try {
-    const authHeaders = await getAuthHeader();
-    const res = await fetch(`${getApiBase()}/api/conversations/${conversationId}/share`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...authHeaders },
-      body: JSON.stringify({ is_public: isPublic }),
-    });
-    if (!res.ok) throw new Error("Failed to update share status");
-    return await res.json();
-  } catch (err) {
-    console.error("Backend set public share error:", err);
-    return null;
-  }
-}
 
 export async function uploadImageToBackend(base64Data: string): Promise<string | null> {
   try {

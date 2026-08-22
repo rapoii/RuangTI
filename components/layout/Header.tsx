@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Conversation } from "@/lib/types";
 import { ShareModal } from "@/components/chat/ShareModal";
-import { Menu, PanelLeftOpen, Share2, MessageSquare, Pin, BookOpen, Ghost } from "lucide-react";
+import { Menu, PanelLeftOpen, Share2, MessageSquare, Pin, Ghost } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 

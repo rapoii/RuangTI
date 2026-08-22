@@ -130,10 +130,9 @@ def generate_docx_file(
     """Generates a clean, professionally formatted Microsoft Word (.docx) document."""
     from docx import Document
     from docx.shared import Pt, Inches, RGBColor
-    from docx.enum.text import WD_ALIGN_PARAGRAPH
     from docx.enum.table import WD_TABLE_ALIGNMENT
-    from docx.oxml import OxmlElement, parse_xml
-    from docx.oxml.ns import nsdecls, qn
+    from docx.oxml import parse_xml
+    from docx.oxml.ns import nsdecls
 
     doc = Document()
     
@@ -249,7 +248,6 @@ def generate_pptx_file(
     from pptx import Presentation
     from pptx.util import Inches, Pt
     from pptx.dml.color import RGBColor
-    from pptx.enum.text import PP_ALIGN
     from pptx.enum.shapes import MSO_SHAPE
 
     prs = Presentation()
@@ -350,11 +348,10 @@ def generate_pdf_file(
     sections: Optional[List[Dict[str, Any]]] = None
 ) -> str:
     """Generates a publication-grade PDF document using ReportLab."""
-    from reportlab.lib.pagesizes import letter, A4
+    from reportlab.lib.pagesizes import A4
     from reportlab.lib import colors
     from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
-    from reportlab.pdfgen import canvas
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 
     safe_name = re.sub(r'[^a-zA-Z0-9_\-\.]', '_', filename)
     if not safe_name.endswith(".pdf"):

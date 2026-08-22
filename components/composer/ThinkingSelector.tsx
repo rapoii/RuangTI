@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Brain, Sparkles, Check, ChevronUp, Zap } from "lucide-react";
+import { Brain, Check, ChevronUp, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThinkingEffort, THINKING_EFFORT_OPTIONS } from "@/lib/types";
 

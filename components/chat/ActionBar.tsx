@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Copy, Check, RotateCw, Edit3, ThumbsUp, ThumbsDown } from "lucide-react";
-import { Message, Role } from "@/lib/types";
+import { Role } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 interface ActionBarProps {
