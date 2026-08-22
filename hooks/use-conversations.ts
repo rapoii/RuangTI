@@ -41,20 +41,20 @@ export function useConversations(props?: UseConversationsProps) {
         const list = await fetchConversationsFromBackend();
         setConversations(list || []);
 
-        // Tentukan active ID target
+        // Tentukan active ID target:
+        // Jika user sengaja membuka /chat/abc-123 (initialActiveId ada), buka ID tersebut jika valid.
+        // Jika user membuka /chat (tanpa ID spesifik), JANGAN auto-select chat lama agar landing ke Empty State "Percakapan Baru".
         let targetId = initialActiveId;
 
         if (targetId) {
           // Cek apakah targetId ada di list
           const exists = list.some((c) => c.id === targetId);
-          if (!exists && list.length > 0) {
-            // Jika ID URL tidak valid di backend, fallback ke percakapan pertama
-            targetId = list[0].id;
-            if (onNavigate) onNavigate(targetId);
+          if (!exists) {
+            // Jika ID URL tidak valid, reset ke null (/chat)
+            targetId = undefined;
+            setActiveIdState(null);
+            if (onNavigate) onNavigate(null);
           }
-        } else if (list.length > 0) {
-          targetId = list[0].id;
-          if (onNavigate) onNavigate(targetId);
         }
 
         if (targetId) {
@@ -69,17 +69,7 @@ export function useConversations(props?: UseConversationsProps) {
             console.error("Failed to load messages for conversation:", e);
           }
         } else {
-          // If empty, create a fresh initial conversation on backend
-          try {
-            const newConv = await createConversationOnBackend("Percakapan Baru");
-            if (newConv) {
-              setConversations([newConv]);
-              setActiveIdState(newConv.id);
-              if (onNavigate) onNavigate(newConv.id);
-            }
-          } catch (e) {
-            console.error("Failed to create initial conversation:", e);
-          }
+          setActiveIdState(null);
         }
       } catch (err) {
         console.error("Failed to load conversations:", err);
