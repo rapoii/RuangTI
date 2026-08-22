@@ -146,6 +146,51 @@ export function useChat({
         const reader = res.body.getReader();
         const decoder = new TextDecoder("utf-8");
         let assistantFullContent = "";
+        let pendingDisplayContent = "";
+        let displayedLength = 0;
+        let isDoneReading = false;
+
+        // Ultra-Smooth Adaptive Typing Engine (60fps rAF Animation)
+        // Mengetikkan karakter secara mulus dan ringan dengan adaptive speed
+        let animationFrameId: number | null = null;
+        let lastTimestamp = performance.now();
+
+        const updateDisplay = (now: number) => {
+          const elapsed = now - lastTimestamp;
+          lastTimestamp = now;
+
+          if (displayedLength < pendingDisplayContent.length) {
+            const queueSize = pendingDisplayContent.length - displayedLength;
+            
+            // Kecepatan adaptif: cepat saat antrean banyak, halus saat aliran teks stabil
+            // Rata-rata 2 - 8 karakter per frame (120 - 480 karakter/detik)
+            const charsToTake = isDoneReading
+              ? Math.max(2, Math.ceil(queueSize * 0.15))
+              : Math.max(1, Math.min(8, Math.ceil(queueSize / 10)));
+
+            displayedLength = Math.min(pendingDisplayContent.length, displayedLength + charsToTake);
+            const currentText = pendingDisplayContent.slice(0, displayedLength);
+
+            setMessages((prev) => {
+              const updated = prev.map((msg) =>
+                msg.id === assistantMsgId
+                  ? { ...msg, content: currentText }
+                  : msg
+              );
+              if (onMessagesChange) onMessagesChange(updated);
+              return updated;
+            });
+          }
+
+          if (displayedLength < pendingDisplayContent.length || !isDoneReading) {
+            animationFrameId = requestAnimationFrame(updateDisplay);
+          } else {
+            animationFrameId = null;
+          }
+        };
+
+        // Mulai render loop requestAnimationFrame
+        animationFrameId = requestAnimationFrame(updateDisplay);
 
         while (true) {
           const { done, value } = await reader.read();
@@ -164,15 +209,13 @@ export function useChat({
                 const parsed = JSON.parse(dataStr);
                 if (parsed.chunk) {
                   assistantFullContent += parsed.chunk;
-                  setMessages((prev) => {
-                    const updated = prev.map((msg) =>
-                      msg.id === assistantMsgId
-                        ? { ...msg, content: assistantFullContent }
-                        : msg
-                    );
-                    if (onMessagesChange) onMessagesChange(updated);
-                    return updated;
-                  });
+                  
+                  // Jika chunk adalah header WEBSOURCES, langsung render agar kartu sumber segera siap
+                  if (assistantFullContent.includes("<!--WEBSOURCES:") && !assistantFullContent.includes("-->")) {
+                    pendingDisplayContent = assistantFullContent;
+                  } else {
+                    pendingDisplayContent = assistantFullContent;
+                  }
                 }
               } catch {
                 // Ignore parse errors on partial frames
@@ -180,6 +223,35 @@ export function useChat({
             }
           }
         }
+
+        isDoneReading = true;
+
+        // Tunggu hingga antrean animasi mengetik selesai 100%
+        await new Promise<void>((resolve) => {
+          const checkFinished = () => {
+            if (displayedLength >= pendingDisplayContent.length) {
+              resolve();
+            } else {
+              setTimeout(checkFinished, 30);
+            }
+          };
+          checkFinished();
+        });
+
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+        }
+
+        // Pastikan state final sinkron
+        setMessages((prev) => {
+          const updated = prev.map((msg) =>
+            msg.id === assistantMsgId
+              ? { ...msg, content: assistantFullContent }
+              : msg
+          );
+          if (onMessagesChange) onMessagesChange(updated);
+          return updated;
+        });
 
         // Persist final assistant response to backend SQLite (hanya jika BUKAN mode anonymous)
         if (!isAnonymous && conversationId && assistantFullContent.trim()) {
