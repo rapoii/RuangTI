@@ -79,8 +79,8 @@
 /* Formula Matematika Display / Blok ($$ ... $$) */
 .katex-display {
   display: block !important;
-  margin: 1.25rem 0 !important;
-  padding: 0.85rem 1rem !important;
+  margin: 1.5rem 0 !important;
+  padding: 1.25rem 1rem !important;
   background-color: #FFFFFF !important;
   border: 1px solid var(--border) !important;
   border-radius: 0.75rem !important;
@@ -92,7 +92,7 @@
   text-align: center !important;
 }
 
-/* Scroll Container untuk rumus inline yang panjang di dalam paragraf */
+/* Scroll Container untuk rumus KaTeX di perangkat mobile (baik inline maupun display) */
 span.katex {
   display: inline-block !important;
   max-width: 100% !important;
@@ -103,19 +103,25 @@ span.katex {
   vertical-align: middle !important;
 }
 
-/* Pastikan KaTeX inner rendering menggunakan visual HTML yang bersih */
+/* Di dalam .katex-display, span.katex menjadi inline visual murni tanpa scrollbar ganda */
+.katex-display > span.katex,
 .katex-display > .katex {
   display: inline-block !important;
+  max-width: none !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   text-align: center !important;
   white-space: nowrap !important;
 }
 
-/* KaTeX Base elements harus inline-block dan static agar pecahan dan teks tidak overlap */
+/* KaTeX Base elements */
 .katex .katex-html {
   display: inline-block !important;
   position: relative !important;
   white-space: nowrap !important;
   max-width: none !important;
+  overflow: visible !important;
 }
 
 .katex .katex-html > .base {
@@ -123,6 +129,7 @@ span.katex {
   position: relative !important;
   margin-right: 0.25em !important;
   vertical-align: middle !important;
+  overflow: visible !important;
 }
 
 /* Sembunyikan layer MathML agar teksnya tidak dobel/menumpuk dengan layer HTML */

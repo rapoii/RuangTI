@@ -67,13 +67,19 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
     .replace(/\\\[([\s\S]*?)\\\]/g, "\n\n$$$$$1$$$$\n\n")
     .replace(/\\\(([\s\S]*?)\\\)/g, " $$$1$$ ");
 
-  // 2. Normalisasi blok math display ($$) yang berdekatan tanpa baris kosong agar remark-math tidak menggabungkannya
+  // 2. Format blok display math agar memiliki baris kosong pemisah
   processedContent = processedContent.replace(/\$\$\s*\n\s*\$\$/g, "$$\n\n$$");
 
-  // 3. Normalisasi formula \frac menjadi \dfrac agar visual KaTeX memiliki clearance pembilang/penyebut luas alami
-  processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac");
+  // 3. Tambahkan jarak atas vertikal pada formula pecahan bertingkat (\sum/\int di dalam pembilang)
+  processedContent = processedContent.replace(/\\sum_\{([^}]+)\}\^\{([^}]+)\}/g, "\\sum\\limits_{$1}^{$2}");
 
-  // 4. Perbaiki jika ada simbol persentase mentah di dalam \text{...}
+  // 4. Tambahkan strut pembuka untuk memberi ruang vertikal ekstra di atas formula pecahan
+  processedContent = processedContent.replace(/\\frac(?=\{)/g, "\\dfrac{\\rule{0pt}{1.2em}");
+
+  // 4. Standarisasi formula display yang berdiri sendiri dalam paragraf menjadi blok display $$ ... $$
+  processedContent = processedContent.replace(/(^|\n\n)\s*\$([^$\n]+)\$\s*(?=\n\n|$)/g, "$1$$$$ $2 $$$$");
+
+  // 5. Sanitasi teks multibahasa di dalam \text{...} agar aman dari karakter anomali
   processedContent = processedContent.replace(/\\text\{([^}]+)\}/g, (match, inner) => {
     const safeInner = inner.replace(/(?<!\\)%/g, "\\%");
     return `\\text{${safeInner}}`;
