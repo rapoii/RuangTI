@@ -140,7 +140,8 @@ export function useChat({
         });
 
         if (!res.ok || !res.body) {
-          throw new Error("Gagal menerima respon streaming dari 9Router LLM.");
+          const errText = await res.text().catch(() => "");
+          throw new Error(`HTTP ${res.status}: ${res.statusText || "Error"} - ${errText}`);
         }
 
         const reader = res.body.getReader();
@@ -254,8 +255,7 @@ export function useChat({
           console.log("Stream aborted by user");
         } else {
           console.error("Stream error:", err);
-          const errorMsgContent =
-            "*(Koneksi ke server AI Gateway terputus atau membutuhkan waktu lebih lama. Silakan klik tombol 'Coba Lagi' di bawah.)*";
+          const errorMsgContent = `*(Koneksi terputus: ${err.message || String(err)} - Silakan klik tombol 'Coba Lagi' di bawah.)*`;
           setMessages((prev) => {
             const updated = prev.map((msg) =>
               msg.id === assistantMsgId ? { ...msg, content: errorMsgContent } : msg
