@@ -253,12 +253,6 @@ export function MessageRow({
             <span className="font-display font-semibold text-xs text-text-primary tracking-tight">
               RuangTI
             </span>
-            {isStreaming && (
-              <span className="text-[10px] text-accent flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
-                Menganalisis sistem industri...
-              </span>
-            )}
           </div>
 
           {/* Assistant Markdown Content */}
