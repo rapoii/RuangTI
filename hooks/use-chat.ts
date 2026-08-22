@@ -162,9 +162,14 @@ export function useChat({
           if (displayedLength < pendingDisplayContent.length) {
             const queueSize = pendingDisplayContent.length - displayedLength;
             
-            // Kecepatan adaptif: cepat saat antrean banyak, halus saat aliran teks stabil
-            // Rata-rata 2 - 8 karakter per frame (120 - 480 karakter/detik)
-            const charsToTake = isDoneReading
+            // Periksa apakah sedang di dalam tag <think>...</think>
+            const inThink = pendingDisplayContent.includes("<think>") && !pendingDisplayContent.includes("</think>");
+
+            // Jika sedang stream thinking, percepat aliran agar penalaran mengalir cepat dan responsif
+            // Jika jawaban reguler: 2 - 8 karakter per frame
+            const charsToTake = inThink
+              ? Math.max(3, Math.min(16, Math.ceil(queueSize / 5)))
+              : isDoneReading
               ? Math.max(2, Math.ceil(queueSize * 0.15))
               : Math.max(1, Math.min(8, Math.ceil(queueSize / 10)));
 

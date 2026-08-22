@@ -323,15 +323,26 @@ async def stream_grok_ai_response(
                             data_json = json.loads(data_str)
                             delta = data_json.get("choices", [{}])[0].get("delta", {})
                             content = delta.get("content", "")
-                            reasoning = delta.get("reasoning_content", "") or delta.get("thinking", "")
+                            reasoning = (
+                                delta.get("reasoning_content", "")
+                                or delta.get("reasoning", "")
+                                or delta.get("thinking", "")
+                                or delta.get("thought", "")
+                            )
                             
+                            # Handle model yang mengirimkan pemisah <think> di dalam content
+                            if "<think>" in content and not in_reasoning:
+                                in_reasoning = True
+                            if "</think>" in content and in_reasoning:
+                                in_reasoning = False
+
                             if reasoning:
                                 if not in_reasoning:
                                     yield "<think>\n"
                                     in_reasoning = True
                                 yield reasoning
                             elif content:
-                                if in_reasoning:
+                                if in_reasoning and not ("<think>" in content or "</think>" in content):
                                     yield "\n</think>\n\n"
                                     in_reasoning = False
                                 yield content
