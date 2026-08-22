@@ -146,35 +146,29 @@ export function useChat({
         const reader = res.body.getReader();
         const decoder = new TextDecoder("utf-8");
         let assistantFullContent = "";
-        let pendingDisplayContent = "";
         let displayedLength = 0;
         let isDoneReading = false;
 
         // Ultra-Smooth Adaptive Typing Engine (60fps rAF Animation)
-        // Mengetikkan karakter secara mulus dan ringan dengan adaptive speed
         let animationFrameId: number | null = null;
-        let lastTimestamp = performance.now();
 
-        const updateDisplay = (now: number) => {
-          const elapsed = now - lastTimestamp;
-          lastTimestamp = now;
-
-          if (displayedLength < pendingDisplayContent.length) {
-            const queueSize = pendingDisplayContent.length - displayedLength;
+        const updateDisplay = () => {
+          if (displayedLength < assistantFullContent.length) {
+            const queueSize = assistantFullContent.length - displayedLength;
             
             // Periksa apakah sedang di dalam tag <think>...</think>
-            const inThink = pendingDisplayContent.includes("<think>") && !pendingDisplayContent.includes("</think>");
+            const inThink = assistantFullContent.includes("<think>") && !assistantFullContent.includes("</think>");
 
-            // Jika sedang stream thinking, percepat aliran agar penalaran mengalir cepat dan responsif
-            // Jika jawaban reguler: 2 - 8 karakter per frame
+            // Kecepatan adaptif pengetikan halus
+            // Jika antrean menumpuk (misal saat streaming chunk besar), konsumsi bertahap agar efek ngetik terlihat nyata
             const charsToTake = inThink
-              ? Math.max(3, Math.min(16, Math.ceil(queueSize / 5)))
+              ? Math.max(2, Math.min(8, Math.ceil(queueSize / 8)))
               : isDoneReading
-              ? Math.max(2, Math.ceil(queueSize * 0.15))
-              : Math.max(1, Math.min(8, Math.ceil(queueSize / 10)));
+              ? Math.max(2, Math.min(10, Math.ceil(queueSize * 0.12)))
+              : Math.max(1, Math.min(4, Math.ceil(queueSize / 12)));
 
-            displayedLength = Math.min(pendingDisplayContent.length, displayedLength + charsToTake);
-            const currentText = pendingDisplayContent.slice(0, displayedLength);
+            displayedLength = Math.min(assistantFullContent.length, displayedLength + charsToTake);
+            const currentText = assistantFullContent.slice(0, displayedLength);
 
             setMessages((prev) => {
               const updated = prev.map((msg) =>
@@ -187,7 +181,7 @@ export function useChat({
             });
           }
 
-          if (displayedLength < pendingDisplayContent.length || !isDoneReading) {
+          if (displayedLength < assistantFullContent.length || !isDoneReading) {
             animationFrameId = requestAnimationFrame(updateDisplay);
           } else {
             animationFrameId = null;
@@ -214,13 +208,6 @@ export function useChat({
                 const parsed = JSON.parse(dataStr);
                 if (parsed.chunk) {
                   assistantFullContent += parsed.chunk;
-                  
-                  // Jika chunk adalah header WEBSOURCES, langsung render agar kartu sumber segera siap
-                  if (assistantFullContent.includes("<!--WEBSOURCES:") && !assistantFullContent.includes("-->")) {
-                    pendingDisplayContent = assistantFullContent;
-                  } else {
-                    pendingDisplayContent = assistantFullContent;
-                  }
                 }
               } catch {
                 // Ignore parse errors on partial frames
@@ -234,10 +221,10 @@ export function useChat({
         // Tunggu hingga antrean animasi mengetik selesai 100%
         await new Promise<void>((resolve) => {
           const checkFinished = () => {
-            if (displayedLength >= pendingDisplayContent.length) {
+            if (displayedLength >= assistantFullContent.length) {
               resolve();
             } else {
-              setTimeout(checkFinished, 30);
+              setTimeout(checkFinished, 20);
             }
           };
           checkFinished();
