@@ -93,11 +93,14 @@ export function useChat({
         await saveMessageToBackend(conversationId, "user", content, options?.images, options?.documents);
       }
 
-      // Sediakan history percakapan terkini untuk context LLM
-      const historyContext = messages.slice(-8).map((m) => ({
-        role: m.role,
-        content: m.content,
-      }));
+      // Sediakan history percakapan terkini untuk context LLM (filter pesan error gateway)
+      const historyContext = messages
+        .filter((m) => !m.content.startsWith("*(Koneksi"))
+        .slice(-8)
+        .map((m) => ({
+          role: m.role,
+          content: m.content,
+        }));
 
       // Optimistic user message update
       const currentMessagesWithUser = [...messages, userMsg];
