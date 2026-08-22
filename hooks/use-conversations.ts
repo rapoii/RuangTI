@@ -99,14 +99,10 @@ export function useConversations(props?: UseConversationsProps) {
   );
 
   const startNewConversation = useCallback(async () => {
-    const newConv = await createConversationOnBackend("Percakapan Baru");
-    if (newConv) {
-      setConversations((prev) => [newConv, ...prev]);
-      setActiveIdState(newConv.id);
-      if (onNavigate) {
-        onNavigate(newConv.id);
-      }
-      return newConv.id;
+    // Reset active conversation state & navigasi ke /chat tanpa membuat row kosong di database
+    setActiveIdState(null);
+    if (onNavigate) {
+      onNavigate(null);
     }
     return null;
   }, [onNavigate]);

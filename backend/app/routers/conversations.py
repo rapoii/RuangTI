@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Header
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
+from sqlalchemy import exists
 from typing import List, Optional
 from datetime import datetime
 import uuid
@@ -49,18 +50,21 @@ async def list_conversations(
     session: AsyncSession = Depends(get_session),
     user_id: Optional[str] = Depends(get_optional_user_id)
 ):
+    # Hanya kembalikan percakapan yang SUDAH memiliki minimal 1 pesan (tidak menampilkan percakapan kosong)
+    has_messages = exists().where(Message.conversation_id == Conversation.id)
+    
     if user_id:
-        # Jika user login, HANYA ambil percakapan milik user_id tersebut
+        # Jika user login, HANYA ambil percakapan milik user_id tersebut yang memiliki pesan
         query = (
             select(Conversation)
-            .where(Conversation.user_id == user_id)
+            .where(Conversation.user_id == user_id, has_messages)
             .order_by(Conversation.updated_at.desc())
         )
     else:
         # Guest tanpa login tidak membaca percakapan user lain (hanya milik guest/None)
         query = (
             select(Conversation)
-            .where(Conversation.user_id.is_(None))
+            .where(Conversation.user_id.is_(None), has_messages)
             .order_by(Conversation.updated_at.desc())
         )
     result = await session.execute(query)

@@ -108,6 +108,17 @@ async function getAuthHeader(): Promise<Record<string, string>> {
   return {};
 }
 
+function parseIsoTimestamp(isoString?: string | number | null): number {
+  if (!isoString) return Date.now();
+  if (typeof isoString === "number") return isoString;
+  const str = String(isoString).trim();
+  // Jika string ISO dari backend Python tidak diakhiri 'Z' atau timezone offset, anggap UTC
+  if (!str.endsWith("Z") && !str.includes("+") && !str.includes("-", 10)) {
+    return new Date(str + "Z").getTime();
+  }
+  return new Date(str).getTime();
+}
+
 export async function fetchConversationsFromBackend(): Promise<Conversation[]> {
   try {
     const authHeaders = await getAuthHeader();
@@ -124,8 +135,8 @@ export async function fetchConversationsFromBackend(): Promise<Conversation[]> {
       pinned: item.is_pinned,
       isPublic: item.is_public,
       shareId: item.share_id,
-      createdAt: new Date(item.created_at).getTime(),
-      updatedAt: new Date(item.updated_at).getTime(),
+      createdAt: parseIsoTimestamp(item.created_at),
+      updatedAt: parseIsoTimestamp(item.updated_at),
     }));
   } catch (err) {
     console.error("Backend fetch error:", err);
@@ -154,8 +165,8 @@ export async function createConversationOnBackend(
       pinned: item.is_pinned,
       isPublic: item.is_public,
       shareId: item.share_id,
-      createdAt: new Date(item.created_at).getTime(),
-      updatedAt: new Date(item.updated_at).getTime(),
+      createdAt: parseIsoTimestamp(item.created_at),
+      updatedAt: parseIsoTimestamp(item.updated_at),
     };
   } catch (err) {
     console.error("Backend create conversation error:", err);
@@ -241,7 +252,7 @@ export async function fetchMessagesFromBackend(conversationId: string): Promise<
       images: item.images ? JSON.parse(item.images) : undefined,
       documents: item.documents ? JSON.parse(item.documents) : undefined,
       tool_calls: item.tool_calls ? JSON.parse(item.tool_calls) : undefined,
-      createdAt: new Date(item.created_at).getTime(),
+      createdAt: parseIsoTimestamp(item.created_at),
     }));
   } catch (err) {
     console.error("Backend fetch messages error:", err);

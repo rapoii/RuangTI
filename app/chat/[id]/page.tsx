@@ -10,6 +10,7 @@ import { useChat, SendMessageOptions } from "@/hooks/use-chat";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { ModelOption, Message } from "@/lib/types";
+import { createConversationOnBackend } from "@/lib/api-client";
 import { useRouter, useParams } from "next/navigation";
 import { Ghost } from "lucide-react";
 
@@ -116,7 +117,10 @@ export default function DynamicChatPage() {
   ) => {
     let convId = conversationIdFromUrl || activeId;
     if (!convId && !isAnonymous) {
-      convId = await startNewConversation();
+      const newConv = await createConversationOnBackend("Percakapan Baru");
+      if (newConv) {
+        convId = newConv.id;
+      }
     }
     await sendMessage(text, selectedModel, options, convId || undefined);
   };
@@ -124,7 +128,10 @@ export default function DynamicChatPage() {
   const handleSelectPrompt = async (promptText: string) => {
     let convId = conversationIdFromUrl || activeId;
     if (!convId && !isAnonymous) {
-      convId = await startNewConversation();
+      const newConv = await createConversationOnBackend("Percakapan Baru");
+      if (newConv) {
+        convId = newConv.id;
+      }
     }
     await sendMessage(promptText, selectedModel, undefined, convId || undefined);
   };

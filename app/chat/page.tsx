@@ -10,6 +10,7 @@ import { useChat, SendMessageOptions } from "@/hooks/use-chat";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { ModelOption, Message } from "@/lib/types";
+import { createConversationOnBackend } from "@/lib/api-client";
 import { useRouter } from "next/navigation";
 import { Ghost, ShieldAlert } from "lucide-react";
 
@@ -98,32 +99,29 @@ export default function ChatPage() {
     },
   });
 
-  const handleSendMessage = (
+  const handleSendMessage = async (
     text: string,
     options?: SendMessageOptions
   ) => {
-    // Di halaman /chat (tanpa ID), buat percakapan baru di backend lalu redirect ke /chat/[id]
-    // dan biarkan pengiriman pesan terjadi di halaman dynamic chat [id]
+    // Di halaman /chat (tanpa ID), jika user baru mengirim pesan pertama, baru buat conversation di backend
     if (!isAnonymous) {
-      startNewConversation().then((newId) => {
-        if (newId) {
-          // Navigasi ke /chat/[newId] dengan parameter state atau otomatis mengirim
-          // Atau simpan draf pesan untuk dikirim langsung saat mount
-          sessionStorage.setItem("ruangti_pending_prompt", JSON.stringify({ text, options }));
-        }
-      });
+      const newConv = await createConversationOnBackend("Percakapan Baru");
+      if (newConv) {
+        sessionStorage.setItem("ruangti_pending_prompt", JSON.stringify({ text, options }));
+        router.push(`/chat/${newConv.id}`);
+      }
       return;
     }
     sendMessage(text, selectedModel, options);
   };
 
-  const handleSelectPrompt = (promptText: string) => {
+  const handleSelectPrompt = async (promptText: string) => {
     if (!isAnonymous) {
-      startNewConversation().then((newId) => {
-        if (newId) {
-          sessionStorage.setItem("ruangti_pending_prompt", JSON.stringify({ text: promptText }));
-        }
-      });
+      const newConv = await createConversationOnBackend("Percakapan Baru");
+      if (newConv) {
+        sessionStorage.setItem("ruangti_pending_prompt", JSON.stringify({ text: promptText }));
+        router.push(`/chat/${newConv.id}`);
+      }
       return;
     }
     sendMessage(promptText, selectedModel);
