@@ -32,6 +32,10 @@ async def sse_generator(
     images: Optional[List[str]] = None,
     documents: Optional[List[Dict[str, Any]]] = None
 ) -> AsyncGenerator[str, None]:
+    # Kirim ping pertama seketika koneksi dibuka (0.01 detik) agar Cloudflare tidak 524 Timeout
+    ping_payload = json.dumps({"chunk": ": ping\n\n"})
+    yield f"data: {ping_payload}\n\n"
+    
     history_dicts = [{"role": h.role, "content": h.content} for h in history] if history else []
     try:
         async for chunk in stream_grok_ai_response(
