@@ -46,10 +46,10 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${spaceGrotesk.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full overflow-hidden`}
+      className={`${spaceGrotesk.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full`}
       suppressHydrationWarning
     >
-      <body className="h-full overflow-hidden bg-canvas text-text-primary antialiased flex flex-col fixed inset-0">
+      <body className="h-full bg-canvas text-text-primary antialiased flex flex-col">
         {children}
       </body>
     </html>
