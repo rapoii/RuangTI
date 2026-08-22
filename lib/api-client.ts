@@ -267,7 +267,7 @@ export async function toggleShareConversationOnBackend(
   try {
     const authHeaders = await getAuthHeader();
     const res = await fetch(`${getApiBase()}/api/conversations/${conversationId}/share`, {
-      method: "PATCH",
+      method: "POST",
       headers: { "Content-Type": "application/json", ...authHeaders },
       body: JSON.stringify({ is_public: isPublic }),
     });

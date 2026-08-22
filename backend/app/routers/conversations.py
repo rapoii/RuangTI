@@ -194,6 +194,7 @@ async def update_conversation(
 
 # ================= SHARE CONVERSATION API (CLAUDE STYLE) =================
 @router.post("/{conversation_id}/share")
+@router.patch("/{conversation_id}/share")
 async def update_share_status(
     conversation_id: str,
     payload: ShareStatusUpdate,
