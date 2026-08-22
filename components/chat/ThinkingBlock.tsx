@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Brain, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,8 +10,28 @@ interface ThinkingBlockProps {
 }
 
 export function ThinkingBlock({ content, isStreaming = false }: ThinkingBlockProps) {
-  // Default open while streaming, closed when finished for clean reading
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  // Default open while thinking stream is actively in progress
+  const [isOpen, setIsOpen] = useState<boolean>(isStreaming);
+  const userInteractedRef = useRef<boolean>(false);
+
+  // Auto-collapse accordion saat proses thinking selesai dan output AI mulai muncul
+  useEffect(() => {
+    if (isStreaming) {
+      if (!userInteractedRef.current) {
+        setIsOpen(true);
+      }
+    } else {
+      // Saat streaming thinking selesai (atau saat render riwayat pesan lama), auto-tutup akordion
+      if (!userInteractedRef.current) {
+        setIsOpen(false);
+      }
+    }
+  }, [isStreaming]);
+
+  const handleToggle = () => {
+    userInteractedRef.current = true;
+    setIsOpen((prev) => !prev);
+  };
 
   if (!content.trim() && !isStreaming) return null;
 
@@ -20,8 +40,8 @@ export function ThinkingBlock({ content, isStreaming = false }: ThinkingBlockPro
       {/* Header Accordion Toggle */}
       <button
         type="button"
-        onClick={() => setIsOpen((prev) => !prev)}
-        className="w-full px-3.5 py-2 flex items-center justify-between text-left hover:bg-accent/10 transition-colors group"
+        onClick={handleToggle}
+        className="w-full px-3.5 py-2 flex items-center justify-between text-left hover:bg-accent/10 transition-colors group cursor-pointer"
       >
         <div className="flex items-center gap-2 min-w-0">
           <div className="w-5 h-5 rounded-md bg-accent/15 border border-accent/30 text-accent flex items-center justify-center shrink-0">
