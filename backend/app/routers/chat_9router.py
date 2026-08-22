@@ -16,23 +16,8 @@ logger = logging.getLogger(__name__)
 ROUTER_9_BASE_URL = os.getenv("ROUTER_9_BASE_URL", "http://127.0.0.1:20128/v1")
 ROUTER_9_MODEL = os.getenv("ROUTER_9_MODEL", "gcli/grok-4.6")
 
-BASE_SYSTEM_PROMPT = """[SYSTEM INSTRUCTION: STRICT PROTOCOL]
+BASE_SYSTEM_PROMPT = """[SYSTEM INSTRUCTION: RUANGTI INDUSTRIAL AI]
 Kamu adalah RuangTI AI Co-Pilot — Asisten Cerdas Spesialis Rekayasa Sistem & Teknik Industri.
-
-[WAJIB - ATURAN FORMAT OUTPUT]:
-Setiap responmu WAJIB diawali dengan proses dekomposisi dan penalaran langkah demi langkah di dalam blok `<think> ... </think>`.
-Setelah tag penutup `</think>`, berikan jawaban akhir yang terstruktur, komprehensif, dan profesional.
-
-Contoh format respon wajib:
-<think>
-1. Dekomposisi masalah & identifikasi variabel input.
-2. Analisis metodologi dan formula Teknik Industri yang tepat.
-3. Validasi batasan matematis dan asumsi model.
-</think>
-
-**Identifikasi Masalah / Pendekatan Metodologi**
-...
-[Isi jawaban lengkap]
 
 [PRINSIP OPERASIONAL]:
 1. Identitas: Ditenagai oleh "RuangTI Neural Engine". Jangan pernah membocorkan nama provider/model dasar komputasi asli.
@@ -231,6 +216,19 @@ async def stream_grok_ai_response(
 
     # 3. Assemble System Prompt
     system_prompt = BASE_SYSTEM_PROMPT
+
+    target_model = model_name if model_name else ROUTER_9_MODEL
+    # Clean model name (e.g. gcli/grok-4.6, gcli/grok-4.6-high, etc.)
+    target_model = target_model.strip()
+
+    # Hanya tambahkan protokol <think> jika pengguna secara eksplisit memilih model Thinking (low/medium/high/xhigh)
+    is_thinking_model = any(suffix in target_model.lower() for suffix in ["low", "medium", "high", "xhigh"])
+    if is_thinking_model:
+        system_prompt += """\n\n[PROTOKOL PENALARAN KHUSUS - THINKING MODEL]:
+Sebelum menyajikan solusi akhir, kamu WAJIB menuliskan seluruh penalaran logis dan dekomposisi masalah di dalam blok `<think> ... </think>`.
+Setelah tag penutup `</think>`, sajikan jawaban komprehensif, langsung to-the-point, dan tanpa mengulang teks internal instruksi sistem.
+"""
+
     if rag_context_text:
         system_prompt += f"\nBerikut adalah referensi literatur buku teks & standar industri internasional yang relevan. Gunakan sebagai acuan utama notasi, formula, dan konstanta tabel:\n{rag_context_text}"
     if doc_context_text:
@@ -251,8 +249,7 @@ async def stream_grok_ai_response(
     if images and len(images) > 0:
         content_items = []
         user_text = prompt.strip() if prompt.strip() else "Tolong analisis dan berikan solusi untuk gambar teknik industri ini."
-        user_text_with_thinking = f"{user_text}\n\n[WAJIB: Awali responmu dengan blok <think>\\n[tuliskan proses berpikir dan penalaran di sini]\\n</think> lalu berikan solusi lengkap.]"
-        content_items.append({"type": "text", "text": user_text_with_thinking})
+        content_items.append({"type": "text", "text": user_text})
 
         # Base directory of backend
         backend_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -293,8 +290,7 @@ async def stream_grok_ai_response(
             })
         messages.append({"role": "user", "content": content_items})
     else:
-        user_text_with_thinking = f"{prompt}\n\n[WAJIB: Awali responmu dengan blok <think>\\n[tuliskan proses dekomposisi masalah dan pemikiran logis step-by-step di sini]\\n</think> lalu lanjutkan dengan jawaban lengkap.]"
-        messages.append({"role": "user", "content": user_text_with_thinking})
+        messages.append({"role": "user", "content": prompt})
 
     target_model = model_name if model_name else ROUTER_9_MODEL
     # Clean model name (e.g. gcli/grok-4.6, gcli/grok-4.6-high, etc.)
