@@ -84,6 +84,9 @@ class UserRegisterRequest(SQLModel):
     role: Optional[str] = "Praktisi"
     institution: Optional[str] = "Teknik Industri"
 
+    class Config:
+        extra = "forbid"
+
     @validator("name")
     def validate_name(cls, v):
         cleaned = sanitize_plain_text(v, max_length=100)

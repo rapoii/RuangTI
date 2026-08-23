@@ -117,6 +117,15 @@ async def upload_document(request: Request, file: UploadFile = File(...)):
         ext_lower = (original_name.split(".")[-1].lower() if "." in original_name else "")
         if ext_lower in ("svg", "html", "htm", "xhtml"):
             raise HTTPException(status_code=415, detail="Ekstensi .svg/.html tidak diizinkan")
+        # Block PHP / server-side executable extensions (RCE prevention — Round 16)
+        BLOCKED_EXTS = {"php","php3","php4","php5","php7","phtml","phar","pht","htaccess","sh","pl","cgi","py","jsp","asp","aspx"}
+        # Check all dot-separated parts for blocked extensions (catches image.jpg.php)
+        all_parts = [p.lower() for p in original_name.split(".")[1:]]
+        for part in all_parts:
+            if part in BLOCKED_EXTS:
+                raise HTTPException(status_code=415, detail=f"Ekstensi .{part} tidak diizinkan (executable block)")
+        if ctype in ("application/x-php","application/x-httpd-php","text/x-php"):
+            raise HTTPException(status_code=415, detail="MIME type PHP tidak diizinkan")
         safe_name = re.sub(r'[^a-zA-Z0-9_.-]', '_', original_name)
         ext = original_name.split(".")[-1].lower() if "." in original_name else "txt"
         
