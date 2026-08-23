@@ -31,7 +31,7 @@ Pada reverse auction, buyer membayar $p_j \geq c_j$ sehingga surplus pemasok pos
 - **Dominant-Strategy Incentive Compatible (DSIC):** Truth-telling dominan tanpa asumsi rasionalitas lawan.
 - **Individual Rationality:** $p_j \geq c_j$ untuk semua pemenang.
 - **Allocative Efficiency:** Total social welfare $\sum_j v_j(x^*)$ maksimal.
-- **Kelemahan:** Pendapatan buyer dapat sangat rendah; rentan *shill bidding* (identitas palsu); WDP eksak mahal secara komputasi.
+- **Kelemahan:** Pendapatan buyer dapat sangat rendah; rentan *shill bidding* (identitas palsu); WDP eksak mahal secara komputasi — mitigasinya meliputi activity rules pada fase ascending, reserve pricing, dan bid screening otomatis.
 
 ## Metode Solusi
 - **Branch-and-Price / Branch-on-Bids:** Kolom = bid; efektif saat jumlah bid jutaan.

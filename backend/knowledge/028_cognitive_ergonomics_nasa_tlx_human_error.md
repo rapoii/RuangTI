@@ -1,35 +1,72 @@
 # Modul Riset Ilmiah: Ergonomi Kognitif, Beban Kerja Mental (NASA-TLX), & Human Reliability
 **Sumber Referensi Jurnal & Literatur Terverifikasi (Crossref Validated):**
-- Hart, S. G., & Staveland, L. E. (1988). *Development of NASA-TLX (Task Load Index): Results of empirical and theoretical research*. Advances in Psychology, North-Holland, 52, 139-183. (Foundational NASA-TLX Paper).
+- Hart, S. G., & Staveland, L. E. (1988). *Development of NASA-TLX (Task Load Index): Results of empirical and theoretical research*. Advances in Psychology, 52, 139-183. North-Holland.
+- Hart, S. G. (2006). *NASA-Task Load Index (NASA-TLX); 20 years later*. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 50(5), 904-908.
 - Wickens, C. D., Helton, W. S., Hollands, J. G., & Banbury, S. (2021). *Engineering Psychology and Human Performance* (5th ed.). Routledge. ISBN: 978-0367205423.
-- Swain, A. D., & Guttmann, H. E. (1983). *Handbook of Human Reliability Analysis with Emphasis on Nuclear Power Plant Applications* (THERP Methodology). NUREG/CR-1278, US Nuclear Regulatory Commission.
+- Swain, A. D., & Guttmann, H. E. (1983). *Handbook of Human Reliability Analysis with Emphasis on Nuclear Power Plant Applications* (THERP). NUREG/CR-1278, US NRC.
+- Hollnagel, E. (1998). *Cognitive Reliability and Error Analysis Method (CREAM)*. Elsevier.
+- Kirwan, B. (1994). *A Guide to Practical Human Reliability Assessment*. Taylor & Francis.
+- Grier, R. A. (2015). *How high is high? A meta-analysis of NASA-TLX global workload scores*. Human Factors, 57(6), 1017-1027.
 
 ---
 
-## 1. Ergonomi Kognitif & Beban Kerja Mental (Mental Workload)
-Dalam lingkungan industri modern yang didominasi oleh otomatisasi, SCADA control room, dan pemantauan sistem, beban kerja fisik berkurang tetapi beban kerja mental (*Cognitive / Mental Workload*) meningkat tajam. Beban kerja kognitif yang terlalu rendah (*Underload*) menyebabkan kebosanan dan penurunan kewaspadaan (*Vigilance decrement*), sedangkan beban yang terlalu tinggi (*Overload*) memicu stres dan kesalahan manusia (*Human Error*).
+## 1. Konsep Dasar Ergonomi Kognitif
 
----
+Dalam lingkungan industri modern yang didominasi otomatisasi, ruang kendali SCADA/DCS, dan pemantauan sistem, beban fisik operator berkurang tetapi **beban kerja mental (*cognitive workload*)** meningkat tajam: diagnosis alarm, pemantauan multi-layar, dan pengambilan keputusan waktu-kritis. Menurut hubungan Yerkes-Dodson (inverted-U), performa manusia optimal hanya pada tingkat arousal/beban sedang:
+- **Underload:** kebosanan dan penurunan kewaspadaan (*vigilance decrement*) — khas tugas monitoring panjang.
+- **Overload:** stres, tunneling perhatian, dan lonjakan kesalahan manusia (*human error*).
 
-## 2. Metodologi NASA-Task Load Index (NASA-TLX)
-Metode standar emas multi-dimensional subjektif untuk mengukur beban kerja mental yang dirasakan oleh operator.
+Teori landasan desain antarmuka adalah **Multiple Resource Theory (Wickens)**: modalitas visual-auditor, tahap persepsi-kognisi-respon, dan kode spasial-verbal menempati sumber daya kognitif yang berbeda — tugas paralel harus dipetakan ke sumber daya yang tidak saling berebut.
 
-### 6 Dimensi Pengukuran NASA-TLX:
-1. **Mental Demand (MD):** Seberapa banyak aktivitas mental dan persepsi yang dibutuhkan (berpikir, memutuskan, menghitung).
-2. **Physical Demand (PD):** Seberapa banyak aktivitas fisik yang dibutuhkan (mendorong, menarik, mengendalikan).
-3. **Temporal Demand (TD):** Seberapa besar tekanan waktu yang dirasakan karena laju tugas yang cepat.
-4. **Performance (OP):** Seberapa sukses operator merasa telah mencapai tujuan tugas (skor dibalik).
-5. **Effort (EF):** Seberapa keras usaha mental dan fisik yang harus dikerahkan untuk mencapai level performa tersebut.
-6. **Frustration Level (FR):** Seberapa besar rasa frustrasi, jengkel, tertekan, atau stres selama tugas.
+## 2. Formulasi Matematis
 
-### Prosedur Perhitungan Weighted NASA-TLX Score:
-1. **Pemberian Bobot Berpasangan (Pairwise Comparisons):**
-   Operator membandingkan 15 kombinasi pasangan dari 6 dimensi untuk menentukan dimensi mana yang lebih dominan menyumbang beban kerja ($w_i \in [0, 5]$, di mana $\sum_{i=1}^6 w_i = 15$).
-2. **Pemberian Nilai Rating ($R_i$):**
-   Operator memberikan nilai $0 - 100$ pada skala kontinu untuk masing-masing dari 6 dimensi.
-3. **Skor Beban Kerja Akhir (Weighted NASA-TLX Score):**
-   $$\text{WWL} = \sum_{i=1}^6 \left( \frac{w_i}{15} \times R_i \right)$$
-   - $\text{Skor } 0 - 29$: Beban Kerja Rendah.
-   - $\text{Skor } 30 - 49$: Beban Kerja Sedang.
-   - $\text{Skor } 50 - 79$: Beban Kerja Tinggi.
-   - $\text{Skor } 80 - 100$: Beban Kerja Sangat Tinggi (Berbahaya, memicu human error).
+### A. Metodologi NASA-Task Load Index (NASA-TLX)
+Enam dimensi beban kerja: **Mental Demand (MD), Physical Demand (PD), Temporal Demand (TD), Performance (OP), Effort (EF), Frustration Level (FR)** — masing-masing dirating $R_i \in [0,100]$ pada skala kontinu 5 titik.
+
+Prosedur versi tertimbang (*Weighted Workload*):
+1. **Pairwise comparisons:** operator membandingkan $\binom{6}{2}=15$ kombinasi pasangan dimensi; bobot dominansi $w_i \in [0,5]$ dengan $\sum_{i=1}^{6} w_i = 15$.
+2. **Skor akhir tertimbang:**
+$$
+WWL = \sum_{i=1}^{6}\left(\frac{w_i}{15}\times R_i\right)
+$$
+3. Interpretasi umum: $0-29$ rendah; $30-49$ sedang; $50-79$ tinggi; $80-100$ sangat tinggi (zona rawan human error). Varian **Raw TLX** menghitung rata-rata sederhana $\frac{1}{6}\sum R_i$ tanpa pembobotan; meta-analisis Grier (2015) memberi acuan banding antar-studi.
+
+### B. Human Reliability Analysis (HRA) — THERP
+Probabilitas kesalahan manusia (*Human Error Probability*, HEP) untuk rangkaian sub-tugas independen dalam event tree:
+
+$$
+P_{\text{sukses}} = \prod_{i=1}^{n}(1 - P_i), \qquad HEP = 1 - P_{\text{sukses}}
+$$
+
+Koreksi faktor performa situasi (*Performance Shaping Factors*: stres, kelelahan, kualitas HMI, pelatihan):
+
+$$
+HEP_{adj} = HEP_{base} \times \prod_k PSF_k
+$$
+
+Nilai $HEP_{base}$ diambil dari tabel THERP NUREG/CR-1278 (misal: membaca indikator analog $\approx 10^{-2}$; seleksi kontrol salah label $\approx 3\times10^{-3}$).
+
+## 3. Metode Solusi / Prosedur Penilaian
+
+1. **Prosedur NASA-TLX lapangan:** definisi tugas → instruksikan skala → isi rating pasca-tugas → 15 perbandingan berpasangan → hitung $WWL$ → bandingkan antar kondisi desain (uji-t/Wilcoxon antar konfigurasi HMI).
+2. **Alur HRA THERP:** analisis tugas (HTA) → identifikasi kesalahan potensial (omission/commission) → bangun event tree → ambil HEP dasar → terapkan PSF → hitung HEP sistem → evaluasi terhadap target risiko.
+3. **Metode pendukung:** CREAM (Hollnagel) untuk konteks kognitif umum; SPAR-H untuk faktor biner sederhana; SHERPA untuk klasifikasi error eksternal.
+4. **Desain mitigasi:** redesign alarm (prioritas & deduplikasi), chunking informasi, decision support otomatis, rotasi tugas, dan pelatihan simulator.
+
+## 4. Aplikasi di Industrial Engineering
+
+- **Control Room SCADA/DCS pabrik proses:** audit beban mental operator shift; validasi layout alarm baru dengan penurunan $WWL$ signifikan.
+- **Perakitan presisi & inspeksi visual:** kombinasi beban kognitif-perseptif; penentuan jeda mikro untuk mencegah vigilance decrement.
+- **Aviation/maintenance MRO:** HRA THERP pada prosedur perakitan mesin untuk kuantifikasi risiko kesalahan instalasi.
+- **Ergonomi Kognitif Cobots (Industry 5.0):** kalibrasi otonomi robot agar beban supervisi operator berada di zona optimal.
+- **Human-in-the-loop AI:** evaluasi trust & complacency saat keputusan dialihkan ke sistem rekomendasi.
+
+## 5. Referensi Terverifikasi
+
+1. Hart, S. G., & Staveland, L. E. (1988). Advances in Psychology, 52, 139-183.
+2. Hart, S. G. (2006). Proceedings of the HFES Annual Meeting, 50(5), 904-908.
+3. Wickens, C. D., dkk. (2021). *Engineering Psychology and Human Performance* (5th ed.). Routledge. ISBN: 978-0367205423.
+4. Swain, A. D., & Guttmann, H. E. (1983). NUREG/CR-1278, US Nuclear Regulatory Commission.
+5. Hollnagel, E. (1998). *CREAM*. Elsevier.
+6. Kirwan, B. (1994). *A Guide to Practical Human Reliability Assessment*. Taylor & Francis.
+7. Grier, R. A. (2015). Human Factors, 57(6), 1017-1027.

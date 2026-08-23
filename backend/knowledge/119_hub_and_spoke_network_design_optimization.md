@@ -3,7 +3,7 @@
 ## Kerangka Konseptual
 Hub-and-Spoke adalah arsitektur jaringan di mana aliran barang/penumpang dikonsolidasikan melalui node perantara (*hub*) untuk mengeksploitasi *economies of scale* pada jalur antar-hub. Konsolidasi memungkinkan kendaraan/layanan berkapasitas besar beroperasi pada tingkat utilisasi tinggi, sehingga biaya per unit jarak turun — tercermin dalam *discount factor* $\alpha < 1$ pada model matematis. Trade-off klasiknya: **rute tidak langsung** (detour via hub) vs **biaya link yang lebih sedikit** (dari $O(n^2)$ direct links menjadi $O(n)$ links ke hub).
 
-Taksonomi utama: (1) *single vs multiple allocation* — apakah satu non-hub node boleh dilayani beberapa hub; (2) *uncapacitated vs capacitated*; (3) *p-hub median* (jumlah hub tetap $p$), *hub location with fixed costs*, dan *hub center/covering*. Model fundamental diperkenalkan O'Kelly (1987); pengembangan modern mencakup *stochastic/robust hubs*, *hub line network*, dan *competition-driven hub location*.
+Taksonomi utama: (1) *single vs multiple allocation* — apakah satu non-hub node boleh dilayani beberapa hub; (2) *uncapacitated vs capacitated*; (3) *p-hub median* (jumlah hub tetap $p$), *hub location with fixed costs*, dan *hub center/covering*. Model fundamental diperkenalkan O'Kelly (1987); pengembangan modern mencakup *stochastic/robust hubs*, *hub line network*, dan *competition-driven hub location*. Pada praktiknya nilai $\alpha$ diestimasi dari skema tarif carrier (mis. $\alpha = 0{,}5$ untuk volume discount antar sortation center), dan sensitivitas topologi dievaluasi terhadap $\alpha \pm 0{,}1$ sebelum keputusan investasi hub difinalisasi.
 
 ## Formulasi Matematis
 ### Uncapacitated Single Allocation p-Hub Median (USAHLP)

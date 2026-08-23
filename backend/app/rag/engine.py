@@ -389,6 +389,21 @@ IE_THESAURUS = {
     "joint replenishment": ["jrp", "basic cycle", "rand heuristic", "major ordering cost", "minor ordering cost", "silver heuristic", "472"],
     "dynamic facility layout": ["dFLP", "relocation cost", "quadratic assignment problem", "qap layout", "material handling dynamic", "473"],
     "energy aware scheduling": ["flexible job shop", "efjsp", "time-of-use tariffs", "tou electricity", "peak demand penalty", "machine speed scaling", "474"],
+    "togaf enterprise architecture": ["togaf", "adm", "archimate", "enterprise architecture", "itil 4", "svs", "itsm", "094"],
+    "lean construction last planner": ["last planner system", "lps", "ppc", "percent plan complete", "takt planning", "takt time construction", "kingman variability", "735"],
+    "cbam carbon border": ["cbam", "carbon border adjustment", "embedded emissions", "eu 2023/956", "certificate cost optimization", "736"],
+    "definitive screening design": ["dsd", "screening designs", "doe advanced", "262"],
+    "mixture experiment simplex": ["mixture design", "simplex centroid", "scheffe polynomial", "261"],
+    "structural equation modeling": ["sem-pls", "pls-sem", "canonical correlation analysis", "cca", "263"],
+    "bow tie barrier management": ["bow-tie analysis", "barrier management", "escalation factor", "276"],
+    "bleve consequence modeling": ["bleve", "vapor cloud explosion", "vce", "dispersion model", "qra consequence", "277"],
+    "fn curve societal risk": ["f-n curve", "societal risk", "alarp", "value of statistical life", "vsl", "278"],
+    "cradle to cradle passport": ["c2c", "material passport", "circular economy design", "281"],
+    "internal carbon pricing": ["shadow carbon price", "carbon fee", "scope 123 emissions accounting", "283"],
+    "water footprint zld": ["iso 14046", "zero liquid discharge", "water scarcity footprint", "284"],
+    "industrial symbiosis eip": ["kalundborg", "eco industrial park", "byproduct synergy", "285"],
+    "tco procurement analytics": ["total cost of ownership procurement", "should cost analysis", "supplier cost breakdown", "286"],
+    "ccus techno economics": ["carbon capture utilization storage", "co2 capture cost", "techno economic analysis teea", "287"],
 }
 
 

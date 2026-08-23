@@ -1,52 +1,54 @@
 # 125. Strategic Sourcing & Kraljic Portfolio Matrix
 
-## Konsep Dasar
-Strategic Sourcing adalah pendekatan sistematis untuk mengelola pengeluaran pengadaan dengan menyelaraskan strategi pembelian terhadap karakteristik pasar pasokan dan pentingnya material bagi organisasi. Framework paling fundamental adalah **Kraljic Portfolio Matrix** (1983), yang mengklasifikasikan item pengadaan ke dalam empat kuadran berdasarkan dua dimensi: **Profit Impact** dan **Supply Risk**.
+## Kerangka Konseptual
+Strategic Sourcing adalah proses sistematis menganalisis belanja pengadaan (*spend analysis*), segmentasi item, dan menyelaraskan strategi pembelian dengan karakteristik pasar pasokan. Framework paling berpengaruh adalah **Kraljic Portfolio Matrix** (Kraljic, 1983) yang memetakan item pada dua dimensi: **Profit Impact** (kontribusi terhadap biaya/value added) dan **Supply Risk** (kompleksitas pasar, ketergantungan pemasok, risiko gangguan). Klasifikasi empat kuadran menghasilkan preskripsi strategi yang berbeda fundamental — kesalahan penempatan kuadran (mis. memperlakukan item strategis sebagai routine) berbiaya sangat tinggi.
 
-Pendekatan modern mengintegrasikan Kraljic dengan **Multi-Criteria Decision Analysis (MCDA)** untuk evaluasi supplier yang lebih komprehensif, melampaui kriteria harga tunggal.
+Pendekatan modern mengintegrasikan Kraljic dengan **MCDA** (AHP, TOPSIS, PROMETHEE) untuk menempatkan item secara objektif dari data spend + risk scoring multi-kriteria, serta memperluas dimensi ketiga: keberlanjutan (*green sourcing*) dan kesiapan digital pemasok.
 
 ## Formulasi Matematis
+### Skor Dua Dimensi & Klasifikasi Kuadran
+Skor ternormalisasi min-max untuk item $i$:
+$$\hat{P}_i = \frac{PI_i - \min_k PI_k}{\max_k PI_k - \min_k PI_k}, \quad \hat{R}_i = \frac{SR_i - \min_k SR_k}{\max_k SR_k - \min_k SR_k}$$
+Threshold klasifikasi dapat disesuaikan dengan median atau titik potong cluster (2-means per dimensi):
+$$\text{Quadrant}(i) = f(\hat{P}_i \gtrless t_P,\; \hat{R}_i \gtrsim t_R)$$
 
-### Kraljic Matrix Classification
-$$
-\text{Quadrant}(i) = f(\text{ProfitImpact}_i, \text{SupplyRisk}_i)
-$$
+| Kuadran | Profit Impact | Supply Risk | Strategi Dominan |
+|---------|--------------|-------------|------------------|
+| **Non-Critical** | Rendah | Rendah | Efisiensi administratif, e-procurement catalog |
+| **Leverage** | Tinggi | Rendah | Competitive bidding, volume consolidation, combinatorial auction |
+| **Bottleneck** | Rendah | Tinggi | Secure supply, backup sourcing, buffer inventory |
+| **Strategic** | Tinggi | Tinggi | Partnership, co-development, long-term contract |
 
-| Kuadran | Profit Impact | Supply Risk | Strategi |
-|---------|--------------|-------------|----------|
-| **Non-Critical** | Rendah | Rendah | Efisiensi administratif, e-procurement |
-| **Leverage** | Tinggi | Rendah | Competitive bidding, volume consolidation |
-| **Bottleneck** | Rendah | Tinggi | Secure supply, backup suppliers, inventory buffer |
-| **Strategic** | Tinggi | Tinggi | Partnership, co-development, long-term contracts |
+### Evaluasi Supplier MCDA — TOPSIS
+Matriks keputusan $m$ supplier $\times$ $n$ kriteria dinormalisasi vektor:
+$$r_{ij} = \frac{x_{ij}}{\sqrt{\sum_{k=1}^m x_{kj}^2}}, \qquad v_{ij} = w_j \cdot r_{ij}$$
+Solusi ideal positif/negatif dan jarak Euclidean:
+$$d_i^+ = \sqrt{\sum_j (v_{ij} - v_j^+)^2}, \quad d_i^- = \sqrt{\sum_j (v_{ij} - v_j^-)^2}$$
+Relative closeness:
+$$C_i = \frac{d_i^-}{d_i^+ + d_i^-} \in [0,1]$$
+Bobot $w_j$ diturunkan via AHP (eigenvector) dengan consistency ratio $CR < 0{,}1$, atau entropy method untuk objektivitas data-driven. Untuk basis $m > 100$ supplier, pairwise comparison penuh tidak praktis → dipakai pendekatan hybrid: clustering awal berbasis spend data, lalu AHP hanya antar representative cluster.
 
-### MCDA Supplier Evaluation (TOPSIS Example)
-Normalized decision matrix $r_{ij}$:
-$$ r_{ij} = \frac{x_{ij}}{\sqrt{\sum_{k=1}^m x_{kj}^2}} $$
+## Metode Solusi
+- **AHP/ANP weighting:** Pairwise comparison antar kriteria profit impact dan supply risk.
+- **TOPSIS/PROMETHEE ranking:** Pemeringkatan supplier dalam tiap kuadran.
+- **Cluster Analysis:** Segmentasi otomatis ribuan SKU MRO tanpa threshold manual.
+- **Monte Carlo Simulation:** Stress-test posisi item terhadap volatilitas harga dan lead time.
+- **Digital Procurement Analytics:** Dashboards real-time risk monitoring dengan NLP news scraping.
 
-Weighted normalized matrix $v_{ij} = w_j \cdot r_{ij}$. Ideal solutions:
-$$ A^+ = \{v_1^+, \dots, v_n^+\}, \quad A^- = \{v_1^-, \dots, v_n^-\} $$
+## Aplikasi Industri
+- Kategorisasi ribuan SKU/MRO untuk diferensiasi strategi pengadaan di manufaktur diskrit.
+- Seleksi supplier komponen otomotif multi-tier dengan kriteria ESG.
+- Supplier development program: bottleneck items diprioritaskan dual-sourcing.
+- Integrasi sustainability criteria (carbon footprint per unit) ke dalam MCDA.
+- Contract portfolio management: durasi kontrak optimal per kuadran — Strategic dikontrak 3–5 tahun dengan gain-sharing, Non-Critical memakai e-catalog spot buying.
 
-Relative closeness to ideal:
-$$ C_i = \frac{d_i^-}{d_i^+ + d_i^-}, \quad 0 \leq C_i \leq 1 $$
-
-Supplier dengan $C_i$ tertinggi direkomendasikan.
-
-### Positioning Index Quantification
-Untuk menempatkan item secara objektif di matriks Kraljic:
-$$ PI_i = \alpha \cdot \hat{P}_i + (1-\alpha) \cdot \hat{R}_i $$
-di mana $\hat{P}_i, \hat{R}_i$ adalah normalized scores dari profit impact dan supply risk, dan $\alpha$ merefleksikan preferensi strategis perusahaan.
-
-## Aplikasi di Industrial Engineering
-- Kategoriisasi ribuan SKU/MRO items untuk diferensiasi strategi pengadaan.
-- Evaluasi dan seleksi supplier menggunakan AHP/TOPSIS/PROMETHEE.
-- Pengembangan supplier development programs berdasarkan kuadran.
-- Integrasi sustainability criteria (green sourcing) ke dalam MCDA framework.
-- Digital procurement dashboards dengan real-time risk monitoring.
+## Modul Terkait
+- **[122] Procurement Auctions & VCG** — mekanisme lelang kombinasi untuk kuadran Leverage.
+- **[192] Outranking Methods (PROMETHEE/ELECTRE)** — alternatif non-compensatory ranking.
+- Modul Supply Chain Risk Management — kuantifikasi supply risk dimension.
 
 ## Referensi Terverifikasi
-- Kraljic, P. (1983). Purchasing Must Become Supply Management. *Harvard Business Review*, 61(5), 109–117.
+- Kraljic, P. (1983). Purchasing must become supply management. *Harvard Business Review*, 61(5), 109–117.
 - Van Weele, A. J. (2018). *Purchasing and Supply Chain Management* (7th ed.). Cengage.
 - Rezaei, J., Fahimnia, B., & Sarkis, J. (2023). Green supplier selection using multi-criteria decision making methods: A systematic literature review. *Journal of Cleaner Production*, 389, 136048.
 - Gupta, H., & Barua, M. K. (2024). Strategic sourcing under Industry 4.0: Integrating digital maturity with Kraljic portfolio model. *International Journal of Production Economics*, 268, 109102.
-
-</content>
