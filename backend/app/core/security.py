@@ -85,7 +85,13 @@ def create_access_token(data: Dict[str, Any], expires_delta: Optional[timedelta]
 
 def decode_access_token(token: str) -> Optional[Dict[str, Any]]:
     try:
-        payload = jwt.decode(token, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
+        # Strictly verify signature using HS256 algorithm and explicitly reject alg=none or mismatch
+        payload = jwt.decode(
+            token,
+            settings.JWT_SECRET_KEY,
+            algorithms=["HS256"],
+            options={"verify_signature": True, "require": ["exp", "sub"]}
+        )
         return payload
     except Exception:
         return None

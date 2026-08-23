@@ -1,4 +1,34 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+import time
+from collections import defaultdict
+from fastapi import APIRouter, Depends, HTTPException, Request, status
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlmodel import select
+
+# In-memory IP-based rate limiting dictionary
+# Format: {ip: [timestamp1, timestamp2, ...]}
+_login_attempts = defaultdict(list)
+_register_attempts = defaultdict(list)
+
+def check_rate_limit(request: Request, endpoint_type: str = "login", max_requests: int = 5, window_seconds: int = 60):
+    client_ip = request.client.host if request.client else "127.0.0.1"
+    # Also check CF-Connecting-IP or X-Forwarded-For if behind Cloudflare
+    forwarded = request.headers.get("cf-connecting-ip") or request.headers.get("x-forwarded-for")
+    if forwarded:
+        client_ip = forwarded.split(",")[0].strip()
+        
+    now = time.time()
+    store = _login_attempts if endpoint_type == "login" else _register_attempts
+    
+    # Filter out old attempts outside window
+    store[client_ip] = [t for t in store[client_ip] if now - t < window_seconds]
+    
+    if len(store[client_ip]) >= max_requests:
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail=f"Terlalu banyak permintaan {endpoint_type}. Silakan coba lagi dalam beberapa saat."
+        )
+    
+    store[client_ip].append(now)
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
 
@@ -21,9 +51,11 @@ router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 @router.post("/register", response_model=AuthResponse, status_code=status.HTTP_201_CREATED)
 async def register_user(
+    request: Request,
     payload: UserRegisterRequest,
     session: AsyncSession = Depends(get_session)
 ):
+    check_rate_limit(request, endpoint_type="register", max_requests=5, window_seconds=60)
     clean_email = payload.email.strip().lower()
 
     # 1. Validasi Domain Khusus Untirta (@untirta.ac.id dan @student.untirta.ac.id)
@@ -94,9 +126,11 @@ async def register_user(
 
 @router.post("/login", response_model=AuthResponse)
 async def login_user(
+    request: Request,
     payload: UserLoginRequest,
     session: AsyncSession = Depends(get_session)
 ):
+    check_rate_limit(request, endpoint_type="login", max_requests=10, window_seconds=60)
     clean_email = payload.email.strip().lower()
 
     # Cari user berdasarkan email

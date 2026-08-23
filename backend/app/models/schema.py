@@ -1,7 +1,19 @@
+import html
+import re
 import uuid
 from datetime import datetime
 from typing import Optional, List
+from pydantic import validator
 from sqlmodel import SQLModel, Field, Relationship
+
+def sanitize_plain_text(val: Optional[str], max_length: int = 500) -> Optional[str]:
+    if val is None:
+        return None
+    # Strip dangerous HTML tags & scripts
+    cleaned = re.sub(r'<[^>]*?>', '', str(val))
+    # Escape special HTML entities
+    escaped = html.escape(cleaned).strip()
+    return escaped[:max_length]
 
 def generate_uuid() -> str:
     return str(uuid.uuid4())
@@ -68,6 +80,26 @@ class UserRegisterRequest(SQLModel):
     role: Optional[str] = "Praktisi"
     institution: Optional[str] = "Teknik Industri"
 
+    @validator("name")
+    def validate_name(cls, v):
+        cleaned = sanitize_plain_text(v, max_length=100)
+        if not cleaned:
+            raise ValueError("Nama tidak boleh kosong atau hanya berisi tag HTML berbahaya")
+        return cleaned
+
+    @validator("email")
+    def validate_email(cls, v):
+        clean_email = v.strip().lower()
+        if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", clean_email):
+            raise ValueError("Format email tidak valid")
+        return clean_email
+
+    @validator("password")
+    def validate_password(cls, v):
+        if len(v) < 8:
+            raise ValueError("Kata sandi minimal harus 8 karakter")
+        return v
+
 class UserLoginRequest(SQLModel):
     email: str
     password: str
@@ -94,12 +126,26 @@ class ConversationCreate(SQLModel):
     title: Optional[str] = "Percakapan Baru"
     model_id: Optional[str] = "TI-Optima Pro"
 
+    @validator("title")
+    def validate_title(cls, v):
+        if v is None:
+            return "Percakapan Baru"
+        cleaned = sanitize_plain_text(v, max_length=200)
+        return cleaned if cleaned else "Percakapan Baru"
+
 class ConversationUpdate(SQLModel):
     title: Optional[str] = None
     is_pinned: Optional[bool] = None
     model_id: Optional[str] = None
     is_public: Optional[bool] = None
     share_id: Optional[str] = None
+
+    @validator("title")
+    def validate_title(cls, v):
+        if v is None:
+            return None
+        cleaned = sanitize_plain_text(v, max_length=200)
+        return cleaned if cleaned else "Percakapan"
 
 class ShareStatusUpdate(SQLModel):
     is_public: bool
