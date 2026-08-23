@@ -45,9 +45,15 @@ async def get_messages_by_conversation(
     if not conversation:
         raise HTTPException(status_code=404, detail="Conversation not found")
 
-    # Guard: if private and owned by a user, ensure requester is the owner
-    if not conversation.is_public and conversation.user_id is not None:
-        if not user_id or user_id != conversation.user_id:
+    # Guard: Percakapan privat hanya boleh diakses oleh pemiliknya
+    if not conversation.is_public:
+        if conversation.user_id is None:
+            if not user_id:
+                raise HTTPException(
+                    status_code=403,
+                    detail="Akses ditolak: Percakapan tamu bersifat privat."
+                )
+        elif not user_id or user_id != conversation.user_id:
             raise HTTPException(
                 status_code=403,
                 detail="Akses ditolak: Percakapan ini bersifat privat."
@@ -74,7 +80,10 @@ async def create_message(
         raise HTTPException(status_code=404, detail="Conversation not found")
 
     # Guard: only owner can write new messages
-    if conversation.user_id and (not user_id or user_id != conversation.user_id):
+    if conversation.user_id is None:
+        if not user_id:
+            raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menambahkan pesan ke percakapan tamu")
+    elif not user_id or user_id != conversation.user_id:
         raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menambahkan pesan ke percakapan ini")
 
     message = Message(

@@ -15,13 +15,19 @@ const sqliteDb = new Database(dbPath);
 export const auth = betterAuth({
   database: sqliteDb,
   trustedOrigins: [
+    "https://ruangti.varevastudio.tech",
+    "http://localhost:3000",
     "http://localhost:3005",
-    "http://127.0.0.1:3005",
-    "https://*.trycloudflare.com",
-    "https://trycloudflare.com"
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:3005"
   ],
   baseURL: process.env.BETTER_AUTH_URL || (typeof window !== "undefined" ? window.location.origin : undefined),
-  secret: process.env.BETTER_AUTH_SECRET || "ruangti_better_auth_secret_key_universal_2026_industrial_engineering",
+  secret: process.env.BETTER_AUTH_SECRET || (() => {
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("FATAL: BETTER_AUTH_SECRET environment variable is not defined in production!");
+    }
+    return "dev_only_ephemeral_secret_key_untirta_2026_dev_mode";
+  })(),
   
   // Custom user fields untuk profil praktisi & mahasiswa Teknik Industri
   user: {

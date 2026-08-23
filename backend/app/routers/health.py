@@ -7,7 +7,5 @@ router = APIRouter(tags=["Health"])
 async def health_check():
     return {
         "status": "healthy",
-        "service": settings.PROJECT_NAME,
-        "version": settings.VERSION,
-        "database": "SQLite (Async SQLModel)",
+        "service": settings.PROJECT_NAME
     }

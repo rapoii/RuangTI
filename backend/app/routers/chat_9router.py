@@ -131,32 +131,26 @@ async def stream_grok_ai_response(
 
     # 1b. Process Attached Documents (Spreadsheet, Word, Code, ZIP, etc.)
     doc_context_text = ""
-    backend_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    # Whitelisted uploads root directory (strict path traversal guard)
+    allowed_uploads_root = os.path.realpath(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "uploads"))
+    
     if documents and len(documents) > 0:
         doc_context_text = "\n\n=== [BERKAS & DOKUMEN LAMPIRAN PENGGUNA] ==="
         for doc in documents:
             doc_url = doc.get("url", "")
             doc_name = doc.get("name", "lampiran")
             
-            # Resolve disk path
+            # Resolve disk path safely strictly within allowed_uploads_root
             if doc_url.startswith("/uploads/") or doc_url.startswith("uploads/"):
-                rel_path = doc_url.lstrip("/")
-                candidate_paths = [
-                    os.path.join(backend_root, rel_path),
-                    os.path.join(backend_root, "backend", rel_path),
-                    os.path.abspath(rel_path)
-                ]
-                full_doc_path = None
-                for p in candidate_paths:
-                    if os.path.exists(p):
-                        full_doc_path = p
-                        break
+                clean_rel = doc_url.lstrip("/")
+                target_disk_path = os.path.realpath(os.path.join(allowed_uploads_root, os.path.relpath(clean_rel, "uploads")))
                 
-                if full_doc_path and os.path.exists(full_doc_path):
-                    parsed_doc = extract_document_content(full_doc_path, doc_name)
+                # Strict anti-LFI check: target must reside inside allowed_uploads_root
+                if target_disk_path.startswith(allowed_uploads_root) and os.path.exists(target_disk_path) and os.path.isfile(target_disk_path):
+                    parsed_doc = extract_document_content(target_disk_path, doc_name)
                     doc_context_text += parsed_doc
                 else:
-                    doc_context_text += f"\n[Dokumen {doc_name} ({doc_url}) tidak ditemukan pada storage server]\n"
+                    doc_context_text += f"\n[Dokumen {doc_name} ({doc_url}) tidak ditemukan atau akses ditolak]\n"
             else:
                 doc_context_text += f"\n[Dokumen {doc_name}]: {doc_url}\n"
         doc_context_text += "\n=== [AKHIR BERKAS LAMPIRAN PENGGUNA] ===\n"
@@ -256,33 +250,24 @@ Setelah tag penutup `</think>`, sajikan jawaban komprehensif, langsung to-the-po
 
         for img in images:
             img_url = img
-            # If relative URL pointing to local uploads, resolve and convert to data URI
+            # If relative URL pointing to local uploads, resolve safely within allowed_uploads_root
             if img.startswith("/uploads/") or img.startswith("uploads/"):
-                rel_path = img.lstrip("/")
-                candidate_paths = [
-                    os.path.join(backend_root, rel_path),
-                    os.path.join(backend_root, "backend", rel_path),
-                    os.path.abspath(rel_path)
-                ]
-                full_img_path = None
-                for p in candidate_paths:
-                    if os.path.exists(p):
-                        full_img_path = p
-                        break
+                clean_rel = img.lstrip("/")
+                target_disk_path = os.path.realpath(os.path.join(allowed_uploads_root, os.path.relpath(clean_rel, "uploads")))
 
-                if full_img_path and os.path.exists(full_img_path):
+                if target_disk_path.startswith(allowed_uploads_root) and os.path.exists(target_disk_path) and os.path.isfile(target_disk_path):
                     try:
-                        ext = full_img_path.split(".")[-1].lower()
+                        ext = target_disk_path.split(".")[-1].lower()
                         mime_type = f"image/{ext}" if ext in ["png", "jpeg", "webp", "gif"] else "image/jpeg"
                         if ext == "jpg":
                             mime_type = "image/jpeg"
-                        with open(full_img_path, "rb") as f:
+                        with open(target_disk_path, "rb") as f:
                             b64 = base64.b64encode(f.read()).decode("utf-8")
                         img_url = f"data:{mime_type};base64,{b64}"
                     except Exception as e:
-                        logger.error(f"Failed to read and base64-encode local upload image {full_img_path}: {e}")
+                        logger.error(f"Failed to read and base64-encode local upload image {target_disk_path}: {e}")
                 else:
-                    logger.error(f"Local upload image not found on disk: {img} (searched {candidate_paths})")
+                    logger.error(f"Local upload image not found or traversal blocked: {img}")
 
             content_items.append({
                 "type": "image_url",

@@ -150,9 +150,16 @@ async def get_conversation(
     if not conversation:
         raise HTTPException(status_code=404, detail="Conversation not found")
     
-    # Private access guard: jika bukan percakapan publik, hanya pemilik yang boleh mengakses
-    if not conversation.is_public and conversation.user_id is not None:
-        if not user_id or user_id != conversation.user_id:
+    # Guard: Percakapan privat hanya boleh diakses oleh pemiliknya
+    if not conversation.is_public:
+        if conversation.user_id is None:
+            # Percakapan guest bersifat ephemeral dan tidak terekspos tanpa auth
+            if not user_id:
+                raise HTTPException(
+                    status_code=403,
+                    detail="Akses ditolak: Percakapan tamu bersifat privat dan tidak dapat diakses publik."
+                )
+        elif not user_id or user_id != conversation.user_id:
             raise HTTPException(
                 status_code=403,
                 detail="Akses ditolak: Percakapan ini bersifat privat dan hanya dapat diakses oleh pemiliknya."
@@ -172,7 +179,10 @@ async def update_conversation(
         raise HTTPException(status_code=404, detail="Conversation not found")
 
     # Pastikan yang update adalah pemilik
-    if conversation.user_id and (not user_id or user_id != conversation.user_id):
+    if conversation.user_id is None:
+        if not user_id:
+            raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk mengedit percakapan tamu")
+    elif not user_id or user_id != conversation.user_id:
         raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk mengedit percakapan ini")
 
     if payload.title is not None:
@@ -238,7 +248,10 @@ async def delete_conversation(
     if not conversation:
         raise HTTPException(status_code=404, detail="Conversation not found")
 
-    if conversation.user_id and (not user_id or user_id != conversation.user_id):
+    if conversation.user_id is None:
+        if not user_id:
+            raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menghapus percakapan tamu")
+    elif not user_id or user_id != conversation.user_id:
         raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menghapus percakapan ini")
 
     await session.delete(conversation)

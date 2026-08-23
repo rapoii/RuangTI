@@ -21,22 +21,20 @@ class Settings(BaseSettings):
             self.DATABASE_URL = f"sqlite+aiosqlite:///{_ROOT_DB_PATH.replace(os.sep, '/')}"
     
     # JWT Auth Configuration
-    JWT_SECRET_KEY: str = "ruangti_secret_super_key_jwt_untirta_2026_industrial"
-    JWT_SECRET_KEY: str = "ruangti_secret_super_key_jwt_universal_2026_industrial"
+    JWT_ALGORITHM: str = "HS256"
+    JWT_SECRET_KEY: str = "ruangti_secret_jwt_key_untirta_2026"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 Days
 
     # Open Email Domains for Industrial Engineering
     ALLOWED_EMAIL_DOMAINS: List[str] = ["*"]
     
-    # CORS Origins for Localhost & Wi-Fi LAN
+    # CORS Origins for Localhost, LAN, and Official Production Domain
     CORS_ORIGINS: List[str] = [
+        "https://ruangti.varevastudio.tech",
         "http://localhost:3000",
         "http://localhost:3005",
         "http://127.0.0.1:3000",
         "http://127.0.0.1:3005",
-        "http://192.168.100.158:3000",
-        "http://192.168.100.158:3005",
-        "*"
     ]
 
     class Config:
