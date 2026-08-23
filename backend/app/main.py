@@ -13,7 +13,16 @@ from app.core.config import settings
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
-        response: Response = await call_next(request)
+        origin = request.headers.get("origin")
+        if origin and origin not in settings.CORS_ORIGINS:
+            # Reject non-whitelisted cross-origin requests immediately (both simple & preflight)
+            return Response(
+                content='{"detail":"Disallowed CORS origin"}',
+                status_code=400,
+                media_type="application/json"
+            )
+            
+        response = await call_next(request)
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["X-Content-Type-Options"] = "nosniff"
         response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
