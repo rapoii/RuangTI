@@ -152,7 +152,7 @@ export function DocsSearchModal({
                 ))
               ) : (
                 <div className="py-8 text-center text-xs text-text-secondary">
-                  Tidak ditemukan artikel dokumentasi untuk "{searchQuery}".
+                  Tidak ditemukan artikel dokumentasi untuk &quot;{searchQuery}&quot;.
                 </div>
               )}
             </div>
