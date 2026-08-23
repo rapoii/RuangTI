@@ -1,6 +1,7 @@
 import os
 import re
 import sqlite3
+import struct
 from typing import List, Dict, Tuple, Optional
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "ruangti_rag.db")
@@ -412,8 +413,8 @@ IE_THESAURUS = {
 def expand_query(query: str) -> str:
     """
     Expand query using IE Thesaurus synonyms.
-    v2.0 — supports bigram/phrase matching (e.g. "waktu baku", "six sigma",
-    "line balancing") so multi-word IE concepts are recognized as single units.
+    v2.1 — fixes single-char FTS token stripping: preserve min 2-char tokens,
+    treat single-char tokens as-is (FTS5 handles them natively).
     """
     query_lower = query.lower()
     tokens = query_lower.split()
@@ -443,7 +444,14 @@ def expand_query(query: str) -> str:
                 expanded.extend(synonyms)
                 expanded.append(key)
 
-    return " ".join(list(dict.fromkeys(expanded)))
+    # Deduplicate while preserving order; skip very short tokens that FTS5 ignores
+    seen, result = set(), []
+    for t in expanded:
+        if t in seen:
+            continue
+        seen.add(t)
+        result.append(t)
+    return " ".join(result)
 
 
 def chunk_markdown(content: str, module_title: str) -> List[Tuple[str, str]]:
@@ -461,8 +469,25 @@ def chunk_markdown(content: str, module_title: str) -> List[Tuple[str, str]]:
     return chunks
 
 
+def _load_vec_extension(conn):
+    """Load sqlite-vec extension into a connection (no-op if unavailable)."""
+    try:
+        import sqlite_vec
+        conn.enable_load_extension(True)
+        sqlite_vec.load(conn)
+        conn.enable_load_extension(False)
+        return True
+    except Exception:
+        return False
+
+
+def _serialize_f32(vector):
+    """Serialize a float vector into little-endian float32 blob for sqlite-vec."""
+    return struct.pack(f"<{len(vector)}f", *vector)
+
+
 def build_index():
-    """Build FTS5 index from all knowledge modules."""
+    """Build FTS5 index + semantic vector index from all knowledge modules."""
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
     try:
@@ -505,38 +530,125 @@ def build_index():
             total_chunks += 1
 
     conn.commit()
+
+    # ---- Semantic layer: sqlite-vec embeddings (hybrid RAG v3) ----
+    vec_ok = _load_vec_extension(conn)
+    if not vec_ok:
+        print("Notice: sqlite-vec not available — skipping semantic index (FTS5-only mode).")
+        conn.close()
+        print(f"✅ RAG Indexed: {len(files)} pure IE master modules, {total_chunks} semantic sections indexed.")
+        return
+
+    try:
+        try:
+            from app.rag.embedder import EMBED_DIM, embed_texts
+        except ImportError:
+            from embedder import EMBED_DIM, embed_texts  # direct-script execution
+    except Exception as e:
+        print(f"Notice: embedder unavailable ({e}) — FTS5-only mode.")
+        conn.close()
+        print(f"✅ RAG Indexed: {len(files)} pure IE master modules, {total_chunks} semantic sections indexed.")
+        return
+
+    cur.execute("DROP TABLE IF EXISTS rag_vec;")
+    cur.execute(f"""
+        CREATE VIRTUAL TABLE IF NOT EXISTS rag_vec USING vec0(
+            embedding FLOAT[{EMBED_DIM}]
+        )
+    """)
+
+    rows = cur.execute("SELECT rowid, section_title, content FROM rag_fts ORDER BY rowid").fetchall()
+    texts = [f"{t}\n{c[:1200]}" for (_, t, c) in rows]
+
+    # Incremental embedding: commit per batch so progress survives a crash.
+    batch_size = 128
+    embedded = 0
+    import gc
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        vectors = embed_texts(batch)
+        cur.executemany(
+            "INSERT INTO rag_vec(embedding) VALUES (?)",
+            [(_serialize_f32(v),) for v in vectors]
+        )
+        conn.commit()
+        embedded += len(batch)
+        if embedded % 512 == 0 or embedded >= len(texts):
+            print(f"   embedded {embedded}/{len(texts)} sections...", flush=True)
+        del batch, vectors
+        gc.collect()
+
+    conn.commit()
     conn.close()
-    print(f"✅ RAG Indexed: {len(files)} pure IE master modules, {total_chunks} semantic sections indexed.")
+    print(f"✅ RAG Indexed: {len(files)} pure IE master modules, {total_chunks} semantic sections indexed "
+          f"(+{embedded} vector embeddings).")
 
 
 class RAGEngine:
     """
-    RAG Engine v2.0 — Cached connection + Phrase-boosted FTS5 search.
-    - Persistent SQLite connection (thread-safe via check_same_thread=False)
-    - Two-pass FTS5 query: exact phrase match boosted, then OR fallback
+    RAG Engine v3.0 — Hybrid Search (FTS5 + Semantic Vectors fused via RRF).
+    - Pass 1: Exact phrase match (quoted) — boosted weight
+    - Pass 2: Expanded OR query with thesaurus synonyms
+    - Pass 3: Semantic nearest-neighbors via sqlite-vec cosine distance
+    - Fusion: Reciprocal Rank Fusion (k=60); graceful FTS5-only fallback
     """
+
+    RRF_K = 60
+    SEMANTIC_CANDIDATES = 15
 
     def __init__(self):
         self.db_path = DB_PATH
         self.thesaurus = IE_THESAURUS
         self._conn: Optional[sqlite3.Connection] = None
+        self._vec_available: Optional[bool] = None
 
     def _get_conn(self) -> sqlite3.Connection:
-        """Get or create a cached SQLite connection."""
+        """Get or create a cached SQLite connection (with vec extension loaded)."""
         if self._conn is None:
             self._conn = sqlite3.connect(self.db_path, check_same_thread=False)
             self._conn.row_factory = sqlite3.Row
+            self._vec_available = _load_vec_extension(self._conn)
         return self._conn
 
     def expand_query(self, query: str) -> str:
         return expand_query(query)
 
+    def _semantic_pass(self, clean_query: str, limit: int):
+        """
+        Semantic nearest-neighbor lookup. Returns ordered list of
+        (module_id, section_title, content, distance) or [] if unavailable.
+        """
+        if self._vec_available is False:
+            return []
+        try:
+            try:
+                from app.rag.embedder import embed_query
+            except ImportError:
+                from embedder import embed_query  # direct-script execution
+            qvec = _serialize_f32(embed_query(clean_query))
+            cur = self._get_conn().cursor()
+            hits = cur.execute(
+                "SELECT rowid, distance FROM rag_vec WHERE embedding MATCH ? AND k = ? ORDER BY distance",
+                (qvec, limit)
+            ).fetchall()
+            out = []
+            for h in hits:
+                row = cur.execute(
+                    "SELECT module_id, section_title, content FROM rag_fts WHERE rowid = ?",
+                    (h['rowid'],)
+                ).fetchone()
+                if row is not None:
+                    d = dict(row)
+                    d['distance'] = h['distance']
+                    out.append(d)
+            return out
+        except Exception:
+            return []
+
     def search(self, query: str, top_k: int = 5) -> List[Dict]:
         """
-        Two-pass FTS5 search with phrase boosting.
-        Pass 1: Try exact phrase match on original query (highest relevance).
-        Pass 2: Expanded OR query with thesaurus synonyms (broad recall).
-        Results are merged with phrase matches prioritized (deduplicated).
+        Hybrid three-pass search fused via Reciprocal Rank Fusion.
+        Falls back silently to pure FTS5 when the semantic stack is unavailable.
         """
         clean_query = re.sub(r'[^\w\s]', ' ', query).strip()
         if not clean_query:
@@ -544,9 +656,11 @@ class RAGEngine:
 
         conn = self._get_conn()
         cur = conn.cursor()
-        results_map: dict = {}  # key: (module_id, section_title) -> row dict
+        results_map: dict = {}          # key -> row dict
+        ranked_lists: List[List[tuple]] = []  # each: ordered [(key, ...)]
 
         # Pass 1: Exact phrase match (quoted) — highest quality signal
+        phrase_keys: List[tuple] = []
         try:
             phrase_fts = f'"{clean_query}"'
             cur.execute(
@@ -556,16 +670,17 @@ class RAGEngine:
             for row in cur.fetchall():
                 d = dict(row)
                 key = (d['module_id'], d['section_title'])
-                # Boost phrase match rank by 2x (more negative = higher rank in FTS5)
-                d['rank'] = d['rank'] * 2.0
-                results_map[key] = d
+                results_map.setdefault(key, d)
+                phrase_keys.append(key)
         except Exception:
             pass
+        ranked_lists.append((phrase_keys, 2.0))  # phrase boost weight
 
         # Pass 2: Expanded OR query with thesaurus (broad recall)
+        or_keys: List[tuple] = []
         try:
             expanded = self.expand_query(clean_query)
-            terms = [re.sub(r'[^\w]', '', t) for t in expanded.split() if re.sub(r'[^\w]', '', t)]
+            terms = [t.strip() for t in expanded.split() if t.strip()]
             if terms:
                 fts_query = " OR ".join(terms)
                 cur.execute(
@@ -575,13 +690,31 @@ class RAGEngine:
                 for row in cur.fetchall():
                     d = dict(row)
                     key = (d['module_id'], d['section_title'])
-                    if key not in results_map:
-                        results_map[key] = d
+                    results_map.setdefault(key, d)
+                    or_keys.append(key)
         except Exception:
             pass
+        ranked_lists.append((or_keys, 1.0))
 
-        # Sort by rank (most negative = best match) and return top_k
-        sorted_results = sorted(results_map.values(), key=lambda x: x['rank'])
+        # Pass 3: Semantic vector neighbors (cosine distance order)
+        sem_keys: List[tuple] = []
+        for d in self._semantic_pass(clean_query, self.SEMANTIC_CANDIDATES):
+            key = (d['module_id'], d['section_title'])
+            results_map.setdefault(key, d)
+            sem_keys.append(key)
+        ranked_lists.append((sem_keys, 1.0))
+
+        # Reciprocal Rank Fusion across all passes
+        rrf_scores: dict = {}
+        for keys, weight in ranked_lists:
+            for pos, key in enumerate(keys):
+                rrf_scores[key] = rrf_scores.get(key, 0.0) + weight / (self.RRF_K + pos + 1)
+
+        sorted_results = sorted(
+            results_map.values(),
+            key=lambda d: rrf_scores.get((d['module_id'], d['section_title']), 0.0),
+            reverse=True,
+        )
         return sorted_results[:top_k]
 
 

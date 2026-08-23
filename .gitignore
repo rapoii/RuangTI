@@ -15,6 +15,11 @@
 build
 dist
 
+# ML / embedding model caches (not source, re-downloaded at runtime)
+backend/app/rag/models/
+*.onnx
+onnx/
+
 # Misc
 .DS_Store
 *.pem
