@@ -9,8 +9,10 @@ from sqlmodel import SQLModel, Field, Relationship
 def sanitize_plain_text(val: Optional[str], max_length: int = 500) -> Optional[str]:
     if val is None:
         return None
+    # Strip CRLF injection (header splitting) -> space
+    s = str(val).replace(chr(13), " ").replace(chr(10), " ")
     # Strip dangerous pseudo-protocols like javascript:, data:, vbscript:
-    cleaned = re.sub(r'(?i)(javascript|vbscript|data):', '', str(val))
+    cleaned = re.sub(r'(?i)(javascript|vbscript|data):', '', s)
     # Strip dangerous HTML tags & scripts
     cleaned = re.sub(r'<[^>]*?>', '', cleaned)
     # Escape special HTML entities
@@ -95,6 +97,15 @@ class UserRegisterRequest(SQLModel):
         if not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", clean_email):
             raise ValueError("Format email tidak valid")
         return clean_email
+
+    @validator("role")
+    def validate_role(cls, v):
+        if v is None:
+            return "Praktisi"
+        allowed = {"praktisi", "mahasiswa", "dosen"}
+        if v.strip().lower() not in allowed:
+            raise ValueError("Role tidak valid. Nilai yang diizinkan: Praktisi, Mahasiswa, Dosen")
+        return v.strip().title()
 
     @validator("password")
     def validate_password(cls, v):

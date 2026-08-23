@@ -21,20 +21,41 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
                 status_code=400,
                 media_type="application/json"
             )
-            
-        # Protect state-changing requests from Simple-Request HTML Form CSRF
+        
+        # CSRF Protection: block cross-site / missing-Origin state-changing requests
+        # If Origin is absent, a browser still sends Sec-Fetch-Site; raw http.client omits both.
         if request.method in ("POST", "PUT", "PATCH", "DELETE"):
-            content_type = request.headers.get("content-type", "").lower()
-            if content_type.startswith("application/x-www-form-urlencoded") or content_type.startswith("multipart/form-data") or content_type.startswith("text/plain"):
-                # Non-upload HTML forms without matching Origin/Sec-Fetch-Site are blocked
-                if not origin or origin not in settings.CORS_ORIGINS:
-                    sec_fetch_site = request.headers.get("sec-fetch-site", "").lower()
-                    if sec_fetch_site in ("cross-site",):
-                        return Response(
-                            content='{"detail":"Cross-site form submission blocked (CSRF Protection)"}',
-                            status_code=403,
-                            media_type="application/json"
-                        )
+            # Skip preflight OPTIONS already handled by CORS
+            # Require either whitelisted Origin OR same-site Sec-Fetch-Site for state-changing methods
+            if not origin or origin not in settings.CORS_ORIGINS:
+                sec_fetch_site = request.headers.get("sec-fetch-site", "").lower()
+                # Allow: same-origin, same-site, or no sec-fetch-site but with valid Authorization (API clients)
+                # Block: cross-site, or no Origin + no Authorization (= CSRF / anon browser form)
+                if sec_fetch_site == "cross-site":
+                    return Response(
+                        content='{"detail":"Cross-site form submission blocked (CSRF Protection)"}',
+                        status_code=403,
+                        media_type="application/json"
+                    )
+                # If BOTH Origin and Sec-Fetch-Site are missing, this is a non-browser
+                # simple request without CORS headers — check if it has Authorization
+                # For API upload/conversations/auth: require Origin for browser-like requests;
+                # anon non-browser clients without Origin are blocked for state-changing writes
+                # EXCEPT when Origin is legitimately absent (e.g. mobile app) but has Bearer token
+                if not origin and not sec_fetch_site:
+                    auth_header = request.headers.get("authorization", "")
+                    # Allow login/register without auth, but require origin or block
+                    # Paths that already enforce auth will return 401 anyway; we only block
+                    # anon writes that would otherwise succeed (e.g. guest conversation create)
+                    if not auth_header:
+                        # Check if path is one that allows anon creation (conversations, upload)
+                        path = request.url.path
+                        if path.startswith("/api/conversations") or path.startswith("/api/upload") or path.startswith("/api/messages"):
+                            return Response(
+                                content='{"detail":"Missing Origin header (CSRF Protection) — anon state-changing requests must include Origin"}',
+                                status_code=403,
+                                media_type="application/json"
+                            )
             
         response = await call_next(request)
         response.headers["X-Frame-Options"] = "DENY"

@@ -3,7 +3,7 @@ import uuid
 import base64
 import time
 import re
-from fastapi import APIRouter, HTTPException, UploadFile, File
+from fastapi import APIRouter, HTTPException, UploadFile, File, Request, Header
 from pydantic import BaseModel
 from typing import Optional
 
@@ -23,12 +23,16 @@ class Base64UploadRequest(BaseModel):
 
 
 @router.post("/image")
-async def upload_image_base64(payload: Base64UploadRequest):
+async def upload_image_base64(request: Request, payload: Base64UploadRequest):
     """
     Saves a base64 encoded image to disk as a compact WebP/JPEG file
     and returns a short relative URL (e.g. /uploads/images/uuid.webp).
     """
     try:
+        # Require auth for image uploads (fix #98)
+        auth = request.headers.get("authorization", "")
+        if not auth or not auth.strip():
+            raise HTTPException(status_code=401, detail="Authentication required untuk upload gambar")
         raw_data = payload.image_data
         if "," in raw_data:
             header, base64_str = raw_data.split(",", 1)
@@ -51,24 +55,33 @@ async def upload_image_base64(payload: Base64UploadRequest):
             "filename": file_id,
             "size_bytes": len(image_bytes)
         }
+    except HTTPException:
+        raise
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Gagal mengunggah gambar: {str(e)}")
+        raise HTTPException(status_code=400, detail="Gagal mengunggah gambar")
 
 
 @router.post("/image/file")
-async def upload_image_multipart(file: UploadFile = File(...)):
+async def upload_image_multipart(request: Request, file: UploadFile = File(...)):
     """
     Accepts multipart/form-data image upload and saves to local disk.
     """
     try:
+        auth = request.headers.get("authorization", "")
+        if not auth or not auth.strip():
+            raise HTTPException(status_code=401, detail="Authentication required untuk upload gambar")
         ext = file.filename.split(".")[-1].lower() if "." in file.filename else "webp"
-        if ext not in ["jpg", "jpeg", "png", "webp", "gif", "svg", "bmp"]:
+        if ext in ["svg", "html", "htm"]:
+            raise HTTPException(status_code=415, detail="Tipe berkas SVG/HTML tidak diizinkan")
+        if ext not in ["jpg", "jpeg", "png", "webp", "gif", "bmp"]:
             ext = "webp"
 
         file_id = f"img_{int(time.time())}_{uuid.uuid4().hex[:8]}.{ext}"
         file_path = os.path.join(IMAGE_UPLOAD_DIR, file_id)
 
         content = await file.read()
+        if len(content) > 10 * 1024 * 1024:
+            raise HTTPException(status_code=413, detail="Ukuran berkas melebihi batas maksimum 10MB.")
         with open(file_path, "wb") as f:
             f.write(content)
 
@@ -79,18 +92,31 @@ async def upload_image_multipart(file: UploadFile = File(...)):
             "filename": file_id,
             "size_bytes": len(content)
         }
+    except HTTPException:
+        raise
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Gagal mengunggah gambar: {str(e)}")
+        raise HTTPException(status_code=400, detail="Gagal mengunggah gambar")
 
 
 @router.post("/document")
-async def upload_document(file: UploadFile = File(...)):
+async def upload_document(request: Request, file: UploadFile = File(...)):
     """
     Accepts any document, spreadsheet, code, or archive file (zip, docx, xlsx, py, etc.)
     and stores it locally under uploads/documents/. Returns compact metadata without bloating DB.
     """
     try:
         original_name = file.filename or "lampiran_dokumen"
+        # Require auth for uploads (fix #98)
+        auth = request.headers.get("authorization", "")
+        if not auth or not auth.strip():
+            raise HTTPException(status_code=401, detail="Authentication required untuk upload dokumen")
+        # Block SVG / HTML XSS uploads (fix #95)
+        ctype = (file.content_type or "").lower()
+        if "svg" in ctype or "html" in ctype:
+            raise HTTPException(status_code=415, detail="Tipe berkas SVG/HTML tidak diizinkan (XSS risk)")
+        ext_lower = (original_name.split(".")[-1].lower() if "." in original_name else "")
+        if ext_lower in ("svg", "html", "htm", "xhtml"):
+            raise HTTPException(status_code=415, detail="Ekstensi .svg/.html tidak diizinkan")
         safe_name = re.sub(r'[^a-zA-Z0-9_.-]', '_', original_name)
         ext = original_name.split(".")[-1].lower() if "." in original_name else "txt"
         
@@ -100,9 +126,13 @@ async def upload_document(file: UploadFile = File(...)):
         content = await file.read()
         size_bytes = len(content)
         
-        # Max 50MB file size limit
-        if size_bytes > 50 * 1024 * 1024:
-            raise HTTPException(status_code=400, detail="Ukuran berkas melebihi batas maksimum 50MB.")
+        # Enforce 10MB limit (fix #97, was 50MB)
+        if size_bytes > 10 * 1024 * 1024:
+            raise HTTPException(status_code=413, detail="Ukuran berkas melebihi batas maksimum 10MB.")
+        # Scan content for embedded script/svg XSS (fix #95)
+        low = content[:8192].lower()
+        if b"<script" in low or b"onload" in low or b"onerror" in low or b"javascript:" in low:
+            raise HTTPException(status_code=422, detail="Konten berkas mengandung script berbahaya dan ditolak")
             
         with open(file_path, "wb") as f:
             f.write(content)
@@ -122,4 +152,5 @@ async def upload_document(file: UploadFile = File(...)):
     except HTTPException:
         raise
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Gagal mengunggah berkas dokumen: {str(e)}")
+        # Never leak absolute filesystem paths (fix #96)
+        raise HTTPException(status_code=400, detail="Gagal mengunggah berkas dokumen")
