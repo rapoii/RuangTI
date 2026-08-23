@@ -82,8 +82,11 @@ async def create_message(
 
     # Guard: only owner can write new messages
     if conversation.user_id is None:
+        # Guest conversation: only the original guest session (no user) may write;
+        # an AUTHENTICATED user writing to a guest conv = hijack attempt (Round 18 fix)
         if not user_id:
             raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menambahkan pesan ke percakapan tamu")
+        raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menambahkan pesan ke percakapan ini")
     elif not user_id or user_id != conversation.user_id:
         raise HTTPException(status_code=403, detail="Tidak memiliki izin untuk menambahkan pesan ke percakapan ini")
 

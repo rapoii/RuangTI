@@ -42,6 +42,14 @@ async def upload_image_base64(request: Request, payload: Base64UploadRequest):
             ext = "webp"
 
         image_bytes = base64.b64decode(base64_str)
+        # Enforce 10MB limit on decoded bytes (Round 18: b64 bomb DoS)
+        if len(image_bytes) > 10 * 1024 * 1024:
+            raise HTTPException(status_code=413, detail="Ukuran gambar melebihi batas maksimum 10MB.")
+        # Reject non-image content (polyglot PHP/SVG/script in data URI — Round 18)
+        low_img = image_bytes[:8192].lower()
+        if (b"<?php" in low_img or b"<?=" in low_img or b"<svg" in low_img
+                or b"<script" in low_img or b"onload=" in low_img or b"onerror=" in low_img):
+            raise HTTPException(status_code=422, detail="Konten gambar mengandung kode berbahaya dan ditolak")
         file_id = f"img_{int(time.time())}_{uuid.uuid4().hex[:8]}.{ext}"
         file_path = os.path.join(IMAGE_UPLOAD_DIR, file_id)
 
