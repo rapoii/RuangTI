@@ -9,8 +9,10 @@ from sqlmodel import SQLModel, Field, Relationship
 def sanitize_plain_text(val: Optional[str], max_length: int = 500) -> Optional[str]:
     if val is None:
         return None
+    # Strip dangerous pseudo-protocols like javascript:, data:, vbscript:
+    cleaned = re.sub(r'(?i)(javascript|vbscript|data):', '', str(val))
     # Strip dangerous HTML tags & scripts
-    cleaned = re.sub(r'<[^>]*?>', '', str(val))
+    cleaned = re.sub(r'<[^>]*?>', '', cleaned)
     # Escape special HTML entities
     escaped = html.escape(cleaned).strip()
     return escaped[:max_length]

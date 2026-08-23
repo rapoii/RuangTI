@@ -20,7 +20,7 @@ async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> O
     else:
         token = authorization.strip()
 
-    if not token:
+    if not token or token in ("undefined", "null", "none"):
         return None
 
     # A. Coba verifikasi via Better Auth session token (SQLite table session)
@@ -30,10 +30,11 @@ async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> O
 
     # B. Coba decode via custom JWT token
     payload = decode_access_token(token)
-    if payload:
-        return payload.get("sub")
+    if payload and payload.get("sub"):
+        return str(payload.get("sub"))
     
-    return None
+    # Jika token disediakan tapi invalid / expired / alg:none, tolak langsung!
+    raise HTTPException(status_code=401, detail="Token autentikasi tidak valid atau sudah kedaluwarsa.")
 
 @router.get("/{conversation_id}", response_model=List[Message])
 async def get_messages_by_conversation(

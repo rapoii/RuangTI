@@ -25,7 +25,16 @@ class Settings(BaseSettings):
         if not self.DATABASE_URL or self.DATABASE_URL == "sqlite+aiosqlite:///./data/ruangti_auth.db":
             self.DATABASE_URL = f"sqlite+aiosqlite:///{_ROOT_DB_PATH.replace(os.sep, '/')}"
         if not self.JWT_SECRET_KEY:
-            self.JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY") or os.getenv("BETTER_AUTH_SECRET", "ruangti_dev_fallback_key_2026")
+            # Check backend/.env explicitly if not loaded
+            env_file_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env")
+            if os.path.exists(env_file_path):
+                with open(env_file_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.startswith("JWT_SECRET_KEY="):
+                            self.JWT_SECRET_KEY = line.split("=", 1)[1].strip().strip('"').strip("'")
+                            break
+            if not self.JWT_SECRET_KEY:
+                self.JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY") or os.getenv("BETTER_AUTH_SECRET", "ruangti_dev_fallback_key_2026")
 
     # Open Email Domains for Industrial Engineering
     ALLOWED_EMAIL_DOMAINS: List[str] = ["*"]
@@ -40,7 +49,7 @@ class Settings(BaseSettings):
     ]
 
     class Config:
-        env_file = ".env"
+        env_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env")
         extra = "allow"
 
 settings = Settings()

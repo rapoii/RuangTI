@@ -20,6 +20,28 @@ from app.models.schema import (
 
 router = APIRouter(prefix="/api/conversations", tags=["Conversations"])
 
+async def get_required_user_id(authorization: Optional[str] = Header(None)) -> str:
+    if not authorization:
+        raise HTTPException(status_code=401, detail="Authentication required: Token tidak ditemukan.")
+    
+    if authorization.startswith("Bearer "):
+        token = authorization.split(" ")[1].strip()
+    else:
+        token = authorization.strip()
+
+    if not token or token in ("undefined", "null", "none"):
+        raise HTTPException(status_code=401, detail="Authentication required: Token kosong atau tidak valid.")
+
+    better_auth_user_id = verify_better_auth_session(token)
+    if better_auth_user_id:
+        return better_auth_user_id
+
+    payload = decode_access_token(token)
+    if payload and payload.get("sub"):
+        return str(payload.get("sub"))
+
+    raise HTTPException(status_code=401, detail="Authentication required: Token tidak valid atau sudah kedaluwarsa.")
+
 async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> Optional[str]:
     if not authorization:
         return None
@@ -30,7 +52,7 @@ async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> O
     else:
         token = authorization.strip()
 
-    if not token or token == "undefined" or token == "null":
+    if not token or token in ("undefined", "null", "none"):
         return None
 
     # A. Coba verifikasi via Better Auth session token (SQLite table session)
@@ -40,10 +62,11 @@ async def get_optional_user_id(authorization: Optional[str] = Header(None)) -> O
 
     # B. Coba decode via custom JWT token
     payload = decode_access_token(token)
-    if payload:
-        return payload.get("sub")
+    if payload and payload.get("sub"):
+        return str(payload.get("sub"))
     
-    return None
+    # Jika token disediakan tapi invalid / expired / alg:none, tolak langsung!
+    raise HTTPException(status_code=401, detail="Token autentikasi tidak valid atau sudah kedaluwarsa.")
 
 @router.get("", response_model=List[Conversation])
 async def list_conversations(
