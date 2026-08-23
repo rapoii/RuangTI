@@ -28,6 +28,18 @@ where concordance $C(a,b) = \sum_j w_j c_j(a,b)$ uses soft thresholds ($c_j = 1$
 ## Solution Methods
 - Threshold elicitation via decision-maker interviews or data-driven quantiles; PROMETHEE generalized preference functions (Usual, U-shape, V-shape, Level, Linear, Gaussian) are matched to criterion semantics.
 - Weight sensitivity analysis: stability intervals per criterion weight; Gaia plane projection for conflict visualization among criteria.
+
+## VIKOR Compromise Ranking (Multi-Criteria Optimization & Compromise Solution)
+
+VIKOR (*VIseKriterijumska Optimizacija I Kompromisno Resenje*) extends the outranking toolkit with a formal compromise-ranking mechanism for **supplier selection, machine tool selection, and material choice** under conflicting criteria. For alternatives $a_i$ with normalized best $f_j^*$ and worst $f_j^-$ criterion values:
+
+$$S_i = \sum_{j=1}^{k} w_j \frac{f_j^* - f_{ij}}{f_j^* - f_j^-}, \qquad R_i = \max_{j} \left( w_j \frac{f_j^* - f_{ij}}{f_j^* - f_j^-} \right)$$
+
+where $S_i$ aggregates group utility and $R_i$ captures the worst individual regret. The compromise index
+
+$$Q_i = \nu\,\frac{S_i - S^*}{S^- - S^*} + (1-\nu)\,\frac{R_i - R^*}{R^- - R^*}, \qquad \nu = 0.5$$
+
+balances total utility ($\nu$) against individual regret ($1-\nu$). Acceptability conditions: (1) *Acceptable advantage* — $Q_2 - Q_1 \ge \frac{1}{n-1}$ (alternative 1 dominates); (2) *Acceptable stability* — alternative 1 must also rank first under both $S$ and $R$. When violated, VIKOR returns a compromise set $\{a_1, a_2, \dots\}$ rather than a single winner. In **fuzzy environments**, crisp ratings are replaced by TFN (triangular fuzzy numbers) $\tilde{f}_{ij} = (l, m, u)$ with defuzzification $\hat{f} = (l + 4m + u)/6$ before aggregation — the standard *Fuzzy VIKOR* pipeline used in green supplier selection studies (2023–2026). Related: Fuzzy AHP supplies the weight vector $w_j$ via Chang's extent analysis or geometric-mean defuzzification; PROMETHEE II provides a robustness cross-check on the final ranking.
 - Group decision aggregation through criteria weights or PROMETHEE GDSS extensions.
 - Monte Carlo perturbation of weights/thresholds to test rank robustness before commitment.
 

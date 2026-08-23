@@ -160,6 +160,8 @@ IE_THESAURUS = {
     "ghg protocol": ["scope 1 scope 2 scope 3", "carbon accounting", "decarbonization roadmap"],
     "anp": ["analytic network process", "supermatrix", "inner dependence", "outer dependence"],
     "fuzzy ahp vikor": ["compromise ranking", "triangular fuzzy number", "regret measure"],
+    "vikor": ["vikor compromise", "visekriterijumska optimizacija", "compromise solution mcdm", "fuzzy vikor supplier selection", "regret measure ranking", "192"],
+    "p chart control": ["p chart", "p-chart", "np chart", "fraction nonconforming chart", "attribute control chart", "proportion defective spc", "002"],
     "electre tri": ["multicriteria sorting", "outranking relation", "assignment procedure"],
     "incose vmodel": ["systems engineering", "requirements verification validation", "lifecycle"],
     "technology roadmapping": ["trm", "delphi method", "technology forecasting"],

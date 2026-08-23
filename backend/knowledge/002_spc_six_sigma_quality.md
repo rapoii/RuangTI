@@ -36,8 +36,8 @@ Proses manufaktur mengalami dua jenis variasi:
 
 ---
 
-## 3. Peta Kendali Atribut ($p, np, c, u$)
-Digunakan untuk data diskrit (cacat / non-conforming):
+## 3. Peta Kendali Atribut: P-Chart, NP-Chart, C-Chart, U-Chart ($p, np, c, u$)
+Digunakan untuk data diskrit (cacat / non-conforming). *P-chart* (fraction nonconforming chart) adalah peta kendali atribut paling umum untuk proporsi unit cacat; *np-chart* untuk jumlah cacatan sampel konstan; *c-chart* dan *u-chart* untuk jumlah cacat per unit:
 - **Peta $p$ (Proporsi Cacat):**
   $$\bar{p} = \frac{\sum d_i}{\sum n_i}, \quad \text{UCL/LCL}_p = \bar{p} \pm 3 \sqrt{\frac{\bar{p}(1-\bar{p})}{n_i}}$$
 - **Peta $c$ (Jumlah Cacat per Unit Konstan):**
