@@ -1,10 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException, Header
+from fastapi import APIRouter, Depends, HTTPException, Header, Request, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlmodel import select
 from sqlalchemy import exists
 from typing import List, Optional
 from datetime import datetime
 import uuid
+import time
+from collections import defaultdict
 
 from app.core.database import get_session
 from app.core.security import decode_access_token, verify_better_auth_session
@@ -19,6 +21,20 @@ from app.models.schema import (
 )
 
 router = APIRouter(prefix="/api/conversations", tags=["Conversations"])
+
+# Rate limiting for conversation creation: 20 per minute per IP
+_conv_create_attempts: dict = defaultdict(list)
+
+def check_conv_rate_limit(request: Request, max_requests: int = 20, window_seconds: int = 60):
+    client_ip = request.client.host if request.client else "127.0.0.1"
+    forwarded = request.headers.get("cf-connecting-ip") or request.headers.get("x-forwarded-for")
+    if forwarded:
+        client_ip = forwarded.split(",")[0].strip()
+    now = time.time()
+    _conv_create_attempts[client_ip] = [t for t in _conv_create_attempts[client_ip] if now - t < window_seconds]
+    if len(_conv_create_attempts[client_ip]) >= max_requests:
+        raise HTTPException(status_code=status.HTTP_429_TOO_MANY_REQUESTS, detail="Terlalu banyak pembuatan percakapan. Silakan coba lagi dalam beberapa saat.")
+    _conv_create_attempts[client_ip].append(now)
 
 async def get_required_user_id(authorization: Optional[str] = Header(None)) -> str:
     if not authorization:
@@ -95,10 +111,12 @@ async def list_conversations(
 
 @router.post("", response_model=Conversation)
 async def create_conversation(
+    request: Request,
     payload: ConversationCreate,
     session: AsyncSession = Depends(get_session),
     user_id: Optional[str] = Depends(get_optional_user_id)
 ):
+    check_conv_rate_limit(request, max_requests=20, window_seconds=60)
     conversation = Conversation(
         title=payload.title or "Percakapan Baru",
         model_id=payload.model_id or "TI-Optima Pro",

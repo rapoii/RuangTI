@@ -100,6 +100,19 @@ class UserRegisterRequest(SQLModel):
     def validate_password(cls, v):
         if len(v) < 8:
             raise ValueError("Kata sandi minimal harus 8 karakter")
+        if len(v) > 128:
+            raise ValueError("Kata sandi terlalu panjang (maksimal 128 karakter)")
+        if not re.search(r'[A-Z]', v):
+            raise ValueError("Kata sandi harus mengandung minimal 1 huruf besar")
+        if not re.search(r'[a-z]', v):
+            raise ValueError("Kata sandi harus mengandung minimal 1 huruf kecil")
+        if not re.search(r'\d', v):
+            raise ValueError("Kata sandi harus mengandung minimal 1 angka")
+        if not re.search(r'[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]', v):
+            raise ValueError("Kata sandi harus mengandung minimal 1 simbol (!@#$%...)")
+        common = ['password', 'password123', '12345678', 'qwerty123', 'admin123', 'password123!', '123456789']
+        if v.lower() in common or v in common:
+            raise ValueError("Kata sandi terlalu umum, gunakan kombinasi yang lebih unik")
         return v
 
 class UserLoginRequest(SQLModel):
@@ -132,6 +145,8 @@ class ConversationCreate(SQLModel):
     def validate_title(cls, v):
         if v is None:
             return "Percakapan Baru"
+        if len(v) > 200:
+            raise ValueError("Judul percakapan terlalu panjang (maksimal 200 karakter)")
         cleaned = sanitize_plain_text(v, max_length=200)
         return cleaned if cleaned else "Percakapan Baru"
 
@@ -158,6 +173,26 @@ class MessageCreate(SQLModel):
     images: Optional[str] = None
     documents: Optional[str] = None
     tool_calls: Optional[str] = None
+
+    @validator("role")
+    def validate_role(cls, v):
+        allowed = ["user", "assistant", "system"]
+        if v not in allowed:
+            raise ValueError(f"Role tidak valid. Allowed: {allowed}")
+        return v
+
+    @validator("content")
+    def validate_content(cls, v):
+        if not v or not v.strip():
+            raise ValueError("Konten pesan tidak boleh kosong")
+        if len(v) > 50000:
+            raise ValueError("Konten pesan terlalu panjang (maksimal 50000 karakter)")
+        cleaned = re.sub(r'(?i)(javascript|vbscript|data):', '', v)
+        cleaned = re.sub(r'<[^>]*?>', '', cleaned)
+        cleaned = cleaned.strip()
+        if not cleaned:
+            raise ValueError("Konten pesan tidak valid setelah sanitasi")
+        return cleaned
 
 class SharedConversationResponse(SQLModel):
     id: str

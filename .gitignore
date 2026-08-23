@@ -74,3 +74,8 @@ uploads/
 *.webp
 !public/favicon.png
 /projects/
+
+# SQLite WAL/SHM (auto-generated, not source)
+data/*.db-shm
+data/*.db-wal
+data/*.db-journal
