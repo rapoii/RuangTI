@@ -8,7 +8,7 @@ Dokumen ini ditujukan untuk agen AI (seperti Hermes, Claude Code, Cursor, Codex,
 - **Nama Aplikasi**: RuangTI
 - **Tujuan**: Platform Web AI Workspace & Chat Assistant Spesialis Teknik Industri (*Industrial Engineering Workspace & Knowledge Hub*) bagi mahasiswa, akademisi, dan praktisi industri secara universal.
 - **Filosofi UI/UX**: *Pure Light Mode*, Clean, Minimalist, Precision-Engineered, Anti-AI Slop, Multi-Device Responsive (Desktop & Mobile 390x844 / 403x881), dan **Ultra-Smooth Low-End Device Friendly (60fps)**.
-- **Cakupan Domain Teknik Industri (684 Modul Knowledge Base Spesialis, Profesi Industri & Kurikulum Fundamental TI)**:
+- **Cakupan Domain Teknik Industri (734 Modul Knowledge Base Spesialis, Profesi Industri & Kurikulum Fundamental TI)**:
   - Kurikulum Fundamental Teknik Industri (Menggambar Teknik ISO 128/5456, Praktikum CAD SolidWorks/Inventor Parametric Mating, Pengantar Teknik Industri IISE BoK Taylor/Gilbreth, Material Teknik Fe-Fe3C ASTM E8 Heat Treatment, Fisika Dasar Dinamika Newton Fluid Bernoulli Carnot, Kalkulus 1 Optimasi Marginal & EOQ Integral Surplus, Kimia Dasar Termokimia Hess Korosi Besi ICCP GHS SDS, Etika Keinsinyuran PII UU 11/2014 ABET NSPE Whistleblowing, Kebijakan Ketahanan Industri Nasional TKDN BMP PP 29/2018 RIPIN 2015-2035).
   - Riset Operasi & Optimasi Matematis (Linier/Integer Programming, Antrian, Transportasi, Game Theory).
   - Lean Six Sigma & Manajemen Kualitas (Kaizen, 5S, DMAIC, SPC, FMEA AIAG-VDA, VSM, IATF 16949, MSA Gage R&R, APQP, PPAP, 8D Problem Solving, Hoshin Kanri X-Matrix, A3 Toyota Problem Solving).
@@ -96,7 +96,7 @@ projects/web/RuangTI/
 │   │   ├── models/        # SQLModel schema (User, Session, Conversation, Message)
 │   │   ├── routers/       # auth, chat, chat_9router, upload, share, export
 │   │   └── services/      # document_parser, rag_service, media_cleaner, file_generator
-│   └── knowledge/         # 684 Modul Markdown Knowledge Base Teknik Industri
+│   └── knowledge/         # 734 Modul Markdown Knowledge Base Teknik Industri
 ├── lib/
 │   ├── api-client.ts      # Backend REST & SSE client helper
 │   ├── auth.ts            # Better Auth server configuration (Universal Google OAuth)

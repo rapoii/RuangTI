@@ -128,7 +128,7 @@ export function Sidebar({
                     <span>Dokumentasi Resmi</span>
                   </div>
                   <span className="px-1.5 py-0.5 rounded bg-canvas text-[10px] font-mono text-accent border border-accent/20">
-                    670 Modul
+                    734 Modul
                   </span>
                 </Link>
               </div>
@@ -265,7 +265,7 @@ export function Sidebar({
                 <span>Dokumentasi</span>
               </div>
               <span className="px-1.5 py-0.2 rounded bg-canvas text-[10px] font-mono text-accent border border-accent/20 font-semibold">
-                670 Modul
+                734 Modul
               </span>
             </Link>
           ) : (
@@ -273,7 +273,7 @@ export function Sidebar({
               href="/docs"
               target="_blank"
               className="w-9 h-9 rounded-xl flex items-center justify-center text-text-secondary hover:text-accent hover:bg-surface border border-transparent hover:border-border transition-all duration-150 group"
-              title="Dokumentasi Resmi RuangTI (670 Modul)"
+              title="Dokumentasi Resmi RuangTI (734 Modul)"
             >
               <BookOpen className="w-4 h-4 text-text-secondary group-hover:text-accent transition-colors" />
             </Link>

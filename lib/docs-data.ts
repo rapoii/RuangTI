@@ -56,7 +56,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       {
         id: "overview",
         title: "Pengenalan RuangTI",
-        description: "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri pertama di Indonesia dengan 670 Modul RAG Eksak.",
+        description: "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri pertama di Indonesia dengan 734 Modul RAG Eksak.",
         category: "getting-started",
         badge: "Pondasi",
         readTime: "4 min",
@@ -90,7 +90,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               table: {
                 headers: ["Dimensi Keunggulan", "RuangTI Engineering AI", "AI Generik Konvensional"],
                 rows: [
-                  ["Basis Pengetahuan (RAG)", "670 Modul Terverifikasi (ISO, ASME, PP, SNI, APICS, IISE)", "Pengetahuan umum tanpa sumber terindeks"],
+                  ["Basis Pengetahuan (RAG)", "734 Modul Terverifikasi (ISO, ASME, PP, SNI, APICS, IISE)", "Pengetahuan umum tanpa sumber terindeks"],
                   ["Parser File Khusus", "Universal CAD (DWG, DXF, STEP, STL), CNC (G-Code), FlexSim (.fsm/.fsx)", "Hanya PDF dan Teks biasa"],
                   ["Rendering Formula", "KaTeX Editorial Precision dengan baseline alignment & display math", "Teks ASCII kasar atau pecahan bertumpuk"],
                   ["Penyimpanan Berkas", "Zero-DB-Bloat (WebP 85KB, 60B SQLite metadata, 14d auto-prune)", "Database membengkak dengan binary blob"],
@@ -318,30 +318,30 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       },
       {
         id: "rag-knowledge-base",
-        title: "670 Modul RAG Knowledge Base Eksak",
+        title: "734 Modul RAG Knowledge Base Eksak",
         description: "Repositori pengetahuan komprehensif berstandar ilmiah terindeks FTS5 SQLite untuk seluruh domain Teknik Industri.",
         category: "core-features",
         badge: "RAG Hub",
         readTime: "8 min",
         subsections: [
           { id: "struktur-rag", title: "Arsitektur RAG & FTS5 Indexing" },
-          { id: "taksonomi-keilmuan", title: "Taksonomi 670 Modul Master" },
+          { id: "taksonomi-keilmuan", title: "Taksonomi 734 Modul Master" },
           { id: "thesaurus-expansion", title: "FTS5 Query Expansion & Thesaurus" },
         ],
         content: {
-          lead: "RuangTI mengintegrasikan 670 modul master pengetahuan Teknik Industri yang diteliti dari jurnal peer-reviewed, standar internasional (ISO, ASME, OSHA, APICS, IISE), dan regulasi perundang-undangan nasional.",
+          lead: "RuangTI mengintegrasikan 734 modul master pengetahuan Teknik Industri yang diteliti dari jurnal peer-reviewed, standar internasional (ISO, ASME, OSHA, APICS, IISE), dan regulasi perundang-undangan nasional.",
           sections: [
             {
               id: "struktur-rag",
               title: "Arsitektur RAG & FTS5 Indexing",
               paragraphs: [
-                "Seluruh 670 modul pengetahuan diurai ke dalam 4.760 bagian semantik (*semantic sections*) dan disimpan dalam database SQLite lokal berkecepatan tinggi dengan ekstensi FTS5 (*Full-Text Search 5*).",
+                "Seluruh 734 modul pengetahuan diurai ke dalam 5.239 bagian semantik (*semantic sections*) dan disimpan dalam database SQLite lokal berkecepatan tinggi dengan ekstensi FTS5 (*Full-Text Search 5*).",
                 "Saat pengguna mengirimkan pertanyaan, mesin pencari RAG melakukan ekspansi kueri melalui kamus sinonim istilah teknik (*Industrial Engineering Thesaurus*), menjalankan pencarian BM25 tertimbang, dan menyuntikkan 3 bagian pengetahuan paling relevan langsung ke dalam konteks prompt AI.",
               ],
             },
             {
               id: "taksonomi-keilmuan",
-              title: "Taksonomi 670 Modul Master",
+              title: "Taksonomi 734 Modul Master",
               paragraphs: [
                 "Cakupan disiplin ilmu dalam RAG RuangTI terbagi ke dalam kluster-kluster strategis berikut:",
               ],
@@ -356,7 +356,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
                   ["Kurikulum Fundamental TI", "Modul 426 - 434", "Menggambar Teknik ISO 128, Material Fe-Fe3C ASTM E8, Fisika Fluida/Carnot, Kalkulus Marginal EOQ, Kimia Korosi ICCP, Etika PII/ABET, Pancasila TKDN."],
                   ["Smart Manufacturing & Metaheuristik", "Modul 435 - 523", "Purdue ANSI/ISA-95, MES MESA-11, ALNS, Production Routing Problem (PRP), Overhead Crane Scheduling."],
                   ["Industri Berat & Metalurgi Lanjut", "Modul 524 - 600", "Manufaktur Baja & Pengecoran, Perlakuan Panas Lanjut, NDT Uji Ultrasonik/Radiografi, Friction Stir Welding ISO 25239."],
-                  ["Advanced Joining & Emerging Tech", "Modul 601 - 670", "Tandem SAW, Laser-Arc Hybrid Welding (LAHW), Cavitation Peening Rayleigh-Plesset ASTM G32/E466, EPD Koloid, UVAC/EVC Elliptical Kinematics ISO 3002."],
+                  ["Advanced Joining & Emerging Tech", "Modul 601 - 734", "Tandem SAW, Laser-Arc Hybrid Welding (LAHW), Cavitation Peening Rayleigh-Plesset ASTM G32/E466, EPD Koloid, UVAC/EVC Elliptical Kinematics ISO 3002, AFP/ELID/ECJM/PLD/LST, Cold Spray ISO 14917, 4D Printing SMP, LIPSS Biomimetic Surfaces, Human Digital Twin IEEE 2857."],
                 ],
               },
             },
@@ -859,7 +859,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               paragraphs: [
                 "1. Hak Milik Pengguna: Anda memegang hak kepemilikan penuh atas data masukan (prompt), dokumen, gambar, atau berkas CAD yang Anda unggah ke RuangTI.",
                 "2. Hak Luaran (Output): Seluruh hasil kalkulasi, ringkasan, kode pemrograman, dan laporan dokumen biner (.xlsx, .docx, .pdf, .pptx) yang di-generate oleh sistem menjadi milik Anda dan dapat digunakan untuk keperluan akademik maupun profesional.",
-                "3. Hak Platform: Kode sumber platform RuangTI, arsitektur UI/UX, logo, 670 modul knowledge base, dan dokumentasi resmi dilindungi oleh hak cipta pengembang.",
+                "3. Hak Platform: Kode sumber platform RuangTI, arsitektur UI/UX, logo, 734 modul knowledge base, dan dokumentasi resmi dilindungi oleh hak cipta pengembang.",
               ],
             },
             {
@@ -892,7 +892,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               title: "6. Batasan Tanggung Jawab (Disclaimer)",
               paragraphs: [
                 "Layanan RuangTI disediakan atas dasar 'sebagaimana adanya' (as is) dan 'sebagaimana tersedia' (as available).",
-                "Meskipun RuangTI didukung oleh 670 modul terverifikasi dan formula KaTeX eksak, pengembang tidak bertanggung jawab atas segala kerugian finansial, kegagalan operasional fisik pabrik, atau keputusan bisnis kritis yang diambil semata-mata berdasarkan luaran komputasi AI tanpa validasi ahli insinyur di lapangan.",
+                "Meskipun RuangTI didukung oleh 734 modul terverifikasi dan formula KaTeX eksak, pengembang tidak bertanggung jawab atas segala kerugian finansial, kegagalan operasional fisik pabrik, atau keputusan bisnis kritis yang diambil semata-mata berdasarkan luaran komputasi AI tanpa validasi ahli insinyur di lapangan.",
               ],
             },
           ],

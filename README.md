@@ -11,9 +11,9 @@
 
 ---
 
-## 🎯 Cakupan Domain Teknik Industri (684 Modul Knowledge Base Spesialis)
+## 🎯 Cakupan Domain Teknik Industri (734 Modul Knowledge Base Spesialis)
 
-RuangTI dirancang khusus untuk memecahkan dan menganalisis studi kasus rekayasa industri secara mendalam dengan 684 modul basis pengetahuan spesialis:
+RuangTI dirancang khusus untuk memecahkan dan menganalisis studi kasus rekayasa industri secara mendalam dengan 734 modul basis pengetahuan spesialis:
 
 - 📊 **Riset Operasi & Optimasi Matematis**: Linear/Integer/Nonlinear Programming, Teori Antrian Jackson Networks, Transportasi, Simpleks, Metaheuristik & Game Theory.
 - 🔄 **Lean Six Sigma & Manajemen Kualitas**: Metodologi DMAIC, FMEA AIAG-VDA, SPC & MSPC Hotelling $T^2$, IATF 16949, Kaizen, 5S, dan Eliminasi 8 Pemborosan (*Muda*).
