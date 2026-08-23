@@ -114,15 +114,23 @@ async def upload_document(request: Request, file: UploadFile = File(...)):
         ctype = (file.content_type or "").lower()
         if "svg" in ctype or "html" in ctype:
             raise HTTPException(status_code=415, detail="Tipe berkas SVG/HTML tidak diizinkan (XSS risk)")
-        ext_lower = (original_name.split(".")[-1].lower() if "." in original_name else "")
+        # Decode URL-encoded filename before ext checks (bypass %2e = .)
+        import urllib.parse
+        decoded_name = urllib.parse.unquote(original_name)
+        if "%00" in original_name.lower() or "%2e" in original_name.lower() or "\x00" in original_name:
+            raise HTTPException(status_code=415, detail="Nama berkas mengandung karakter terlarang")
+        ext_lower = (decoded_name.split(".")[-1].lower() if "." in decoded_name else "")
         if ext_lower in ("svg", "html", "htm", "xhtml"):
             raise HTTPException(status_code=415, detail="Ekstensi .svg/.html tidak diizinkan")
         # Block PHP / server-side executable extensions (RCE prevention — Round 16)
         BLOCKED_EXTS = {"php","php3","php4","php5","php7","phtml","phar","pht","htaccess","sh","pl","cgi","py","jsp","asp","aspx"}
-        # Check all dot-separated parts for blocked extensions (catches image.jpg.php)
-        all_parts = [p.lower() for p in original_name.split(".")[1:]]
+        # Check all dot-separated parts for blocked extensions (catches image.jpg.php + %2e bypass)
+        name_for_ext = decoded_name
+        all_parts = [p.lower() for p in name_for_ext.split(".")[1:]]
         for part in all_parts:
-            if part in BLOCKED_EXTS:
+            # strip url remnants like php? or php%00
+            clean_part = re.sub(r'[^a-z0-9]', '', part)
+            if clean_part in BLOCKED_EXTS or part in BLOCKED_EXTS:
                 raise HTTPException(status_code=415, detail=f"Ekstensi .{part} tidak diizinkan (executable block)")
         if ctype in ("application/x-php","application/x-httpd-php","text/x-php"):
             raise HTTPException(status_code=415, detail="MIME type PHP tidak diizinkan")
@@ -140,6 +148,8 @@ async def upload_document(request: Request, file: UploadFile = File(...)):
             raise HTTPException(status_code=413, detail="Ukuran berkas melebihi batas maksimum 10MB.")
         # Scan content for embedded script/svg XSS (fix #95)
         low = content[:8192].lower()
+        if b"<?php" in low or b"<?= " in low or b"<?=" in low:
+            raise HTTPException(status_code=422, detail="Konten berkas mengandung kode PHP dan ditolak")
         if b"<script" in low or b"onload" in low or b"onerror" in low or b"javascript:" in low:
             raise HTTPException(status_code=422, detail="Konten berkas mengandung script berbahaya dan ditolak")
             
