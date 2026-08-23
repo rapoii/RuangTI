@@ -12,9 +12,12 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     
+    # SQLite Database URI (Async) - ruangti_auth.db
+    DATABASE_URL: str = ""
+    
     # JWT Auth Configuration (Fail-fast in production if not set)
     JWT_ALGORITHM: str = "HS256"
-    JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "")
+    JWT_SECRET_KEY: str = ""
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 Days
 
     def __init__(self, **values):
@@ -22,8 +25,7 @@ class Settings(BaseSettings):
         if not self.DATABASE_URL or self.DATABASE_URL == "sqlite+aiosqlite:///./data/ruangti_auth.db":
             self.DATABASE_URL = f"sqlite+aiosqlite:///{_ROOT_DB_PATH.replace(os.sep, '/')}"
         if not self.JWT_SECRET_KEY:
-            # Fallback only for local dev test, but warn strongly or raise
-            self.JWT_SECRET_KEY = os.getenv("BETTER_AUTH_SECRET", "ruangti_dev_fallback_key_2026")
+            self.JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY") or os.getenv("BETTER_AUTH_SECRET", "ruangti_dev_fallback_key_2026")
 
     # Open Email Domains for Industrial Engineering
     ALLOWED_EMAIL_DOMAINS: List[str] = ["*"]

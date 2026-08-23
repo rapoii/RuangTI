@@ -8,6 +8,14 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/api/auth/register",
+        destination: "http://127.0.0.1:8000/api/auth/register",
+      },
+      {
+        source: "/api/auth/login",
+        destination: "http://127.0.0.1:8000/api/auth/login",
+      },
+      {
         source: "/api/chat/:path*",
         destination: "http://127.0.0.1:8000/api/chat/:path*",
       },
