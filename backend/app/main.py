@@ -22,6 +22,20 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
                 media_type="application/json"
             )
             
+        # Protect state-changing requests from Simple-Request HTML Form CSRF
+        if request.method in ("POST", "PUT", "PATCH", "DELETE"):
+            content_type = request.headers.get("content-type", "").lower()
+            if content_type.startswith("application/x-www-form-urlencoded") or content_type.startswith("multipart/form-data") or content_type.startswith("text/plain"):
+                # Non-upload HTML forms without matching Origin/Sec-Fetch-Site are blocked
+                if not origin or origin not in settings.CORS_ORIGINS:
+                    sec_fetch_site = request.headers.get("sec-fetch-site", "").lower()
+                    if sec_fetch_site in ("cross-site",):
+                        return Response(
+                            content='{"detail":"Cross-site form submission blocked (CSRF Protection)"}',
+                            status_code=403,
+                            media_type="application/json"
+                        )
+            
         response = await call_next(request)
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["X-Content-Type-Options"] = "nosniff"
