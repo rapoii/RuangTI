@@ -194,15 +194,48 @@ async def stream_grok_ai_response(
                     web_context_text += f"  Snippet: {res.get('snippet', '')}\n"
 
                 # Smart Parallel Deep Crawl (dynamic count based on intent)
-                deep_urls = [r['url'] for r in final_sources[:deep_crawl_count]
-                             if r.get('url') and 'doi.org' not in r.get('url')]
-                if deep_urls:
-                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=4.0) for u in deep_urls]
+                # Web pages are crawled directly; academic papers are crawled via
+                # their open-access full-text URL (oa_url) so journal content is
+                # actually READ by the LLM — not just cited as title+link.
+                crawl_targets = []
+                _seen_crawl = set()
+                for res in final_sources[:target_source_count]:
+                    if len(crawl_targets) >= deep_crawl_count:
+                        break
+                    u = res.get("url", "")
+                    if not u:
+                        continue
+                    if "doi.org" in u:
+                        oa = res.get("oa_url", "")
+                        if oa and oa.startswith("http") and oa not in _seen_crawl:
+                            crawl_targets.append(oa)
+                            _seen_crawl.add(oa)
+                        continue
+                    if u not in _seen_crawl:
+                        crawl_targets.append(u)
+                        _seen_crawl.add(u)
+
+                if crawl_targets:
+                    crawl_tasks = [asyncio.wait_for(cdp_manager.fetch_page(u), timeout=4.0) for u in crawl_targets]
                     pages_content = await asyncio.gather(*crawl_tasks, return_exceptions=True)
 
+                    _junk_markers = [
+                        "there was a problem providing the content",
+                        "checking your browser",
+                        "enable javascript and cookies",
+                        "access denied",
+                        "verify you are human",
+                        "are you a robot",
+                    ]
                     for idx, page_content in enumerate(pages_content, 1):
-                        if isinstance(page_content, str) and page_content.strip() and len(page_content) > 100:
-                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({deep_urls[idx-1]})] ---\n{page_content[:2500]}...\n"
+                        low = page_content.lower() if isinstance(page_content, str) else ""
+                        is_junk = (
+                            not isinstance(page_content, str)
+                            or len(page_content) < 300
+                            or any(m in low for m in _junk_markers)
+                        )
+                        if not is_junk:
+                            web_context_text += f"\n--- [KONTEN LENGKAP ARTIKEL #{idx} ({crawl_targets[idx-1]})] ---\n{page_content[:2500]}...\n"
 
                 web_context_text += "\n=== [AKHIR HASIL INFORMASI SUMBER WEB] ===\n"
         except Exception as e:

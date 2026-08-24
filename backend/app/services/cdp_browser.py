@@ -228,15 +228,57 @@ class CDPBrowserManager:
 
                             pub_year = it.get("publication_year", "")
                             cited_count = it.get("cited_by_count", 0)
-                            snippet = f"Diterbitkan di {host_name} ({pub_year}), {cited_count} sitasi." if host_name else f"Publikasi ilmiah ({pub_year}), {cited_count} sitasi."
+
+                            # Reconstruct REAL abstract from inverted index (so the
+                            # LLM reads what the paper is about, not just its title).
+                            abstract = ""
+                            inv = it.get("abstract_inverted_index")
+                            if isinstance(inv, dict) and inv:
+                                pos_map = {}
+                                for word, positions in inv.items():
+                                    for p in positions or []:
+                                        pos_map[p] = word
+                                if pos_map:
+                                    abstract = " ".join(pos_map[i] for i in sorted(pos_map))
+
+                            # Open-access full-text location, if any (used by deep crawl).
+                            # Prefer crawlable locations; doi.org/ScienceDirect block bots.
+                            oa_obj = it.get("open_access") or {}
+                            best_loc = it.get("best_oa_location") or {}
+                            oa_candidates = []
+                            if isinstance(best_loc, dict):
+                                oa_candidates = [
+                                    best_loc.get("pdf_url"),
+                                    best_loc.get("landing_page_url"),
+                                ]
+                            if isinstance(oa_obj, dict):
+                                oa_candidates.append(oa_obj.get("oa_url"))
+
+                            oa_url = None
+                            for cand in oa_candidates:
+                                if not cand or not str(cand).startswith("http"):
+                                    continue
+                                low = cand.lower()
+                                if "doi.org" in low or "sciencedirect" in low:
+                                    continue
+                                oa_url = cand
+                                break
+
+                            if abstract:
+                                snippet = f"{abstract[:450]} [{host_name or 'Journal'} {pub_year}, {cited_count} sitasi]"
+                            else:
+                                snippet = f"Diterbitkan di {host_name} ({pub_year}), {cited_count} sitasi."
 
                             seen_urls.add(actual_url)
-                            pipeline_results.append({
+                            entry = {
                                 "title": title,
                                 "url": actual_url,
                                 "domain": domain or "doi.org",
-                                "snippet": snippet
-                            })
+                                "snippet": snippet,
+                            }
+                            if oa_url and oa_url.startswith("http"):
+                                entry["oa_url"] = oa_url
+                            pipeline_results.append(entry)
                             if len(pipeline_results) >= max_candidate_limit:
                                 break
             except Exception as e:
@@ -484,8 +526,40 @@ class CDPBrowserManager:
     async def fetch_page(self, url: str) -> str:
         """
         Fetch and extract clean text content from a URL.
-        Pipeline: Fast HTTP + BeautifulSoup (primary) → CDP headless (fallback for JS-rendered pages).
+        Pipeline: PDF (pypdf) → Fast HTTP + BeautifulSoup → CDP headless (JS-rendered pages).
         """
+        # 0. PDF handling — extract real text from open-access paper PDFs
+        if ".pdf" in url.lower().split("?")[0][-8:] or "/pdf" in url.lower():
+            try:
+                import httpx as _httpx
+                import io as _io
+
+                headers = {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                    "Referer": url,
+                }
+                async with _httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+                    resp = await client.get(url, headers=headers)
+                ctype = resp.headers.get("content-type", "").lower()
+                if resp.status_code == 200 and ("pdf" in ctype or resp.content[:5] == b"%PDF-"):
+                    try:
+                        from pypdf import PdfReader
+                    except ImportError:
+                        from PyPDF2 import PdfReader  # type: ignore
+
+                    reader = PdfReader(_io.BytesIO(resp.content))
+                    pages_text = []
+                    for pg in reader.pages[:6]:  # first 6 pages is plenty for context
+                        try:
+                            pages_text.append(pg.extract_text() or "")
+                        except Exception:
+                            continue
+                    text = re.sub(r"\s+", " ", " ".join(pages_text)).strip()
+                    if len(text) > 200:
+                        return text[:6000]
+            except Exception as e:
+                logger.debug(f"PDF fetch failed ({url}), falling back: {e}")
+
         # 1. Try Fast HTTP client first
         try:
             import httpx
