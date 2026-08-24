@@ -98,6 +98,11 @@ IE_THESAURUS = {
     "berth allocation": ["bap", "quay crane scheduling", "port terminal"],
     "synchromodal": ["multi-modal freight", "real time routing", "intermodal"],
     "perishable inventory": ["deterioration model", "fresh food logistics", "shelf life"],
+
+    # --- High-Tech Automation & NDT (Modul 751-752) ---
+    "acoustic emission": ["ae-ndt", "kaiser effect", "felicity ratio", "dunegan", "marse", "burst signal", "pressure vessel testing", "asme sec v art 12", "tdoa multilateration"],
+    "amhs": ["overhead hoist transport", "oht", "wafer fab", "cleanroom logistics", "foup", "semi e84", "semi e15", "deadlock avoidance", "space-time routing"],
+    "oht": ["overhead hoist transport", "amhs", "wafer fab", "cleanroom logistics", "foup", "semi e84", "intrabay", "interbay"],
     "agent based modeling": ["abm", "supply chain simulation", "disruption simulation"],
     "cooperative games": ["nucleolus", "core solution", "shapley value", "bankruptcy game"],
     "data envelopment analysis": ["dea", "efficiency frontier", "ccr model", "bcc model"],
