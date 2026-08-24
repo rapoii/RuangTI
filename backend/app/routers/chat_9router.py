@@ -261,10 +261,12 @@ Setelah tag penutup `</think>`, sajikan jawaban komprehensif, langsung to-the-po
     if doc_context_text:
         system_prompt += f"\n{doc_context_text}\n"
     if web_context_text:
-        system_prompt += f"""\n\n{web_context_text}
-\n\n=== ATURAN PENGGUNAAN SUMBER WEB ===
+        system_prompt += f"""\n\n{web_context_text}\n\n=== ATURAN PENGGUNAAN SUMBER WEB ===
 - Gunakan data dan fakta dari sumber di atas untuk memperkaya isi analisis dan solusi.
 - Dilarang menuliskan daftar pustaka atau daftar URL berulang di akhir jawaban, karena seluruh sumber web (termasuk hingga 50 tautan) telah disajikan otomatis dalam komponen kartu visual di bagian atas percakapan.
+- RAG internal dan sumber web adalah PASANGAN PELENGKAP: referensi literatur internal adalah acuan utama untuk teori, formula, notasi, dan standar; sumber web dipakai untuk data terkini, kasus nyata, dan perkembangan terbaru.
+- Jika sumber web bertentangan dengan referensi internal (misal standar sudah direvisi), prioritaskan yang LEBIH BARU, sebutkan secara eksplisit bahwa ada pembaruan, lalu tetap cantumkan versi/acuan yang kamu pakai.
+
 """
 
     messages = [{"role": "system", "content": system_prompt}]
