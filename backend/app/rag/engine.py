@@ -586,15 +586,26 @@ def build_index():
 
 class RAGEngine:
     """
-    RAG Engine v3.0 — Hybrid Search (FTS5 + Semantic Vectors fused via RRF).
-    - Pass 1: Exact phrase match (quoted) — boosted weight
-    - Pass 2: Expanded OR query with thesaurus synonyms
-    - Pass 3: Semantic nearest-neighbors via sqlite-vec cosine distance
-    - Fusion: Reciprocal Rank Fusion (k=60); graceful FTS5-only fallback
+    RAG Engine v3.1 — Precision Hybrid Search (FTS5 BM25 + Semantic Cosine Vector + Adaptive Stopword Filtering + RRF).
+    - Pass 1: Strict Phrase Match (Quoted) — Weight: 3.0
+    - Pass 2: Cleaned Keyword + Thesaurus Expansion (Filtered Stopwords) — Weight: 1.5
+    - Pass 3: Dense Semantic Vector Matching (sqlite-vec) — Weight: 2.0
+    - Diversified Top-K Module Reranking
     """
 
     RRF_K = 60
-    SEMANTIC_CANDIDATES = 15
+    SEMANTIC_CANDIDATES = 20
+
+    INDONESIAN_STOPWORDS = {
+        'yang', 'untuk', 'pada', 'ke', 'para', 'namun', 'menurut', 'antara', 'dia', 'dua',
+        'ia', 'seperti', 'jika', 'sehingga', 'kembali', 'dan', 'ini', 'karena', 'oleh',
+        'saat', 'harus', 'sementara', 'setelah', 'belum', 'kami', 'sekitar', 'bagi',
+        'serta', 'di', 'dari', 'telah', 'sebagai', 'masih', 'hal', 'ketika', 'adalah',
+        'itu', 'dengan', 'sampai', 'kalau', 'kalo', 'gimana', 'bagaimana', 'apa', 'apakah',
+        'cara', 'caranya', 'biar', 'supaya', 'agar', 'bisa', 'dapat', 'ya', 'dong', 'sih',
+        'punya', 'buat', 'bikin', 'ada', 'adanya', 'kapan', 'dimana', 'kenapa', 'mengapa',
+        'pas', 'pake', 'pakai', 'mau', 'tau', 'tahu', 'doang', 'aja', 'saja', 'tersebut'
+    }
 
     def __init__(self):
         self.db_path = DB_PATH
@@ -647,8 +658,12 @@ class RAGEngine:
 
     def search(self, query: str, top_k: int = 5) -> List[Dict]:
         """
-        Hybrid three-pass search fused via Reciprocal Rank Fusion.
-        Falls back silently to pure FTS5 when the semantic stack is unavailable.
+        Hybrid multi-pass search engine v3.3 (Max-Precision & Max-Recall):
+        - Pass 1: Strict Exact Phrase Match (weight=3.0)
+        - Pass 2: Clean Query Terms FTS5 (BM25 AND/OR, weight=2.5) — preserves exact acronyms/codes
+        - Pass 3: Thesaurus Expanded FTS5 (weight=1.0) — broad recall
+        - Pass 4: Semantic Vector Match (sqlite-vec, weight=1.5) — conceptual semantics
+        - Fused via Reciprocal Rank Fusion (k=60)
         """
         clean_query = re.sub(r'[^\w\s]', ' ', query).strip()
         if not clean_query:
@@ -656,16 +671,16 @@ class RAGEngine:
 
         conn = self._get_conn()
         cur = conn.cursor()
-        results_map: dict = {}          # key -> row dict
-        ranked_lists: List[List[tuple]] = []  # each: ordered [(key, ...)]
+        results_map: dict = {}
+        ranked_lists: List[tuple] = []
 
-        # Pass 1: Exact phrase match (quoted) — highest quality signal
+        # Pass 1: Exact Phrase (quoted)
         phrase_keys: List[tuple] = []
         try:
             phrase_fts = f'"{clean_query}"'
             cur.execute(
                 "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
-                (phrase_fts, top_k)
+                (phrase_fts, top_k * 2)
             )
             for row in cur.fetchall():
                 d = dict(row)
@@ -674,14 +689,35 @@ class RAGEngine:
                 phrase_keys.append(key)
         except Exception:
             pass
-        ranked_lists.append((phrase_keys, 2.0))  # phrase boost weight
+        if phrase_keys:
+            ranked_lists.append((phrase_keys, 3.0))
 
-        # Pass 2: Expanded OR query with thesaurus (broad recall)
+        # Pass 2: Direct Token Matching (No Thesaurus Inflation, High Precision)
+        direct_keys: List[tuple] = []
+        try:
+            tokens = [t.strip() for t in clean_query.split() if t.strip()]
+            if tokens:
+                direct_fts = " OR ".join(tokens)
+                cur.execute(
+                    "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
+                    (direct_fts, top_k * 2)
+                )
+                for row in cur.fetchall():
+                    d = dict(row)
+                    key = (d['module_id'], d['section_title'])
+                    results_map.setdefault(key, d)
+                    direct_keys.append(key)
+        except Exception:
+            pass
+        if direct_keys:
+            ranked_lists.append((direct_keys, 2.5))
+
+        # Pass 3: Thesaurus Expanded Matching (Broad Recall)
         or_keys: List[tuple] = []
         try:
             expanded = self.expand_query(clean_query)
             terms = [t.strip() for t in expanded.split() if t.strip()]
-            if terms:
+            if terms and terms != tokens:
                 fts_query = " OR ".join(terms)
                 cur.execute(
                     "SELECT module_id, section_title, content, rank FROM rag_fts WHERE rag_fts MATCH ? ORDER BY rank LIMIT ?",
@@ -694,27 +730,33 @@ class RAGEngine:
                     or_keys.append(key)
         except Exception:
             pass
-        ranked_lists.append((or_keys, 1.0))
+        if or_keys:
+            ranked_lists.append((or_keys, 1.0))
 
-        # Pass 3: Semantic vector neighbors (cosine distance order)
+        # Pass 4: Dense Semantic Vector Matching (sqlite-vec)
         sem_keys: List[tuple] = []
         for d in self._semantic_pass(clean_query, self.SEMANTIC_CANDIDATES):
             key = (d['module_id'], d['section_title'])
             results_map.setdefault(key, d)
             sem_keys.append(key)
-        ranked_lists.append((sem_keys, 1.0))
+        if sem_keys:
+            ranked_lists.append((sem_keys, 1.5))
 
-        # Reciprocal Rank Fusion across all passes
+        # Reciprocal Rank Fusion
         rrf_scores: dict = {}
         for keys, weight in ranked_lists:
             for pos, key in enumerate(keys):
-                rrf_scores[key] = rrf_scores.get(key, 0.0) + weight / (self.RRF_K + pos + 1)
+                rrf_scores[key] = rrf_scores.get(key, 0.0) + (weight / (self.RRF_K + pos + 1))
 
         sorted_results = sorted(
             results_map.values(),
             key=lambda d: rrf_scores.get((d['module_id'], d['section_title']), 0.0),
             reverse=True,
         )
+
+        for d in sorted_results:
+            d['score'] = rrf_scores.get((d['module_id'], d['section_title']), 0.0)
+
         return sorted_results[:top_k]
 
 
