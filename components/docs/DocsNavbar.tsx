@@ -49,7 +49,7 @@ export function DocsNavbar({
               <span>Dokumentasi Resmi</span>
             </div>
             <span className="px-2 py-0.5 rounded-full bg-surface border border-border/50 text-text-secondary font-mono text-[11px]">
-              v1.0 (734 Modul)
+              v1.0 (742 Modul)
             </span>
           </div>
         </div>

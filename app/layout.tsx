@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | RuangTI AI",
   },
   description:
-    "RuangTI adalah Platform Web AI Workspace & Chat Assistant Spesialis Teknik Industri (Industrial Engineering & Systems Engineering) pertama di Indonesia. Dilengkapi 734 modul kurikulum komprehensif, riset operasi, optimasi rantai pasok (SCM), Lean Six Sigma, KaTeX formula rendering, dan integrasi RAG berstandar internasional.",
+    "RuangTI adalah Platform Web AI Workspace & Chat Assistant Spesialis Teknik Industri (Industrial Engineering & Systems Engineering) pertama di Indonesia. Dilengkapi 742 modul kurikulum komprehensif, riset operasi, optimasi rantai pasok (SCM), Lean Six Sigma, KaTeX formula rendering, dan integrasi RAG berstandar internasional.",
   keywords: [
     "RuangTI",
     "Teknik Industri",
@@ -76,13 +76,13 @@ export const metadata: Metadata = {
     siteName: "RuangTI — Industrial AI Intelligence",
     title: "RuangTI — AI Assistant & Workspace Spesialis Teknik Industri",
     description:
-      "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri (Industrial Engineering BoK) terlengkap di Indonesia dengan 734 Modul Riset, Formulasi KaTeX, dan Deep Reasoning.",
+      "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri (Industrial Engineering BoK) terlengkap di Indonesia dengan 742 Modul Riset, Formulasi KaTeX, dan Deep Reasoning.",
   },
   twitter: {
     card: "summary_large_image",
     title: "RuangTI — AI Assistant & Workspace Teknik Industri",
     description:
-      "AI Co-Pilot & Workspace Teknik Industri terlengkap di Indonesia. 734 Modul Riset Operasi, Lean Six Sigma, SCM, & Manufaktur.",
+      "AI Co-Pilot & Workspace Teknik Industri terlengkap di Indonesia. 742 Modul Riset Operasi, Lean Six Sigma, SCM, & Manufaktur.",
   },
   robots: {
     index: true,
@@ -114,7 +114,7 @@ export default function RootLayout({
         "applicationCategory": "EducationalApplication",
         "operatingSystem": "All",
         "description":
-          "Platform Web AI Workspace & Chat Assistant Spesialis Teknik Industri & Rekayasa Sistem di Indonesia. Didukung 734 modul kurikulum standar IISE & ABET.",
+          "Platform Web AI Workspace & Chat Assistant Spesialis Teknik Industri & Rekayasa Sistem di Indonesia. Didukung 742 modul kurikulum standar IISE & ABET.",
         "offers": {
           "@type": "Offer",
           "price": "0",

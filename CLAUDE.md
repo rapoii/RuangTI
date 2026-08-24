@@ -61,7 +61,7 @@ codegraph sync
   - `backend/app/services/file_generator.py`: Mesin generator dokumen dengan styling profesional (Excel high-end headers, Word hierarchical sections, PPT 16:9 widescreen cards, PDF ReportLab print layout).
   - `backend/app/services/document_parser.py`: Ekstraksi teks & tabel instan dari Word, Excel, PowerPoint, CSV, PDF, Zip, CAD, FlexSim, dan file source code.
   - `backend/app/services/media_cleaner.py`: Async background worker untuk auto-pruning berkas lampiran > 14 hari.
-  - `backend/knowledge/`: 734 Modul Knowledge Base Teknik Industri untuk konteks RAG (5.239+ seksi FTS5 terindeks).
+  - `backend/knowledge/`: 742 Modul Knowledge Base Teknik Industri untuk konteks RAG (5.375+ seksi FTS5 terindeks).
 
 ---
 

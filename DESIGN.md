@@ -51,7 +51,7 @@ RuangTI menggunakan 3 font Google via `next/font/google`:
 ## 5. Rute Dokumentasi Resmi (`/docs`) — 3-Kolom Modern
 Dokumentasi RuangTI dirancang setara dengan standar dokumentasi modern kelas dunia (Claude Docs & Stripe Docs):
 1. **Kolom Kiri (Sidebar Navigasi)**: Kategori accordion dengan Zero-Reflow CSS Grid Transition, indikator aktif bernuansa emas, dan mobile drawer responsif dengan tombol close 'X' yang tegas.
-2. **Kolom Tengah (Area Konten Utama)**: Artikel teknis komprehensif (14 panduan resmi + 734 modul RAG), rendering semantik tebal/code untuk token UI, dan transisi pergantian halaman yang gesit.
+2. **Kolom Tengah (Area Konten Utama)**: Artikel teknis komprehensif (14 panduan resmi + 742 modul RAG), rendering semantik tebal/code untuk token UI, dan transisi pergantian halaman yang gesit.
 3. **Kolom Kanan (Table of Contents)**: Scrollspy dinamis dengan pelacakan judul aktif dan layout lock-scroll.
 4. **Spotlight Search Modal (`Ctrl+K` / `⌘K`)**: Dialog pencarian instan minimalis tanpa footer hint yang mengganggu.
 
