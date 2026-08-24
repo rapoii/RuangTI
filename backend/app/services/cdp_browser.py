@@ -243,7 +243,99 @@ class CDPBrowserManager:
                 logger.warning(f"OpenAlex pipeline error: {repr(e)}")
             return pipeline_results
 
-        # --- Pipeline 2: DuckDuckGo HTML Scraper ---
+        # --- Pipeline 2: CDP Bing Search (primary WEB engine, user-mandated CDP) ---
+        async def _fetch_cdp_google() -> List[Dict[str, str]]:
+            """Scrape Bing organic results through the managed CDP headless browser."""
+            pipeline_results: List[Dict[str, str]] = []
+            try:
+                if not await self.ensure_running():
+                    logger.warning("CDP Bing pipeline: browser unavailable")
+                    return []
+                ws_url = await self._get_page_ws()
+                if not ws_url:
+                    return []
+
+                import websockets
+
+                g_url = f"https://www.bing.com/search?q={quote_plus(clean_query)}&count=30&setlang=en&cc=id&pws=0"
+                extract_js = (
+                    "(()=>{const out=[];"
+                    "const bodyTxt=document.body?document.body.innerText.toLowerCase():'';"
+                    "if(bodyTxt.includes('verify you are human')||bodyTxt.includes('unusual traffic'))"
+                    "{return JSON.stringify({blocked:true,items:[]});}"
+                    "document.querySelectorAll('#b_results li.b_algo').forEach(el=>{"
+                    "try{const a=el.querySelector('h2 a');"
+                    "if(!a)return;"
+                    "let href=a.href||'';"
+                    "if(href.indexOf('bing.com/ck/a')>-1){"
+                    "try{const m=href.match(/u=a1([A-Za-z0-9_-]+)/);"
+                    "if(m){let b=m[1].replace(/-/g,'+').replace(/_/g,'/');"
+                    "while(b.length%4)b+='=';href=atob(b);}}catch(e){}}"
+                    "if(!/^https?:/.test(href))return;"
+                    "if(/bing\\.com|google\\.|youtube\\.com|pinterest\\.|facebook\\.com|instagram\\.com|tiktok\\.com/.test(href))return;"
+                    "if(out.some(function(o){return o.url===href;}))return;"
+                    "const sEl=el.querySelector('.b_caption p, .b_caption, p');"
+                    "out.push({title:a.innerText,url:href,"
+                    "domain:href.split('/')[2].replace('www.',''),"
+                    "snippet:sEl?sEl.innerText.slice(0,300):''});"
+                    "}catch(e){}});"
+                    "return JSON.stringify({blocked:false,items:out});"
+                    "})()"
+                )
+
+                async with websockets.connect(ws_url, max_size=10 * 1024 * 1024) as ws:
+                    msg_id = 1
+                    await ws.send(json.dumps({
+                        "id": msg_id,
+                        "method": "Page.navigate",
+                        "params": {"url": g_url},
+                    }))
+                    msg_id += 1
+                    await asyncio.sleep(3)
+
+                    await ws.send(json.dumps({
+                        "id": msg_id,
+                        "method": "Runtime.evaluate",
+                        "params": {"expression": extract_js, "returnByValue": True},
+                    }))
+                    eval_id = msg_id
+                    msg_id += 1
+
+                    payload = None
+                    while True:
+                        try:
+                            raw = await asyncio.wait_for(ws.recv(), timeout=10)
+                            data = json.loads(raw)
+                            if data.get("id") == eval_id:
+                                payload = data.get("result", {}).get("result", {}).get("value")
+                                break
+                        except asyncio.TimeoutError:
+                            break
+
+                if not payload:
+                    return []
+                parsed = json.loads(payload)
+                if parsed.get("blocked"):
+                    logger.warning("CDP Google pipeline: CAPTCHA/anti-bot page detected")
+                    return []
+
+                for item in parsed.get("items", []):
+                    actual_url = item.get("url", "")
+                    title = item.get("title", "")
+                    if not actual_url or not title or actual_url in seen_urls:
+                        continue
+                    seen_urls.add(actual_url)
+                    pipeline_results.append({
+                        "title": title,
+                        "url": actual_url,
+                        "domain": item.get("domain", ""),
+                        "snippet": item.get("snippet", ""),
+                    })
+            except Exception as e:
+                logger.warning(f"CDP Google pipeline error: {repr(e)}")
+            return pipeline_results
+
+        # --- Pipeline 3: DuckDuckGo HTML Scraper (fallback if CDP Google yields 0) ---
         async def _fetch_duckduckgo() -> List[Dict[str, str]]:
             pipeline_results = []
             try:
@@ -332,39 +424,55 @@ class CDPBrowserManager:
                 logger.warning(f"Brave Search fallback error: {e}")
             return pipeline_results
 
-        # --- Execute pipelines with global 12s timeout ---
+        # --- Execute pipelines: academic ∥ CDP-Google in parallel, DDG & Brave as fallbacks ---
         try:
-            # Run OpenAlex + DDG in parallel (both are independent)
+            # Run OpenAlex (academic) + CDP Google (web primary) in parallel
             openalex_task = asyncio.create_task(_fetch_openalex())
-            ddg_task = asyncio.create_task(_fetch_duckduckgo())
+            google_task = asyncio.create_task(_fetch_cdp_google())
 
-            openalex_results, ddg_results = await asyncio.wait_for(
-                asyncio.gather(openalex_task, ddg_task, return_exceptions=True),
-                timeout=12.0
+            openalex_results, google_results = await asyncio.wait_for(
+                asyncio.gather(openalex_task, google_task, return_exceptions=True),
+                timeout=18.0
             )
 
             # Handle exceptions from gather
             if isinstance(openalex_results, Exception):
                 logger.warning(f"OpenAlex task failed: {openalex_results}")
                 openalex_results = []
-            if isinstance(ddg_results, Exception):
-                logger.warning(f"DDG task failed: {ddg_results}")
-                ddg_results = []
+            if isinstance(google_results, Exception):
+                logger.warning(f"CDP Google task failed: {google_results}")
+                google_results = []
 
             # Merge: academic first, then web
-            results.extend(openalex_results)
-            results.extend(ddg_results)
-
-            # Pipeline 3: Brave fallback only if DDG returned nothing
-            if len(ddg_results) == 0 and BRAVE_SEARCH_API_KEY:
+            # Pipeline 3: DDG HTTP fallback only if CDP Bing returned nothing
+            web_pool = google_results
+            if len(web_pool) == 0:
                 try:
-                    brave_results = await asyncio.wait_for(_fetch_brave(len(ddg_results)), timeout=6.0)
-                    results.extend(brave_results)
+                    ddg_results = await asyncio.wait_for(_fetch_duckduckgo(), timeout=6.0)
+                    web_pool = ddg_results
+                except asyncio.TimeoutError:
+                    logger.warning("DuckDuckGo fallback timed out")
+
+            # Pipeline 4: Brave fallback only if ALL web engines returned nothing
+            if len(web_pool) == 0 and BRAVE_SEARCH_API_KEY:
+                try:
+                    web_pool = await asyncio.wait_for(_fetch_brave(0), timeout=6.0)
                 except asyncio.TimeoutError:
                     logger.warning("Brave Search fallback timed out")
 
+            # --- BALANCED QUOTA MERGE ---
+            # Without quotas, OpenAlex alone can fill the entire candidate list and
+            # silently evict every web result. Reserve ~half of the slots for the
+            # live-web pool whenever it has content, keeping academic priority.
+            if web_pool:
+                web_quota = min(len(web_pool), max(3, max_candidate_limit // 2))
+                aca_quota = max(0, max_candidate_limit - web_quota)
+                results = list(openalex_results[:aca_quota]) + list(web_pool[:web_quota])
+            else:
+                results = list(openalex_results)
+
         except asyncio.TimeoutError:
-            logger.warning("Global search_smart timeout (12s) reached — returning partial results")
+            logger.warning("Global search_smart timeout (18s) reached — returning partial results")
 
         logger.info(f"Smart Search retrieved {len(results)} sources (target: {max_candidate_limit})")
         return results[:max_candidate_limit]
