@@ -320,6 +320,30 @@ export async function saveMessageToBackend(
   }
 }
 
+export async function submitMessageFeedback(
+  messageId: string,
+  rating: "up" | "down",
+  context?: { conversationId?: string; snippet?: string }
+): Promise<boolean> {
+  try {
+    const authHeaders = await getAuthHeader();
+    const res = await fetch(`${getApiBase()}/api/feedback`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders },
+      body: JSON.stringify({
+        message_id: messageId,
+        rating,
+        conversation_id: context?.conversationId,
+        snippet: context?.snippet,
+      }),
+    });
+    return res.ok;
+  } catch (err) {
+    console.error("Feedback submit error:", err);
+    return false;
+  }
+}
+
 export async function fetchPublicSharedConversation(
   shareId: string
 ): Promise<PublicSharedConversation | null> {

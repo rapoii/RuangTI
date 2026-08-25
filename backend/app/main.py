@@ -64,7 +64,7 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
         return response
 from app.core.database import init_db
-from app.routers import health, conversations, messages, chat, auth, upload, export
+from app.routers import health, conversations, messages, chat, auth, upload, export, feedback
 from app.services.media_cleaner import periodic_prune_task, prune_old_uploaded_images
 
 UPLOAD_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "uploads")
@@ -118,6 +118,7 @@ app.include_router(messages.router)
 app.include_router(chat.router)
 app.include_router(upload.router)
 app.include_router(export.router)
+app.include_router(feedback.router)
 
 if __name__ == "__main__":
     import uvicorn

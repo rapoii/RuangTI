@@ -10,7 +10,7 @@ import { useChat, SendMessageOptions } from "@/hooks/use-chat";
 import { useProfile } from "@/hooks/use-profile";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { ModelOption, Message } from "@/lib/types";
-import { createConversationOnBackend } from "@/lib/api-client";
+import { createConversationOnBackend, submitMessageFeedback } from "@/lib/api-client";
 import { useRouter, useParams } from "next/navigation";
 import { Ghost } from "lucide-react";
 
@@ -97,6 +97,24 @@ export default function DynamicChatPage() {
       setIsAnonymous(false);
       setAnonymousMessages([]);
     }
+  };
+
+  const handleFeedback = (messageId: string, type: "up" | "down" | null) => {
+    if (!type) return;
+    const msg = messages.find((m) => m.id === messageId);
+    // Optimistic local state so the icon lights up immediately
+    const next = messages.map((m) => (m.id === messageId ? { ...m, feedback: type } : m));
+    if (isAnonymous) setAnonymousMessages(next);
+    else if (activeId) updateMessages(activeId, next);
+
+    submitMessageFeedback(messageId, type, {
+      conversationId: activeId ?? conversationIdFromUrl ?? undefined,
+      snippet: msg?.content?.slice(0, 300),
+    }).then((ok) => {
+      if (ok && typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("ruangti_feedback_saved"));
+      }
+    });
   };
 
   // Handle Global Shortcuts
@@ -194,7 +212,7 @@ export default function DynamicChatPage() {
               isStreaming={isStreaming}
               onEditMessage={(id, newText) => editMessage(id, newText)}
               onRegenerateMessage={(id) => regenerateMessage(id)}
-              onFeedbackMessage={() => {}}
+              onFeedbackMessage={(id, type) => handleFeedback(id, type)}
             />
           </div>
         )}
