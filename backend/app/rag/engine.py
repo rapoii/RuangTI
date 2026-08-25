@@ -784,23 +784,20 @@ class RAGEngine:
             if not self._reranker_ready:
                 return candidates
 
-            # Adaptive head: start at 16 pairs; shrink when CE is slow (CPU
-            # contention with the embedder session), grow back when fast.
-            # Keeps precision where the machine allows, latency bounded always.
-            head_size = int(getattr(self, "_ce_head", 16))
-            head_size = max(6, min(head_size, len(candidates)))
-            head = candidates[:head_size]
-            tail = candidates[head_size:]
-            docs = [f"{d.get('section_title', '')} {str(d.get('content', ''))[:300]}" for d in head]
+            # DETERMINISTIC by design: fixed top-24 head, fixed 300-char
+            # excerpts, no load-based adaptation. Adaptive variants made
+            # results depend on machine load (flipping ranks between runs).
+            # Same query + same DB => same ranking, every time.
+            head = candidates[:24]
+            tail = candidates[24:]
+            docs = [
+                f"{d.get('section_title', '')} {str(d.get('content', ''))[:300]}"
+                for d in head
+            ]
 
             t_ce = time.perf_counter()
             scores = list(self._cross_encoder.rerank(query, docs, batch_size=16))
             ce_ms = (time.perf_counter() - t_ce) * 1000
-
-            if ce_ms > 800 and head_size > 6:
-                self._ce_head = max(6, head_size - 4)
-            elif ce_ms < 300 and head_size < 16:
-                self._ce_head = min(16, head_size + 4)
 
             for d, s in zip(head, scores):
                 d['rerank_score'] = round(float(s), 6)
