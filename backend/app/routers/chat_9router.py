@@ -118,6 +118,12 @@ async def stream_grok_ai_response(
     """
     # 1. Retrieve Knowledge Base Chunks (RAG) - Always active
     rag_chunks = rag_engine.search(prompt, top_k=3)
+    try:
+        from app.rag.query_gap import log_query_gap
+        if log_query_gap(prompt, rag_chunks):
+            logger.info(f"Query gap recorded (weak KB coverage): {prompt[:80]}")
+    except Exception as _gap_err:
+        logger.debug(f"query-gap logging skipped: {_gap_err}")
 
     rag_context_text = ""
     if rag_chunks:

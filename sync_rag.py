@@ -2,7 +2,8 @@
 # The ONLY safe DB writer: ingests new .md modules into rag_fts,
 # deletes orphan vectors, backfills missing embeddings.
 # NEVER drops, never rebuilds, never touches existing rows.
-import os, sys, time, re, struct, sqlite3
+import os, sys, time, re, struct, sqlite3, json
+from datetime import datetime, timedelta
 
 # ROOT is FIXED to the RuangTI repo so this script can live anywhere
 # (cron scheduler requires it under ~/AppData/Local/hermes/scripts/).
@@ -99,6 +100,7 @@ def main():
         total = cur.execute("SELECT COUNT(*) FROM rag_vec").fetchone()[0]
         log(f"DONE: fully synced {total}/{len(fts_rows)}")
         conn.close()
+        report_gaps()
         return
 
     texts = {}
@@ -136,6 +138,46 @@ def main():
     total = cur.execute("SELECT COUNT(*) FROM rag_vec").fetchone()[0]
     report(f"DONE: backfill complete — rag_vec={total}/{len(fts_rows)} (coverage 100%)")
     conn.close()
+
+    # --- Query-Gap Report: feed real user questions with weak KB coverage ---
+    # The RAG-authoring agent reads this stdout and prioritizes new modules
+    # toward what users actually ask but the KB cannot answer.
+    report_gaps()
+
+
+def report_gaps():
+    try:
+        gap_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "backend", "data", "query_gaps.jsonl",
+        )
+        if os.path.exists(gap_path):
+            from collections import Counter
+            entries = []
+            with open(gap_path, encoding="utf-8") as gf:
+                for line in gf:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        entries.append(json.loads(line))
+                    except Exception:
+                        continue
+            cutoff = (datetime.now() - timedelta(days=7)).isoformat(timespec="seconds")
+            recent = [e for e in entries if e.get("ts", "") >= cutoff]
+            if recent:
+                freq = Counter(e["query"].lower() for e in recent)
+                report(f"GAP_REPORT_START ({len(recent)} low-coverage queries in last 7 days)")
+                for q, n in freq.most_common(15):
+                    report(f"  GAP x{n}: {q}")
+                report("GAP_REPORT_END — tulis modul .md baru yang menjawab gap di atas bila relevan.")
+            else:
+                report("GAPS: none in last 7 days")
+        else:
+            report("GAPS: no gap log yet")
+    except Exception as e:
+        report(f"GAPS: report skipped ({e})")
+
 
 
 if __name__ == "__main__":
