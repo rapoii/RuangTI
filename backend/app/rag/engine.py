@@ -2,6 +2,7 @@ import os
 import re
 import sqlite3
 import struct
+import time
 from typing import List, Dict, Tuple, Optional
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "ruangti_rag.db")
@@ -762,7 +763,54 @@ class RAGEngine:
         for d in sorted_results:
             d['score'] = rrf_scores.get((d['module_id'], d['section_title']), 0.0)
 
-        return sorted_results[:top_k]
+        # Pass 5: Cross-Encoder Reranking (precision layer)
+        # Rescores top candidates with a pairwise relevance model. Lazy-loaded,
+        # gracefully degrades to RRF order if the model is unavailable.
+        reranked = self._rerank_candidates(clean_query, sorted_results)
+        return reranked[:top_k]
+
+    def _rerank_candidates(self, query: str, candidates: List[Dict]) -> List[Dict]:
+        """
+        Cross-encoder rerank of RRF candidates. Returns candidates unchanged
+        (original order) on ANY failure — search must never hard-fail here.
+        """
+        if len(candidates) <= 1:
+            return candidates
+        try:
+            if not getattr(self, "_reranker_ready", False):
+                from app.rag.embedder import get_cross_encoder
+                self._cross_encoder = get_cross_encoder()
+                self._reranker_ready = self._cross_encoder is not None
+            if not self._reranker_ready:
+                return candidates
+
+            # Adaptive head: start at 16 pairs; shrink when CE is slow (CPU
+            # contention with the embedder session), grow back when fast.
+            # Keeps precision where the machine allows, latency bounded always.
+            head_size = int(getattr(self, "_ce_head", 16))
+            head_size = max(6, min(head_size, len(candidates)))
+            head = candidates[:head_size]
+            tail = candidates[head_size:]
+            docs = [f"{d.get('section_title', '')} {str(d.get('content', ''))[:300]}" for d in head]
+
+            t_ce = time.perf_counter()
+            scores = list(self._cross_encoder.rerank(query, docs, batch_size=16))
+            ce_ms = (time.perf_counter() - t_ce) * 1000
+
+            if ce_ms > 800 and head_size > 6:
+                self._ce_head = max(6, head_size - 4)
+            elif ce_ms < 300 and head_size < 16:
+                self._ce_head = min(16, head_size + 4)
+
+            for d, s in zip(head, scores):
+                d['rerank_score'] = round(float(s), 6)
+
+            # Stable sort: rerank score desc; ties keep RRF order; unranked tail appended after
+            return sorted(head, key=lambda d: d.get('rerank_score', 0.0), reverse=True) + tail
+        except Exception as e:
+            logger.warning(f"Cross-encoder rerank unavailable, keeping RRF order: {e}")
+            self._reranker_ready = False
+            return candidates
 
 
 rag_engine = RAGEngine()
