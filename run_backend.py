@@ -11,11 +11,8 @@ import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BACKEND = os.path.join(ROOT, "backend")
-UV_PYTHON = r"C:\Users\Rafi\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\python.exe"
-
-
 def main():
-    interpreter = UV_PYTHON if os.path.exists(UV_PYTHON) else sys.executable
+    interpreter = sys.executable
     os.chdir(BACKEND)
     cmd = [
         interpreter, "-u", "-m", "uvicorn", "app.main:app",

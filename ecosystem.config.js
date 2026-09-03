@@ -14,7 +14,7 @@ module.exports = {
       name: "ruangti-backend",
       script: "run_backend.py",
       cwd: __dirname,
-      interpreter: "python",
+      interpreter: "C:/Users/Rafi/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe",
       // Restart policy: crash => immediate restart; 4 consecutive unstable
       // restarts < 10s apart => backoff, stop after 8 tries (fail loudly).
       autorestart: true,

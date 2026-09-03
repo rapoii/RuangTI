@@ -1,0 +1,18 @@
+# 2137 — Pemodelan Numerik Transien Unit Penyimpanan Energi Termal Panas Laten pada Suhu 222°C dan Integrasinya dengan Pompa Kalor Suhu Tinggi
+
+**Domain:** Teknik Industri & Rekayasa Sistem Industri
+**Topik Spesialis:** Transient numerical model of a latent heat thermal energy storage unit at around 222ºC for its integration with a high-temperature-heat-pump
+**Jurnal & Sitasi Utama:** Juan Toloza, Jorge Payá, Francisco Barceló (2026). *Eurotherm Seminar #119: Contribution of thermal energy storage towards decarbonization*. DOI: [https://doi.org/10.21001/eurotherm2026.086](https://doi.org/10.21001/eurotherm2026.086)
+**Sitasi Pendukung:** Zhenyuan Xu, Ruzhu Wang (2024). *Prospects of heat pump for thermal energy decarbonization*. *The Innovation Energy*. DOI: [https://doi.org/10.59717/j.xinn-energy.2024.100032](https://doi.org/10.59717/j.xinn-energy.2024.100032)
+
+---
+
+## 1. Pendahuluan dan Konteks Industri
+
+Penyimpanan energi termal (Thermal Energy Storage/TES) muncul sebagai salah satu enabler paling strategis dalam transisi dekarbonisasi sektor industri, terutama pada aplikasi panas proses (*industrial process heat*) yang selama ini didominasi oleh pembakaran gas alam. Toloza, Payá, dan Barceló (2026) dalam *Eurotherm Seminar #119* menekankan bahwa integrasi *Latent Heat Thermal Energy Storage* (LHTES) dengan *High-Temperature Heat Pump* (HTHP) merupakan kombinasi bernilai tambah tinggi untuk meningkatkan fleksibilitas dan efisiensi termodinamika sistem energi industri. Unit LHTES yang dirancang beroperasi pada rentang suhu sekitar 222°C — sebuah *sweet spot* teknologi yang relevan untuk proses sterilisasi pangan, evaporasi kimia, pengeringan pulp & paper, dan persiapan umpan boiler industri menengah.
+
+Permasalahan fundamental yang melatarbelakangi riset ini adalah konduktivitas termal rendah (*low thermal conductivity*) dari sebagian besar material perubahan fasa (*Phase Change Material*/PCM), yang umumnya berada pada orde 0,2–1,0 W/m·K untuk garam nitrat eutektik. Fenomena ini menyebabkan *bottleneck* laju transfer kalor sehingga menghambat *power density* dan kemampuan *charging/discharging* dalam orde waktu yang dibutuhkan industri. Xu dan Wang (2024) di *The Innovation Energy* mengonfirmasi bahwa prospek dekarbonisasi termal sangat bergantung pada kapasitas sistem HTHP untuk *lifting* suhu *waste heat* atau sumber *renewable* ke tingkat utilisasi industri — dan efektivitas integrasi ini sangat ditentukan oleh media penyimpan termal di antara *source* dan *sink*. Tanpa unit LHTES yang dirancang cermat, *duty cycle* HTHP menjadi terbatas oleh fluktuasi beban sesaat.
+
+Secara ekonomi, integrasi LHTES-HTHP memungkinkan *peak-shaving* konsumsi listrik, partisipasi dalam program *demand response*, serta peningkatan *capacity factor* aset produksi. Konteks industri nyata di mana modul ini diterapkan mencakup: (i) pabrik susu dan minuman yang membutuhkan uap suhu 180–230°C untuk sterilisasi UHT; (ii) industri kimia khusus untuk reaksi *cracking* dan distilasi vakum; (iii) pabrik tekstil untuk proses *heat-setting*; (iv) fasilitas agro-industri pengeringan biji-bijian. Pada semua lini ini, PCM eutektik nitrat dengan titik lebur mendekati 222°C menjadi pilihan rasional karena densitas energi laten tinggi (>150 kJ/kg), kestabilan siklus termal baik (>1.000 siklus), biaya material kompetitif, dan toksisitas rendah dibanding PCM organik.
+
+Studi Toloza dkk. (2026) memilih konfigurasi *shell and tube* karena tiga atribut struktural-operasional: kekompakan geometris yang tinggi, robustisitas mekanis pada tekanan operasi termal, dan kapasitas *thermal enhancement* melalui pemasangan *fins*, *metal wool*, atau *encaps

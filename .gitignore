@@ -84,3 +84,12 @@ uploads/
 data/*.db-shm
 data/*.db-wal
 data/*.db-journal
+
+# Sensitive tokens and temporary scratch files
+tunnel_token.txt
+tmp_rag_expansion/
+research/
+debug-fetch.mjs
+hn_search_results.txt
+framework-benchmarks-lowend-research.md
+

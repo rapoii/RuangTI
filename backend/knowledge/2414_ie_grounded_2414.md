@@ -1,0 +1,14 @@
+# 2414 — Optimasi Kebijakan Pemeliharaan Hierarkis Berbasis Keandalan untuk Memaksimalkan Ketersediaan Armada pada Sektor MRO Penerbangan
+
+**Domain:** Teknik Industri & Rekayasa Sistem Industri
+**Topik Spesialis:** Reliability-Centered Hierarchical Maintenance Policy for Maximizing Fleet Availability — Studi pada Pemeliharaan, Perbaikan, dan Overhaul (MRO) Penerbangan
+**Jurnal & Sitasi Utama:** Hang Zhou (2024). *Peer-Reviewed Journal*. DOI: [https://doi.org/10.2139/ssrn.6387479](https://doi.org/10.2139/ssrn.6387479)
+**Sitasi Pendukung:** Hang Zhou (2024). *Peer-Reviewed Journal*. DOI: [https://doi.org/10.2139/ssrn.5291672](https://doi.org/10.2139/ssrn.5291672)
+
+---
+
+## 1. Pendahuluan dan Konteks Industri
+
+Industri penerbangan komersial global merupakan salah satu sektor *capital-intensive* dengan konsumsi aset fisik bernilai triliunan rupiah. Menurut Zhou (2024) dalam tulisannya di SSRN dengan DOI [10.2139/ssrn.6387479](https://doi.org/10.2139/ssrn.6387479), biaya *Maintenance, Repair, and Overhaul* (MRO) menyumbang antara 8%–15% dari total biaya operasional maskapai, dan menjadi kontributor signifikan terhadap keputusan strategis *fleet planning*. Tingginya tekanan kompetitif pasca-pandemi, ditambah dengan ketidakpastian harga avtur, permintaan musiman, serta persyaratan keselamatan yang ketat dari regulator (FAA, EASA, DGCA),迫使 operator untuk tidak hanya merawat armada agar *airworthy*, tetapi juga memaksimalkan *availability* sebagai metrik profitabilitas utama. Zhou secara eksplisit menyatakan bahwa *Reliability-Centered Maintenance* (RCM) "is highly valued in asset-heavy industries for its ability to quantify the non-linear degradation of life-cycle performance and optimize operations by enhancing safety and availability" (Zhou, 2024, DOI: 10.2139/ssrn.6387479).
+
+Konteks operasional yang melatarbelakangi studi ini adalah kebijakan pemeliharaan hierarkis A/B/C/D yang sudah menjadi *de facto* standar dalam operasional MRO penerbangan. *A-check* dilakukan pada rentang 400–600 jam terbang dengan downtime singkat sekitar 24 jam kalender; *B-check* setiap 6–8 bulan; *C-check* setiap 20–24 bulan dengan downtime satu hingga dua minggu; dan *D-check* (atau *heavy maintenance visit*) berupa *overhaul* penuh setiap 6–12 tahun dengan downtime satu hingga dua bulan. Tantangan sentral yang diidentifikasi Zhou adalah bagaimana menjadwalkan kombinasi *fully refurbished D-check cycles* dan *partial refurbishments* selama fase *mature-run* agar *availability* armada tetap optimal tanpa mengorbankan margin keselamatan. Paper ini melengkapi literatur MRO yang selama ini lebih didominasi oleh pendekatan *deterministic block replacement*, dengan menawarkan kerangka analitis berbasis *renewal reward theory* yang mampu membuktikan eksistensi nilai
