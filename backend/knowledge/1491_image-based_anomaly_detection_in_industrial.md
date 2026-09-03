@@ -153,4 +153,7 @@ Solusi menghasilkan *trajectory* operasi yang menjaga bearing pada suhu $\leq 80
 
 ### 5.1 Keterbatasan Metodologi
 
-Pearson (2024) mengakui beberapa keterbatasan: (a) ketergantungan pada kualitas data berlabel yang membutuhkan *domain expert* untuk anotasi; (b) *concept drift* ketika pola anomali berevolusi (misalnya modus kegagalan
+Pearson (2024) mengakui beberapa keterbatasan: (a) ketergantungan pada kualitas data berlabel yang membutuhkan *domain expert* untuk anotasi; (b) *concept drift* ketika pola anomali berevolusi (misalnya modus kegagalan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

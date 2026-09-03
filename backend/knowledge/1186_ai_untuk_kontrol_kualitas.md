@@ -108,3 +108,6 @@ Arah riset masa depan dapat fokus pada pengembangan algoritma yang lebih canggih
 ---
 
 Dokumen ini menyajikan gambaran menyeluruh tentang penerapan sistem kontrol kualitas berbasis AI dalam manufaktur volume tinggi, dengan penekanan pada metodologi, analisis kuantitatif, dan tantangan yang dihadapi. Implementasi yang efektif dari sistem ini dapat memberikan keuntungan kompetitif yang signifikan bagi perusahaan dalam menghadapi tantangan industri yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

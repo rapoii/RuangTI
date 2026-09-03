@@ -87,3 +87,6 @@ Metrik evaluasi akurasi peramalan:
   $$\text{Running Sum of Forecast Errors (RSFE)} = \sum (A_t - F_t)$$
   $$\text{TS} = \frac{\text{RSFE}}{\text{MAD}}$$
   *(Rentang kendali peramalan yang sehat: $-4 \le \text{TS} \le +4$)*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -154,3 +154,6 @@ Immutable tracking of material provenance through multiple use cycles, enabling 
 - European Commission. (2024). *Digital Product Passport Regulation: Technical Implementation Guidelines*. EUR-Lex 32024R1245.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

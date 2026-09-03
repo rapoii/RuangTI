@@ -105,3 +105,6 @@ Proses pembentukan wadah kaca memiliki implikasi yang luas dalam disiplin lain, 
 Batasan metodologi yang ada saat ini meliputi keterbatasan dalam pemodelan aliran panas dan kinematika yang dapat mempengaruhi akurasi prediksi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih akurat dan penerapan teknologi baru seperti kecerdasan buatan untuk optimasi proses.
 
 Dengan demikian, pemahaman yang mendalam tentang kinematika pengiriman gob, aliran kalor, dan kurva suhu annealing sangat penting bagi insinyur dan manajer dalam industri kaca untuk meningkatkan efisiensi dan kualitas produk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -174,3 +174,7 @@ $$\Pi_e = y^e \cdot R_e = 7.200 \times 1.990 = 14.328.000 \text{ USD/tahun}$$
 
 Profit daur ulang:
 $$\Pi_r = y^r \cdot R_r = 4.
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

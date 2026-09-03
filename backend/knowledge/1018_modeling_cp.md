@@ -115,3 +115,6 @@ Meskipun CPS menawarkan banyak keuntungan, terdapat beberapa batasan, seperti ke
 Riset di masa depan perlu fokus pada pengembangan algoritma yang lebih canggih untuk analisis data besar dan pembelajaran mesin, serta peningkatan interoperabilitas antara berbagai sistem CPS. Selain itu, penelitian tentang dampak sosial dan ekonomi dari penerapan CPS dalam rantai pasok juga perlu ditingkatkan.
 
 Dengan demikian, penerapan CPS dalam optimasi rantai pasok global menawarkan potensi yang signifikan untuk meningkatkan efisiensi dan keberlanjutan, namun memerlukan pendekatan yang hati-hati dan terintegrasi untuk mengatasi tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

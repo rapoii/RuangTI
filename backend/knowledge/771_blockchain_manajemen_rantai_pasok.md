@@ -30,3 +30,6 @@ Tantangan: skala transaksi (TPS blockchain masih kalah database tradisional), in
 - Analisis trade-off on-chain vs off-chain storage: hash + metadata di-chain, berkas besar di IPFS/database.
 - Evaluasi kelayakan investasi blockchain (Ekonomi Teknik) versus EDI/API tradisional.
 - Integrasi dengan Industry 4.0: blockchain sebagai lapisan trust di atas IIoT dan digital twin.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

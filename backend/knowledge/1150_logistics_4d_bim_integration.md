@@ -110,3 +110,6 @@ Integrasi logistik dengan 4D BIM tidak hanya relevan dalam konstruksi, tetapi ju
 Namun, ada beberapa batasan dalam metodologi ini, termasuk ketergantungan pada data yang akurat dan real-time, serta kebutuhan untuk pelatihan yang memadai bagi pengguna. Ke depan, riset dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data besar dalam konteks 4D BIM dan logistik, serta eksplorasi teknologi baru seperti kecerdasan buatan dan Internet of Things (IoT) untuk meningkatkan efisiensi dan efektivitas.
 
 Dengan demikian, integrasi manajemen logistik dengan 4D BIM menawarkan potensi yang signifikan untuk meningkatkan efisiensi dan efektivitas dalam konstruksi modular, dan merupakan langkah penting menuju masa depan industri konstruksi yang lebih inovatif dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

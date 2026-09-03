@@ -40,3 +40,6 @@ Struktur tingkat tinggi (*High-Level Structure - HLS*) berbasis pendekatan **Man
 - **Klausul 8:** Operasi (Perencanaan operasional, desain produk, pengendalian proses eksternal).
 - **Klausul 9:** Evaluasi Kinerja (Audit internal, tinjauan manajemen, kepuasan pelanggan).
 - **Klausul 10:** Peningkatan (*Corrective Action & Continual Improvement*).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

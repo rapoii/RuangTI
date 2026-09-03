@@ -95,3 +95,6 @@ Keterkaitan dengan disiplin lain seperti manajemen biaya dan teknik juga sangat 
 Ke depan, penelitian dalam bidang ini diharapkan dapat berfokus pada pengembangan material baru dengan sifat mekanik yang lebih baik dan teknik pemolesan yang lebih efisien. Selain itu, integrasi teknologi otomasi dan pemantauan real-time dalam proses CMP dapat menjadi arah riset yang menjanjikan, memungkinkan pengendalian kualitas yang lebih baik dan pengurangan limbah.
 
 Dengan demikian, analisis stres nanomekanik dalam CMP adalah area yang kaya akan potensi inovasi dan perbaikan, yang dapat memberikan dampak signifikan pada efisiensi dan keberlanjutan industri manufaktur semikonduktor.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -159,3 +159,6 @@ $$D_{corr} = 6 \times 10 \times 48 = 2.880 \text{ hours}$$
 $$A_{baseline} = \frac{36.500}{36.500 + 11.352 + 2.880} = \frac{36.500}{50.732} = 0{,}7195 \approx 71{,}95\%$$
 
 ### 4.3 Optimasi dengan Partial Refurbishment (Framework Zhou 2024)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

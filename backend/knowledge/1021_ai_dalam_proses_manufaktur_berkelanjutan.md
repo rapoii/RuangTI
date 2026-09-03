@@ -127,4 +127,7 @@ Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan akan data berku
 
 Dalam konteks standar masa depan, penting untuk mengembangkan pedoman yang jelas mengenai penggunaan AI dalam manufaktur, termasuk aspek etika dan keberlanjutan, agar teknologi ini dapat memberikan manfaat maksimal bagi industri dan lingkungan. 
 
-Dengan demikian, pengembangan model AI berbasis pembelajaran dalam untuk optimalisasi proses manufaktur berkelanjutan merupakan langkah penting untuk mencapai tujuan keberlanjutan dan efisiensi dalam industri modern.
+Dengan demikian, pengembangan model AI berbasis pembelajaran dalam untuk optimalisasi proses manufaktur berkelanjutan merupakan langkah penting untuk mencapai tujuan keberlanjutan dan efisiensi dalam industri modern.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

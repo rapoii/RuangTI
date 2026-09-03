@@ -133,4 +133,7 @@ Downtime rata-rata tertimbang per siklus D-check penuh (10 tahun) untuk satu pes
 
 $$T_{\text{down,total}} = 30 \cdot T_A + 10 \cdot T_B + 3 \cdot T_C + 1 \cdot T_{D,\text{full}}$$
 
-(dengan asumsi $N
+(dengan asumsi $N$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -90,4 +90,7 @@ Implementasi industri mengikuti kerangka *Process Flow Diagram* sembilan tahap s
 **Parameter Input:**
 - $M_{raw}$ = 10.000 kg bit merah
 - $x_{pigmen}$ = 0,0008 (800 mg/kg berat basah, sesuai rentang Stoica et al. 2025)
-- Metode
+- Metode.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

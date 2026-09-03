@@ -108,3 +108,6 @@ Pendekatan analisis dinamika fluida dan optimasi energi melalui metode Pinch dap
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas sistem yang tinggi dan kebutuhan untuk data yang akurat. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk analisis dan optimasi, serta integrasi teknologi baru seperti IoT dan AI untuk meningkatkan efisiensi sistem energi.
 
 Dengan demikian, pemahaman yang lebih dalam tentang dinamika fluida dan pendekatan Pinch akan menjadi kunci dalam mencapai keberlanjutan dan efisiensi dalam sistem energi termal di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

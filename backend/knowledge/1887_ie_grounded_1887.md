@@ -200,3 +200,7 @@ $$
 Assembly cost turun karena $T_{assembly}$ berkurang:
 $$
 C_{assy}^{new} = T_{assembly}' \times C_{labor} = 95 \times
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

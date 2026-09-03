@@ -115,3 +115,6 @@ Ke depan, arah riset dapat berfokus pada integrasi teknik pembelajaran mesin den
 --- 
 
 Dokumen ini memberikan panduan komprehensif mengenai pengembangan model prediksi kesalahan overlay dalam EUV photolithography menggunakan simulasi Monte Carlo, dengan penekanan pada metodologi, analisis kuantitatif, dan aplikasi lintas sektor.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

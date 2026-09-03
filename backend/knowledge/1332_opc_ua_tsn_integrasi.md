@@ -112,3 +112,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas dala
 Arah riset masa depan dapat mencakup pengembangan algoritma untuk optimasi jaringan, serta penerapan teknologi baru seperti kecerdasan buatan untuk meningkatkan efisiensi komunikasi dalam sistem CPS. 
 
 Dengan demikian, integrasi OPC-UA dan TSN merupakan langkah penting menuju sistem produksi yang lebih efisien dan responsif di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

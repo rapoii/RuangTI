@@ -146,3 +146,7 @@ $$T_{agg} = N \cdot \lambda \cdot P \cdot 8 = 20 \cdot 1000 \cdot 64 \cdot 8 = 1
 **Langkah 2 — Utilisasi Link:**
 
 $$\rho = \frac{T_{agg}}{T_{slot}} = \frac{10{,}24}{165{,}6} \times 100\% =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -149,3 +149,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketidakpastian d
 Arah riset masa depan dapat mencakup pengembangan alat analisis yang lebih canggih untuk memperkirakan dampak jangka panjang dari investasi yang disesuaikan dengan karbon, serta integrasi teknologi baru seperti blockchain untuk transparansi dalam pelaporan emisi.
 
 Dengan demikian, shadow carbon pricing dan mekanisme internal carbon fee dapat menjadi pendorong utama dalam transisi menuju ekonomi yang lebih berkelanjutan dan efisien, serta mendukung pencapaian tujuan keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

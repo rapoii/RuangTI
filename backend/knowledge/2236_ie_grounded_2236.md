@@ -95,3 +95,7 @@ Implementasi WSN untuk liofilizer mengikuti *Standard Operating Procedure* (SOP)
 **Tahap 5 — Real-Time Analytics & Endpoint Detection.** Algoritma *primary drying endpoint* diimplementasikan dengan membandingkan sinyal $p_c$ dari *capacitance manometer* (CM, akurat pada tekanan rendah) dan *Pirani gauge* (PR, sensitif terhadap uap air non-kondensable). Saat semua es habis, rasio $\text{PR/CM}$ turun dari ~1.5 menjadi ~1.0:
 
 $$\
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

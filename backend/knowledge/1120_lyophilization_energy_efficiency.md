@@ -103,3 +103,6 @@ Namun, ada beberapa batasan dalam metodologi ini, termasuk biaya awal investasi 
 Arah riset masa depan dapat mencakup pengembangan sistem pemulihan panas yang lebih canggih, seperti penggunaan material baru yang lebih efisien dalam menangkap dan mengalirkan panas, serta integrasi dengan sistem otomatisasi untuk meningkatkan kontrol dan efisiensi proses secara keseluruhan.
 
 Dengan demikian, penerapan teknologi pemulihan panas dalam proses lyophilization menawarkan peluang besar untuk meningkatkan efisiensi energi dan keberlanjutan, yang sangat penting dalam konteks industri modern yang semakin kompetitif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

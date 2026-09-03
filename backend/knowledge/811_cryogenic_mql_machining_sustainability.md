@@ -131,3 +131,6 @@ Cryo-MQL tidak hanya relevan dalam konteks pemotongan logam, tetapi juga dapat d
 Namun, ada beberapa batasan dalam metodologi ini, termasuk kebutuhan untuk memahami interaksi antara pelumas dan material yang dipotong. Penelitian lebih lanjut diperlukan untuk mengeksplorasi potensi aplikasi Cryo-MQL dalam material baru dan proses pemotongan yang lebih kompleks.
 
 Arah riset masa depan dapat berfokus pada pengembangan sistem pelumasan yang lebih efisien, integrasi teknologi otomatisasi, dan penerapan prinsip-prinsip keberlanjutan dalam seluruh rantai pasok. Dengan demikian, Cryo-MQL dapat menjadi solusi yang berkelanjutan dan efisien untuk tantangan yang dihadapi oleh industri manufaktur modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -108,3 +108,6 @@ Namun, ada beberapa batasan metodologi yang perlu diperhatikan. Misalnya, kualit
 Arah riset masa depan dapat mencakup pengembangan model AI yang lebih adaptif dan responsif terhadap perubahan kondisi produksi, serta eksplorasi penggunaan teknologi blockchain untuk meningkatkan transparansi dan keandalan data dalam pengendalian kualitas.
 
 Dengan demikian, integrasi kecerdasan buatan dalam analisis kualitas 4.0 menawarkan potensi besar untuk meningkatkan pengendalian proses berbasis data besar, yang pada gilirannya dapat membantu perusahaan mencapai keunggulan kompetitif di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

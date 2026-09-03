@@ -66,3 +66,7 @@ $$Y_{sys} = \prod_{i=1}^{k} Y_{KGD,i} \cdot Y_{assembly} \cdot Y_{interconnect}$
 di mana $Y_{KGD,i}$ adalah yield *known-good-die* masing-masing chiplet (umumnya >95% setelah burn-in), $Y_{assembly}$ adalah yield proses pick-and-place dan bonding (~99,5-99,9% untuk hybrid bonding), dan $Y_{interconnect}$ adalah yield koneksi listrik yang bergantung pada *bonding defect density* $D_{def}$:
 
 $$Y_{interconnect} =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

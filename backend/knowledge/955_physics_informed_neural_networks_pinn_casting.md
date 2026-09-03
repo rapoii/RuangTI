@@ -147,3 +147,6 @@ Meskipun PINN menawarkan banyak keuntungan, terdapat beberapa batasan yang perlu
 Ke depan, riset dalam bidang PINN untuk industri baja dapat difokuskan pada pengembangan algoritma yang lebih efisien dan robust, serta integrasi dengan teknologi machine learning lainnya. Selain itu, eksplorasi aplikasi PINN dalam konteks keberlanjutan dan efisiensi energi juga menjadi area yang menarik untuk diteliti, sejalan dengan tuntutan industri untuk mengurangi jejak karbon dan meningkatkan praktik ramah lingkungan.
 
 Dengan demikian, penerapan Physics-Informed Neural Networks dalam proses pengecoran baja kontinu tidak hanya menjanjikan peningkatan efisiensi dan kualitas produk, tetapi juga membuka peluang untuk inovasi dalam berbagai disiplin ilmu dan praktik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

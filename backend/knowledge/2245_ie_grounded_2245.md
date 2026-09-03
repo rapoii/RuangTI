@@ -107,3 +107,6 @@ Implementasi industri dari model CLSC baterai RPB mengikuti SOP ISO 14001:2015 d
 
 **Tahap 5 — Audit & Continuous Improvement:**
 1.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

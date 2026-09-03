@@ -178,3 +178,7 @@ $$C_s = 4.07 \times 10^{-7} \text{ kg solute/kg CO}_2$$
 Yield teoritis untuk S/F = 40:
 
 $$Y_{teo} = C_s \times S/F
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

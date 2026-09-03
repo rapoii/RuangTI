@@ -86,4 +86,7 @@ Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketergantungan 
 
 Ke depan, standar pengukuran kinerja dalam manajemen aset akan terus berkembang, dengan fokus pada keberlanjutan dan tanggung jawab sosial perusahaan (CSR), serta penerapan prinsip-prinsip ESG (Environmental, Social, and Governance) dalam pengelolaan aset. Penelitian lebih lanjut diperlukan untuk mengembangkan metrik baru yang dapat mencerminkan dampak sosial dan lingkungan dari pengelolaan aset.
 
-Dengan demikian, pengukuran kinerja yang efektif dan sistematis sesuai dengan ISO 55001 akan menjadi kunci bagi perusahaan teknologi tinggi untuk tetap kompetitif dan berkelanjutan di pasar global yang terus berubah.
+Dengan demikian, pengukuran kinerja yang efektif dan sistematis sesuai dengan ISO 55001 akan menjadi kunci bagi perusahaan teknologi tinggi untuk tetap kompetitif dan berkelanjutan di pasar global yang terus berubah.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -123,3 +123,6 @@ Proses rekayasa jalur pencelupan sarung tangan nitril tidak hanya relevan untuk 
 Dalam konteks manajemen biaya, pemahaman yang mendalam tentang termodinamika dan kinetika proses dapat membantu dalam pengambilan keputusan yang lebih baik terkait investasi dan pengoperasian fasilitas. Selain itu, perhatian terhadap aspek K3 dan ESG menjadi semakin penting, mengingat regulasi yang semakin ketat.
 
 Arah riset masa depan dapat difokuskan pada pengembangan koagulan alternatif yang lebih ramah lingkungan, serta teknologi pencucian yang lebih efisien untuk mengurangi dampak lingkungan dari limbah industri. Penelitian lebih lanjut juga diperlukan untuk memahami interaksi antara bahan baku dan proses yang lebih kompleks, guna meningkatkan kualitas dan keamanan produk akhir.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

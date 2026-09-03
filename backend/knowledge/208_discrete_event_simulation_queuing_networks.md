@@ -178,3 +178,6 @@ where $\sigma_r = \sum_{k=1}^{r} \rho_k$.
 - Zhang, R., Kumar, S., & Park, T. (2024). Reinforcement learning for adaptive routing in stochastic networks. *IEEE Transactions on Automatic Control*, 69(4), 2156-2171.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -155,4 +155,7 @@ $$
 -   Moretto, A., & Cagno, E. (2024). Integrating environmental and economic dimensions in LCC: A systematic review. *Journal of Cleaner Production*, 434, 139812.
 -   ASTM E917-24. *Standard Practice for Measuring Life-Cycle Costs of Buildings and Building Systems*. ASTM International.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -106,3 +106,6 @@ Circularity indicators (MCI, CEIP) complement LCA by capturing resource loop clo
 6. Guinée, J. B., Heijungs, R., & van der Voet, E. (2023). Recent developments in life cycle assessment: Challenges and opportunities. *Journal of Industrial Ecology*, 27(4), 987–1002.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

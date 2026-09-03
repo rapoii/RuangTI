@@ -40,3 +40,7 @@ Struktur *separable* muncul ketika kendala kopling hanya menghubungkan variabel 
 
 $$
 \min_{x_1,\ldots,x_K} \; \sum_{k=1}^{K} f_k(x_k) \quad \text{s.t.} \quad \sum_{k=1}^{K} A_k x_k \;\geq\; b, \quad x_k \in \mathcal{X}_k \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

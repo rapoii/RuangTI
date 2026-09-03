@@ -106,3 +106,6 @@ Integrasi CCUS dan WHR tidak hanya relevan dalam konteks industri pengolahan gas
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti kebutuhan untuk investasi awal yang tinggi dan tantangan teknis dalam desain sistem. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan ekonomis, serta kebijakan yang mendukung penerapan teknologi ini secara luas.
 
 Dengan demikian, desain sistem integrasi CCUS dengan teknologi pemulihan energi panas merupakan langkah penting menuju industri yang lebih berkelanjutan dan efisien. Penelitian lebih lanjut dan kolaborasi lintas sektor akan menjadi kunci dalam mencapai tujuan ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

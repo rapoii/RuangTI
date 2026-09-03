@@ -121,3 +121,6 @@ Keterkaitan dengan disiplin lain seperti otomasi dan manajemen biaya sangat pent
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada data historis yang akurat dan asumsi yang mungkin tidak selalu mencerminkan kondisi nyata. Oleh karena itu, riset masa depan perlu fokus pada pengembangan algoritma yang lebih adaptif dan mampu mengintegrasikan data real-time untuk meningkatkan kinerja sistem penjadwalan armada.
 
 Dengan demikian, penerapan model penjadwalan armada dinamis menggunakan algoritma genetika tidak hanya memberikan solusi yang efisien, tetapi juga membuka peluang untuk inovasi dan pengembangan berkelanjutan dalam industri penerbangan dan sektor terkait lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -103,3 +103,6 @@ Dengan mengikuti standar ISO 10013:2021, perusahaan dapat memastikan bahwa prose
 ---
 
 Dokumen ini menyajikan panduan komprehensif mengenai strategi penetapan harga dinamis menggunakan pendekatan Branch-and-Price-and-Cut, dengan penekanan pada aplikasi praktis dan relevansi industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

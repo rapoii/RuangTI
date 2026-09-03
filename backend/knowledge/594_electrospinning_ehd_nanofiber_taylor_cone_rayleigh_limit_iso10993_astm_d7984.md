@@ -508,3 +508,6 @@ Berdasarkan keluaran simulasi model `ElectrospinningDynamicsEngine`:
 5. **Taylor, G. I.** (1964). *Disintegration of Water Drops in an Electric Field*. Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences, 280(1382), 383-397.
 6. **Montgomery, D. C.** (2020). *Introduction to Statistical Quality Control* (8th ed.). John Wiley & Sons.
 7. **Groover, M. P.** (2021). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th ed.). John Wiley & Sons.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -151,3 +151,6 @@ Integrasi Branch-and-Price dengan dinamika stokastik tidak hanya relevan dalam k
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan pemodelan yang kompleks. Oleh karena itu, penelitian di masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan robust, serta penerapan teknologi baru seperti kecerdasan buatan untuk meningkatkan akurasi prediksi permintaan.
 
 Dalam konteks keberlanjutan, pendekatan ini juga dapat diadaptasi untuk mengurangi dampak lingkungan dari transportasi dengan mempertimbangkan faktor-faktor seperti emisi karbon dan penggunaan energi. Dengan demikian, integrasi metode ini tidak hanya meningkatkan efisiensi operasional tetapi juga mendukung tujuan keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

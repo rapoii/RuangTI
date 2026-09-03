@@ -95,3 +95,6 @@ Dalam Manajemen Biaya/Teknik, pendekatan ini mengoptimalkan cost-to-serve dengan
 Dalam K3 dan ESG, markdown optimization membantu mengurangi overproduction yang berdampak pada lingkungan, selaras dengan standar ISO 14001. Tantangan utama adalah privasi data pelanggan dan akurasi model di pasar Indonesia yang dinamis. Evaluasi menunjukkan bahwa meskipun ada hambatan awal, ROI jangka panjang mencapai 3-5 tahun dengan payback period 14 bulan. Integrasi dengan disiplin lain seperti Operations Research memungkinkan hybrid model yang lebih robust, di mana MNL dikombinasikan dengan machine learning untuk handling non-stationary demand.
 
 Secara keseluruhan, modul ini menekankan bahwa dynamic pricing berbasis MNL bukan hanya strategi pricing, melainkan fondasi rekayasa operasional yang strategis untuk keberlanjutan bisnis di sektor retail yang kompetitif. Implementasi yang tepat dapat mengubah kerugian menjadi peluang revenue yang signifikan, sekaligus mendukung efisiensi rantai pasok dan tanggung jawab sosial.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

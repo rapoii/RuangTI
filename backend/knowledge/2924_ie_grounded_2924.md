@@ -80,4 +80,7 @@ $$u[k] = K_p \cdot e[k] + K_i \sum_{j=0}^{k} e[j] + K_d (e[k] - e[k-1])$$
 
 dengan $e[k] = T_{\text{target}} - T_b[k]$. Tuning parameter $K_p$, $K_i$, $K_d$ dilakukan menggunakan metode Ziegler-Nichols atau auto-tuning LQR untuk masing-masing produk.
 
-**Langkah F — Dokumentasi dan Pelaporan.** Setelah batch selesai, seluruh dataset T/p/time diarsipkan dalam format OPC-UA sesuai ALCOA+
+**Langkah F — Dokumentasi dan Pelaporan.** Setelah batch selesai, seluruh dataset T/p/time diarsipkan dalam format OPC-UA sesuai ALCOA+ \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

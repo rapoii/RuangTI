@@ -129,4 +129,7 @@ Ke depan, penelitian dapat difokuskan pada integrasi teknik optimasi dengan tekn
 
 ---
 
-Dokumen ini memberikan panduan komprehensif tentang penerapan teknik Branch-and-Price dalam optimasi alokasi sumber daya kesehatan, dengan fokus pada situasi krisis. Dengan mengikuti langkah-langkah yang diuraikan, diharapkan dapat meningkatkan efisiensi dan efektivitas dalam pengelolaan sumber daya kesehatan.
+Dokumen ini memberikan panduan komprehensif tentang penerapan teknik Branch-and-Price dalam optimasi alokasi sumber daya kesehatan, dengan fokus pada situasi krisis. Dengan mengikuti langkah-langkah yang diuraikan, diharapkan dapat meningkatkan efisiensi dan efektivitas dalam pengelolaan sumber daya kesehatan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -103,3 +103,6 @@ Penerapan model digital dalam ekonomi sirkular tidak hanya terbatas pada sektor 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada data yang akurat dan tantangan dalam mengubah budaya organisasi. Oleh karena itu, riset masa depan perlu difokuskan pada pengembangan alat dan teknik yang lebih baik untuk pengumpulan dan analisis data, serta strategi untuk mengatasi resistensi terhadap perubahan.
 
 Dengan demikian, model digital untuk implementasi ekonomi sirkular diharapkan dapat menjadi standar masa depan dalam praktik industri, mendukung keberlanjutan dan efisiensi dalam rantai pasokan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

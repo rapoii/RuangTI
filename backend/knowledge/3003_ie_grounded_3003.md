@@ -125,3 +125,8 @@ $$Y_{HBM} = \sum_{k=3}^{4} \binom{4}{k} (0{,}94)^k (0{,}06)^{4-k} \cdot (0{,}99)
 $$= \binom{4}{3}(0{,}94)^3(0{,}06)^1(0{,}99)^3 + \binom{4}{4}(0{,}94)^4(0{,}99)^4$$
 $$= 4 \cdot 0{,}8306 \cdot 0{,}06 \cdot 0{,}9703 + 0{,}7807 \cdot 0{,}9606$$
 $$= 0{,}1935 + 0
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

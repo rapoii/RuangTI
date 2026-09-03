@@ -77,4 +77,7 @@ Implementasi AAS Digital Twin mengikuti prosedur delapan tahap yang distandardis
 
 **Tahap 4 — Penentuan *Operation* dan *Event*.** Tetapkan operasi yang dapat di-*invoke* dari luar, misalnya `RebootCell`, `AdjustBeamTilt(theta)` untuk BTS, atau `EmergencyStop`, `ResetTransferLine` untuk CPAS. *Event* seperti `LinkDegradation`, `BufferOverflow` di-emit via MQTT-SN ke *Message Broker*.
 
-**Tahap 5 — Serialisasi dan Publikasi.** Submodel dideskripsikan menggunakan format AASX (XML) atau JSON sesuai *AASX Package Explorer*. Endpoint *Asset Administration Shell Registry* dipublikasikan ke *Industrial Cloud* (misalnya Eclipse
+**Tahap 5 — Serialisasi dan Publikasi.** Submodel dideskripsikan menggunakan format AASX (XML) atau JSON sesuai *AASX Package Explorer*. Endpoint *Asset Administration Shell Registry* dipublikasikan ke *Industrial Cloud* (misalnya Eclipse.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

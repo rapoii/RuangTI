@@ -69,4 +69,7 @@ $$\text{Jumlah rata-rata pelanggan dalam antrian } L_q = L \times \rho = \frac{\
 $$\text{Waktu rata-rata pelanggan dalam sistem } W = \frac{1}{\mu - \lambda} = \frac{L}{\lambda}$$
 $$\text{Waktu rata-rata pelanggan dalam antrian } W_q = \frac{\lambda}{\mu(\mu - \lambda)} = \frac{L_q}{\lambda}$$
 $$\text{Probabilitas sistem kosong } P_0 = 1 - \rho$$
-$$\text{Probabilitas terdapat $n$ pelanggan } P_n = (1 - \rho) \rho^n$$
+$$\text{Probabilitas terdapat $n$ pelanggan } P_n = (1 - \rho) \rho^n$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

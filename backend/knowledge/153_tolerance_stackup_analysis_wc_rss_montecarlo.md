@@ -151,4 +151,7 @@ Where $S_i = |\partial f / \partial X_i|$ is the sensitivity magnitude.
 - Sensitivity coefficients determine which dimensions dominate the stack; focus tolerance tightening on high-sensitivity features
 - Tolerance allocation should be **cost-driven**, not arbitrary; use optimization with empirical cost-tolerance curves
 - Modern CAD/CAM tools (3DCS, VSA, CETOL) automate vector loops and MC, but engineer must verify model validity
-- For geometric tolerances (flatness, position), use **vectorial tolerance zones** rather than scalar approximations
+- For geometric tolerances (flatness, position), use **vectorial tolerance zones** rather than scalar approximations.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

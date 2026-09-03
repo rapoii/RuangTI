@@ -113,3 +113,6 @@ Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti komple
 Dengan meningkatnya perhatian terhadap keberlanjutan dan efisiensi energi, sistem ini juga dapat berkontribusi pada inisiatif K3 dan ESG (Environmental, Social, Governance) dalam industri, menjadikannya pilihan yang menarik untuk masa depan.
 
 Dengan demikian, sistem motor planar magnetik levitas multi-carrier tidak hanya menawarkan solusi teknis yang inovatif, tetapi juga membuka jalan bagi praktik industri yang lebih berkelanjutan dan efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

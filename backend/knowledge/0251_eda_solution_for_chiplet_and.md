@@ -140,3 +140,7 @@ atau sekitar **8.06 mΩ** per sambungan, mendekati nilai referensi Lau (2023) ya
 Dengan *data rate* per link $f = 16$ Gbps (UCIe standard) dan jumlah link per mm²:
 $$N_{link} = \frac{1}{(p \times 10^{-3})^2} = \frac{1}{(5 \times 10^{-3})^2} = 40.000 \text{ link/mm}^2$$
 $$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

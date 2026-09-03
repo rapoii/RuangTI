@@ -97,3 +97,6 @@ Integration with generative AI enables natural language queries against factory 
 5. ISO/IEC 23247-1:2024. Automation systems and integration — Digital Twin framework for manufacturing — Part 1: Overview and general principles.
 6. Schleich, B., Anwer, N., Mathieu, L., & Wartzack, S. (2024). Shaping the digital twin for design and production engineering. *CIRP Annals*, 73(1), 141-144.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

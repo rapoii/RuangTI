@@ -88,3 +88,6 @@ $$NTU = \frac{U \cdot A}{\dot{m}_{HTF} \cdot c_{p,HTF}} \geq 4$$
 | Jumlah tube ($n$) | 19 | – |
 | Panjang unit ($H$) | 2,0 | m |
 | $\dot{m}_{HTF}$ (minyak termal)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

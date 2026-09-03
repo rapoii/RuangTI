@@ -115,4 +115,7 @@ Pertimbangkan lini produksi minuman ringan dengan $I = 3$ SKU dan horizon perenc
 | Waktu proses $a_i$ (menit/unit) | 1,2 | 1,5 | 1,0 |
 | Penalty backorder $\pi_i$ (Rp/unit) | 1.200 | 1.500 | 1.000 |
 
-**Langkah 1: Formulasi Permintaan Skenario.** Dengan MMFE, bangkitkan 3 skenario permintaan menggunakan quantile $Q_{10}$, $Q_{50}$, $Q_{90}$. Permintaan minggu ke-1: $\xi_A = \{1080, 1200, 1380\}$, $\xi_B = \{700, 800, 940\}$, $\xi_C =
+**Langkah 1: Formulasi Permintaan Skenario.** Dengan MMFE, bangkitkan 3 skenario permintaan menggunakan quantile $Q_{10}$, $Q_{50}$, $Q_{90}$. Permintaan minggu ke-1: $\xi_A = \{1080, 1200, 1380\}$, $\xi_B = \{700, 800, 940\}$, $\xi_C =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

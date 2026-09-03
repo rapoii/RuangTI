@@ -101,3 +101,6 @@ Dengan mengikuti standar ASTM F2910:2023, industri dapat memastikan bahwa penggu
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang penggunaan drones dalam pengiriman rantai dingin, mencakup aspek teknis, metodologis, dan evaluatif yang relevan dengan praktik industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

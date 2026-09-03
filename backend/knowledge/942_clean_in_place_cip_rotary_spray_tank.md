@@ -148,3 +148,6 @@ Dalam hal otomasi, integrasi sistem CIP dengan teknologi IoT dapat memungkinkan 
 Ke depan, penelitian dapat difokuskan pada pengembangan bahan pembersih yang lebih efisien dan ramah lingkungan, serta peningkatan algoritma pemodelan untuk memprediksi kinerja sistem CIP dalam berbagai kondisi operasional. 
 
 Dengan demikian, pemahaman yang mendalam tentang kinetika pembersihan dan penerapan teknologi modern dalam sistem CIP akan menjadi kunci untuk meningkatkan efisiensi dan efektivitas dalam industri makanan dan minuman.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -158,3 +158,6 @@ compensates for network delays up to 100ms. 5G edge computing targets $<20ms$ mo
 5. ISO/TS 15066:2023. Robots and robotic devices — Collaborative robots. International Organization for Standardization.
 6. Schleich, B., Anwer, N., Mathieu, L., & Wartzack, S. (2024). Shaping the digital twin for design and production engineering. *CIRP Annals*, 73(1), 141-144.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -98,3 +98,6 @@ Rekayasa recyling Li-ion memiliki hubungan erat dengan supply chain (SCM) melalu
 Disiplin K3 dan ESG menuntut evaluasi risiko kesehatan (paparan asam) dan dampak lingkungan (emisi limbah). Tantangan adopsi meliputi volatilitas supply EOL battery, regulasi yang berbeda antar negara, serta kebutuhan standar internasional seperti ISO 12405 untuk sertifikasi baterai remanufactured. Evaluasi manajerial dilakukan melalui KPI seperti yield rate (>85%), recovery rate (>90%), dan ESG score. Integrasi dengan IEEE 2933 memastikan traceability data untuk audit kepatuhan dan pengurangan risiko hukum.
 
 Secara keseluruhan, modul ini memberikan kerangka lengkap untuk implementasi recyling Li-ion yang berkelanjutan dan menguntungkan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

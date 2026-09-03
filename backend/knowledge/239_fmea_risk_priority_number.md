@@ -132,3 +132,6 @@ Link simulation-validated detection methods to SPC control charts and automated 
 5. IEC 60812:2024. Failure modes and effects analysis (FMEA and FMECA). International Electrotechnical Commission.
 6. Bowles, J. B. (2023). Fundamentals of failure mode and effects analysis. *IEEE Reliability Magazine*, 2(1), 12-28.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -455,4 +455,4 @@ Untuk menerapkan engine Digital Twin ini ke dalam lingkungan produksi riil, arsi
 4. **Liang, S. Y., & Shih, A. J.** (2016). *Analysis of Machining Operations: Physics and Dynamics of Metal Cutting*. Springer-Verlag New York. DOI: [10.1007/978-1-4939-3354-9](https://doi.org/10.1007/978-1-4939-3354-9).
 5. **Grieves, M., & Vickers, J.** (2017). *Digital Twin: Mitigating Unpredictable, Undesirable Emergent Behavior in Complex Systems*. In: Kahlen, J., Flumerfelt, S., Alves, A. (eds) **Transdisciplinary Perspectives on System Complexity**, Springer, Cham, pp. 85–113. DOI: [10.1007/978-3-319-38756-7_4](https://doi.org/10.1007/978-3-319-38756-7_4).
 6. **ISO 3685:1993**. *Tool-Life Testing with Single-Point Turning Tools*. International Organization for Standardization, Geneva.
-7. **IEEE Standard 1451.0-2021**: *Standard for a Smart Transducer Interface for Sensors and Actuators*, IEEE Instrumentation and Measurement Society.
+7. **IEEE Standard 1451.0-2021**: *Standard for a Smart Transducer Interface for Sensors and Actuators*, IEEE Instrumentation and Measurement Society.$.

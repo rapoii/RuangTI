@@ -89,3 +89,6 @@ Teknik pemulihan nikel melalui bioremediasi tidak hanya relevan dalam industri p
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk waktu yang diperlukan untuk proses bioremediasi dan kebutuhan untuk pengujian laboratorium yang ekstensif. Penelitian masa depan harus fokus pada pengembangan mikroorganisme yang lebih efisien, optimasi proses, dan integrasi teknologi bioremediasi dengan sistem pengolahan yang ada. 
 
 Dengan meningkatnya tekanan untuk memenuhi standar lingkungan yang lebih ketat, teknik pemulihan nikel inovatif ini dapat menjadi solusi yang menjanjikan untuk tantangan yang dihadapi industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

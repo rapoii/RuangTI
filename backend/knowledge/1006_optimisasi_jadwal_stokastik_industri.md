@@ -139,3 +139,6 @@ Optimisasi jadwal stokastik tidak hanya relevan dalam konteks produksi, tetapi j
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas perhitungan dan kebutuhan untuk data yang akurat. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan penerapan teknologi seperti kecerdasan buatan untuk meningkatkan kemampuan prediksi dan penjadwalan.
 
 Dengan demikian, optimisasi jadwal stokastik dalam lingkungan produksi berbasis fleksibilitas merupakan area yang menjanjikan untuk penelitian dan pengembangan lebih lanjut, dengan potensi untuk memberikan dampak signifikan pada efisiensi operasional dan daya saing industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -99,3 +99,6 @@ Siklus ekstraksi sc-CO₂ industri mengikuti tiga tahap utama yang harus dimodel
 **Tahap II – Extraction (60–180 menit):** sc-CO₂ dialirkan secara continuous dalam mode *dynamic extraction*. Larutan solute-loaded CO₂ keluar melalui separator bertekanan rendah untuk recover minyak.
 
 **Tahap III – Depressurization (5–15 menit):**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -138,3 +138,6 @@ Teknologi IQF tidak hanya terbatas pada industri makanan, tetapi juga dapat dite
 Dari perspektif K3 dan ESG, pengurangan drip loss juga berkontribusi pada keberlanjutan dengan mengurangi limbah makanan. Namun, tantangan yang dihadapi termasuk kebutuhan untuk mengoptimalkan proses dan mengurangi biaya operasional. Penelitian masa depan harus fokus pada pengembangan teknologi baru yang dapat meningkatkan efisiensi energi dan mengurangi dampak lingkungan dari proses pembekuan.
 
 Dalam rangka mencapai standar masa depan, kolaborasi antara industri dan akademisi sangat penting untuk mengembangkan solusi inovatif yang dapat memenuhi tuntutan pasar yang terus berkembang. Penelitian lebih lanjut juga diperlukan untuk mengeksplorasi hubungan antara parameter proses dan kualitas produk akhir, serta untuk mengembangkan model prediktif yang dapat digunakan untuk merancang sistem IQF yang lebih efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

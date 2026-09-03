@@ -94,3 +94,6 @@ Factors increasing heat stress risk:
 6.  **NIOSH.** (2023). *Criteria for a Recommended Standard: Occupational Heat Exposure*. CDC Publication No. 2023-145.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

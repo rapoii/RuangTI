@@ -116,4 +116,7 @@ Tambahkan *noise figure* UE: $N_{\text{total}} = -93{,}98 + 9 = -84{,}98$ dBm. A
 
 $$PL(50) = 36{,}7 \log_{10}(50) + 22{,}7 + 26 \log_{10}(3{,}5) = 62{,}68 + 22{,}7 + 22{,}76 = 108{,}14 \text{ dB}$$
 
-Daya sinyal terima: $S = P_{tx} - PL + G_{tx} + G_{rx} = 43 - 108{,}14 + 8 +
+Daya sinyal terima: $S = P_{tx} - PL + G_{tx} + G_{rx} = 43 - 108{,}14 + 8 +$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

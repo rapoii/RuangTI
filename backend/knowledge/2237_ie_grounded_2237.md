@@ -108,4 +108,7 @@ Ambil satu autoclave HPAL dengan spesifikasi operasional berikut (diadopsi dari 
 | Parameter | Nilai |
 |---|---|
 | Kapasitas umpan | $F_{\text{feed}} = 200$ t/jam bijih kering |
-| Kadar Ni dalam bijih |
+| Kadar Ni dalam bijih |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

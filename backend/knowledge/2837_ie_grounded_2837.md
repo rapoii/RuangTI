@@ -100,3 +100,6 @@ JIANG & TANG (2025) dan Shin, Kim & Jeong (2024) secara konsisten menyusun SOP C
 **Tahap 1 — Inisiasi *End-of-Life* (EOL) Collection.** OEM mengeluarkan *battery passport* (formatasi ISO/IEC 21434 dan *EU Battery Passport*) yang mencakup riwayat siklis, SOH, DOD rata-rata, dan provenance material. Threshold pengembalian: SOH ≤ 80% atau kapasitas terukur < kapasitas nominal 80%.
 
 **Tahap 2 — Logistik Terbalik (*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

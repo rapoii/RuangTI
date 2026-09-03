@@ -132,3 +132,6 @@ Tantangan adopsi meliputi: (1) kebutuhan data historis yang besar untuk model id
 Kesimpulan modul ini menegaskan bahwa MPC dengan state-space, Kalman disturbance estimation, dan constraint handling merupakan teknologi mutakhir yang siap diaplikasikan di industri kimia Indonesia untuk mendukung transformasi digital dan green industry.
 
 (Total kata keseluruhan modul: 1.856)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -102,4 +102,7 @@ $$\text{Gap}_{\text{PPO}} = \frac{Z_{\text{PPO}} - Z_{\text{DP}}^*}{Z_{\text{DP}
 
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
-**Kasus Hipotetis — Pabrik Cat Pelapis (Coatings Plant).** Pertimbangkan fasilitas produksi yang memproduksi 3 jenis cat: *primer*, *basecoat*, dan *topcoat
+**Kasus Hipotetis — Pabrik Cat Pelapis (Coatings Plant).** Pertimbangkan fasilitas produksi yang memproduksi 3 jenis cat: *primer*, *basecoat*, dan *topcoat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

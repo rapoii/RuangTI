@@ -100,4 +100,7 @@ Penurunan 67% versus boiler gas €40/MWh (Xu & Wang, 2024). **Payback period: 3
 
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
-**Keterbatasan Model Toloza et al. (2026):** Model 1D radial mengabaikan *natural convection* di PCM cair yang secara eksperimental menyumbang 15–40% peningkatan $k_{eff}$. Asumsi *constant properties* dalam rentang suhu 200–250°C belum diverifikasi untuk eutektik yang dilaporkan. Coupling dengan
+**Keterbatasan Model Toloza et al. (2026):** Model 1D radial mengabaikan *natural convection* di PCM cair yang secara eksperimental menyumbang 15–40% peningkatan $k_{eff}$. Asumsi *constant properties* dalam rentang suhu 200–250°C belum diverifikasi untuk eutektik yang dilaporkan. Coupling dengan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

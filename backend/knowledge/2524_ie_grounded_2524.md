@@ -86,4 +86,9 @@ $$Q_v = 0{,}0075 \cdot 3{,}5 \times 10^{-4} \cdot (25 - (-25)) = 1{,}31 \times 1
 
 Untuk 1.400 vial: $Q_{total}$ = 0,184 W — sangat rendah, menunjukkan efisiensi termal tinggi namun membutuhkan kontrol presisi.
 
-**Langkah 2 — Laju sublimasi.** Dengan $R_p$ tipikal 1.000 m²·Pa·s/kg untuk produk 5% w/v sukrosa pada akhir *primary drying*, dan $
+**Langkah 2 — Laju sublimasi.** Dengan $R_p$ tipikal 1.000 m²·Pa·s/kg untuk produk 5% w/v sukrosa pada akhir *primary drying*, dan $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

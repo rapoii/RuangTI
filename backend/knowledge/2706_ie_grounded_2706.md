@@ -146,3 +146,7 @@ $$U = \frac{\sum R_k}{R_{cell}} = \frac{85}{766.7} = 11.09\%$$
 
 $$L_{air} = T_{slot} \times N_{slots} = 0.25 \text{ ms} \times 4 = 1 \text{ ms (4-slot TX})$$
 $$L_{trans} \approx 0.05 \text{ ms
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

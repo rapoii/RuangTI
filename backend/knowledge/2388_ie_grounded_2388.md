@@ -137,3 +137,7 @@ $$G_0 = R_{\text{goal}} + \sum_{k=0}^{97} \gamma^k \cdot c_{\text{step}} = 100 +
 $$\sum_{k=0}^{97} (0.95)^k = \frac{1-(0.95)^{98}}{1-0.95} = \frac{1-0.00706}{0.05} \approx 19.86$$
 
 $$G_0
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

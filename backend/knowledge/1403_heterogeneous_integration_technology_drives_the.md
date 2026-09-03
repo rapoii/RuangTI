@@ -100,4 +100,7 @@ Tiga opsi utama sesuai paper Gao dkk. (2025):
 |--------|-----------|-------|----------|
 | FOWLP | Tinggi (batch wafer) | 70–80% | Multi-die, modul skala besar |
 | TSV-based 3D | Sedang | 65–75% | Chip-to-chip latency minimum |
-| TGV-based 2.5D | Tinggi | 75–85%
+| TGV-based 2.5D | Tinggi | 75–85%.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -103,3 +103,6 @@ subject to $\sum_{j} x_{ij} = d_i$ (permintaan terpenuhi) dan $\sum_{i} x_{ij} \
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
 ### 4.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

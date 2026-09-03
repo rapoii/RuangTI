@@ -114,4 +114,7 @@ $$CW_{fused} = \sum_{m=1}^{M} \alpha_m \cdot CW_m, \quad \sum \alpha_m = 1$$
 
 **Langkah 1: Bobot Pairwise NASA-TLX** (dari 15 perbandingan berpasangan terhadap 6 subskala, diambil 5 pair teratas dengan signifikansi klinis):
 
-Misal $p = [1, 0, 1, 0, 1, 1]$
+Misal $p = [1, 0, 1, 0, 1, 1]$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

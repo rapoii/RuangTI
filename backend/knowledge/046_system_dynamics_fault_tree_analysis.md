@@ -51,3 +51,6 @@ FTA adalah metode deduktif top-down yang digunakan dalam rekayasa keandalan dan 
 
 ### Integrasi dengan FMEA (Kombinasi 2023-2025):
 FMEA (Induktif/Bottom-Up) sering digabungkan dengan FTA (Deduktif/Top-Down) dalam kerangka *Maintenance 4.0*. FMEA mengidentifikasi komponen yang rentan, dan FTA membuktikan bagaimana kegagalan komponen tersebut bereskalasi hingga meruntuhkan sistem utama, seringkali disimulasikan secara dinamis (*Dynamic FTA*).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -112,3 +112,6 @@ Di sisi lain, penerapan teknologi otomasi dalam pengendalian proses dapat mening
 Batasan metodologi yang ada saat ini mencakup ketidakpastian dalam parameter kinetika dan variabilitas bahan baku. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih akurat dan penerapan teknologi baru untuk meningkatkan efisiensi dan keberlanjutan dalam produksi biodiesel. 
 
 Dengan demikian, pemahaman yang mendalam tentang kinetika reaksi, keseimbangan, dan pemisahan fase sangat penting untuk memenuhi standar kualitas yang ditetapkan oleh SNI 7182:2015 dan untuk mendorong inovasi dalam industri biodiesel.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

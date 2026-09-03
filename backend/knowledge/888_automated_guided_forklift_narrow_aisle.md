@@ -139,3 +139,6 @@ Arah riset masa depan dapat mencakup pengembangan sistem yang lebih cerdas denga
 - ISO 3691-4: Automated Guided Vehicles - Part 4: Safety requirements for automated guided vehicles.
 - FEM 9.831: Storage and Retrieval Machines.
 - Zhang, Y., et al. (2023). "Advancements in Automated Forklift Systems: A Review." *Industrial Robot Handbook*.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

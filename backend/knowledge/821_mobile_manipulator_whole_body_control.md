@@ -94,3 +94,6 @@ WB-MPC memiliki aplikasi yang luas dalam berbagai disiplin, termasuk rantai paso
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan komputasi yang tinggi dan kompleksitas dalam pengembangan model. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi dengan teknologi AI untuk meningkatkan kemampuan prediktif.
 
 Dengan mempertimbangkan standar masa depan, seperti ISO 3691-4, penting untuk terus memperbarui praktik dan teknologi yang digunakan dalam implementasi WB-MPC untuk memastikan keselamatan dan efisiensi dalam operasi industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

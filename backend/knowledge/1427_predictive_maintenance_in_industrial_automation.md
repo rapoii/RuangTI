@@ -118,3 +118,7 @@ $$\Delta C_{\text{downtime}} = 361,35 - 174,11 = \text{Rp } 187,24 \text{ miliar
 Penurunan biaya pemeliharaan reaktif (25–50%, ambil median 37,5%):
 
 $$\Delta C_{\text{maintenance}} = 0,375 \times 18 = \text{Rp } 6,75
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

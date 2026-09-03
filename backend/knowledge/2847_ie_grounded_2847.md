@@ -108,4 +108,7 @@ Desainer mengintegrasikan pegangan ke badan utama (*single-piece* melalui stampi
 | Tingkat reject | 2,8% |
 | Biaya material per unit | Rp 47.000 |
 | Biaya fabrikasi per unit | Rp 31.500 |
-| Biaya perakitan per unit | Rp 16.500 |
+| Biaya perakitan per unit | Rp 16.500 |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

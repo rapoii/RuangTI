@@ -126,3 +126,6 @@ Meskipun LSM dan RSM menawarkan banyak keuntungan, ada beberapa batasan, seperti
 Ke depan, penelitian dapat difokuskan pada pengembangan algoritma berbasis AI untuk meningkatkan akurasi dalam perencanaan dan penjadwalan proyek. Selain itu, integrasi dengan teknologi IoT untuk monitoring real-time dapat meningkatkan efisiensi dan responsivitas dalam manajemen proyek.
 
 Dengan demikian, pemahaman yang mendalam tentang LSM dan RSM serta penerapan teknik-teknik ini menjadi sangat penting bagi profesional di bidang teknik industri dan manajemen konstruksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

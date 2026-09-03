@@ -156,3 +156,7 @@ Konvergensi tercapai ketika gap antara upper bound (MP) dan lower bound (SP) < Î
 Untuk menentukan transfer price antara OEM dan third-party echelon operator, paper menggunakan **Stackelberg equilibrium**:
 
 $$\pi_M(q_M, q_R) = (p^{new} - c^{prod}) q_M + (p^{trans} - c^{trans}) q_R
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

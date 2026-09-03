@@ -116,4 +116,7 @@ Arah riset masa depan harus fokus pada integrasi teknologi baru, seperti blockch
 
 ---
 
-Dokumen ini memberikan gambaran menyeluruh tentang strategi inovasi dalam automasi pelabuhan, dengan fokus pada efisiensi operasional dan penerapan teknologi baru. Dengan mengikuti langkah-langkah yang diuraikan, pelabuhan dapat meningkatkan kinerja mereka dan tetap kompetitif di pasar global.
+Dokumen ini memberikan gambaran menyeluruh tentang strategi inovasi dalam automasi pelabuhan, dengan fokus pada efisiensi operasional dan penerapan teknologi baru. Dengan mengikuti langkah-langkah yang diuraikan, pelabuhan dapat meningkatkan kinerja mereka dan tetap kompetitif di pasar global.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

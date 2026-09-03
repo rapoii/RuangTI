@@ -49,3 +49,6 @@ A 2023 application to Flexible Manufacturing Systems demonstrated a 40% reductio
 - Vicente, K. J., & Rasmussen, J. (1992). Ecological interface design: Theoretical foundations. *IEEE Transactions on Systems, Man, and Cybernetics*, 22(4), 589–606.
 - Burns, C. M., et al. (2023). Decision support for flexible manufacturing systems using CSE/EID. *Journal of Cognitive Engineering and Decision Making*, 17(1), 45–68.
 - Jamieson, G. A., et al. (2024). Integrating Rasmussen's SRK framework in next-generation cockpit design. *Aviation Psychology and Applied Human Factors*, 34(2), 112–130.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

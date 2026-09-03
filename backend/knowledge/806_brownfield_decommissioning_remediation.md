@@ -126,3 +126,6 @@ Tantangan adopsi meliputi perubahan regulasi yang dinamis, keterbatasan dana unt
 (Word count bagian 5: 198 kata)
 
 **Total kata keseluruhan: 1.598 kata**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -39,3 +39,6 @@ Control room design requires balancing information density against salience: eco
 - Endsley, M. R. (2023). *Designing for Situation Awareness: An Approach to User-Centered Design* (3rd ed.). CRC Press.
 - Salmon, P. M., et al. (2024). Distributed situation awareness in complex sociotechnical systems: A systematic review. *Applied Ergonomics*, 115, 104162.
 - Wickens, C. D. (2008). Situation awareness: Review of Mica Endsley's 1995 articles on SA theory. *Human Factors*, 50(3), 397–403.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -88,3 +88,6 @@ Pengembangan exoskeleton biomekanik adaptif memiliki implikasi yang luas di berb
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti biaya pengembangan yang tinggi dan kebutuhan untuk penyesuaian individu. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan material yang lebih ringan dan lebih kuat, serta teknologi sensor yang dapat menyesuaikan fungsi exoskeleton secara real-time berdasarkan kebutuhan pengguna.
 
 Dengan demikian, pengembangan exoskeleton biomekanik adaptif tidak hanya berkontribusi pada peningkatan produktivitas tetapi juga menciptakan lingkungan kerja yang lebih inklusif dan aman bagi pekerja dengan kebutuhan khusus. Penelitian lebih lanjut dan kolaborasi lintas disiplin sangat diperlukan untuk mencapai potensi penuh dari teknologi ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -44,3 +44,6 @@ Module 279 (Occupational H&S Standards), Module 280 (Sustainability Engineering 
 2. ISO. (2021). *Annex SL / Harmonized Structure* appendices to ISO management system standards (ISO 9001:2015; ISO 14001:2015; ISO 45001:2018; ISO/IEC 27001:2022).
 3. Karapetrovic, S., & Casadesús, M. (2009). Dynamics in integrated management systems. *Supply Chain Management: An International Journal*, 14(1), 2–10.
 4. International Journal of Quality & Reliability Management (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

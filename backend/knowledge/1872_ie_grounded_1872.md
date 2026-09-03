@@ -132,4 +132,7 @@ Repeat:
 Until convergence
 ```
 
-**Tahap 6 — Validasi Solusi.** Uji *post-hoc* dengan simulasi Monte Carlo (10.000 run) untuk memeriksa robust-nya solusi
+**Tahap 6 — Validasi Solusi.** Uji *post-hoc* dengan simulasi Monte Carlo (10.000 run) untuk memeriksa robust-nya solusi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

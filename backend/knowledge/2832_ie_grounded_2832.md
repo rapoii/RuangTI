@@ -130,3 +130,7 @@ Implementasi sistematis kerangka multi-objektif dengan Dekomposisi Benders dalam
 │  TAHAP 4: Iterasi Benders                                  │
 │  ┌──────────────────────────────────────────────┐           │
 │  │
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

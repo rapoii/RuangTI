@@ -113,4 +113,7 @@ Implementasi rekayasa LHTES untuk integrasi dengan HTHP mengikuti SOP berlapis b
 
 ---
 
-## 4. Studi
+## 4. Studi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -184,3 +184,6 @@ Diadaptasi dari studi kasus Lead Researchers (2023) untuk jaringan susu di regio
 | $c_{jkl}^p$ | 0.062 | USD/unit-km |
 | $Q_j$ | 45.000 | unit/hari |
 | $V_k$ | 18.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

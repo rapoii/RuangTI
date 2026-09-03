@@ -138,3 +138,6 @@ Penerapan kerangka kerja AI dalam AM tidak hanya terbatas pada industri manufakt
 Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan untuk data yang berkualitas tinggi dan tantangan dalam integrasi sistem yang kompleks. Oleh karena itu, riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan teknik pengumpulan data yang lebih baik, serta eksplorasi aplikasi AI dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (CSR).
 
 Dengan demikian, kerangka kerja AI terintegrasi untuk optimasi proses dalam teknik manufaktur aditif menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas produksi, sambil menghadapi tantangan yang ada dengan pendekatan yang sistematis dan berbasis data.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

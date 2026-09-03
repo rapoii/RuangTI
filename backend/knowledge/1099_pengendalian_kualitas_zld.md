@@ -112,3 +112,6 @@ Metodologi Six Sigma dan Lean Manufacturing tidak hanya relevan dalam konteks ZL
 Namun, ada batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan keterlibatan semua pihak dalam proses perbaikan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik baru yang dapat meningkatkan efektivitas implementasi Six Sigma dan Lean dalam konteks yang lebih luas.
 
 Dengan demikian, pengembangan sistem pengendalian kualitas untuk proses ZLD menggunakan metode Six Sigma dan Lean Manufacturing tidak hanya akan meningkatkan kualitas produk tetapi juga memberikan kontribusi positif terhadap keberlanjutan lingkungan dan efisiensi operasional di industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

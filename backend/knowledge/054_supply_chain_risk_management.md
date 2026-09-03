@@ -113,3 +113,6 @@ $$Penalty(t) = \begin{cases} 0 & t \leq RTO \\ k(t - RTO) & t > RTO \end{cases}$
 - Chopra, S., & Sodhi, M.S. (2024). Managing supply chain risk in volatile environments. *Production and Operations Management*, 33(2), 345-362.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -84,3 +84,6 @@ Penerapan teknologi blockchain tidak hanya terbatas pada rantai pasokan, tetapi 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk infrastruktur teknologi yang memadai dan resistensi terhadap perubahan dari pemangku kepentingan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan solusi yang lebih terintegrasi dan ramah pengguna.
 
 Secara keseluruhan, teknologi blockchain memiliki potensi besar untuk meningkatkan transparansi dan keberlanjutan dalam rantai pasokan, tetapi memerlukan kolaborasi dan inovasi berkelanjutan dari semua pemangku kepentingan untuk mencapai hasil yang optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

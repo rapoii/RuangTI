@@ -126,4 +126,7 @@ Andrameda et al. (2024) melengkapi protokol ini dengan prosedur *pre-treatment* 
 
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
-### 4.1 Studi Kasus: Autoclave Kompartemen 2 Pabrik HPAL Halmahera (Kapasitas 40.000 t
+### 4.1 Studi Kasus: Autoclave Kompartemen 2 Pabrik HPAL Halmahera (Kapasitas 40.000 t.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

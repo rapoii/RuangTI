@@ -44,3 +44,8 @@ di mana $w_i \in \{0,1,...,5\}$ adalah bobot pairwise comparison untuk dimensi $
 **Pilar 4: Signal Detection Theory (SDT) untuk Sensitivitas Peringatan.** Diskriminasi operator antara alarm benar dan *false alarm* dimodelkan sebagai:
 
 $$d' = z(H) - z(F), \quad \beta = \frac{\phi(z(F))}{\phi(z(H))} \cdot e^{\left(\frac{z(H)^2 - z(F)^2}{2}\right)^{-1}}$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

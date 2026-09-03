@@ -98,3 +98,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti biaya implementas
 Ke depan, arah riset dapat difokuskan pada pengembangan algoritma analitik yang lebih canggih untuk memproses data besar yang dihasilkan oleh IoT dan blockchain, serta penerapan kecerdasan buatan (AI) untuk meningkatkan pengambilan keputusan dalam manajemen rantai pasok.
 
 Dengan demikian, pendekatan kualitas 4.0 menawarkan potensi besar untuk meningkatkan efisiensi dan kualitas dalam manajemen rantai pasok, namun memerlukan perhatian terhadap tantangan yang ada dan pengembangan berkelanjutan untuk mencapai hasil yang optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

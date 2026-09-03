@@ -99,3 +99,6 @@ Ke depan, arah riset dapat difokuskan pada integrasi teknik evaluasi opsi riil d
 --- 
 
 Dokumen ini memberikan panduan komprehensif tentang teknik evaluasi investasi dalam konteks opsi riil, yang diharapkan dapat membantu praktisi dan akademisi dalam memahami dan menerapkan metode ini secara efektif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

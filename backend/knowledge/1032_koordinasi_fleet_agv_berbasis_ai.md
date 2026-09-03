@@ -101,3 +101,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin y
 Referensi:
 - A. Smith, 'AI-Driven Fleet Coordination for AGVs', International Journal of Production Research, 2024.
 - ASTM E2876-20.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -129,3 +129,6 @@ Optimasi pengambilan pesanan tidak hanya relevan untuk industri e-commerce, teta
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas algoritma dan kebutuhan akan data yang akurat. Penelitian masa depan dapat fokus pada pengembangan algoritma yang lebih efisien dan penerapan teknologi baru untuk meningkatkan sistem pengambilan pesanan.
 
 Dengan demikian, optimasi pengambilan pesanan di gudang e-commerce besar adalah langkah penting menuju efisiensi operasional yang lebih baik, yang pada akhirnya akan memberikan keuntungan kompetitif di pasar yang semakin ketat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

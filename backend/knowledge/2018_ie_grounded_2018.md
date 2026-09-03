@@ -167,3 +167,7 @@ $$\text{NPV} = \sum_{t=0}^{5}\frac{B_t - C_t}{(1{,}1)^t} \approx \text{Rp } -695
 Untuk memvalidasi model virtual terhadap 200 sampel pengukuran suhu bearing motor:
 
 $$\bar{y} = \frac{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

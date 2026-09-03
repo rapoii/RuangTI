@@ -88,3 +88,6 @@ Metrologi overlay tidak hanya relevan dalam industri semikonduktor, tetapi juga 
 Namun, metodologi yang ada saat ini memiliki batasan, terutama dalam hal kemampuan untuk mengukur overlay pada fitur yang sangat kecil dan kompleks. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik baru yang dapat mengatasi tantangan ini. Arah riset masa depan harus mencakup pengembangan algoritma berbasis kecerdasan buatan untuk analisis data metrologi, serta integrasi dengan sistem otomatisasi untuk meningkatkan efisiensi dan akurasi.
 
 Dengan demikian, inovasi dalam teknik metrologi overlay akan menjadi kunci untuk mengatasi tantangan masa depan dalam industri litografi EUV dan memastikan keberlanjutan dalam produksi semikonduktor.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

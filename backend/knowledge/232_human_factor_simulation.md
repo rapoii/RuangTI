@@ -145,3 +145,6 @@ Multivariate anthropometry captures correlated body dimensions better than univa
 5. Reason, J. (2023). *Human Error* (Reprint ed.). Cambridge University Press.
 6. ISO 9241-210:2019. Ergonomics of human-system interaction — Part 210: Human-centred design for interactive systems.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

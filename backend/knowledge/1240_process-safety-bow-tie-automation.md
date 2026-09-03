@@ -90,3 +90,6 @@ Automasi dalam analisis Bow-Tie tidak hanya terbatas pada sektor manufaktur, tet
 Namun, ada beberapa batasan metodologi yang perlu diperhatikan, termasuk ketergantungan pada data yang akurat dan relevan serta potensi bias dalam analisis. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk analisis risiko dan integrasi teknologi baru seperti kecerdasan buatan untuk meningkatkan akurasi dan efisiensi.
 
 Dengan demikian, penerapan analisis Bow-Tie yang terautomasi dapat menjadi alat yang sangat berharga dalam meningkatkan keselamatan proses dan efisiensi operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

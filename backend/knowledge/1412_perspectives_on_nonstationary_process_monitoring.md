@@ -105,4 +105,7 @@ Seluruh SOP terdokumentasi dalam ISA-88/ISA-95 batch control standard dan dapat 
 
 **Studi Kasus:** Unit *distillation column* pada pabrik petrokimia dengan $m = 8$ variabel proses terkritis (suhu, tekanan, *reflux ratio*, laju umpan, komposisi 4 fraksi) dan target produksi *naphtha* 99,5% kemurnian. Kami memiliki *dataset training* $n = 1000$ observasi kondisi operasi normal (segmen stasioner pendek).
 
-**Langkah 1 — Hitung matriks kov
+**Langkah 1 — Hitung matriks kov.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

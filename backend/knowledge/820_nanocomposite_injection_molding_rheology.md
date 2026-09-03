@@ -132,3 +132,6 @@ Penerapan teknologi CNT dan graphene dalam penguatan polimer tidak hanya terbata
 Batasan metodologi yang ada saat ini termasuk kesulitan dalam pengendalian distribusi serat dan variabilitas dalam sifat mekanik. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknik baru untuk meningkatkan kontrol proses dan pemahaman yang lebih baik tentang interaksi antara CNT, graphene, dan matriks polimer.
 
 Dengan demikian, penelitian ini memberikan kontribusi signifikan terhadap pemahaman dan penerapan material komposit yang diperkuat dengan CNT dan graphene dalam industri, serta membuka jalan untuk inovasi lebih lanjut di bidang teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

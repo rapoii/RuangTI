@@ -225,3 +225,6 @@ Parameter proses final studi kasus: lilit helikal ±30° wet-winding dengan $T_{
 4. Ye, S., Mo, Y., Ou, H., Bi, S., & Johnson, S. (2023). Tension Control in Filament Winding Using Constant Force Mechanisms. *Proceedings of ASME IMECE2023*, Volume 6: Dynamics, Vibration, and Control. DOI: 10.1115/IMECE2023-114308.
 5. Hu, D., Shao, W., Lu, D., Xu, Y., & Wang, J. (2024). Design and material optimization of carbon fiber composite winding reinforcement layer for vehicle Type-IV hydrogen storage vessels. *Journal of Energy Storage*. DOI: 10.1016/j.est.2024.113459.
 6. Grothaus, R., Scholtyschik, O., & Schmidt, T. (2024). High Gravimetric Hydrogen Storage Efficiency of Type 5 Pressure Vessel by Dry Filament Winding-Infusion Process. *ASME PVP2024*, Volume 3: Fluid-Structure Interaction; High Pressure Technology. DOI: 10.1115/PVP2024-122002.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

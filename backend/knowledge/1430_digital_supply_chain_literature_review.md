@@ -146,4 +146,7 @@ Asumsi investasi:
 - $C_{opex}$ = Rp 600 juta/tahun (maintenance, konektivitas 5G, cloud)
 - $r = 8\%$ per tahun
 - $C_{training}$ = Rp 250 juta (workshop 3 batch × 25 orang)
-- $C_{integration}$ = Rp 400 juta (koneksi ke
+- $C_{integration}$ = Rp 400 juta (koneksi ke.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

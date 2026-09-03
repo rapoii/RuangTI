@@ -106,3 +106,6 @@ Di sisi lain, dengan semakin meningkatnya perhatian terhadap keberlanjutan dan t
 Batasan dari metodologi ini termasuk ketidakpastian dalam estimasi risiko dan dampak yang mungkin tidak terukur. Oleh karena itu, penelitian lebih lanjut diperlukan untuk memperbaiki model dan pendekatan yang ada, serta untuk mengembangkan alat yang lebih canggih dalam analisis risiko dan mitigasi dalam jaringan intermodal.
 
 Dengan demikian, membangun ketahanan jaringan intermodal melalui analisis risiko dan strategi mitigasi bukan hanya penting untuk keberlangsungan operasional, tetapi juga untuk mencapai tujuan keberlanjutan dan efisiensi dalam industri transportasi dan logistik di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

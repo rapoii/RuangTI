@@ -100,4 +100,7 @@ Probabilitas kegagalan kumulatif pada $t = 12.000$ jam:
 
 $$F(12.000) = 1 - e^{-(12.000/18.000)^{2{,}4}} = 1 - e^{-0{,}576} = 1 - 0{,}562 = 0{,}438$$
 
-Artinya, pada usia 12.000 jam, terdapat peluang 43,8% bearing telah mengalami degradasi serius — mengonfirmasi
+Artinya, pada usia 12.000 jam, terdapat peluang 43,8% bearing telah mengalami degradasi serius — mengonfirmasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

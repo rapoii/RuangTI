@@ -93,3 +93,6 @@ Ke depan, arah riset dalam analisis risiko karbon dapat mencakup pengembangan al
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang analisis risiko karbon dalam rantai pasok global dengan pendekatan berbasis simulasi, mengikuti standar dan referensi terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

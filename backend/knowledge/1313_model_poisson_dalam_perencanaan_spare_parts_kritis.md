@@ -110,3 +110,6 @@ Model Poisson Criticality tidak hanya relevan dalam konteks manajemen suku cadan
 Namun, terdapat batasan dalam metodologi ini, seperti asumsi independensi kejadian dan distribusi yang homogen. Penelitian masa depan dapat mengeksplorasi penggunaan model yang lebih kompleks, seperti model campuran atau model berbasis simulasi, untuk menangani ketidakpastian yang lebih besar dalam permintaan.
 
 Dengan demikian, penerapan model Poisson dalam manajemen suku cadang kritis merupakan langkah strategis yang dapat meningkatkan efisiensi operasional dan memberikan keunggulan kompetitif di pasar yang semakin ketat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

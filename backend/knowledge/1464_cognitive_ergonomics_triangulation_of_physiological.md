@@ -118,4 +118,7 @@ Implementasi protokol triangulasi beban kerja mental mengikuti kerangka sistemat
 |----------|-----------|-----------|--------------|--------------|-----------|-------------------|--------------------|
 | A | 28 | 42 | 72 | 6 | 180 | 3120 | 2700 |
 | B | 35 | 51 | 55 | 3 | 180 | 2640 | 2700 |
-|
+|.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

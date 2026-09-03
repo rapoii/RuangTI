@@ -138,3 +138,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Dengan mengikuti standar ISO 20400, perusahaan dapat memastikan bahwa proses pemilihan pemasok tidak hanya efisien tetapi juga berkelanjutan, mempertimbangkan aspek sosial dan lingkungan dalam pengambilan keputusan. 
 
 Dengan demikian, BWM dan ANP menawarkan pendekatan yang kuat dan fleksibel untuk pemilihan pemasok strategis, memberikan dasar yang kuat untuk keputusan yang lebih baik dalam manajemen rantai pasok.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

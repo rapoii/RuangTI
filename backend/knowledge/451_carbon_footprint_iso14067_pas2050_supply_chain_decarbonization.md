@@ -431,4 +431,4 @@ Tim *Continuous Improvement* & Rekayasa Rantai Pasok mengimplementasikan tiga in
 4. **Smart Freight Centre.** (2023). *Global Logistics Emissions Council (GLEC) Framework for Logistics Emissions Methodologies, Version 3.0*. Amsterdam: Smart Freight Centre.
 5. **Govindan, K., Cheng, T. C. E., Mishra, N., & Shukla, N.** (2024). Big data analytics and machine learning in green supply chain management and product carbon footprinting: A comprehensive review. *International Journal of Production Economics*, 268, 109112.
 6. **Barth, M., & Boriboonsomsin, K.** (2009). Energy and emissions impacts of a freeway-based dynamic eco-driving system. *Transportation Research Part D: Transport and Environment*, 14(6), 400-410.
-7. **Montgomery, D. C.** (2020). *Design and Analysis of Experiments (10th ed.)*. Hoboken, NJ: John Wiley & Sons.
+7. **Montgomery, D. C.** (2020). *Design and Analysis of Experiments (10th ed.)*. Hoboken, NJ: John Wiley & Sons.$.

@@ -92,3 +92,7 @@ Ambil satu operator OEM besar di pasar domestik dengan parameter berikut (repres
 **Langkah 1 — Penentuan $p$ optimal retailer.** Given $w=720$ CNY/kWh, kondisi FOC $\partial \Pi_R/\partial p = 0$ menghasilkan:
 
 $$p^* = \frac{a + b\,w}{2b} = \frac{5.000.
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

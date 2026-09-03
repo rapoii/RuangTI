@@ -102,3 +102,6 @@ Integrasi IoT dalam rantai dingin tidak hanya terbatas pada industri farmasi, te
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk masalah interoperabilitas antara perangkat dari berbagai produsen dan tantangan dalam keamanan data. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan standar interoperabilitas dan protokol keamanan yang lebih baik untuk melindungi data sensitif.
 
 Dengan demikian, integrasi IoT dalam rantai dingin menawarkan potensi besar untuk meningkatkan visibilitas dan responsivitas, tetapi memerlukan pendekatan yang terstruktur dan terstandarisasi untuk mengatasi tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

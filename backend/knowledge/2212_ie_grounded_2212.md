@@ -125,4 +125,7 @@ Pertimbangkan AGV dengan *state* diskret pada grid $10 \times 10$ sel, masing-ma
 - $\epsilon = 0.1$ (eksplorasi)
 - $R_{\text{goal}} = +100$, $R_{\text{collision}} = -100$, $R_{\text{step}} = -1$
 
-**Inisialisasi Q-Table:** $Q(s,a) = 0$
+**Inisialisasi Q-Table:** $Q(s,a) = 0$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

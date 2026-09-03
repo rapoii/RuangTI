@@ -105,4 +105,7 @@ Protokol transport yang digunakan adalah HTTPS untuk akses RESTful API dengan au
 
 **Tahap 4 — Sinkronisasi Data Fisik-Virtual.** Loop sinkronisasi digital twin diimplementasikan dengan tiga mekanisme: (a) *Event-driven update* menggunakan *publish-subscribe* pattern; (b) *Periodic polling* dengan interval yang disesuaikan dengan dinamika aset; (c) *State-based trigger* yang mengirim pembaruan hanya ketika selisih $|x_k - \hat{x}_{k|k-1}| > \delta_{threshold}$.
 
-**Tahap 5 — Integrasi dengan Sistem SCADA/MES.** Submodel AAS yang relevan (terutama $S_{State}$ dan
+**Tahap 5 — Integrasi dengan Sistem SCADA/MES.** Submodel AAS yang relevan (terutama $S_{State}$ dan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -73,4 +73,7 @@ Implementasi SCCO₂ di lantai pabrik mengikuti SOP 8-tahap yang dapat di-*scale
 
 **Tahap 5 — Ekstraksi Statis-Dinamis.** Mode *static* (tanpa aliran, 10–30 menit) mendistribusi CO₂ dalam matriks, dilanjutkan mode *dynamic* (aliran 0,5–4 kg CO₂/jam per kg umpan) selama 1–4 jam. Parameter kunci yang divariasikan: tekanan (10, 20, 30, 40 MPa), suhu (35, 40, 50, 60 °C), laju alir CO₂ (1, 2, 4 L/jam).
 
-**Tahap 6 — Separasi Bertingkat.** Aliran *extract-laden* CO₂ didepresurisasi di S
+**Tahap 6 — Separasi Bertingkat.** Aliran *extract-laden* CO₂ didepresurisasi di S.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

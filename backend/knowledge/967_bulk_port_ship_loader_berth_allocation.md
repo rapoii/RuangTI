@@ -153,3 +153,6 @@ Penelitian lebih lanjut diperlukan untuk mengintegrasikan teknologi baru, sepert
 --- 
 
 Dokumen ini memberikan panduan komprehensif mengenai alokasi dermaga dan penjadwalan loader kapal di terminal ekspor massal, dengan penekanan pada aspek matematis dan operasional yang relevan dalam konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

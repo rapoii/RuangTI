@@ -111,3 +111,6 @@ Implementasi UCC dan penggunaan sepeda kargo listrik memiliki dampak yang signif
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti ketergantungan pada infrastruktur yang ada dan kesiapan teknologi. Penelitian di masa depan harus fokus pada integrasi teknologi IoT untuk pemantauan real-time dan analisis data besar untuk meningkatkan efisiensi.
 
 Dengan demikian, pengembangan lebih lanjut dari UCC dan strategi pengiriman nol emisi akan menjadi kunci dalam menciptakan sistem logistik yang berkelanjutan dan efisien di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

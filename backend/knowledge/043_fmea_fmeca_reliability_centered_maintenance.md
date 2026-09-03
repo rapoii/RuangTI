@@ -50,3 +50,6 @@ Berdasarkan pohon keputusan RCM (*Decision Diagram*), komponen dibagi ke dalam s
 Evolusi terbaru RCM mengintegrasikan FMECA dengan Industrial Internet of Things (IIoT) dan Machine Learning:
 - **Dynamic FMEA:** Nilai Keterjadian ($O$) dan Deteksi ($D$) di-update secara real-time berdasarkan data sensor vibrasi.
 - **Digital Twin:** Model virtual untuk menyimulasikan laju degradasi (*Remaining Useful Life - RUL*) menggunakan algoritma Long Short-Term Memory (LSTM).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

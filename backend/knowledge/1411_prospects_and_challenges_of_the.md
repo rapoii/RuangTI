@@ -123,4 +123,7 @@ Ambil data publik NASA Battery Dataset (Safavi et al., 2024 menggunakan dataset 
 | Internal resistance trend $\Delta R_{100}$ | 0.012 Ω |
 | Vektor fitur CNN $\mathbf{f}_{\text{CNN}}$ (256-dimensi) | diekstrak otomatis |
 
-### 4.3 Perhitungan Manual
+### 4.3 Perhitungan Manual.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -135,3 +135,6 @@ Penerapan algoritma genetika dalam optimasi sistem ORC tidak hanya terbatas pada
 Namun, ada beberapa batasan dalam metodologi ini, termasuk kompleksitas komputasi yang tinggi dan kebutuhan akan data yang akurat untuk menghasilkan solusi yang optimal. Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan penerapan teknologi pembelajaran mesin untuk meningkatkan akurasi prediksi dalam optimasi sistem ORC.
 
 Dengan demikian, optimasi sistem ORC menggunakan algoritma genetika menawarkan potensi besar untuk meningkatkan efisiensi energi dalam proses industri, yang sejalan dengan kebutuhan untuk mencapai keberlanjutan dan efisiensi biaya dalam operasi industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

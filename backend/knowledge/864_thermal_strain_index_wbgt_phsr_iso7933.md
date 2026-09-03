@@ -151,3 +151,6 @@ Model stres panas tidak hanya relevan untuk industri pengecoran, tetapi juga dap
 Namun, terdapat batasan dalam metodologi ini, seperti variabilitas individu dalam toleransi panas dan kondisi lingkungan yang berubah-ubah. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan responsif terhadap perubahan kondisi.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi pemantauan real-time untuk kondisi lingkungan dan kesehatan pekerja, serta integrasi dengan sistem manajemen K3 yang lebih komprehensif. Dengan demikian, industri dapat lebih siap dalam menghadapi tantangan stres panas di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

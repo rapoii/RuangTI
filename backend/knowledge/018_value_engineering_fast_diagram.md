@@ -47,3 +47,6 @@ FAST Diagram memetakan hubungan logis antar fungsi menggunakan uji penalaran **H
 4. **Fase Evaluasi:** Seleksi ide-ide terbaik menggunakan matriks kelayakan teknis dan biaya.
 5. **Fase Pengembangan:** Perhitungan detail *Cost-Benefit Analysis* & simulasi rancangan alternatif.
 6. **Fase Presentasi & Implementasi:** Pengajuan proposal ke manajemen dan pengujian prototipe.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -125,3 +125,6 @@ Penerapan RNLE tidak hanya terbatas pada sektor manufaktur, tetapi juga relevan 
 Namun, terdapat batasan dalam metodologi RNLE, seperti ketidakmampuan untuk menangkap variabilitas individu dalam kemampuan fisik pekerja. Oleh karena itu, penelitian masa depan perlu fokus pada pengembangan model yang lebih adaptif dan personalisasi, serta integrasi teknologi otomatisasi untuk mengurangi beban kerja manual.
 
 Arah riset masa depan juga dapat mencakup pengembangan alat bantu ergonomis yang lebih baik, serta pelatihan berbasis teknologi untuk meningkatkan kesadaran pekerja tentang praktik penanganan material yang aman. Dengan demikian, RNLE dapat menjadi alat yang lebih efektif dalam menciptakan lingkungan kerja yang aman dan produktif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

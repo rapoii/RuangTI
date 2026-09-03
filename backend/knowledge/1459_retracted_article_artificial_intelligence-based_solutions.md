@@ -65,4 +65,7 @@ Implementasi AI untuk mitigasi perubahan iklim di lingkungan industri mengikuti 
 
 **Fase 1 — Akuisisi Data & Konstruksi Graf.** Sensor IoT dipasang pada seluruh *bill of equipment* yang signifikan secara energi (motor, kompresor, boiler, HVAC). Data historis konsumsi energi, profil beban, dan variabel eksogen (suhu ambient, harga listrik *time-of-use*) dikumpulkan dalam *window* minimal 12 bulan. Graf $\mathcal{G}$ dibangun dengan *edge weight* $a_{ij}$ yang merepresentasikan korelasi Pearson antar unit, menghasilkan *adjacency matrix* $\mathbf{A}$ sebagai input model.
 
-**Fase 2 — Pra-pemrosesan & Feature Engineering.** *Missing value imputation* dilakukan melalui mekanisme propagasi GNN itu sendiri (task *imputation* menurut taksonomi Jin dkk.,
+**Fase 2 — Pra-pemrosesan & Feature Engineering.** *Missing value imputation* dilakukan melalui mekanisme propagasi GNN itu sendiri (task *imputation* menurut taksonomi Jin dkk., \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

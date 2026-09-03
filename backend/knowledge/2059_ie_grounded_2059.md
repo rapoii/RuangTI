@@ -63,4 +63,7 @@ di mana $p_i$ adalah pitch koneksi ke-$i$ dan $\Phi$ fungsi distribusi kumulatif
 
 $$C_{total} = \sum_{i=1}^{N} \big[ C_{wafer,i} + C_{packaging,i} \cdot Y_i^{-1} \big] + C_{interposer} + C_{integration} + C_{test,i}$$
 
-dengan $Y_i$ yield chiplet ke-$i$ dan $C_{test,i
+dengan $Y_i$ yield chiplet ke-$i$ dan $C_{test,i$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

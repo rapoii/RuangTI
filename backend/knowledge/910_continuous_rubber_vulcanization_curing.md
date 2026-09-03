@@ -106,3 +106,6 @@ Teknologi vulkanisasi karet dengan microwave dan mandi garam cair memiliki poten
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan untuk pengendalian suhu yang ketat dan risiko Mooney scorch. Penelitian lebih lanjut diperlukan untuk mengembangkan model prediktif yang lebih akurat dan mengoptimalkan parameter proses. Arah riset masa depan dapat mencakup integrasi teknologi IoT untuk pemantauan real-time dan pengendalian proses, serta eksplorasi material baru yang dapat meningkatkan performa vulkanisasi.
 
 Dengan demikian, pemahaman yang mendalam mengenai kinetika penyembuhan, konduktivitas termal, dan keamanan Mooney scorch sangat penting untuk pengembangan teknologi vulkanisasi karet yang lebih efisien dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

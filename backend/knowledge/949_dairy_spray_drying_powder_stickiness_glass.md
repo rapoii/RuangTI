@@ -119,3 +119,6 @@ Penerapan prinsip-prinsip yang dibahas dalam modul ini tidak hanya terbatas pada
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti variabilitas dalam komposisi bahan baku dan kondisi lingkungan yang dapat mempengaruhi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan adaptif.
 
 Ke depan, fokus riset dapat diarahkan pada pengembangan teknologi baru yang dapat meningkatkan efisiensi proses pengeringan, serta penerapan teknik pemodelan dan simulasi untuk memprediksi perilaku bahan dalam kondisi yang berbeda. Dengan demikian, industri dapat terus berinovasi dan memenuhi permintaan pasar yang semakin meningkat akan produk berkualitas tinggi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

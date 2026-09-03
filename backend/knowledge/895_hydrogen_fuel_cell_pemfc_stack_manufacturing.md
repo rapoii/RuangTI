@@ -115,3 +115,6 @@ Penerapan teknologi PEMFC tidak hanya terbatas pada sektor energi, tetapi juga d
 Ke depan, penelitian harus difokuskan pada pengembangan material baru untuk meningkatkan kinerja MEA dan pelat bipolar, serta inovasi dalam proses manufaktur untuk meningkatkan efisiensi dan mengurangi biaya. Standar masa depan perlu disesuaikan dengan perkembangan teknologi dan kebutuhan industri yang terus berubah.
 
 Dengan demikian, pemahaman yang mendalam tentang proses manufaktur PEMFC dan penerapan metodologi yang tepat sangat penting untuk mencapai keberhasilan dalam industri ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

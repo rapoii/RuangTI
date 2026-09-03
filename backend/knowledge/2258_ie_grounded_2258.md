@@ -84,3 +84,7 @@ Diagram alir proses rekayasa secara lengkap dapat digambarkan sebagai:
         ↓ (MQTT/streaming)
 [AAS Agent (Edge)]
         ↓ (HTTPS POST /submodels/{id}/properties
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

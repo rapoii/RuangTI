@@ -112,3 +112,6 @@ Dalam hal otomasi, analisis LCC dapat digunakan untuk mengevaluasi investasi dal
 Batasan metodologi ini termasuk ketidakpastian dalam estimasi biaya dan asumsi yang digunakan dalam perhitungan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih akurat dan adaptif terhadap perubahan kondisi pasar dan teknologi.
 
 Dengan demikian, pemahaman dan penerapan LCC dan TCO yang tepat dapat memberikan keuntungan kompetitif yang signifikan bagi perusahaan di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

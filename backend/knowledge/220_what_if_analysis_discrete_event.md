@@ -165,4 +165,7 @@ for name, data in scenarios.items():
 - Chen, X., Li, Y., & Wang, Z. (2025). Digital twin-enabled what-if analysis for smart manufacturing systems. *Journal of Manufacturing Systems*, 81, 234-249.
 - Barton, R. R., & Meckesheimer, M. (2024). Metamodel-based simulation optimization and what-if analysis. *INFORMS Journal on Computing*, 36(2), 567-585.
 
-</parameter>
+</parameter>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

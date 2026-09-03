@@ -122,3 +122,6 @@ Menara pendingin tidak hanya berfungsi dalam industri kimia, tetapi juga dalam s
 Batasan metodologi yang ada termasuk ketergantungan pada kondisi operasi tertentu dan asumsi yang digunakan dalam teori Merkel. Penelitian masa depan dapat fokus pada pengembangan model yang lebih kompleks yang mempertimbangkan variabel lingkungan dan operasional yang lebih luas, serta penerapan teknologi baru seperti sensor pintar untuk pemantauan real-time.
 
 Dengan demikian, modul ini memberikan pemahaman yang komprehensif tentang penilaian termal menara pendingin induced-draft, serta tantangan dan solusi yang relevan dalam konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

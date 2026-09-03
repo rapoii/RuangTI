@@ -83,4 +83,7 @@ Cavalieri et al. (2024) mengusulkan arsitektur berlapis yang mengintegrasikan el
 
 **SOP-02: Pemilihan *Submodel Template*.** Gunakan *template* terstandar dari repositori *samm.io.catenax* atau *ZVEI* untuk submodel: *CommunicationProfile*, *NetworkSlicing*, *PerformanceMetrics*, *MaintenanceLog*, *AssetLocation*.
 
-**SOP-03: *AAS Modelling & Encoding*.** Bentuk *AASX package* (mengikuti *AutomationML* + OPC UA) menggunakan *Eclipse BaSyx SDK* atau *AAS
+**SOP-03: *AAS Modelling & Encoding*.** Bentuk *AASX package* (mengikuti *AutomationML* + OPC UA) menggunakan *Eclipse BaSyx SDK* atau *AAS.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

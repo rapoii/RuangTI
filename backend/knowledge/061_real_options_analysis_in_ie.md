@@ -70,3 +70,6 @@ Regime-switching models capture path dependence of learning effects.
 5. Cortelezzi, F. L., et al. (2023). RE Investment ROA. *Energy Economics*, 125, 106842.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

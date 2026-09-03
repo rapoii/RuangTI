@@ -90,3 +90,6 @@ Arah riset masa depan dapat berfokus pada pengembangan algoritma AI yang lebih c
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang optimasi proses produksi menggunakan simulasi Digital Twin berbasis AI, dengan penekanan pada aspek teoritis, metodologis, dan aplikatif yang relevan dengan kebutuhan industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

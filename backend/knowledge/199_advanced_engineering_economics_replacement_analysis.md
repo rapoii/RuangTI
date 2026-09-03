@@ -164,3 +164,6 @@ Calculating EUAC for challenger over 10 years yields $EUAC^*_C = \$22,450$. Marg
 -   International Journal of Production Economics (2023). "Fleet replacement optimization with budget constraints".
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

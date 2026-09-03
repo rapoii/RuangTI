@@ -158,3 +158,6 @@ where $\mathcal{P}$ is the set of target patterns and $d$ is an appropriate dist
 - Martinez, R., Garcia, L., & Torres, P. (2024). Digital twin behavioral calibration from mobile sensing. *IEEE Transactions on Intelligent Transportation Systems*, 25(3), 1890-1905.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

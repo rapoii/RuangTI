@@ -107,3 +107,6 @@ Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti keterg
 Arah riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan ramah lingkungan, serta kolaborasi antara berbagai pemangku kepentingan untuk menciptakan ekosistem yang mendukung keberlanjutan. Penelitian lebih lanjut juga diperlukan untuk mengeksplorasi potensi penggunaan limbah sebagai bahan baku, serta inovasi dalam pengelolaan emisi dan limbah.
 
 Dengan demikian, penerapan metallurgi berkelanjutan dalam proses HPAL tidak hanya memberikan manfaat ekonomi, tetapi juga berkontribusi pada tujuan keberlanjutan global dan perlindungan lingkungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -45,3 +45,6 @@ where $\mu$ is the friction coefficient between cargo and deck ($\mu = 0.3$ sawn
 2. IMO/ILO/UNECE. (2015). *Code of Practice for Packing of Cargo Transport Units (CTU Code)*.
 3. Bortolini, M., et al. (2024). Load planning for road freight transport integrating axle load constraints and cargo securing requirements. *Transportation Research Part E*, 191, 104077.
 4. Junqueira, L., Morabito, R., & Yamashita, D. S. (2023). Three-dimensional container loading models considering weight distribution and static stability. *Computers & Operations Research*, 152, 106152.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

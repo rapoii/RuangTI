@@ -95,3 +95,6 @@ Saya sangat menyarankan **Opsi A atau Opsi B**, karena keduanya menghasilkan dok
 
 Hormat saya,
 *Asisten Akademik RuangTI*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

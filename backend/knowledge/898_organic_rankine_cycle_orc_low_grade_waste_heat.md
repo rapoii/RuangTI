@@ -107,3 +107,6 @@ Sistem ORC tidak hanya terbatas pada industri energi, tetapi juga dapat diterapk
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada sifat fluida kerja dan desain sistem yang kompleks. Penelitian masa depan harus fokus pada pengembangan fluida kerja baru yang lebih efisien dan ramah lingkungan, serta inovasi dalam desain komponen sistem untuk meningkatkan efisiensi keseluruhan.
 
 Dengan demikian, penerapan sistem ORC dalam pemulihan panas limbah rendah di industri merupakan langkah strategis menuju keberlanjutan dan efisiensi energi yang lebih baik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

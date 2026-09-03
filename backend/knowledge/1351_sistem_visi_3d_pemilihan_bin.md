@@ -105,3 +105,6 @@ Integrasi sistem visi 3D dan algoritma pembelajaran mendalam tidak hanya relevan
 Namun, terdapat beberapa batasan metodologi, seperti kebutuhan akan data berkualitas tinggi dan waktu pelatihan yang lama. Selain itu, masalah etika dan privasi dalam pengumpulan data juga harus diperhatikan.
 
 Arah riset masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi teknologi dengan sistem otomasi dan robotika yang ada. Dengan demikian, industri dapat memanfaatkan potensi penuh dari teknologi visi 3D dan pembelajaran mendalam untuk mencapai efisiensi yang lebih tinggi dan biaya yang lebih rendah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

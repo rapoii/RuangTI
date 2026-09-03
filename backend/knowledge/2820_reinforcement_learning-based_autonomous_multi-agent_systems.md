@@ -101,4 +101,7 @@ Diagram alir proses rekayasa secara keseluruhan mengikuti pola: **Analisis → F
 - Jumlah agen: $n = 12$ AGV
 - Jumlah任务订单: $M = 60$ orders
 - Jumlah zona: $Z = 8$
--
+- \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

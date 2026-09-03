@@ -145,3 +145,6 @@ Meskipun analisis kinematika memberikan solusi yang efektif, terdapat batasan da
 Riset di masa depan dapat difokuskan pada pengembangan algoritma pembelajaran mesin untuk meningkatkan kemampuan robot dalam mengenali dan mengambil objek yang tidak teratur. Selain itu, integrasi dengan teknologi AI dan IoT dapat membuka peluang baru dalam otomatisasi proses bin-picking.
 
 Dengan memahami dan menerapkan analisis kinematika yang tepat, robot modular dapat menjadi solusi yang efisien dan efektif untuk tantangan bin-picking di industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

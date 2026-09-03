@@ -103,3 +103,6 @@ Riset di masa depan harus fokus pada pengembangan teknologi yang lebih efisien d
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai desain sistem CCUS berbasis teknologi pompa panas untuk optimalisasi emisi karbon di pabrik semen, dengan penekanan pada aspek teknis, ekonomis, dan lingkungan yang relevan dengan standar industri terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -84,3 +84,6 @@ Tingkat penyusutan dua kali metode garis lurus ($d = \frac{2}{N}$).
 $$D_t = d \times BV_{t-1} = \frac{2}{N} BV_{t-1}$$
 $$BV_t = B(1 - d)^t$$
 *(Catatan: Nilai buku $BV_t$ tidak boleh disusutkan di bawah nilai sisa $S$)*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

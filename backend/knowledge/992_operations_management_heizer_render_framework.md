@@ -137,3 +137,6 @@ Kerangka keputusan manajemen operasi strategis tidak hanya relevan untuk industr
 Batasan metodologi ini termasuk ketidakpastian dalam data dan perubahan cepat dalam lingkungan bisnis. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar dan teknologi.
 
 Dengan demikian, pemahaman yang mendalam tentang kerangka keputusan manajemen operasi strategis sangat penting bagi para profesional di bidang teknik industri untuk mencapai keunggulan kompetitif yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

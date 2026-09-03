@@ -540,3 +540,6 @@ KNN dapat diterapkan untuk mendeteksi *process drift* atau *out-of-control* sign
 - Bishop, C.M. (2006). *Pattern Recognition and Machine Learning*. Springer. (Bab 2: Probability Distributions)
 - Murphy, K.P. (2012). *Machine Learning: A Probabilistic Perspective*. MIT Press. (Bab 1: Introduction)
 - Montgomery, D.C. (2021). *Introduction to Statistical Quality Control*. 8th Edition. Wiley. (Bab 10: Advanced Control Charts)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

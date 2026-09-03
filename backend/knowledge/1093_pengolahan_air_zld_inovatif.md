@@ -109,3 +109,6 @@ Pengembangan metode inovatif dalam pengolahan air tidak hanya relevan untuk sekt
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti biaya awal yang tinggi untuk instalasi dan pemeliharaan sistem. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan terjangkau, serta integrasi sistem yang lebih baik untuk meningkatkan kinerja dan keberlanjutan.
 
 Dengan demikian, pengembangan metode inovatif untuk pengolahan air dalam jaringan ZLD menggunakan teknologi nanofiltrasi dan desalinasi terintegrasi merupakan langkah penting untuk mencapai keberlanjutan dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -126,4 +126,7 @@ $$R_{episode} = 100 + 350 \times \left(-0{,}1 \times 17{,}5 - 0{,}01 \times 0{,}
 
 Nilai negatif ini mengindikasikan bahwa reward positif dari pencapaian goal (+100) harus lebih dominan, atau koefisien $\alpha$ harus diturunkan untuk mencegah kebijakan konvergen ke perilaku pasif.
 
-**Langkah 3:** Perhitungan waktu tempuh optimal vs aktual. Mengikuti Kala (2024), jalur optimal RL memiliki panjang $L^* \approx L_{euclidean} \cdot 1{,}15 = 35 \times 1{,}15 = 40{,
+**Langkah 3:** Perhitungan waktu tempuh optimal vs aktual. Mengikuti Kala (2024), jalur optimal RL memiliki panjang $L^* \approx L_{euclidean} \cdot 1{,}15 = 35 \times 1{,}15 = 40{,$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

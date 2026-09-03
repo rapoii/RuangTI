@@ -124,3 +124,6 @@ Emerging trends include generative AI for natural-language AM log analysis, coll
 8. SAE. (2023). *SAE JA1012: Guide to the Reliability-Centered Maintenance (RCM) Standard*. SAE International.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

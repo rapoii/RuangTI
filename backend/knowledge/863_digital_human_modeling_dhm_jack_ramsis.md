@@ -133,3 +133,6 @@ Ke depan, integrasi teknologi seperti kecerdasan buatan dan machine learning dal
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai penerapan Digital Human Modeling dalam ergonomi lini perakitan otomotif, dengan fokus pada aspek-aspek kuantitatif dan metodologis yang relevan untuk praktik industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

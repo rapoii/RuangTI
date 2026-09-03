@@ -152,4 +152,7 @@ Lower information content = higher robustness = better design.
 - Information content is additive across FRs only when independence holds
 - Zigzagging prevents "solution-first" thinking that causes late-stage redesign
 - $R$ and $I$ provide objective comparison metrics replacing subjective design reviews
-- Modern computational tools enable real-time Jacobian evaluation for complex systems
+- Modern computational tools enable real-time Jacobian evaluation for complex systems.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

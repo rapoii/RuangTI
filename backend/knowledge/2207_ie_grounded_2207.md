@@ -179,4 +179,7 @@ Berdasarkan karakteristik produk yang dianalisis oleh Amirullah & Jakaria (2024)
 
 Asumsi industri:
 - $P_{mat}$ SS 304 = Rp 180.000/kg
-- $\rho_{SS304
+- $\rho_{SS304$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

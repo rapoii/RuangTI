@@ -129,3 +129,6 @@ Arah riset masa depan dapat mencakup integrasi teknologi seperti analitik data b
 --- 
 
 Dokumen ini memberikan panduan komprehensif tentang penerapan Earned Schedule dan Earned Duration Management dalam konteks manajemen proyek, serta menyoroti pentingnya pendekatan berbasis waktu dalam meningkatkan kinerja proyek secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

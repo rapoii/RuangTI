@@ -40,3 +40,7 @@ $$\rho(T) = \rho_s + f_l \left( \rho_l - \rho_s \right)$$
 Untuk sisi *heat transfer fluid* (HTF) yang mengalir di dalam tube, konservasi energi 1-D digabung dengan *momentum equation* Darcy–Weisbach untuk menghasilkan profil suhu keluaran:
 
 $$\dot{m}_{HTF} \, c_{p,htf} \, \frac{dT_{htf}}{dz} = h_i \,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

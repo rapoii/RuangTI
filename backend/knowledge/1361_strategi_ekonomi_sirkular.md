@@ -116,3 +116,6 @@ Penerapan strategi ekonomi sirkular tidak hanya terbatas pada sektor manufaktur,
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti keterbatasan data, kompleksitas analisis, dan resistensi terhadap perubahan dari stakeholder. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan teknologi analitik yang lebih canggih dan integrasi sistem manajemen yang lebih baik.
 
 Dengan demikian, strategi ekonomi sirkular berbasis data besar dapat menjadi solusi efektif untuk pengurangan limbah dalam rantai pasok global, yang pada akhirnya akan mendukung keberlanjutan dan pertumbuhan ekonomi yang lebih baik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

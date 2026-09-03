@@ -83,4 +83,7 @@ $$f_{Beta}(G) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}\left(\f
 
 Implementasi HRES di lingkungan industri mengikuti SOP tujuh-tahap yang disintesis dari Basnet et al. (2023) dan diperkuat dengan kerangka *scalability* Ghahramani et al. (2025):
 
-**Tahap 1 — Karakterisasi Beban Industri.** Akuisisi profil beban 8760-jam (*one-year hourly resolution*) dengan segmentasi *peak-shoulder-base load*. Untuk industri manufaktur, identifikasi *motor starting load* (tip
+**Tahap 1 — Karakterisasi Beban Industri.** Akuisisi profil beban 8760-jam (*one-year hourly resolution*) dengan segmentasi *peak-shoulder-base load*. Untuk industri manufaktur, identifikasi *motor starting load* (tip.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

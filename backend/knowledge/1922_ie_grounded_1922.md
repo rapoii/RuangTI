@@ -141,4 +141,7 @@ Diagram alir proses (sintetis sesuai metodologi paper):
 
 ---
 
-## 4. Studi Kasus Kuantitatif Industri & Perhitungan
+## 4. Studi Kasus Kuantitatif Industri & Perhitungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

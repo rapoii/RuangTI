@@ -144,4 +144,7 @@ $$Q((0,0), \text{maju}) = 0{,}1 \times 0{,}5 = 0{,}05$$
 
 ### 4.4 Konvergensi dan Hasil Akhir
 
-Setelah 5.000 episode, Q-table konvergen. Jalur optimal yang dihasilkan memiliki panjang $L_{opt} = 53{,}2$ m dengan 12 belok. Jalur terpendek secara geometris (Euclidean) adalah $d_{Euclidean} = 50$ m,
+Setelah 5.000 episode, Q-table konvergen. Jalur optimal yang dihasilkan memiliki panjang $L_{opt} = 53{,}2$ m dengan 12 belok. Jalur terpendek secara geometris (Euclidean) adalah $d_{Euclidean} = 50$ m, \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -106,3 +106,6 @@ Penerapan prinsip-prinsip HACCP dan validasi matematis CCP tidak hanya terbatas 
 Namun, terdapat batasan dalam metodologi ini, seperti variabilitas dalam sifat mikroba dan kondisi lingkungan yang dapat mempengaruhi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan adaptif terhadap berbagai kondisi.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi pemantauan real-time untuk CCP, serta integrasi dengan sistem otomasi dan manajemen data untuk meningkatkan responsivitas terhadap potensi bahaya. Dengan demikian, industri dapat lebih proaktif dalam menjaga keamanan pangan dan memenuhi standar yang semakin ketat di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

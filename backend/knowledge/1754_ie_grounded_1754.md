@@ -145,3 +145,6 @@ $$\Delta P = \frac{\mu L \, u_s}{K} = \frac{(7{,}2 \times 10^{-5})(0{,}90)(7{,}5
 $$\Delta P = \frac{4{,}91 \times 10^{-9}}{1{,}47 \times 10^{-9}} = 3{,}34 \text{ Pa}$$
 
 Penurunan tekanan sangat rendah (~0,003 bar), mengindikasikan desain vessel sudah optimal tanpa *
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

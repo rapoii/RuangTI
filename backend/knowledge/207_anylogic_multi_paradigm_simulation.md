@@ -144,3 +144,6 @@ Visual debugging through 2D/3D animation ensures logical correctness before stat
 - AnyLogic Company. (2025). AnyLogic Help Documentation v8.9. https://anylogic.help/
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

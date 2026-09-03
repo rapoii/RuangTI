@@ -583,3 +583,6 @@ Pada konfigurasi awal:
 7. **Tamta, G. B., & Karunakar, D. B. (2018)**. *Enhancing mechanical properties and permeability of ceramic shell in investment casting process*. **Materials and Manufacturing Processes**, 33(16), 1845–1852. DOI: [10.1080/10426914.2018.1532088](https://doi.org/10.1080/10426914.2018.1532088).
 8. **Mills, K. C. (2023)**. *Investment Materials and Ceramic Shell Manufacture*. Dalam **Investment Casting Handbook**, CRC Press / Taylor & Francis. DOI: [10.1201/9781003419228-4](https://doi.org/10.1201/9781003419228-4).
 9. **Groover, M. P. (2020)**. *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems (7th Edition)*. John Wiley & Sons, Inc.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -128,3 +128,6 @@ Pendekatan berbasis copula dalam pemodelan degradasi dan analisis keandalan dapa
 Namun, terdapat batasan dalam metodologi ini, seperti asumsi distribusi yang mungkin tidak selalu valid dalam praktik. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan model yang lebih fleksibel dan adaptif, serta integrasi dengan teknologi IoT untuk pengumpulan data real-time.
 
 Dengan demikian, pemodelan degradasi tergantung multi-komponen berbasis copula tidak hanya meningkatkan pemahaman kita tentang sistem yang kompleks, tetapi juga memberikan dasar yang kuat untuk pengambilan keputusan yang lebih baik dalam manajemen pemeliharaan dan risiko di industri subsea dan sektor lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

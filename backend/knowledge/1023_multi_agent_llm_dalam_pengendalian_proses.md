@@ -111,3 +111,6 @@ Penerapan Multi-Agent LLMs dalam pengendalian proses manufaktur tidak hanya terb
 Namun, ada beberapa batasan metodologi yang perlu diperhatikan, seperti kebutuhan akan data berkualitas tinggi dan tantangan dalam interoperabilitas sistem. Ke depan, penelitian lebih lanjut diperlukan untuk mengatasi batasan ini dan mengembangkan standar yang lebih baik untuk integrasi LLMs dalam berbagai aplikasi industri.
 
 Dengan terus berkembangnya teknologi dan kebutuhan industri, arah riset masa depan harus fokus pada peningkatan kemampuan LLMs dalam memahami konteks dan meningkatkan interaksi antar agen untuk mencapai pengendalian proses yang lebih adaptif dan efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

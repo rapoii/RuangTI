@@ -100,3 +100,6 @@ Work rules as global constraints:
 - Schaus, P., & Van Hentenryck, P. (2024). CP for supply chain design. *Computers & Operations Research*, 162, 106458.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

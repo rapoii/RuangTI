@@ -133,4 +133,7 @@ Ambil asumsi pabrik HPAL kapasitas 30.000 ton bijih/tahun dengan spesifikasi:
 | Laju alir slurry | 95 | m³/h |
 | Konsentrasi solid | 28 | % wt |
 | Diameter partikel rata-rata (d₈₀) | 75 | µm |
-| Specific acid consumption | 425 | kg H₂SO₄/ton
+| Specific acid consumption | 425 | kg H₂SO₄/ton.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

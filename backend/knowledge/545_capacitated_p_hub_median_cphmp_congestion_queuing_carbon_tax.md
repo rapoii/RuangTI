@@ -463,4 +463,4 @@ Dengan menerapkan formulasi CPHMP terpadu yang memperhitungkan batasan kapasitas
 3. **de Camargo, R. S., de Miranda, G., & Ferreira, R. P. M.** (2011). A hybrid Outer-Approximation/Benders Decomposition algorithm for the single allocation hub location problem under congestion. *Operations Research Letters*, 39(5), 329–337. DOI: [10.1016/j.orl.2011.06.015](https://doi.org/10.1016/j.orl.2011.06.015).
 4. **Campbell, J. F., Ernst, A. T., & Krishnamoorthy, M.** (2002). Hub Location Problems. In Z. Drezner & H. W. Hamacher (Eds.), *Facility Location: Applications and Theory* (pp. 373–407). Springer. DOI: [10.1007/978-3-642-56082-8_12](https://doi.org/10.1007/978-3-642-56082-8_12).
 5. **Tompkins, J. A., White, J. A., Bozer, Y. A., & Tanchoco, J. M. A.** (2010). *Facilities Planning* (4th ed.). John Wiley & Sons. ISBN: 978-0-470-44404-7.
-6. **Hillier, F. S., & Lieberman, G. J.** (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill Education. ISBN: 978-1-259-87299-0.
+6. **Hillier, F. S., & Lieberman, G. J.** (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill Education. ISBN: 978-1-259-87299-0.$.

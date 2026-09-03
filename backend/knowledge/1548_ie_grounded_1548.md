@@ -117,3 +117,7 @@ Meza-Galvan dkk. (2026) mengusulkan arsitektur tiga lapis (*three-tier architect
 │   thermocouple berkabel reverensi                           │
 │ • Verifikasi cycle time dan yield produk sesuai CQA        │
 └──────────────────────┬──────────────────────────────────────┘
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

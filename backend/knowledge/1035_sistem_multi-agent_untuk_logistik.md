@@ -88,3 +88,6 @@ Sistem multi-agent tidak hanya relevan dalam konteks logistik, tetapi juga dapat
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas dalam pengelolaan interaksi antar agen dan kebutuhan akan infrastruktur teknologi yang memadai. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan penerapan teknologi baru seperti kecerdasan buatan dan Internet of Things (IoT) untuk meningkatkan kinerja sistem multi-agent.
 
 Dengan demikian, penerapan sistem multi-agent dalam optimasi logistik menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas dalam proses manufaktur, sejalan dengan standar industri yang berlaku.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

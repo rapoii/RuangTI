@@ -105,3 +105,6 @@ Pendekatan berbasis AI dalam desain proses tidak hanya relevan untuk sektor manu
 Batasan dari metodologi ini termasuk kebutuhan akan data berkualitas tinggi dan tantangan dalam mengintegrasikan solusi AI dengan sistem yang ada. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih adaptif dan kemampuan untuk memproses data dalam waktu nyata, serta peningkatan kolaborasi antar disiplin ilmu untuk menciptakan solusi yang lebih holistik.
 
 Dengan demikian, penerapan pendekatan berbasis fisika dalam desain proses manufaktur berkelanjutan tidak hanya menjanjikan efisiensi yang lebih baik, tetapi juga berkontribusi pada keberlanjutan lingkungan yang lebih luas.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

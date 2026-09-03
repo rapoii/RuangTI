@@ -87,3 +87,6 @@ Namun, ada beberapa batasan dalam metodologi ini, termasuk kebutuhan akan infras
 Dalam konteks K3 dan ESG, penerapan blockchain dapat membantu dalam pelacakan kepatuhan terhadap standar keselamatan dan lingkungan, sehingga meningkatkan reputasi perusahaan dan kepercayaan konsumen. Dengan demikian, teknologi blockchain berpotensi menjadi pendorong utama dalam transformasi industri biopharmaceutical menuju keberlanjutan dan integritas proses yang lebih baik.
 
 Dengan demikian, modul ini memberikan gambaran menyeluruh tentang penerapan teknologi blockchain dalam menjaga integritas proses produksi biopharmaceutical yang berkelanjutan, serta metodologi dan evaluasi yang diperlukan untuk implementasi yang sukses.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

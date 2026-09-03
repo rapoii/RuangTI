@@ -112,3 +112,6 @@ Optimasi matriks dinamis untuk pemeliharaan prediktif memiliki aplikasi luas di 
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kompleksitas perhitungan. Oleh karena itu, penelitian masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan penerapan teknologi pembelajaran mesin untuk meningkatkan akurasi prediksi.
 
 Dengan demikian, pemeliharaan prediktif yang didukung oleh optimasi matriks dinamis tidak hanya meningkatkan efisiensi operasional tetapi juga memberikan kontribusi signifikan terhadap keberlanjutan dan manajemen aset yang lebih baik sesuai dengan standar ISO 55000:2014.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

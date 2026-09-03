@@ -98,3 +98,6 @@ Arah riset masa depan dapat mencakup pengembangan alat dan teknik baru untuk ana
 --- 
 
 Dokumen ini memberikan panduan komprehensif mengenai kerangka tata kelola aset berbasis risiko untuk kepatuhan ISO 55001, serta menjelaskan pentingnya pengelolaan risiko dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

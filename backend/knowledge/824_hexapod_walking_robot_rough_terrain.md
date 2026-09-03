@@ -110,3 +110,6 @@ Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti keterb
 Standar masa depan, seperti IEC 60079-0, akan terus berperan penting dalam memastikan bahwa desain robot memenuhi persyaratan keselamatan yang ketat, terutama dalam aplikasi yang berpotensi meledak. Penelitian lebih lanjut juga perlu dilakukan untuk mengeksplorasi integrasi teknologi sensor dan komunikasi untuk meningkatkan kemampuan robot dalam melakukan inspeksi secara real-time.
 
 Dengan demikian, robot hexapod omnidirectional memiliki potensi besar untuk meningkatkan keselamatan dan efisiensi dalam industri petrokimia dan sektor lainnya, dengan terus beradaptasi terhadap tuntutan teknologi dan regulasi yang berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

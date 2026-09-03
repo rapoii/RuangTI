@@ -133,3 +133,7 @@ $$Q(0,1,\text{up}) \leftarrow -0.1 + 0.1[-1 + 0.9\cdot\max\{0,-5,0,0\} - (-0.1)]
 **Episode 1, langkah 5:** ke $(0,0)$:
 
 $$Q(0,0,\text{up}) \leftarrow -0.1 + 0.1[-1 + 0.9\cdot\max\{-0.585,0,0,0\} - (-0.1)] = -
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

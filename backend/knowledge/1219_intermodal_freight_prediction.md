@@ -101,3 +101,6 @@ Prediksi permintaan menggunakan model pembelajaran dalam tidak hanya relevan dal
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan data yang berkualitas tinggi dan kompleksitas model yang dapat menyebabkan overfitting. Oleh karena itu, riset masa depan perlu fokus pada pengembangan teknik regularisasi dan pemanfaatan data eksternal untuk meningkatkan akurasi model.
 
 Dengan demikian, penggunaan model pembelajaran dalam untuk prediksi permintaan dalam jaringan freight intermodal menunjukkan potensi yang besar untuk meningkatkan efisiensi operasional dan daya saing industri logistik. Penelitian lebih lanjut diperlukan untuk mengeksplorasi integrasi teknologi baru dan pengembangan metodologi yang lebih adaptif terhadap perubahan pasar.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

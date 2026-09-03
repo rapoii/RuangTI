@@ -464,3 +464,6 @@ Tabel berikut menyajikan perbandingan komprehensif antara pendekatan analitik *R
 5. **Montgomery, D. C. (2020).** *Introduction to Statistical Quality Control* (8th ed.). John Wiley & Sons. ISBN: 978-1119399308.
 6. **Groover, M. P. (2020).** *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th ed.). John Wiley & Sons. ISBN: 978-1119706427.
 7. **ISO 1101:2017.** *Geometrical product specifications (GPS) — Geometrical tolerancing — Tolerances of form, orientation, location and run-out*. International Organization for Standardization.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

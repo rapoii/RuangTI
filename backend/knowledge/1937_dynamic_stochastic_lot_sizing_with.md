@@ -151,4 +151,7 @@ Sebuah *manufacturing facility* komponen *brake pad* dengan karakteristik operas
 
 | Parameter | Nilai | Satuan |
 |-----------|-------|--------|
-| Horizon $T$
+| Horizon $T$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

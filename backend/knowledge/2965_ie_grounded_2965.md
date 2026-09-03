@@ -124,4 +124,7 @@ SOH ≥ 70%   SOH < 70%
 
 ### 4.1 Parameter Input Industri (Skenario Realistis)
 
-Ambil studi kasus BM dengan kapasitas produksi 50.000 unit baterai/tahun (kapasitas
+Ambil studi kasus BM dengan kapasitas produksi 50.000 unit baterai/tahun (kapasitas.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

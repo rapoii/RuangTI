@@ -47,3 +47,6 @@ Mengkombinasikan efisiensi dari tata letak produk (Product Layout) dengan fleksi
 - Mengelompokkan mesin ke dalam "Sel" berdasarkan *Part Families* (suku cadang yang membutuhkan rute pemrosesan serupa).
 - **Algoritma Pengelompokan Utama:** Rank Order Clustering (ROC) King's Algorithm, Jaccard Similarity Coefficient, dan algoritma metaheuristik Particle Swarm Optimization (PSO) untuk dynamic facility layout (Xu et al., 2024).
 - **Metrik Evaluasi Seluler:** *Exceptional Elements* (part yang harus berpindah antar sel), dihitung untuk meminimalkan perpindahan antar-sel (*Inter-cell material handling*).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

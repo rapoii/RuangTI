@@ -90,3 +90,7 @@ Implementasi industri CLSC baterai bekas memerlukan **SOP terstruktur 7-tahap** 
 **Perhitungan Profit Echelon Operator** (untuk $\alpha = 0,4$ sebagai uji coba awal):
 $$\pi_E = 0{,}4 \times 780 \times 50{,}000 - 45 \times 50{,}000 - 25 \times 50{,}000$$
 $$\pi_E = 15{,}600{,}000 - 2{,}250{,}000 - 1{,}250{,}000 =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

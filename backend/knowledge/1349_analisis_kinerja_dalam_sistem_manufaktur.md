@@ -122,3 +122,6 @@ Ke depan, riset dalam bidang ini dapat diarahkan pada pengembangan algoritma yan
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang analisis kinerja sistem manufaktur menggunakan kerangka pembelajaran penguatan multi-agen, serta aplikasi praktis dan teoritis yang relevan dengan perkembangan terkini dalam bidang teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

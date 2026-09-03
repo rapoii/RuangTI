@@ -86,3 +86,6 @@ Integrasi AI dalam Quality 4.0 tidak hanya terbatas pada sektor manufaktur, teta
 Namun, terdapat beberapa batasan metodologi, seperti kualitas data yang dikumpulkan dan kemampuan algoritma AI untuk menggeneralisasi temuan dari data yang terbatas. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih robust dan teknik pengumpulan data yang lebih efisien.
 
 Sebagai kesimpulan, integrasi AI dalam Quality 4.0 menawarkan potensi besar untuk meningkatkan keputusan manajerial dan proses kualitas. Dengan terus mengembangkan teknologi ini, perusahaan dapat mencapai keunggulan kompetitif yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

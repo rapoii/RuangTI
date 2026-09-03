@@ -90,3 +90,6 @@ Pengembangan framework AAS tidak hanya relevan dalam konteks manufaktur modular,
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk tantangan dalam interoperabilitas antara sistem yang berbeda dan kebutuhan untuk memastikan keamanan data. Oleh karena itu, arah riset masa depan harus berfokus pada pengembangan standar yang lebih baik untuk interoperabilitas dan keamanan informasi dalam konteks AAS.
 
 Secara keseluruhan, pengembangan framework untuk AAS dalam manufaktur modular merupakan langkah penting menuju peningkatan efisiensi dan fleksibilitas dalam industri manufaktur. Dengan pendekatan yang sistematis dan berbasis data, perusahaan dapat memanfaatkan potensi penuh dari teknologi ini untuk mencapai keunggulan kompetitif di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

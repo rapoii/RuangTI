@@ -122,4 +122,7 @@ Berdasarkan data Amirullah dan Jakaria (2024), coffee enema basket konvensional 
 | Labor rate ($L$) | Rp 25.000/jam |
 | Burden rate ($B$) | 35% |
 
-### 4.2 Perhitungan Baseline DFA
+### 4.2 Perhitungan Baseline DFA.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

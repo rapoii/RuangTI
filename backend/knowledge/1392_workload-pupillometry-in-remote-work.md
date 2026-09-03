@@ -108,3 +108,6 @@ Namun, ada beberapa batasan dalam metodologi ini, termasuk variabilitas individu
 Arah riset masa depan dapat mencakup pengembangan algoritma berbasis kecerdasan buatan untuk menganalisis data pupillometri secara otomatis dan mengidentifikasi pola yang mungkin tidak terlihat secara manual. Selain itu, integrasi dengan teknologi wearable dapat memberikan wawasan yang lebih komprehensif tentang kesejahteraan karyawan dalam konteks kerja jarak jauh.
 
 Dengan demikian, analisis pupillometri menawarkan potensi besar untuk meningkatkan kesejahteraan karyawan dan produktivitas organisasi, terutama dalam era kerja jarak jauh yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

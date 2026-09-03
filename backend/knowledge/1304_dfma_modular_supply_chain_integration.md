@@ -120,3 +120,6 @@ Integrasi DfMA dan teknologi blockchain dalam konstruksi modular off-site memili
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk infrastruktur teknologi yang memadai dan pemahaman yang mendalam tentang teknologi oleh semua pemangku kepentingan. Oleh karena itu, arah riset masa depan harus berfokus pada pengembangan alat dan teknik yang dapat memfasilitasi adopsi teknologi ini, serta studi kasus yang lebih mendalam untuk mengevaluasi dampak jangka panjang dari integrasi ini.
 
 Dengan demikian, integrasi rantai pasokan untuk konstruksi modular off-site menggunakan DfMA dan teknologi blockchain tidak hanya menjanjikan efisiensi operasional tetapi juga membuka jalan bagi inovasi berkelanjutan dalam industri konstruksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -96,4 +96,7 @@ Sistem multi-agent tidak hanya relevan dalam pengelolaan logistik pabrik, tetapi
 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas dalam pengembangan agen dan kebutuhan untuk infrastruktur teknologi yang memadai. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengatasi tantangan ini dan mengeksplorasi potensi integrasi sistem multi-agent dengan teknologi baru seperti Internet of Things (IoT) dan kecerdasan buatan (AI).
 
-Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien, integrasi dengan sistem yang ada, dan penerapan dalam konteks yang lebih luas, seperti keberlanjutan dan tanggung jawab sosial perusahaan (CSR). Dengan demikian, sistem multi-agent dapat menjadi pilar penting dalam transformasi digital industri yang berkelanjutan.
+Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien, integrasi dengan sistem yang ada, dan penerapan dalam konteks yang lebih luas, seperti keberlanjutan dan tanggung jawab sosial perusahaan (CSR). Dengan demikian, sistem multi-agent dapat menjadi pilar penting dalam transformasi digital industri yang berkelanjutan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

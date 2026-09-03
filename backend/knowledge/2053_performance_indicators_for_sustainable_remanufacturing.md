@@ -152,3 +152,7 @@ $$z = 7.200 \times 0,15 = 1.080 \text{ unit disposal}$$
 **Langkah 3 — Hitung Total Cost (TC) Tahunan:**
 
 $$TC = 7.200(45) + 7.200(30) + 6.120(280) + 1.080(15
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

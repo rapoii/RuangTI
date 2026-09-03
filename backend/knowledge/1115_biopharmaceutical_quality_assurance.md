@@ -101,3 +101,6 @@ Penerapan sistem jaminan kualitas dan Six Sigma tidak hanya terbatas pada indust
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan representatif, serta keterampilan analitis yang diperlukan untuk menerapkan alat statistik. Oleh karena itu, ke depan, riset harus difokuskan pada pengembangan alat dan teknik baru yang dapat mengatasi batasan ini, serta integrasi dengan teknologi baru untuk mendukung produksi berkelanjutan.
 
 Dengan demikian, penerapan sistem jaminan kualitas yang efektif dan metodologi Six Sigma akan menjadi kunci untuk mencapai keberlanjutan dan efisiensi dalam produksi biopharmaceutical dan sektor lainnya di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

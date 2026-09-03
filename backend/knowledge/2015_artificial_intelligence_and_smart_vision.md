@@ -147,4 +147,7 @@ $$f_{c,pred} = -23.45 + 0.148 \times 540 + (-0.052) \times 162$$
 $$= -23.45 + 79.92 - 8.424$$
 $$= 48.05 \text{ MPa}$$
 
-*Cat
+*Cat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

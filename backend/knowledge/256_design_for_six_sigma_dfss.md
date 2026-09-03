@@ -119,3 +119,6 @@ Multi-disciplinary optimization balancing NVH, efficiency, durability:
 8. Harry, M. J., & Stewart, R. (2024). *Six Sigma Mechanical Design Tolerancing*. ASQ Quality Press.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

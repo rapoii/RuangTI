@@ -123,3 +123,6 @@ Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebi
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang tantangan dan strategi dalam manajemen rantai pasok yang berfokus pada geopolitik dan risiko bahan baku kritis, serta pentingnya penerapan metodologi kuantitatif dalam pengambilan keputusan strategis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

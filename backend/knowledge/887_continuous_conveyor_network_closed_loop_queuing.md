@@ -107,3 +107,6 @@ Analisis jaringan konveyor sirkulasi tertutup memiliki aplikasi yang luas di ber
 Namun, ada batasan dalam metodologi ini, termasuk asumsi bahwa tingkat kedatangan dan pelayanan adalah konstan. Penelitian masa depan dapat berfokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar.
 
 Standar masa depan dalam analisis jaringan konveyor harus mencakup integrasi teknologi baru dan pendekatan berkelanjutan untuk mengurangi dampak lingkungan dari sistem manufaktur. Dengan demikian, penelitian dan pengembangan dalam bidang ini sangat penting untuk mencapai efisiensi yang lebih tinggi dan keberlanjutan dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

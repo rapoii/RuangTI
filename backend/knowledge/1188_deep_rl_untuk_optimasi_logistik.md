@@ -100,3 +100,6 @@ Penerapan DRL dalam optimasi logistik tidak hanya terbatas pada sektor manufaktu
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang besar dan berkualitas tinggi, serta kompleksitas dalam merancang model yang tepat. Selain itu, tantangan dalam integrasi dengan sistem yang ada juga perlu diperhatikan.
 
 Ke depan, riset dalam bidang ini dapat diarahkan untuk mengembangkan algoritma DRL yang lebih efisien dan adaptif, serta mengeksplorasi penerapan DRL dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (K3/ESG). Dengan demikian, DRL dapat menjadi alat yang sangat berharga dalam mencapai efisiensi operasional dan keberlanjutan di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

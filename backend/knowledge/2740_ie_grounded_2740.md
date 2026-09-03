@@ -167,4 +167,7 @@ Sebuah *fulfillment center* e-commerce seluas 6.000 m² menggunakan 12 unit AMR 
 | Resolusi grid $r$ | 0,25 | m |
 | Kecepatan nominal $v$ | 1,2 | m/s |
 | Kecepatan sudut $\omega$ | 0,9 | rad/s |
-| Faktor diskonto $\gamma$
+| Faktor diskonto $\gamma$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

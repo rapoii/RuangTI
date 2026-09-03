@@ -56,3 +56,7 @@ untuk paket yang menempati $N_{slots}$ slot. Target URLLC menetapkan $\text{BLER
 *Network slicing* memungkinkan partisi logis jaringan 5G. Formulasi alokasi sumber daya spektral untuk $k$ slice:
 
 $$\sum_{i=1}^{k} \alpha_i \cdot R_{total} = R_{total}, \quad 0 \leq \alpha_i \leq 1
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

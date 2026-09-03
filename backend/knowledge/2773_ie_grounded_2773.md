@@ -117,3 +117,7 @@ Langkah: (a) estimasi interval ketidakpastian parameter; (b) pilih $\Gamma$; (c)
 $$q_r^{\text{out}} = 25.000 \times 0{,}35 \times 0{,}92 = 8.050 \text{ unit}$$
 
 $$q_e
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

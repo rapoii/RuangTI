@@ -135,3 +135,7 @@ $$CL_{germane} = 100 \cdot (1 - e^{-0.05 \cdot 10}) = 100 \cdot (1 - 0.6065) = 3
 **Step 3: Hitung $CL_{total,0}$**
 
 $$CL_{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

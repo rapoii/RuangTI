@@ -169,3 +169,6 @@ Simulate alternative designs in virtual environments to estimate function worth 
 8. Sakurai, M., & Tanaka, K. (2025). Sustainable value engineering: Integrating circular economy principles into traditional VE methodology. *Journal of Cleaner Production*, 412, 137456.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

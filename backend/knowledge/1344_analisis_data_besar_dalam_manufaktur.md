@@ -106,3 +106,6 @@ Dengan mengikuti standar yang ditetapkan oleh IEEE 1547, perusahaan dapat memast
 --- 
 
 Dokumen ini memberikan panduan komprehensif tentang penerapan Big Data Analytics dan Physics-Informed Neural Networks dalam kontrol kualitas di sektor manufaktur, dengan penekanan pada metodologi, studi kasus, dan arah riset masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

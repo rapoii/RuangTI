@@ -150,3 +150,7 @@ $$T_s(t) = T_b - R_p(t) \cdot \frac{dm}{dt}(t)$$
 Untuk $dm/dt$ berkurang menjadi $0{,}008$ kg/(m²·s) setelah 6 jam (akena resistansi):
 
 $$T_s =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

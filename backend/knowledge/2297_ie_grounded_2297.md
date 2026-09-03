@@ -69,4 +69,7 @@ Toloza dkk. (2026) memilih bahasa **Modelica** melalui *Dymola/Modelon* karena k
 
 ---
 
-## 3. Metodologi Rekayasa & Standar Prosedur Operasional (S
+## 3. Metodologi Rekayasa & Standar Prosedur Operasional (S.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

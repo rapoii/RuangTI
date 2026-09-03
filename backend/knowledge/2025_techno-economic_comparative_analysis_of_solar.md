@@ -95,4 +95,7 @@ Konsumsi gas boiler ($\eta = 0{,}90$):
 
 $$Q_{gas} = \frac{17.633}{0{,}90} = 19.592\ MWh_{HHV}/tahun$$
 
-Biaya bahan bakar tahunan: $19.592 \times 0{,}065 = €
+Biaya bahan bakar tahunan: $19.592 \times 0{,}065 = €$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

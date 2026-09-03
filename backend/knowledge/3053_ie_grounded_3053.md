@@ -149,4 +149,7 @@ $$\Delta T_{LMTD} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)} =
 
 $$U_{\min} = \frac{25 \times 10^6}{396 \times 44{,}3} = 1425 \text{ W/(m}^2\text{·K)}$$
 
-### 4.3
+### 4.3.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

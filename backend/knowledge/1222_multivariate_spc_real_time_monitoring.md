@@ -93,3 +93,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualit
 Ke depan, integrasi teknologi kecerdasan buatan (AI) dan pembelajaran mesin (ML) dalam sistem SPC multivariat dapat membuka peluang baru untuk prediksi dan pengendalian kualitas yang lebih baik. Penelitian ini dapat menjadi titik awal untuk inovasi lebih lanjut dalam pengendalian kualitas di industri manufaktur dan sektor lainnya.
 
 Dengan demikian, pemantauan real-time SPC multivariat menggunakan IoT tidak hanya menjadi alat penting untuk pengendalian kualitas, tetapi juga sebagai pendorong inovasi dalam proses manufaktur modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

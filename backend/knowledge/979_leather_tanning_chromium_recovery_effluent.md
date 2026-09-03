@@ -122,3 +122,6 @@ Namun, terdapat batasan dalam metodologi yang ada, termasuk biaya implementasi t
 Di masa depan, fokus pada inovasi teknologi, seperti penggunaan bioteknologi dalam pengolahan limbah, dapat membuka jalan bagi praktik yang lebih berkelanjutan dalam industri. Standar ISO 14001 dapat menjadi panduan bagi perusahaan untuk terus meningkatkan kinerja lingkungan mereka dan memenuhi tuntutan regulasi yang semakin ketat.
 
 Dengan demikian, pengolahan kulit yang berkelanjutan tidak hanya akan memberikan manfaat lingkungan tetapi juga meningkatkan daya saing industri di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

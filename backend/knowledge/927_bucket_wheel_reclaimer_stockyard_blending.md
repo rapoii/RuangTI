@@ -124,3 +124,6 @@ Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketergantungan 
 Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan kecerdasan buatan (AI) dapat meningkatkan kemampuan sistem dalam memprediksi dan mengontrol variansi kualitas, sehingga mendukung keberlanjutan dan efisiensi dalam proses produksi. 
 
 Dengan demikian, optimasi blending di stockyard melalui pendekatan yang sistematis dan berbasis data akan menjadi kunci untuk menghadapi tantangan industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

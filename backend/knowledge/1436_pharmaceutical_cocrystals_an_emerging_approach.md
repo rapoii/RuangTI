@@ -67,4 +67,7 @@ Bioavailabilitas sistemik secara umum:
 
 $$F = f_a \times f_g \times F_h$$
 
-dengan $f_a$ = fraksi absorpsi, $f_g$ = fraksi yang lolos metabolisme intestinal, $F_h$ = fraksi yang lolos *first-pass* hepatic. Peningkatan $C_s$ melalui cocrystall
+dengan $f_a$ = fraksi absorpsi, $f_g$ = fraksi yang lolos metabolisme intestinal, $F_h$ = fraksi yang lolos *first-pass* hepatic. Peningkatan $C_s$ melalui cocrystall.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

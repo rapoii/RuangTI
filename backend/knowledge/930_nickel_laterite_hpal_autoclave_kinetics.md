@@ -139,3 +139,6 @@ Pengendalian skala pada pelapis titanium juga menjadi aspek penting dalam menjag
 Ke depan, penelitian dapat difokuskan pada pengembangan teknologi yang lebih ramah lingkungan, serta pemanfaatan limbah yang dihasilkan dari proses HPAL. Integrasi teknologi otomasi dan digitalisasi dalam proses ini juga dapat meningkatkan efisiensi dan mengurangi risiko kecelakaan kerja, sejalan dengan standar K3 dan ESG yang semakin ketat.
 
 Dengan demikian, pemahaman yang mendalam tentang proses HPAL, kinetika pelindian, dan pengendalian skala sangat penting untuk mencapai hasil yang optimal dalam ekstraksi logam dari bijih laterit nikel.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -563,4 +563,4 @@ Melalui eksekusi algoritma ALNS terintegrasi model emisi CMEM:
 4. **Barth, M., & Boriboonsomsin, K.** (2009). *Energy and emissions impacts of a freeway-based dynamic eco-driving system*. **Transportation Research Part D: Transport and Environment**, 14(6), 400–410. [DOI: 10.1016/j.trd.2009.01.004](https://doi.org/10.1016/j.trd.2009.01.004)
 5. **Zhang, S., Gajpal, Y., Appadoo, S. S., & Wei, Q.** (2020). *Multi-Depot Green Vehicle Routing Problem to Minimize Carbon Emissions*. **Sustainability**, 12(8), 3500. [DOI: 10.3390/su12083500](https://doi.org/10.3390/su12083500)
 6. **Tompkins, J. A., White, J. A., Bozer, Y. A., & Tanchoco, J. M. A.** (2010). *Facilities Planning* (4th ed.). John Wiley & Sons, Hoboken, NJ.
-7. **Hillier, F. S., & Lieberman, G. J.** (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill Education, New York, NY.
+7. **Hillier, F. S., & Lieberman, G. J.** (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill Education, New York, NY.$.

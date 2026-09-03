@@ -116,3 +116,6 @@ Riset masa depan harus fokus pada pengembangan nanomaterial yang lebih efisien d
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai analisis pemulihan air dalam sistem Zero Liquid Discharge menggunakan teknologi adsorpsi berbasis nanomaterial, dengan fokus pada aspek teknis, ekonomis, dan lingkungan yang relevan dalam konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

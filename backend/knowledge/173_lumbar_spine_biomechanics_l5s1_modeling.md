@@ -57,3 +57,6 @@ Recent literature emphasizes subject-specific modeling over population averages.
 6.  **Nachemson, A. L.** (1981). "Disc pressure measurements." *Spine*, 6(3), 206-210.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

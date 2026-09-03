@@ -95,4 +95,7 @@ Dickson dkk. (2026) mengusulkan kerangka *Scaling Management Framework* empat la
 
 1. **Sampling Lokasi**: Ambil kerak dari empat zona autoclave (kompartemen 1–4) pada posisi jam 12, 3, 6, dan 9 untuk memetakan profil circumferential.
 2. **Karakterisasi Mineralogi**: Analisis XRD dengan $\mathrm{CuK_\alpha}$ ($\lambda = 1{,}5406$ Å) pada rentang $2\theta = 5°–80°$ step 0,02° untuk identifikasi fase.
-3. **Analisis Morfologi**: SEM-EDX pada perbesaran 500–5000× untuk menentukan kom
+3. **Analisis Morfologi**: SEM-EDX pada perbesaran 500–5000× untuk menentukan kom.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

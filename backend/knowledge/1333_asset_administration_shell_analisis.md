@@ -93,3 +93,6 @@ Arah riset masa depan dapat berfokus pada pengembangan algoritma kecerdasan buat
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang analisis kinerja Asset Administration Shell dalam pengelolaan data produksi cerdas, dengan fokus pada aspek teknis dan metodologis yang relevan dalam konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

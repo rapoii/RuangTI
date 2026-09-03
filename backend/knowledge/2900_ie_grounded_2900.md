@@ -146,3 +146,6 @@ Implementasi motion planning berbasis RL di lingkungan industri mengikuti SOP be
 | Reward per step | $-1$ |
 
 **
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

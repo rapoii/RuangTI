@@ -128,4 +128,7 @@ Sebuah kapal container kelas feeder (kapasitas 2.500 TEU) dengan 12 pelaut diuji
 | GSR saat storm | 11,2 | μS |
 | RMSSD baseline | 42 | ms |
 | RMSSD saat storm | 19 | ms |
-| Bobot MISC ($w_1, w_2, w_3, w_4$) | 0,20; 0,15; 0,25; 0,40 |
+| Bobot MISC ($w_1, w_2, w_3, w_4$) | 0,20; 0,15; 0,25; 0,40 |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

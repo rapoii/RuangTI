@@ -98,4 +98,7 @@ Artinya proporsi waktu navigasi berada pada rentang 14,9%–25,1% dengan keyakin
 
 $$\hat{WS} = f(P_{nav}, P_{kom}, P_{driving}, \text{jam\_shift}, \text{cuaca})$$
 
-dengan evaluasi RMSE. Standar masa depan yang diharapkan adalah ISO 9241-210 (Human-Centred Design) untuk *ergonomic-by-design* platform aplikasi kurir, serta adopsi *wearable biosensors* (smartwatch) sebagai sumber data Work Sampling otomatis. Integrasi ini akan membentuk *closed-loop ergonomics system* yang adaptif terhadap beban real-time — sebuah evolusi penting dalam *Human Factors Engineering
+dengan evaluasi RMSE. Standar masa depan yang diharapkan adalah ISO 9241-210 (Human-Centred Design) untuk *ergonomic-by-design* platform aplikasi kurir, serta adopsi *wearable biosensors* (smartwatch) sebagai sumber data Work Sampling otomatis. Integrasi ini akan membentuk *closed-loop ergonomics system* yang adaptif terhadap beban real-time — sebuah evolusi penting dalam *Human Factors Engineering.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

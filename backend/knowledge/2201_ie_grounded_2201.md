@@ -79,4 +79,7 @@ $$\eta_{ex} = 1 - \frac{T_0 \int \dot{S}_{gen} \, dt}{Q_{in}} \tag{4}$$
 |---|---|---|
 | PCM (solar-salt termodifikasi) $\rho_{PCM}$ | 1.890 | kg/m³ |
 | $c_{p,s}$ (solid) | 1,55 | kJ/kg·K |
-| $c_{p,l}$ (liquid) | 1,70 | k
+| $c_{p,l}$ (liquid) | 1,70 | k.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

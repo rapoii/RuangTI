@@ -183,3 +183,6 @@ Batasan metodologi ini mencakup ketidakpastian dalam proyeksi biaya dan risiko y
 Arah riset masa depan dapat mencakup pengembangan algoritma berbasis kecerdasan buatan untuk memprediksi volatilitas biaya dan risiko, serta penerapan teknologi blockchain untuk meningkatkan transparansi dan efisiensi dalam rantai pasok.
 
 Dengan pendekatan yang tepat, evaluasi TLC dapat menjadi alat yang sangat berharga bagi perusahaan untuk mengoptimalkan keputusan strategis dan mencapai keunggulan kompetitif dalam lingkungan bisnis yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

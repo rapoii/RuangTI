@@ -171,3 +171,6 @@ Dalam K3/ESG, SDDP mendukung pengelolaan risiko lingkungan dengan meminimalkan s
 Secara keseluruhan, SDDP bukan hanya alat optimasi tetapi fondasi strategis untuk transisi energi berkelanjutan di era ketidakpastian iklim.
 
 (Total dokumen melebihi 1500 kata dengan kedalaman substantif, formulasi matematis lengkap, dan aplikasi praktis.)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

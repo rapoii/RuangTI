@@ -105,3 +105,6 @@ Salah satu batasan dari metodologi ini adalah ketergantungan pada kualitas data 
 Riset masa depan harus fokus pada pengembangan teknologi baru untuk meningkatkan akurasi pengukuran SoH dan jejak karbon, serta penerapan sistem berbasis blockchain untuk meningkatkan transparansi dan keamanan data dalam rantai pasok. Selain itu, kolaborasi antara industri dan lembaga penelitian akan menjadi kunci untuk mencapai inovasi yang berkelanjutan.
 
 Dengan demikian, pemahaman yang mendalam tentang arsitektur data dan ketertelusuran rantai pasok dalam konteks regulasi baterai EU sangat penting untuk keberlanjutan industri baterai dan pencapaian target keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

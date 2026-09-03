@@ -108,3 +108,6 @@ Ambil kasus industri makanan (sterilisasi UHT) dengan kebutuhan berikut:
 - PCM: eutektik $KNO_3$–$NaNO_3$ dengan $T_m$ = 222°C, $L$ = 110 kJ/kg, $c_{p,s}$ = 1,5 kJ/(kg·K), $\rho_{PCM}$ = 1900 kg/m³
 - HTF: *thermal oil* (misalnya Therminol 66) dengan $c_{p,f}$ = 2,3 kJ/(kg·K)
 - Tube: baja karbon, $d_i$ = 30 mm, $d_o$ = 35 mm, $k_w$ = 50 W/(m·K)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

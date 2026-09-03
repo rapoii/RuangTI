@@ -120,3 +120,6 @@ Diversification reduces portfolio risk when $\rho_{ij} < 1$. Monte Carlo simulat
 6. Damghani, K. K., & Sadrzadeh, A. (2023). Hybrid MCDM-optimization approach for project portfolio selection under uncertainty. *Computers & Industrial Engineering*, 185, 109654.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

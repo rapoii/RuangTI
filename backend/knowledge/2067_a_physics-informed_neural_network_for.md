@@ -89,4 +89,9 @@ Implementasi sistematis pendekatan PINN untuk prognosis bearing utama turbin ang
 
 **Tahap 2: Konstruksi Model Beban Operasional.** Distribusi probabilistik kecepatan angin dimodelkan menggunakan distribusi Weibull dua-parameter: $f(v) = \frac{k}{c}\left(\frac{v}{c}\right)^{k-1}\exp\left[-\left(\frac{v}{c}\right)^k\right]$, dengan parameter tipikal $k = 2{,}0$ dan $c = 8{,}5 \text{ m/s}$ untuk lokasi onshore Eropa Utara.
 
-**Tahap 3: Estimasi Panjang Retak Awal.** Menggunakan data *eddy current* atau *ultrasonic testing* historis, $
+**Tahap 3: Estimasi Panjang Retak Awal.** Menggunakan data *eddy current* atau *ultrasonic testing* historis, $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

@@ -164,4 +164,7 @@ Pertimbangkan sebuah maskapai dengan armada 50 pesawat narrow-body (misal Boeing
 
 ### 4.2 Perhitungan Ketersediaan Baseline
 
-**Langkah 1:** Hitung total *downtime*检修 terjadwal per sik
+**Langkah 1:** Hitung total *downtime*检修 terjadwal per sik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

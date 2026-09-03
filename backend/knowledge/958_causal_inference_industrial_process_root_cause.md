@@ -102,3 +102,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang b
 Ke depan, penelitian harus difokuskan pada pengembangan algoritma yang lebih efisien untuk analisis kausal dan penerapan teknik pembelajaran mesin untuk meningkatkan akurasi diagnosis. Integrasi dengan teknologi IoT juga dapat memberikan data real-time yang lebih baik untuk analisis dan pengambilan keputusan yang lebih cepat.
 
 Dengan demikian, penerapan Causal AI dan DAG dalam diagnosis banjir alarm di pabrik kimia menawarkan potensi besar untuk meningkatkan keselamatan dan efisiensi operasional, serta memberikan kontribusi signifikan terhadap pengembangan praktik terbaik dalam manajemen alarm industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

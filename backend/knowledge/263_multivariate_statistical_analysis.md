@@ -46,3 +46,6 @@ Module 262 (Definitive Screening Designs for controlled experiments), Module 264
 2. Hotelling, H. (1936). Relations between two sets of variates. *Biometrika*, 28(3/4), 321–377.
 3. Hair, J. F., Risher, J. J., Sarstedt, M., & Ringle, C. M. (2019). When to use and how to report the results of PLS-SEM. *European Business Review*, 31(1), 2–24.
 4. Journal of Operations Management (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -99,3 +99,7 @@ $$\text{Penghematan} = 446.600 \text{ kWh} \times \text{Rp } 1.450 = \text{Rp } 
 Investasi awal infrastruktur DT: sensor IoT (Rp 850 juta), platform cloud & lisensi (Rp 450 juta/tahun), integrasi BIM (Rp 600 juta), biaya engineering (Rp 700 juta). Total CAPEX = Rp 2,6 miliar. OPEX tahun-1: Rp 450 juta.
 
 $$\text{Simple Payback} = \frac{2.600.000.000}{647.570.000 - 450.000.000} = \frac{2.600
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

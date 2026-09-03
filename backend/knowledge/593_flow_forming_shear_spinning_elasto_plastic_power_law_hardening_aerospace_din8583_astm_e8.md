@@ -631,3 +631,6 @@ Berdasarkan eksekusi model numerik `FlowFormingMechanicsEngine`:
 4. **Jahazi, M., & Ebrahimi, G.** (2024). *Severe Plastic Deformation and Residual Stress Evolution in Multi-Pass Flow Forming of Aerospace High-Strength Alloys*. Journal of Materials Processing Technology, 321, 118120.
 5. **Mohebbi, M. S., & Akbarzadeh, A.** (2023). *Prediction of Forming Forces and Microstructural Gradient in Forward Flow Forming of Thin-Walled Tubes Using 3D Finite Element and Analytical Formulations*. CIRP Annals — Manufacturing Technology, 72(1), 225-228.
 6. **Blanchard, B. S., & Fabrycky, W. J.** (2016). *Systems Engineering and Analysis* (5th ed.). Prentice Hall.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

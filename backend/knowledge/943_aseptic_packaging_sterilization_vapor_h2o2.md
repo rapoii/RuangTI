@@ -99,3 +99,6 @@ Dinamika sterilisasi VHP tidak hanya relevan dalam industri makanan dan farmasi,
 Namun, ada batasan dalam metodologi ini, termasuk ketergantungan pada parameter lingkungan yang dapat bervariasi. Penelitian masa depan harus fokus pada pengembangan metode pemantauan real-time dan algoritma kontrol yang lebih canggih untuk meningkatkan keandalan proses sterilisasi.
 
 Dengan meningkatnya perhatian terhadap keberlanjutan dan kesehatan lingkungan, penting untuk mengeksplorasi alternatif ramah lingkungan untuk VHP dan mengintegrasikan prinsip-prinsip K3 dan ESG dalam desain sistem pengemasan aseptik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

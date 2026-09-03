@@ -94,3 +94,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan p
 Arah riset masa depan dapat difokuskan pada pengembangan algoritma pembelajaran mesin untuk analisis data yang lebih mendalam, serta integrasi dengan teknologi lain seperti blockchain untuk meningkatkan transparansi dan keamanan dalam sistem manajemen gerbang.
 
 Dengan demikian, penerapan sistem manajemen gerbang penerbangan berbasis IoT menawarkan potensi besar untuk meningkatkan efisiensi operasional, namun memerlukan pendekatan yang hati-hati dalam perencanaan dan implementasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

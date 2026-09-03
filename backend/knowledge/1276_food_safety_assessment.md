@@ -86,3 +86,6 @@ Dalam era otomasi dan digitalisasi, penggunaan teknologi seperti Internet of Thi
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketidakpastian dalam data dan variabilitas dalam proses. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih akurat dan adaptif, serta integrasi teknologi baru yang dapat meningkatkan efektivitas proses thermal aseptik.
 
 Dengan demikian, penilaian keamanan pangan dalam proses thermal aseptik menggunakan metode analisis risiko dan hazard merupakan langkah penting untuk memastikan kualitas dan keamanan produk, serta menjaga kepercayaan konsumen di pasar yang semakin kompetitif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

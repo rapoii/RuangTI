@@ -123,3 +123,6 @@ Pendekatan Branch-and-Cut tidak hanya relevan dalam desain jaringan logistik tet
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan komprehensif serta waktu komputasi yang mungkin meningkat seiring dengan kompleksitas model. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan penerapan teknologi terbaru, seperti kecerdasan buatan dan pembelajaran mesin, untuk meningkatkan proses pengambilan keputusan dalam desain jaringan logistik berkelanjutan.
 
 Dengan demikian, integrasi pendekatan matematis yang kuat dan teknologi modern akan menjadi kunci untuk menciptakan jaringan logistik yang lebih efisien dan berkelanjutan di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

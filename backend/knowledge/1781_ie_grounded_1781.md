@@ -194,4 +194,7 @@ Mengacu pada skenario numerik JIANG & TANG (2025), diambil asumsi:
 | $\bar{D}$ | 12.000 | unit/tahun |
 | $\hat{D}$ | 1.800 | unit (fluktuasi) |
 | $\Gamma$ | 3 | – |
-| $E_j$
+| $E_j$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

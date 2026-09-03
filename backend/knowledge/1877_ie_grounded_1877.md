@@ -182,4 +182,7 @@ $$
 
 Total worst-case: $27.300 - 2 \cdot 2.800 = 21.700$ ton. Kapasitas masih memadai (16.000 ton), sehingga *feasibility* terjaga dengan margin 5.700 ton dialokasikan ke echelon. **Tingkat konservatisme** (rasio worst-case/nominal) = 79,5% — memenuhi ambang robust optimal dari literatur Shin et al. (2024).
 
-**Interpretasi Manajerial:** Hasil menunjukkan bahwa pembangunan 2 fasilitas E dan 2 fasilitas R di Delta Yangtze menghasilkan ROIC (*Return on Invested Capital*) ≈ 38% dengan *payback period* 2,6 tahun
+**Interpretasi Manajerial:** Hasil menunjukkan bahwa pembangunan 2 fasilitas E dan 2 fasilitas R di Delta Yangtze menghasilkan ROIC (*Return on Invested Capital*) ≈ 38% dengan *payback period* 2,6 tahun.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

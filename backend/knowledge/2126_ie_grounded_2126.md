@@ -138,3 +138,7 @@ Zhou (2024) mengusulkan *partial refurbishment* disisipkan setiap $T_P = 18.000$
 
 $$E[D]_{\text{optimized}} = (60)(18) + (6)(360) + (1)(720) + (1)(1.440) \cdot 0{,}8$$
 $$= 1.080 + 2.160 + 720
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

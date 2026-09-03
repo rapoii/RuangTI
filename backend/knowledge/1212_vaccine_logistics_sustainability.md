@@ -124,3 +124,6 @@ Analisis keberlanjutan dalam logistik vaksin tidak hanya relevan untuk industri 
 Namun, terdapat beberapa batasan dalam metodologi LCA, seperti kesulitan dalam mengumpulkan data yang akurat dan representatif. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan metode yang lebih baik dalam pengumpulan data dan analisis dampak.
 
 Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan Big Data dapat meningkatkan akurasi analisis LCA dan memungkinkan perusahaan untuk membuat keputusan yang lebih baik terkait keberlanjutan. Dengan demikian, LCA dapat menjadi alat yang lebih efektif dalam mencapai tujuan keberlanjutan di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

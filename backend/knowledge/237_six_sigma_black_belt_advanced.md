@@ -98,3 +98,6 @@ Resistance prediction models identify departments/personnel at risk of rejecting
 5. Box, G. E. P., Hunter, J. S., & Hunter, W. G. (2023). *Statistics for Experimenters: Design, Innovation, and Discovery* (3rd ed.). Wiley.
 6. ASQ (2024). *Certified Six Sigma Black Belt Handbook* (3rd ed.). ASQ Quality Press.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

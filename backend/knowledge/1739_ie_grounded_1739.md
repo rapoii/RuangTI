@@ -123,3 +123,6 @@ Kenaikan suhu junction: $\Delta T = P \cdot R_{th,total} = 175 \times 0{,}2005 =
 ### 4.3 Analisis Yield & Biaya
 
 Asumsi: $D_0$ wafer 300 mm = 0{,}05 cm⁻², biaya wafer 5 nm = USD 17.000, biaya wafer 7 nm = USD 8.000, *defect density* HBM = 0{,}03 cm⁻². Yield wafer compute: $Y_1 = e^{-0{,}05 \times 1{,}0} = e^{-0{,}05} = 0{,}9512$. Yield HBM: $Y_2 = e^{-0{,}03 \times 0{,}8} = 0{,}9763$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

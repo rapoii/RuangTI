@@ -50,3 +50,6 @@ Untuk mencegah algoritma kembali ke solusi yang baru saja dieksplorasi (mencegah
 Penelitian modern (seperti Madhani et al., 2024) menggabungkan algoritma:
 - **ACO + TS (Ant Colony + Tabu Search):** ACO digunakan untuk eksplorasi rute global (konstruksi), kemudian TS bertindak sebagai *local search optimizer* untuk menyempurnakan rute tersebut.
 - **Multi-Thread SA (Leelertkij et al., 2025):** Menjalankan beberapa *Markov Chains* secara paralel untuk memecahkan VRP Multi-Objektif (waktu tempuh vs prioritas).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

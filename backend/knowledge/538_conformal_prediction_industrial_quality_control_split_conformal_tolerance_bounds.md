@@ -625,4 +625,4 @@ ID   | Point Pred | Conformal Interval (mm)   | Width    | Actual   | Cover? | D
 4. **Barber, R. F., Candès, E. J., Ramdas, A., & Tibshirani, R. J.** (2021). "Predictive Inference with the Jackknife+." *The Annals of Statistics*, 49(1), 486–507. DOI: `10.1214/20-AOS1965`.
 5. **Montgomery, D. C.** (2020). *Introduction to Statistical Quality Control* (8th ed.). John Wiley & Sons, Hoboken, NJ. ISBN: `978-1-119-39930-8`.
 6. **ISO 22514-6:2013**. *Statistical Methods in Process Management — Capability and Performance — Part 6: Process Capability Statistics for Characteristics Following a Non-Normal Distribution*. International Organization for Standardization, Geneva.
-7. **IISE Transactions**. (2024). "Distribution-Free Quality Assurance and Predictive Uncertainty Quantification in Cyber-Physical Manufacturing Systems." *IISE Transactions on Quality and Reliability Engineering*, 56(8), 812–829.
+7. **IISE Transactions**. (2024). "Distribution-Free Quality Assurance and Predictive Uncertainty Quantification in Cyber-Physical Manufacturing Systems." *IISE Transactions on Quality and Reliability Engineering*, 56(8), 812–829.$.

@@ -183,3 +183,7 @@ Setelah redesain (menggabungkan dua bracket menjadi satu stamping integral, meng
 ### 4.4. Perhitungan DFA Efficiency Pasca-Redesain
 
 $$\eta_{DFA,baru} = \frac{5 \times 180}{7 \times 270} \times 100\% = \frac{900}{1890} \times 100\% = 47.619\%
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

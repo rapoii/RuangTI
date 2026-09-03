@@ -113,4 +113,7 @@ Metodologi ABC dan analisis sensitivitas tidak hanya relevan dalam proyek infras
 
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan untuk data yang akurat dan komprehensif serta kompleksitas dalam implementasi. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan alat dan teknik yang dapat menyederhanakan proses pengumpulan data dan analisis.
 
-Ke depan, dengan kemajuan teknologi seperti Big Data dan AI, ada potensi untuk mengintegrasikan metode ABC dengan analisis data yang lebih canggih, memungkinkan analisis biaya yang lebih real-time dan adaptif terhadap perubahan kondisi pasar. Hal ini akan menjadi langkah penting dalam menciptakan sistem manajemen biaya yang lebih efisien dan responsif di masa depan.
+Ke depan, dengan kemajuan teknologi seperti Big Data dan AI, ada potensi untuk mengintegrasikan metode ABC dengan analisis data yang lebih canggih, memungkinkan analisis biaya yang lebih real-time dan adaptif terhadap perubahan kondisi pasar. Hal ini akan menjadi langkah penting dalam menciptakan sistem manajemen biaya yang lebih efisien dan responsif di masa depan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

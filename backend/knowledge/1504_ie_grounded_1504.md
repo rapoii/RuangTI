@@ -193,3 +193,7 @@ Substitusi numerik:
 $$\theta \geq (0.038)(180{,}000)Y_1 + (0.052)(180{,}000)Y_2 + (0.041)(95{,}000)W_1 + (0.029)(95{,}000)W_3 + (0.034)(95{,}000)W_4$$
 
 $$\theta \geq 6{,}840 Y
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

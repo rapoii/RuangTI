@@ -114,3 +114,6 @@ Integrasi teknologi CCUS dengan sistem energi terbarukan memiliki implikasi luas
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti biaya tinggi dan kompleksitas teknologi. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan biaya yang lebih rendah, serta integrasi yang lebih baik antara sistem energi terbarukan dan CCUS.
 
 Dalam kesimpulan, integrasi teknologi CCUS dan energi terbarukan merupakan langkah strategis yang tidak hanya mendukung pengurangan emisi karbon tetapi juga meningkatkan keberlanjutan sektor industri secara keseluruhan. Penelitian lebih lanjut dan kolaborasi antar disiplin ilmu akan menjadi kunci untuk mencapai tujuan ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -140,3 +140,6 @@ Optimasi proses distilasi kontinu menggunakan algoritma genetika tidak hanya rel
 Namun, ada batasan dalam metodologi ini, termasuk kebutuhan untuk data yang akurat dan representatif serta kompleksitas dalam implementasi algoritma. Penelitian masa depan dapat berfokus pada integrasi algoritma genetika dengan teknik pembelajaran mesin untuk meningkatkan akurasi prediksi dan efisiensi.
 
 Dengan demikian, penerapan algoritma genetika dalam optimasi proses distilasi menunjukkan potensi besar untuk meningkatkan efisiensi energi dan mendukung tujuan keberlanjutan industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -116,3 +116,6 @@ Penerapan strategi pemeliharaan berkelanjutan dalam MRO aerospace memiliki impli
 Namun, terdapat batasan dalam metodologi yang digunakan, termasuk kesulitan dalam mengumpulkan data yang akurat dan representatif. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan komprehensif.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi baru untuk daur ulang material, serta penerapan kecerdasan buatan dalam analisis LCA untuk meningkatkan akurasi dan efisiensi. Dengan demikian, industri MRO aerospace dapat berkontribusi lebih besar terhadap keberlanjutan dan efisiensi operasional di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

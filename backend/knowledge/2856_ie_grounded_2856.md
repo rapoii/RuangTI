@@ -91,4 +91,7 @@ Implementasi sistematis mengikuti **delapan tahap SOP** yang diadopsi oleh Rafi 
 
 **Tahap 2 — Desain Instrumen:** Siapkan kuesioner NASA-TLX bilingual (Indonesia-Inggris) yang sudah di-*back-translate* untuk menjamin validitas semantik, serta kartu *pairwise comparison* (15 lembar).
 
-**Tahap 3 — Penentuan Ukuran Sampel Work Sampling:** Gunakan rumus pada Bagian 2.4. Aditya & Putra (2024) menetapkan $Z_{
+**Tahap 3 — Penentuan Ukuran Sampel Work Sampling:** Gunakan rumus pada Bagian 2.4. Aditya & Putra (2024) menetapkan $Z_{$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

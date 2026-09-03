@@ -110,4 +110,7 @@ Implementasi AAS Digital Twin untuk jaringan 5G industri mengikuti SOP delapan t
 | Network Slice | Slicing Profile | `SlicingProfile` |
 | QoS Flow | QoS Properties | `QoSProperties` |
 
-**Tahap 3 — Penentuan Properti, Kapabilitas, Operasi.** Properti mencakup *throughput*, *latency*, *jitter*, *packet loss*, dan *signal strength*. Operasi mencakup `Read`, `Write`, `Invoke`, `Subscribe`. Kapabilitas (*Capability*) men-*encoding
+**Tahap 3 — Penentuan Properti, Kapabilitas, Operasi.** Properti mencakup *throughput*, *latency*, *jitter*, *packet loss*, dan *signal strength*. Operasi mencakup `Read`, `Write`, `Invoke`, `Subscribe`. Kapabilitas (*Capability*) men-*encoding.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

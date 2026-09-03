@@ -110,3 +110,6 @@ Use fuzzy numbers (Triangular Fuzzy Numbers) or interval judgments when pairwise
 -   International Journal of Production Economics (2024). Special issue on "Network-based MCDM in industrial decision making".
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

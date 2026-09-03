@@ -132,4 +132,7 @@ Misalkan sebuah fasilitas SFE-CO₂ berkapasitas sedang akan memproses **1 batch
 - Tekanan: $P = 250\text{ bar}$
 - Temperatur: $T = 318\text{ K}$ ($45\,^\circ\text{C}$)
 - Laju alir CO₂: $\dot{m}_{CO_2} = 2{,}5\text{ kg/jam}$
-- Diameter partikel rerata: $d_p = 1
+- Diameter partikel rerata: $d_p = 1$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

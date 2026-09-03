@@ -122,3 +122,6 @@ PC coefficients directly yield Sobol' indices without additional sampling. Activ
 - Borgonovo, E., & Plischke, E. (2023). Sensitivity analysis: A review of recent advances. *European Journal of Operational Research*, 308(3), 1009-1032.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

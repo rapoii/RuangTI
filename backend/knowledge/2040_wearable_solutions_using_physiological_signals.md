@@ -92,4 +92,7 @@ Sebuah studi kasus fiktif berbasis data pada laporan Cano et al. (2024) dibangun
 - Jenis sensor yang dicobakan: EDA (Empatica E4), HRV (polar H10), akselerometer triaksial
 - Tiga kondisi eksperimen: baseline (10 menit), stres sosial (Trier Social Stress Test–adapted, 15 menit), recovery (10 menit)
 
-**Langkah 1 — Perhitungan SCR Puncak Rata-rata
+**Langkah 1 — Perhitungan SCR Puncak Rata-rata.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

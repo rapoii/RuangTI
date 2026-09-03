@@ -127,4 +127,7 @@ Karena $Z < 0{,}60$, desain memenuhi ambang kelayakan. Sebagai perbandingan, bas
 
 ### 5.1. Keterbatasan Metodologis
 
-Meskipun framework Montazeri et al. (2024) dan Rehman et al. (2023) memberikan kontribusi
+Meskipun framework Montazeri et al. (2024) dan Rehman et al. (2023) memberikan kontribusi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

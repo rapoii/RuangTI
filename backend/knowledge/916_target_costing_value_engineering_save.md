@@ -133,3 +133,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketidakpastian dalam estim
 Arah riset masa depan dapat mencakup integrasi teknologi otomasi dan analitik data dalam proses Target Costing dan FAST, serta pengembangan standar yang lebih komprehensif untuk meningkatkan praktik manajemen biaya di seluruh sektor industri.
 
 Dengan demikian, penerapan teknik Target Costing dan FAST dalam proyek EPC besar tidak hanya memberikan keuntungan kompetitif, tetapi juga berkontribusi pada keberlanjutan dan efisiensi dalam industri konstruksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

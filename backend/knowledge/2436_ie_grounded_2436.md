@@ -115,4 +115,7 @@ Sebuah gudang *e-commerce* Tier-1 di Jakarta memiliki 25 unit AMR拣选 dengan s
 
 ### 4.2 Perhitungan Q-Update Step-by-Step
 
-Misalkan pada episode 1.000, agen pada state $s_t$ (jarak ke goal 4 m, heading error 20°, obstacle di 1,2 m) memilih $a_t = a_1$ (maju) dan menerima $r_{t+1} = 2{,}5$ (reward intermediasi), berpindah ke $s_{t+1}$ (jarak 3,5 m, obstacle 0,9 m). Tabel Q awal: $Q(s_t, a_1
+Misalkan pada episode 1.000, agen pada state $s_t$ (jarak ke goal 4 m, heading error 20°, obstacle di 1,2 m) memilih $a_t = a_1$ (maju) dan menerima $r_{t+1} = 2{,}5$ (reward intermediasi), berpindah ke $s_{t+1}$ (jarak 3,5 m, obstacle 0,9 m). Tabel Q awal: $Q(s_t, a_1$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -124,4 +124,7 @@ Sistem IT yang diperlukan mengintegrasikan: (a) **Battery Passport** berbasis bl
 | Insentif pengembalian $r$ | 800 | USD/unit | Studi JIANG & TANG |
 | Permintaan pasar second-life $\bar{D}_s$ | 1.800 | unit/tahun | BESS market |
 | Deviasi permintaan $\hat{D}_s$ | 360 | unit/tahun | 20% variasi |
-| Biaya echelon $c_e$ |
+| Biaya echelon $c_e$ |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

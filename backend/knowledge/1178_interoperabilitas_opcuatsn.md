@@ -110,3 +110,6 @@ Meskipun OPC-UA TSN menawarkan banyak keuntungan, ada beberapa batasan yang perl
 Ke depan, riset dapat difokuskan pada pengembangan algoritma yang lebih efisien untuk meningkatkan interoperabilitas dan mengurangi latensi. Selain itu, penelitian tentang keamanan data dalam komunikasi OPC-UA TSN juga menjadi penting untuk memastikan integritas dan kerahasiaan informasi yang ditransmisikan.
 
 Dengan memahami dan menerapkan prinsip-prinsip ini, para profesional di bidang teknik industri dapat berkontribusi pada peningkatan interoperabilitas sistem dalam lingkungan manufaktur terdistribusi, yang pada gilirannya akan meningkatkan efisiensi dan daya saing perusahaan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

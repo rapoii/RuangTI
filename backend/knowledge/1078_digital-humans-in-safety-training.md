@@ -80,4 +80,7 @@ Penggunaan Model Digital Manusia tidak hanya terbatas pada industri kimia, tetap
 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan investasi awal yang tinggi dan keterampilan teknis yang diperlukan untuk mengoperasikan perangkat lunak simulasi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih terjangkau dan mudah diakses, serta integrasi DHM dengan sistem pelatihan berbasis virtual reality (VR) dan augmented reality (AR).
 
-Dengan demikian, penggunaan Model Digital Manusia dalam pelatihan keamanan proses memiliki potensi besar untuk mengurangi kecelakaan kerja dan meningkatkan keselamatan di tempat kerja. Penelitian lebih lanjut dan pengembangan teknologi akan sangat penting untuk memaksimalkan manfaat dari pendekatan ini di masa depan.
+Dengan demikian, penggunaan Model Digital Manusia dalam pelatihan keamanan proses memiliki potensi besar untuk mengurangi kecelakaan kerja dan meningkatkan keselamatan di tempat kerja. Penelitian lebih lanjut dan pengembangan teknologi akan sangat penting untuk memaksimalkan manfaat dari pendekatan ini di masa depan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

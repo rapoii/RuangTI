@@ -109,3 +109,6 @@ Penggunaan Swarm Intelligence tidak hanya terbatas pada sektor manufaktur, tetap
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada parameter yang tepat dan kemungkinan terjebak dalam solusi lokal. Oleh karena itu, riset masa depan perlu fokus pada pengembangan algoritma hybrid yang menggabungkan SI dengan teknik optimasi lainnya untuk meningkatkan performa dan fleksibilitas sistem.
 
 Dengan demikian, penerapan Swarm Intelligence dalam koordinasi AMR menunjukkan potensi yang signifikan untuk meningkatkan efisiensi operasional di berbagai sektor industri, dan penelitian lebih lanjut akan memberikan kontribusi penting bagi inovasi teknologi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

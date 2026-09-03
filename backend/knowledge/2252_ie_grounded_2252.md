@@ -134,4 +134,7 @@ Studi kasus mengikuti formulasi tipikal Artusio et al. (2026): **vaksin mRNA dal
 | Volume vial | $V_v$ | 10 mL |
 | Luas penampang vial | $A_v$ | 4,52×10⁻⁴ m² |
 | Konsentrasi sucrose | $C_s$ | 50 g/L |
-| Jumlah vial per batch
+| Jumlah vial per batch.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

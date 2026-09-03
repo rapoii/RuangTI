@@ -102,3 +102,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas komp
 Arah riset masa depan dapat mencakup integrasi kecerdasan buatan dan pembelajaran mesin dalam SDP untuk meningkatkan akurasi prediksi dan pengambilan keputusan. Selain itu, penerapan standar ISO 9001:2015 dalam manajemen kualitas dapat meningkatkan keandalan sistem SDP dalam konteks industri yang lebih luas.
 
 Dengan demikian, pemrograman dinamis stokastik menawarkan potensi besar dalam mengoptimalkan rantai pasok di tengah ketidakpastian, dan penelitian lebih lanjut di bidang ini akan sangat bermanfaat untuk meningkatkan efisiensi dan efektivitas operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

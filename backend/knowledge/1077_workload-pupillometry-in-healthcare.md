@@ -99,3 +99,6 @@ Ke depan, riset dapat difokuskan pada integrasi pupillometry dengan teknologi we
 ---
 
 Dokumen ini memberikan gambaran yang komprehensif tentang implementasi pupillometry dalam mengukur beban kerja, dengan penekanan pada konteks praktis dan teoritis yang mendasarinya. Melalui pendekatan yang sistematis dan berbasis data, diharapkan dapat meningkatkan efisiensi dan kualitas layanan dalam sektor perawatan kesehatan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

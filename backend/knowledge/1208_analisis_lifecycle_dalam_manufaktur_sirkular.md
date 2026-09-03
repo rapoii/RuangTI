@@ -84,3 +84,6 @@ LCA memiliki relevansi yang luas dalam berbagai disiplin ilmu, termasuk manajeme
 Namun, terdapat batasan dalam metodologi LCA, termasuk ketidakpastian dalam data dan kompleksitas analisis. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang lebih baik untuk pengumpulan data, serta integrasi LCA dengan teknologi digital seperti Internet of Things (IoT) dan big data analytics.
 
 Dengan demikian, penerapan LCA dalam manufaktur sirkular tidak hanya memberikan manfaat lingkungan, tetapi juga meningkatkan daya saing perusahaan di pasar global yang semakin berorientasi pada keberlanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

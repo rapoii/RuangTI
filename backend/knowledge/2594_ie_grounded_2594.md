@@ -177,3 +177,6 @@ L_{queue} = \frac{0.667}{12000(1-0.667)} = \frac{0.667}{3996} \approx 1.67 \time
 $$
 
 **Langkah 3 — Latensi transmisi radio (asumsi 14 simbol OFDM, 30 kHz subcarrier spacing, mini-slot):**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

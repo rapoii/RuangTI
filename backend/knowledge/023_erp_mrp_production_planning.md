@@ -40,3 +40,6 @@ MRP mengkonversi permintaan produk jadi independen (*Independent Demand*) dari M
   $$C(T) = \frac{S + H \sum_{t=1}^T (t-1) D_t}{T}$$
   *Hentikan penambahan periode ketika $C(T+1) > C(T)$.*
 - **Part-Period Balancing (PPB):** Memilih ukuran lot sedemikian rupa sehingga total biaya simpan akumulatif paling mendekati biaya pemesanan ($S$).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -105,3 +105,6 @@ Optimisasi non-linier berbasis data tidak hanya relevan dalam konteks produksi, 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data yang digunakan dan kompleksitas perhitungan yang mungkin meningkat seiring dengan jumlah variabel dan kendala. Oleh karena itu, penelitian di masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan teknik pengolahan data yang lebih baik untuk mendukung keputusan yang lebih baik dalam desain sistem produksi adaptif.
 
 Dengan demikian, optimisasi non-linier berbasis data menjadi kunci dalam menciptakan sistem produksi yang tidak hanya efisien, tetapi juga mampu beradaptasi dengan cepat terhadap perubahan yang terjadi di lingkungan industri yang dinamis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

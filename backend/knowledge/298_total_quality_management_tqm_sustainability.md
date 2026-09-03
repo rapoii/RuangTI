@@ -146,3 +146,6 @@ Research shows environmental prevention costs yield 4–10× ROI through avoided
 - UNIDO. (2025). *Total Quality Management for Sustainable Industrial Development*. United Nations Industrial Development Organization.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

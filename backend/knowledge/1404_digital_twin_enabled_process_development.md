@@ -112,4 +112,7 @@ dengan *weighting* $w_1, w_2$ yang merepresentasikan trade-off antara kecepatan 
 | Volume isi vial | 3,0 mL | Spesifikasi produk |
 | Diameter dalam vial | 14,3 mm → $A_v = 1,61 \times 10^{-4}$ m² | Standar ISO 8362 |
 | $K_v$ vial | 0,0027 W·m⁻²·K⁻¹ (gas konduksi dominan pada 100 mTorr) | Kalibrasi gravimetrik |
-| $T_{collapse}$
+| $T_{collapse}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

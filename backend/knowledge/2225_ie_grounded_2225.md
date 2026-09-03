@@ -160,4 +160,7 @@ Ambil prakira awal $D_{t|t} = \mu_t$. Update MMFE setelah pengamatan $t$:
 $$\text{Var}(D_{t+h|t}) = \sigma^2 \cdot \frac{1 - \phi^{h+1}}{1 - \phi}, \quad \phi = 0{,}70$$
 
 Untuk $h = 0$: $\text{Var}(D_{t|t}) = 25 \cdot (1 - 0{,}70) / 0{,}30 = 25 \cdot 1{,}0 = 25 \rightarrow \sigma = 5$.
-Untuk $h = 1$: $\text{Var}(D_{t+1|t}) = 25 \
+Untuk $h = 1$: $\text{Var}(D_{t+1|t}) = 25 \$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

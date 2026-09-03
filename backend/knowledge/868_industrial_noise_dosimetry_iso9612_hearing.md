@@ -116,3 +116,6 @@ Penilaian kebisingan dan pengendalian akustik memiliki aplikasi yang luas di ber
 Namun, metodologi yang ada masih memiliki batasan, terutama dalam hal akurasi pengukuran di lingkungan yang kompleks. Penelitian masa depan harus fokus pada pengembangan teknologi pengukuran yang lebih canggih dan metode analisis data yang lebih baik untuk meningkatkan akurasi dan efisiensi.
 
 Dengan meningkatnya perhatian terhadap kesehatan dan keselamatan kerja, serta regulasi yang semakin ketat, penting bagi perusahaan untuk berinvestasi dalam teknologi dan praktik terbaik untuk mengelola kebisingan. Inovasi dalam desain enclosure akustik dan alat pengukur kebisingan yang lebih sensitif dapat menjadi arah riset yang menjanjikan di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

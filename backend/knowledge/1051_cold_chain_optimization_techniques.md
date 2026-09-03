@@ -104,4 +104,7 @@ Standar ISO 22000:2018 memberikan kerangka kerja untuk manajemen keamanan pangan
 
 Batasan metodologi yang ada, seperti ketidakpastian dalam permintaan dan fluktuasi suhu, memerlukan penelitian lebih lanjut untuk mengembangkan model yang lebih robust. Arah riset masa depan dapat mencakup penerapan kecerdasan buatan dan pembelajaran mesin untuk meningkatkan akurasi prediksi dalam distribusi vaksin dan pengelolaan rantai dingin secara keseluruhan.
 
-Dengan demikian, penerapan teknik optimasi lanjutan dalam logistik rantai dingin memiliki potensi besar untuk meningkatkan efisiensi dan efektivitas distribusi vaksin, serta memberikan kontribusi signifikan terhadap kesehatan masyarakat global.
+Dengan demikian, penerapan teknik optimasi lanjutan dalam logistik rantai dingin memiliki potensi besar untuk meningkatkan efisiensi dan efektivitas distribusi vaksin, serta memberikan kontribusi signifikan terhadap kesehatan masyarakat global.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -93,3 +93,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan p
 Ke depan, arah riset dalam bidang ini dapat difokuskan pada pengembangan sistem berbasis kecerdasan buatan yang dapat belajar dari pola lalu lintas dan memprediksi kondisi di masa depan, serta integrasi dengan teknologi kendaraan otonom untuk menciptakan sistem transportasi yang lebih efisien dan aman.
 
 Dengan demikian, penerapan optimasi kombinatorial dinamis dalam sistem manajemen lalu lintas memiliki potensi besar untuk meningkatkan efisiensi operasional dan memberikan manfaat ekonomi yang signifikan, sejalan dengan standar ISO 39001:2012 yang mengutamakan keselamatan jalan raya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

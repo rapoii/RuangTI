@@ -91,3 +91,6 @@ Integrasi model rheologi dalam sistem kontrol proses tidak hanya relevan untuk i
 Namun, terdapat batasan dalam metodologi ini, termasuk kompleksitas model dan kebutuhan untuk data yang akurat. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih sederhana namun tetap akurat, serta penerapan teknologi seperti machine learning untuk meningkatkan prediksi dan kontrol proses.
 
 Dengan demikian, integrasi model rheologi dalam sistem kontrol proses merupakan langkah penting untuk meningkatkan kualitas produk ekstrusi dan efisiensi operasional di industri modern. Penelitian lebih lanjut dalam bidang ini diharapkan dapat memberikan kontribusi signifikan terhadap inovasi dan keberlanjutan dalam pengolahan polimer.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

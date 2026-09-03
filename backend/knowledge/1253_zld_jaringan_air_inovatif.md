@@ -109,3 +109,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk biaya awal yang 
 Arah riset masa depan dapat difokuskan pada pengembangan material membran baru, peningkatan efisiensi energi, dan integrasi sistem ZLD dengan solusi energi terbarukan untuk mencapai keberlanjutan yang lebih baik dalam pengelolaan limbah industri. 
 
 Dengan demikian, desain jaringan air ZLD berbasis teknologi membran terintegrasi merupakan langkah penting menuju industri yang lebih berkelanjutan dan ramah lingkungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

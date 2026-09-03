@@ -105,3 +105,6 @@ Hasil analisis menunjukkan bahwa dengan ukuran kontinjensi 2 hari, manajer proye
 Analisis risiko menggunakan simulasi Monte Carlo dan pendekatan Nataf/Copula tidak hanya relevan dalam manajemen proyek konstruksi, tetapi juga dapat diterapkan dalam berbagai disiplin ilmu lainnya, termasuk rantai pasok, otomasi, dan manajemen biaya. Dalam konteks rantai pasok, pemahaman tentang ketergantungan antar tugas dan variabilitas dapat membantu dalam pengambilan keputusan yang lebih baik terkait inventaris dan pengiriman.
 
 Di masa depan, dengan kemajuan teknologi dan data analitik, diharapkan akan ada pengembangan lebih lanjut dalam metodologi ini, termasuk penggunaan kecerdasan buatan untuk memprediksi dan mengelola risiko secara lebih efektif. Penelitian lebih lanjut juga diperlukan untuk mengeksplorasi batasan metodologi saat ini dan mencari cara untuk meningkatkan akurasi serta efisiensi dalam analisis risiko proyek.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

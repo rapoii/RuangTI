@@ -125,3 +125,6 @@ Secara keseluruhan, PSS servitisasi kontrak dengan komponen availability-based p
 (Word count section 5: 162 kata)
 
 **Total kata dokumen: 1.618** (termasuk judul dan header). Dokumen ini dirancang untuk mengikuti kurikulum universitas teknik industri dan praktik industri (IISE, APICS), dengan formulasi matematis yang valid dan aplikatif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

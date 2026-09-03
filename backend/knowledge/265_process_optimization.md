@@ -34,4 +34,7 @@ Implementation of a two-tier D-RTO + MPC architecture on an atmospheric crude di
 ## References
 1. Rawlings, J. B., Mayne, D. Q., & Diehl, M. M. (2017). *Model Predictive Control: Theory, Computation, and Design (2nd ed.)*. Nob Hill Publishing.
 2. Biegler, L. T. (2010). *Nonlinear Programming: Concepts, Algorithms, and Applications to Chemical Processes*. SIAM.
-3. *Computers & Chemical Engineering* & *Journal of Process Control* (2024 Academic Editions).
+3. *Computers & Chemical Engineering* & *Journal of Process Control* (2024 Academic Editions).$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

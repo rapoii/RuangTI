@@ -45,4 +45,7 @@ dengan $D_{t+1\mid t}$ adalah ramalan permintaan untuk periode $t+1$ yang dibuat
 
 $$\text{Var}[D_{t+k\mid t}] = \sum_{j=1}^{k}\sigma_{t+j}^{2}, \quad \text{Cov}[D_{t+k\mid t}, D_{t+\ell\mid t}] = \sum_{j=1}^{\min(k,\ell)}\sigma_{t+j}^{2}$$
 
-Rumus ini memungkinkan partisi skenario pohon (*scenario tree*) yang koheren dan efisien
+Rumus ini memungkinkan partisi skenario pohon (*scenario tree*) yang koheren dan efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

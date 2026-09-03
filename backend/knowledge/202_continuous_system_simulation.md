@@ -177,3 +177,6 @@ Drift in conserved quantities indicates integration errors or inappropriate solv
 - Cellier, F. E., & Kofman, E. (2023). *Continuous System Simulation* (2nd ed.). Springer.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

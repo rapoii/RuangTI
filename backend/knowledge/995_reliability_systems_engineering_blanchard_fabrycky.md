@@ -105,3 +105,6 @@ Penerapan metodologi rekayasa sistem tidak hanya terbatas pada industri manufakt
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas sistem yang semakin meningkat dan kebutuhan untuk adaptasi terhadap perubahan teknologi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik baru yang dapat membantu dalam pengambilan keputusan yang lebih baik dan lebih cepat.
 
 Standar masa depan, seperti yang diusulkan dalam ISO/IEC/IEEE 15288, harus terus diperbarui untuk mencerminkan kemajuan teknologi dan kebutuhan industri yang terus berubah. Dengan demikian, penerapan prinsip-prinsip rekayasa sistem yang baik akan terus menjadi kunci untuk mencapai keunggulan kompetitif di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

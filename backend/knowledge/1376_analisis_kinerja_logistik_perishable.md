@@ -98,3 +98,6 @@ Analisis kinerja logistik perishable menggunakan simulasi discrete event memilik
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada data historis yang akurat dan asumsi yang mungkin tidak selalu berlaku dalam kondisi nyata. Selain itu, perkembangan teknologi seperti Internet of Things (IoT) dan analitik data besar dapat memberikan peluang baru untuk meningkatkan akurasi dan efisiensi dalam analisis logistik.
 
 Arah riset masa depan dapat difokuskan pada integrasi teknologi baru dalam simulasi, serta pengembangan model yang lebih kompleks yang dapat menangani ketidakpastian dan variabilitas dalam sistem logistik perishable. Dengan demikian, analisis kinerja logistik perishable akan terus menjadi area penelitian yang relevan dan penting dalam dunia industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

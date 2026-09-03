@@ -140,3 +140,6 @@ A smartphone manufacturer applied integrated DfX:
 - Chiu, M.-C., & Chu, C.-H. (2025). AI-driven multi-objective DfX optimization in consumer electronics. *Advanced Engineering Informatics*, 9, 100345.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

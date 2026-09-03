@@ -119,4 +119,7 @@ $$Savings = 285{,}0 \times Rp\,1.467 = Rp\,418.095 \approx \text{Rp } 418 \text{
 
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
-**Keterbatasan Metodologi.** Kala (2024) mengakui beberapa kelemahan: (1) *sample inefficiency* — diperlukan jutaan episode untuk konvergensi pada environment kompleks; (2) *safety exploration* — aksi acak selama pelatihan dapat menimbulkan risiko fisik pada AMR sebenarnya; (3) *transfer learning* antar-denah gudang masih memerlukan fine-tuning 5–10 persen episode. Borah (2024) menambahkan bahwa asumsi Markovian state sulit dipenuhi ketika
+**Keterbatasan Metodologi.** Kala (2024) mengakui beberapa kelemahan: (1) *sample inefficiency* — diperlukan jutaan episode untuk konvergensi pada environment kompleks; (2) *safety exploration* — aksi acak selama pelatihan dapat menimbulkan risiko fisik pada AMR sebenarnya; (3) *transfer learning* antar-denah gudang masih memerlukan fine-tuning 5–10 persen episode. Borah (2024) menambahkan bahwa asumsi Markovian state sulit dipenuhi ketika.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

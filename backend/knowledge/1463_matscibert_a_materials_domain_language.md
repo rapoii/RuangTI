@@ -130,4 +130,7 @@ Sebuah OEM baterai otomotif di Eropa ingin memilih rute *sourcing* litium paling
 | Spodumene (CHN) | β-spodumene | Roasting + acid leach | 0,70 | 47 | 3,1 |
 | Zinnwaldite (GER) | Zinnwaldite | Roasting + sulfatisasi | 0,60 | 55 | 4,5 |
 
-**Langkah 2: Perhitungan dampak GWP-100.** Karakterisasi faktor (CF) diambil dari Ecoinvent v3.9 (cut-off, APOS): untuk listrik *grid mix* Chili $0,52$ kg CO$_2$-eq/kWh, Australia (VIC) $0,84$, Tiongkok (Sichuan) $0,61$, dan Jerman $0,42$. Asumsikan CF untuk H$_2$SO$_4$ produksi sebesar $0,15$ kg CO$_2$-eq/kg (rata-rata Eropa). Fokus pada dampak langsung dari energi dan bahan kimia (abaikan transport, capital goods
+**Langkah 2: Perhitungan dampak GWP-100.** Karakterisasi faktor (CF) diambil dari Ecoinvent v3.9 (cut-off, APOS): untuk listrik *grid mix* Chili $0,52$ kg CO$_2$-eq/kWh, Australia (VIC) $0,84$, Tiongkok (Sichuan) $0,61$, dan Jerman $0,42$. Asumsikan CF untuk H$_2$SO$_4$ produksi sebesar $0,15$ kg CO$_2$-eq/kg (rata-rata Eropa). Fokus pada dampak langsung dari energi dan bahan kimia (abaikan transport, capital goods.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

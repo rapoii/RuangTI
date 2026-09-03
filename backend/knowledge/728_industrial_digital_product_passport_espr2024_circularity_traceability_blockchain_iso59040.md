@@ -294,5 +294,4 @@ Interpretasi: Produk gagal ambang ESPR awal karena katoda NMC rendah sirkularita
 
 ---
 
-**Kata Kunci:** Digital Product Passport, ESPR 2024/1781, ISO 59004/59020/59040, Circular Economy, Material Circularity Indicator, Product Carbon Footprint, Blockchain Provenance, Merkle Tree, Verifiable Credentials, EBSI, Catena-X, Battery Passport.
-
+**Kata Kunci:** Digital Product Passport, ESPR 2024/1781, ISO 59004/59020/59040, Circular Economy, Material Circularity Indicator, Product Carbon Footprint, Blockchain Provenance, Merkle Tree, Verifiable Credentials, EBSI, Catena-X, Battery Passport.$.

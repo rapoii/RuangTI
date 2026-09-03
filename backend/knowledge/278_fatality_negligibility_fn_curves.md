@@ -44,3 +44,6 @@ Module 276 (Bow-Tie & Barrier Management), Module 277 (Consequence Modeling: BLE
 2. Jonkman, S. N., van Gelder, P. H. A. J. M., & Vrijling, J. K. (2003). An overview of quantitative risk measures for loss of life and economic damage. *Journal of Hazardous Materials*, 99(1), 1–30.
 3. US Department of Transportation. (2023). *Departmental Guidance on Valuation of a Statistical Life*.
 4. Risk Analysis (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

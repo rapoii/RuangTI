@@ -132,3 +132,6 @@ Penelitian lebih lanjut diperlukan untuk mengembangkan model prediktif yang lebi
 ---
 
 Dokumen ini memberikan gambaran komprehensif tentang analisis geomekanika terapan untuk stabilitas lereng dalam penambangan terbuka, dengan fokus pada metodologi, perhitungan, dan aplikasi praktis dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

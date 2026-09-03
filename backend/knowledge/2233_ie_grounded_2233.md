@@ -43,4 +43,7 @@ di mana $U$ adalah koefisien transfer panas overall yang menggabungkan resistans
 
 $$\frac{1}{U} = \frac{1}{h_{HTF}} + \frac{D_{in}\ln(D_{out}/D_{in})}{2 k_{tube}} + \frac{D_{in}}{D_{out}\,h_{eff,PCM}}$$
 
-Kondisi batas awal (*initial condition*) dan batas (*boundary condition*) mengikuti standar *charging mode*: $T_{PCM}(r, 0) = T_{s,initial}$ (subcooled), $T_{HTF}(x, 0) = T_{HTF,initial}$, dan
+Kondisi batas awal (*initial condition*) dan batas (*boundary condition*) mengikuti standar *charging mode*: $T_{PCM}(r, 0) = T_{s,initial}$ (subcooled), $T_{HTF}(x, 0) = T_{HTF,initial}$, dan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

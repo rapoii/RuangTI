@@ -122,3 +122,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih canggih u
 --- 
 
 Dokumen ini memberikan panduan komprehensif mengenai penerapan UWB RTLS di hanggar perakitan berat, mencakup teori, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan standar industri terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

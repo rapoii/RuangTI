@@ -148,3 +148,6 @@ Correlation between these metrics validates the accuracy of the relationship mat
 8. Prasad, B. (2023). *Concurrent Engineering Fundamentals: Integrated Manufacturing of Products and Processes*. Springer.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

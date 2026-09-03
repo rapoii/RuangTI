@@ -106,3 +106,6 @@ Teknik pemulihan terintegrasi tidak hanya relevan dalam industri biopharmaceutic
 Namun, ada beberapa batasan metodologi yang perlu diperhatikan, termasuk kompleksitas proses yang dapat mempengaruhi hasil dan kebutuhan untuk pemantauan yang ketat terhadap parameter operasional. Selain itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik pemulihan yang lebih efisien dan ramah lingkungan.
 
 Ke depan, arah riset dapat difokuskan pada pengembangan teknologi baru yang mengintegrasikan otomatisasi dan analitik data besar untuk meningkatkan efisiensi proses pemulihan. Dengan demikian, teknik pemulihan terintegrasi akan terus menjadi fokus utama dalam pengembangan proses biopharmaceutical yang berkelanjutan dan efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

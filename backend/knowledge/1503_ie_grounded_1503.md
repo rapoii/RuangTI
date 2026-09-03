@@ -111,4 +111,7 @@ Berdasarkan data studi kasus pada Amirullah & Jakaria (2024) dengan DOI [10.2107
 **Input Parameter Desain Eksisting (Baseline):**
 - $N_m^{before} = 7$ komponen (badan keranjang, dasar, pegangan, kawat pegangan, ring pengunci, sekrup × 2, ring penjepit)
 - Material: stainless steel 304 sheet thickness 0,8 mm + kawat stainless Ø 1,2 mm
-- Proses fabrikasi: *spot welding* 6 titik, *bending* 4 operasi, *grinding
+- Proses fabrikasi: *spot welding* 6 titik, *bending* 4 operasi, *grinding.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

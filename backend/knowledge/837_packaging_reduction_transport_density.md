@@ -109,3 +109,6 @@ Pengemasan sekunder tidak hanya relevan dalam industri barang konsumen tetapi ju
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti variabilitas dalam bahan baku dan kondisi transportasi yang tidak terduga. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan adaptif.
 
 Arah riset masa depan dapat mencakup penggunaan material alternatif yang lebih ringan dan lebih kuat, serta penerapan teknologi otomatisasi dalam proses pengujian dan evaluasi kemasan. Dengan demikian, optimasi pengemasan sekunder akan terus menjadi fokus penting dalam teknik industri dan rekayasa sistem industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

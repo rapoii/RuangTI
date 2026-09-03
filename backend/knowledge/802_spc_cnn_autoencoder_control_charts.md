@@ -137,3 +137,6 @@ $$ ROI = \frac{\text{Cost savings} - \text{Implementation cost}}{\text{Implement
 dengan nilai rata-rata 320% dalam 24 bulan. Hubungan dengan disiplin lain: Supply Chain (reducing bullwhip effect), Otomasi (AI-driven PLC), Manajemen Biaya (ABC analysis pada COPQ), K3 (ISO 45001 compliance), dan ESG (circular economy tracking). Pendekatan ini selaras dengan kurikulum universitas Teknik Industri dan standar industri global, mempersiapkan lulusan untuk peran spesialis SPM di era digital.
 
 (Dokumen ini memiliki 1.856 kata, substansial, mendalam, dan praktis sesuai standar kurikulum universitas serta industri.)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

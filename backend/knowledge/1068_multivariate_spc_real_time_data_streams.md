@@ -159,3 +159,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan untuk 
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih canggih untuk analisis data besar, serta integrasi teknologi kecerdasan buatan untuk meningkatkan kemampuan prediktif dalam pengendalian kualitas.
 
 Dengan demikian, penggunaan aliran data real-time dalam MSPC merupakan langkah penting menuju pengendalian kualitas yang lebih efektif dan efisien di era industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

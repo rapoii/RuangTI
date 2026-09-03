@@ -110,3 +110,6 @@ Penerapan analisis data besar dalam NDT tidak hanya terbatas pada industri manuf
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk data berkualitas tinggi dan tantangan dalam integrasi sistem. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk analisis data besar, serta peningkatan interoperabilitas sistem NDT dengan teknologi baru seperti Internet of Things (IoT) dan kecerdasan buatan (AI).
 
 Dengan demikian, penerapan analisis data besar dalam NDT berpotensi untuk merevolusi cara industri melakukan inspeksi dan pemeliharaan, yang pada akhirnya akan meningkatkan kualitas produk dan kepuasan pelanggan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

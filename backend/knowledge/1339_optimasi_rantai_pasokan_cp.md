@@ -103,4 +103,7 @@ Dengan demikian, CPS dan Digital Twin memiliki potensi besar untuk merevolusi ca
 
 --- 
 
-Dokumen ini memberikan gambaran komprehensif mengenai optimasi rantai pasokan menggunakan Cyber-Physical Systems dan Digital Twin, serta menyajikan dasar teoritis, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan perkembangan terkini dalam bidang teknik industri.
+Dokumen ini memberikan gambaran komprehensif mengenai optimasi rantai pasokan menggunakan Cyber-Physical Systems dan Digital Twin, serta menyajikan dasar teoritis, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan perkembangan terkini dalam bidang teknik industri.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

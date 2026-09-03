@@ -129,3 +129,6 @@ Strategi manajemen termal dalam arsitektur chiplet 2.5D/3D tidak hanya relevan u
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketergantungan pada simulasi yang mungkin tidak sepenuhnya mencerminkan kondisi nyata. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknik manajemen termal yang lebih adaptif dan responsif, termasuk penggunaan material baru dan teknologi pendinginan inovatif.
 
 Dalam kesimpulannya, dengan meningkatnya kompleksitas dan kebutuhan akan kinerja tinggi, strategi manajemen termal yang efektif akan menjadi kunci untuk keberhasilan arsitektur chiplet 2.5D/3D dalam komputasi berkinerja tinggi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

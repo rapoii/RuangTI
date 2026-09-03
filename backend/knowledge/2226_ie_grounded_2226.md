@@ -145,4 +145,7 @@ $$CT_{p95} = \frac{0{,}4504}{30} + 0{,}044 = 0{,}01501 + 0{,}044 = 0{,}0590 \tex
 
 $$CT_{p95} = 0{,}0590 \times 3600 = 212{,}5 \text{ detik}$$
 
-**Interpretasi Manajerial:** Hasil ini menunjukkan bahwa $CT_{p95} = 212{,}5$ detik **melebihi** $T_{budget} = 45$ detik, artinya lini tidak memenuhi target takt-time. Rekomendasi engineering: tambah satu server ($c = 7$) atau naikkan service rate $\mu$ menjadi 32 unit/jam melalui *predict
+**Interpretasi Manajerial:** Hasil ini menunjukkan bahwa $CT_{p95} = 212{,}5$ detik **melebihi** $T_{budget} = 45$ detik, artinya lini tidak memenuhi target takt-time. Rekomendasi engineering: tambah satu server ($c = 7$) atau naikkan service rate $\mu$ menjadi 32 unit/jam melalui *predict.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

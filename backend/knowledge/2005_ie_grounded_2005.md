@@ -88,4 +88,7 @@ Rusch et al. (2022) mendeskripsikan model *digital twin* untuk produk dalam CLS 
 
 $$\mathbf{S}(t+\Delta t) = f(\mathbf{S}(t), \mathbf{U}(t), \mathbf{E}(t))$$
 
-di
+di.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

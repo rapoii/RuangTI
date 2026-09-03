@@ -92,3 +92,6 @@ Namun, terdapat batasan dalam metodologi yang ada, seperti variabilitas dalam ka
 Arah riset masa depan harus fokus pada integrasi teknologi otomatisasi dan digitalisasi dalam proses thermal aseptik untuk meningkatkan efisiensi dan keamanan. Selain itu, pendekatan berkelanjutan dalam pengolahan makanan, termasuk penggunaan energi terbarukan dan pengurangan limbah, harus menjadi bagian dari strategi inovasi di masa depan.
 
 Dengan demikian, inovasi dalam proses thermal aseptik menjadi kunci untuk meningkatkan keamanan makanan dan efisiensi energi, yang pada gilirannya akan memberikan manfaat ekonomi dan sosial yang signifikan bagi industri makanan dan masyarakat secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

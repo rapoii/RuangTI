@@ -154,3 +154,6 @@ Model optimisasi untuk manajemen suku cadang tidak hanya relevan dalam industri 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti asumsi distribusi Poisson yang mungkin tidak selalu mencerminkan realitas kegagalan peralatan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan akurat.
 
 Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan analitik data besar dapat meningkatkan akurasi prediksi kegagalan dan optimisasi manajemen suku cadang. Penelitian lebih lanjut juga dapat difokuskan pada pengembangan algoritma yang lebih canggih dan penerapan teknik pembelajaran mesin untuk meningkatkan efisiensi dan efektivitas manajemen suku cadang di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

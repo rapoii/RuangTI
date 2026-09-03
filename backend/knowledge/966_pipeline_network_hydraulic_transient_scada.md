@@ -118,3 +118,6 @@ Riset masa depan dapat difokuskan pada pengembangan model prediktif yang lebih a
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang analisis transien hidrolik dalam sistem pipa minyak dan gas, serta pentingnya pemahaman mendalam tentang fenomena ini untuk meningkatkan keselamatan dan efisiensi operasional.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

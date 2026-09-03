@@ -65,3 +65,6 @@ In intelligent warehousing, ABM models each AGV as an autonomous agent negotiati
 5.  Springer. (2026). *Flexsim-Based Simulation and Verification Program Design of Multi-AGV Scheduling in Intelligent Warehouse*.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -59,3 +59,6 @@ Metrik standar pengendalian biaya dan kinerja jadwal proyek:
 - **Cost Performance Index (CPI):** $CPI = \frac{EV}{AC}$ *(Jika $CPI > 1.0$: Efisiensi Biaya Baik)*
 - **Schedule Performance Index (SPI):** $SPI = \frac{EV}{PV}$ *(Jika $SPI > 1.0$: Progres Jadwal Baik)*
 - **Estimate at Completion (EAC):** $EAC = \frac{\text{BAC}}{CPI}$ *(BAC = Budget at Completion)*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

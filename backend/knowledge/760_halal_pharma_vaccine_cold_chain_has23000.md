@@ -93,3 +93,6 @@ Validasi rantai dingin tidak hanya relevan dalam industri farmasi, tetapi juga d
 Namun, tantangan seperti integrasi sistem dan kepatuhan terhadap regulasi tetap menjadi perhatian. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan metodologi yang lebih baik dalam validasi rantai dingin, termasuk penggunaan teknologi blockchain untuk meningkatkan traceability.
 
 Ke depan, industri diharapkan dapat mengadopsi standar yang lebih ketat dan teknologi yang lebih canggih untuk memastikan bahwa semua produk yang beredar di pasaran aman dan berkualitas tinggi. Penelitian dalam bidang ini harus terus berlanjut untuk mengatasi tantangan yang ada dan memanfaatkan peluang yang muncul dari perkembangan teknologi baru.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

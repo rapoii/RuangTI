@@ -107,3 +107,6 @@ Research by Fawkes et al. (2024) demonstrates that AI-enhanced EnMS achieves 15-
 -   U.S. Department of Energy. (2023). *Advanced Manufacturing Office: Industrial Assessment Centers Program Technical Assistance Report*.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

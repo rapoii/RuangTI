@@ -144,3 +144,6 @@ Desain jaringan pengiriman kontainer tidak hanya relevan dalam industri maritim,
 Batasan metodologi ini termasuk ketergantungan pada data historis yang mungkin tidak selalu mencerminkan kondisi pasar saat ini. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan responsif terhadap perubahan permintaan dan kondisi pasar.
 
 Arah riset masa depan dapat mencakup integrasi teknologi blockchain untuk meningkatkan transparansi dan efisiensi dalam rantai pasok, serta penerapan kecerdasan buatan untuk memperbaiki prediksi permintaan dan optimasi rute secara real-time. Dengan demikian, desain jaringan pengiriman kontainer akan terus berkembang seiring dengan kemajuan teknologi dan kebutuhan pasar yang dinamis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

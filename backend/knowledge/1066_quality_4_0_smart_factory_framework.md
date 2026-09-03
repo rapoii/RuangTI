@@ -117,3 +117,6 @@ Implementasi Smart Factory dan Quality 4.0 tidak hanya relevan dalam industri ma
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti ketergantungan pada data yang akurat dan kebutuhan untuk investasi awal yang signifikan. Di masa depan, penelitian lebih lanjut diperlukan untuk mengembangkan standar dan protokol yang dapat diadopsi secara luas, serta untuk mengeksplorasi integrasi teknologi baru seperti blockchain dalam rantai pasokan.
 
 Dengan demikian, kerangka kerja Smart Factory untuk Quality 4.0 menawarkan potensi besar untuk meningkatkan kualitas dan efisiensi dalam rantai pasokan global, namun memerlukan pendekatan yang sistematis dan kolaboratif untuk mencapai hasil yang optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

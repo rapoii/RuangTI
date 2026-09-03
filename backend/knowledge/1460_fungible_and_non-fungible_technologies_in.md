@@ -123,3 +123,7 @@ $$Re = \frac{\rho N D_i^2}{\mu} = \frac{1050 \times 35.1/60 \times (0.342)^2}{0.
 **Langkah 3: Hitung P/V (power density)**
 
 $$P_2 = 5.5 \times 1050 \times \left(\frac{35.1}{60}\right)^3 \times (0.342)^5 \approx 5.440
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

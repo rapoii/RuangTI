@@ -162,4 +162,7 @@ Pengurangan waktu: $\Delta T = \frac{270 - 65.2}{270} \times 100\% = 75.85\%$.
 |---------------|-------|
 | Material | Rp 15.200 (efisiensi penggunaan stainless 8%) |
 | Proses | Rp 7.800 (eliminasi 6 operasi pengencangan) |
-| Fastener | Rp 800 (
+| Fastener | Rp 800 (.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

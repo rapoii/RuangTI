@@ -107,3 +107,6 @@ Meskipun DRL dan GNN menawarkan solusi yang kuat, mereka juga memiliki batasan, 
 Penelitian di masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan adaptif, serta penerapan teknik pembelajaran yang lebih canggih untuk meningkatkan akurasi dan kecepatan dalam penjadwalan dinamis.
 
 Dengan demikian, modul ini memberikan gambaran menyeluruh tentang penerapan Deep Reinforcement Learning dan Graph Neural Networks dalam penjadwalan pekerjaan dinamis, serta tantangan dan peluang yang ada di industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

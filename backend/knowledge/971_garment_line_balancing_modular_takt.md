@@ -125,3 +125,6 @@ Penyeimbangan jalur perakitan dalam industri fashion beragam memiliki implikasi 
 Batasan metodologi ini termasuk kebutuhan untuk data yang akurat dan terkini serta tantangan dalam mengimplementasikan perubahan dalam sistem yang sudah ada. Penelitian masa depan dapat difokuskan pada pengembangan algoritma berbasis kecerdasan buatan untuk meningkatkan efisiensi penyeimbangan jalur dan penerapan teknologi otomasi dalam proses perakitan.
 
 Dengan demikian, penyeimbangan jalur perakitan dalam industri fast fashion beragam merupakan tantangan yang kompleks namun penting untuk diatasi, dengan pendekatan yang sistematis dan berbasis data untuk mencapai keunggulan kompetitif di pasar yang semakin ketat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

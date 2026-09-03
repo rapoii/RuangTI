@@ -118,3 +118,6 @@ Pengelolaan limbah dalam rantai pasokan berkelanjutan memiliki implikasi luas di
 Namun, terdapat batasan metodologi yang perlu diperhatikan, seperti ketidakpastian dalam estimasi limbah dan fluktuasi permintaan pasar. Oleh karena itu, riset masa depan harus berfokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar dan teknologi baru.
 
 Sebagai kesimpulan, pengelolaan limbah dalam rantai pasokan berkelanjutan bukan hanya sebuah keharusan lingkungan, tetapi juga merupakan strategi bisnis yang cerdas. Dengan mengintegrasikan praktik terbaik dalam pengelolaan limbah, perusahaan dapat mencapai keberlanjutan yang lebih baik dan meningkatkan daya saing di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

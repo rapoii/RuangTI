@@ -153,4 +153,7 @@ Setelah penerapan DFMA, tercapai spesifikasi sebagai berikut:
 | Parameter | Desain Eksisting | Desain Redesain | Δ |
 |-----------|------------------|------------------|---|
 | Jumlah komponen ($N$) | 14 | 7 | -50% |
-| Jumlah baut | 8
+| Jumlah baut | 8.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

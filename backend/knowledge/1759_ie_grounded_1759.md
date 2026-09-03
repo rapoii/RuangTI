@@ -103,3 +103,6 @@ $$C_{assembly,old} = t_{assembly,old} \times r_{labor} = 168 \text{ detik} \time
 $$C_{material,old} = m_{old} \times p_{PP} = 0{,}180 \text{ kg} \times 45.000 \text{ Rp/kg} = Rp\ 8.100$$
 
 **Langkah 4 – Setelah redesain (berdasarkan temuan paper):
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -258,3 +258,6 @@ Use Expected Improvement acquisition to focus expensive DES runs on informative 
 - Law, A. M. (2024). *Simulation Modeling and Analysis* (6th ed.). McGraw-Hill Education.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

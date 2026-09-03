@@ -358,3 +358,6 @@ Sebelum integrasi JRP, masing-masing perencana persediaan (*inventory planner*) 
 3. **Khouja, M., & Goyal, S. (2023).** *A review of the joint replenishment problem in multi-item inventory systems: Exact methods, heuristics, and supply chain extensions*. European Journal of Operational Research, 308(1), 1-18. https://doi.org/10.1016/j.ejor.2022.09.021
 4. **Moon, I., & Cha, B. C. (2024).** *The joint replenishment problem with stochastic demand and lead-time coordination under carbon emission taxation*. Computers & Industrial Engineering, 187, 109812. https://doi.org/10.1016/j.cie.2023.109812
 5. **Simchi-Levi, D., Kaminsky, P., & Simchi-Levi, E.** (2022). *Designing and Managing the Supply Chain: Concepts, Strategies, and Case Studies* (4th Edition). McGraw-Hill Education, New York.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

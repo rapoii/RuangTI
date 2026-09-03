@@ -74,3 +74,7 @@ Untuk *pluggable* dengan pitch 25 mm per port 400G: $BD \approx 16$ Gbps/mm. Unt
 Total disipasi termal *faceplate* sebuah switch:
 
 $$P_{faceplate} = \sum_{i=1}^{N}
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

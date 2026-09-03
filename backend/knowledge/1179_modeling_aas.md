@@ -107,4 +107,7 @@ Namun, ada beberapa batasan metodologi yang perlu diperhatikan. Interoperabilita
 
 Ke depan, penelitian dapat difokuskan pada pengembangan standar dan protokol untuk interoperabilitas AAS, serta penerapan teknologi baru seperti kecerdasan buatan dan Internet of Things (IoT) untuk meningkatkan kemampuan analisis dan pengambilan keputusan dalam konteks AAS.
 
-Dengan demikian, AAS memiliki potensi besar untuk mengubah cara industri beroperasi, dan penelitian lebih lanjut dalam bidang ini akan sangat penting untuk mencapai tujuan Smart Industry 5.0.
+Dengan demikian, AAS memiliki potensi besar untuk mengubah cara industri beroperasi, dan penelitian lebih lanjut dalam bidang ini akan sangat penting untuk mencapai tujuan Smart Industry 5.0.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

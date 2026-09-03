@@ -71,4 +71,7 @@ di mana $S_j$ adalah skor desain alternatif ke-$j$, $w_k$ adalah bobot kriteria 
 
 Amirullah dan Jakaria (2024) menyusun SOP penerapan DFMA pada redesain coffee enema basket mengikuti lima tahapan sistematis ([DOI: 10.21070/ups.3309](https://doi.org/10.21070/ups.3309)). Prosedur ini bersifat generik dan dapat diadaptasi untuk produk sheet-metal sederhana lainnya:
 
-**Tahap 1 — Analisis Fungsi dan Spesifikasi Produk.** Definisikan fungsi primer (memfilter dan menahan bubuk kopi saat prosedur enema), fungsi sekunder (kemudahan pembersihan, food-grade compliance), serta constraint dimensi (diameter, kapasitas filtrasi). Pada tahap ini juga
+**Tahap 1 — Analisis Fungsi dan Spesifikasi Produk.** Definisikan fungsi primer (memfilter dan menahan bubuk kopi saat prosedur enema), fungsi sekunder (kemudahan pembersihan, food-grade compliance), serta constraint dimensi (diameter, kapasitas filtrasi). Pada tahap ini juga.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

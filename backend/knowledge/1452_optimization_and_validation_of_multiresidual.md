@@ -72,4 +72,7 @@ Addo et al. (2022) melaporkan $D_{eff}$ untuk hop berada pada rentang $5{,}91 \t
 
 ### 2.4 Solid Phase Extraction (SPE) dan QuEChERS
 
-Untuk *clean-up*, Mravcová et
+Untuk *clean-up*, Mravcová et.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

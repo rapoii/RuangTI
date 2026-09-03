@@ -40,4 +40,7 @@ CVP memodelkan hubungan linier antara total pendapatan, total biaya tetap (*Fixe
 3. **Volume Produksi untuk Target Laba Tertentu ($\pi_{\text{target}}$):**
    $$Q_{\text{target}} = \frac{FC + \pi_{\text{target}}}{P - V}$$
 4. **Margin of Safety (MoS):**
-   $$\text{MoS (\%)} = \frac{\text{Penjualan Aktual / Anggaran} - \text{Penjualan BEP}}{\text{Penjualan Aktual / Anggaran}} \times 100\%$$
+   $$\text{MoS (\%)} = \frac{\text{Penjualan Aktual / Anggaran} - \text{Penjualan BEP}}{\text{Penjualan Aktual / Anggaran}} \times 100\%$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -44,3 +44,6 @@ Implementasi Digital Twin DES tersinkronisasi SCADA/OPC-UA pada lini perakitan s
 2. Tao, F., Zhang, H., Liu, A., & Nee, A. Y. C. (2019). Digital twin in industry: State-of-the-art. *IEEE Transactions on Industrial Informatics*, 15(4), 2405–2415.
 3. Negri, E., Fumagalli, L., & Macchi, M. (2017). A review of the roles of digital twin in CPS-based production systems. *Procedia Manufacturing*, 11, 939–948.
 4. Ivanov, D., Dolgui, A., & Sokolov, B. (2024). Digital supply chain twins with simulation-based resilience analytics: Advances and research directions. *IEEE Transactions on Automation Science and Engineering*, 21(3), 2810–2826.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

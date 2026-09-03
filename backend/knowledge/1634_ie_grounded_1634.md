@@ -174,4 +174,7 @@ $$\mathcal{C}_{baru} = e^{-10 \cdot 0{,}005} = e^{-0{,}05} \approx 0{,}951 \ge 0
 
 ### 4.5 Nilai Tambah Manajerial
 
-- **Penghematan downtime:** prediksi 4 *cell outage* per tahun, masing
+- **Penghematan downtime:** prediksi 4 *cell outage* per tahun, masing.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

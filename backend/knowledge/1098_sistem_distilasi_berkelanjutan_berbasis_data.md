@@ -131,3 +131,6 @@ Implementasi sistem berbasis data dan IoT dalam proses distilasi tidak hanya rel
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk tantangan dalam keamanan data dan integrasi sistem yang kompleks. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan solusi yang lebih aman dan efisien, serta penerapan teknologi baru seperti kecerdasan buatan untuk analisis data yang lebih mendalam.
 
 Dengan demikian, penerapan sistem berbasis data untuk monitoring dan kontrol proses distilasi berkelanjutan menggunakan IoT merupakan langkah penting menuju industri 4.0 yang lebih efisien dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

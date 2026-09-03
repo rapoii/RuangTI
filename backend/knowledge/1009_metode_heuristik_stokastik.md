@@ -110,3 +110,6 @@ Metode heuristik stokastik tidak hanya relevan dalam konteks penjadwalan, tetapi
 Namun, ada batasan dalam penerapan metode ini, termasuk kebutuhan akan data yang akurat dan representatif serta potensi untuk terjebak dalam solusi lokal. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih robust dan adaptif.
 
 Arah riset masa depan dapat mencakup integrasi teknologi kecerdasan buatan dan pembelajaran mesin untuk meningkatkan kemampuan prediktif dan adaptif dari metode heuristik stokastik. Dengan demikian, perusahaan dapat lebih siap menghadapi tantangan yang muncul dalam lingkungan industri yang terus berubah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -155,4 +155,7 @@ Dengan asumsi satu operator pada stasiun perakitan, *cycle time* lintasan turun 
 - Kapasitas harian desain lama: $\lfloor 28.800/184 \rfloor = 156$ unit/hari
 - Kapasitas harian desain baru: $\lfloor 28.800/96 \rfloor = 300$ unit/hari
 
-Peningkatan kapasitas
+Peningkatan kapasitas.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

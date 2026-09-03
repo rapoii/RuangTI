@@ -120,3 +120,7 @@ Berdasarkan data empiris paper JIANG & TANG (2025) untuk pasar baterai matang:
 ### 4.3 Perhitungan Revenue Second-Life (Grade B)
 
 $$R_{SL} = N_B \cdot p_{SL,B} = 21.000
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

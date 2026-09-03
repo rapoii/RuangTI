@@ -136,3 +136,6 @@ Sistem CPPS dan arsitektur holonik memiliki aplikasi luas di berbagai sektor, te
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas dalam pengembangan agen dan kebutuhan untuk infrastruktur teknologi yang memadai. Penelitian lebih lanjut diperlukan untuk mengatasi tantangan ini, termasuk pengembangan algoritma yang lebih efisien dan penerapan teknologi baru seperti kecerdasan buatan dan pembelajaran mesin.
 
 Ke depan, arah riset dapat difokuskan pada integrasi CPPS dengan teknologi blockchain untuk meningkatkan transparansi dan keamanan dalam rantai pasok, serta penerapan prinsip keberlanjutan dalam desain sistem produksi. Dengan demikian, CPPS dan arsitektur holonik tidak hanya akan meningkatkan efisiensi, tetapi juga berkontribusi pada tujuan keberlanjutan industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

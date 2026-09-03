@@ -56,3 +56,6 @@ Evaluasi dan pemilihan penyedia layanan logistik pihak ketiga (3PL) untuk distri
 - Roy, B. (1991). The outranking approach and the foundations of ELECTRE methods. *Theory and Decision*, 31(1), 49–73.
 - Brans, J. P., & De Smet, Y. (2016). PROMETHEE methods. In *Multiple Criteria Decision Analysis* (pp. 187–219). Springer.
 - Corrente, S., et al. (2024). Robust ordinal regression for ELECTRE TRI with interacting criteria: Applications to industrial supplier evaluation. *European Journal of Operational Research*, 315(2), 512–528.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

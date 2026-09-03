@@ -105,3 +105,6 @@ Standar masa depan juga perlu mempertimbangkan aspek keberlanjutan dan dampak li
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang studi stabilitas produk dalam proses lyophilization dengan pendekatan multivariat, serta relevansinya dalam konteks industri modern. Dengan memahami dan menerapkan prinsip-prinsip ini, para profesional di bidang teknik industri dapat meningkatkan kualitas dan efisiensi produk dalam rantai pasok.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

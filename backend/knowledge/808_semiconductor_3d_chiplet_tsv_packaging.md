@@ -97,3 +97,6 @@ $$ ROI = \frac{\text{Net Benefit}}{\text{Investment}} \times 100\% $$
 di mana net benefit mencakup pengurangan yield loss dan peningkatan throughput. Tantangan adopsi mencakup gap skill workforce yang memerlukan pelatihan berbasis ASME standards untuk mechanical design packaging.
 
 Dalam K3, ESD protection dan chemical handling sesuai SEMI E187 sangat krusial untuk mencegah kecelakaan pada proses plasma etching. Evaluasi ESG menunjukkan bahwa optimasi thermal stress modeling dapat mengurangi energy consumption packaging hingga 15%, mendukung sustainability data center. Secara manajerial, balanced scorecard menilai perspektif keuangan (cost per wafer <100 USD), pelanggan (reliability MTBF >10^6 jam), proses (AR uniformity <5%), serta pembelajaran (training program). Tantangan utama adalah regulasi export controls dan IP protection pada chiplet design, yang memerlukan strategi global sourcing untuk mencapai efisiensi operasional maksimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

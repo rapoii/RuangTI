@@ -125,3 +125,6 @@ Optimasi penjadwalan truk dan shovel tidak hanya relevan dalam industri pertamba
 Namun, terdapat batasan dalam metodologi ini, seperti ketidakpastian dalam waktu transportasi dan permintaan material. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi lapangan, serta integrasi dengan sistem manajemen berbasis AI untuk meningkatkan efisiensi dan keberlanjutan.
 
 Dengan demikian, optimasi penjadwalan truk dan shovel dalam pertambangan terbuka menjadi aspek kritis dalam mencapai efisiensi operasional dan keberlanjutan, sejalan dengan perkembangan teknologi dan tuntutan industri yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

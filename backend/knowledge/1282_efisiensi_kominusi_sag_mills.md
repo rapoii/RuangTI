@@ -120,3 +120,6 @@ Ke depan, penelitian dapat difokuskan pada integrasi teknologi IoT dan machine l
 ---
 
 Dokumen ini memberikan panduan substansial mengenai pengaruh parameter operasional terhadap efisiensi energi dalam proses kominusi menggunakan SAG mills, dengan pendekatan simulasi dinamis yang relevan dan aplikatif dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -143,3 +143,7 @@ Untuk konfigurasi 4 compute + 1 redundan ($N=4$):
 $$Y_{system} = 1 - \sum_{k=2}^{5} \binom{5}{k}(1-Y_{die})^k Y_{die}^{5-k}$$
 
 $$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

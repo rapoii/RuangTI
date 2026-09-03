@@ -89,4 +89,7 @@ Namun, terdapat batasan dalam metodologi ini, termasuk kualitas data yang dikump
 
 Standar masa depan dalam pemeliharaan prediktif harus mencakup integrasi dengan sistem manajemen lainnya, seperti sistem Enterprise Resource Planning (ERP) dan sistem manajemen rantai pasok (SCM), untuk menciptakan ekosistem yang lebih terintegrasi dan responsif terhadap perubahan kondisi operasional.
 
-Dengan demikian, pemahaman yang mendalam dan penerapan teknologi AI dalam pemeliharaan prediktif akan menjadi kunci untuk mencapai keunggulan kompetitif di era industri 4.0.
+Dengan demikian, pemahaman yang mendalam dan penerapan teknologi AI dalam pemeliharaan prediktif akan menjadi kunci untuk mencapai keunggulan kompetitif di era industri 4.0.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

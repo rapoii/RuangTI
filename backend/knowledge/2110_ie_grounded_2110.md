@@ -115,4 +115,7 @@ Kontribusi Zhou (2024) memiliki kekuatan analitis yang jarang dijumpai di litera
 
 Dibandingkan metode konvensional berbasis *hard-time intervals* (misal FAA MSG-3 tradisional), pendekatan Zhou memungkinkan *dynamic rescheduling* yang adaptif terhadap data reliabilitas aktual, sehingga *life-cycle cost* (LCC) armada dapat ditekan 8–15% menurut studi kasus tipikal.
 
-Aplikasi
+Aplikasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

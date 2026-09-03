@@ -150,4 +150,7 @@ $$T_{\text{total}}^{\text{all-decl}} = 35{,}52 \text{ s} \cdot 1000 = 35520 \tex
 
 $$T_{\text{total}}^{\text{IaaC}} = 0{,}068 \text{ s} \cdot 1000 = 68 \text{ s} \approx 1{,}13 \text{ menit}$$
 
-**Interpretasi Manajerial:** Penghematan 9,86 jam per siklus optimasi memungkinkan departamen *process engineering* menjalankan **~520 siklus optimasi tambahan per tahun** dengan sumber daya komputasi yang sama. Pada *hourly rate* analis senior sebesar Rp 350.000, ini setara dengan efisiensi biaya
+**Interpretasi Manajerial:** Penghematan 9,86 jam per siklus optimasi memungkinkan departamen *process engineering* menjalankan **~520 siklus optimasi tambahan per tahun** dengan sumber daya komputasi yang sama. Pada *hourly rate* analis senior sebesar Rp 350.000, ini setara dengan efisiensi biaya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

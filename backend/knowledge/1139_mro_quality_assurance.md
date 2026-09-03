@@ -88,3 +88,6 @@ Sistem jaminan kualitas berbasis AI tidak hanya relevan dalam industri penerbang
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti kualitas data yang digunakan, kompleksitas model, dan kebutuhan akan keterampilan teknis yang tinggi untuk pengoperasian sistem. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih robust dan dapat diadaptasi di berbagai sektor industri.
 
 Arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien, integrasi dengan teknologi IoT untuk pengumpulan data real-time, serta peningkatan kemampuan sistem untuk belajar dari data baru secara berkelanjutan. Dengan demikian, sistem jaminan kualitas berbasis AI dapat terus beradaptasi dan meningkatkan kinerjanya di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

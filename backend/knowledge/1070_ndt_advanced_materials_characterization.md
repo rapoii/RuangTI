@@ -108,3 +108,6 @@ NDT tidak hanya relevan untuk sektor aerospace, tetapi juga memiliki aplikasi lu
 Namun, ada beberapa batasan dalam metodologi NDT, seperti ketergantungan pada pengalaman operator dan keterbatasan dalam mendeteksi cacat tertentu. Oleh karena itu, penelitian masa depan perlu fokus pada pengembangan teknologi NDT yang lebih canggih, seperti penggunaan kecerdasan buatan untuk analisis data dan pengembangan material baru yang lebih mudah diinspeksi.
 
 Dengan demikian, karakterisasi material canggih menggunakan NDT akan terus menjadi bidang yang berkembang, seiring dengan kemajuan teknologi dan kebutuhan industri yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

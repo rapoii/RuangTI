@@ -406,4 +406,4 @@ Data aliran proses terukur:
 3. Kemp, I. C. (2007). *Pinch Analysis and Process Integration: A User Guide on Process Integration for the Efficient Use of Energy* (2nd ed.). Butterworth-Heinemann / Elsevier. ISBN: 978-0-7506-8260-2.
 4. Shenoy, U. V. (1995). *Heat Exchanger Network Synthesis: Process Optimization by Energy and Resource Analysis*. Gulf Publishing Company. ISBN: 978-0-88415-391-7.
 5. Klemeš, J. J. (Ed.). (2013). *Handbook of Process Integration (PI): Minimisation of Energy and Water Use, Waste and Emissions*. Woodhead Publishing / Elsevier. DOI: 10.1533/9780857097255.
-6. Furman, K. C., & Sahinidis, N. V. (2002). A Critical Review and Annotated Bibliography for Heat Exchanger Network Synthesis. *Industrial & Engineering Chemistry Research*, 41(10), 2335–2370. DOI: 10.1021/ie010379f.
+6. Furman, K. C., & Sahinidis, N. V. (2002). A Critical Review and Annotated Bibliography for Heat Exchanger Network Synthesis. *Industrial & Engineering Chemistry Research*, 41(10), 2335–2370. DOI: 10.1021/ie010379f.$.

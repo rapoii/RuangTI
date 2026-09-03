@@ -105,3 +105,6 @@ Namun, ada batasan dalam metodologi yang ada, termasuk ketergantungan pada data 
 Ke depan, fokus pada keberlanjutan dan tanggung jawab lingkungan juga akan menjadi penting. Pengendalian variabilitas yang efektif dapat membantu mengurangi limbah dan meningkatkan efisiensi energi, yang sejalan dengan tujuan ESG (Environmental, Social, and Governance).
 
 Dengan demikian, pengendalian variabilitas dalam CMP bukan hanya tentang meningkatkan kualitas produk, tetapi juga tentang menciptakan sistem produksi yang lebih efisien dan berkelanjutan untuk masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

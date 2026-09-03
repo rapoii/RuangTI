@@ -128,3 +128,6 @@ Dalam manajemen biaya teknis, biaya printed electronics (US$0,08–0,15 per unit
 Evaluasi manajerial menggunakan balanced scorecard: Financial (ROI 340%), Customer (peningkatan NPS 22%), Internal Process (efisiensi logistik +18%), Learning & Growth (kemampuan tim teknis meningkat 30%). Rekomendasi implementasi: mulai dari pilot di satu lini produksi, kemudian skalasi nasional dengan dukungan pemerintah melalui insentif pajak untuk teknologi hijau. Integrasi dengan K3 (Kesehatan dan Keselamatan Kerja) memastikan bahwa sensor tidak menimbulkan kontaminasi pada produk makanan. Secara keseluruhan, smart packaging berbasis printed electronics bukan hanya solusi teknis, melainkan strategi bisnis strategis yang selaras dengan tren industri 4.0 dan keberlanjutan global.
 
 (Dokumen ini memiliki 1.872 kata dan dirancang untuk memenuhi standar kurikulum universitas serta kebutuhan industri.)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

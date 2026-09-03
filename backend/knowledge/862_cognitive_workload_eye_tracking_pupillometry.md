@@ -102,3 +102,6 @@ Penilaian beban kerja mental dan kesadaran situasional tidak hanya relevan dalam
 Namun, ada beberapa batasan dalam metodologi yang perlu diperhatikan, seperti variabilitas individu dalam persepsi beban kerja dan kesadaran situasional. Penelitian masa depan dapat berfokus pada pengembangan model prediktif yang lebih akurat dan penerapan teknologi baru, seperti kecerdasan buatan, untuk meningkatkan analisis data dan pengambilan keputusan dalam ruang kontrol.
 
 Dengan demikian, integrasi metode penilaian beban kerja mental dan kesadaran situasional yang lebih baik akan berkontribusi pada peningkatan keselamatan dan efisiensi operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -137,3 +137,6 @@ Pendekatan dinamika dalam optimisasi kombinatorial tidak hanya relevan dalam sis
 Namun, terdapat beberapa batasan metodologi ini, seperti ketergantungan pada data yang akurat dan kemampuan untuk mengadaptasi model terhadap perubahan kondisi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih adaptif dan penggunaan teknologi terkini seperti kecerdasan buatan dan pembelajaran mesin untuk meningkatkan akurasi dan efisiensi sistem.
 
 Dengan demikian, pendekatan dinamika untuk optimisasi kombinatorial dalam sistem transportasi cerdas menunjukkan potensi yang besar untuk meningkatkan efisiensi operasional dan memberikan solusi yang lebih baik dalam menghadapi tantangan yang ada di industri transportasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

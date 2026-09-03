@@ -127,3 +127,6 @@ Meskipun teknologi ini menjanjikan, terdapat beberapa batasan yang perlu diperha
 Riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk pemetaan skema dan validasi kueri, serta penerapan teknik pembelajaran mendalam untuk meningkatkan akurasi pemrosesan bahasa alami. Selain itu, integrasi dengan teknologi blockchain untuk keamanan data dan transparansi juga menjadi area yang menarik untuk dieksplorasi.
 
 Dengan demikian, penerapan Enterprise Text-to-SQL semantic parsing dalam analitik ERP manufaktur tidak hanya dapat meningkatkan efisiensi operasional tetapi juga membuka peluang baru untuk inovasi dalam pengelolaan data dan informasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

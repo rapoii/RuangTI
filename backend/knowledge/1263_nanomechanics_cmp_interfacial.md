@@ -152,3 +152,6 @@ Interaksi antara nanomechanics dan CMP tidak hanya relevan dalam industri semiko
 Namun, terdapat batasan dalam metodologi yang ada, termasuk variabilitas material dan kesulitan dalam pengukuran yang akurat pada skala nano. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknik pengukuran yang lebih baik dan pemodelan yang lebih akurat untuk memahami interaksi ini secara lebih mendalam.
 
 Dengan demikian, penelitian ini tidak hanya memberikan wawasan baru dalam proses CMP, tetapi juga membuka peluang untuk inovasi dalam pengembangan material semikonduktor yang lebih efisien dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

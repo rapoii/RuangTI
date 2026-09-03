@@ -83,4 +83,7 @@ $$\text{SoH} < 60\% \Rightarrow \text{Material Recycling (echelon-3)}$$
 
 **Tahap 6 — Hydrometallurgical / Pyrometallurgical Processing.** *Black mass* diproses dengan leaching asam (H₂SO₄ + H₂O₂) atau pirometalurgi pada suhu 1400–1600°C untuk mengekstrak Li₂CO₃, CoSO₄, NiSO₄.
 
-**Tahap 7 — Material Recovery & Reintegration.** Material hasil ekstraksi direintegrasikan ke
+**Tahap 7 — Material Recovery & Reintegration.** Material hasil ekstraksi direintegrasikan ke.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

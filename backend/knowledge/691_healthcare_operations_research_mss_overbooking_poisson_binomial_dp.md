@@ -283,3 +283,6 @@ STATUS VALIDASI: LULUS (galat analitik-vs-Monte Carlo < 0.5%)
 - Brandeau, M. L., Sainfort, F., & Pierskalla, W. P. (Eds.). (2004). *Operations Research and Health Care: A Handbook of Methods and Applications*. Springer. [bab penjadwalan kapasitas]
 - Hillier, F. S., & Lieberman, G. J. (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill. [bab dynamic programming & queueing theory]
 - Taha, H. A. (2017). *Operations Research: An Introduction* (10th ed.). Pearson. [bab teori antrian & simulasi]
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

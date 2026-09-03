@@ -149,3 +149,6 @@ Pada *initial state* (PCM solid @ 200 °C, HTF in @ 240 °C):
 - $\Delta T_{lmtd} = (40-18)/\ln(40/18) = 22/\ln(2{,}222) = 27{,}4$ °C
 
 **Overall heat transfer coefficient** dengan *effective conductivity*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

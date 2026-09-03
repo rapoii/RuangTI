@@ -125,3 +125,6 @@ Interoperabilitas OPC-UA TSN tidak hanya relevan untuk sektor manufaktur, tetapi
 Batasan metodologi ini mencakup ketergantungan pada infrastruktur jaringan yang ada dan tantangan dalam integrasi sistem lama. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan solusi yang lebih adaptif dan fleksibel, serta peningkatan keamanan siber dalam komunikasi data.
 
 Dengan demikian, pemahaman yang mendalam tentang interoperabilitas OPC-UA TSN akan menjadi kunci untuk mencapai efisiensi dan keberlanjutan dalam sistem manufaktur dan rantai pasok berbasis cloud.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

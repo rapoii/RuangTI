@@ -41,4 +41,7 @@ dengan turunan fungsi Dirac terkonsentrasi di sekitar $T_m$:
 
 $$f'(T) = \frac{1}{T_l - T_s} \quad \text{untuk } T_s \leq T \leq T_l$$
 
-### 2.3 Persamaan Energi untuk Heat Transfer Fluid
+### 2.3 Persamaan Energi untuk Heat Transfer Fluid.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

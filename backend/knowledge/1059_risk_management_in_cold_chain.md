@@ -103,3 +103,6 @@ Ke depan, arah penelitian dapat difokuskan pada pengembangan algoritma berbasis 
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai strategi manajemen risiko dalam logistik rantai dingin, dengan penekanan pada pendekatan sistematis dan berbasis data. Penerapan prinsip-prinsip ini diharapkan dapat meningkatkan efisiensi dan keberlanjutan dalam distribusi barang mudah rusak.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

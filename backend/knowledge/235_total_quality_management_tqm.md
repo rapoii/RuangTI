@@ -106,3 +106,6 @@ Where $r_{org}$ and $r_{comp}$ are organizational and competitor improvement rat
 5. Deming, W. E. (2023). *Out of the Crisis* (Reissue ed.). MIT Press.
 6. Juran, J. M., & De Feo, J. A. (2024). *Juran's Quality Handbook* (7th ed.). McGraw-Hill Education.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

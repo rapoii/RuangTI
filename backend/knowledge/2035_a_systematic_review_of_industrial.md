@@ -39,4 +39,7 @@ Neraca massa pada IPAL steady-state mengikuti persamaan konservasi:
 
 $$Q_{in} \cdot C_{in} = Q_{out} \cdot C_{out} + Q_w \cdot C_w + R$$
 
-di mana $Q$ adalah laju alir volumetrik (m³/h
+di mana $Q$ adalah laju alir volumetrik (m³/h.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

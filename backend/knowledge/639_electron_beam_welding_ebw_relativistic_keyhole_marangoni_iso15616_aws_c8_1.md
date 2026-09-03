@@ -531,3 +531,6 @@ Melalui penerapan EBW bertegangan tinggi ($130\ \text{kV}$) dengan modulasi defl
 6. Chen, G., Liu, J., Shu, X., Gu, H., & Zhang, B. (2019). *Numerical simulation of keyhole morphology and molten pool flow behavior in aluminum alloy electron-beam welding*. **International Journal of Heat and Mass Transfer**, 137, 439-449. DOI: https://doi.org/10.1016/j.ijheatmasstransfer.2019.04.112.
 7. Skryabinskyi, V. V., Nesterenkov, V. M., & Rusynyk, M. O. (2020). *Electron beam welding with programming of beam power density distribution*. **The Paton Welding Journal**, 2020(1), 38-44. DOI: https://doi.org/10.37434/tpwj2020.01.07.
 8. Trushnikov, D. N., Mladenov, G. M., & Belenkiy, V. Y. (2013). *Controlling the Electron Beam Focus Regime and Monitoring the Keyhole in Electron Beam Welding*. **Quarterly Journal of the Japan Welding Society**, 31(4), 91s-94s. DOI: https://doi.org/10.2207/qjjws.31.91s.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

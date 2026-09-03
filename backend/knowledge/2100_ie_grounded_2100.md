@@ -161,4 +161,7 @@ Episode steps (Tabel 1):
 | 2 | (1,0; 0) | 9,00 | +0,50 |
 | 10 | (5,0; 0) | 5,00 | +0,50 |
 | 20 | (9,5; 0) | 0,50 | +0,50 |
-| 21 | (
+| 21 | (.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

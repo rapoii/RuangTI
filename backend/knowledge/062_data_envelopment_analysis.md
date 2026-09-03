@@ -63,3 +63,6 @@ $$ \rho^* = \min \frac{1 - \frac{1}{m}\sum_{i=1}^{m} \frac{s_i^-}{x_{ik}}}{1 + \
 - Chen, Y., & Li, X. (2024). Network DEA with shared resources. *European Journal of Operational Research*, 314(1), 112-128.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

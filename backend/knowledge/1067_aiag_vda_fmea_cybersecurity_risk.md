@@ -99,3 +99,6 @@ Integrasi analisis risiko keamanan siber dalam FMEA tidak hanya relevan untuk in
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kesulitan dalam mengukur CRF secara akurat dan kurangnya data historis tentang insiden keamanan siber. Oleh karena itu, riset masa depan perlu difokuskan pada pengembangan model yang lebih akurat untuk mengukur risiko keamanan siber dan integrasi teknologi baru seperti machine learning untuk meningkatkan deteksi dan respons terhadap ancaman.
 
 Dengan demikian, pendekatan yang sistematis dan berbasis data dalam analisis risiko keamanan siber dalam FMEA dapat memberikan kontribusi signifikan terhadap peningkatan kualitas dan keamanan produk elektronik, serta memperkuat posisi kompetitif perusahaan di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

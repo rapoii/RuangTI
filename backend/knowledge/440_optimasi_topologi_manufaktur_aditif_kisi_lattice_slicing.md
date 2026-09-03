@@ -270,4 +270,4 @@ Evaluasi struktural dan operasional membuktikan bahwa penerapan SIMP Topology Op
 3. ASTM F2792-12a (2012). *Standard Terminology for Additive Manufacturing Technologies*. ASTM International, West Conshohocken, PA. DOI: 10.1520/F2792-12A.
 4. ISO/ASTM 52900:2021. *Additive manufacturing — General principles — Fundamentals and vocabulary*. International Organization for Standardization / ASTM International.
 5. Sigmund, O. (2001). *A 99 line topology optimization code written in MATLAB*. Structural and Multidisciplinary Optimization, 21(2), 120-127. DOI: 10.1007/s001580050176.
-6. Groover, M. P. (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th Edition). John Wiley & Sons. ISBN: 978-1-119-47521-7.
+6. Groover, M. P. (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th Edition). John Wiley & Sons. ISBN: 978-1-119-47521-7.$.

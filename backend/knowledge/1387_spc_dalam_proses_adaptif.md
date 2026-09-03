@@ -106,3 +106,6 @@ Ke depan, riset dalam SPC adaptif dapat difokuskan pada pengembangan algoritma y
 ---
 
 Dokumen ini menyajikan pemahaman yang mendalam tentang Statistical Process Control adaptif dalam konteks manufaktur fleksibel, serta memberikan dasar matematis dan metodologis yang diperlukan untuk implementasi yang efektif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

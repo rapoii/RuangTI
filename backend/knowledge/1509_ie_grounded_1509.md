@@ -109,4 +109,7 @@ Implementasi CLSC baterai bekas memerlukan SOP terintegrasi yang mengikuti stand
    logistics            IEC 61960             equilibrium
 ```
 
-**Fase 1 – Collection:** Baterai pensiun dikumpulkan dari dealer, fleet operator, dan konsumen dengan *incentive fee* $w$ per unit. Transportasi mengikuti protokol Class
+**Fase 1 – Collection:** Baterai pensiun dikumpulkan dari dealer, fleet operator, dan konsumen dengan *incentive fee* $w$ per unit. Transportasi mengikuti protokol Class.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

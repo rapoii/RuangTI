@@ -140,3 +140,6 @@ Dari perspektif manajemen biaya, penggunaan robot octopod dapat mengurangi biaya
 Ke depan, penelitian harus berfokus pada pengembangan algoritma kontrol yang lebih canggih dan adaptif, serta peningkatan kemampuan sensor untuk mendukung operasi di lingkungan yang tidak terduga. Penelitian lebih lanjut juga perlu dilakukan untuk mengeksplorasi penggunaan material baru yang lebih ringan dan kuat untuk meningkatkan performa robot.
 
 Dengan demikian, pengembangan model kinematika tubuh utuh untuk robot octopod tidak hanya relevan untuk aplikasi saat ini tetapi juga penting untuk inovasi masa depan dalam teknologi robotika.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -118,4 +118,7 @@ Karena semua $Q((0,1),\cdot)=0$, maka $Q((0,0),0) = -0{,}5$.
 
 **Episode ke-100 (Konvergensi Parsial).** Misalkan nilai Q hasil pembelajaran telah ter-update sebagai berikut (sampel sel kunci):
 
-| State $s$ | $Q(s,\text{kanan})$ | $Q(s
+| State $s$ | $Q(s,\text{kanan})$ | $Q(s$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

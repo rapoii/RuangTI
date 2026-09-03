@@ -132,4 +132,7 @@ Penelitian di masa depan dapat difokuskan pada pengembangan algoritma yang lebih
 
 --- 
 
-Dokumen ini memberikan gambaran menyeluruh mengenai penerapan Multi-Agent Systems dan Deep Reinforcement Learning dalam modeling proses manufaktur yang kompleks, serta relevansinya dalam konteks industri saat ini.
+Dokumen ini memberikan gambaran menyeluruh mengenai penerapan Multi-Agent Systems dan Deep Reinforcement Learning dalam modeling proses manufaktur yang kompleks, serta relevansinya dalam konteks industri saat ini.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

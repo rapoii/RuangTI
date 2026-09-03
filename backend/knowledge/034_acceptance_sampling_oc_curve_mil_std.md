@@ -38,4 +38,7 @@ $$P_a(p) = P(d \le c) = \sum_{d=0}^c \frac{e^{-np} (np)^d}{d!}$$
   $$\text{AOQ} = \frac{P_a \cdot p \cdot (N - n)}{N} \approx P_a \times p$$
 - **Average Outgoing Quality Limit (AOQL):** Nilai puncak maksimum dari kurva $\text{AOQ}$ (tingkat cacat rata-rata terburuk yang mungkin lolos ke konsumen dalam jangka panjang).
 - **Average Total Inspection (ATI):** Rata-rata jumlah unit yang harus diinspeksi per lot:
-  $$\text{ATI} = n + (1 - P_a)(N - n)$$
+  $$\text{ATI} = n + (1 - P_a)(N - n)$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

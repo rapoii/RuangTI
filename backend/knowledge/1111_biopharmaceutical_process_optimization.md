@@ -117,3 +117,6 @@ Penerapan algoritma pembelajaran mesin dalam optimasi proses produksi tidak hany
 Namun, ada beberapa batasan yang perlu diperhatikan, termasuk kualitas data yang tersedia dan kemampuan sistem untuk beradaptasi dengan perubahan. Penelitian masa depan dapat berfokus pada pengembangan algoritma yang lebih canggih dan sistem yang lebih terintegrasi untuk mendukung keputusan berbasis data dalam lingkungan yang dinamis.
 
 Dengan demikian, optimasi proses produksi berkelanjutan menggunakan algoritma pembelajaran mesin menjadi kunci untuk mencapai efisiensi yang lebih tinggi dan dampak lingkungan yang lebih rendah dalam industri biopharmaceutical dan sektor lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

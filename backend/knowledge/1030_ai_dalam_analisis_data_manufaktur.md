@@ -104,3 +104,6 @@ Penerapan teknik AI dalam analisis data manufaktur tidak hanya terbatas pada sek
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data berkualitas tinggi dan kompleksitas dalam implementasi sistem AI. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengatasi tantangan ini dan mengembangkan standar yang lebih baik untuk penerapan AI dalam industri.
 
 Arah riset masa depan dapat fokus pada pengembangan algoritma yang lebih efisien, integrasi AI dengan Internet of Things (IoT), dan penerapan teknik pembelajaran mendalam untuk analisis data yang lebih kompleks. Dengan demikian, perusahaan dapat terus meningkatkan efisiensi operasional dan daya saing di pasar global yang semakin kompetitif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

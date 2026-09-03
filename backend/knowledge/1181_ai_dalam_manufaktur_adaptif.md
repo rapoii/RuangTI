@@ -109,4 +109,7 @@ Ke depan, penelitian dalam bidang ini diharapkan dapat berfokus pada pengembanga
 
 ---
 
-Dokumen ini memberikan gambaran menyeluruh tentang penerapan kecerdasan buatan adaptif dalam pengambilan keputusan real-time dalam sistem manufaktur cerdas, dengan penekanan pada teori, metodologi, dan studi kasus kuantitatif yang relevan.
+Dokumen ini memberikan gambaran menyeluruh tentang penerapan kecerdasan buatan adaptif dalam pengambilan keputusan real-time dalam sistem manufaktur cerdas, dengan penekanan pada teori, metodologi, dan studi kasus kuantitatif yang relevan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -52,3 +52,6 @@ Dicetuskan oleh Genrich Altshuller melalui analisis terhadap 200.000+ paten duni
    - **Prinsip 2 (Taking Out / Extraction):** Memisahkan bagian yang mengganggu dari sistem.
    - **Prinsip 10 (Prior Action / Asymmetry):** Menerapkan perlakuan awal sebelum objek dibutuhkan.
    - **Prinsip 35 (Parameter Changes):** Mengubah wujud fisik, densitas, atau fleksibilitas material.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

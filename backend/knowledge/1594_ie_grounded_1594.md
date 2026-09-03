@@ -79,4 +79,7 @@ Implementasi industrialisasi model aksisimetrik ini memerlukan prosedur operasio
 
 $$Z = \frac{PV_m}{RT} \Rightarrow \rho_{CO_2} \approx 762 \text{ kg/m}^3$$
 
-Viskositas dinamis dihitung dari korelasi Chung et al.: $\mu_{CO_2} = 7{,}18 \times 10^{-5}$ Pa·s. Kapasitas panas: $c_p = 1850$ J/kg·K. Konduktivitas termal: $k = 0{,}082$ W/m·
+Viskositas dinamis dihitung dari korelasi Chung et al.: $\mu_{CO_2} = 7{,}18 \times 10^{-5}$ Pa·s. Kapasitas panas: $c_p = 1850$ J/kg·K. Konduktivitas termal: $k = 0{,}082$ W/m·.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -151,3 +151,7 @@ Sebuah fasilitas liofilisasi komersial untuk sediaan protein monoklonal dengan k
 Tahanan panas dihitung dengan asumsi tebal lapisan kering $l = 5$ mm:
 
 $$R_{c,bot} = \frac{0,005}{2,5 \cdot
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

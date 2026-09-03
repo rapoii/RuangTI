@@ -63,4 +63,9 @@ $$\text{CT}_{line} = \max_{1 \leq i \leq n} \left( \text{CT}_{i}^{process} + \te
 
 $$\text{TH}_{line} = \frac{1}{\text{CT}_{line}} \cdot \eta_{availability}$$
 
-di mana $\text{CT}_{i}^{process}$ adalah waktu proses pada stasiun $
+di mana $\text{CT}_{i}^{process}$ adalah waktu proses pada stasiun $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

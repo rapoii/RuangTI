@@ -147,3 +147,6 @@ Recent applications demonstrate measurable impact:
 5. Simchi-Levi, D., Chen, X., & Bramel, J. (2023). *The Logic of Logistics: Theory, Algorithms, and Applications for Logistics Management* (4th ed.). Springer.
 6. Chopra, S., & Meindl, P. (2024). *Supply Chain Management: Strategy, Planning, and Operation* (8th ed.). Pearson.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

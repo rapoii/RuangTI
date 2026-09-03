@@ -35,3 +35,6 @@ LCA adalah metodologi kuantitatif terstandarisasi untuk mengevaluasi dampak ling
    - **Eutrophication Potential (EP):** Diukur dalam $\text{kg PO}_4\text{-eq}$.
    - **Human Toxicity & Abiotic Depletion**.
 4. **Interpretation:** Analisis titik kritis (*hotspots*) emisi di sepanjang rantai pasok untuk menentukan prioritas perbaikan *Green Lean SCM*.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

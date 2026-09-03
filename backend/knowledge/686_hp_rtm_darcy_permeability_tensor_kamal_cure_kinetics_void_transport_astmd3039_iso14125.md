@@ -200,3 +200,6 @@ Parameter online yang dimonitor setiap shot: tekanan injeksi (transducer in-gate
 5. Hiremath, P., Ambiger, K. D., Jayashree, P. K., Heckadka, S. S., Deepak, G. D., Murthy, B. R. N., Kowshik, S., & Naik, N. (2025). Computational Approach for Optimizing Resin Flow Behavior in Resin Transfer Molding with Variations in Injection Pressure, Fiber Permeability, and Resin Sorption. *Journal of Composites Science*, 9(3), 129. DOI: 10.3390/jcs9030129.
 6. Niknafs Kermani, N., Lavaggi, T., Chen, S. W., Simacek, P., & Advani, S. G. (2026). Physics-informed principal component analysis framework for auxiliary gate placement in resin transfer molding under permeability uncertainty. *Composites Part A: Applied Science and Manufacturing*. DOI: 10.1016/j.compositesa.2026.110057.
 7. Godbole, M. G., Joshi, M., Advani, S., & Gururaja, S. (2025). Semi-Analytical Formulation of the Effective Permeability of a Dual-Scale Bi-Directional Fabric. *Polymer Composites*. DOI: 10.1002/pc.70544.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -306,3 +306,6 @@ STATUS VALIDASI: LULUS (simulator cocok analitik & peningkatan OMG signifikan)
 - Blanchard, B. S. (2004). *Logistics Engineering and Management* (6th ed.). Pearson Prentice Hall. [bab maintenance concept & supportability]
 - Ebeling, C. E. (2010). *An Introduction to Reliability and Maintainability Engineering* (2nd ed.). Waveland Press. [bab replacement models & Weibull analysis]
 - Høyland, A., & Rausand, M. (1994). *System Reliability Theory: Models and Statistical Methods*. Wiley. [proses renewaI & model pemeliharaan]
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

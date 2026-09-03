@@ -103,3 +103,6 @@ Sistem otomatisasi dalam industri pemotongan unggas tidak hanya berdampak pada e
 Namun, tantangan tetap ada, termasuk kebutuhan untuk mematuhi standar keselamatan dan kesehatan kerja (K3) serta keberlanjutan lingkungan (ESG). Penelitian masa depan harus fokus pada pengembangan teknologi yang lebih ramah lingkungan dan efisien, serta peningkatan sistem pemantauan untuk memastikan kepatuhan terhadap regulasi yang berlaku.
 
 Dengan demikian, pemahaman yang mendalam tentang kinematika robot, keseimbangan panas, dan pengurangan patogen akan menjadi kunci dalam merancang sistem pemotongan unggas yang tidak hanya efisien tetapi juga aman dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

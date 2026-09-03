@@ -126,3 +126,7 @@ $$N_P = \frac{24.000}{8.000} = 3$$
 Total downtime per siklus mature-run dengan strategi baru:
 
 $$D_{\text{cycle}}^{*} = 48
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -71,3 +71,6 @@ Implementasi RTMS mengikuti *pipeline* rekayasa berikut, yang dapat diadopsi dal
 2. **Pra-pemrosesan.** *Bandpass filter* 0,5–40 Hz untuk sinyal EKG; *artifact rejection* berbasis *adaptive threshold*; *fixation detection* via *velocity-based identification* (I-VT) untuk *eye-tracking*.
 3. **Ekstraksi Fitur.** Hitung RMSSD, $R_{LF/HF}$, $\bar{F}_{dur}$, $\bar{D}_{pupil}$ pada *sliding window* 60 detik dengan *stride* 10 detik.
 4. **
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

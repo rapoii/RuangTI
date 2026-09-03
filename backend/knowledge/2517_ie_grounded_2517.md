@@ -126,4 +126,9 @@ Implementasi sistem CLSC baterai pensiun mengikuti prosedur operasional terstand
 
 ## 4. Studi Kasus Kuantitatif & Perhitungan Numerik
 
-**Skenario:** Sebuah operator CLSC baterai di Cina mengelola 100.000 unit baterai pensiun/tahun dari 3 pusat pengumpulan ($i=1,2,3$), dengan sebaran kelas kualitas: $q_{1,r_1}=15.000$, $q_{1,r_2}=10.000$, $q_{1,r_3}=5.000$; $q_{2,r_1}=12.000$, $q_{2,r_2}=9.000$, $q_{2,r_3}=4.000$; $
+**Skenario:** Sebuah operator CLSC baterai di Cina mengelola 100.000 unit baterai pensiun/tahun dari 3 pusat pengumpulan ($i=1,2,3$), dengan sebaran kelas kualitas: $q_{1,r_1}=15.000$, $q_{1,r_2}=10.000$, $q_{1,r_3}=5.000$; $q_{2,r_1}=12.000$, $q_{2,r_2}=9.000$, $q_{2,r_3}=4.000$; $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

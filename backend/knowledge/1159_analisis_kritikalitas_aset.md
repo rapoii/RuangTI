@@ -109,4 +109,7 @@ Analisis kritis aset dan penilaian opsi nyata tidak hanya relevan dalam sektor e
 
 Batasan metodologi ini termasuk ketidakpastian dalam estimasi parameter dan kompleksitas dalam model yang digunakan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan dapat diandalkan. Arah riset masa depan dapat mencakup integrasi teknologi digital dan analitik data besar untuk meningkatkan akurasi dalam analisis kritis aset dan penilaian opsi nyata.
 
-Dengan demikian, penting bagi praktisi di bidang teknik industri untuk terus memperbarui pengetahuan mereka tentang metodologi dan teknologi terbaru dalam manajemen aset dan penilaian risiko, guna memastikan keberlanjutan dan efisiensi dalam sistem energi terbarukan.
+Dengan demikian, penting bagi praktisi di bidang teknik industri untuk terus memperbarui pengetahuan mereka tentang metodologi dan teknologi terbaru dalam manajemen aset dan penilaian risiko, guna memastikan keberlanjutan dan efisiensi dalam sistem energi terbarukan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

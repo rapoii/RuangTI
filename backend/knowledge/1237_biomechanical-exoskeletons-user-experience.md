@@ -101,3 +101,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan. Misal
 Arah riset masa depan dapat mencakup pengembangan algoritma cerdas untuk penyesuaian otomatis exoskeleton berdasarkan umpan balik pengguna dan kondisi kerja. Selain itu, integrasi teknologi sensor dan analitik data dapat memberikan wawasan lebih dalam tentang interaksi pengguna dengan perangkat, sehingga meningkatkan pengalaman pengguna secara keseluruhan.
 
 Dengan demikian, evaluasi pengalaman pengguna pada exoskeleton biomekanik tidak hanya penting untuk keberhasilan teknologi ini, tetapi juga untuk meningkatkan keselamatan dan produktivitas di tempat kerja.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -87,3 +87,6 @@ Implementasi Circular Economy dalam proses manufaktur tidak hanya berdampak pada
 Namun, terdapat batasan dalam metodologi yang ada, termasuk keterbatasan dalam teknologi daur ulang dan resistensi terhadap perubahan budaya organisasi. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknologi baru, model bisnis inovatif, dan strategi manajemen perubahan yang efektif untuk mendukung transisi menuju CE.
 
 Dengan demikian, penerapan Circular Economy dalam proses manufaktur bukan hanya sebuah pilihan, tetapi suatu keharusan untuk mencapai keberlanjutan dan daya saing di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

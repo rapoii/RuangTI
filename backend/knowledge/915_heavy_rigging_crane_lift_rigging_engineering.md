@@ -120,3 +120,6 @@ Teknik pengangkatan berat tidak hanya relevan dalam industri konstruksi, tetapi 
 Batasan metodologi saat ini termasuk ketergantungan pada perhitungan manual dan kurangnya integrasi sistem informasi. Oleh karena itu, arah riset masa depan harus berfokus pada pengembangan perangkat lunak yang dapat mengintegrasikan semua parameter ini secara real-time, serta penerapan teknologi sensor untuk memantau kondisi beban dan lingkungan secara langsung.
 
 Dengan demikian, pemahaman yang mendalam tentang teknik pengangkatan berat dan penerapan standar industri akan terus menjadi kunci untuk mencapai efisiensi dan keselamatan dalam proyek-proyek industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -110,3 +110,6 @@ Pengembangan metrik keberlanjutan dalam Quality 4.0 tidak hanya relevan untuk se
 Namun, terdapat batasan dalam metodologi yang ada, seperti kesulitan dalam pengumpulan data yang akurat dan tantangan dalam integrasi sistem. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi baru, seperti kecerdasan buatan dan blockchain, untuk meningkatkan transparansi dan akurasi dalam pengukuran keberlanjutan.
 
 Dengan demikian, pengembangan metrik keberlanjutan dalam Quality 4.0 menjadi langkah penting untuk memastikan bahwa industri manufaktur dapat beroperasi secara efisien dan bertanggung jawab terhadap lingkungan dan masyarakat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

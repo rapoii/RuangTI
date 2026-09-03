@@ -154,4 +154,9 @@ AMR di-deploy dengan *safety shield* (rule-based override) dan dikirim data traj
 
 **Parameter Input:**
 - Gudang rectangular $50 \times 30$ m, 120 rak, 20 charging station
-- Armada: 8 unit AGV differential-drive, $
+- Armada: 8 unit AGV differential-drive, $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

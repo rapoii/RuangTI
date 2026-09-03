@@ -97,3 +97,6 @@ HIRADC outputs feed directly into:
 6. Reniers, G., & Van Nunen, K. (2023). Dynamic risk assessment in the process industry: State of the art and future directions. *Process Safety and Environmental Protection*, 178, 412–429.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

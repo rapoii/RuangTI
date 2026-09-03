@@ -47,3 +47,6 @@ When AI pre-screens items, human $d'$ often degrades through automation complace
 - Macmillan, N. A., & Creelman, C. D. (2005). *Detection Theory: A User's Guide* (2nd ed.). Erlbaum.
 - See, J. E., et al. (2023). Signal detection theory in industrial quality inspection: A 50-year retrospective. *Human Factors*, 65(8), 1623–1645.
 - Warm, J. S., Matthews, G., & Finomore, V. S. (2023). Vigilance and workload: 75 years of research. *Human Factors*, 65(1), 5–27.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

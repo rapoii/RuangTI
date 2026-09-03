@@ -78,3 +78,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan. Misal
 Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data yang dihasilkan oleh EPCIS, serta eksplorasi penggunaan teknologi blockchain untuk meningkatkan keamanan dan transparansi dalam pertukaran data.
 
 Dengan demikian, EPCIS 2.0 dan CBV menawarkan potensi besar untuk meningkatkan visibilitas dan efisiensi dalam rantai pasok, tetapi implementasinya memerlukan pendekatan yang hati-hati dan terencana.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

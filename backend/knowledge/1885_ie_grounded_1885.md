@@ -117,4 +117,7 @@ $$X_{Ni} = 1 - \exp(-6{,}1 \times 1{,}25) = 1 - \exp(-7{,}63) = 99{,}95\%$$
 
 Realistis, dengan memperhitungkan efisiensi mixing dan fouling, recovery aktual sekitar 93–95%.
 
-**Langkah
+**Langkah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

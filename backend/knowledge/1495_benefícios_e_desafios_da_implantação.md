@@ -77,4 +77,7 @@ Berbeda dengan pendekatan klasik 5-step, AIAG/VDA memperkenalkan *seven-step app
 | 4. *Function Analysis* | Identifikasi fungsi setiap elemen, *function net* | Function tree & net |
 | 5. *Failure Analysis* | *Failure chain*: Failure Mode → Failure Cause → Failure Effect → Failure Net | Daftar FM, FC, FE |
 | 6. *Risk Analysis* | Penilaian S, O, D dan penentuan AP | Risk matrix terisi |
-| 7. *Optimization* | Penetapan *action owner*, target AP ≤ M
+| 7. *Optimization* | Penetapan *action owner*, target AP ≤ M.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

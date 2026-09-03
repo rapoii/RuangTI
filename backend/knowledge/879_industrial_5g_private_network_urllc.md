@@ -94,3 +94,6 @@ Penerapan jaringan 5G di pabrik cerdas tidak hanya terbatas pada sektor manufakt
 Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan. Misalnya, kompleksitas dalam pengelolaan jaringan virtual dan kebutuhan untuk memastikan keamanan data. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan solusi yang lebih efisien dan aman untuk mengelola jaringan 5G di lingkungan industri.
 
 Dengan demikian, desain jaringan 5G pribadi untuk pabrik cerdas tidak hanya akan meningkatkan efisiensi operasional, tetapi juga membuka peluang baru untuk inovasi dan pengembangan di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

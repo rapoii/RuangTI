@@ -111,3 +111,6 @@ Pengoptimalan sistem penyimpanan seperti AutoStore memiliki aplikasi luas dalam 
 Batasan metodologi yang ada saat ini termasuk keterbatasan dalam pemodelan kompleksitas sistem dan variabilitas permintaan. Oleh karena itu, riset masa depan perlu fokus pada pengembangan algoritma yang lebih adaptif dan penerapan teknologi seperti kecerdasan buatan untuk meningkatkan efisiensi operasional dan pengambilan keputusan.
 
 Dengan demikian, modul ini memberikan panduan komprehensif untuk memahami dan mengimplementasikan strategi optimasi dalam sistem penyimpanan AutoStore, serta menyoroti pentingnya inovasi dalam menghadapi tantangan industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

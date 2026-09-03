@@ -102,4 +102,7 @@ di mana $z_\alpha$ adalah skor-Z untuk service level $(1-\alpha)$, $L$ adalah *l
 Berdasarkan judul dan pendekatan tipikal paper dalam domain ini, kerangka implementasi dapat disusun sebagai berikut:
 
 **Tahap 1 — Akuisisi & Integrasi Data (Minggu 1–4):**
-- *IoT sensor* suhu (DS18B20, Pt100
+- *IoT sensor* suhu (DS18B20, Pt100.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

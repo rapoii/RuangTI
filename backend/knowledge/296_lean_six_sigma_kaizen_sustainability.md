@@ -128,4 +128,7 @@ Use NSGA-II or MOEA/D algorithms for complex multi-objective process optimizatio
 - Singh, R., & Sharma, P. (2025). Digital twin-enabled Green Lean Six Sigma in Industry 4.0 environments. *Journal of Manufacturing Systems*, 78, 234–251.
 - EPA. (2023). *Lean and Environment Toolkit: Integrating Sustainability into Continuous Improvement*. U.S. Environmental Protection Agency.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

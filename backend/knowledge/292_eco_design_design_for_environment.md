@@ -109,3 +109,6 @@ Successful DfE requires integration across:
 - Bovea, M. D., & Pérez-Belis, V. (2025). Design for environment in the circular economy era: A systematic literature review. *Resources, Conservation and Recycling*, 213, 107956.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

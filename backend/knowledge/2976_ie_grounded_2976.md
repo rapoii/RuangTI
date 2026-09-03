@@ -47,3 +47,7 @@ $$
 
 $$
 \text{s.t.} \quad \mathbf{A}_1 \mathbf{y} \geq \mathbf{b}_1, \quad \theta \geq 0, \quad \theta \geq \eta^{(t)} \;\; \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

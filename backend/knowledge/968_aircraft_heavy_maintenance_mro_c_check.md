@@ -111,3 +111,6 @@ Metode yang dibahas dalam modul ini tidak hanya berlaku untuk industri penerbang
 Selain itu, dengan kemajuan teknologi seperti otomatisasi dan analitik data besar, masa depan pemeliharaan pesawat dapat melibatkan penggunaan algoritma pembelajaran mesin untuk memprediksi kebutuhan pemeliharaan dan mengoptimalkan penjadwalan. Penelitian lebih lanjut diperlukan untuk mengeksplorasi penerapan teknik ini dalam konteks pemeliharaan berbasis kondisi dan pengelolaan risiko yang lebih baik.
 
 Dengan demikian, penerapan Metode Jalur Kritis yang dipadukan dengan analisis stokastik dan pertimbangan tenaga kerja terampil akan menjadi kunci dalam meningkatkan efisiensi dan efektivitas pemeliharaan pesawat di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

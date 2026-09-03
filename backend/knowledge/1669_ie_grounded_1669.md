@@ -133,3 +133,8 @@ $$C_{retro} = 262.500 + 600.000 + 312.500 = \$1.175.000$$
 
 **Langkah 6: Profit Bersih CLSC**
 $$\Pi = 3.826.375 - 1.175.000 = \$2.651
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

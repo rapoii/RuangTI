@@ -134,4 +134,7 @@ DRO memiliki biaya ekspektasi 2.8% lebih tinggi dari deterministik, namun **meng
 
 ### 5.1. Evaluasi Batasan Metodologi
 
-Model Yin et al. (2023) memiliki tiga limitasi utama: pertama, *ambiguity set* berbasis
+Model Yin et al. (2023) memiliki tiga limitasi utama: pertama, *ambiguity set* berbasis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

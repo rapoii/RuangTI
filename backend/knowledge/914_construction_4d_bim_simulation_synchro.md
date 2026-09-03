@@ -97,3 +97,6 @@ Penerapan 4D BIM tidak hanya terbatas pada industri konstruksi tetapi juga dapat
 Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan untuk data yang akurat dan real-time, serta tantangan dalam kolaborasi lintas disiplin. Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk deteksi konflik dan integrasi sistem BIM dengan teknologi baru seperti kecerdasan buatan (AI) dan pembelajaran mesin (ML).
 
 Dengan demikian, pemahaman yang mendalam tentang 4D BIM dan penerapannya dalam konteks industri yang lebih luas akan menjadi kunci untuk mencapai efisiensi dan keberlanjutan dalam proyek konstruksi modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

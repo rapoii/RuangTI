@@ -161,4 +161,7 @@ Sebuah pabrik *electronic manufacturing services* (EMS) di Batam memiliki 12 uni
 
 ### 4.2 Langkah Perhitungan Q-Learning Step-by-Step
 
-**Iterasi Episode 1, Step 1**: Dari state $s_1 = (2,3)$, agen memilih aksi $a_1 = (0
+**Iterasi Episode 1, Step 1**: Dari state $s_1 = (2,3)$, agen memilih aksi $a_1 = (0$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

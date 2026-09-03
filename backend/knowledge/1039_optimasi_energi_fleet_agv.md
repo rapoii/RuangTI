@@ -134,3 +134,6 @@ Optimasi energi dalam koordinasi fleet AGV memiliki implikasi yang luas tidak ha
 Namun, ada beberapa batasan dalam metodologi ini, termasuk kompleksitas perhitungan dan kebutuhan untuk data yang akurat. Penelitian masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi dengan teknologi IoT untuk pemantauan dan pengendalian real-time.
 
 Dengan demikian, optimasi energi dalam koordinasi fleet AGV menggunakan algoritma genetika bukan hanya solusi untuk masalah saat ini, tetapi juga langkah menuju industri yang lebih berkelanjutan dan efisien di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

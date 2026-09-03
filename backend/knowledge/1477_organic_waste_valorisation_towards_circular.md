@@ -133,3 +133,7 @@ Integrasi CSC mengikuti 9R framework (Refuse, Rethink, Reduce, Reuse, Repair, Re
 $$\xi = 2 \cdot \frac{L}{d} = 2 \cdot 50 = 100$$
 
 $$\eta = \frac{(150/3{,}5) - 1}{(150/3{,}5) + 100} = \frac{42{,}857}{142
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

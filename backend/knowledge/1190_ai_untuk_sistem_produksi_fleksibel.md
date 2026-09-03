@@ -101,3 +101,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Dengan perkembangan teknologi yang cepat, masa depan sistem produksi fleksibel berbasis AI menjanjikan integrasi yang lebih dalam dengan Internet of Things (IoT) dan analitik data besar, yang akan memungkinkan perusahaan untuk mencapai tingkat efisiensi dan responsivitas yang lebih tinggi. Penelitian lebih lanjut dalam bidang ini akan membantu dalam mengidentifikasi praktik terbaik dan standar yang diperlukan untuk implementasi yang sukses. 
 
 Referensi dan standar yang relevan harus selalu diperbarui untuk memastikan bahwa praktik terbaik diikuti dan inovasi terbaru diadopsi dalam sistem produksi fleksibel berbasis AI.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

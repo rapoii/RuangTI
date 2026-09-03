@@ -164,4 +164,7 @@ $$
 $$
 A = \frac{700}{700 + 8} = 0{,}9887 = 98{,}87\%
 $$
-Setelah implementasi *spindle vibration monitoring* (predictive maintenance) yang menurunkan D dari 5 → 2 dan O dari 6
+Setelah implementasi *spindle vibration monitoring* (predictive maintenance) yang menurunkan D dari 5 → 2 dan O dari 6.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

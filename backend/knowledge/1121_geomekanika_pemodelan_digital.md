@@ -111,3 +111,6 @@ Penerapan pemodelan digital geomekanika tidak hanya terbatas pada industri perta
 Namun, terdapat batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data dan kompleksitas model. Oleh karena itu, penelitian masa depan dapat difokuskan pada pengembangan algoritma AI yang lebih canggih dan integrasi dengan teknologi sensor untuk pemantauan real-time.
 
 Dengan demikian, pemodelan digital geomekanika yang didukung oleh AI menawarkan potensi besar untuk meningkatkan stabilitas lereng terbuka dan keselamatan operasional, serta memberikan kontribusi signifikan terhadap efisiensi dan keberlanjutan dalam industri pertambangan dan sektor terkait.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

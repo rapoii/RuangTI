@@ -147,3 +147,6 @@ Penerapan metode COI dan strategi alokasi ruang gudang memiliki implikasi luas d
 Namun, terdapat batasan dalam metodologi ini, seperti ketidakpastian permintaan dan variasi dalam pola pengambilan barang. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar.
 
 Arah riset masa depan dapat mencakup integrasi teknologi IoT untuk pemantauan real-time, penggunaan algoritma pembelajaran mesin untuk prediksi permintaan, dan pengembangan sistem manajemen gudang yang lebih cerdas dan terintegrasi. Dengan demikian, penerapan COI dan strategi alokasi ruang gudang akan terus menjadi area penting dalam pengembangan sistem logistik yang efisien dan efektif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

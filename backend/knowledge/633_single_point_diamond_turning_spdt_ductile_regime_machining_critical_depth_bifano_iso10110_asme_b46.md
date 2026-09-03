@@ -552,3 +552,6 @@ Akibatnya:
 6. **Fang, F. Z., Wu, H., & Zhou, W. (2007)**. *Modelling and experimental investigation on mechanism of nanometric cutting*. **International Journal of Machine Tools and Manufacture**, 47(9), 1396–1407.
 7. **Goel, S., Luo, X., & Reuben, R. L. (2012)**. *Molecular dynamics simulation model for the ductile-regime machining of single crystal silicon*. **Applied Physics Letters**, 100(23), 231902.
 8. **Groover, M. P. (2020)**. *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems (7th Edition)*. John Wiley & Sons, Inc.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

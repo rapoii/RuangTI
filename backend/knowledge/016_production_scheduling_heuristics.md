@@ -48,3 +48,6 @@ Algoritma heuristik konstruktif terbaik di dunia untuk meminimalkan *Makespan* p
 2. **Urutkan Descending:** Urutkan seluruh job berdasarkan nilai $TP_j$ dari terbesar ke terkecil.
 3. **Evaluasi Dua Job Pertama:** Ambil 2 job teratas, uji 2 permutasi urutan $(1-2 \text{ atau } 2-1)$, pilih urutan dengan *Makespan* terkecil.
 4. **Iterasi Penyisipan (Insertion Step):** Untuk job ke-$k$ ($k = 3, \dots, n$), uji penyisipan job tersebut ke seluruh $k$ posisi yang memungkinkan di dalam urutan yang sudah terbentuk. Tetapkan posisi terbaik yang menghasilkan *Makespan* minimum tanpa mengubah urutan relatif job sebelumnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -197,4 +197,7 @@ Tabel 1. Contoh skor NASA-TLX 10 operator pertama.
 | OP04 | 85 | 65 | 90 | 20 | 80 | 60 |
 | OP05 | 65 | 45 | 70 | 40 | 60 | 40 |
 | OP06 | 78 | 58 | 82 | 28 | 72 | 52 |
-| OP07 |
+| OP07 |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

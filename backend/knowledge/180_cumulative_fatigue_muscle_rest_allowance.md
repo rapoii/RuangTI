@@ -97,3 +97,6 @@ Matching tasks by fatigue tolerance across workers prevents overexertion of weak
 6.  **Wang, F., et al.** (2024). "Validation of wearable EMG fatigue estimation for occupational rest allowance determination." *Applied Ergonomics*, 115, 104162.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

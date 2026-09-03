@@ -111,3 +111,6 @@ Penerapan ergonomi kognitif dalam pelatihan VR tidak hanya terbatas pada sektor 
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan. Misalnya, tidak semua individu memiliki tingkat kenyamanan yang sama dalam menggunakan teknologi VR, yang dapat mempengaruhi efektivitas pelatihan. Oleh karena itu, penting untuk melakukan penelitian lebih lanjut mengenai faktor-faktor yang mempengaruhi penerimaan teknologi VR dalam pelatihan.
 
 Ke depan, riset dalam bidang ini diharapkan dapat mengintegrasikan teknologi AI dan machine learning untuk menciptakan pengalaman pelatihan yang lebih adaptif dan personal. Dengan demikian, penerapan prinsip ergonomi kognitif dalam VR akan terus berkembang dan memberikan kontribusi signifikan terhadap efisiensi dan efektivitas pelatihan di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

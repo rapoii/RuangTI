@@ -120,3 +120,6 @@ Namun, ada beberapa batasan yang perlu diperhatikan, seperti keamanan data dan i
 Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin untuk analisis data yang lebih mendalam, serta penerapan teknologi blockchain untuk meningkatkan keamanan dan transparansi data dalam proses lyophilization.
 
 Dengan demikian, pengendalian proses lyophilization menggunakan teknologi IoT untuk monitoring real-time dapat menjadi solusi yang efektif untuk meningkatkan efisiensi dan kualitas produk dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

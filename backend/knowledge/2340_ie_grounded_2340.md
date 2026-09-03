@@ -133,3 +133,6 @@ $$= 45.2 + 0.1 \times [100 + 83.25 - 45.2]$$
 $$= 45.2 + 0.1 \times 138.05 = 45.2 + 13.805 = 59.005$$
 
 **Perhitungan 2 — Estimasi MTBF Nav**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

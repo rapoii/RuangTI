@@ -92,3 +92,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan p
 Ke depan, PHM diharapkan akan semakin terintegrasi dengan teknologi IoT (Internet of Things) dan AI (Artificial Intelligence), memungkinkan pengumpulan data yang lebih real-time dan analisis yang lebih mendalam. Standar masa depan harus mencakup protokol untuk interoperabilitas data dan keamanan siber, mengingat meningkatnya ancaman terhadap sistem digital.
 
 Dengan demikian, PHM berbasis pembelajaran mendalam tidak hanya menjadi alat untuk meningkatkan kinerja mesin, tetapi juga sebagai pendorong inovasi dalam industri manufaktur modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

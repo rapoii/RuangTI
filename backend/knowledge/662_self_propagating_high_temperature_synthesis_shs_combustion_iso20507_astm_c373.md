@@ -558,4 +558,4 @@ Pengendalian kualitas dan sertifikasi produk berbasis SHS wajib mengacu pada sta
 4. Fahrenholtz, W. G., & Hilmas, G. E. (2023). *Ultra-High Temperature Ceramics: Reactive Sintering and Field-Assisted Synthesis*. **Journal of the American Ceramic Society**, 106(4), 2115–2134. DOI: 10.1111/jace.18940.
 5. ISO International Organization for Standardization. (2023). *ISO 20507: Fine ceramics (advanced ceramics, advanced technical ceramics) — Vocabulary*. ISO Geneva.
 6. Merzhanov, A. G., & Mukasyan, A. S. (2023). *Fundamentals of Solid-State Combustion and SHS Technology*. Elsevier Academic Press, Amsterdam.
-7. Barsoum, M. W., & Radovic, M. (2024). *MAX Phases: Properties and Applications of Machinable Ternary Carbides and Nitrides*. Wiley-VCH, Weinheim.
+7. Barsoum, M. W., & Radovic, M. (2024). *MAX Phases: Properties and Applications of Machinable Ternary Carbides and Nitrides*. Wiley-VCH, Weinheim.$.

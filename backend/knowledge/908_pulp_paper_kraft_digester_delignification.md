@@ -136,3 +136,6 @@ Keterkaitan antara teknik delignifikasi dan disiplin lain seperti manajemen rant
 Metodologi yang digunakan dalam studi ini memiliki batasan, terutama dalam hal variasi bahan baku dan kondisi lingkungan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih universal. Arah riset masa depan dapat berfokus pada penggunaan teknologi digital dan analitik untuk meningkatkan pengambilan keputusan dalam proses delignifikasi.
 
 Dengan demikian, pemahaman yang mendalam mengenai kinetika delignifikasi, H-Factor, optimasi alkali residual, dan prediksi Kappa number sangat penting untuk meningkatkan efisiensi dan keberlanjutan dalam industri pulp dan kertas.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

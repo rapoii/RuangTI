@@ -159,3 +159,6 @@ Dalam konteks industri semen, efisiensi energi dan pengurangan emisi merupakan d
 Aplikasi lintas sektor dari penelitian ini dapat diterapkan dalam industri lain yang memerlukan proses pembakaran, seperti pembangkit listrik dan industri pengolahan. Dengan meningkatnya fokus pada keberlanjutan dan pengurangan emisi, penelitian lebih lanjut diperlukan untuk mengeksplorasi teknik baru dan inovatif dalam pengelolaan energi dan emisi.
 
 Standar masa depan, seperti yang ditetapkan dalam ISO 50002, akan semakin menekankan pentingnya efisiensi energi dan pengurangan emisi, mendorong industri untuk berinvestasi dalam teknologi yang lebih bersih dan efisien. Penelitian lebih lanjut di bidang ini harus berfokus pada pengembangan teknologi baru yang dapat meningkatkan efisiensi termal dan mengurangi dampak lingkungan dari proses industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

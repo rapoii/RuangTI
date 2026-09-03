@@ -132,4 +132,7 @@ di mana $\text{PI} > 0{,}25$ mengindikasikan *drift* yang memerlukan *re-trainin
 |---|---|---|---|
 | Sampling time | $T_s$ | 0,1 | s |
 | State (suhu, getaran, torsi) | $x$ | 3-dim | – |
-| Process noise cov. | $Q$ | $\text{diag}(0{,}01; 0{,}05;
+| Process noise cov. | $Q$ | $\text{diag}(0{,}01; 0{,}05;$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

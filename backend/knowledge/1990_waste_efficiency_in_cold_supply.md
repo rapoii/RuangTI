@@ -122,4 +122,7 @@ Sebuah fasilitas *cold storage* buah-buahan tropis di pelabuhan ekspor memiliki 
 
 ### 4.2 Perhitungan Beban Termal dan PCM
 
-Menggunakan Persamaan 2.2, jika dipasang PCM berbasis larutan garam hidrat dengan $h_{fusion} =
+Menggunakan Persamaan 2.2, jika dipasang PCM berbasis larutan garam hidrat dengan $h_{fusion} =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

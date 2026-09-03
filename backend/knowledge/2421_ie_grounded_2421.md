@@ -111,3 +111,6 @@ JIANG & TANG (2025) mengusulkan arsitektur empat tingkat (*four-tier CLSC*) yang
 **Tingkat 2 — Distribusi & Penggunaan Pertama (First-Life Use):** Retailer/ATPM mendistribusikan baterai ke armada EV. SOP mencakup SOC window (State of Charge: 20–80%) untuk memperpanjang siklus hidup.
 
 **Tingkat 3 — Pengumpulan, Sortasi & Uji SoH:** Setelah EOFL, baterai dikumpulkan ke *echelon collection center* dan menjalani pengujian kapasitas (IEC 62933), impedansi AC, dan *thermal abuse screening*. Hasil sortir: Grade A (SoH > 80%) → reuse langsung; Grade B (SoH 60–80%) → echelon utilization; Grade C (SoH < 60%)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

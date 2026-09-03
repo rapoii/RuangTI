@@ -108,4 +108,7 @@ Teknik analisis Earned Schedule tidak hanya relevan dalam konteks konstruksi mod
 
 Batasan dari metodologi ini termasuk ketergantungan pada akurasi data yang dikumpulkan dan kompleksitas dalam proyek yang lebih besar. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik yang lebih adaptif dan responsif terhadap dinamika proyek yang cepat berubah.
 
-Ke depan, arah riset dapat berfokus pada integrasi teknik analisis ES dengan teknologi digital seperti big data dan analitik untuk meningkatkan akurasi dan kecepatan pengambilan keputusan dalam manajemen proyek. Dengan demikian, penerapan teknik ini diharapkan dapat memberikan kontribusi signifikan terhadap efisiensi dan efektivitas dalam manajemen proyek konstruksi modular dan sektor lainnya.
+Ke depan, arah riset dapat berfokus pada integrasi teknik analisis ES dengan teknologi digital seperti big data dan analitik untuk meningkatkan akurasi dan kecepatan pengambilan keputusan dalam manajemen proyek. Dengan demikian, penerapan teknik ini diharapkan dapat memberikan kontribusi signifikan terhadap efisiensi dan efektivitas dalam manajemen proyek konstruksi modular dan sektor lainnya.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

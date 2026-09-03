@@ -145,4 +145,7 @@ dengan asumsi $D_r = 5.000 - 5 p_r$:
 
 $$(5.000 - 5p_r) + 600 - p_r - 0{,}10(5.000 - 5p_r) = 0$$
 
-$$5.500 - 6p_r - 0{,}50p_r = 0 \quad \Rightarrow \quad 6{,}5 p_r = 5.500$$
+$$5.500 - 6p_r - 0{,}50p_r = 0 \quad \Rightarrow \quad 6{,}5 p_r = 5.500$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

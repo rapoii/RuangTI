@@ -98,3 +98,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin u
 --- 
 
 Dokumen ini memberikan panduan komprehensif mengenai analisis keamanan proses menggunakan Digital Human Modeling, dengan penekanan pada aplikasi praktis dan metodologis yang dapat diimplementasikan dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -137,3 +137,6 @@ Penerapan Federated Learning tidak hanya terbatas pada industri manufaktur, teta
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan infrastruktur yang memadai dan tantangan dalam mengelola heterogenitas data. Penelitian masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan robust untuk menangani masalah Non-IID serta memperkuat aspek privasi dan keamanan data sesuai dengan standar ISO/IEC 27001.
 
 Dengan demikian, Federated Learning menawarkan potensi besar untuk meningkatkan kualitas prediktif lintas perusahaan, namun memerlukan pendekatan yang hati-hati dan inovatif untuk mengatasi tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

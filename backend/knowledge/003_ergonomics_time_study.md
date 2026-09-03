@@ -106,3 +106,6 @@ Perancangan fasilitas disesuaikan dengan dimensi tubuh populasi pengguna menggun
 - **Persentil ke-95 ($P_{95}$)**: Dimensi kelonggaran (*clearance dimensions*), misal: tinggi pintu masuk, lebar kursi, ruang kaki di bawah meja.
   $$P_{95} = \bar{X} + 1.645 \times \sigma$$
 - **Persentil ke-99 ($P_{99}$)**: Khusus pintu darurat dan standar safety kritis ($\bar{X} + 2.33\sigma$).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

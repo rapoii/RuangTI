@@ -98,3 +98,7 @@ Implementasi model hibrida di industri mengikuti **delapan tahap SOP** berikut b
          │                       │
 ┌─────────────────┐    ┌────────┴─────────┐
 │ Monitoring KPI
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -152,3 +152,6 @@ Forecasting using these trends enables proactive innovation roadmapping.
 8. Savransky, S. D. (2023). *Engineering of Creativity: Introduction to TRIZ Methodology of Inventive Problem Solving* (2nd ed.). CRC Press.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

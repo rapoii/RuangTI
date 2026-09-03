@@ -109,3 +109,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih adaptif dan robust, serta integrasi dengan teknologi lain seperti Internet of Things (IoT) dan sistem manajemen data besar. Dengan demikian, strategi pemilihan target bin-picking berbasis AI dapat terus ditingkatkan untuk memenuhi tuntutan industri yang semakin kompleks dan beragam. 
 
 Dengan mengikuti standar ISO 9283:2022, industri dapat memastikan bahwa sistem yang diterapkan tidak hanya efektif tetapi juga aman dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -134,3 +134,6 @@ Integrasi HTHP dengan HEN tidak hanya relevan dalam sektor industri, tetapi juga
 Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan, seperti kompleksitas desain dan kebutuhan investasi awal yang tinggi. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan solusi yang lebih efisien dan ekonomis.
 
 Ke depan, arah riset dapat difokuskan pada pengembangan refrigeran baru yang lebih ramah lingkungan, serta teknik pemulihan eksy yang lebih inovatif untuk meningkatkan efisiensi sistem secara keseluruhan. Standar masa depan juga harus mempertimbangkan aspek keberlanjutan dan dampak lingkungan dalam desain dan integrasi sistem HTHP dan HEN.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

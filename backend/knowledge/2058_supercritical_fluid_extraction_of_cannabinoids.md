@@ -122,4 +122,7 @@ Biomassa → Grinding → Vessel Ekstraktor (P, T)
 - Kandungan air biomassa: 8%
 - Tekanan ekstraksi: $P = 250\ \text{bar}$
 - Suhu ekstraksi: $T = 323{,}15\ \text{K}\ (50\ ^\circ\text{C})$
-- Laju alir CO
+- Laju alir CO.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

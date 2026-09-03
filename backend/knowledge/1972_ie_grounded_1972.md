@@ -176,4 +176,7 @@ Sampel mini-batch $(\text{batch size} = 64)$ diambil acak untuk *fine-tuning* se
 
 ### 4.1. Deskripsi Skenario
 
-Sebuah pabrik perakitan elektronika di Cikarang memiliki gudang komponen 60 m × 40 m dengan layout grid 120 × 80 sel (resolusi 0,5 m). Ditem
+Sebuah pabrik perakitan elektronika di Cikarang memiliki gudang komponen 60 m × 40 m dengan layout grid 120 × 80 sel (resolusi 0,5 m). Ditem.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

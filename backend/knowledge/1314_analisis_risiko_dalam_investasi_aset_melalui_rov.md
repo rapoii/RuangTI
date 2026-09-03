@@ -125,4 +125,7 @@ Namun, ada batasan dalam metodologi ini, termasuk asumsi bahwa harga mengikuti d
 
 Ke depan, arah riset dapat difokuskan pada pengembangan model ROV yang mengintegrasikan faktor-faktor eksternal seperti perubahan kebijakan dan dampak lingkungan, serta penerapan teknologi analitik canggih seperti machine learning untuk meningkatkan akurasi prediksi.
 
-Dengan demikian, analisis risiko investasi menggunakan Real Options Valuation merupakan alat yang sangat penting dalam pengambilan keputusan investasi di sektor energi terbarukan dan dapat memberikan wawasan yang berharga bagi investor dan pengembang proyek.
+Dengan demikian, analisis risiko investasi menggunakan Real Options Valuation merupakan alat yang sangat penting dalam pengambilan keputusan investasi di sektor energi terbarukan dan dapat memberikan wawasan yang berharga bagi investor dan pengembang proyek.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

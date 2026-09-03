@@ -45,3 +45,6 @@ Combining subjective and physiological measures reduces Type II errors in worklo
 - Hart, S. G. (2006). NASA-Task Load Index (NASA-TLX): 20 years later. *Proceedings of the HFES Annual Meeting*, 50(9), 904–908.
 - Charles, R. L., & Nixon, J. (2019). Measuring mental workload using physiological measures: A systematic review. *Applied Ergonomics*, 74, 221–232.
 - Li, X., et al. (2025). Convergent validity of NASA-TLX and HRV in autonomous vehicle supervision. *Int. J. Hum.-Comput. Stud.*, 182, 103145.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

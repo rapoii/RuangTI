@@ -150,3 +150,6 @@ ErrHandler:
 - Banks, J., Carson, J. S., Nelson, B. L., & Nicol, D. M. (2024). *Discrete-Event System Simulation* (6th ed.). Pearson.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

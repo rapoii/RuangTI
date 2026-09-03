@@ -63,3 +63,6 @@ A 2024 automotive assembly study used Siemens Jack to redesign a dashboard insta
 6.  **Suryadi, D., & Widyanti, A.** (2024). "Development of Indonesian anthropometric database for digital human modeling in SME manufacturing." *International Journal of Industrial Ergonomics*, 99, 103542.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

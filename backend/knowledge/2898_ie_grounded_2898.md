@@ -60,3 +60,6 @@ dengan $R_{5G}$ throughput efektif (bps) dan $T_{\text{cycle}}$ *cycle time* pro
 Prosedur operasional baku (*Standard Operating Procedure*) untuk mengimplementasikan arsitektur Cavalieri et al. (2024) dibagi dalam tujuh tahap sistematis yang mengintegrasikan praktik De Marchi et al. (2022):
 
 **Tahap 1 — Identifikasi Aset dan *Taxonomy* AAS.** Inventarisasi seluruh entitas fisik (gNodeB, sensor, *Programmable Logic Controller*) dan klasifikasikan menurut *taxonomy* IEC PAS 63278. Tetapkan *globally unique identifier*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

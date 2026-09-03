@@ -157,3 +157,7 @@ Interpretasi manajerial: Yield 72,3% menunjukkan bahwa strategi disaggregasi men
 Asumsi: thermal conductivity Si $k = 148$ W/m·K, TIM antardie $k_{\text{TIM}} = 4$ W/m·K dengan tebal 5 μm, luas efektif die 0,25 cm² = $25 \times 10^{-6}$ m², daya operasi total 50 W terdistribusi pada compute die dan HBM (total power density stack):
 
 $$R_{\theta,\text{Si}} = \frac{50 \times 10^{-6}}{148 \times 25 \times
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

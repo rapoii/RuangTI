@@ -91,3 +91,6 @@ Pemodelan dinamis crane berat tidak hanya relevan dalam konteks konstruksi modul
 Namun, terdapat batasan dalam metodologi ini, termasuk kompleksitas model dan kebutuhan untuk data yang akurat. Oleh karena itu, riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan penggunaan teknologi sensor untuk meningkatkan akurasi data.
 
 Dengan demikian, pemodelan dinamis crane berat merupakan alat yang sangat penting dalam meningkatkan efisiensi dan keselamatan dalam konstruksi modular, serta memiliki potensi untuk diterapkan dalam berbagai disiplin ilmu lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

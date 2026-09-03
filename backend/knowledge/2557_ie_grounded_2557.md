@@ -110,4 +110,7 @@ Sebuah autoclave HPAL diameter dalam $D_i = 4{,}5 \text{ m}$, panjang $L = 18 \t
 
 $$k_d = 1{,}2 \times 10^{-5} \text{ m/s}$$
 
-**Langkah 2:** Konsentrasi bulk vs. saturasi. Untuk Fe(III) pada kondisi HPAL, $C_b - C_s \approx 34{,}9 \text{ g/L} = 34{,}
+**Langkah 2:** Konsentrasi bulk vs. saturasi. Untuk Fe(III) pada kondisi HPAL, $C_b - C_s \approx 34{,}9 \text{ g/L} = 34{,}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

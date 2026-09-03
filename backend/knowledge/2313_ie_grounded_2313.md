@@ -31,4 +31,7 @@ $$h(T) = \int_{T_{\text{ref}}}^{T} c_{p,\text{PCM}}(T') \, dT' + \rho_{\text{PCM
 
 di mana $L$ adalah *latent heat* (J/kg) dan $f_s(T) \in [0,1]$ adalah *liquid fraction* yang dimodelkan regularisasi sigmoid Gaussian di sekitar $T_m$:
 
-$$f_s(T) = \frac{1}{2} \left[ 1 + \text{erf}\left( \frac{T - T_m}{dT/2} \right) \right]$$
+$$f_s(T) = \frac{1}{2} \left[ 1 + \text{erf}\left( \frac{T - T_m}{dT/2} \right) \right]$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -102,3 +102,6 @@ Computed via principal component analysis or direct integration over multivariat
 6. Kotz, S., & Lovelace, C. R. (1998). *Process Capability Indices: A Review, 1992–1997*. Journal of Applied Statistics, 25(6), 763–793.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

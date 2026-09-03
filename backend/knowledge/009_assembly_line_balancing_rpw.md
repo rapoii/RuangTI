@@ -54,3 +54,6 @@ $$\text{SI} = \sqrt{\sum_{j=1}^{K} (ST_{\max} - ST_j)^2}$$
 4. **Alokasikan ke Stasiun Kerja**:
    - Masukkan elemen kerja teratas yang presedensinya sudah terpenuhi ke Stasiun Kerja $1$ selama $\sum t \le C$.
    - Jika penambahan elemen berikutnya melebihi $C$, buka Stasiun Kerja $2$, dan ulangi hingga semua elemen teralokasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

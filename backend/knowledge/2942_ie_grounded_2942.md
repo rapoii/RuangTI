@@ -142,4 +142,7 @@ MTBF efektif untuk masing-masing tier dihitung dari integral:
 
 $$\text{MTBF}_j = \int_0^{T_j} R(t)\, dt$$
 
-Untuk distribusi Weibull dengan $\beta = 2.
+Untuk distribusi Weibull dengan $\beta = 2.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -107,3 +107,6 @@ Model kepatuhan CBAM dan CSRD tidak hanya relevan untuk sektor manufaktur, tetap
 Batasan metodologi ini termasuk ketidakpastian dalam pengukuran emisi dan variabilitas biaya kepatuhan yang dapat berubah seiring waktu. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang lebih akurat untuk pengukuran emisi serta model prediktif untuk menilai dampak finansial dari kebijakan lingkungan yang baru.
 
 Dengan demikian, perusahaan multinasional perlu beradaptasi dengan cepat terhadap perubahan regulasi dan berinvestasi dalam teknologi yang mendukung keberlanjutan untuk tetap kompetitif di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

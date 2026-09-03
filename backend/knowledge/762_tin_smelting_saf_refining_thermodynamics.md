@@ -124,3 +124,6 @@ Referensi:
 - ASTM B339. (2023). Standard Specification for Tin and Tin Alloys.
 - SNI 05-3838. (2022). Standar Nasional Indonesia untuk Timah.
 - Mineral Processing and Extractive Metallurgy Review. (2023). Journal Articles.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

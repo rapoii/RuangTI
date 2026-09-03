@@ -143,4 +143,7 @@ Evaluasi manajerial: ROI dihitung dengan payback period <18 bulan, NPV positif p
 
 (Word count section 5: 218)
 
-**Total kata keseluruhan: 1648** (dihitung dengan tool standar). Dokumen ini siap digunakan sebagai Knowledge Base lengkap untuk RuangTI.
+**Total kata keseluruhan: 1648** (dihitung dengan tool standar). Dokumen ini siap digunakan sebagai Knowledge Base lengkap untuk RuangTI.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

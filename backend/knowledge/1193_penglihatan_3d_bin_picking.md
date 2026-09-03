@@ -124,3 +124,6 @@ Integrasi penglihatan 3D dan pembelajaran mesin tidak hanya relevan dalam indust
 Batasan metodologi ini mencakup ketergantungan pada kualitas data pelatihan dan kompleksitas dalam integrasi sistem yang ada. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta peningkatan kemampuan sistem untuk belajar dari pengalaman.
 
 Dengan demikian, integrasi penglihatan 3D dan pembelajaran mesin diharapkan dapat menjadi standar baru dalam praktik bin-picking dan otomatisasi industri, sejalan dengan perkembangan teknologi dan kebutuhan industri yang terus berubah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -128,3 +128,7 @@ $$\dot{m}_A = P_A \cdot V \cdot 24 = 0{,}85 \times 500 \times 24 = 10{,}200 \tex
 Produksi PHA harian (asetat → PHA):
 
 $$\dot{m}_{PHA} = \dot{m
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

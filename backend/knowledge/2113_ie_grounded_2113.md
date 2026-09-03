@@ -128,3 +128,6 @@ Studi kasus pada pabrik minuman ringan dengan lini produksi PET bottle ukuran 60
 **Tabel 2. Forecast Evolution MMFE untuk Varian A (Demand mean, std-dev)**
 
 | Periode $t$ | $\mu_t$ (unit)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

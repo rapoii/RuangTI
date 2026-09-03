@@ -101,4 +101,7 @@ Implementasi sistematis pemodelan SC-CO₂ untuk produksi minyak kanabis farmasi
 4. **Validasi**: Bandingkan profil tekanan prediksi dengan data eksperimental Obchoei & Limtrakarn (2024) pada vessel lab-scale.
 
 ### 3.3 Tahap Eksperimen Validasi
-1. Ek
+1. Ek.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

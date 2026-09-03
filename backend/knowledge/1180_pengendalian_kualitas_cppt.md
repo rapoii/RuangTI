@@ -108,3 +108,6 @@ Dengan demikian, pengendalian kualitas berbasis CPS tidak hanya menjadi alat unt
 --- 
 
 Dokumen ini memberikan gambaran komprehensif mengenai pengendalian kualitas berbasis Cyber-Physical Systems dengan pendekatan Digital Twin dan metode statistik, sesuai dengan standar dan referensi terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -42,3 +42,6 @@ Representative GTTs: routine highly-practiced task ($NHEP = 0.00002$–$0.0004$)
 - Williams, J. C. (1988). HEART: A proposed method for assessing and reducing human error. *9th Advances in Reliability Technology Symposium*, University of Bradford.
 - Kirwan, B. (1994). *A Guide to Practical Human Reliability Assessment*. Taylor & Francis.
 - Kirwan, B., & Ainsworth, L. (Eds.). (2023). *A Guide to Practical Human Reliability Assessment* (2nd ed.). Taylor & Francis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

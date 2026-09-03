@@ -60,3 +60,7 @@ $$\mathbb{E}\!\left[\varepsilon_{t+1} \mid \mathcal{F}_t\right] = 0 \tag{8}$$
 Evolusi prakiraan dimodelkan sebagai:
 
 $$F_{t+1} = F_t + \delta_{t+1}, \quad
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

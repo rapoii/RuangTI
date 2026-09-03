@@ -119,3 +119,6 @@ Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketidakpastian 
 Arah riset masa depan dapat mencakup integrasi teknologi otomasi dan Internet of Things (IoT) untuk memantau kinerja sistem secara real-time, serta penerapan prinsip keberlanjutan dalam desain dan operasi pabrik gula.
 
 Dengan demikian, optimasi stasiun evaporator kuadrupel di pabrik gula tebu tidak hanya berkontribusi pada efisiensi operasional, tetapi juga mendukung tujuan keberlanjutan industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

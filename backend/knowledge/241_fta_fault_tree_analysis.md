@@ -93,3 +93,6 @@ Where $P(F)$ is prior failure probability from FTA and $P(E|F)$ is likelihood of
 5. Vesely, W. E., Goldberg, F. F., Roberts, N. H., & Haasl, D. F. (2023). *Fault Tree Handbook* (Revised ed.). U.S. NRC.
 6. Cepin, M. (2024). *Probabilistic Safety Assessment in Nuclear Power Plants*. Springer.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

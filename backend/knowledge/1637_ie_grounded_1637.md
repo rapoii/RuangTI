@@ -147,4 +147,7 @@ JIANG & TANG (2025) serta Shin et al. (2024) secara konsisten mengusulkan metodo
 
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
-### 4.1 Parameter Input (Sintesis Berbasis
+### 4.1 Parameter Input (Sintesis Berbasis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

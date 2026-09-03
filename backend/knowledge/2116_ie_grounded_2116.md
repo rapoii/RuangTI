@@ -133,3 +133,7 @@ $$K_t = P_{t \mid t-1} H^\top (H P_{t \mid t-1} H^\top + R)^{-1}$$
 Jika $P_{t \mid t-1} = \text{diag}(0{,}5, 0{,}5, 0{,}05)$ dan $H = I_3$:
 
 $$K_t = \begin{bmatrix} 0{,}5 & 0 & 0 \\ 0 & 0{,}5 & 0 \\ 0 & 0 & 0{,}05 \end{bmatrix} \left( \begin{bmatrix}
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

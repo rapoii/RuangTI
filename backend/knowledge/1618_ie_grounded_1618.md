@@ -105,4 +105,7 @@ Implementasi AAS *digital twin* untuk sistem komunikasi 5G mengikuti delapan lan
 3. **Desain Skema JSON/XML AASX** — Gunakan format *AASX* (file paket OPC UA + XML) atau *JSON-AAS* sesuai spesifikasi IDTA.
 4. **Provisioning *Endpoint* AAS** — Daftarkan *registry URL* (misal `https://aas.company.com/registry/`) yang mengarahkan ke *repository* AAS.
 5. **Integrasi Telemetri 5G** — Sambungkan *northbound API* 5G (misal Nokia Network Exposure Function atau Ericsson ENM) ke *repository* AAS menggunakan *adapter* OPC UA → AAS.
-6. **Implementasi *State Synchronization*** — Tentukan *sampling period* ($T_s$) sesuai kemampuan jaringan dan kebutuhan kontrol
+6. **Implementasi *State Synchronization*** — Tentukan *sampling period* ($T_s$) sesuai kemampuan jaringan dan kebutuhan kontrol.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

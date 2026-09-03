@@ -158,3 +158,7 @@ INPUT DATA → Material Flow Analysis (MFA)
 **Perhitungan *growth rate* eksponensial:**
 
 $$g = \frac{\ln(38) - \ln(9)}{2023 - 2018} = \frac{3.638 - 2.197}{5} = \frac{1
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

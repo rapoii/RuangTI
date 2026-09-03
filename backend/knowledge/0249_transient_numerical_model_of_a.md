@@ -101,4 +101,7 @@ $$\max\left|\frac{T^{k+1}_{i,j} - T^k_{i,j}}{T^{k+1}_{i,j}}\right| < 10^{-6}$$
 
 **Studi Kasus: Proses Penguapan (Evaporation) Pabrik Susu Konsentrat pada 220°C.**
 
-Sebuah pabrik susu konsentrat di Eropa membutuhkan $40$ ton/jam uap pada $T_{\text{proc}} = 220°C$ dan $P = 2{,}5$ MPa (entalpi $h_g \approx 2.800$ kJ/kg). HTHP bersumber dari waste heat evaporator pada $T_{\text{
+Sebuah pabrik susu konsentrat di Eropa membutuhkan $40$ ton/jam uap pada $T_{\text{proc}} = 220°C$ dan $P = 2{,}5$ MPa (entalpi $h_g \approx 2.800$ kJ/kg). HTHP bersumber dari waste heat evaporator pada $T_{\text{$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

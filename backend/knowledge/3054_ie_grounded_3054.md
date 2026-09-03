@@ -160,4 +160,7 @@ $$T_{M}^{periodic} = 46 \times 24 + 5 \times 720 + 1 \times 2{,}160 = 1{,}104 + 
 
 $$\mathbb{E}[N_f] = \left(\frac{T_O^{8yr}}{\eta}\right)^{\beta} = \left(\frac{23{,}360}{12{,}000}\right)^{2.5} = (1.947)^{2.5} \approx 5.31$$
 
-Dengan as
+Dengan as.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

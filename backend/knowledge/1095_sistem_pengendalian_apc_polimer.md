@@ -102,3 +102,6 @@ Sistem pengendalian proses adaptif tidak hanya relevan dalam industri ekstrusi p
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti kebutuhan akan data yang berkualitas tinggi dan tantangan dalam integrasi sistem. Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih canggih dan penerapan teknologi IoT untuk meningkatkan akurasi dan responsivitas sistem pengendalian.
 
 Dengan demikian, pengembangan sistem pengendalian proses adaptif berbasis AI untuk ekstrusi polimer tidak hanya memberikan solusi untuk tantangan saat ini, tetapi juga membuka jalan bagi inovasi dan efisiensi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

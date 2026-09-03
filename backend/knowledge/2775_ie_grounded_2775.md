@@ -168,4 +168,7 @@ Sebuah *multinational automotive parts manufacturer* memproduksi *brake caliper*
 
 **Parameter Input:**
 - Severity: $S = 8$ (kehilangan fungsi pengereman darurat, *safety-relevant*)
-- Occurrence: D
+- Occurrence: D.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

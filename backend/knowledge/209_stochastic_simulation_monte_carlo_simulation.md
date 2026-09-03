@@ -180,3 +180,6 @@ Estimated via historical simulation, parametric methods, or full revaluation MC.
 - Mohamed, S., Rosca, M., & Figurnov, M. (2023). Monte Carlo gradient estimation in machine learning. *Journal of Machine Learning Research*, 24(132), 1-58.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -122,3 +122,6 @@ Dengan kemajuan teknologi, seperti penerapan machine learning dan big data analy
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai MSPC dalam konteks polimerisasi kimia kontinu, dengan penekanan pada teori, metodologi, dan aplikasi praktis yang relevan dengan standar industri terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

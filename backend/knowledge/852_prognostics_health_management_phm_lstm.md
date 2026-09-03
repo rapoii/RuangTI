@@ -129,3 +129,6 @@ Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih efi
 ---
 
 Dokumen ini memberikan gambaran komprehensif tentang PHM untuk mesin turbofan, dengan fokus pada estimasi RUL menggunakan model Dual-Stage Attention LSTM. Dengan mengikuti metodologi yang sistematis dan mematuhi standar yang relevan, diharapkan dapat meningkatkan efisiensi operasional dan keselamatan dalam industri penerbangan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

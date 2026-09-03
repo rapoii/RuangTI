@@ -120,3 +120,6 @@ Pengembangan algoritma adaptif untuk koordinasi fleet AMR tidak hanya relevan da
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualitas data real-time dan kemampuan sistem untuk merespons perubahan dengan cepat. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan sistem yang lebih robust dan integrasi dengan teknologi lain seperti IoT dan AI.
 
 Dengan demikian, pengembangan algoritma adaptif untuk koordinasi fleet AMR merupakan langkah penting dalam meningkatkan efisiensi operasional dan daya saing industri di era digital ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

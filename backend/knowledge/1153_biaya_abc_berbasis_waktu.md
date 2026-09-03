@@ -96,3 +96,6 @@ Penerapan TDABC dalam konteks pemeliharaan prediktif tidak hanya terbatas pada s
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan real-time, serta tantangan dalam mengintegrasikan sistem TDABC dengan sistem manajemen yang ada. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan responsif terhadap perubahan kondisi industri.
 
 Ke depan, penelitian dapat difokuskan pada integrasi TDABC dengan teknologi IoT untuk pengumpulan data otomatis, serta penggunaan analitik data besar untuk meningkatkan akurasi prediksi biaya pemeliharaan. Dengan demikian, TDABC dapat menjadi alat yang lebih kuat dalam pengambilan keputusan strategis terkait pemeliharaan aset industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

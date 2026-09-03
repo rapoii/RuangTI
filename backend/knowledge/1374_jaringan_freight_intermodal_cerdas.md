@@ -148,3 +148,6 @@ Pengembangan jaringan freight intermodal cerdas tidak hanya berdampak pada sekto
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketergantungan pada kualitas data dan kemampuan analisis. Oleh karena itu, riset masa depan perlu difokuskan pada pengembangan algoritma yang lebih canggih dan integrasi sistem yang lebih baik untuk meningkatkan efisiensi dan efektivitas jaringan freight intermodal.
 
 Dengan mengikuti standar ISO 28000:2024, perusahaan dapat memastikan bahwa sistem yang dikembangkan tidak hanya efisien tetapi juga aman dan dapat diandalkan. Ini akan menjadi kunci dalam menghadapi tantangan industri yang terus berkembang di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -128,4 +128,7 @@ Mendefinisikan $|I|$, $|J|$, $|K|$, $|T|$, dan semua parameter sesuai Section 2.
 Membangun model monolitik terlebih dahulu sebagai *benchmark* menggunakan bahasa pemodelan seperti AMPL, GAMS, atau Pyomo dalam Python.
 
 **Tahap 5 — Dekomposisi dan Implementasi Solver (Minggu 6-7):** 
-Memisahkan variabel strategis (biner) ke master problem, variabel kontinu ke subproblem. Implementasikan di
+Memisahkan variabel strategis (biner) ke master problem, variabel kontinu ke subproblem. Implementasikan di.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

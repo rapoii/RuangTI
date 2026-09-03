@@ -126,3 +126,6 @@ Teknologi gripper lunak berbasis PneuNet tidak hanya relevan dalam industri maka
 Namun, terdapat batasan dalam metodologi yang digunakan, terutama dalam hal akurasi model matematis dan validasi eksperimental. Penelitian di masa depan harus berfokus pada pengembangan material baru yang lebih ringan dan kuat, serta peningkatan algoritma kontrol untuk sistem robotik.
 
 Dengan demikian, penelitian dan pengembangan dalam bidang ini akan terus berkontribusi pada inovasi dalam teknik industri, meningkatkan efisiensi dan keberlanjutan dalam rantai pasok global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

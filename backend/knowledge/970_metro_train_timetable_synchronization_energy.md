@@ -110,3 +110,6 @@ Sinkronisasi jadwal tidak hanya relevan untuk sistem transportasi rel, tetapi ju
 Batasan metodologi ini mencakup ketidakpastian dalam permintaan penumpang dan variabilitas waktu perjalanan yang dapat mempengaruhi hasil. Oleh karena itu, penelitian masa depan perlu fokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi operasional.
 
 Dengan demikian, sinkronisasi jadwal dalam sistem transportasi rel perkotaan tidak hanya berkontribusi pada efisiensi energi, tetapi juga pada keberlanjutan dan efektivitas operasional secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

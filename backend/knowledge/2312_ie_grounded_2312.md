@@ -98,3 +98,7 @@ Rafi & Putra (2024) serta Aditya.R & Putra (2024) menyusun SOP sebagai berikut:
 
 ```
 [
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

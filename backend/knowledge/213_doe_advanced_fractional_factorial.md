@@ -135,3 +135,6 @@ Recent case studies apply advanced fractional designs to semiconductor manufactu
 - Zhang, Y., & Wang, J. (2024). Machine learning-assisted experimental design for complex engineering systems. *Engineering Applications of Artificial Intelligence*, 128, 107456.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

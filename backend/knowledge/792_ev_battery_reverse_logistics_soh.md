@@ -135,3 +135,6 @@ Tantangan adopsi mencakup keselamatan K3 (Kesehatan, Keselamatan, Keamanan) kare
 Dari perspektif ESG, sistem ini mendukung target sustainability dengan mengurangi limbah padat hingga 80% dan mendukung program CSR perusahaan. Tantangan adopsi utama adalah biaya awal otomasi (estimasi US$ 2–5 juta per lini produksi) dan keterampilan SDM yang memerlukan pelatihan khusus dalam forensic engineering baterai. Namun, studi kasus industri menunjukkan bahwa perusahaan yang mengadopsi closed-loop dapat meningkatkan nilai saham hingga 12% dalam 3 tahun melalui citra ESG yang lebih baik. Integrasi dengan disiplin lain seperti mechanical engineering (untuk desain modular pack) dan data analytics (untuk predictive maintenance) menjadi kunci keberhasilan implementasi.
 
 Dokumen ini memberikan landasan komprehensif bagi pengembangan modul akademik dan pelatihan spesialis Teknik Industri di RuangTI.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

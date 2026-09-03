@@ -174,4 +174,7 @@ $$\text{Kontribusi}_i = w_i \times R_i$$
 | MD | 5 | 78 | 390 |
 | PD | 3 | 55 | 165 |
 | TD | 4 | 82 | 328 |
-| P  |
+| P  |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

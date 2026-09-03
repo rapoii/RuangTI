@@ -212,3 +212,6 @@ Multipliers derived from epidemiological data. SI > 6.9 indicates high distal up
 5. NIOSH. (2023). Criteria for a Recommended Standard: Occupational Noise Exposure. DHHS Publication No. 2023-118.
 6. AIHA. (2024). *Mathematical Models for Estimation of Occupational Exposures* (3rd ed.). American Industrial Hygiene Association.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

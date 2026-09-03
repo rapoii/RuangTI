@@ -101,4 +101,7 @@ $$K_v = 0.00358 + 0.00421 = 0.00779 \text{ W/(m²·K)}$$
 
 ### Langkah 2: Fluks Panas per Vial
 
-Luas vial efektif $A_v = 3.8 \times 10^{-3}$ m². Fluks panas total
+Luas vial efektif $A_v = 3.8 \times 10^{-3}$ m². Fluks panas total.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

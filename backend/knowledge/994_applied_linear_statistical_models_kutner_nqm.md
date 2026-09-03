@@ -196,3 +196,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti asumsi normalitas dan inde
 Ke depan, integrasi analisis regresi dan desain eksperimen dengan teknologi big data dan artificial intelligence dapat membuka peluang baru dalam pengambilan keputusan berbasis data. Penelitian di bidang ini diharapkan dapat menghasilkan model yang lebih akurat dan efisien untuk meningkatkan kinerja industri secara keseluruhan.
 
 Dengan demikian, pemahaman yang mendalam tentang analisis regresi linier dan desain eksperimen sangat penting bagi insinyur industri untuk menghadapi tantangan di era digital ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

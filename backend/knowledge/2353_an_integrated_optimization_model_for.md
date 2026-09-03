@@ -66,4 +66,7 @@ Komponen fungsi tujuan secara berurutan merepresentasikan: (i) pendapatan penjua
 
 $$I_{j,t-1} + z_{jt} \;=\; d_{jt} + I_{jt} \quad \forall j \in J, \, t \in T \tag{2}$$
 
-dengan $I_{j,0} = 0
+dengan $I_{j,0} = 0$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

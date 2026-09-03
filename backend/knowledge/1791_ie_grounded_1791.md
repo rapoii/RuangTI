@@ -159,4 +159,7 @@ $$\text{Saving} = 1.007 \times 1.000 \times 12 = Rp \ 12.084.000 \text{ per tahu
 Ditambah penghematan material dari eliminasi 7 komponen (estimasi Rp 3.500/unit), total penghematan:
 $$\text{Total Saving} = 12.084.000 + 3.500 \times 12.000 = Rp \ 54.084.000 \text{ per tahun}$$
 
-**Interpretasi Manajerial:** Redesain DFMA meningkatkan *design efficiency* lebih dari dua kali lipat pada metrik DFA, dan memangkas waktu perakitan hingga 77,5
+**Interpretasi Manajerial:** Redesain DFMA meningkatkan *design efficiency* lebih dari dua kali lipat pada metrik DFA, dan memangkas waktu perakitan hingga 77,5.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

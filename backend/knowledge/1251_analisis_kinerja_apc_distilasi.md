@@ -128,3 +128,6 @@ Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebi
 ---
 
 Dokumen ini memberikan panduan komprehensif tentang analisis kinerja model prediktif untuk kontrol proses distilasi berkelanjutan, serta langkah-langkah praktis untuk implementasi di industri. Dengan memahami dan menerapkan konsep-konsep ini, insinyur dapat meningkatkan efisiensi proses dan kualitas produk secara signifikan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

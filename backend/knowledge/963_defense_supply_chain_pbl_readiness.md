@@ -104,3 +104,6 @@ Namun, terdapat batasan dalam metodologi ini, termasuk ketidakpastian dalam perm
 Arah riset masa depan dapat mencakup pengembangan algoritma berbasis kecerdasan buatan untuk prediksi permintaan dan optimasi alokasi suku cadang secara real-time, serta integrasi dengan prinsip-prinsip keberlanjutan (ESG) dalam pengelolaan rantai pasok.
 
 Dengan demikian, pemahaman yang mendalam tentang logistik berbasis kinerja dan model alokasi suku cadang menjadi sangat penting untuk meningkatkan kinerja operasional dan efektivitas biaya dalam berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -32,3 +32,6 @@ Logistik rantai dingin (cold chain logistics) adalah pengelolaan rantai pasok pr
 - Vehicle Routing Problem dengan time windows + kendala suhu (VRPTW-termal).
 - Manajemen risiko rantai pasok (SCRM): FMEA mode kegagalan pendinginan, mitigasi blackout.
 - Desain eksperimen untuk optimalisasi set-point suhu vs konsumsi energi kompresor.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

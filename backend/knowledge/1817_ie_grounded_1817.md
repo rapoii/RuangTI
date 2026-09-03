@@ -51,4 +51,7 @@ Total energi yang tersimpan dalam PCM selama satu siklus termal:
 
 $$Q_{stored} = \int_{V_{PCM}} \rho \left[ \int_{T_{initial}}^{T_{final}} c_{p,app}(T) \, dT \right] dV \quad (7)$$
 
-Untuk PCM eutektik KNO₃–NaNO₃ pada pemanasan dari $T_i
+Untuk PCM eutektik KNO₃–NaNO₃ pada pemanasan dari $T_i$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

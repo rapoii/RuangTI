@@ -95,3 +95,6 @@ Dengan meningkatnya kesadaran akan keberlanjutan dan tanggung jawab sosial, pene
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang optimasi proses kominusi menggunakan pembelajaran mesin dalam konteks SAG mills, dengan penekanan pada aspek teoritis, metodologi, dan aplikasi praktis yang relevan dengan industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

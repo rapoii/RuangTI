@@ -95,4 +95,7 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan p
 
 Arah riset masa depan dapat mencakup integrasi analisis risiko dengan teknologi machine learning untuk meningkatkan akurasi prediksi dan pengambilan keputusan dalam rantai pasok. Selain itu, pengembangan standar internasional yang lebih baik untuk analisis risiko dalam rantai pasok dapat membantu meningkatkan kolaborasi dan efisiensi di seluruh industri.
 
-Dengan demikian, pemahaman yang mendalam tentang analisis risiko stokastik dan penerapan pemrograman dinamis menjadi sangat penting bagi para profesional di bidang teknik industri untuk menghadapi tantangan yang semakin kompleks dalam rantai pasok modern.
+Dengan demikian, pemahaman yang mendalam tentang analisis risiko stokastik dan penerapan pemrograman dinamis menjadi sangat penting bagi para profesional di bidang teknik industri untuk menghadapi tantangan yang semakin kompleks dalam rantai pasok modern.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

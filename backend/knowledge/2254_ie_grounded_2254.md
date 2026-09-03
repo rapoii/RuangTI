@@ -67,4 +67,7 @@ Implementasi kebijakan pemeliharaan hirarkis mengikuti SOP sistematis berikut (s
 
 **Tahap 5 — Continuous Monitoring & Feedback Loop.** Implementasikan sistem sensor IoT (Engine Health Monitoring, Structural Health Monitoring) untuk memperbarui parameter $\beta, \eta$ secara *real-time* dan menyesuaikan interval pemeliharaan melalui pendekatan *Bayesian updating*.
 
-Diagram alir logika keputusanhirarki: **[Trigger Event] → Cek Riwayat Komponen → Jika T < T_A → A-check; Jika T_A ≤ T < T_B → B-check; Jika T_B ≤ T < T_C → C-check; Jika T
+Diagram alir logika keputusanhirarki: **[Trigger Event] → Cek Riwayat Komponen → Jika T < T_A → A-check; Jika T_A ≤ T < T_B → B-check; Jika T_B ≤ T < T_C → C-check; Jika T.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

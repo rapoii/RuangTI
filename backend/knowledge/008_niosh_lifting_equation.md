@@ -71,3 +71,6 @@ $$\text{LI} = \frac{\text{Berat Beban Aktual } (L)}{\text{RWL}}$$
 - **$\text{LI} \le 1.0$**: **Aman (Low Risk)** — sebagian besar pekerja dapat melakukan aktivitas ini tanpa risiko berlebih.
 - **$1.0 < \text{LI} \le 3.0$**: **Risiko Sedang (Moderate Risk)** — stasiun kerja perlu didesain ulang (*administrative/engineering controls*).
 - **$\text{LI} > 3.0$**: **Risiko Tinggi (High Risk / Bahaya)** — stasiun kerja **wajib segera dihentikan dan diintervensi** (misal: penambahan *scissor lift*, konveyor, atau crane angkat).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

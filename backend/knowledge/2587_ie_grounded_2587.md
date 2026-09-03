@@ -54,3 +54,7 @@ $$R_{\text{bond}} = \frac{\rho_{\text{Cu}} \cdot t_{\text{eff}}}{A_{\text{eff}}}
 Untuk pitch $p = 10~\mu\text{m}$, $t_{\text{eff}} = 3~\mu\text{m}$, dan $\eta = 0{,}9$:
 
 $$R_{\text{bond
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

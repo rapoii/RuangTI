@@ -104,4 +104,7 @@ Sistem CHP tidak hanya relevan dalam sektor energi, tetapi juga memiliki aplikas
 
 Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan model optimasi yang lebih canggih, termasuk integrasi dengan sumber energi terbarukan dan teknologi penyimpanan energi. Selain itu, pengembangan standar industri yang lebih ketat dan insentif pemerintah dapat mendorong adopsi teknologi CHP di berbagai sektor industri.
 
-Dengan demikian, pemahaman yang mendalam tentang mekanisme kerja dan analisis kuantitatif dari sistem CHP sangat penting untuk pengambilan keputusan yang tepat dalam konteks industri.
+Dengan demikian, pemahaman yang mendalam tentang mekanisme kerja dan analisis kuantitatif dari sistem CHP sangat penting untuk pengambilan keputusan yang tepat dalam konteks industri.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

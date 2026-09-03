@@ -106,3 +106,6 @@ Integrasi CCUS dan pompa panas tidak hanya relevan dalam sektor energi, tetapi j
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk biaya investasi awal yang tinggi dan kompleksitas sistem yang memerlukan keahlian teknis. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan solusi yang lebih efisien dan terjangkau.
 
 Arah riset masa depan dapat difokuskan pada pengembangan teknologi baru yang lebih efisien dalam penangkapan dan pemanfaatan CO₂, serta peningkatan integrasi sistem untuk mencapai efisiensi energi yang lebih tinggi. Dengan demikian, strategi pengurangan emisi karbon melalui integrasi CCUS dan pompa panas dapat menjadi solusi yang berkelanjutan untuk tantangan perubahan iklim global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

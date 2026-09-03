@@ -74,3 +74,6 @@ Where $O(t)$ represents key performance indicators (throughput, utilization) at 
 5.  Sargent, R. G. (2023). *Verification and Validation of Simulation Models*. Proceedings of the Winter Simulation Conference.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

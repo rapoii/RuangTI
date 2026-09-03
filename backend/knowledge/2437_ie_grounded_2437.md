@@ -119,4 +119,7 @@ Berdasarkan sintesis prosedur pada JIANG & TANG (2025) dan best practices indust
 - Transportasi dengan packaging Class 9 (UN 3480/UN 3481) sesuai *Dangerous Goods Regulation* IATA.
 - Tracking dengan Battery Passport (ISO/IEC 21434 compliant).
 
-**Fase 3
+**Fase 3.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

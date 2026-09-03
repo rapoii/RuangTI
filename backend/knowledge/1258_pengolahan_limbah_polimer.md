@@ -101,3 +101,6 @@ Arah riset masa depan harus fokus pada pengembangan teknologi baru yang lebih ef
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai pengembangan metode inovatif untuk pengolahan limbah polimer melalui proses termal dan kimia, serta relevansinya dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

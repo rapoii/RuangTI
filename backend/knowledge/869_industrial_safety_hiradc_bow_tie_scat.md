@@ -134,3 +134,6 @@ Riset masa depan dapat berfokus pada integrasi teknologi baru, seperti kecerdasa
 ---
 
 Dokumen ini memberikan gambaran komprehensif tentang manajemen keselamatan proses terintegrasi, dengan fokus pada analisis risiko Bow-Tie, HIRADC, dan model SCAT. Melalui pemahaman yang mendalam dan penerapan metodologi ini, organisasi dapat meningkatkan keselamatan dan keberlanjutan operasional mereka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

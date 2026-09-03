@@ -139,3 +139,7 @@ Total: $N_a^{eks} = 11$ bagian, $t_a^{eks} = 112$ detik.
 Bagian minimum teoretis: $N_{min} = 3$ (bodi, tutup, pegangan). Dengan asumsi $t_{min} = 1,5$ detik per bagian pada operasi yang diidealisasi:
 
 $$\eta_{DFA}^{eks} = \frac{3 \cdot 1,5}{11 \cdot 1,5} \times 100\% \cdot \frac
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

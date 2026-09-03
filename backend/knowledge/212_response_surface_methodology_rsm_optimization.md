@@ -182,3 +182,6 @@ result = minimize(neg_desirability, x0=np.zeros(k), bounds=bounds)
 - Li, X., & Deng, Y. (2025). Adaptive response surface methodology with Bayesian optimization for manufacturing process design. *Journal of Manufacturing Systems*, 82, 145-159.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

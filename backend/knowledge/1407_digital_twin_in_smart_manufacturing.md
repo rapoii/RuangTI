@@ -117,4 +117,7 @@ Implementasi *digital twin* dalam manufaktur cerdas mengikuti kerangka sistemati
 
 ### 4.1 Deskripsi Kasus: Sel Manufaktur CNC untuk Komponen Aerospace
 
-Sebuah perusahaan *tier-1* aerospace di Hamburg, Jerman, menerapkan *digital twin* pada sel CNC 5-axis yang memproduksi *turbine blade
+Sebuah perusahaan *tier-1* aerospace di Hamburg, Jerman, menerapkan *digital twin* pada sel CNC 5-axis yang memproduksi *turbine blade.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

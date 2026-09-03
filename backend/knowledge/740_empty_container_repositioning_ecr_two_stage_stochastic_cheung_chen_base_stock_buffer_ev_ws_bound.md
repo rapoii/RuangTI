@@ -167,4 +167,4 @@ Kesenjangan WS↔EV hanya ±0,1% — pada level *planning*, ketidakpastian tampa
 7. Hanafi, Z. & Mohammed Sulaiman, I. (2026). "Trends and Developments in Empty Container Repositioning Research." *ASM Science Journal*. DOI: 10.32802/asmscj.2026.0218.
 8. Birge, J.R. & Louveaux, F. (2011). *Introduction to Stochastic Programming* (2nd ed.). Springer. (Relasi WS ≤ RP ≤ EV dan Value of the Stochastic Solution.)
 9. Ahuja, R.K., Magnanti, T.L. & Orlin, J.B. (1993). *Network Flows: Theory, Algorithms, and Applications*. Prentice Hall. (Minimum-cost flow & implementasi sparse.)
-10. UNCTAD. *Review of Maritime Transport 2024*. United Nations Publications. (Konteks statistik ketimpangan arus kontainer global.)
+10. UNCTAD. *Review of Maritime Transport 2024*. United Nations Publications. (Konteks statistik ketimpangan arus kontainer global.)$.

@@ -104,3 +104,6 @@ Integrasi sistem dispatching real-time tidak hanya relevan dalam penambangan ter
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data yang dikumpulkan dan tantangan dalam integrasi dengan sistem yang sudah ada. Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih canggih dan sistem yang lebih adaptif, serta untuk mengeksplorasi penerapan teknologi baru seperti kecerdasan buatan dan machine learning dalam optimasi dispatching.
 
 Dengan demikian, penerapan sistem dispatching real-time berbasis IoT dan Big Data diharapkan dapat menjadi standar masa depan dalam industri penambangan dan sektor terkait lainnya, memberikan keuntungan kompetitif yang signifikan dalam lingkungan bisnis yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

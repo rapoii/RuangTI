@@ -111,3 +111,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Standar masa depan dalam sistem dispatching akan semakin mengarah pada penggunaan teknologi berbasis cloud dan analitik prediktif, yang memungkinkan perusahaan untuk beradaptasi dengan cepat terhadap perubahan kondisi pasar dan operasional.
 
 Dengan demikian, penerapan sistem dispatching berbasis data real-time diharapkan dapat memberikan kontribusi signifikan terhadap efisiensi dan efektivitas operasional di berbagai sektor industri, termasuk penambangan terbuka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

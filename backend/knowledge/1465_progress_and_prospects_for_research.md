@@ -116,3 +116,6 @@ Implementasi sistem S-CO₂ dan HTHP di lantai produksi mengikuti prosedur rekay
 **Tahap 4 — Integrasi dan Commissioning.** Langkah instalasi mengikuti ASME B31.1 Power Piping untuk sistem uap dan ASME B31.3 Process Piping untuk fluida kerja CO₂. Pengujian tekanan hidrostatis pada rasio 1,5× MAWP dan *helium leak test* pada sensitivitas $10^{-9}\ \text{Pa·m}^3/\text{s}$ wajib dilakukan.
 
 **Tahap 5 — Commissioning Loop dan Performance Verification.** Pengukuran daya listrik neto, laju aliran massa, dan kurva tekanan-temperatur dibandingkan dengan prediksi siklus dalam toleransi ±5%.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

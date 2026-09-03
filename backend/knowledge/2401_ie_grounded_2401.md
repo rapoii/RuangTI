@@ -76,3 +76,7 @@ $$x_{i,t}(\xi) = x^0_{i,t} + \Delta^+_{i,t}(\xi) - \Delta^-_{i,t}(\xi)$$
 
 *Non-anticipativity constraint* (keputusan hanya bergantung pada informasi yang telah terungkap):
 $$x_{i,t}(\xi
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

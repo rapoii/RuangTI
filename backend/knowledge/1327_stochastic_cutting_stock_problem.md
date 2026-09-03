@@ -102,3 +102,6 @@ Masalah pemotongan stok dengan fungsi permintaan non-linier memiliki aplikasi ya
 Namun, metodologi ini juga memiliki batasan, seperti asumsi bahwa parameter permintaan tetap konstan dalam jangka pendek, yang mungkin tidak selalu berlaku dalam kondisi pasar yang dinamis. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan pasar, serta integrasi teknologi seperti kecerdasan buatan untuk memprediksi permintaan dengan lebih akurat.
 
 Dengan demikian, penelitian lebih lanjut dalam bidang ini dapat memberikan kontribusi signifikan terhadap efisiensi operasional dan keberlanjutan dalam industri modern, sejalan dengan standar dan praktik terbaik yang ditetapkan oleh organisasi internasional.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -81,4 +81,7 @@ Model pemeliharaan prediktif berbasis multi-agent tidak hanya relevan dalam kont
 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data yang dikumpulkan dan kompleksitas dalam pengembangan model multi-agent yang efisien. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih dan integrasi dengan teknologi baru seperti kecerdasan buatan dan analitik data besar.
 
-Dengan demikian, pemeliharaan prediktif berbasis multi-agent menawarkan potensi yang signifikan untuk meningkatkan efisiensi operasional dan mengurangi biaya dalam berbagai sektor industri, sejalan dengan perkembangan teknologi dan kebutuhan pasar yang terus berubah.
+Dengan demikian, pemeliharaan prediktif berbasis multi-agent menawarkan potensi yang signifikan untuk meningkatkan efisiensi operasional dan mengurangi biaya dalam berbagai sektor industri, sejalan dengan perkembangan teknologi dan kebutuhan pasar yang terus berubah.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

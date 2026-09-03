@@ -87,4 +87,7 @@ Implementasi industri model Obchoei-Limtrakarn & Toledo-del Valle mengikuti **SO
 
 **Tahap 3 — *Static Soaking* (opsional, 10–30 menit).** CO₂ didiamkan untuk memungkinkan difusi intra-partikel. Laju ekstraksi mengikuti fase washing cepat (*fast extraction period*).
 
-**Tahap 4 — *Dynamic Extraction* (mode plug-flow, 60–180 menit
+**Tahap 4 — *Dynamic Extraction* (mode plug-flow, 60–180 menit.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

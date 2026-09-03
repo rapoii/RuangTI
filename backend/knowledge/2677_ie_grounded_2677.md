@@ -109,3 +109,7 @@ JIANG & TANG (2025, DOI: 10.52202/078960-0068) menyusun SOP implementasi sebagai
 │  • Re-fabrication modul untuk SESS / low-speed EV       │
 │  • Standar: GB/T 34014-2017 (Tiongkok), IEC 62933       │
 │  • Estimasi siklus hidup sisa:
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

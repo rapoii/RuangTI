@@ -78,4 +78,7 @@ $$C_{loss} = V_{batch} \cdot P_{unit} \cdot \left[1 - e^{-\lambda(T_{eksp}) \cdo
 
 dengan $V_{batch}$ = volume batch, $P_{unit}$ = harga satuan, dan $C_{mitigation}$ = biaya respons darurat.
 
-##
+##.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -85,3 +85,6 @@ Ke depan, arah riset dapat difokuskan pada integrasi teknologi kecerdasan buatan
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai strategi komunikasi untuk koordinasi efisien dalam fleet AMR berbasis swarm, dengan penekanan pada pentingnya komunikasi yang efektif dalam meningkatkan kinerja operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

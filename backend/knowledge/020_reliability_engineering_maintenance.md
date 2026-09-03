@@ -58,3 +58,6 @@ $$R_p(t) = 1 - \prod_{i=1}^n [1 - R_i(t)] = 1 - [1 - R_1(t)][1 - R_2(t)] \dots [
 - **Operational Availability ($A_o$):**
   $$A_o = \frac{\text{MTBM}}{\text{MTBM} + \text{MDT}} \times 100\%$$
   *(MDT = Mean Down Time, mencakup waktu logistik suku cadang & administrasi).*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

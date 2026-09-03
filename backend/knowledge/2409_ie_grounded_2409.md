@@ -115,3 +115,7 @@ Untuk $\Delta T_{HTF} = 15$ K: $Q_{charge} = 1{,}5 \times 2{,}3 \times 15 = 51{,
 **Langkah 4 — Simulasi transien (metode numerik):** Diskretisasi domain 1D-radial pada PCM menghasilkan persamaan beda hingga:
 
 $$\rho c_p \frac{T_i^{n+1} - T_i^n}{\Delta t} = k \frac
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

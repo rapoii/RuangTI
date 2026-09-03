@@ -46,3 +46,6 @@ Module 280 (Sustainability Engineering & LCA), Module 282 (Green Supply Chain Ma
 2. European Commission. Regulation (EU) 2023/956 establishing a Carbon Border Adjustment Mechanism (CBAM).
 3. CDP. (2021). *Putting a Price on Carbon: The State of Internal Carbon Pricing by Corporates Globally*.
 4. Journal of Environmental Economics and Management (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

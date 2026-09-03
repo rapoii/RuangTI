@@ -97,4 +97,7 @@ $$r(s, a, s') = \begin{cases} +100 & \text{jika } s' = s_{\text{goal}} \\ -50 & 
 
 ### 4.1 Skenario: AGV pada Gudang 5 × 5 Grid
 
-Pertimbangkan AGV dengan tugas navigasi dari sel start $S = (0,0)$ ke sel goal $G = (4,4)$ pada grid diskret $5 \times 5$. Satu sel obstakel tetap di posisi $(2,2
+Pertimbangkan AGV dengan tugas navigasi dari sel start $S = (0,0)$ ke sel goal $G = (4,4)$ pada grid diskret $5 \times 5$. Satu sel obstakel tetap di posisi $(2,2$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -112,3 +112,6 @@ Integration reduces duplication, streamlines audits, and enables unified risk ma
 6. Antunes, P., & Mourão, H. (2023). Risk-based thinking in ISO 9001:2015: Practical implementation challenges. *International Journal of Quality & Reliability Management*, 40(3), 567–589.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

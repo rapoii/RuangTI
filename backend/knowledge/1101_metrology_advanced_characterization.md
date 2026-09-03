@@ -104,3 +104,6 @@ Metrologi lanjutan tidak hanya relevan untuk industri semikonduktor tetapi juga 
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketergantungan pada alat ukur yang mahal dan keterampilan operator yang diperlukan untuk analisis data. Oleh karena itu, penelitian masa depan dapat difokuskan pada pengembangan teknik metrologi yang lebih terjangkau dan otomatisasi dalam pengukuran.
 
 Dengan demikian, penerapan teknik metrologi lanjutan diharapkan dapat berkontribusi pada peningkatan efisiensi dan efektivitas dalam proses fabrikasi wafer, serta mendukung inovasi dalam teknologi semikonduktor yang lebih maju di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

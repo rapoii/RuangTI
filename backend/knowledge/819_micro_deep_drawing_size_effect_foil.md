@@ -117,3 +117,6 @@ Penelitian di masa depan dapat difokuskan pada pengembangan material baru dengan
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai micro deep drawing dari foil logam ultra-tipis, dengan penekanan pada efek ukuran butir, anisotropi gesekan, dan pemodelan LDR. Dengan mengikuti metodologi dan standar yang diuraikan, diharapkan dapat meningkatkan efisiensi dan kualitas dalam proses manufaktur modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

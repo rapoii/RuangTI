@@ -100,3 +100,6 @@ Penilaian kelelahan mental melalui pupillometri memiliki relevansi yang luas dal
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk variabilitas individu dalam respons pupil dan faktor eksternal yang dapat mempengaruhi hasil pengukuran. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih robust dan dapat diandalkan.
 
 Arah riset masa depan dapat mencakup integrasi teknologi wearable untuk pemantauan berkelanjutan terhadap kelelahan mental, serta pengembangan algoritma berbasis kecerdasan buatan untuk analisis data yang lebih mendalam. Dengan demikian, penilaian kelelahan mental dapat menjadi bagian integral dari strategi manajemen sumber daya manusia yang lebih holistik dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

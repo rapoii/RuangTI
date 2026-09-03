@@ -160,3 +160,6 @@ Karena batas bawah $CI$ mendekati ambang ergonomis 85%, kombinasi $WWL = 70{,}2$
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
 **Kritisi Metodologis.** NASA-TLX memiliki kelemahan *inherent*: bersifat *self-reported* sehingga rentan terhadap *social desirability bias* dan *recall bias*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -144,4 +144,7 @@ Sebuah perusahaan manufaktur komponen otomotif Tier-1 di Eropa Timur ingin mende
 | Recovery rate target ($\gamma$) | 35% |
 | Emisi produksi baru ($e_p$) | 0,85 ton CO₂e/unit |
 | Emisi remanufaktur ($e_r$) | 0,25 ton CO₂e/unit |
-| Emission offset ($\rho$) | 1,0 ton CO₂e/unit
+| Emission offset ($\rho$) | 1,0 ton CO₂e/unit.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

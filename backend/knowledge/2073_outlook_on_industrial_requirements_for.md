@@ -120,3 +120,6 @@ $$\Delta CO_2^{max} = 120 \times 3600 \times 8400 \times 56.1 \times 10^{-6} \ap
 ### 4.5 Analisis Pinch Titik Integrasi
 
 Untuk proses *lime kiln* yang membutuhkan suhu 1100°C, output SMR bersuhu 750°C tidak cukup langsung. Solusi rekayasa: gunakan *process heater* bertenaga listrik dari SMR atau aplikasikan *chemical recuperator* dengan *reverse water-gas shift* untuk memanfaatkan gasifikasi biomassa sebagai intermediate. Suhu *hog fuel dryer* (180–220°C) dan *black liquor evaporation* (multi-effect evaporator 0.1–0.5 MPa) sepenuhnya matchable dengan output SMR setelah degradasi suhu di *steam generator* sekunder.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

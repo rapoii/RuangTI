@@ -146,3 +146,6 @@ Skor WTLX = 74,67 (>50) mengindikasikan operator berada pada kategori **beban ke
 Dalam studi Aditya dan Putra (2024) pada operator gudang, pengamatan *work sampling* menunjukkan proporsi aktivitas produktif 78% dengan SE = 0,68%, sehingga $CI_{95\%} = [76{,}67\%;\; 79{,}33\%]$. Angka ini mengonfirmasi bahwa waktu idle operator rendah, konsisten dengan skor *temporal demand* yang tinggi pada NASA-TLX.
 
 ---
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

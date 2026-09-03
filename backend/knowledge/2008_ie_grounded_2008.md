@@ -233,4 +233,7 @@ Skenario rekomendasi:
 - **Job rotation** setiap 2 jam (mengurangi Temporal Demand dari 85 → 65): ΔWWL ≈ $-\frac{4 \times (85-65)}{15} = -5.3$
 - **Redesign konveyor sortir otomatis** (mengurangi Physical Demand dari 60 → 50): ΔWWL ≈ $-\frac{3 \times 10}{15} = -2.0$
 - **Penambahan breaks micro (5 menit tiap 90 menit)** (mengurangi Mental Demand 75 → 65): ΔWWL ≈ $-\frac{5 \times 10}{15} = -3.3$
-- **Total estimasi ΔWWL:** $-10.6$ → WWL baru ≈ 60.4 (masuk kategori
+- **Total estimasi ΔWWL:** $-10.6$ → WWL baru ≈ 60.4 (masuk kategori.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

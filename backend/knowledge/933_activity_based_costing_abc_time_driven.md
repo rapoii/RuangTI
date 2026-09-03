@@ -124,3 +124,6 @@ TDABC tidak hanya terbatas pada industri manufaktur, tetapi juga dapat diterapka
 Namun, ada beberapa batasan dalam metodologi ini, termasuk kebutuhan untuk data yang akurat dan tantangan dalam pengukuran waktu yang tepat. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan alat dan teknik baru yang dapat memfasilitasi pengumpulan data dan analisis yang lebih baik.
 
 Ke depan, TDABC dapat beradaptasi dengan perkembangan teknologi seperti Internet of Things (IoT) dan analitik data besar, yang dapat memberikan wawasan lebih dalam tentang proses produksi dan perilaku pelanggan. Dengan demikian, TDABC dapat terus menjadi alat yang relevan dan efektif dalam manajemen biaya dan profitabilitas di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

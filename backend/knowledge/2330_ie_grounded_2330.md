@@ -61,4 +61,7 @@ Rapat massa SC-CO₂ dihitung dengan Span–Wagner EoS untuk akurasi tinggi pada
 
 $$\rho = f(P, T; \text{Span–Wagner}) \tag{8}$$
 
-yang memiliki deviasi < 0,02% terhadap data eksperimen NIST pada $P = 1
+yang memiliki deviasi < 0,02% terhadap data eksperimen NIST pada $P = 1$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

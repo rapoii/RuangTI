@@ -108,4 +108,7 @@ $$R(4.166) = e^{-(4.166/18.000)^{2,8}} = e^{-0,00595} = 0{,}9941 \geq 0{,}90 \;\
 
 **Langkah 2: Hitung ketersediaan rata-rata satu siklus hidup (25.000 FC).**
 
-- Total downtime terjadwalkan: $n_C \cdot T_{down,C} + T_{down,D} = 3 \cdot 360 + 2 \cdot 60 + 720 =
+- Total downtime terjadwalkan: $n_C \cdot T_{down,C} + T_{down,D} = 3 \cdot 360 + 2 \cdot 60 + 720 =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

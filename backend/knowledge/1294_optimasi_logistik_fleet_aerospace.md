@@ -140,3 +140,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Arah riset masa depan dapat mencakup integrasi teknologi baru seperti Internet of Things (IoT) dan Big Data untuk meningkatkan akurasi prediksi permintaan dan efisiensi operasional. Selain itu, penerapan prinsip keberlanjutan dalam rantai pasokan juga menjadi fokus penting untuk memenuhi standar K3 dan ESG yang semakin ketat.
 
 Dengan demikian, penerapan metode optimasi yang canggih dalam rantai pasokan logistik akan terus menjadi area penelitian yang penting dan relevan dalam menghadapi tantangan industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -137,4 +137,7 @@ Pendekatan manajemen risiko dalam proyek konstruksi modular tidak hanya relevan 
 
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada data yang akurat dan terkini. Oleh karena itu, penelitian di masa depan perlu fokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi proyek.
 
-Dengan demikian, penerapan EVM dan ES dalam manajemen risiko proyek konstruksi modular menawarkan pendekatan yang sistematis dan berbasis data untuk meningkatkan kinerja proyek dan mengurangi risiko, yang pada akhirnya berkontribusi pada keberhasilan proyek secara keseluruhan.
+Dengan demikian, penerapan EVM dan ES dalam manajemen risiko proyek konstruksi modular menawarkan pendekatan yang sistematis dan berbasis data untuk meningkatkan kinerja proyek dan mengurangi risiko, yang pada akhirnya berkontribusi pada keberhasilan proyek secara keseluruhan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

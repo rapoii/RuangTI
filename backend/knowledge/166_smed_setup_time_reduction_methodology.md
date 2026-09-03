@@ -55,3 +55,6 @@ $$ \Delta A = \frac{\Delta T_{\text{available}}}{T_{\text{planned}}} \times 100\
 
 ## 4. SMED 4.0: Integrasi IoT, RFID, & Digital Twins (Tren 2024-2026)
 Penelitian modern (Silva et al., 2024) mengintegrasikan sensor RFID pada dies dan perkakas presisi. Ketika die baru didekatkan ke mesin, sistem PLC secara otomatis memuat parameter program CNC, tekanan hidrolik, dan batas suhu yang sesuai melalui jaringan IoT tanpa intervensi manual operator, mengeliminasi kesalahan input data (*human error*) dan mereduksi *trial-run time* hingga 100%.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

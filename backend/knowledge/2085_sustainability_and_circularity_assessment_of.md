@@ -106,4 +106,7 @@ Implementasi sistematis framework LCT–MCDM untuk penilaian rantai pasok biomas
 
 **Tahap 3 — Inventarisasi Siklus Hidup (LCI).** Pengumpulan data kuantitatif: konsumsi energi (MJ/MJ output), air (m³/GJ), lahan (ha·yr/GJ), emisi (kg CO₂-eq/GJ, kg SO₂-eq/GJ, kg PO₄³⁻-eq/GJ), dan aliran material siklik (kg/GJ).
 
-**Tahap 4 — Penilaian Dampak (LCIA).** Penerjemahan LCI menjadi kategori dampak menggunakan *characterization factor* metode ReCiPe 2016
+**Tahap 4 — Penilaian Dampak (LCIA).** Penerjemahan LCI menjadi kategori dampak menggunakan *characterization factor* metode ReCiPe 2016.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

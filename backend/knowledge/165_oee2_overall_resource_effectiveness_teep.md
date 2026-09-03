@@ -54,3 +54,6 @@ Di mana:
 
 ## 4. OEE Real-Time Analytics & Machine Learning Dashboard (Tren 2024-2026)
 Pada implementasi *Industry 4.0* (Hedman et al., 2023; Garre & Ramasamy, 2024), OEE tidak lagi dihitung secara retrospektif di akhir shift menggunakan formulir kertas. Sensor IoT dan PLC diintegrasikan ke *Edge Gateway* untuk mendeteksi *micro-stoppages* ($< 5\text{ detik}$) secara otomatis, mengklasifikasikan *root cause* downtime menggunakan model klasifikasi *Random Forest* / *LightGBM*, dan menghitung *Rolling Dynamic OEE* setiap interval 60 detik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

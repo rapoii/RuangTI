@@ -131,3 +131,7 @@ Diadaptasi dari data industri baterai skala 50.000 unit/tahun:
 **Step 1:** Substitusi harga BM yang diasumsikan $p_{BM} = 32$ juta IDR ke fungsi reaksi R:
 
 $$p_R^* = \frac{60.000 + 250(32) + 120 \cdot 4}{2 \cdot 250} = \frac{60.000 + 8.000 + 480}{500} = 136,96 \text{ juta IDR
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

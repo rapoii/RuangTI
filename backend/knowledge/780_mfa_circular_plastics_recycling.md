@@ -84,3 +84,6 @@ MFA dan SFA memiliki aplikasi lintas sektor yang luas, terutama dalam supply cha
 \[ \text{TCO} = C_{\text{op}} + C_{\text{cap}} + C_{\text{env}} \]
 
 di mana \( C_{\text{env}} \) mencakup dampak lingkungan dari loss aliran. Dalam K3 dan ESG, MFA menyediakan data untuk pelaporan carbon footprint sesuai ISO 14064, memungkinkan perusahaan mencapai target net-zero dengan mengurangi emisi 30-40% melalui siklus plastik tertutup. Tantangan adopsi meliputi ketidakpastian data historis, infrastruktur yang belum merata, dan persaingan pasar recycled plastic yang kompetitif dengan harga virgin. Evaluasi manajerial menekankan pentingnya pelatihan staf dan kebijakan Extended Producer Responsibility (EPR) untuk mengatasi hambatan ini, sehingga mencapai ekonomi sirkular yang berkelanjutan di sektor plastik global. Integrasi dengan disiplin lain seperti manajemen operasional memastikan keputusan berbasis data yang mengurangi risiko lingkungan dan meningkatkan daya saing industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

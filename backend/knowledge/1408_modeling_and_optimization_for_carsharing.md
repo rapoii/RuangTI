@@ -146,4 +146,7 @@ $$\sum_{j \in S^*} c_j = 6 \times 750 = 4.500 \text{ juta} \leq 7.500 \text{ jut
 **Langkah 6:** Verifikasi kendala armada:
 $$\sum_{j \in S^*} v_j = 6 \times 25 = 150 \text{ slot} \quad \text{(cukup untuk } 6 \times 25 = 150 \text{ unit)}$$
 
-**Interpretasi Manajerial:** Konfigurasi 6 stasiun ini mencakup 83,5% permintaan harian dengan efisiensi biaya 60%
+**Interpretasi Manajerial:** Konfigurasi 6 stasiun ini mencakup 83,5% permintaan harian dengan efisiensi biaya 60%.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

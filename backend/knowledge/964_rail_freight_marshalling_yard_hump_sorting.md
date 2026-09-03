@@ -120,3 +120,6 @@ Optimasi hump yard tidak hanya relevan untuk industri perkeretaapian, tetapi jug
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketidakpastian dalam data dan variabilitas operasional. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi operasional.
 
 Dengan demikian, optimasi hump yard merupakan bidang yang menjanjikan untuk penelitian lebih lanjut, dengan potensi untuk memberikan kontribusi signifikan terhadap efisiensi operasional dan keberlanjutan dalam industri perkeretaapian.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

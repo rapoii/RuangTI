@@ -131,4 +131,7 @@ Misalkan sebuah fasilitas manufaktur ditugaskan memproduksi **50 juta dosis/bula
 
 $$M_{\text{mRNA,total}} = 50 \times 10^6 \text{ dosis} \times 30 \times 10^{-6} \text{ g} = 1500 \text{ g/bulan}$$
 
-Mengasumsikan yield kumulatif $Y_{\text{total}} = 0{,}
+Mengasumsikan yield kumulatif $Y_{\text{total}} = 0{,}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

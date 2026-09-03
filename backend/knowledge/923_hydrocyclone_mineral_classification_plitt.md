@@ -103,3 +103,6 @@ Arah riset masa depan dapat mencakup pengembangan teknologi sensor yang lebih ca
 --- 
 
 Dokumen ini memberikan gambaran komprehensif mengenai klasifikasi slurry mineral menggunakan hidrosiklon, dengan fokus pada model matematis, metodologi, dan aplikasi praktis dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

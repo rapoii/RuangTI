@@ -102,3 +102,6 @@ Otomasi pelabuhan tidak hanya berdampak pada sektor logistik, tetapi juga berhub
 Batasan metodologi yang ada mencakup ketergantungan pada teknologi yang terus berkembang dan kebutuhan untuk penyesuaian terhadap regulasi lingkungan yang semakin ketat. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan ramah lingkungan, serta strategi untuk mengatasi dampak sosial dari otomasi.
 
 Dengan demikian, otomasi pelabuhan dapat menjadi kunci untuk mencapai keberlanjutan operasional dan lingkungan, asalkan diimbangi dengan kebijakan yang tepat dan inovasi berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

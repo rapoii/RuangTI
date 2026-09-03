@@ -126,4 +126,7 @@ Integrasi proses hilir mengikuti Andrameda dkk. (2024):
 | Laju alir slurry | $\dot{m}$ = 180.000 kg/jam |
 | Konsentrasi Fe³⁺ di outlet | $C_{Fe^{3+}}$ = 4,5 g/L |
 | Konsentrasi SO₄²⁻ | $C_{SO_4}$ = 95 g/L |
-| Suhu dinding bagian dalam
+| Suhu dinding bagian dalam.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

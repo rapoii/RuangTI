@@ -99,3 +99,6 @@ Integrasi teknologi dalam desain sepatu tidak hanya relevan untuk industri alas 
 Di masa depan, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma optimasi yang lebih canggih untuk redistribusi tekanan dan untuk meningkatkan akurasi pemindaian permukaan kaki. Selain itu, penerapan prinsip-prinsip K3 dan ESG dalam proses produksi akan semakin penting untuk memenuhi standar keberlanjutan dan keselamatan kerja.
 
 Dengan demikian, desain last sepatu kustom massal tidak hanya berfokus pada aspek teknis, tetapi juga mempertimbangkan aspek sosial dan lingkungan, menjadikannya sebagai langkah penting menuju industri alas kaki yang lebih berkelanjutan dan responsif terhadap kebutuhan pengguna.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

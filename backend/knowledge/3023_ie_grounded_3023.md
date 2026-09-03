@@ -135,4 +135,7 @@ Misalkan keranjang enema kopi eksisting memiliki spesifikasi:
 - Waktu perakitan aktual: $t_a^{before} = 18$ menit/unit
 - Biaya produksi baseline per unit: $C_{before} = \text{IDR } 185.000$
 
-### 4.2 Per
+### 4.2 Per.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

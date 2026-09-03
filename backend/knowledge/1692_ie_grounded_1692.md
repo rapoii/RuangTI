@@ -150,3 +150,8 @@ $$t_{drying} = \frac{4.22}{1.8} = 2.34 \text{ jam}$$
 
 Namun, karena $R_d$ meningkat seiring pertumbuhan $l_d$, durasi riil dengan pendekatan kuadratik lebih akurat:
 $$t_{drying} \approx \frac{l_d^2 \cdot
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

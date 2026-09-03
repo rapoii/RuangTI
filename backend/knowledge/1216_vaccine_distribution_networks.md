@@ -116,3 +116,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketidakpastian da
 Arah riset masa depan dapat mencakup pengembangan algoritma optimasi yang lebih canggih, integrasi dengan teknologi IoT untuk pelacakan real-time, dan analisis dampak lingkungan dari jaringan distribusi. Hal ini sejalan dengan standar K3 dan ESG yang semakin penting dalam industri saat ini.
 
 Dengan demikian, perancangan jaringan distribusi vaksin berbasis optimasi multi-objektif merupakan langkah penting dalam meningkatkan efisiensi sistem kesehatan global dan dapat memberikan kontribusi signifikan terhadap keberhasilan program vaksinasi di seluruh dunia.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

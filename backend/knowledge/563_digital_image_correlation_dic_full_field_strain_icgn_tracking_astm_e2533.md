@@ -646,4 +646,4 @@ Hasil pelacakan regangan bidang penuh stereo-DIC mengungkapkan perilaku inisiasi
 4. **International Digital Image Correlation Society (iDICs)**. (2018). *A Good Practices Guide for Digital Image Correlation*. Edited by E.M.C. Jones and M.A. Iadicola. https://doi.org/10.32720/idics/gpg.ed1
 5. **ASTM E2533-17**: Standard Guide for Testing Advanced Ceramics and Composites Using Non-Contact Optical Strain Metrology.
 6. **ISO 9513:2012**: Metallic materials — Calibration of extensometer systems used in uniaxial testing.
-7. **Schreier, H. W., & Sutton, M. A.** (2002). Systematic errors in digital image correlation due to imperfect subpixel interpolation. *Experimental Mechanics*, 42(3), 303–310. https://doi.org/10.1007/BF02410987
+7. **Schreier, H. W., & Sutton, M. A.** (2002). Systematic errors in digital image correlation due to imperfect subpixel interpolation. *Experimental Mechanics*, 42(3), 303–310. https://doi.org/10.1007/BF02410987.

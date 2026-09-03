@@ -112,3 +112,6 @@ Penilaian risiko keamanan siber dalam rantai pasok tidak hanya relevan untuk sek
 Batasan metodologi ini termasuk ketidakpastian dalam estimasi probabilitas dan dampak, serta kesulitan dalam mengumpulkan data yang akurat dari semua vendor. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih robust dan adaptif terhadap perubahan dalam lanskap ancaman.
 
 Ke depan, standar dan panduan seperti NIST SP 800-161 dan ISO/IEC 27036-1/2/3 akan terus berkembang untuk mencakup teknologi baru dan praktik terbaik dalam manajemen risiko keamanan siber. Penelitian di bidang ini harus fokus pada pengembangan alat dan teknik yang dapat membantu organisasi dalam mengelola risiko dengan lebih efektif dan efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

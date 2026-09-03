@@ -115,3 +115,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualit
 Dengan kemajuan teknologi, seperti penggunaan kecerdasan buatan dan pembelajaran mesin, masa depan fusi data dalam SPC menjanjikan peningkatan efisiensi dan efektivitas dalam pengendalian kualitas, serta memberikan wawasan yang lebih dalam mengenai proses produksi. 
 
 Referensi yang diambil dari Nguyen (2024) memberikan landasan yang kuat untuk pengembangan lebih lanjut dalam bidang ini, dan diharapkan dapat mendorong inovasi dalam teknik pengendalian kualitas berbasis sensor terintegrasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -138,3 +138,6 @@ Namun, ada batasan dalam metodologi ini, termasuk asumsi yang mungkin tidak sela
 Arah riset masa depan dapat mencakup penggunaan algoritma pembelajaran mesin untuk meningkatkan akurasi prediksi dalam model optimisasi, serta integrasi data real-time untuk respons yang lebih cepat terhadap perubahan dalam pola perjalanan dan permintaan transportasi.
 
 Dengan demikian, penerapan model optimisasi non-linier dalam perencanaan transportasi perkotaan diharapkan dapat memberikan solusi yang lebih efektif dan berkelanjutan dalam menghadapi tantangan mobilitas di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

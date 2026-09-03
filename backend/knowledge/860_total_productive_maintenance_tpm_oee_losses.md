@@ -121,3 +121,6 @@ Penerapan prinsip OEE dan TPM tidak hanya terbatas pada sektor manufaktur, tetap
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan keterlibatan karyawan yang tinggi. Oleh karena itu, penelitian masa depan perlu berfokus pada pengembangan teknologi yang dapat memfasilitasi pengumpulan dan analisis data, serta meningkatkan keterlibatan karyawan dalam proses TPM.
 
 Dengan demikian, penerapan OEE dan TPM yang efektif dapat membantu perusahaan mencapai efisiensi operasional yang lebih baik, mengurangi biaya, dan meningkatkan kualitas produk, yang pada gilirannya akan berkontribusi pada keberlanjutan dan daya saing di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -80,3 +80,8 @@ di mana $S_{DT}(t)$ adalah state digital twin saat waktu $t$, $S_{phy}(t)$ adala
 5G memperkenalkan konsep *network slicing* yang memungkinkan alokasi sumber daya jaringan secara terisolasi untuk berbagai use case. Formulasi alokasi resource untuk $K$ slice adalah:
 
 $$\max \sum_{k=1}^{K} U_k(R_k, L_k)$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

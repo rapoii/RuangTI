@@ -97,4 +97,7 @@ $$L(\theta) = 2.5 \times 10^{-5} + 0.0486 \approx 0.04863$$
 
 $$\text{Err}_{L^2} = \frac{\sqrt{\sum_{i} (u_{\theta}^i - u_{exact}^i)^2}}{\sqrt{\sum_{i} (u_{exact}^i)^2}} \approx 3.2 \times 10^{-3}$$
 
-**Interpretasi Manajerial:** Model PINN mencapai akurasi 99,7% dengan hanya 50 titik data — menunjukkan kemampuan *data efficiency* yang luar biasa untuk
+**Interpretasi Manajerial:** Model PINN mencapai akurasi 99,7% dengan hanya 50 titik data — menunjukkan kemampuan *data efficiency* yang luar biasa untuk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

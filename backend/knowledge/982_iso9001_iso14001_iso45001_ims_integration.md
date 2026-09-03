@@ -104,4 +104,7 @@ Harmonisasi sistem manajemen terintegrasi tidak hanya bermanfaat bagi sektor man
 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk pelatihan yang intensif dan potensi resistensi dari karyawan terhadap perubahan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengeksplorasi cara-cara inovatif dalam menerapkan IMS, termasuk penggunaan teknologi digital dan otomatisasi untuk memfasilitasi integrasi sistem manajemen.
 
-Dengan demikian, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang dapat membantu organisasi dalam menerapkan IMS secara lebih efektif dan efisien, serta mengeksplorasi dampak dari perubahan regulasi dan teknologi terhadap sistem manajemen terintegrasi.
+Dengan demikian, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang dapat membantu organisasi dalam menerapkan IMS secara lebih efektif dan efisien, serta mengeksplorasi dampak dari perubahan regulasi dan teknologi terhadap sistem manajemen terintegrasi.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

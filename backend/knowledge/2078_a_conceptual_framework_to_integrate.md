@@ -162,4 +162,7 @@ Untuk $t = 5{,}000$ jam:
 
 $$\frac{\mu_L \cdot t}{\sigma_L^2} = \frac{23{,}529 \cdot 5{,}000}{66{,}700} = 1764$$
 
-Karena rasio ini sangat besar, $P(\text{RUL}
+Karena rasio ini sangat besar, $P(\text{RUL}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

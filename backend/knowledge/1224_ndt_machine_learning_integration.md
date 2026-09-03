@@ -77,3 +77,6 @@ Ke depan, riset di bidang ini dapat fokus pada pengembangan algoritma yang lebih
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang integrasi pembelajaran mesin dalam NDT, mencakup aspek teoritis, metodologis, dan aplikatif yang relevan dengan perkembangan terkini dalam bidang teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

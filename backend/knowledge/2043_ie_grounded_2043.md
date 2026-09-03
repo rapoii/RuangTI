@@ -157,4 +157,7 @@ Masih terlalu tinggi, sehingga $R_{th}^{total}$ harus $\leq 0{,}07°$C/W → waj
 
 Tan et al. (2023) menyajikan *landscape* CPO secara komprehensif, namun analisis kuantitatif terhadap *manufacturing yield* dan *total cost of ownership* (TCO) belum dijabarkan secara eksplisit. Beberapa asumsi yang memerlukan validasi empiris lebih lanjut:
 
-1. **Yield paket hibrid:** Integrasi *photonic chiplet* dengan ASIC logika pada substrat bersama menurunkan *compound yield*. Jika $Y_{ASIC} = 0{,}90$ dan $Y_{photonics} = 0{,}85$, maka $Y
+1. **Yield paket hibrid:** Integrasi *photonic chiplet* dengan ASIC logika pada substrat bersama menurunkan *compound yield*. Jika $Y_{ASIC} = 0{,}90$ dan $Y_{photonics} = 0{,}85$, maka $Y$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

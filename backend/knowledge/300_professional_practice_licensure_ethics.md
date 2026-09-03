@@ -48,3 +48,6 @@ Module 270 (Project Portfolio Management), Module 272 (IP & Patent Engineering i
 2. Kerzner, H. (2022). *Project Management: A Systems Approach to Planning, Scheduling, and Controlling* (13th ed.). Wiley.
 3. AACE International. *RP 18R-97: Cost Estimate Classification System*; *RP 49R-06: Schedule Classification*.
 4. International Journal of Project Management (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -144,3 +144,6 @@ Where $p_{carbon}$ is the carbon price ($/tCO₂), making high-emission routes e
 - UNIDO. (2024). *Industrial Development Report 2024: Industrialization in the Age of Climate Change*. United Nations.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

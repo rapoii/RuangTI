@@ -474,4 +474,4 @@ Setelah dilakukan dekomposisi neraca massa 3-tahap (Die-Casting $\to$ CNC Machin
 4. **Christ, K. L., & Burritt, R. L. (2017)**. Material Flow Cost Accounting: A Review and Agenda for Future Research. *Journal of Cleaner Production*, 168, 1370–1382. DOI: [10.1016/j.jclepro.2017.09.057](https://doi.org/10.1016/j.jclepro.2017.09.057).
 5. **Chertow, M. R., & Park, J. (2016)**. Scholarship and Practice in Industrial Symbiosis: 1989–2014. *Journal of Industrial Ecology*, 20(3), 397–409. DOI: [10.1111/jiec.12452](https://doi.org/10.1111/jiec.12452).
 6. **Graedel, T. E., & Allenby, B. R. (2010)**. *Industrial Ecology and Sustainable Engineering*. Prentice Hall.
-7. **Groover, M. P. (2020)**. *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th ed.). John Wiley & Sons.
+7. **Groover, M. P. (2020)**. *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th ed.). John Wiley & Sons.$.

@@ -171,4 +171,7 @@ Zhang, Li, dan Ren (2024) menambahkan **quality-based cuts** untuk reverse suppl
 
 ### 4.1 Deskripsi Kasus: PT Susu Nusantara (Hipotetis)
 
-Studi kasus disusun untuk koperasi susu di Jawa Timur dengan parameter riil bers
+Studi kasus disusun untuk koperasi susu di Jawa Timur dengan parameter riil bers.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

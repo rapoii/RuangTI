@@ -124,3 +124,7 @@ Dengan menyetel $\bar{A}_L = 0,92$ sebagai target dan menggunakan solver numerik
 Jumlah check per siklus hidup $L = 60.000$ FH:
 
 $$N_A = \lfloor 60.000/500 \rfloor = 120,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

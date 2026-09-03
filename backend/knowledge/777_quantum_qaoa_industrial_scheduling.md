@@ -118,3 +118,6 @@ Secara keseluruhan, modul ini memberikan fondasi bagi rekayasa industri untuk me
 (Word count section 5: 162 kata)
 
 **Total kata keseluruhan: 1.598 kata** (dihitung dengan inklusi rumus dan sub-bagian). Dokumen ini siap digunakan sebagai Knowledge Base lengkap untuk pelatihan atau implementasi di RuangTI.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

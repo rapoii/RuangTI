@@ -99,3 +99,6 @@ Penerapan strategi ergonomi kognitif tidak hanya relevan dalam konteks kerja jar
 Namun, ada batasan dalam metodologi ini, seperti variabilitas individu dalam respons terhadap strategi ergonomi yang diterapkan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengeksplorasi pendekatan yang lebih personalisasi.
 
 Ke depan, riset dalam ergonomi kognitif diharapkan dapat berfokus pada integrasi teknologi yang lebih canggih, seperti kecerdasan buatan dan analitik data, untuk lebih memahami dan meningkatkan interaksi manusia dengan sistem kerja. Dengan demikian, perusahaan dapat menciptakan lingkungan kerja yang lebih produktif, efisien, dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

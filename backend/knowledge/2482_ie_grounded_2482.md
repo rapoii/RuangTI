@@ -106,4 +106,7 @@ agar filter Kalman tetap *observable* dan stabil (di mana $\omega_{n,closed}$ ad
 
 $$B_{slice}^{(j)} = \alpha_j \cdot B_{total}, \quad \sum_{j=1}^{m} \alpha_j = 1, \quad \alpha_j \geq 0$$
 
-d
+d.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

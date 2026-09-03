@@ -98,3 +98,6 @@ Pendekatan inovatif dalam penyeimbangan panas pada proses smelting tidak hanya r
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketidakpastian dalam data sensor dan variabilitas dalam karakteristik bijih. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih robust dan adaptif.
 
 Arah riset masa depan dapat mencakup pengembangan sistem berbasis kecerdasan buatan untuk prediksi dan optimasi proses smelting, serta penerapan teknologi hijau untuk mengurangi dampak lingkungan dari proses ini. Dengan demikian, pendekatan inovatif dalam penyeimbangan panas akan terus menjadi fokus penting dalam meningkatkan kualitas produk dan efisiensi operasional di industri metalurgi dan sektor lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -110,3 +110,6 @@ Sistem Manajemen Risiko Kelelahan (FRMS) tidak hanya relevan dalam industri kimi
 Keterkaitan antara kelelahan, keselamatan kerja, dan produktivitas menunjukkan bahwa pendekatan interdisipliner diperlukan untuk mengatasi masalah ini. Penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dalam memprediksi dampak kelelahan terhadap kinerja, serta untuk mengeksplorasi teknologi baru yang dapat membantu dalam pemantauan dan manajemen kelelahan.
 
 Dengan demikian, FRMS dan pemodelan utang tidur biomatematika akan terus menjadi area penting dalam penelitian dan praktik teknik industri, seiring dengan meningkatnya kebutuhan untuk menjaga kesehatan dan keselamatan pekerja di lingkungan kerja yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

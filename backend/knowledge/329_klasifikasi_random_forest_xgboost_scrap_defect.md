@@ -76,4 +76,4 @@ def execute_industrial_solver(parameters: Dict[str, Any]) -> Dict[str, Any]:
 2. Blanchard, B. S., & Fabrycky, W. J. (2014). *Systems Engineering and Analysis (5th ed.)*. Pearson.
 3. Groover, M. P. (2020). *Automation, Production Systems, and Computer-Integrated Manufacturing (5th ed.)*. Pearson.
 4. Montgomery, D. C. (2020). *Introduction to Statistical Quality Control (8th ed.)*. John Wiley & Sons.
-5. International Journal of Production Research & Computers & Industrial Engineering (2023–2026 Academic Editions).
+5. International Journal of Production Research & Computers & Industrial Engineering (2023–2026 Academic Editions).$.

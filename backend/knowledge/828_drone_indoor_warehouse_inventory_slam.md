@@ -157,3 +157,6 @@ Penggunaan drone otonom dalam inventarisasi gudang tidak hanya terbatas pada sek
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kondisi lingkungan dan kebutuhan akan infrastruktur yang mendukung. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk navigasi dan penghindaran rintangan, serta peningkatan teknologi sensor untuk meningkatkan akurasi dan keandalan sistem.
 
 Dengan mengikuti standar ISO 21384 dan pedoman dari Loianno et al. (2023) serta Floreano & Wood, industri dapat memastikan bahwa implementasi teknologi drone ini memenuhi kriteria keselamatan dan efisiensi yang diperlukan untuk operasional yang sukses.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

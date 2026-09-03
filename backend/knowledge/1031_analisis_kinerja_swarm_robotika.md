@@ -146,3 +146,6 @@ Meskipun swarm robotika menawarkan banyak keuntungan, terdapat beberapa batasan,
 Penelitian lebih lanjut diperlukan untuk mengatasi batasan-batasan ini, termasuk pengembangan algoritma yang lebih adaptif dan robust, serta integrasi teknologi baru seperti Internet of Things (IoT) untuk meningkatkan komunikasi antar robot. Standar masa depan, seperti yang ditetapkan dalam ISO 8373:2021, akan menjadi pedoman penting dalam pengembangan dan penerapan teknologi swarm robotika di industri.
 
 Dengan demikian, analisis kinerja swarm robotika dalam lingkungan dinamis menggunakan algoritma pembelajaran mendalam merupakan bidang yang menjanjikan untuk penelitian dan pengembangan di masa depan, dengan potensi untuk meningkatkan efisiensi dan produktivitas di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

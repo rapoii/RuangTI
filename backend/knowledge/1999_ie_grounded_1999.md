@@ -134,4 +134,7 @@ Nilai ini berada di bawah ambang $60\%$, mengonfirmasi perlunya redesain substan
 
 ### 4.3 Perhitungan Efisiensi Perakitan Awal
 
-Dengan $t_{\min} =
+Dengan $t_{\min} =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

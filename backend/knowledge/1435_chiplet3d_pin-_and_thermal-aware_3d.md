@@ -116,4 +116,7 @@ Arsitektur teknologi Chiplet3D secara skematis:
 | C    | 2.5       | 2.5       | 6   | 2.0      |
 | D    | 3.5       | 2.0       | 6   | 1.5      |
 
-**Langkah 1
+**Langkah 1.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

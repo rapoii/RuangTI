@@ -129,3 +129,6 @@ Namun, ada batasan dalam metodologi ini, termasuk ketergantungan pada data yang 
 Arah riset masa depan dapat mencakup integrasi teknologi baru seperti kecerdasan buatan dan pembelajaran mesin untuk meningkatkan akurasi prediksi serta pengembangan standar baru yang lebih komprehensif dalam pemodelan geomekanika digital.
 
 Dengan demikian, teknik pemodelan geomekanika digital menjadi alat yang sangat berharga dalam meningkatkan keselamatan, efisiensi, dan keberlanjutan dalam industri penambangan terbuka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -136,3 +136,6 @@ Progressive enhancement ensures accessibility across device capabilities.
 5. Tao, F., & Qi, Q. (2023). Make more digital twins. *Nature*, 573, 490-491.
 6. NVIDIA (2025). Omniverse Industrial Digital Twins White Paper. NVIDIA Technical Documentation.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

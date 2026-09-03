@@ -160,3 +160,6 @@ ISO 23247 (Digital Twin Framework for Manufacturing) and ASME V&V 40 provide eme
 - Zhang, L., Kumar, R., & Patel, S. (2025). Large language models for automated risk identification in simulation project proposals. *ACM Transactions on Modeling and Computer Simulation*, 35(1), 1-22.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

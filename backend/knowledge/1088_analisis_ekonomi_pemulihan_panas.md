@@ -105,4 +105,7 @@ Teknologi pemulihan energi panas limbah menggunakan ORC memiliki aplikasi yang l
 
 Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan, seperti ketergantungan pada karakteristik sumber panas dan efisiensi sistem yang dapat bervariasi. Penelitian masa depan diharapkan dapat mengeksplorasi inovasi dalam desain sistem ORC, serta integrasi dengan teknologi energi terbarukan untuk meningkatkan efisiensi dan keberlanjutan.
 
-Dengan demikian, analisis ekonomi dan kelayakan teknologi pemulihan energi panas limbah menggunakan ORC adalah langkah penting untuk mendorong adopsi yang lebih luas dan memberikan manfaat ekonomi serta lingkungan yang signifikan bagi industri.
+Dengan demikian, analisis ekonomi dan kelayakan teknologi pemulihan energi panas limbah menggunakan ORC adalah langkah penting untuk mendorong adopsi yang lebih luas dan memberikan manfaat ekonomi serta lingkungan yang signifikan bagi industri.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

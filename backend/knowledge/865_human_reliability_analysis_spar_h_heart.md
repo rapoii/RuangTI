@@ -140,3 +140,6 @@ Dalam bidang otomasi, dengan meningkatnya penggunaan teknologi canggih, penting 
 Namun, terdapat batasan dalam metodologi HRA, seperti ketidakpastian dalam estimasi probabilitas dan variabilitas dalam kinerja manusia. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan dapat diandalkan.
 
 Ke depan, arah riset dalam HRA dapat difokuskan pada integrasi teknologi baru, seperti kecerdasan buatan dan analisis data besar, untuk meningkatkan pemahaman tentang kesalahan manusia dan mengembangkan strategi mitigasi yang lebih efektif. Dengan demikian, HRA akan terus menjadi komponen penting dalam memastikan keselamatan dan efisiensi operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

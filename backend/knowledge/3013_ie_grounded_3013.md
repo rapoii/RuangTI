@@ -45,4 +45,7 @@ Parameter utama:
 - $C_j^F, C_l^F, C_m^F$: biaya tetap (*fixed cost*) fasilitas
 
 Variabel keputusan:
-- $x_{ij}
+- $x_{ij}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

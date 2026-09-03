@@ -60,3 +60,6 @@ VSM digunakan untuk mengidentifikasi dan meminimalkan 8 bentuk pemborosan (*Muda
 2. **Current State Map:** Turun langsung ke lapangan (*Gemba*), kumpulkan data aktual, dan gambar peta saat ini (jangan gunakan data standar di komputer).
 3. **Future State Map:** Rancang kondisi ideal dengan konsep aliran berkelanjutan (*continuous flow*), sistem tarik (*pull system / Kanban*), supermarket inventori, dan pacemaking.
 4. **Implementation Plan:** Buat rencana kerja (Kaizen blitz) untuk bergerak dari *Current* ke *Future State*.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

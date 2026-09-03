@@ -146,3 +146,6 @@ Karya Lead Researchers (2023) memiliki tiga keterbatasan utama. Pertama, asumsi 
 
 | Aspek | MILP Langsung | Benders (paper) | Heuristik (GA/PSO) |
 |-------|---------------|-----------------|---------------------
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

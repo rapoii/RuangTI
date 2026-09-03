@@ -34,3 +34,6 @@ Kepercayaan adalah fondasi: data penjualan bisa dianggap rahasia dagang. Perlu k
 - Menentukan parameter (s,S) atau min-max policy pada VMI dengan model persediaan stochastic.
  Studi kasus retail–FMCG (Wal-Mart–P&G klasik) dan manufaktur–supplier tier-1 otomotif.
 - Integrasi dengan EOQ/ROP klasik: siapa pemilik keputusan menentukan fungsi objektif total cost bersama (jointly optimized).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

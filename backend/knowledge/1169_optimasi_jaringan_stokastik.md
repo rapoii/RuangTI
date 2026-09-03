@@ -135,4 +135,7 @@ Pendekatan optimasi jaringan stokastik memiliki aplikasi luas tidak hanya dalam 
 
 Batasan metodologi ini termasuk kompleksitas dalam pemodelan ketidakpastian dan kebutuhan akan data yang akurat. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan metode yang lebih efisien untuk menangani ketidakpastian dan meningkatkan akurasi model. Selain itu, integrasi teknologi baru seperti kecerdasan buatan dan analitik data besar dapat memberikan wawasan yang lebih mendalam dan mendukung pengambilan keputusan yang lebih baik dalam desain rantai pasok yang tangguh.
 
-Dengan demikian, optimasi jaringan stokastik menawarkan kerangka kerja yang kuat untuk merancang rantai pasok yang lebih tangguh dan adaptif, yang sangat diperlukan dalam menghadapi tantangan di era pasca-pandemi.
+Dengan demikian, optimasi jaringan stokastik menawarkan kerangka kerja yang kuat untuk merancang rantai pasok yang lebih tangguh dan adaptif, yang sangat diperlukan dalam menghadapi tantangan di era pasca-pandemi.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

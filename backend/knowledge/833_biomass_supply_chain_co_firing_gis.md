@@ -127,3 +127,6 @@ Total biaya rantai pasok biomassa untuk pembangkit listrik adalah 65,000 USD. De
 Optimasi rantai pasok biomassa tidak hanya relevan untuk sektor energi, tetapi juga dapat diterapkan dalam konteks pertanian berkelanjutan dan pengelolaan limbah. Integrasi teknologi otomasi dan sistem informasi dapat meningkatkan efisiensi operasional dan mengurangi biaya. Namun, tantangan tetap ada dalam hal ketidakpastian pasokan dan variabilitas harga.
 
 Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar dan lingkungan. Penelitian ini harus mempertimbangkan aspek keberlanjutan dan dampak lingkungan, sesuai dengan standar K3 dan ESG yang semakin penting dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

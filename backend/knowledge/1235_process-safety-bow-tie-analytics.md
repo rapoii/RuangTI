@@ -82,3 +82,6 @@ Analisis Bow-Tie tidak hanya terbatas pada industri kimia, tetapi juga dapat dit
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada data historis yang mungkin tidak selalu mencerminkan kondisi saat ini. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan model prediktif yang lebih canggih, serta integrasi analisis Bow-Tie dengan teknologi analitik data besar dan kecerdasan buatan.
 
 Dengan demikian, analisis Bow-Tie dapat menjadi alat yang sangat berharga dalam manajemen keselamatan proses, membantu perusahaan untuk tidak hanya memenuhi standar keselamatan yang ada, tetapi juga untuk beradaptasi dengan tantangan yang terus berkembang di industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

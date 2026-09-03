@@ -128,4 +128,7 @@ $$B_t = (1.909.440 + 135.000 + 85.000) \times (1{,}08)^{t-1}$$
 
 $$NPV = -I_0 + \sum_{t=1}^{5} \frac{B_t}{(1+r)^t}$$
 
-| Tahun ($t$) | $B_t$ (AUD) | Faktor
+| Tahun ($t$) | $B_t$ (AUD) | Faktor.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

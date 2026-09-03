@@ -117,4 +117,7 @@ Translasi model JIANG & TANG (2025) ke dalam SOP industri mengikuti kerangka *Pl
 3. Stress-test skenario: return rate shock ±30%, harga litium ±50%, regulasi回收 minimum +20%.
 
 **Tahap 3: Operasi Eselon & Remanufaktur (Process)**
-1. *Echelon
+1. *Echelon.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

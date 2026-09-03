@@ -100,4 +100,7 @@ Implementasi model hibrida di industri mengikuti SOP terstruktur sebagai berikut
 **Tahap 2 — Generasi Skenario (Hari 8–10):**
 1. Tentukan jumlah skenario $S$ (umumnya 200–1000 untuk problem industri menengah).
 2. Gunakan *Latin Hypercube Sampling* (LHS) untuk meningkatkan efisiensi sampling dibanding *pure Monte Carlo*.
-3. Lakukan *scenario reduction* menggunakan algoritma *forward selection* dari Heitsch & Römisch (2003) untuk memangkas menjadi 30–50 skenario representatif dengan menjaga *Kantorovich distance
+3. Lakukan *scenario reduction* menggunakan algoritma *forward selection* dari Heitsch & Römisch (2003) untuk memangkas menjadi 30–50 skenario representatif dengan menjaga *Kantorovich distance.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

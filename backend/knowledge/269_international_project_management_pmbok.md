@@ -95,3 +95,6 @@ Key clauses requiring IE attention: force majeure definitions, variation procedu
 6. Kerzner, H. (2022). *Project Management Best Practices: Achieving Global Excellence* (5th ed.). Wiley.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -121,3 +121,6 @@ Integrasi teknologi berkelanjutan dalam rantai pasok tidak hanya relevan untuk s
 Batasan metodologi ini termasuk ketergantungan pada teknologi yang tersedia dan kesiapan organisasi untuk beradaptasi dengan perubahan. Arah riset masa depan dapat mencakup pengembangan teknologi baru, seperti blockchain untuk transparansi rantai pasok, serta peningkatan penggunaan energi terbarukan dalam proses produksi.
 
 Dengan demikian, integrasi teknologi berkelanjutan dalam rantai pasok bukan hanya menjadi pilihan strategis, tetapi juga menjadi keharusan bagi perusahaan yang ingin bertahan dan berkembang di pasar global yang semakin kompetitif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

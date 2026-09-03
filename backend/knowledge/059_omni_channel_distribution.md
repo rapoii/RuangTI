@@ -122,3 +122,6 @@ $$D_s(p_o, p_s) = a_s - b_s p_s + \gamma (p_o - p_s)$$
 - Zhang, J.L., & Farris, P.W. (2023). Measuring the impact of omnichannel integration on retailer performance. *Journal of Retailing*, 99(3), 234-251.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -180,4 +180,7 @@ Kasus ini mengadaptasi skenario Lead Researchers (2023) untuk jaringan distribus
 - $c_{ij}^{UHT}$ rata-rata: Rp 1.200/unit, $c_{ij}^{Yogurt}$: Rp 1.500/unit, $c_{ij}^{Keju}$: Rp 2.100/unit
 
 **Demand agregat quarterly (unit):**
-$d_{kt}^{UHT}$ di Jakarta Q1: 850.000 unit; $d_{kt}^{Yogurt}$ di Jakarta Q1: 320.000 unit; $d_{kt}^{Keju}$
+$d_{kt}^{UHT}$ di Jakarta Q1: 850.000 unit; $d_{kt}^{Yogurt}$ di Jakarta Q1: 320.000 unit; $d_{kt}^{Keju}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -112,3 +112,6 @@ SDLBP memiliki aplikasi yang luas di berbagai sektor, termasuk otomotif, elektro
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketidakpastian dalam data degradasi dan variabilitas dalam waktu pembongkaran. Oleh karena itu, riset masa depan harus berfokus pada pengembangan model yang lebih adaptif dan robust, serta penerapan teknologi seperti AI dan machine learning untuk meningkatkan akurasi prediksi dan optimasi.
 
 Dengan demikian, SDLBP tidak hanya menjadi alat untuk efisiensi operasional, tetapi juga sebagai pendorong inovasi dalam praktik keberlanjutan di industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -39,3 +39,6 @@ $$\mathbf{Z}_k = \mathbf{\Lambda} \mathbf{X}_k + (\mathbf{I} - \mathbf{\Lambda})
 - Statistik MEWMA:
   $$T_k^2 = \mathbf{Z}_k^T \mathbf{\Sigma}_{\mathbf{Z}_k}^{-1} \mathbf{Z}_k$$
   *(Proses out-of-control jika $T_k^2 > H$).*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

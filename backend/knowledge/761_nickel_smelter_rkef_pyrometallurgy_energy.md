@@ -139,3 +139,6 @@ Proses RKEF tidak hanya relevan dalam industri nikel, tetapi juga dapat diterapk
 Pengembangan teknologi otomasi dan digitalisasi dalam proses RKEF dapat meningkatkan akurasi pengendalian dan pengambilan keputusan berbasis data. Selain itu, aspek K3 dan ESG (Environmental, Social, and Governance) menjadi semakin penting dalam industri, mendorong perusahaan untuk berinvestasi dalam teknologi yang lebih bersih dan efisien.
 
 Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan metode baru dalam pemulihan energi dan pengendalian kualitas produk, serta untuk mengeksplorasi potensi penggunaan bahan baku alternatif yang lebih berkelanjutan. Standar industri dan regulasi akan terus berkembang untuk mendorong praktik yang lebih baik dalam pengelolaan sumber daya dan dampak lingkungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

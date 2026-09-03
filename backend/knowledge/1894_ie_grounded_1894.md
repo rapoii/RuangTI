@@ -139,3 +139,7 @@ $$t_{hold} = \frac{E_{cool}}{Q_{in}} = \frac{3447{,}1}{225{,}5} = 15{,}28 \text{
 Untuk resolusi 12-bit, pada pembacaan suhu aktual 4,0625 °C, register DS18B20:
 
 $$T_{raw} = 0x0410_{hex} = 0 \times 2^{-4} + 1 \times 2^{-3} + 0 \times 2^{-2} + 4 \times 2^{0} = 0{,}0625 + 0{,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

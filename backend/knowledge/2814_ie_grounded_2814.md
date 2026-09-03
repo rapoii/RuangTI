@@ -91,4 +91,7 @@ $$\hat{\beta} = \left[\frac{\sum_{i=1}^{n} t_i^{\hat{\beta}} \ln t_i}{\sum_{i=1}
 
 **Langkah 5 — Optimasi Jadwal A/B/C/D-check.** Selesaikan formulasi persamaan (8) menggunakan *Sequential Quadratic Programming* (SQP) atau algoritma *Genetic Algorithm* (GA) untuk fleet-wide scheduling.
 
-**Langkah 6
+**Langkah 6.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

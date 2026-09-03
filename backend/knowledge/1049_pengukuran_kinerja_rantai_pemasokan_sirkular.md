@@ -95,3 +95,6 @@ Pengukuran kinerja dalam rantai pasokan sirkular tidak hanya relevan untuk indus
 Batasan metodologi yang ada saat ini mencakup kurangnya data yang akurat dan terkini, serta kesulitan dalam mengukur dampak jangka panjang dari inisiatif keberlanjutan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat analisis yang lebih canggih dan penggunaan teknologi seperti Internet of Things (IoT) dan Big Data untuk meningkatkan akurasi pengukuran kinerja.
 
 Dengan demikian, pengukuran kinerja rantai pasokan sirkular merupakan langkah penting dalam mencapai tujuan keberlanjutan dan efisiensi operasional yang lebih baik. Penelitian lebih lanjut dan pengembangan metodologi yang lebih baik akan membantu perusahaan untuk lebih efektif dalam mengimplementasikan praktik keberlanjutan dalam operasi mereka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

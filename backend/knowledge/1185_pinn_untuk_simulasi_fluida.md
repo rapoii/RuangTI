@@ -92,3 +92,6 @@ Penerapan PINNs tidak hanya terbatas pada simulasi dinamika fluida, tetapi juga 
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan untuk data yang berkualitas tinggi dan tantangan dalam generalisasi model. Penelitian masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan robust, serta integrasi dengan teknologi terkini seperti Internet of Things (IoT) dan big data untuk meningkatkan akurasi dan efisiensi.
 
 Dengan demikian, PINNs memiliki potensi besar untuk merevolusi cara kita melakukan simulasi dalam proses manufaktur, menjadikannya alat yang sangat berharga untuk menghadapi tantangan industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

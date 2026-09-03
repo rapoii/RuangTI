@@ -519,4 +519,4 @@ Pada konfigurasi awal dengan kawat $d_c = 55\ \mu\text{m}$ ($d_{\text{outer}} = 
 5. **Gao, Y. F., & Ge, P. Q.** (2010). *Experimental Investigation on Brittle-Ductile Transition in Electroplated Diamond Wire Saw Machining Single Crystal Silicon*. Key Engineering Materials, 431–432, 265–268. DOI: [10.4028/www.scientific.net/kem.431-432.265](https://doi.org/10.4028/www.scientific.net/kem.431-432.265).
 6. **SEMI International Standards.** (2021). *SEMI M1-1021: Specification for Polished Single Crystal Silicon Wafers*. Semiconductor Equipment and Materials International, Milpitas, CA.
 7. **SEMI International Standards.** (2020). *SEMI PV17-0620: Specification for Virgin Monocrystalline Silicon Wafers for Photovoltaic Applications*. SEMI, Milpitas, CA.
-8. **ASTM International.** (2020). *ASTM F657 / F657M-20: Standard Test Method for Measuring Warp and Bow on Silicon Wafers by Noncontact Scanning*. ASTM International, West Conshohocken, PA.
+8. **ASTM International.** (2020). *ASTM F657 / F657M-20: Standard Test Method for Measuring Warp and Bow on Silicon Wafers by Noncontact Scanning*. ASTM International, West Conshohocken, PA.$.

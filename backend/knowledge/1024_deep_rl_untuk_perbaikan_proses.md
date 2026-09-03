@@ -121,3 +121,6 @@ Penerapan DRL tidak hanya terbatas pada sistem manufaktur, tetapi juga memiliki 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan data yang besar dan berkualitas tinggi, serta tantangan dalam interpretasi hasil dari model yang kompleks. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan algoritma yang lebih efisien, serta integrasi DRL dengan teknologi lain seperti Internet of Things (IoT) dan big data analytics.
 
 Dengan demikian, DRL memiliki potensi untuk menjadi alat yang sangat berharga dalam perbaikan proses di berbagai sektor industri, dan penelitian lebih lanjut di bidang ini akan sangat penting untuk menghadapi tantangan yang akan datang dalam dunia manufaktur dan industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

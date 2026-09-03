@@ -148,4 +148,7 @@ Throughput efektif:
 
 $$\Phi_{comm} = N \cdot r_{pick} \cdot p_{comm} \cdot \frac{3600}{T_{cycle}}$$
 
-di mana $r_{
+di mana $r_{$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -116,4 +116,7 @@ Arah riset masa depan dapat mencakup pengembangan model ROV yang lebih adaptif d
 
 ---
 
-Dokumen ini memberikan gambaran menyeluruh mengenai evaluasi kinerja aset menggunakan metode Real Options Valuation dalam sektor transportasi, dengan penekanan pada pentingnya pendekatan ini dalam pengambilan keputusan investasi yang lebih baik dan pengelolaan risiko yang lebih efektif.
+Dokumen ini memberikan gambaran menyeluruh mengenai evaluasi kinerja aset menggunakan metode Real Options Valuation dalam sektor transportasi, dengan penekanan pada pentingnya pendekatan ini dalam pengambilan keputusan investasi yang lebih baik dan pengelolaan risiko yang lebih efektif.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

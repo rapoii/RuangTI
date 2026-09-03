@@ -91,3 +91,7 @@ Berdasarkan integrasi kedua paper di atas, SOP untuk rekayasa penilaian lingkung
 ┌──────────────────────────────────────────────────┐
 │  FASE 1: Definisi Sistem & Unit Fungsional      │
 │  (Output
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

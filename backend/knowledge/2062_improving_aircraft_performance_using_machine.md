@@ -106,4 +106,7 @@ Implementasi ML dalam alur rekayasa pesawat udara mengikuti SOP berlapis yang Le
 
 ### Tahap 5: Integrasi Operasional
 1. **Deployment** ke *edge device* atau cloud (latency budget $< 50\ \text{ms}$ untuk kontrol *real-time*).
-2. **Monitoring drift** model dengan *Population Stability Index
+2. **Monitoring drift** model dengan *Population Stability Index$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

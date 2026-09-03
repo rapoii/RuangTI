@@ -92,3 +92,6 @@ Pemanfaatan sistem ORC tidak hanya terbatas pada sektor manufaktur, tetapi juga 
 Namun, terdapat beberapa batasan metodologi, seperti kebutuhan untuk integrasi yang kompleks dan biaya awal yang tinggi. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan teknologi yang lebih efisien dan terjangkau, serta pengembangan kebijakan yang mendukung adopsi teknologi hijau.
 
 Dengan meningkatnya kesadaran akan isu keberlanjutan dan perubahan iklim, pemanfaatan sistem ORC diharapkan dapat menjadi salah satu solusi utama dalam mengurangi jejak karbon industri dan mencapai tujuan keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

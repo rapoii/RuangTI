@@ -131,3 +131,8 @@ $$t_{\text{RL}} = t_{\text{baseline}} \cdot (1 + \delta) \cdot (1 + \beta) = 56{
 Jika setiap misi memerlukan $t_{\text{handle}} = 15\,\text{ detik}$ untuk *pick/put*, total waktu per misi adalah:
 
 $$T_{\text{total}} = t_{\text{RL}} + t_{\text
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

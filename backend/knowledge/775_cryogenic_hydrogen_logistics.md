@@ -121,3 +121,6 @@ di mana \(C_0\) adalah investasi awal, \(R_t\) adalah penghematan tahunan.
 Dalam K3 (safety), ASME B31.12 mensyaratkan hazard operability (HAZOP) untuk sistem bunkering, termasuk risiko ledak karena hidrogen. ESG menuntut pelaporan Scope 3 emissions dari BOG yang terbakar, di mana setiap kg BOG setara 9 kg CO₂e. Tantangan adopsi meliputi kurangnya standar bunkering port global, regulasi yang berbeda antar negara (misalnya EU RED vs. AS CAFE), serta keterbatasan teknologi katalis orto-para yang mahal. Solusi manajerial melibatkan kolaborasi antar sektor (energy, maritime, chemical) melalui framework ISO 55000 untuk asset management dan pengembangan digital twin untuk simulasi BOG secara real-time.
 
 Secara keseluruhan, modul ini menekankan bahwa keberhasilan rantai pasok LH2 bergantung pada integrasi mendalam antara prinsip termodinamika cryogenic, rekayasa sistem, dan strategi bisnis yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

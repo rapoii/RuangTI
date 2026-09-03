@@ -450,4 +450,4 @@ Optimasi dengan kendala **Stochastic Dominance** merupakan tools powerful bagi e
 - Mulai dengan **SSD (Second-Order)** untuk mayoritas aplikasi risk-averse
 - Gunakan software: **GAMS/CPLEX** untuk formulasi nonlinear, **PuLP** untuk prototipe Python
 - Verifikasi kondisi **Karamata's Theorem** sebelum menerapkan SSD pada distribusi diskrit
-- Kombinasikan dengan **Monte Carlo simulation** untuk validasi hasil
+- Kombinasikan dengan **Monte Carlo simulation** untuk validasi hasil.

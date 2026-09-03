@@ -104,3 +104,6 @@ Meskipun sistem ini menjanjikan, terdapat beberapa batasan, seperti ketergantung
 Penelitian lebih lanjut dapat difokuskan pada pengembangan algoritma yang lebih robust untuk menangani occlusion dan meningkatkan akurasi deteksi dalam kondisi yang beragam. Selain itu, integrasi dengan sistem manajemen keselamatan yang lebih luas dapat memberikan manfaat tambahan dalam pengelolaan risiko di tempat kerja.
 
 Dengan demikian, penerapan Edge AI dan teknologi deteksi berbasis YOLO memiliki potensi besar untuk meningkatkan kepatuhan terhadap penggunaan APD di industri, sekaligus mengurangi risiko kecelakaan kerja dan meningkatkan efisiensi operasional.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

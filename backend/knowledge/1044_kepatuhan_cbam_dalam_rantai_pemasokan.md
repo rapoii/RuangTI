@@ -140,3 +140,6 @@ Kepatuhan terhadap CBAM tidak hanya relevan dalam konteks industri manufaktur te
 Batasan metodologi ini mencakup ketidakpastian dalam pengukuran emisi dan potensi biaya yang tidak terduga. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan teknologi baru untuk pengukuran emisi yang lebih akurat dan strategi adaptasi yang lebih efisien.
 
 Dengan demikian, kepatuhan terhadap CBAM dapat menjadi pendorong inovasi dan efisiensi dalam rantai pasokan, yang pada akhirnya akan berkontribusi pada keberlanjutan industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

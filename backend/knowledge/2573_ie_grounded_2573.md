@@ -146,3 +146,7 @@ Sebuah fasilitas HPAL hipotetik kapasitas 50.000 t Ni/yr dengan data:
 $$Nu = 0{,}023 \cdot (4{,}8 \times 10^6)^{0{,}8} \cdot (2{,}5)^{0{,}4} \approx 4{,}9 \times 10^4$$
 
 $$h_i =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

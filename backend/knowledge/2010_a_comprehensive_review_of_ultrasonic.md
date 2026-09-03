@@ -121,4 +121,7 @@ Nilai ini berada dalam rentang aman untuk flavonoid (Shen et al., 2023).
 $$\beta = \frac{Y_{UAE}}{Y_{konv}} = \frac{22{,}4}{15{,}1} \approx 1{,}48$$
 
 **Langkah 5 — Konstanta Laju Pseudo-First-Order:**
-Asumsi $C_\
+Asumsi $C_\$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

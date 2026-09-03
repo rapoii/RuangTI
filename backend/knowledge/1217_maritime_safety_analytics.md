@@ -94,3 +94,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih canggih, penggunaan data real-time dari sensor, dan integrasi dengan teknologi IoT untuk menciptakan sistem keamanan maritim yang lebih proaktif dan responsif.
 
 Dengan demikian, penerapan pembelajaran mesin dalam analisis keamanan maritim menunjukkan potensi besar untuk meningkatkan keselamatan dan efisiensi operasional di industri ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

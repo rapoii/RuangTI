@@ -108,3 +108,6 @@ Implementasi VDA 5050 tidak hanya terbatas pada sektor manufaktur, tetapi juga d
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk infrastruktur yang memadai dan tantangan dalam integrasi sistem yang sudah ada. Oleh karena itu, arah riset masa depan harus berfokus pada pengembangan algoritma yang lebih canggih untuk pengelolaan lalu lintas dan pengoptimalan armada, serta peningkatan interoperabilitas antara berbagai sistem.
 
 Dengan demikian, penerapan VDA 5050 dalam armada AGV/AMR merupakan langkah strategis yang dapat membawa manfaat signifikan bagi industri, meningkatkan efisiensi operasional, dan mendukung keberlanjutan dalam proses manufaktur dan logistik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

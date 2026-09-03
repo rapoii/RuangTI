@@ -74,3 +74,6 @@ $$\mathbf{\text{World-Class OEE}} \ge 90.0\% \times 95.0\% \times 99.9\% = \math
 - **$\text{OEE} < 65\%$**: Kinerja Rendah — banyak pemborosan kritis, prioritas intervensi darurat Kaizen.
 - **$65\% \le \text{OEE} < 85\%$**: Kinerja Menengah (Tipikal Industri Manufaktur) — memiliki potensi perbaikan signifikan.
 - **$\text{OEE} \ge 85\%$**: **World-Class Manufacturing Benchmark**.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

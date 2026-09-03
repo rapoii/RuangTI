@@ -115,4 +115,7 @@ Pedigree matrix scores reliability on five dimensions: temporal correlation, geo
 -   International Energy Agency (2024). *Tracking Clean Energy Progress 2024: Industrial Sector Deep Dive*. OECD Publishing.
 -   Task Force on Climate-related Financial Disclosures (2023). *2023 Status Report: Transition Planning & Scenario Analysis*. IFRS Foundation.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

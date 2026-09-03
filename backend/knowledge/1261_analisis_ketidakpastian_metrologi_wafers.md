@@ -93,3 +93,6 @@ Analisis ketidakpastian dalam metrologi wafer tidak hanya relevan dalam industri
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kompleksitas model yang digunakan. Oleh karena itu, penting untuk terus melakukan penelitian dan pengembangan dalam bidang ini untuk meningkatkan akurasi dan efisiensi.
 
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih canggih, integrasi dengan teknologi IoT untuk pengumpulan data real-time, dan penerapan teknik pembelajaran mendalam (deep learning) untuk analisis yang lebih kompleks. Dengan demikian, analisis ketidakpastian dalam metrologi wafer akan terus menjadi area penting untuk inovasi dan peningkatan dalam industri manufaktur modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

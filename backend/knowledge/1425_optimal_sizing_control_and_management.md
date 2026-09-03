@@ -115,4 +115,7 @@ Untuk cold chain dengan variasi beban refrigerasi tinggi (defrost cycle, door op
 
 ### 4.1. Deskripsi Skenario
 
-Sebuah puskesmas isolasi di daerah terpencil Indonesia bagian timur membutuhkan fasilitas cold
+Sebuah puskesmas isolasi di daerah terpencil Indonesia bagian timur membutuhkan fasilitas cold.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -124,4 +124,7 @@ Pemilihan protokol mengikuti rekomendasi *good engineering practice*:
 
 ### 3.4 Manajemen Daya
 
-Baterai lithium-thionyl chloride (Li-SOCl₂) 3,6 V 2,
+Baterai lithium-thionyl chloride (Li-SOCl₂) 3,6 V 2, \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

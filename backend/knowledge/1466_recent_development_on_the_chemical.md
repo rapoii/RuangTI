@@ -109,4 +109,7 @@ Berdasarkan protokol Wiriyacharee *et al.* (2024), parameter operasi SFE-CO₂ u
 
 ### 3.4 Kendali Mutu dan Karakterisasi Produk
 
-- **Spektrofot
+- **Spektrofot.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

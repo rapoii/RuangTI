@@ -159,4 +159,7 @@ Untuk mengilustrasikan kerangka Zhou (2024, DOI: [10.2139/ssrn.5291672](https://
 
 Dengan $\beta = 2{,}5$ dan $\eta = 18.000$ FLH, reliabilitas pada akhir siklus C-check (setelah 6.000 FLH operasional):
 
-$$R(6.000) = \exp\left[-\left(\frac{6.000}{18.000}\right)^{2,5}\right] = \exp\left[-\left(\frac{1}{3}\right)^{2,5}\right] = \exp[-0{,}0642] = 0{,}9378$$
+$$R(6.000) = \exp\left[-\left(\frac{6.000}{18.000}\right)^{2,5}\right] = \exp\left[-\left(\frac{1}{3}\right)^{2,5}\right] = \exp[-0{,}0642] = 0{,}9378$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -98,3 +98,6 @@ Ke depan, arah riset dapat difokuskan pada pengembangan algoritma yang lebih can
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang integrasi data real-time dalam OPC-UA TSN, serta tantangan dan peluang yang ada di dalamnya. Dengan pemahaman yang mendalam tentang konsep ini, para profesional di bidang Teknik Industri dapat berkontribusi secara signifikan terhadap kemajuan industri menuju Smart Industry 5.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

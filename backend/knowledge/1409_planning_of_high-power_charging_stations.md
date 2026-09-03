@@ -119,3 +119,7 @@ Sebuah kota metropolitan dengan 1,2 juta penduduk merencanakan jaringan HPC untu
 Laju kedatangan puncak per zona diasumsikan: $\lambda_{\text{puncak}} = 600$ sesi/jam (agregat 25 zona). Dengan $t_{\text{service}} = (40 / 0,90 / 300) \approx 0,148$ jam → $\mu = 6,76$ charger/jam. Asumsikan 30 lokasi dibuka → 5 charger/lokasi. Utilisasi per charger:
 
 $$\rho = \frac{\lambda}{c \mu} = \frac{600}{30 \cdot 5 \cdot 6,76} = \frac{600}{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

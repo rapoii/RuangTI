@@ -147,4 +147,7 @@ Setelah penskalaan ($k_{scale} = 1,2\,\text{W/m·K}$):
 $$\frac{1}{U_{scaled}} = 2,09 \times 10^{-3} + \frac{0,0025}{1,2} = 2,09 \times 10^{-3} + 2,08 \times 10^{-3} = 4,17 \times 10^{-3}\,\text{m}^2\text{K/W}$$
 $$U_{scaled} = 239,8\,\text{W/m}^2\text{K}$$
 
-**Degradasi U = (478,5
+**Degradasi U = (478,5.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

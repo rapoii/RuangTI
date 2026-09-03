@@ -129,3 +129,6 @@ Sistem RMFS tidak hanya relevan dalam industri logistik, tetapi juga dapat diter
 Batasan metodologi ini termasuk ketergantungan pada model matematis yang mungkin tidak sepenuhnya mencerminkan kondisi dunia nyata. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan algoritma yang lebih adaptif dan responsif terhadap perubahan kondisi operasional.
 
 Dengan kemajuan teknologi, seperti kecerdasan buatan dan pembelajaran mesin, sistem RMFS diharapkan dapat menjadi lebih cerdas dan efisien, mengurangi kebutuhan intervensi manusia dan meningkatkan otomatisasi dalam proses pemenuhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

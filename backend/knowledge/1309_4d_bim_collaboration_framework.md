@@ -123,3 +123,6 @@ Riset masa depan dapat difokuskan pada pengembangan alat dan teknik baru untuk m
 ---
 
 Dokumen ini memberikan gambaran mendalam mengenai kerangka kerja kolaborasi untuk 4D BIM dalam konstruksi modular, dengan penekanan pada komunikasi dan efisiensi. Diharapkan modul ini dapat menjadi referensi yang berguna bagi praktisi dan akademisi dalam bidang teknik industri dan konstruksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -121,4 +121,7 @@ Penerapan MADRL dalam optimasi rantai pasok tidak hanya terbatas pada industri m
 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang besar untuk pelatihan agen dan kompleksitas dalam desain sistem multi-agen. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan penggunaan teknik transfer learning untuk mengurangi kebutuhan data.
 
-Dengan demikian, penerapan MADRL dalam optimasi rantai pasok diharapkan dapat memberikan kontribusi signifikan terhadap efisiensi operasional dan pengurangan biaya dalam industri modern. Penelitian lebih lanjut diperlukan untuk mengeksplorasi potensi penuh dari teknologi ini dan bagaimana ia dapat diintegrasikan dengan teknologi lainnya dalam ekosistem manufaktur cerdas.
+Dengan demikian, penerapan MADRL dalam optimasi rantai pasok diharapkan dapat memberikan kontribusi signifikan terhadap efisiensi operasional dan pengurangan biaya dalam industri modern. Penelitian lebih lanjut diperlukan untuk mengeksplorasi potensi penuh dari teknologi ini dan bagaimana ia dapat diintegrasikan dengan teknologi lainnya dalam ekosistem manufaktur cerdas.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

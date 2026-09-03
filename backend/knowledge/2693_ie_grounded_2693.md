@@ -149,3 +149,7 @@ $$M_{\text{Co+Ni+Li}} = \eta_r \cdot x_r \cdot \bar{m}_{\text{cell}} = 0{,}92 \c
 
 **Langkah 4 — Profit Lower Level (Dealer):**
 $$\Pi_R
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

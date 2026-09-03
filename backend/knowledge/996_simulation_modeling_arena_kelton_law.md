@@ -105,3 +105,6 @@ Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih ca
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang metodologi simulasi sistem peristiwa diskrit, dengan fokus pada arsitektur Kelton-Sadowski, penyesuaian distribusi probabilitas, dan pemanasan steady-state. Dengan pemahaman yang mendalam tentang konsep-konsep ini, para profesional di bidang teknik industri dapat mengoptimalkan sistem mereka untuk mencapai efisiensi yang lebih tinggi dan biaya yang lebih rendah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

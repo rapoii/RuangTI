@@ -83,3 +83,6 @@ Namun, terdapat beberapa batasan metodologi, seperti biaya implementasi awal yan
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih efisien untuk pemantauan suhu serta integrasi dengan teknologi lain seperti kecerdasan buatan untuk analisis prediktif dalam manajemen rantai dingin.
 
 Dengan demikian, penerapan sistem pengendalian suhu digital yang menggunakan blockchain dalam rantai dingin vaksin adalah langkah maju yang signifikan dalam meningkatkan efisiensi dan transparansi, serta menjamin keamanan dan efektivitas vaksin yang didistribusikan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -115,3 +115,6 @@ Proses Bayer tidak hanya relevan dalam ekstraksi aluminium, tetapi juga memiliki
 Arah riset masa depan dapat mencakup pengembangan teknologi baru untuk pengolahan limbah red mud, serta integrasi otomatisasi dalam proses untuk meningkatkan efisiensi dan mengurangi risiko. Selain itu, kolaborasi lintas disiplin antara teknik industri, lingkungan, dan manajemen dapat menghasilkan solusi inovatif yang mendukung keberlanjutan industri aluminium di masa depan. 
 
 Dengan mengikuti standar internasional seperti ISO 14001, industri dapat memastikan bahwa mereka tidak hanya memenuhi regulasi, tetapi juga berkontribusi pada tujuan keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

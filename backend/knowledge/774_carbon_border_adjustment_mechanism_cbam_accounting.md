@@ -75,3 +75,6 @@ Penerapan sistem audit terdistribusi mencakup:
 - Validasi data sampling periodik kuartalan untuk memenuhi format XML komunikasi resmi *CBAM Transitional Registry*.
 
 ---
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

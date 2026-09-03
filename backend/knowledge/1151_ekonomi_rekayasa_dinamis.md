@@ -120,3 +120,6 @@ Model ekonomi rekayasa dinamis untuk opsi nyata tidak hanya relevan dalam kontek
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk asumsi yang dibuat dalam model matematis dan ketidakpastian yang tidak dapat diprediksi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar, serta integrasi teknologi analitik yang lebih canggih untuk meningkatkan akurasi proyeksi dan keputusan.
 
 Dengan demikian, penerapan model ekonomi rekayasa dinamis untuk opsi nyata dalam rantai pasok yang tidak pasti merupakan langkah strategis yang dapat memberikan keuntungan kompetitif yang signifikan bagi perusahaan di era ketidakpastian ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

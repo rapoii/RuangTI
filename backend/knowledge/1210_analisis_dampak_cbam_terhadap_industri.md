@@ -84,3 +84,6 @@ Keterkaitan dengan disiplin lain, seperti manajemen biaya dan teknik otomasi, me
 Batasan metodologi yang ada, seperti keterbatasan data dan asumsi yang digunakan dalam model, juga perlu diperhatikan. Penelitian lebih lanjut diharapkan dapat mengembangkan model yang lebih kompleks dan akurat untuk menangkap dinamika yang lebih luas dalam rantai pasokan global.
 
 Dengan demikian, analisis dampak kebijakan CBAM memberikan wawasan yang berharga bagi industri dan pemangku kepentingan untuk merumuskan strategi yang lebih efektif dalam menghadapi tantangan yang dihadapi di era keberlanjutan ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

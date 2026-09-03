@@ -132,3 +132,6 @@ Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih ada
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang optimasi penjadwalan manifestasi misi luar angkasa menggunakan algoritma pemrograman linier multi-objektif, serta relevansinya dalam konteks industri dan penelitian masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

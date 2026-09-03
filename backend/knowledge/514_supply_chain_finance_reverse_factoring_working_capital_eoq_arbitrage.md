@@ -710,4 +710,4 @@ $$
 4. Hofmann, E., & Belin, O. (2011). *Supply Chain Finance Solutions: Relevance - Propositions - Market Value*. Springer-Verlag Berlin Heidelberg. https://doi.org/10.1007/978-3-642-17566-4
 5. Klapper, L. (2006). The role of factoring for financing small and medium enterprises. *Journal of Banking & Finance*, 30(11), 3111-3130. https://doi.org/10.1016/j.jbankfin.2006.05.001
 6. Kouvelis, P., & Xu, F. (2021). Supply chain finance: Review and future directions. *Foundations and Trends® in Technology, Information and Operations Management*, 14(1–2), 1-174. https://doi.org/10.1561/0200000057
-7. van der Vliet, K., Reindorp, M. J., & Fransoo, J. C. (2015). The price of reverse factoring: Financing rates vs. payment terms. *European Journal of Operational Research*, 242(3), 842-853. https://doi.org/10.1016/j.ejor.2014.10.052
+7. van der Vliet, K., Reindorp, M. J., & Fransoo, J. C. (2015). The price of reverse factoring: Financing rates vs. payment terms. *European Journal of Operational Research*, 242(3), 842-853. https://doi.org/10.1016/j.ejor.2014.10.052$.

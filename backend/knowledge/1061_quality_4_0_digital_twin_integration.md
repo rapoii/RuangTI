@@ -100,3 +100,6 @@ Integrasi Digital Twin dalam Quality 4.0 tidak hanya relevan untuk industri manu
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan infrastruktur teknologi yang memadai dan keterampilan sumber daya manusia yang terlatih. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih terjangkau dan mudah diakses, serta pelatihan untuk meningkatkan keterampilan tenaga kerja.
 
 Dengan demikian, integrasi Digital Twin dalam Quality 4.0 menawarkan potensi besar untuk meningkatkan kualitas dan efisiensi proses produksi, namun memerlukan pendekatan yang holistik dan terintegrasi untuk mencapai hasil yang optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

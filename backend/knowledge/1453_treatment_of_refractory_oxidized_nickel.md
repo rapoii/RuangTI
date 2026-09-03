@@ -86,4 +86,7 @@ Implementasi sistematis teknologi hidro-katalitik leaching mengikuti SOP berlapi
 
 **Fase 5 — Pemurnian dan Recovery Ni**
 1. Ekstraksi pelarut dengan *D2EHPA* untuk memisahkan Ni dari Fe, Al.
-2. Stripping dengan $\mathrm{H_
+2. Stripping dengan $\mathrm{H_$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

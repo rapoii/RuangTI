@@ -116,4 +116,7 @@ Ke depan, riset dapat difokuskan pada pengembangan teknologi baru untuk pemuliha
 
 ---
 
-Dokumen ini menyajikan panduan komprehensif tentang analisis pinch air limbah industri dan strategi minimasi limbah menuju ZLD, dengan fokus pada alokasi sumber-sink air, pemulihan melalui RO, dan kepatuhan terhadap batasan kontaminan. Dengan pendekatan sistematis dan berbasis data, industri dapat mencapai efisiensi operasional yang lebih baik dan dampak lingkungan yang lebih rendah.
+Dokumen ini menyajikan panduan komprehensif tentang analisis pinch air limbah industri dan strategi minimasi limbah menuju ZLD, dengan fokus pada alokasi sumber-sink air, pemulihan melalui RO, dan kepatuhan terhadap batasan kontaminan. Dengan pendekatan sistematis dan berbasis data, industri dapat mencapai efisiensi operasional yang lebih baik dan dampak lingkungan yang lebih rendah.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

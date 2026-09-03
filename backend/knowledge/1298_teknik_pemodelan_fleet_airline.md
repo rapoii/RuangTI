@@ -166,3 +166,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketidakpastian da
 Arah riset masa depan dapat mencakup integrasi teknologi AI dan machine learning untuk meningkatkan akurasi prediksi permintaan dan optimasi armada secara real-time. Selain itu, penerapan prinsip-prinsip K3 dan ESG dalam pemodelan armada dapat memberikan kontribusi positif terhadap keberlanjutan industri penerbangan.
 
 Dengan demikian, pemodelan untuk optimalisasi fleet airline menggunakan metode pemrograman linier dan simulasi merupakan pendekatan yang sangat relevan dan diperlukan dalam menghadapi tantangan industri penerbangan saat ini dan di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -186,4 +186,7 @@ Sebuah *Hub* Shopee Express di Tangerang Selatan menaungi 40 mitra pengemudi. Pe
 | OP vs FR | OP |
 | EF vs FR | EF |
 
-Hitungan *wins*: MD=5, PD=1, TD=5, OP=4, EF=4, FR=0 → Total = 19 → *normalisasi* dengan total 15 bukan 19 karena setiap pasang
+Hitungan *wins*: MD=5, PD=1, TD=5, OP=4, EF=4, FR=0 → Total = 19 → *normalisasi* dengan total 15 bukan 19 karena setiap pasang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

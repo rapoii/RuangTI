@@ -91,3 +91,6 @@ Namun, ada beberapa batasan dalam metodologi ini. Salah satunya adalah ketergant
 Ke depan, riset dalam bidang ini dapat difokuskan pada pengembangan algoritma yang lebih efisien dan robust untuk menangani masalah dengan dimensi yang sangat tinggi. Selain itu, integrasi dengan teknologi baru seperti pembelajaran mesin dan kecerdasan buatan dapat membuka peluang baru untuk meningkatkan efisiensi dan efektivitas dalam reposisi armada.
 
 Dengan demikian, ADP dan aproksimasi fungsi nilai akan terus menjadi area penelitian yang penting dan relevan dalam konteks industri yang semakin kompleks dan dinamis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

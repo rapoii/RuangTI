@@ -105,3 +105,6 @@ Penerapan teknik optimasi berbasis AI tidak hanya terbatas pada manufaktur, teta
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang berkualitas tinggi dan pemahaman yang mendalam tentang fisika sistem. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengatasi tantangan ini dan mengembangkan model yang lebih robust.
 
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih efisien, integrasi dengan teknologi IoT untuk pengumpulan data real-time, serta penerapan teknik pembelajaran mendalam untuk meningkatkan akurasi prediksi. Dengan demikian, optimasi berbasis AI akan terus menjadi pilar penting dalam transformasi industri manufaktur menuju efisiensi dan keberlanjutan yang lebih besar.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

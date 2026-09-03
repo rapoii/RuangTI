@@ -86,3 +86,6 @@ Ke depan, penelitian lebih lanjut dapat diarahkan untuk mengembangkan algoritma 
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang penerapan algoritma pembelajaran mesin dalam meningkatkan akurasi overlay dalam fotolitografi EUV, serta relevansinya dalam konteks industri dan penelitian masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

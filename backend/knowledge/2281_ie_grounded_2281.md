@@ -73,4 +73,7 @@ $$N_t = \frac{0{,}8 \cdot V_{shell}}{\pi D_o^2 L / 4} \approx 78 \text{ tabung (
 
 $$\dot{m}_{HTF} = \frac{\dot{Q}}{c_{p,HTF} \Delta T_{HTF}} = \frac{100.000}{4{,}18 \times 20} \approx 1196 \text{ kg/jam} \approx 0{,}33 \text{ kg/s}$$
 
-Cek Reynolds per tabung (HTF terdistribusi paralel melalui 78 tabung, laju per tabung $u$ ≈ 0,35 m/s, $D_i
+Cek Reynolds per tabung (HTF terdistribusi paralel melalui 78 tabung, laju per tabung $u$ ≈ 0,35 m/s, $D_i$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

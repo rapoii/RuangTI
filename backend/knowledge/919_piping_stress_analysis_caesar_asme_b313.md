@@ -131,3 +131,6 @@ Ke depan, riset dalam bidang ini dapat berfokus pada pengembangan teknologi baru
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai analisis stres ekspansi termal pada pipa proses industri, sesuai dengan standar yang berlaku dan praktik terbaik dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -452,4 +452,4 @@ Dengan menerapkan formulasi optimasi biaya siklus hidup:
 5. **Doyen, L., & Gaudoin, O. (2004)**. *Classes of imperfect repair models based on reduction of failure intensity or virtual age*. Reliability Engineering & System Safety, 84(1), 45–56. [DOI: 10.1016/j.ress.2003.09.006](https://doi.org/10.1016/j.ress.2003.09.006).
 6. **Pham, H., & Wang, H. (1996)**. *Imperfect maintenance*. European Journal of Operational Research, 94(3), 425–438. [DOI: 10.1016/0377-2217(95)00096-8](https://doi.org/10.1016/0377-2217(95)00096-8).
 7. **ISO 55000:2014 / ISO 55001:2024**. *Asset management — Overview, principles and terminology & Management systems — Requirements*. International Organization for Standardization, Geneva.
-8. **IEEE Std 493-2007 (Gold Book)**. *IEEE Recommended Practice for the Design of Reliable Industrial and Commercial Power Systems*. IEEE Industry Applications Society.
+8. **IEEE Std 493-2007 (Gold Book)**. *IEEE Recommended Practice for the Design of Reliable Industrial and Commercial Power Systems*. IEEE Industry Applications Society.$.

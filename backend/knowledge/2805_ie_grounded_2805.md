@@ -115,4 +115,7 @@ Diagram alir keputusan mengikuti logika: jika margin echelon $(p_e - c_e - w_r) 
 | Green goodwill | $\gamma$ | 12.000 | unit |
 | Biaya produksi | $c_m$ | 18 | juta Rp/unit |
 | Biaya grading | $c_e$ | 4 | juta Rp/unit |
-| Biaya koleksi |
+| Biaya koleksi |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

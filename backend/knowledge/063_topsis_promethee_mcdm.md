@@ -73,3 +73,6 @@ $$ \phi(a) = \phi^+(a) - \phi^-(a) \quad \text{(Net flow for PROMETHEE II comple
 - Apply fuzzy extensions to handle uncertainty in expert judgments.
 - Critically compare compensatory vs non-compensatory MCDM approaches.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

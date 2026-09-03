@@ -119,3 +119,6 @@ Arah riset masa depan dapat mencakup pengembangan model simulasi yang lebih cang
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang studi eksperimental dan simulasi numerik yang berkaitan dengan rheologi polimer dalam proses ekstrusi, dengan fokus pada pengaruh variasi suhu dan kecepatan aliran. Pengetahuan ini sangat penting untuk meningkatkan efisiensi dan kualitas dalam industri pemrosesan polimer.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

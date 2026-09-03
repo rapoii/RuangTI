@@ -187,3 +187,6 @@ Analisis kinerja misi spasial dengan pendekatan multi-kriteria tidak hanya relev
 Namun, metodologi ini memiliki batasan, terutama dalam hal ketidakpastian data dan subjektivitas dalam penentuan bobot kriteria. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik yang lebih robust, seperti penggunaan metode fuzzy atau analisis probabilistik.
 
 Dengan meningkatnya kompleksitas misi antariksa dan tuntutan untuk efisiensi yang lebih tinggi, pendekatan multi-kriteria akan terus menjadi alat penting dalam pengambilan keputusan di masa depan. Penelitian lebih lanjut diharapkan dapat menghasilkan model yang lebih adaptif dan responsif terhadap dinamika yang berubah dalam industri antariksa.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

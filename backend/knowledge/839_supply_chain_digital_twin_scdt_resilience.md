@@ -111,3 +111,6 @@ Meskipun SCDT menawarkan banyak manfaat, terdapat beberapa batasan, seperti kete
 Penelitian di masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk prediksi dan pengambilan keputusan, serta integrasi teknologi baru seperti kecerdasan buatan dan pembelajaran mesin dalam SCDT.
 
 Dengan demikian, modul ini memberikan gambaran yang komprehensif tentang Supply Chain Digital Twin, metodologi simulasi, dan aplikasinya dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

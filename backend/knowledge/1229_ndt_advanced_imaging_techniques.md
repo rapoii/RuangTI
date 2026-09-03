@@ -95,3 +95,6 @@ Teknik pencitraan canggih dalam NDT memiliki aplikasi lintas sektor yang luas, t
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan perangkat keras yang mahal dan keterampilan operator yang tinggi. Oleh karena itu, penelitian masa depan perlu difokuskan pada pengembangan teknik yang lebih terjangkau dan mudah dioperasikan, serta peningkatan algoritma pemrosesan data untuk analisis yang lebih cepat dan akurat.
 
 Dengan demikian, teknik pencitraan canggih dalam NDT bukan hanya alat untuk evaluasi material, tetapi juga merupakan bagian integral dari strategi manajemen kualitas dan keselamatan dalam industri modern. Penelitian lebih lanjut dan adopsi teknologi ini akan menjadi kunci untuk menghadapi tantangan di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

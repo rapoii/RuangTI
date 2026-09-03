@@ -55,4 +55,7 @@ Parameter *Signal-to-Interference-plus-Noise Ratio* (SINR) untuk *User Equipment
 
 $$\text{SINR}_{j,k} = \frac{P_{tx,j} \cdot G_{j,k} \cdot L_{j,k}^{-1}}{\sum_{i \neq j} P_{tx,i} \cdot G_{i,k} \cdot L_{i,k}^{-1} + N_0 \cdot B}$$
 
-dengan $P_{tx}$ = daya transmisi, $G$ = gain antena, $L$ = pathloss, $N_0$ = densitas noise termal, dan $B$ = bandwidth subcarrier. *Shannon
+dengan $P_{tx}$ = daya transmisi, $G$ = gain antena, $L$ = pathloss, $N_0$ = densitas noise termal, dan $B$ = bandwidth subcarrier. *Shannon.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -89,4 +89,7 @@ $$Y(t) = \frac{\int_0^t \dot{m}_{CO_2}(z=H, \tau) \cdot C_s(z=H, \tau) d\tau}{m_
 
 **Tahap 1 — Pressurization** (Toledo & del Valle, 2023)
 1. Tutup vessel, inisiasi jacket heater pada $T_{jacket} = 343$ K.
-2. Akt
+2. Akt.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

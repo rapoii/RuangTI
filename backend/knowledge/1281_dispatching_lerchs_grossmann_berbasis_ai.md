@@ -102,3 +102,6 @@ Namun, terdapat batasan dalam metodologi ini, termasuk ketergantungan pada kuali
 Ke depan, arah riset dapat difokuskan pada integrasi teknologi IoT untuk pengumpulan data real-time dan penerapan algoritma pembelajaran mendalam untuk meningkatkan akurasi prediksi. Selain itu, penting untuk mempertimbangkan aspek keselamatan dan keberlanjutan dalam pengembangan sistem dispatching yang lebih efisien.
 
 Dengan demikian, penerapan algoritma pembelajaran mesin dalam optimalisasi dispatching di industri penambangan terbuka tidak hanya memberikan keuntungan kompetitif tetapi juga mendukung tujuan keberlanjutan dan efisiensi operasional yang lebih baik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

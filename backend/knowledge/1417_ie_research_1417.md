@@ -97,4 +97,7 @@ Identifikasi sumber panas buang >150 °C untuk *Organic Rankine Cycle* (ORC), da
 Berdasarkan Rabi' et al. (2023), integrasikan LAES sebagai *buffer* untuk menyimpan energi saat kelebihan produksi (off-peak) dan melepaskannya saat beban puncak. Manfaatkan *cold exergy* dari regasifikasi untuk melayani beban refrigerasi industri pangan secara simultan.
 
 **Langkah 7: Pemantauan, Verifikasi, dan Optimasi Berkelanjutan**
-Implementasikan *Energy Management Information
+Implementasikan *Energy Management Information.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

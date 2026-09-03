@@ -171,3 +171,6 @@ $$
 4. Wang, L., & Chen, X. (2025). Bayesian online profile monitoring using functional data analysis. *Technometrics*, 67(1), 112–125.
 5. Li, Z., et al. (2023). Multivariate functional statistical process control for multi-channel sensor data. *IEEE Transactions on Instrumentation and Measurement*, 72, 1–12.
 6. Noorossana, R., et al. (2023). Functional CUSUM charts for profile monitoring. *Quality and Reliability Engineering International*, 39(4), 1456–1472.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

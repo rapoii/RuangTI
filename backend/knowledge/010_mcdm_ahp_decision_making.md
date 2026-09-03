@@ -63,3 +63,6 @@ Pengambil keputusan manusia rentan terhadap inkonsistensi pertimbangan (misal: $
 ### Kriteria Kelayakan Konsistensi:
 - **$\text{CR} \le 0.10$ ($10\%$)**: **Pertimbangan Dinyatakan Konsisten & Valid** — keputusan dapat diterima.
 - **$\text{CR} > 0.10$**: **Inkonsisten** — pengambil keputusan **wajib meninjau dan merevisi kembali** perbandingan berpasangannya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -120,3 +120,6 @@ Ke depan, arah riset dapat difokuskan pada integrasi teknologi digital, seperti 
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang strategi remanufaktur berkelanjutan dalam rantai pasokan, lengkap dengan analisis matematis, metodologi, dan studi kasus kuantitatif yang relevan. Dengan mengikuti panduan ini, perusahaan dapat mengimplementasikan strategi remanufaktur yang efektif dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

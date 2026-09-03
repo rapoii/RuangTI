@@ -137,3 +137,6 @@ Namun, ada beberapa batasan dalam metodologi ini, termasuk kebutuhan untuk data 
 Masa depan TDABC dalam konteks manufaktur berkelanjutan terlihat menjanjikan, terutama dengan kemajuan teknologi seperti otomatisasi dan analitik data besar. Integrasi TDABC dengan teknologi ini dapat menghasilkan pemahaman yang lebih baik tentang biaya dan efisiensi, serta mendukung keputusan yang lebih baik dalam mencapai tujuan keberlanjutan.
 
 Dengan demikian, pendekatan Time-Driven Activity-Based Costing merupakan alat yang sangat berharga bagi profesional teknik industri dalam menganalisis biaya dan meningkatkan efisiensi dalam proses manufaktur berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

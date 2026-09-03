@@ -82,3 +82,6 @@ Teknik penggabungan data tidak hanya relevan dalam konteks PHM, tetapi juga dapa
 Namun, terdapat beberapa batasan dalam metodologi penggabungan data, termasuk ketergantungan pada kualitas data, kompleksitas sistem, dan kebutuhan akan keterampilan analitis yang tinggi. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik yang lebih robust dan adaptif.
 
 Ke depan, arah riset dalam penggabungan data untuk PHM dapat mencakup pengembangan algoritma pembelajaran mesin yang lebih canggih, integrasi dengan teknologi Internet of Things (IoT), dan penerapan analisis big data untuk meningkatkan akurasi dan keandalan prognostics. Dengan demikian, teknik penggabungan data akan terus menjadi komponen kunci dalam pengelolaan sistem kompleks di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -527,4 +527,4 @@ Penerapan sistem Synchronized Pulsed ECM (PECM) multi-axis menghasilkan peningka
 4. **Bhattacharyya, B.** (2015). *Electrochemical Micromachining for Nanofabrication, MEMS and Nanotechnology*. Elsevier Science & Technology. ISBN: 9780323340007.
 5. **ISO 23125 / DIN 8580**: Manufacturing Processes - Terms and Definitions, Division of Non-Thermal Chemical and Electrochemical Removal Processes.
 6. **ASTM B912-02(2018)**: Standard Specification for Passivation of Stainless Steels Using Electropolishing and Electrochemical Techniques.
-7. **Zhang, Z., Zhu, D., & Qu, N.** (2025). Anodic dissolution behavior and microstructure preparation of nickel-based superalloys in pulsed electrochemical machining. *Journal of Materials Processing Technology*, 332, 118542. https://doi.org/10.1016/j.jmatprotec.2025.118542
+7. **Zhang, Z., Zhu, D., & Qu, N.** (2025). Anodic dissolution behavior and microstructure preparation of nickel-based superalloys in pulsed electrochemical machining. *Journal of Materials Processing Technology*, 332, 118542. https://doi.org/10.1016/j.jmatprotec.2025.118542.

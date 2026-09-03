@@ -113,4 +113,7 @@ Dickson et al. (2026) mengukur $k_{scale} = 0{,}38$–$0{,}72$ W/(m·K) untuk ke
 
 ---
 
-## 4. Studi Kasus Kuant
+## 4. Studi Kasus Kuant.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

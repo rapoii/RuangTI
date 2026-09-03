@@ -95,4 +95,7 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan da
 
 Arah riset masa depan dapat berfokus pada pengembangan algoritma DRL yang lebih efisien dan adaptif, serta integrasi dengan teknologi lain seperti Internet of Things (IoT) dan big data analytics untuk meningkatkan akurasi dan responsivitas sistem. Penelitian lebih lanjut juga diperlukan untuk mengeksplorasi penerapan DRL dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (CSR), yang semakin menjadi perhatian utama dalam industri modern.
 
-Dengan demikian, penerapan Deep Reinforcement Learning dalam optimasi rantai pasok menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas operasional di berbagai sektor industri, sejalan dengan perkembangan teknologi dan kebutuhan pasar yang terus berubah.
+Dengan demikian, penerapan Deep Reinforcement Learning dalam optimasi rantai pasok menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas operasional di berbagai sektor industri, sejalan dengan perkembangan teknologi dan kebutuhan pasar yang terus berubah.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

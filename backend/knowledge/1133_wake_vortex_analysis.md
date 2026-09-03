@@ -108,3 +108,6 @@ Analisis vortex wake tidak hanya relevan dalam konteks penerbangan, tetapi juga 
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketergantungan pada asumsi model dan kompleksitas komputasi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan akurat, serta integrasi teknologi AI untuk memprediksi perilaku vortex wake dalam kondisi yang lebih bervariasi.
 
 Dengan demikian, analisis vortex wake menggunakan CFD merupakan langkah penting dalam meningkatkan keselamatan penerbangan dan efisiensi operasional, serta membuka peluang untuk inovasi di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

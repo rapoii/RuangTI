@@ -102,3 +102,6 @@ Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih can
 ---
 
 Dokumen ini memberikan gambaran yang komprehensif mengenai tantangan dalam sinkronisasi logistik 4D BIM untuk konstruksi modular off-site, serta solusi yang dapat diterapkan untuk mengatasi masalah tersebut. Dengan pemahaman yang mendalam tentang teori dan praktik, diharapkan para profesional di bidang teknik industri dapat menerapkan pengetahuan ini untuk meningkatkan efisiensi dan efektivitas proyek konstruksi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

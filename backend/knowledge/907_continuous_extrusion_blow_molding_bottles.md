@@ -131,3 +131,6 @@ Kesehatan dan keselamatan kerja (K3) serta pertimbangan lingkungan (ESG) juga me
 Arah riset masa depan dapat mencakup pengembangan material baru dengan sifat viskoelastik yang lebih baik, serta penerapan teknologi digital untuk memantau dan mengoptimalkan proses secara berkelanjutan. 
 
 Dengan demikian, pemahaman yang mendalam tentang teknik dan metodologi dalam EBM akan menjadi kunci untuk menghadapi tantangan dan memanfaatkan peluang di industri kemasan dan sektor terkait lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

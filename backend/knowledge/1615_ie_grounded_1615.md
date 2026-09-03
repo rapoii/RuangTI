@@ -174,3 +174,7 @@ Ini menunjukkan redesain DFMA meningkatkan efisiensi perakitan lebih dari 3 kali
 $$DFA_{index,baseline} = \frac{N_{ms}}{N_t} = \frac{6}{11} \times 100\% \approx 54.55\%$$
 
 $$DFA_{index,redesign} = \frac{6}{6} \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

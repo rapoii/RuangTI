@@ -144,4 +144,7 @@ Zhang, Li, dan Ren (2024) memperluas kerangka ini untuk reverse supply chain den
 
 Implementasi kerangka multi-objektif Benders Decomposition pada jaringan rantai pasok susu di industri memerlukan SOP yang sistematis. Berdasarkan Lead Researchers (2023), tahapan prosedur adalah sebagai berikut:
 
-### 3.1. Diagram Alir Proses Rekay
+### 3.1. Diagram Alir Proses Rekay.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

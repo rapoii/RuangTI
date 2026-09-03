@@ -127,3 +127,6 @@ Riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai aplikasi Physics-Informed Neural Networks dalam analisis manufaktur material komposit, mengintegrasikan teori, metodologi, dan studi kasus yang relevan dengan konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

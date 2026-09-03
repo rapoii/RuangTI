@@ -105,3 +105,6 @@ Pendekatan pemrograman dinamis dalam penjadwalan energi terbarukan tidak hanya r
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas perhitungan yang meningkat seiring dengan bertambahnya variabel dan batasan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi dengan teknologi canggih seperti kecerdasan buatan dan analitik data besar untuk meningkatkan akurasi dan kecepatan pengambilan keputusan.
 
 Dengan demikian, penerapan pemrograman dinamis dalam penjadwalan energi terbarukan menawarkan potensi besar untuk meningkatkan efisiensi sistem energi, mengurangi biaya, dan mendukung keberlanjutan lingkungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

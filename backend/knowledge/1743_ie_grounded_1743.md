@@ -151,3 +151,6 @@ $$N_{\min} = 4$$
 $$\eta_{DFA,base} = \frac{4 \times 2{,}5}{13 \times 248} \times 100\% = \frac{10}{3.224} \times 100\% \approx 0{,}310\%$$
 
 **Redesain** dengan $N_{redesign} = 6$ dan $t_{redesign} = 95$ s (pengukuran time study prediksi, assembly flow disederhanakan):
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

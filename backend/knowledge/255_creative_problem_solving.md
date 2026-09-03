@@ -171,3 +171,6 @@ Biomimicry workshop inspired mycelium-based packaging replacing EPS foam. Cross-
 8.  Amabile, T. M. (2024). *Creativity in Context: Update to the Social Psychology of Creativity*. Routledge.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

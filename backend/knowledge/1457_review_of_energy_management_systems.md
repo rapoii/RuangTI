@@ -130,3 +130,7 @@ Penghematan tahunan: $(371{,}4 - 289{,}7) \times 365 \approx 29.846~\text{USD/ta
 Dengan DoD (Depth of Discharge) rata-rata 70% dan satu siklus per hari:
 
 $$N_{bat}^{actual} = N_{bat}^{cycle} \times \left( \frac{DoD_{ref}}{DoD_{actual}} \right)^{0{,}5} = 5000 \times \left( \frac{0{,}8}{0{,}7} \right)^{0{,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -139,4 +139,7 @@ $$A(T=24.000) = \frac{175.329}{175.329 + 4.671} = 0,9741 = 97,41\%$$
 | 30.000 | 219.180 | 5.890 | 97,38% | 2.048 |
 | 36.000 | 262.510 | 7.420 | 97,25% | 2.460 |
 
-Terlihat bahwa $T^* \approx 24.000$ FH memberikan ketersediaan puncak $97,41\%$ — ekuivalen dengan menambah 30 *block hours/tahun* per pesawat dibandingkan kebijakan D-check 6 tahun. Untuk armada 12 pesawat, *revenue uplift* tahunan ≈ 12 × 30 × 9
+Terlihat bahwa $T^* \approx 24.000$ FH memberikan ketersediaan puncak $97,41\%$ — ekuivalen dengan menambah 30 *block hours/tahun* per pesawat dibandingkan kebijakan D-check 6 tahun. Untuk armada 12 pesawat, *revenue uplift* tahunan ≈ 12 × 30 × 9.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -181,4 +181,7 @@ Pendekatan optimisasi sistem pemeliharaan berbasis stokastik dengan metode non-l
 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketidakpastian dalam estimasi parameter dan kompleksitas perhitungan yang dapat meningkat seiring dengan jumlah variabel. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan penerapan teknologi kecerdasan buatan untuk meningkatkan akurasi prediksi dalam sistem pemeliharaan.
 
-Dengan demikian, penerapan optimisasi sistem pemeliharaan berbasis stokastik dengan pendekatan non-linier tidak hanya meningkatkan efisiensi operasional tetapi juga memberikan kontribusi signifikan terhadap keberlanjutan dan inovasi dalam industri.
+Dengan demikian, penerapan optimisasi sistem pemeliharaan berbasis stokastik dengan pendekatan non-linier tidak hanya meningkatkan efisiensi operasional tetapi juga memberikan kontribusi signifikan terhadap keberlanjutan dan inovasi dalam industri.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

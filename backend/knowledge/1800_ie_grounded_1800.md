@@ -141,3 +141,7 @@ Misalkan sebuah *fulfilment center* Shopee Express memiliki operator sortir seba
 **Langkah 1: Penentuan ukuran sampel (Slovin):**
 
 $$n = \frac{N}{1 + N
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

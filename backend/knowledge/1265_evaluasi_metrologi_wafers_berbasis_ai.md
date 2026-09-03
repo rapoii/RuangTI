@@ -139,3 +139,6 @@ Ke depan, arah riset dapat difokuskan pada pengembangan sistem yang lebih terint
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai evaluasi metrologi wafer berbasis AI untuk deteksi dini anomali dalam proses fabrikasi, serta relevansinya dalam konteks industri modern. Dengan mengikuti standar dan metodologi yang tepat, diharapkan teknologi ini dapat diimplementasikan secara efektif untuk meningkatkan kualitas dan efisiensi produksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

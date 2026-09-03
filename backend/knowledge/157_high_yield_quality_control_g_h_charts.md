@@ -189,3 +189,6 @@ $$
 4. Zhang, Y., et al. (2024). Machine learning-augmented g-chart for semiconductor defect monitoring. *IEEE Transactions on Semiconductor Manufacturing*, 37(2), 145–158.
 5. Wang, L., & Liu, J. (2025). Digital twin-enabled adaptive g-chart for smart manufacturing. *Journal of Manufacturing Systems*, 78, 215–228.
 6. Chen, X., et al. (2026). Real-time g-chart implementation in streaming data environments. *International Journal of Production Research*, 64(3), 789–802.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

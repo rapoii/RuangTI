@@ -82,3 +82,6 @@ Optimisasi matriks dinamis stokastik memiliki aplikasi yang luas tidak hanya dal
 Namun, terdapat beberapa batasan metodologi ini, termasuk kebutuhan akan data yang akurat dan komprehensif serta kompleksitas dalam pemodelan. Oleh karena itu, arah riset masa depan harus difokuskan pada pengembangan algoritma yang lebih efisien dan penerapan machine learning untuk meningkatkan akurasi prediksi dalam lingkungan yang tidak pasti.
 
 Dengan demikian, penerapan optimisasi matriks dinamis stokastik dalam manajemen rantai pasokan berbasis AI bukan hanya memberikan solusi praktis, tetapi juga membuka jalan bagi inovasi dan efisiensi yang lebih besar di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -66,3 +66,7 @@ $$Re = \frac{\rho_{slurry} \cdot v \cdot D_e}{\mu_{slurry}}$$
 Bilangan Nusselt untuk campuran non-Newtonian dalam tangki beraduk (*autoclave stirred tank*):
 
 $$Nu = 0{,}74 \cdot Re^{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

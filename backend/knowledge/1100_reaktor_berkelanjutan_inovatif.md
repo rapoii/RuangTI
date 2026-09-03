@@ -94,3 +94,6 @@ Desain reaktor berkelanjutan tidak hanya relevan dalam industri kimia, tetapi ju
 Namun, ada batasan dalam metodologi yang ada, termasuk ketergantungan pada data yang akurat dan tantangan dalam integrasi teknologi baru. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan material baru, teknik pemrosesan yang lebih efisien, dan pengurangan jejak karbon dalam proses industri.
 
 Dengan mengadopsi prinsip-prinsip desain berkelanjutan, industri dapat mencapai tujuan keberlanjutan yang lebih tinggi dan berkontribusi pada perlindungan lingkungan. Penelitian lebih lanjut dalam bidang ini akan membantu menciptakan solusi inovatif yang dapat diterapkan secara luas di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

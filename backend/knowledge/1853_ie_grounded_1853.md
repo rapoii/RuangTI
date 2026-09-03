@@ -163,3 +163,6 @@ dengan $a_{\text{Ni}}, a_{\text{Co}}, a_j$ = jumlah mol nikel, kobalt, dan pengo
 - **Acid Wash Periodik:** Sirkulasi H₂SO₄ 5–10% pada 80–90 °C selama 4–6 jam, berselang antara dua siklus produksi.
 - **Pengaturan Konsentrasi Asam Awal:** Jaga free acidity 30–50 g/L untuk mencegah pengendapan prematur di slurry line.
 - **Kontrol *Solid-Liquid Ratio*:**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

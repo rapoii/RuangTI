@@ -125,3 +125,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketidakpastian da
 Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin untuk memprediksi pola lalu lintas udara dan mengoptimalkan penjadwalan secara real-time. Selain itu, integrasi teknologi canggih seperti drone dan kendaraan otonom dalam sistem bandara dapat membuka peluang baru untuk efisiensi operasional.
 
 Dengan demikian, optimasi penjadwalan keberangkatan dan kedatangan pesawat di bandara adalah bidang yang dinamis dan terus berkembang, dengan potensi untuk meningkatkan efisiensi dan keselamatan dalam industri penerbangan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

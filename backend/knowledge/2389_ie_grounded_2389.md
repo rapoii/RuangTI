@@ -164,4 +164,7 @@ Ambil studi kasus sebuah OEM baterai di pasar Asia Timur, dengan parameter berik
 | $c_e$ | 150 | CNY/unit |
 | $c_g$ | 80 | CNY/unit |
 | $\lambda$ | 0,75 | — |
-| $\alpha
+| $\alpha$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

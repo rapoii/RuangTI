@@ -113,4 +113,7 @@ Pemodelan CFD dilakukan dengan software *ANSYS Fluent* atau *COMSOL Multiphysics
 - **Mesh:** Structured quadrilateral dengan 80.000–150.000 elemen di plane aksisimetrik (r-z); *mesh independence test* pada GCI < 2%.
 - **Solver:** Coupled pressure-velocity dengan SIMPLE algorithm.
 - **Turbulence Model:** $k$-$\varepsilon$ Realizable karena Reynolds number $\text{Re} = \rho u D_h / \mu$ pada operasi SFE-CO₂ berada di kisaran 5.000–20.000 (aliran turbulen).
-- **Coupling:** Two-way FSI (Fluid-Structure Interaction) antara fase fluida dan packed-bed dengan
+- **Coupling:** Two-way FSI (Fluid-Structure Interaction) antara fase fluida dan packed-bed dengan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

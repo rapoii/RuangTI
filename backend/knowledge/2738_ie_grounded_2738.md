@@ -140,3 +140,7 @@ $$R_{eff} \approx 199{,}74 \text{ Mbit/s per sel}$$
 
 Total property yang harus disinkronkan:
 $$N_{prop} = 48 \text{ AAS} \times 150 \text{ prop} =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

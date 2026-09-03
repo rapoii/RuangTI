@@ -143,3 +143,6 @@ Metode pengukuran waktu dan teknik kerja memiliki aplikasi yang luas tidak hanya
 Namun, batasan metodologi ini termasuk ketergantungan pada data historis yang mungkin tidak selalu akurat dan variabilitas dalam kinerja individu. Oleh karena itu, penelitian masa depan harus fokus pada integrasi teknologi seperti analitik data dan kecerdasan buatan untuk meningkatkan akurasi dalam pengukuran waktu dan perencanaan kerja.
 
 Dengan demikian, penerapan sistem pengukuran waktu dan metode kerja yang efektif tidak hanya mendukung efisiensi operasional, tetapi juga berkontribusi pada keberlanjutan dan inovasi dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

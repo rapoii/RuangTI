@@ -118,4 +118,7 @@ $$SOC(t) = \frac{E_{pcm}(t)}{E_{pcm,max}} = \frac{\int_{T_{init}}^{T(t)} \rho c_
 | HTF | Terminol-66 (minyak termal) | – |
 | $\dot{m}_{htf}$ | 1,8 | kg/s |
 | $T_{htf,in}$ (charge) | 240 | °C |
-| $T_{htf,in}$ (discharge
+| $T_{htf,in}$ (discharge.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

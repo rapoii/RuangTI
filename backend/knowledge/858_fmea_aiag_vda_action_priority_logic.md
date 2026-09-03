@@ -105,3 +105,6 @@ Penerapan FMEA tidak hanya terbatas pada industri otomotif, tetapi juga dapat di
 Namun, terdapat beberapa batasan dalam metodologi FMEA, seperti ketergantungan pada penilaian subjektif dari tim dan kemungkinan terlewatnya mode kegagalan yang tidak terduga. Oleh karena itu, penelitian masa depan dapat fokus pada pengembangan alat berbasis AI untuk meningkatkan akurasi penilaian dan mendeteksi mode kegagalan yang mungkin tidak teridentifikasi oleh tim manusia.
 
 Dengan demikian, penerapan FMEA yang harmonis antara AIAG dan VDA, yang dilengkapi dengan tabel prioritas tindakan dan integrasi karakteristik khusus, akan menjadi kunci untuk mencapai keunggulan kompetitif dan keberlanjutan dalam industri yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -120,4 +120,7 @@ Simulasi CFD Obchoei-Limtrakarn (2024) menunjukkan bahwa *channeling* muncul di 
 
 **Kritik Metodologis:** Model Obchoei-Limtrakarn (2024) mengasumsikan *steady-state* dan packing biomassa homogen, padahal pada operasi nyata terjadi *channel formation*, *bed shrinkage*, dan *depletion zone* yang bersifat *time-dependent*. Coupling dengan perpindahan panas transient (Toledo & del Valle, 2023) masih belum sepenuhnya digabung dalam satu solver unified; integrasi *transient coupled simulation* adalah agenda riset prioritas. Selain itu, model忽略了（mengabaikan） interaksi kompetitif multi-komponen antara cannabinoid target dan senyawa ballast (klorofil, lilin, lipid), padahal Toledo & del Valle (2023) menunjukkan bahwa *co-extractables* mempengaruhi viskositas fluida di EV dan karenanya profil tekanan.
 
-**Aplikasi Lintas Sektor:** Arsitektur model ini extensible untuk ekstraksi *essential oil* (lavender, rosemary), alkaloid farmasi (kafein dari biji kopi dekafeinasi, theobromin dari kakao), karotenoid (lutein
+**Aplikasi Lintas Sektor:** Arsitektur model ini extensible untuk ekstraksi *essential oil* (lavender, rosemary), alkaloid farmasi (kafein dari biji kopi dekafeinasi, theobromin dari kakao), karotenoid (lutein.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

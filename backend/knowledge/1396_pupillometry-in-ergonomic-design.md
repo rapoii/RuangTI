@@ -92,3 +92,6 @@ Pupillometri sebagai alat untuk desain ergonomi memiliki aplikasi yang luas tida
 Namun, terdapat batasan dalam metodologi ini, seperti variabilitas individu dalam respons pupil dan pengaruh faktor eksternal yang sulit dikontrol. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan komprehensif.
 
 Arah riset masa depan dapat mencakup integrasi pupillometri dengan teknologi lain seperti pemantauan biometrik dan analisis data besar untuk menciptakan solusi desain ergonomi yang lebih adaptif dan responsif terhadap kebutuhan pekerja. Dengan demikian, pupillometri dapat menjadi alat yang sangat berharga dalam menciptakan lingkungan kerja yang lebih aman dan produktif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

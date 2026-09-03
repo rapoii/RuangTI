@@ -165,4 +165,7 @@ Feature importance ranking guides kaizen prioritization beyond obvious high-cons
 - EPA. (2023). *Lean and Environment Toolkit: Green Value Stream Mapping Guide*. U.S. Environmental Protection Agency.
 - ISO 14051:2023. *Environmental management — Material flow cost accounting*. International Organization for Standardization.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -117,3 +117,6 @@ Analisis data besar dalam AAS tidak hanya terbatas pada sektor manufaktur, tetap
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kompleksitas integrasi sistem. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan algoritma analitik yang lebih canggih, peningkatan kualitas data, dan integrasi sistem yang lebih baik.
 
 Dengan demikian, penerapan analisis data besar dalam AAS berpotensi untuk meningkatkan keputusan manajerial di industri pintar, menciptakan nilai tambah yang signifikan, dan mendorong inovasi dalam proses bisnis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

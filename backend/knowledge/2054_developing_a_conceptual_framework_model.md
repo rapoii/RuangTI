@@ -136,4 +136,7 @@ Perusahaan distributor ikan “PT Samudra Jaya” memiliki pusat distribusi di J
 
 | Parameter | Bandung (B) | Surabaya (S) | Medan (M) |
 |-----------|-------------|--------------|-----------|
-| Demand harian, $D_j$ (kg) | 800
+| Demand harian, $D_j$ (kg) | 800.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

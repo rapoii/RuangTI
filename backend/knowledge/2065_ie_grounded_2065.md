@@ -122,4 +122,7 @@ $$C_{opt} = 59.500 - 4.000 - 3.000 - 3.000 = \mathbf{Rp.49.500}$$
 
 **Penghematan: 16,8%** atau setara Rp365.000/bulan (faktor 30 hari), dengan payback period investasi HEMS (Rp15 juta) kurang dari 3 tahun pada skenario konservatif.
 
-**Validasi stokastik (Qamar et al., 2025):** Untuk 20 skenario RES
+**Validasi stokastik (Qamar et al., 2025):** Untuk 20 skenario RES.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -125,3 +125,6 @@ Penelitian di masa depan dapat difokuskan pada pengembangan teknik pemodelan yan
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang Laser Shock Peening tanpa pelapisan, dari teori dasar hingga aplikasi praktis, serta tantangan dan peluang di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

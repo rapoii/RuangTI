@@ -44,3 +44,6 @@ Module 257 (Design for Manufacturability), Module 259 (Design for X), Module 281
 2. Hatcher, G. D., Ijomah, W. L., & Windmill, J. F. C. (2013). Design for remanufacture: A literature review. *Journal of Cleaner Production*, 45, 45–53.
 3. Journal of Cleaner Production (2024).
 4. Resources, Conservation and Recycling (2023).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

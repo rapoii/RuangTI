@@ -327,4 +327,4 @@ Kedatangan pesanan berfluktuasi secara Poisson dengan $\lambda = 12.0$ batch/jam
 3. **Nelson, B. L., & Hong, L. J. (2011).** *Foundations and Methods of Stochastic Simulation: A First Course*. International Series in Operations Research & Management Science, Springer New York. DOI: [10.1007/978-1-4614-6160-9](https://doi.org/10.1007/978-1-4614-6160-9)
 4. **Larson, J., Menickelly, M., & Wild, S. M. (2019).** *Derivative-free optimization methods*. Acta Numerica, 28, 287-404. DOI: [10.1017/S0962492919000060](https://doi.org/10.1017/S0962492919000060)
 5. **Law, A. M. (2024).** *Simulation Modeling and Analysis (6th ed.)*. McGraw-Hill Education, New York. ISBN: 978-1260575453.
-6. **Gross, D., Shortle, J. F., Thompson, J. M., & Harris, C. M. (2018).** *Fundamentals of Queueing Theory (5th ed.)*. John Wiley & Sons, Hoboken, NJ. DOI: [10.1002/9781119212454](https://doi.org/10.1002/9781119212454)
+6. **Gross, D., Shortle, J. F., Thompson, J. M., & Harris, C. M. (2018).** *Fundamentals of Queueing Theory (5th ed.)*. John Wiley & Sons, Hoboken, NJ. DOI: [10.1002/9781119212454](https://doi.org/10.1002/9781119212454)$.

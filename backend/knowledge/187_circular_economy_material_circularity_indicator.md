@@ -112,3 +112,6 @@ The MCI is a vital diagnostic tool, not a standalone truth. It excels at identif
 -   World Business Council for Sustainable Development (2023). *CTI2.0: Circular Transition Indicators Framework*.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

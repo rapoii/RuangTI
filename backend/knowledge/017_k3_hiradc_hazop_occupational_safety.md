@@ -46,3 +46,6 @@ Metode analisis keselamatan kualitatif terstruktur menggunakan kata panduan (*gu
   - **MORE / LESS:** Suhu atau tekanan melebihi/di bawah ambang batas aman.
   - **AS WELL AS:** Adanya kontaminasi material asing di dalam fluida.
   - **REVERSE:** Arah aliran fluida berbalik arah karena kegagalan *check valve*.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

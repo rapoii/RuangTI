@@ -566,4 +566,4 @@ Prosedur kendali mutu (*quality assurance*) dan kualifikasi manufaktur komposit 
 6. **Zhang, L., Cheng, L., & Xu, Y.** (2025). *Ultra-High Temperature Ceramic Matrix Composites (UHTCMCs): Precursor Design, Thermal Gradient Infiltration Kinetics, and Aero-Engine Applications*. *Progress in Materials Science*, 142, 101230. DOI: `10.1016/j.pmatsci.2024.101230`.
 7. **Krenkel, W.** (Ed.). (2023). *Ceramic Matrix Composites: Fiber Reinforced Ceramics and their Applications* (2nd ed.). Weinheim: Wiley-VCH. ISBN: `978-3-527-34980-7`.
 8. **Ritchie, R. O., & Chawla, K. K.** (2024). *Fracture Mechanics and Toughening Mechanisms in Advanced Structural Ceramics and CMCs*. *Acta Materialia*, 268, 119780. DOI: `10.1016/j.actamat.2024.119780`.
-9. **American Society of Mechanical Engineers**. (2023). *ASME Boiler and Pressure Vessel Code (BPVC), Section III, Division 5: High Temperature Reactors - Ceramic Matrix Composite Core Components*. New York: ASME.
+9. **American Society of Mechanical Engineers**. (2023). *ASME Boiler and Pressure Vessel Code (BPVC), Section III, Division 5: High Temperature Reactors - Ceramic Matrix Composite Core Components*. New York: ASME.$.

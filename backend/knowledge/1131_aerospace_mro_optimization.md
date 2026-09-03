@@ -85,3 +85,6 @@ Penerapan pemeliharaan berbasis data tidak hanya terbatas pada industri penerban
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data dan kompleksitas model yang dapat mempengaruhi interpretasi hasil. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih robust, serta integrasi dengan teknologi baru untuk meningkatkan akurasi dan efisiensi.
 
 Dengan demikian, optimasi proses pemeliharaan berbasis data menggunakan pembelajaran mesin merupakan langkah penting untuk meningkatkan efisiensi dan keselamatan dalam industri MRO pesawat, serta memberikan kontribusi signifikan terhadap inovasi di sektor industri lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

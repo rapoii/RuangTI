@@ -110,3 +110,6 @@ Industry-standard QRA platforms include DNV PHAST/Safeti, GexCon FLACS, and TNO 
 6.  **Zhang, L., et al.** (2025). "CFD-enhanced societal risk assessment for LNG terminals: Comparing Gaussian vs. FLACS-based F-N curves in congested geometries." *Journal of Loss Prevention in the Process Industries*, 93, 105478.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

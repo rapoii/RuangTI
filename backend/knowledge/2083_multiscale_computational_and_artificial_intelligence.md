@@ -95,4 +95,7 @@ Implementasi sistematis pemodelan multiskala untuk lini produksi mengikuti SOP b
 
 **Input parameter:**
 - *Carbon fiber* (T700S): $E_f = 230$ GPa, $\rho_f = 1{,}76$ g/cm³, $d_f = 7\,\mu\text{m}$, $l/d = 100$
-- *Epoxy matrix* (EPON 862): $E_m =
+- *Epoxy matrix* (EPON 862): $E_m =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

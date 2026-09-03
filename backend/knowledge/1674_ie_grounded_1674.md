@@ -61,4 +61,7 @@ Hubungan $P-\rho-T$ untuk CO₂ superkritis mengikuti persamaan keadaan Peng–R
 
 $$P = \frac{RT}{V_m - b} - \frac{a\,\alpha}{V_m(V_m + b) + b(V_m - b)}$$
 
-dengan parameter $a$, $b$, dan $\alpha$ sebagai fungsi temperatur dan *acentric factor* $\omega = 0{,}225$ untuk CO₂. Persamaan ini krusial untuk menentukan $\rho(P,T)$ secara akurat pada rentang operasi 200–400 bar dan 313–333
+dengan parameter $a$, $b$, dan $\alpha$ sebagai fungsi temperatur dan *acentric factor* $\omega = 0{,}225$ untuk CO₂. Persamaan ini krusial untuk menentukan $\rho(P,T)$ secara akurat pada rentang operasi 200–400 bar dan 313–333.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

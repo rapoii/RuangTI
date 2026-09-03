@@ -145,3 +145,7 @@ Dengan menetapkan $w_r = 0,12$ juta Yuan (harga收购 yang fair terhadap konsume
 
 $$320.000 + 0,07(6.000 - 6.000x) - 480x + 3.000 + 480x - 1.500x = 0$$
 $$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

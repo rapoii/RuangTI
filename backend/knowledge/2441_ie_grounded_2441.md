@@ -137,4 +137,7 @@ Total kapasitas desain: **≈ 13,5 kWh** per siklus.
 
 **Perhitungan 2 — Laju Perpindahan Panas Saat Charging Awal:**
 
-Luas permukaan tube (asumsi 7 tube): $A = N \cdot \
+Luas permukaan tube (asumsi 7 tube): $A = N \cdot \$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

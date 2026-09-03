@@ -77,4 +77,7 @@ Implementasi ekonomi sirkular memiliki dampak yang luas di berbagai disiplin ilm
 
 Namun, terdapat batasan dalam metodologi yang ada, seperti kurangnya data yang akurat dan tantangan dalam kolaborasi antar pemangku kepentingan. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan teknologi baru yang dapat mendukung ekonomi sirkular, serta penciptaan standar industri yang lebih baik untuk memfasilitasi implementasi.
 
-Dengan demikian, strategi implementasi ekonomi sirkular dalam rantai pasokan global tidak hanya relevan untuk keberlanjutan lingkungan, tetapi juga untuk meningkatkan daya saing perusahaan di pasar global yang semakin ketat.
+Dengan demikian, strategi implementasi ekonomi sirkular dalam rantai pasokan global tidak hanya relevan untuk keberlanjutan lingkungan, tetapi juga untuk meningkatkan daya saing perusahaan di pasar global yang semakin ketat.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

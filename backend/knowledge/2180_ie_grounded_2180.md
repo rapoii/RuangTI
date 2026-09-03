@@ -161,4 +161,7 @@ Robot memilih $a_1$ (maju) berdasarkan ε-greedy. Setelah eksekusi:
 - Jarak ke obstacle masih > $d_{safe}$ (1.5 m), sehingga $R_{collision} = 0$.
 - Total reward: $r_{t+1} = 0.6$.
 
-State baru $s_{t+1}$ dengan jarak 3.8 m dari goal. Dari Q-table: $Q(s_{t+1}, a_
+State baru $s_{t+1}$ dengan jarak 3.8 m dari goal. Dari Q-table: $Q(s_{t+1}, a_$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

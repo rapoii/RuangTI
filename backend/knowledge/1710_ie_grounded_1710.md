@@ -166,4 +166,7 @@ Zhou (2024) memperkenalkan prosedur operasional standar untuk *partial refurbish
 
 ### 4.1 Setup Parameter Kasus Hipotetis-Sejati
 
-Untuk mengilustrasikan implementasi model Zhou (2024), kami menyajikan studi kasus berbasis parameter
+Untuk mengilustrasikan implementasi model Zhou (2024), kami menyajikan studi kasus berbasis parameter.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

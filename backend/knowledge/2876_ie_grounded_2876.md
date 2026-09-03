@@ -140,4 +140,7 @@ Penerapan WSN-PAT tidak hanya meningkatkan efisiensi energi, tetapi juga menguba
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
 ### 5.1 Batasan Metodologis
-Meza-Galvan et al. (2026) mengakui beberapa keterbatasan: (i
+Meza-Galvan et al. (2026) mengakui beberapa keterbatasan: (i.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

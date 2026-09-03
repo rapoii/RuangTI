@@ -171,4 +171,7 @@ Sebuah fasilitas hydrometallurgy di AS ingin mengolah konsentrat kobaltit asal M
 | 3 | 2,0 | 3,0 | 1,5 | 82,5 |
 | 4 | 6,0 | 3,0 | 1,5 | 91,2 |
 | 5 | 2,0 | 2,0 | 0,5 | 71,8 |
-| 6 |
+| 6 |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

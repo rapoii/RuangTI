@@ -174,3 +174,7 @@ $$\Delta\text{Bugs} = (0.08 - 0.03) \times \frac{2{,}500{,}000}{10} = 12{,}500 \
 (asumsi 10 LOC per bug density)
 
 $$\text{Savings} =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

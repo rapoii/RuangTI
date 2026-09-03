@@ -108,3 +108,6 @@ Arsitektur mengikuti topologi *star-of-stars* dengan tiga lapisan:
 1. **Sensor Layer** — 30–150 node miniatur (masing-masing ukuran 12 × 18 mm) berisi thermistor NTC 10 kΩ (akurasi ±0,1 °C), kapasitif pressure sensor (rentang 0,1–1000 Pa, akurasi ±0,5 %FS), dan moisture MEMS.
 2. **Aggregator/Gateway Layer** — 4–8 gateway *battery-powered* dengan microcontroller ARM Cortex-M4, modul radio 2,4 GHz (ZigBee 3.0 atau Bluetooth Low Energy 5.2, latency 7,5–15 ms).
 3. **Supervisory Layer** — *Edge server* menjalankan algoritma PCA-MSPC, menyimpan data ke *
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

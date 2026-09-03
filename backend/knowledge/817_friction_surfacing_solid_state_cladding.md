@@ -103,3 +103,6 @@ Teknik SSFS tidak hanya terbatas pada aplikasi dalam industri manufaktur, tetapi
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti variasi dalam sifat material dan parameter proses yang dapat mempengaruhi hasil akhir. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengeksplorasi aplikasi SSFS dalam konteks yang lebih luas, termasuk potensi untuk pengembangan material baru dan teknik pengolahan yang lebih efisien.
 
 Ke depan, standar industri seperti ISO 25239 dapat menjadi acuan untuk memastikan kualitas dan konsistensi dalam penerapan teknik cladding ini. Penelitian lebih lanjut juga diharapkan dapat mengidentifikasi parameter optimal yang dapat meningkatkan performa dan efisiensi proses, serta memperluas aplikasi teknik ini di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

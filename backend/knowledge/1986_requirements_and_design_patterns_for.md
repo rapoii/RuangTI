@@ -135,4 +135,7 @@ Pertimbangkan sel manufaktur CNC presisi tinggi dengan konfigurasi sebagai berik
 
 ### 4.2 Perhitungan State Awal
 
-Misalkan satu mesin CNC memiliki
+Misalkan satu mesin CNC memiliki.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

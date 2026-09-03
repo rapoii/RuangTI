@@ -111,3 +111,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketidakpastian dalam permi
 Selain itu, integrasi teknologi seperti Internet of Things (IoT) dan big data analytics dapat meningkatkan akurasi pemodelan dan pengambilan keputusan. Dengan memanfaatkan data real-time, perusahaan dapat melakukan penyesuaian yang lebih cepat dan efisien dalam operasi logistik mereka.
 
 Dengan demikian, pemodelan untuk optimalisasi rute dalam jaringan logistik intermodal tidak hanya penting untuk efisiensi operasional, tetapi juga untuk keberlanjutan dan responsivitas terhadap perubahan pasar yang cepat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

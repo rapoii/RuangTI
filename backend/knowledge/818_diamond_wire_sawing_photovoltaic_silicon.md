@@ -144,3 +144,6 @@ Pemotongan wafer silikon ultra-tipis tidak hanya relevan dalam industri fotovolt
 Dari perspektif K3 dan ESG, penting untuk mempertimbangkan dampak lingkungan dari proses pemotongan, termasuk pengelolaan limbah dan penggunaan energi yang efisien. Penelitian masa depan dapat difokuskan pada pengembangan teknik pemotongan yang lebih ramah lingkungan dan penggunaan material yang lebih berkelanjutan.
 
 Dengan demikian, pemodelan kerusakan mikroretak, minimisasi kerf loss, dan analisis topografi permukaan merupakan aspek penting dalam meningkatkan efisiensi dan efektivitas proses pemotongan wafer silikon ultra-tipis, yang pada gilirannya dapat mendukung transisi menuju energi terbarukan yang lebih berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

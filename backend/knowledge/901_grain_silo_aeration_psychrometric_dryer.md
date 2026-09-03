@@ -116,3 +116,6 @@ Aerasi deep-bed dalam silo tidak hanya relevan untuk industri pertanian, tetapi 
 Di masa depan, teknologi otomasi dan sensor pintar dapat diintegrasikan untuk meningkatkan sistem aerasi, memungkinkan pemantauan real-time dan pengendalian yang lebih baik. Selain itu, penelitian lebih lanjut diperlukan untuk mengembangkan model matematis yang lebih akurat dan efisien dalam memprediksi perilaku kelembaban dan suhu dalam silo.
 
 Dengan mengikuti standar ISO 6322 dan ASAE S352.2, insinyur dapat memastikan bahwa sistem aerasi yang diterapkan tidak hanya efektif tetapi juga memenuhi regulasi yang berlaku, sehingga dapat meningkatkan keberlanjutan dan efisiensi dalam industri pertanian.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

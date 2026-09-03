@@ -115,3 +115,6 @@ Model penjadwalan dinamis yang mengintegrasikan pembelajaran mesin dan analisis 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data dan kemampuan model untuk merespons perubahan yang cepat. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih adaptif dan robust, serta eksplorasi penggunaan teknologi baru seperti Internet of Things (IoT) dan analitik real-time untuk meningkatkan akurasi prediksi.
 
 Dalam kesimpulannya, penerapan model penjadwalan dinamis yang mengintegrasikan pembelajaran mesin dan analisis prediktif merupakan langkah strategis yang dapat meningkatkan efisiensi operasional maskapai dan memberikan keunggulan kompetitif di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -106,3 +106,6 @@ Penerapan DfMA dalam konstruksi modular tidak hanya terbatas pada sektor konstru
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas desain dan keterbatasan dalam teknologi fabrikasi. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan teknologi fabrikasi yang lebih canggih dan integrasi sistem informasi yang lebih baik untuk mendukung DfMA.
 
 Dengan demikian, DfMA dalam konstruksi modular off-site menawarkan potensi besar untuk meningkatkan efisiensi dan mengurangi biaya, namun memerlukan pendekatan yang sistematis dan kolaboratif untuk mengatasi tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -84,3 +84,7 @@ Implementasi sistematis untuk memitigasi dan mengkarakterisasi scaling autoclave
 ├─────────────────────────────────────────────────────────────┤
 │ FASE B: OPERATIONAL MONITORING (Continuous)                 │
 │ ├─ Sampling slurry setiap 4 jam
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

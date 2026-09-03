@@ -108,4 +108,7 @@ $$Waktu_A = 875 \times 0{,}1 = 87{,}5 \text{ jam}$$
 $$W_A = 87{,}5; \; W_B = 475 \times 0{,}15 = 71{,}25; \; W_C = 375 \times 0{,}2 = 75$$
 $$W_{total} = 87{,}5 + 71{,}25 + 75 = 233{,}75 \text{ jam dari total } 1.440 \text{ jam tersedia} \; (6 \times 240)$$
 
-**Langkah 3 — Konstruksi
+**Langkah 3 — Konstruksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -148,3 +148,7 @@ $$Y_{oil} = 0{,}82\% \Rightarrow m_{oil} = 0{,}0082 \times 10.000 = 82{,}0 \text
 $$Y_{phen} = 1{,}25\% \Rightarrow m_{phen} = 0{,}0125 \times 10.000 = 125{,}0 \text{ g}$$
 
 $$Y_{cann} = 2{,}40\% \Rightarrow m_{cann} = 0{,}0240 \times 10.000 = 240{,}
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

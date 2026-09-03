@@ -124,4 +124,7 @@ Secara keseluruhan, modul ini memberikan kerangka lengkap yang dapat diadopsi in
 
 (Word count bagian 5: 218)
 
-Total kata: 1648
+Total kata: 1648$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

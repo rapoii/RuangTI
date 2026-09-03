@@ -165,4 +165,7 @@ Kedua literatur yang dikaji memiliki keterbatasan yang perlu dicermati. Studi Bi
 | Skor risiko | Numerik tunggal | Kualitatif bertingkat |
 | Konsistensi | Rendah (RPN = 8 bisa bermakna ganda) | Tinggi (lookup matrix) |
 | Bobot $S/O/D$ | Sama | Diferensial ($S$ dominan pada safety) |
-| Adopsi industri
+| Adopsi industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

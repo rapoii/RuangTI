@@ -138,4 +138,7 @@ Meza-Galvan et al. (2026) secara eksplisit mengakui beberapa keterbatasan: (a) d
 | Akurasi suhu | ±1,5 °C (efek kalibrasi ulang) | ±0,3 °C |
 | Jumlah vial termonitor | 1–3 sentinel | 50–500 vial |
 | Latensi data | 5–10 s | 50–100 ms |
-| Biaya instalasi | Rendah | Menengah-Tinggi |
+| Biaya instalasi | Rendah | Menengah-Tinggi |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

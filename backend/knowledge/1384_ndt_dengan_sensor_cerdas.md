@@ -96,3 +96,6 @@ Penerapan sensor cerdas dalam NDT tidak hanya terbatas pada industri manufaktur,
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data yang dikumpulkan dan kebutuhan untuk pelatihan yang memadai bagi tenaga kerja. Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data serta integrasi teknologi Internet of Things (IoT) untuk meningkatkan kemampuan pemantauan secara real-time.
 
 Dengan demikian, penggunaan sensor cerdas dalam NDT menawarkan potensi besar untuk meningkatkan efisiensi dan keamanan dalam proses produksi, serta memberikan kontribusi signifikan terhadap keberlanjutan industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

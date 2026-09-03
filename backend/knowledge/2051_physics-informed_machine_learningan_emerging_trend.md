@@ -95,4 +95,7 @@ Standar industri relevan: **ISO 9001** (manajemen mutu), **ISO 14001** (manajeme
 - Diameter elemen rol $d = 40$ mm, jumlah rol $Z = 18$
 - Modulus Young $E = 2,1 \times 10^{11}$ Pa
 - Poisson ratio $\nu_m = 0,3$
-- Koefisien keausan $
+- Koefisien keausan $.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

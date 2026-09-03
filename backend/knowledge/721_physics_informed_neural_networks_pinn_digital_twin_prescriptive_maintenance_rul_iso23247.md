@@ -355,4 +355,4 @@ if __name__ == "__main__":
 
 ---
 
-*Modul 721 — RuangTI Knowledge Base | Physics-Informed Intelligence untuk Prescriptive Maintenance Berpresisi Fisika.*
+*Modul 721 — RuangTI Knowledge Base | Physics-Informed Intelligence untuk Prescriptive Maintenance Berpresisi Fisika.*$.

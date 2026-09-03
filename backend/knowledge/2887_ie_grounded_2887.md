@@ -124,3 +124,7 @@ Sebuah *tier-1 supplier* memproduksi *brake caliper assembly* dengan 4 mode kega
 **Perhitungan Expected Cost sebelum FMEA (asumsi produksi 1 juta unit/tahun):**
 
 $$E[C_{\text{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

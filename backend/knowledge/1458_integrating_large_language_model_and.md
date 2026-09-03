@@ -92,3 +92,7 @@ $$CF_t = \text{Penghematan Total} - \text{Biaya Operasional} = (220.000 + 90.000
 **Langkah 2: Hitung NPV menggunakan rumus diskonto majemuk.**
 
 $$NPV = \sum_{t=1}^{5} \frac{315.000}{(1+0
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

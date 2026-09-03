@@ -156,3 +156,7 @@ $$p^* = \frac{600.000 + 80w + 25(50.000)}{160} = \frac{600.000 + 80w + 1.250.000
 
 **Langkah 2 — Perhitungan Permintaan Equilibrium:**
 $$D_b = 600.000 - 80 p^* + 25(50.000) = 600.000 - 80(11.562,5
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

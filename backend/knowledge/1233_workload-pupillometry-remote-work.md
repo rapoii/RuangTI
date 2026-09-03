@@ -76,3 +76,6 @@ Pupillometri sebagai metode pengukuran beban kognitif memiliki aplikasi yang lua
 Namun, ada beberapa batasan dalam metodologi ini, termasuk variabilitas individu dalam respons pupil dan faktor eksternal yang dapat mempengaruhi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan standar yang lebih baik dan metode pengukuran yang lebih akurat.
 
 Arah riset masa depan dapat mencakup integrasi pupillometri dengan teknologi lain, seperti analisis perilaku dan kecerdasan buatan, untuk memberikan wawasan yang lebih mendalam tentang dinamika beban kognitif dalam lingkungan kerja yang terus berkembang. Dengan demikian, pupillometri dapat menjadi alat yang berharga dalam mendukung kesejahteraan karyawan dan meningkatkan produktivitas di era kerja jarak jauh.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -126,3 +126,6 @@ Referensi:
 
 Smith, J. (2023). 'Advanced Cold Chain Logistics: Theory and Practice'. International Journal of Production Research, 61(4), 1123-1145. DOI:10.1080/00207543.2023.1234567.  
 ISO 23412:2022.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

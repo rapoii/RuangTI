@@ -112,3 +112,6 @@ Hasil turunan pada $T_A^* = 600$ FH mendekati nol, mengonfirmasi bahwa interval 
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
 Kerangka Zhou (2024) memberikan kontribusi signifikan dengan membuktikan eksistensi optimum analitis untuk kebijakan pemeliharaan hirarkis yang sebelumnya hanya diselesaikan secara heuristik atau simulasi Monte Carlo. Namun, beberapa **limitasi metodologis** perlu dicermati. Pertama, model mengasumsikan *failure rate* komponen mengikuti distribusi Weibull dengan parameter bentuk $\beta$ konstan sepanjang horizon, padahal realitanya *bathtub curve* menunjukkan perilaku berbeda antara fase *infant mortality*, *useful life*, dan *wear-out*. Kedua, korelasi antara *unscheduled events* dan *scheduled inspections* diabaikan (*independence assumption*), yang dapat低估 *avalanche effect* pada sistem avionik modern yang saling tergantung. Ketiga, model belum sepenuhnya mengintegrasikan **digital twin** dan *
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

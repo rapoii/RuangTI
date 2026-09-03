@@ -140,4 +140,7 @@ Ambil satu unit Airbus A320ceo milik operator *flag carrier* Asia Tenggara denga
 
 **Langkah 1 — Hitung jumlah pemeriksaan per siklus D:**
 $n_A = \lfloor 30.000/600 \rfloor = 50$
-$n_B = \lfloor 30.000/
+$n_B = \lfloor 30.000/$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

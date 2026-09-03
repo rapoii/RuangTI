@@ -165,4 +165,7 @@ Tujuan: menaikkan suhu dari $T_{c,out} = 12°C$ menjadi $T_{hot} = 55°C$ untuk 
 
 $$COP_{Carnot} = \frac{328{,}15}{328{,}15 - 285{,}15} = \frac{328{,}15}{43} = 7{,}63$$
 
-Dengan asumsi $\eta_{total} =
+Dengan asumsi $\eta_{total} =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

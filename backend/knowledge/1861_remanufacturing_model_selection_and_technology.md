@@ -109,4 +109,7 @@ Implementasi industri mengikuti SOP 6-tahap berikut, yang diturunkan dari arsite
 
 **Fase 3 — Optimasi Stackelberg.** Gunakan algoritma *backward induction* dengan bantuan solver (mis. GAMS, CPLEX, atau Pyomo). Kunci: setiap *follower* menyelesaikan $\max_{p_r} \pi_R$ secara kondisional pada strategi *leader*, kemudian *leader* menyelesaikan $\max_{w_n, w_r, \eta} \pi_{OEM}$.
 
-**Fase 4 — Seleksi Model.** Lakukan *NPV analysis* selama horizon 5–10 tahun dengan *discount rate* $r_d = 8$–12%. Investasi teknologi $\eta^*$ dipilih dari set diskrit $\eta \in \{0
+**Fase 4 — Seleksi Model.** Lakukan *NPV analysis* selama horizon 5–10 tahun dengan *discount rate* $r_d = 8$–12%. Investasi teknologi $\eta^*$ dipilih dari set diskrit $\eta \in \{0$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

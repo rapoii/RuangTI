@@ -133,4 +133,7 @@ Misalkan program FMEA AIAG/VDA berhasil mencegah satu insiden *recall* pada komp
 - Biaya recall per unit = EUR 35 (penggantian suku cadang + logistik + dealer handling)
 - Total biaya recall terhindari: $200{,}000 \times 35 = \text{EUR } 7{,}000{,}000$
 - Investasi program FMEA: tim 5 insinyur × 6 bulan × EUR 8.000/bulan = EUR 240.000
-- **Net Savings:** $\text{EUR } 7{,
+- **Net Savings:** $\text{EUR } 7{,$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

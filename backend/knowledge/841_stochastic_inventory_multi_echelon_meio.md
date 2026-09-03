@@ -128,3 +128,6 @@ Arah riset masa depan dapat mencakup integrasi algoritma pembelajaran mesin untu
 --- 
 
 Dokumen ini memberikan gambaran komprehensif tentang Multi-Echelon Inventory Optimization dengan pendekatan yang terjamin, serta tantangan dan peluang yang ada di industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -138,4 +138,7 @@ Model MILP dari persamaan (1)–(8) diselesaikan setiap periode (bulanan) menggu
 **Tahap 5 — Pelaksanaan Recovery Pathway.**
 
 - *Echelon:* integrasi modul Grade A ke dalam Battery Energy Storage System (BESS) kapasitas 100 kWh–10 MWh.
-- *Remanufaktur:* pembongkaran modul, pengg
+- *Remanufaktur:* pembongkaran modul, pengg.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

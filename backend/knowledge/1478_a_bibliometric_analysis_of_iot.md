@@ -130,3 +130,7 @@ $$\text{NPV} = \sum_{t=1}^{5} \frac{S_t \cdot 250}{(1 + 0{,}10)^t} - C_{\text{in
 dengan asumsi $C_{\text{initial}} = \text{Rp }850.000.000$ (capex sensor + gateway + integrasi).
 
 $$\text{NPV
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

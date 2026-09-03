@@ -124,3 +124,6 @@ LBBD tidak hanya relevan dalam konteks lokasi fasilitas, tetapi juga dapat diter
 Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih efisien dan adaptif, serta untuk mengeksplorasi aplikasi LBBD dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (K3/ESG). Inovasi dalam teknologi informasi dan analitik data juga dapat memperkuat penerapan LBBD di industri.
 
 Dengan demikian, LBBD menjadi alat yang sangat berharga dalam pengambilan keputusan strategis di dunia industri yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

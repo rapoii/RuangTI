@@ -188,3 +188,7 @@ $$R_3 = 0{,}65 \times 50.000 = 32.500 \text{ baterai}$$
 Distribusi grade:
 $$R_A = 0{,}35 \times 32.500 = 11.375 \text{ unit (remanufacturing)}$$
 $$R_B = 0{,}40 \times
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

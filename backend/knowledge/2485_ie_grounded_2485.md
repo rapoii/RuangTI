@@ -111,3 +111,6 @@ Refurbishment meliputi *cell rebalancing*,更换 BMS, dan *thermal management re
 
 ### Tahap 6: Proses Recycling-Remanufacturing
 Untuk Tier C, gunakan **hydrometallurgical leaching** dengan recovery target per JIANG & TANG (2025): Li $\geq 90\%$, Co $\geq 95\%$, Ni $\geq 95\%$. Material recovered masuk *
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

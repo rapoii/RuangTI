@@ -104,3 +104,6 @@ Pengembangan sistem komunikasi untuk koordinasi multi-agent tidak hanya relevan 
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada infrastruktur komunikasi yang handal dan tantangan dalam pengelolaan data yang besar. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih adaptif dan robust, serta integrasi teknologi seperti kecerdasan buatan dan pembelajaran mesin untuk meningkatkan kemampuan pengambilan keputusan sistem.
 
 Dengan demikian, pengembangan sistem komunikasi untuk koordinasi multi-agent dalam operasi bin-picking menjadi langkah penting dalam menuju industri yang lebih efisien dan responsif di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

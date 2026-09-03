@@ -114,3 +114,7 @@ Sebuah OEM besar (kapasitas produksi 500.000 pack/tahun) mempertimbangkan strate
 $$Q(1500) = 60 \cdot e^{-1{,}8 \times 10^{-4} \cdot 1500} = 60 \cdot e^{-0{,}27} = 60 \times 0{,}7634 = 45{,}80 \text{ kWh}$$
 
 $$\text{SOH} = \frac{45{,}80}{60} =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

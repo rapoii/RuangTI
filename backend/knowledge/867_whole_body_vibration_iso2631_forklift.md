@@ -105,3 +105,6 @@ Evaluasi WBV tidak hanya relevan dalam konteks forklift berat, tetapi juga dapat
 Dalam era otomasi, teknologi sensor dan analitik data dapat digunakan untuk memantau dan mengurangi WBV secara real-time. Penelitian masa depan dapat berfokus pada pengembangan material dan desain baru untuk suspensi kursi yang lebih efektif, serta penerapan teknologi AI untuk prediksi dan mitigasi risiko WBV.
 
 Dengan meningkatnya regulasi dan kesadaran akan kesehatan dan keselamatan kerja, penting bagi industri untuk terus beradaptasi dan menerapkan standar yang lebih ketat dalam evaluasi dan pengendalian WBV.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

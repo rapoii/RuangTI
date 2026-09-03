@@ -153,3 +153,6 @@ env.timeout(10).callback(lambda _: signal.succeed())
 - Team SimPy. (2025). SimPy Documentation v4.1. https://simpy.readthedocs.io/
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

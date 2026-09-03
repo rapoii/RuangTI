@@ -136,4 +136,7 @@ Validasi dilakukan dengan membandingkan *predictive state* DT dengan hasil *prob
 ### 4.1 Skenario: Lini Perakitan Modul Baterai EV dengan Jaringan 5G Private
 
 **Asumsi sistem:**
-- Lini perakitan *battery module* untuk
+- Lini perakitan *battery module* untuk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

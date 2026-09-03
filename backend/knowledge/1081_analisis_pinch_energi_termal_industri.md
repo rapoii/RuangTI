@@ -118,3 +118,6 @@ Riset di masa depan harus fokus pada pengembangan teknologi baru untuk meningkat
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai optimalisasi analisis pinch energi termal untuk sistem pemulihan energi limbah pada proses industri berbasis ORC, mencakup teori, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan praktik industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -90,3 +90,6 @@ Otomatisasi proses thermal aseptik tidak hanya relevan dalam industri makanan da
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti kebutuhan untuk pelatihan tenaga kerja dan biaya investasi awal yang tinggi. Ke depan, penelitian dapat difokuskan pada pengembangan algoritma AI yang lebih canggih untuk memprediksi dan mengoptimalkan proses thermal aseptik secara real-time.
 
 Dengan demikian, otomatisasi proses thermal aseptik menggunakan robotika dan AI tidak hanya menawarkan solusi untuk tantangan saat ini, tetapi juga membuka jalan untuk inovasi dan peningkatan berkelanjutan dalam industri yang sangat diatur ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

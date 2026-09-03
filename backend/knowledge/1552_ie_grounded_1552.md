@@ -46,4 +46,7 @@ $$Z_3 = \min \sum_{i \in I} \sum_{j \in J} e_{ij} x_{ij} + \sum_{j \in J} \sum_{
 
 ### 2.4 Kendala Operasional
 
-Kendala model terdiri dari: (i) **kendala suplai** $\sum_{j \in J} x_{ij} \leq s_i, \forall i$; (ii) **kendala kapasitas** $\sum_{i \in I} x_{ij} + v_{j,t-1} - v_{jt} = \sum_{k \in K} \sum_{l \
+Kendala model terdiri dari: (i) **kendala suplai** $\sum_{j \in J} x_{ij} \leq s_i, \forall i$; (ii) **kendala kapasitas** $\sum_{i \in I} x_{ij} + v_{j,t-1} - v_{jt} = \sum_{k \in K} \sum_{l \$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

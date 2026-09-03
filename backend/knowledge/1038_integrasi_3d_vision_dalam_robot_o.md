@@ -108,3 +108,6 @@ Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti ket
 Ke depan, arah riset dapat difokuskan pada pengembangan sistem yang lebih adaptif dan cerdas, yang mampu belajar dari pengalaman dan meningkatkan kinerjanya seiring waktu. Selain itu, integrasi dengan teknologi seperti kecerdasan buatan dan pembelajaran mesin dapat membuka peluang baru dalam otomatisasi proses industri.
 
 Dengan demikian, penerapan teknologi penglihatan 3D dalam robot otonom untuk bin-picking tidak hanya meningkatkan efisiensi operasional, tetapi juga berkontribusi pada inovasi dan perkembangan industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

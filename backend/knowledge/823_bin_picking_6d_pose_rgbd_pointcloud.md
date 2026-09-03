@@ -116,3 +116,6 @@ Pengembangan teknologi robot otonom dalam pengambilan acak memiliki implikasi lu
 Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih robust untuk estimasi pose dan perencanaan gerakan, serta integrasi dengan sistem manajemen rantai pasok yang lebih cerdas. Standar keselamatan seperti ISO 15066 juga perlu diperbarui untuk mencakup teknologi baru dalam interaksi manusia-robot.
 
 Dengan demikian, pengembangan sistem robot otonom yang canggih dan aman akan menjadi kunci dalam menghadapi tantangan industri masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

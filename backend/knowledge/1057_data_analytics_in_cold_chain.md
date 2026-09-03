@@ -85,3 +85,6 @@ Penerapan data analytics dalam cold chain logistics tidak hanya relevan untuk in
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti kualitas data yang dikumpulkan dan kemampuan sistem untuk menganalisis data secara akurat. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih canggih dan sistem yang lebih terintegrasi.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi blockchain untuk meningkatkan transparansi dan keamanan dalam cold chain logistics, serta penerapan kecerdasan buatan untuk analisis prediktif yang lebih akurat. Dengan demikian, integrasi data analytics dalam cold chain logistics akan terus menjadi fokus utama dalam meningkatkan efisiensi dan efektivitas operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

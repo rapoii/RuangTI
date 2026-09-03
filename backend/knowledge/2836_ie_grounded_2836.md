@@ -121,4 +121,7 @@ dengan $\epsilon$ decay: $\epsilon_t = \epsilon_{min} + (\epsilon_{max} - \epsil
 └─────────────────┘    └──────────────────┘    └─────────────────┘
 ```
 
-### 3.3 SOP Kesel
+### 3.3 SOP Kesel.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

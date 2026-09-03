@@ -118,4 +118,7 @@ Analisis kinerja CPPS dan penerapan digital twin memiliki implikasi luas di berb
 
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan real-time serta tantangan dalam integrasi sistem. Untuk masa depan, penelitian lebih lanjut diperlukan untuk mengatasi batasan ini dan mengeksplorasi aplikasi baru dari digital twin dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (ESG).
 
-Dengan demikian, pemahaman yang mendalam tentang analisis kinerja CPPS dan penerapan digital twin sangat penting bagi profesional teknik industri untuk menghadapi tantangan dan memanfaatkan peluang dalam industri modern.
+Dengan demikian, pemahaman yang mendalam tentang analisis kinerja CPPS dan penerapan digital twin sangat penting bagi profesional teknik industri untuk menghadapi tantangan dan memanfaatkan peluang dalam industri modern.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

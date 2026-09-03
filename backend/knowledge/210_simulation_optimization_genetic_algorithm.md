@@ -125,3 +125,6 @@ Wang et al. (2024) proposed a hierarchical surrogate framework combining global 
 - Deb, K. (2024). *Multi-Objective Optimization Using Evolutionary Algorithms* (3rd ed.). Wiley.
 
 </parameter>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

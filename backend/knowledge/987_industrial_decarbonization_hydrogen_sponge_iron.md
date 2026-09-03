@@ -105,4 +105,7 @@ Transisi menuju H-DRI tidak hanya berdampak pada industri baja, tetapi juga memi
 
 Keterkaitan dengan disiplin lain seperti Supply Chain Management dan Teknik Otomasi juga penting, karena efisiensi dalam rantai pasok dapat mengurangi biaya dan meningkatkan keberlanjutan. Selain itu, penelitian lebih lanjut diperlukan untuk mengatasi batasan metodologi saat ini dan mengeksplorasi inovasi baru dalam teknologi pengurangan besi.
 
-Dalam jangka panjang, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan berkelanjutan, serta pengurangan biaya produksi untuk mencapai paritas CAPEX/OPEX yang diinginkan.
+Dalam jangka panjang, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan berkelanjutan, serta pengurangan biaya produksi untuk mencapai paritas CAPEX/OPEX yang diinginkan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

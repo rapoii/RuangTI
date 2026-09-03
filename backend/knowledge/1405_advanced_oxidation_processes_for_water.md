@@ -71,4 +71,7 @@ dengan regularisasi L2 ($\lambda$) untuk mencegah *overfitting*. Pendekatan ini 
 
 ## 3. Metodologi Rekayasa & Standar Prosedur Operasional (SOP)
 
-Hübner dkk. (2024) mengusulkan kerangka SOP yang terdiri dari **lima tahap utama** untuk memastikan eksperimen AOPs yang *scalable
+Hübner dkk. (2024) mengusulkan kerangka SOP yang terdiri dari **lima tahap utama** untuk memastikan eksperimen AOPs yang *scalable.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

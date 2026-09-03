@@ -118,3 +118,6 @@ Pemodelan stabilitas lereng 3D menggunakan metode elemen hingga memiliki aplikas
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada akurasi data geologi dan asumsi material yang mungkin tidak selalu mencerminkan kondisi lapangan. Oleh karena itu, penelitian lebih lanjut perlu dilakukan untuk mengembangkan model yang lebih adaptif dan akurat, serta integrasi teknologi baru seperti pemantauan real-time dan analisis data besar.
 
 Standar masa depan dalam pemodelan stabilitas lereng harus mencakup pengembangan protokol untuk integrasi data geospasial dan penggunaan algoritma pembelajaran mesin untuk meningkatkan prediksi stabilitas lereng dalam kondisi geologi yang kompleks. Dengan demikian, industri dapat mengoptimalkan operasi dan meminimalkan risiko yang terkait dengan stabilitas lereng.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

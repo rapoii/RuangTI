@@ -118,3 +118,6 @@ Interval Type-2 FS simplifies to footprint of uncertainty (FOU) bounded by upper
 - Wang, L.X. (2025). Adaptive fuzzy systems and control: Recent advances in stability and performance. *IEEE Transactions on Fuzzy Systems*, 33(2), 456-472.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

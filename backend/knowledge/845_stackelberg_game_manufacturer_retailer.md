@@ -119,3 +119,6 @@ Arah riset masa depan dapat mencakup pengembangan model yang lebih kompleks yang
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang penggunaan teori permainan dalam desain kontrak rantai pasok, dengan fokus pada model Stackelberg dinamis. Dengan memahami dan menerapkan konsep-konsep ini, praktisi di bidang teknik industri dapat meningkatkan efisiensi dan efektivitas rantai pasok mereka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

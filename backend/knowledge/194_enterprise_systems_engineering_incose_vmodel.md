@@ -85,3 +85,6 @@ Consider a smart assembly line:
 -   Journal of Systems Engineering (2023). "Application of V-Model in industrial automation systems".
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

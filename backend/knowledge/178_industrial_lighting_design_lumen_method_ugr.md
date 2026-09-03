@@ -101,3 +101,6 @@ Field verification uses calibrated lux meters (Class I per ISO/CIE 19476) and sp
 6.  **Zhao, J., & Liu, Y.** (2025). "Dynamic lighting control strategies for energy-efficient industrial facilities considering both visual and non-visual requirements." *Energy and Buildings*, 328, 115142.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

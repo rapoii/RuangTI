@@ -106,3 +106,6 @@ Strategi pengendalian multi-agent tidak hanya relevan dalam konteks manufaktur t
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada data yang akurat dan real-time. Oleh karena itu, riset masa depan perlu fokus pada pengembangan algoritma yang lebih adaptif dan robust, serta integrasi dengan teknologi baru seperti Internet of Things (IoT) dan kecerdasan buatan (AI).
 
 Dengan demikian, penerapan strategi pengendalian multi-agent diharapkan dapat menjadi standar masa depan dalam pengelolaan fleet AMR, meningkatkan efisiensi dan keselamatan di lingkungan pabrik yang kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

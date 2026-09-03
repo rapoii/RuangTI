@@ -104,3 +104,6 @@ Namun, terdapat batasan metodologi yang perlu diperhatikan, seperti variabilitas
 Ke depan, riset dapat difokuskan pada integrasi teknologi pupillometry dengan sistem manajemen informasi untuk memberikan umpan balik real-time kepada pekerja dan manajer, serta pengembangan algoritma yang lebih canggih untuk analisis data yang lebih mendalam.
 
 Dengan demikian, pupillometry menawarkan potensi besar dalam penilaian beban kerja di lingkungan berisiko tinggi, dan dapat menjadi alat yang berharga untuk meningkatkan keselamatan dan produktivitas di tempat kerja.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

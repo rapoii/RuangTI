@@ -150,4 +150,7 @@ Hasil observasi 385 kali pada populasi operator menunjukkan distribusi proporsi 
 | Sortasi fisik | 0,18 | 0,18 ± 0,041 |
 | *Troubleshooting* aplikasi | 0,06 | 0,06 ± 0,025 |
 
-Contoh kalkulasi *confidence interval* untuk aktivitas *sc
+Contoh kalkulasi *confidence interval* untuk aktivitas *sc.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

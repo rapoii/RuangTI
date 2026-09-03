@@ -62,4 +62,7 @@ $$w_m = \sum_{k \in K} \alpha_{m,k} z_k \quad \forall m \in M \quad \text{(recov
 
 ### 2.3 Formulasi *Robust Optimization* (Shin, Kim & Jeong, 2024)
 
-Untuk mengatasi ketidakpastian return rate $R$ dan proporsi kualitas lot $\xi$, model SHIN, KIM & JEONG (2024) mengadopsi **two-stage robust formulation** dengan
+Untuk mengatasi ketidakpastian return rate $R$ dan proporsi kualitas lot $\xi$, model SHIN, KIM & JEONG (2024) mengadopsi **two-stage robust formulation** dengan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

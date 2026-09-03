@@ -131,4 +131,7 @@ $$\text{Total benefit per tahun} \approx USD\ 2{,}77\ juta$$
 
 $$NPV = \sum_{t=1}^{10} \frac{2.770.000 - 12.000 \times 50}{(1{,}08)^t} - 85.000 \times 50$$
 
-Benefit bersih tahunan: $2.770.000 - 600.000 = USD\ 2.170.000$. Capex total: USD 4
+Benefit bersih tahunan: $2.770.000 - 600.000 = USD\ 2.170.000$. Capex total: USD 4.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

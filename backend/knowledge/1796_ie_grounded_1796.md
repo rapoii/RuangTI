@@ -162,3 +162,6 @@ Implementasi motion planning RL di lingkungan industri mengikuti SOP enam tahap 
 
 | Step | $s_t$ | $a_t$ | $r_t$ | $s_{t+1}$ | $Q(s_t,a_t)$ lama | $Q(s_t,a_t)$ baru |
 |------|--------|--------|--------|-----------|-------------------|----------------
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

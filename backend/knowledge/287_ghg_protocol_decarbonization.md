@@ -46,3 +46,6 @@ Module 280 (Sustainability Engineering & LCA), Module 283 (Internal Carbon Prici
 2. IPCC. (2022). *Climate Change 2022: Mitigation of Climate Change* (AR6 WGIII), Chapter 11 — Industry; Chapter 12 — Cross-sectoral perspectives.
 3. Global CCS Institute. (2023). *Global Status of CCS Report*.
 4. Applied Energy (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

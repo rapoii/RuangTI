@@ -71,3 +71,6 @@ Validated instruments include the **Safety Attitudes Questionnaire (SAQ)** and t
 6.  **Niskanen, J., et al.** (2023). "The relationship between safety climate and safety performance in the chemical industry: A longitudinal study." *Journal of Safety Research*, 87, 45-58.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

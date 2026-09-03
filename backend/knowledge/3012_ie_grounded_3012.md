@@ -151,4 +151,7 @@ Sebuah Automated Guided Vehicle (AGV) beroperasi di gudang e-commerce $10 \times
 
 Parameter:
 - Aksi diskret: Atas (↑), Bawah (↓), Kiri (←), Kanan (→)
-- Learning rate $\alpha =
+- Learning rate $\alpha =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

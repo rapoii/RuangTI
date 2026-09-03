@@ -97,3 +97,6 @@ Analisis big data tidak hanya relevan dalam konteks manufaktur, tetapi juga memi
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti kualitas data yang buruk dan kurangnya keterampilan analitis di dalam organisasi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang lebih baik untuk mengelola dan menganalisis data, serta pelatihan untuk meningkatkan keterampilan analitis di kalangan tenaga kerja.
 
 Dengan demikian, penerapan analisis big data dalam CPPS merupakan langkah strategis yang dapat memberikan keuntungan kompetitif bagi perusahaan di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

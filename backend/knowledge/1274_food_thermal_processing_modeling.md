@@ -120,3 +120,6 @@ Ke depan, arah riset dapat difokuskan pada pengembangan algoritma yang lebih efi
 --- 
 
 Dokumen ini menyajikan pemahaman mendalam tentang modeling dan simulasi proses thermal dalam pengolahan makanan aseptik dengan pendekatan neural networks, sesuai dengan standar dan referensi yang berlaku.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

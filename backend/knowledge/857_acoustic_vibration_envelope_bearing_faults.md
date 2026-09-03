@@ -117,3 +117,6 @@ Arah riset masa depan dapat mencakup integrasi teknik ini dengan teknologi kecer
 ---
 
 Dokumen ini memberikan gambaran mendalam mengenai teknik HFRT dan analisis kurtosis spektral dalam diagnosis kerusakan bearing, serta relevansinya dalam konteks industri modern. Diharapkan modul ini dapat menjadi referensi yang berguna bagi para profesional di bidang teknik industri dan rekayasa sistem industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

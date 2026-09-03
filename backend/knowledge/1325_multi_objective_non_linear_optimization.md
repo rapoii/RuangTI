@@ -116,4 +116,7 @@ Namun, metodologi ini juga memiliki batasan, seperti kesulitan dalam menangani m
 
 Dengan meningkatnya perhatian terhadap keberlanjutan dan tanggung jawab sosial perusahaan (CSR), integrasi aspek K3 dan ESG dalam model optimasi juga menjadi penting. Hal ini akan membantu perusahaan tidak hanya dalam mencapai efisiensi operasional tetapi juga dalam memenuhi ekspektasi pemangku kepentingan dan regulasi yang berlaku.
 
-Dengan demikian, optimasi kombinatorial non-linier multi-objektif akan terus menjadi area penelitian yang relevan dan penting dalam konteks manufaktur cerdas dan industri masa depan.
+Dengan demikian, optimasi kombinatorial non-linier multi-objektif akan terus menjadi area penelitian yang relevan dan penting dalam konteks manufaktur cerdas dan industri masa depan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -107,3 +107,6 @@ Pengukuran stres dalam wafer tidak hanya relevan untuk industri semikonduktor, t
 Namun, metodologi ini juga memiliki batasan. Misalnya, ketergantungan pada model matematis yang tepat dan asumsi material yang homogen dapat mempengaruhi akurasi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik yang lebih adaptif dan akurat.
 
 Arah riset masa depan dapat mencakup pengembangan metode pengukuran non-destruktif yang lebih canggih dan integrasi teknologi sensor pintar untuk pemantauan real-time. Dengan demikian, industri dapat lebih proaktif dalam mengelola kualitas dan integritas produk, mengurangi risiko kegagalan dan meningkatkan efisiensi operasional secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

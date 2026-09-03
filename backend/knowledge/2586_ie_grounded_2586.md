@@ -52,3 +52,6 @@ $$\alpha(T) = \left[1 + \kappa\!\left(1 - \sqrt{T/T_c}\right)\right]^2, \quad \k
 dengan $\omega = 0{,}225$ untuk CO₂. Pada $T = 313$ K dan $P = 25$ MPa, nilai $Z = PV_m/RT \approx 0{,}55$ dan $\rho \approx 830$ kg/m³.
 
 ### 2.4. Model Perpindahan Massa (Kinetika Ekstraksi)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

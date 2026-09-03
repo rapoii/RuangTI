@@ -108,3 +108,6 @@ Penggunaan exoskeleton tidak hanya terbatas pada sektor logistik, tetapi juga da
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti kebutuhan untuk penelitian lebih lanjut mengenai dampak jangka panjang penggunaan exoskeleton terhadap kesehatan pekerja. Arah riset masa depan dapat fokus pada pengembangan teknologi yang lebih terjangkau dan adaptif, serta integrasi dengan sistem otomasi dan IoT untuk meningkatkan efisiensi operasional.
 
 Dengan demikian, analisis penggunaan exoskeleton dalam rantai pasokan dan logistik menunjukkan potensi yang signifikan untuk meningkatkan kinerja, keselamatan, dan efisiensi dalam industri, yang sejalan dengan tuntutan dan tantangan yang dihadapi oleh sektor ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

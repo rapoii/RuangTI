@@ -142,3 +142,7 @@ dengan $\theta = 1$ (rasio konversi jam terbang ke jam kalender). Total downtime
 Dengan asumsi $T_A = 500$ FH (downtime 6 jam), $T_B = 1.800$ FH (downtime 48 jam), $T_C = 6.000$ FH (downtime 36 jam), $T_D = 24.000$ FH (downtime 720 jam):
 
 $$\mathcal{A}_{fleet} = \frac{500 \cdot 3,2}{500 \cdot 3,2 + 6} \cdot \frac{1.800 \cdot 3,2}{1.800 \cdot 3,2
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

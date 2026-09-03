@@ -126,3 +126,6 @@ Lyophilization tidak hanya relevan dalam industri farmasi, tetapi juga memiliki 
 Namun, tantangan tetap ada, termasuk kebutuhan untuk mematuhi regulasi yang ketat dan pengembangan teknologi baru yang lebih efisien. Penelitian masa depan harus fokus pada pengembangan model prediktif yang lebih akurat untuk transfer panas dan massa, serta eksplorasi material baru yang dapat meningkatkan stabilitas produk.
 
 Dengan demikian, desain siklus lyophilization yang efektif memerlukan pendekatan interdisipliner yang menggabungkan teknik industri, ilmu material, dan manajemen rantai pasok untuk mencapai hasil yang optimal dan memenuhi tuntutan industri yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

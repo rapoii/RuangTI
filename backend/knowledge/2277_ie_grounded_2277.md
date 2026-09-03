@@ -119,4 +119,7 @@ JIANG & TANG (2025) serta Shin, Kim & Jeong (2024) bersama-sama menyusun kerangk
 3. **Dokumentasi Digital**: blockchain-based battery passport sesuai GB/T 34014-2017 mencakup data manufacturing date, cycle history, thermal event log.
 
 ### SOP-02: Pengujian, Sortasi & Klasifikasi SOH
-1. **Capacity Test**: cyclic charge-discharge pada C/3 rate selama
+1. **Capacity Test**: cyclic charge-discharge pada C/3 rate selama$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

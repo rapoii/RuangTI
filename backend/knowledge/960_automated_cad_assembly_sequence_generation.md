@@ -126,3 +126,6 @@ Perencanaan urutan perakitan mekanik tidak hanya relevan dalam industri manufakt
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas komputasi yang tinggi dan ketergantungan pada akurasi data input. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih efisien dan adaptif.
 
 Ke depan, integrasi teknologi seperti kecerdasan buatan dan pembelajaran mesin dapat meningkatkan kemampuan perencanaan urutan perakitan, memungkinkan sistem untuk belajar dari data historis dan meningkatkan akurasi perencanaan. Penelitian di bidang ini diharapkan dapat menghasilkan solusi inovatif yang mendukung efisiensi dan efektivitas dalam proses perakitan mekanik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

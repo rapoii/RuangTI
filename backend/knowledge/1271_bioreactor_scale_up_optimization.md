@@ -120,3 +120,6 @@ Penerapan algoritma genetika dalam optimasi kLa tidak hanya terbatas pada indust
 Batasan dari metodologi ini termasuk ketergantungan pada kualitas data dan asumsi yang dibuat dalam model matematis. Oleh karena itu, riset masa depan harus fokus pada pengembangan metode pengumpulan data yang lebih baik dan algoritma yang lebih adaptif untuk menghadapi variabilitas dalam proses industri.
 
 Dengan demikian, strategi scale-up bioreaktor berbasis data yang mengintegrasikan algoritma genetika dapat menjadi solusi inovatif untuk tantangan yang dihadapi industri saat ini, dengan potensi untuk meningkatkan efisiensi dan keberlanjutan dalam produksi bioteknologi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

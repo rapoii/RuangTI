@@ -128,4 +128,7 @@ Misal hasil *screening* Scopus/WoS terhadap kata kunci `("digital twin" AND "ope
 - **Klaster B:** `IoT`–`Predictive Maintenance` ($S_{CD} = 0{,}82$)
 - **Klaster C:** `Machine Learning`–`Anomaly Detection` ($S_{EF} = 0{,}74$)
 - **Klaster D:** `XR`–`Worker Training` ($S_{GH} = 0{,}68$)
-- **Klaster E:**`Energy Optimization
+- **Klaster E:**`Energy Optimization.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

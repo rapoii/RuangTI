@@ -101,3 +101,6 @@ Teknik optimasi kombinatorial non-linier untuk penjadwalan pekerjaan tidak hanya
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas komputasi yang tinggi dan kebutuhan untuk data yang akurat. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan penerapan teknik pembelajaran mesin untuk meningkatkan akurasi prediksi dalam penjadwalan.
 
 Dengan demikian, pemahaman yang mendalam tentang teknik optimasi kombinatorial non-linier dan aplikasinya dalam penjadwalan pekerjaan multi-objektif sangat penting untuk meningkatkan efisiensi dan daya saing di era industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

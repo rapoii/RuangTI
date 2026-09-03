@@ -101,4 +101,7 @@ Diagram alir proses rekayasa mengikuti pola: DoE → IQ/OQ → Akuisisi → Anal
 **Studi Kasus:** Vial 10R (luas $A_v = 3{,}80 \times 10^{-4}$ m²) berisi 5 mL larutan protein 50 mg/mL pada rak liofilizer produksi. Parameter awal: $T_{shelf} = -15$ °C, $T_b$ target = -28 °C, $P_c = 10$ Pa. Kita akan menghitung (a) laju sublimasi awal, (b) durasi *primary drying*, dan (c) laju data WSN.
 
 **Langkah 1 — Hitung $P_{ice}(-28\,\text{°C})$ dengan Persamaan (3):**
-$\
+$\$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

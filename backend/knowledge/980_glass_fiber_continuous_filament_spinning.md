@@ -107,3 +107,6 @@ Proses penarikan serat kaca tidak hanya relevan dalam industri material, tetapi 
 Batasan metodologi saat ini mencakup ketergantungan pada parameter suhu dan viskositas yang sulit dikendalikan secara real-time. Penelitian masa depan dapat berfokus pada pengembangan sensor canggih dan algoritma kontrol untuk memantau dan mengoptimalkan proses secara dinamis.
 
 Dalam kesimpulannya, pemahaman yang mendalam tentang proses penarikan serat kaca, dari aliran viskositas hingga keandalan patah filamen, sangat penting untuk meningkatkan kualitas dan efisiensi produksi. Dengan mengikuti standar industri yang ada dan terus berinovasi, industri serat kaca dapat memenuhi tuntutan pasar yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

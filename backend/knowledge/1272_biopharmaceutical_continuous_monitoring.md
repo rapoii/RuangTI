@@ -95,3 +95,6 @@ Pengembangan sistem monitoring berkelanjutan tidak hanya relevan untuk industri 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan untuk infrastruktur teknologi yang canggih dan keterampilan tenaga kerja yang memadai. Selain itu, tantangan dalam keamanan data dan privasi informasi juga perlu diperhatikan, sesuai dengan standar ISO/IEC 27001:2022.
 
 Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data, integrasi sistem yang lebih baik antara berbagai teknologi, dan penerapan prinsip keberlanjutan dalam proses produksi. Dengan demikian, industri biopharmaceutical dapat terus berinovasi dan beradaptasi dengan perubahan kebutuhan pasar.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

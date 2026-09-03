@@ -97,4 +97,7 @@ Where "Expanded NPV" includes the value of managerial flexibility.
 -   Journal of Operations Management (2024). "Real options in industrial project portfolio management".
 -   International Journal of Production Economics (2023). "Knapsack-based project selection in manufacturing".
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

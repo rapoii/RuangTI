@@ -115,3 +115,6 @@ Penerapan algoritma genetika dalam optimisasi rute logistik perishable memiliki 
 Namun, ada beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kompleksitas perhitungan yang meningkat seiring dengan bertambahnya jumlah lokasi. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi dengan teknologi pembelajaran mesin untuk meningkatkan akurasi prediksi permintaan dan kondisi transportasi.
 
 Dengan demikian, optimisasi rute menggunakan algoritma genetika dan pembelajaran mesin tidak hanya menjanjikan efisiensi dalam logistik perishable, tetapi juga membuka peluang untuk inovasi lebih lanjut dalam manajemen rantai pasok yang berkelanjutan dan responsif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

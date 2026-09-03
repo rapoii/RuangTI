@@ -108,3 +108,6 @@ Integrasi OPC UA dalam konteks ANSI/ISA-95 tidak hanya terbatas pada sektor manu
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kompleksitas implementasi dan kebutuhan untuk pelatihan sumber daya manusia. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang lebih sederhana untuk implementasi OPC UA, serta penelitian lebih lanjut mengenai dampak teknologi ini terhadap kinerja organisasi secara keseluruhan.
 
 Dengan demikian, pemahaman yang mendalam tentang spesifikasi pendamping OPC UA dan penerapannya dalam konteks ANSI/ISA-95 akan menjadi kunci untuk mencapai integrasi yang sukses antara sistem enterprise dan shopfloor di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

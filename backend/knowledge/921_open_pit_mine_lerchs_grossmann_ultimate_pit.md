@@ -153,3 +153,6 @@ Optimasi batas open-pit tidak hanya relevan dalam industri pertambangan tetapi j
 Namun, ada batasan dalam metodologi ini, termasuk ketidakpastian dalam estimasi biaya dan harga pasar, serta kompleksitas dalam pengambilan keputusan yang melibatkan banyak variabel. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih robust dan adaptif terhadap perubahan kondisi pasar dan lingkungan.
 
 Ke depan, integrasi teknologi seperti kecerdasan buatan dan analitik data besar dapat meningkatkan akurasi dan efisiensi dalam perencanaan tambang. Dengan demikian, optimasi batas open-pit akan terus menjadi area penelitian yang penting dan relevan dalam konteks industri yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

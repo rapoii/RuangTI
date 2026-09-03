@@ -87,4 +87,7 @@ Sebagai ilustrasi, tinjau unit LHTES–shell-and-tube dengan parameter berikut (
 - Panjang tube efektif: $L = 1{,}5\ \mathrm{m}$, jumlah tube: $N_t = 18$ (konfigurasi triangular pitch)
 - Diameter shell: $D_s = 0{,}16\ \mathrm{m}$
 - PCM: eutectic salt hidrat dengan $T_m = 222°C$, $\Delta h_f = 180\ \mathrm{kJ/kg}$, $c_{p} = 1{,}8\ \mathrm{kJ/kg\cdot K}$, $\rho_{PCM} = 1850\ \mathrm{kg/m^3}$, $k_{PCM} = 0{,}5\ \mathrm{W/m\cdot K}$
-- HTF: *thermal oil*, $\dot{m}_{HTF} = 0{,}06\ \mathrm{kg/s}$ per tube, $c_{p,HTF} = 2{,}3\ \mathrm{kJ/kg\cdot K}$, $k_{HTF} = 0{,}11\ \mathrm{W
+- HTF: *thermal oil*, $\dot{m}_{HTF} = 0{,}06\ \mathrm{kg/s}$ per tube, $c_{p,HTF} = 2{,}3\ \mathrm{kJ/kg\cdot K}$, $k_{HTF} = 0{,}11\ \mathrm{W$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -170,3 +170,7 @@ Total permintaan harian: Fresh Milk = 99.000, Yogurt = 32.500, Cheese = 16.300.
 **MP Iterasi 0 (Inisialisasi):** Hanya kendala integer, tanpa cuts. Solusi LP relaxation membuka semua fasilitas:
 
 $$Z_{MP}^{LB,0} = 12.0 + 9.5 + 14.0 + 8.0 + 3.0 + 2.5 + 2.8 + 2.2 + 1.9 = 55.9
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -115,4 +115,7 @@ Setelah implementasi *action item* berupa *predictive maintenance* dengan *onlin
 
 $$\Delta C_{annual} = 8 \times (5-3) \times 12.500 \times 0{,}10 = USD\,20.000$$
 
-(koefisien 0,10 mere
+(koefisien 0,10 mere.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

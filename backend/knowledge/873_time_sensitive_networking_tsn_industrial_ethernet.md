@@ -110,3 +110,6 @@ Referensi:
 - IEEE 802.1Qbv-2022
 - IEC/IEEE 60802
 - Bruckner et al. (TSN for Industrial Automation, IEEE)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -107,3 +107,6 @@ Integrasi bioenergi dan CCUS memiliki implikasi luas di berbagai disiplin ilmu, 
 Namun, terdapat batasan metodologi yang perlu diperhatikan, seperti variabilitas pasokan biomassa dan tantangan teknis dalam pengoperasian sistem CCUS. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengatasi masalah ini dan mengembangkan teknologi yang lebih efisien.
 
 Arah riset masa depan harus fokus pada peningkatan efisiensi konversi energi, pengembangan teknologi penangkapan yang lebih murah, dan pengoptimalan rantai pasok biomassa. Dengan pendekatan yang tepat, integrasi bioenergi dan CCUS dapat menjadi kunci untuk mencapai tujuan keberlanjutan industri dan mengurangi jejak karbon secara signifikan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

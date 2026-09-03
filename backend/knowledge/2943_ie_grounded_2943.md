@@ -106,4 +106,7 @@ Studi kasus diambil dari data Amirullah dan Jakaria (2024) dengan penyesuaian pa
 
 **Tahap 1 — Baseline Produk Lama.** Produk lama memiliki 9 part dengan rincian: 1 bodi silinder (sheet metal 1,0 mm), 1 tutup dengan 4 lubang saringan (sheet metal 0,8 mm), 4 kaki penyangga (batang stainless ⌀4 mm), 1 pegangan (kawat stainless ⌀3 mm), 1 ring pengunci, dan 1 baut M3. Massa total = 142 gram. Waktu perakitan aktual = 168 detik/unit. Cacat perakitan = 6,5% (kebanyakan karena salah orientasi kaki). Biaya material per unit = Rp. 18.200. Biaya fabrikasi (laser + bending) per unit = Rp. 7.500. Biaya perakitan per unit = Rp. 1,25 × 168 × 2,0 = Rp. 420. Total biaya produksi = Rp. 26.120/unit.
 
-**Tahap 2 — Penerapan DfA.** Hasil analisis DfA menunjukkan
+**Tahap 2 — Penerapan DfA.** Hasil analisis DfA menunjukkan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

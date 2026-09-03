@@ -162,4 +162,7 @@ Mengacu pada data operasional hipotetis yang realistis untuk pasar baterai EV In
 | $\gamma_0$ | 0,9 | unit/\$ | Kalibrasi |
 | $c_m$ | 95 | \$/unit | BloombergNEF |
 | $c_e$ | 18 | \$/unit | JIANG & TANG (2025) |
-|
+|$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -143,3 +143,8 @@ Karena $L_{e2e} = 3{,}25\,\text{ms} > L_{max}$, maka sistem memerlukan optimasi.
 Penerapan *Scheduling Request* dengan *preemption* (3GPP TS 38.214) menurunkan $L_{radio}$ menjadi $\approx 0{,}125\,\text{ms}$ (1 simbol OFDM):
 
 $$L_{e2e}^{opt} = 1{,}2 + 0
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

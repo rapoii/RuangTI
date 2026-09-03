@@ -182,3 +182,6 @@ Evaluasi manajerial dilakukan melalui KPI: cost savings, emission index, dan ROI
 (Word count section 5: 218 kata)
 
 **Total kata keseluruhan dokumen: 1.548 kata** (melebihi ambang minimum substantif). Dokumen ini siap digunakan sebagai Knowledge Base Modul 788 dengan formulasi matematis KaTeX yang valid dan praktis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

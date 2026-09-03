@@ -88,3 +88,6 @@ Ketahanan rantai pasok tidak hanya relevan dalam konteks industri makanan, tetap
 Di masa depan, penelitian dapat diarahkan pada pengembangan model prediktif yang lebih canggih menggunakan teknologi seperti machine learning untuk menganalisis data historis dan memprediksi risiko. Selain itu, integrasi prinsip keberlanjutan dalam desain rantai pasok akan menjadi semakin penting, sejalan dengan meningkatnya kesadaran akan tanggung jawab sosial dan lingkungan.
 
 Dengan demikian, pendekatan berbasis resiliensi dalam rantai pasok tidak hanya akan membantu perusahaan menghadapi tantangan perubahan iklim, tetapi juga meningkatkan daya saing dan keberlanjutan jangka panjang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

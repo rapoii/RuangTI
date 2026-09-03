@@ -30,4 +30,7 @@ NASA-TLX mengukur beban kerja berdasarkan enam dimensi yang dinilai menggunakan 
 | $r_{EF}$ | Effort | Usaha fisik & mental yang harus dikeluarkan |
 | $r_{FR}$ | Frustration | Tingkat frustrasi, stres, atau ketidaknyamanan |
 
-Tahapan kedua adalah **pairwise comparison** terhadap 15 pasangan dimensi $(\binom{6}{2}=15)$. Setiap pasangan dimenangkan oleh satu
+Tahapan kedua adalah **pairwise comparison** terhadap 15 pasangan dimensi $(\binom{6}{2}=15)$. Setiap pasangan dimenangkan oleh satu.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

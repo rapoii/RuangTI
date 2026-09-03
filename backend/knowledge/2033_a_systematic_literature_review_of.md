@@ -86,3 +86,7 @@ Berdasarkan sintesis Stüve et al. (2022), implementasi APS di industri pangan m
 [FASE 3: S&OP Configuration]
    ↓
 [FASE 4: PP&S
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -130,3 +130,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin u
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai penetapan harga dinamis dan pengelolaan inventaris untuk produk farmasi yang mudah rusak, dengan penekanan pada penerapan teknologi modern dan metodologi yang sesuai dengan standar industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

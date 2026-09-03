@@ -77,3 +77,6 @@ Metodologi akuntansi karbon Scope 3 tidak hanya relevan untuk sektor manufaktur,
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketidakpastian dalam data yang dikumpulkan dan variabilitas faktor emisi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknik yang lebih baik untuk pengumpulan data dan estimasi emisi, serta integrasi teknologi seperti Internet of Things (IoT) dan big data untuk meningkatkan akurasi dan efisiensi dalam akuntansi karbon.
 
 Dengan demikian, pengembangan metodologi akuntansi karbon Scope 3 yang efektif dan efisien menjadi kunci untuk mencapai tujuan keberlanjutan dan memenuhi tuntutan regulasi yang semakin ketat di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

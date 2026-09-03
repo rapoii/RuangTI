@@ -119,4 +119,7 @@ $$\Delta COPQ_{total} \approx USD\ 1.728.000\ \text{per tahun}$$
 
 ### 4.4 Analisis Reliabilitas dengan Re-parameterisasi Laju Kegagalan
 
-Jika tindakan mitigasi menurunkan laju kegagalan $\
+Jika tindakan mitigasi menurunkan laju kegagalan $\$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

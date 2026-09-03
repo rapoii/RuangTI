@@ -52,3 +52,8 @@ $$e(t) = \| x_p(t) - x_v(t) \|_2 = \sqrt{\sum_{i=1}^{n} \left( x_{p,i}(t) - x_{v
 Untuk menjaga konsistensi, dilakukan re-sinkronisasi periodik dengan laju $f_s$ (Hz), dengan kebutuhan bandwidth komunikasi:
 
 $$BW_{DT} = n \cdot f_s \cdot (\text{bit
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

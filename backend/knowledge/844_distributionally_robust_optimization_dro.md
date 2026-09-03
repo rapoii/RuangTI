@@ -106,3 +106,6 @@ Pendekatan DRO memiliki aplikasi luas di berbagai sektor, termasuk rantai pasok,
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kompleksitas komputasi yang meningkat seiring dengan bertambahnya dimensi masalah dan ketergantungan pada asumsi distribusi yang mungkin tidak selalu akurat. Oleh karena itu, penelitian masa depan perlu fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi teknik pembelajaran mesin untuk meningkatkan akurasi model.
 
 Dengan demikian, pemahaman dan penerapan DRO dalam ekspansi kapasitas akan menjadi keterampilan yang sangat berharga bagi para profesional teknik industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

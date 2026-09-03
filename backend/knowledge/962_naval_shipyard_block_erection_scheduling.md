@@ -127,3 +127,6 @@ Riset di masa depan dapat difokuskan pada pengembangan algoritma optimasi yang l
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang penjadwalan perakitan blok lambung kapal komersial mega, dengan fokus pada graf kendala spasial, kapasitas crane, dan penyeimbangan beban kerja. Dengan mengikuti metodologi yang telah diuraikan, diharapkan dapat meningkatkan efisiensi dan produktivitas di galangan kapal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -99,3 +99,6 @@ Dengan mengacu pada standar ISO 14001:2022, perusahaan juga harus mempertimbangk
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang pengembangan sistem pemantauan berbasis digital twin untuk manufaktur berkelanjutan, mencakup aspek teoritis, metodologis, dan praktis yang diperlukan untuk implementasi yang sukses.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

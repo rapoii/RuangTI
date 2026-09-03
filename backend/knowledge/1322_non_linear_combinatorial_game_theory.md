@@ -133,3 +133,6 @@ Optimasi kombinatorial non-linier dalam teori permainan kooperatif tidak hanya r
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas perhitungan dan ketidakpastian data. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan algoritma yang lebih efisien dan robust untuk menangani masalah optimasi dalam konteks yang lebih kompleks.
 
 Dengan demikian, penerapan optimasi kombinatorial non-linier dalam teori permainan kooperatif menawarkan potensi besar untuk meningkatkan efisiensi alokasi sumber daya di berbagai sektor industri, sekaligus mendukung tujuan keberlanjutan dan tanggung jawab sosial.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

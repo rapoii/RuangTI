@@ -104,3 +104,7 @@ $$Y_{logic} = \left(1 + \frac{0.05 \times 1.0}{2.5}\right)^{-2.5} = (1.02)^{-2.5
 Untuk chiplet HBM (A₂ = 1.5 cm²):
 
 $$Y_{HBM} = (1.03)^{-2.5} =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

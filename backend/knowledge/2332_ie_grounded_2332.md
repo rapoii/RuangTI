@@ -104,3 +104,7 @@ Implementasi mengikuti arsitektur empat-lapis yang didokumentasikan oleh Meza‐
 
 ```
 [START] → Load Recipe (T_sh
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

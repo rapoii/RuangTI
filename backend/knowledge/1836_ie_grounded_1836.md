@@ -105,4 +105,7 @@ Meza‐Galvan et al. sendiri mengakui tiga limitasi utama: (i) **battery depleti
 
 ### 5.2 Aplikasi Lintas Sektor
 
-Arsitektur WSN yang sama dapat di-*transfer* ke: (a) **industri makanan** untuk *freeze-drying* kopi, buah, dan probiotik dengan compliance HACCP; (b) **industri bioteknologi** untuk preservasi sel punca dan jaringan biologis (*cryopreservation*); (c) **industri kimia halus** untuk drying k
+Arsitektur WSN yang sama dapat di-*transfer* ke: (a) **industri makanan** untuk *freeze-drying* kopi, buah, dan probiotik dengan compliance HACCP; (b) **industri bioteknologi** untuk preservasi sel punca dan jaringan biologis (*cryopreservation*); (c) **industri kimia halus** untuk drying k.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -103,3 +103,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Arah riset masa depan dapat mencakup pengembangan algoritma analisis data yang lebih canggih, penerapan kecerdasan buatan untuk prediksi dan pengambilan keputusan, serta integrasi sistem manajemen data dengan teknologi baru seperti Internet of Things (IoT) untuk meningkatkan efisiensi dan efektivitas dalam proyek konstruksi modular.
 
 Dengan demikian, penerapan strategi manajemen data yang efektif dalam 4D BIM akan menjadi kunci untuk mencapai keberhasilan dan keberlanjutan dalam industri konstruksi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

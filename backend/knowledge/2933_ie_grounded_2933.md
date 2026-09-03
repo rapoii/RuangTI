@@ -118,4 +118,7 @@ Implementasi *Mixed Integer Linear Programming* (MILP) dengan solver CPLEX 22.1 
 - Standar referensi: ISO 14001, ISO 45001, R2v3 (Responsible Recycling)
 
 ### Tahap 6: Carbon Footprint Accounting
-- *Life Cycle Assessment* (LCA) menggunakan software SimaPro 9
+- *Life Cycle Assessment* (LCA) menggunakan software SimaPro 9.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -85,4 +85,7 @@ Implementasi AAS Digital Twin untuk jaringan 5G mengikuti enam tahap SOP yang di
 
 **Tahap 3 — Pemodelan Antarmuka (Interface).** Ekspos submodel via *AAS API* (HTTP/REST + JSON atau OPC UA). Pilih dua mode: *Passive DT* (hanya melayani *read*) atau *Active DT* (menerima *write* untuk konfigurasi RAN parameter via AAS *Operation*).
 
-**Tahap 4 — Akuisisi Data Telemetri.** Pipeline: *RAN collector* (mis. E2 agent O-RAN
+**Tahap 4 — Akuisisi Data Telemetri.** Pipeline: *RAN collector* (mis. E2 agent O-RAN.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

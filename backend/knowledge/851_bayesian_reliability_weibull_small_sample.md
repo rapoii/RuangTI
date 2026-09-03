@@ -131,3 +131,6 @@ Estimasi keandalan Bayesian tidak hanya terbatas pada industri manufaktur, tetap
 Namun, ada batasan dalam metodologi ini, seperti ketergantungan pada pemilihan prior dan kompleksitas dalam implementasi MCMC. Penelitian di masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan teknik elisitasi prior yang lebih baik untuk meningkatkan akurasi estimasi.
 
 Dengan meningkatnya perhatian terhadap keberlanjutan dan ESG (Environmental, Social, and Governance), integrasi estimasi keandalan dengan analisis risiko dan manajemen biaya akan menjadi semakin penting. Oleh karena itu, pengembangan standar yang lebih baik dan praktik terbaik dalam estimasi keandalan akan menjadi fokus utama dalam penelitian dan aplikasi industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

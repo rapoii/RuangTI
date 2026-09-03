@@ -103,3 +103,6 @@ Leading platforms include Siemens Jack/Tecnomatix, Dassault DELMIA, AnyBody Mode
 5. Damsgaard, M., Rasmussen, J., Christensen, S. T., Surma, E., & de Zee, M. (2024). Analysis of musculoskeletal systems in the AnyBody Modeling System. *Simulation Modelling Practice and Theory*, 132, 102945.
 6. ISO 11226:2023. Ergonomics — Evaluation of static working postures. International Organization for Standardization.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

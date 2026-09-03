@@ -49,3 +49,6 @@ Di mana $\beta_{ii}$ merepresentasikan efek kuadratik (lengkungan respons).
 
 ### Aplikasi Teknik Industri:
 RSM banyak digunakan (seperti dalam studi Thakur et al., 2024) untuk mengoptimalkan parameter pemesinan (Kecepatan, *Feed Rate*, *Depth of Cut*) guna meminimalkan Kekasaran Permukaan ($R_a$) sekaligus memaksimalkan Material Removal Rate (MRR).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

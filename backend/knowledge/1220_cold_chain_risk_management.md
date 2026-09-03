@@ -87,4 +87,7 @@ Manajemen risiko dalam rantai dingin tidak hanya relevan untuk industri farmasi,
 
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketergantungan pada data historis yang mungkin tidak selalu mencerminkan kondisi masa depan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model prediktif yang lebih akurat dan adaptif, serta penerapan teknologi baru seperti kecerdasan buatan (AI) untuk analisis data besar.
 
-Dalam kesimpulan, pendekatan proaktif dalam manajemen risiko rantai dingin dengan memanfaatkan analisis data besar merupakan langkah yang sangat penting untuk meningkatkan efisiensi operasional dan mengurangi kerugian finansial. Dengan terus berinovasi dan mengadopsi teknologi terbaru, perusahaan dapat memastikan keberlanjutan dan daya saing di pasar yang semakin kompleks.
+Dalam kesimpulan, pendekatan proaktif dalam manajemen risiko rantai dingin dengan memanfaatkan analisis data besar merupakan langkah yang sangat penting untuk meningkatkan efisiensi operasional dan mengurangi kerugian finansial. Dengan terus berinovasi dan mengadopsi teknologi terbaru, perusahaan dapat memastikan keberlanjutan dan daya saing di pasar yang semakin kompleks.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

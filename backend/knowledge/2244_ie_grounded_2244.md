@@ -133,4 +133,7 @@ Sebuah fasilitas *e-commerce* di kawasan industri Cikarang memiliki 40 unit AMR 
 ###  Kala (2024) — Episode Reward Over Time
 import numpy as np
 
-class Q
+class Q.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

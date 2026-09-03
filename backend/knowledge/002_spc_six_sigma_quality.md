@@ -88,3 +88,6 @@ Peta kendali tidak hanya mendeteksi titik di luar batas kendali, melainkan 8 pol
 6. **Rule 6**: 4 dari 5 titik berurutan berada di luar zona $1\sigma$ pada satu sisi.
 7. **Rule 7**: 15 titik berurutan berada di dalam zona $1\sigma$ di kedua sisi (*stratification* / kesalahan kalkulasi batas).
 8. **Rule 8**: 8 titik berurutan berada di luar zona $1\sigma$ di kedua sisi tanpa ada titik di zona $1\sigma$ (*mixture* / dua mesin berbeda).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

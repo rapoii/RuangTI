@@ -123,3 +123,8 @@ $$Y_c = \left(1 + \frac{0{,}065\,\text{cm}^2 \cdot 0{,}10\,\text{cm}^{-2}}{0{,}5
 **Langkah 3 — Yield Sistem (4 chiplet + interposer + assembly, asumsikan $Y_{KGD} = Y_c$):**
 
 $$Y_{sys} = (0{,}9936)^4 \cdot
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

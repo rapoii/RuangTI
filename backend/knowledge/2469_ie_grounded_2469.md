@@ -154,4 +154,7 @@ Diadaptasi dari skenario kasus yang umum dijumpai di CLSC baterai EV regional sk
 - Jumlah pusat daur ulang: $J = 2$
 - Jumlah operator echelon: $K = 2$ (stasiun penyimpanan energi & operator telekomunikasi)
 - Permintaan baterai baru tahunan: $D = 50{,}000$ unit
-- Suplai baterai pensiun: $s_m = 8
+- Suplai baterai pensiun: $s_m = 8$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

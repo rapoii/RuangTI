@@ -175,3 +175,7 @@ Massa air per vial: $m_w = 0{,}2 \times 10^{-3}$ kg
 Waktu total (tanpa koreksi $L$ growth):
 
 $$t = \frac{m_w}{\dot{m} \cdot A_v} = \frac{0{,}2 \times 10^{-3}}{9{,}86 \times 10^{-6} \cdot 1{,}327 \times 10^{-4
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

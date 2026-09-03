@@ -164,3 +164,7 @@ Angka ini terlalu lama → indikasi perlunya optimasi dengan formulasi cryoprote
 Dengan $R_p = 4 \times 10^5$ Pa·m²·s/kg:
 
 $$t_{primary} = \frac{4{,}75 \times 10^{-3} \cdot 4 \times 10^5}{3{,}5 \times 10^{-4}
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

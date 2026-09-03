@@ -146,4 +146,7 @@ Integrasi waktu dilakukan dengan langkah adaptif (orde 2–4), umumnya $\Delta t
 **Tahap 5 — Analisis Sensitivitas dan Optimasi.**
 Variabel desain (diameter tabung, pitch, panjang, jenis enhancement) disapu untuk meminimumkan waktu *charging* pada kendala $\Delta P$ HTF yang diizinkan.
 
-**Tahap 6 — Verifikasi & Validasi (V
+**Tahap 6 — Verifikasi & Validasi (V.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -153,3 +153,6 @@ A systematic approach to IE ethical dilemmas:
 As Industrial Engineers increasingly shape the systems that govern work, production, and daily life, ethical competence becomes as critical as technical competence. The integration of ethics into IE education, licensure, and practice ensures that industrial engineering continues to serve humanity rather than merely optimize metrics.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

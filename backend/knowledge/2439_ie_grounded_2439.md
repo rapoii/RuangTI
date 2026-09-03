@@ -189,4 +189,7 @@ $$\text{Total Loss}_{\text{before}} = 150,000 \times \sum_{i=1}^{4} P_i \times C
 Menghitung setiap FM:
 - FM-01: $150,000 \times 0.025 \times \$477 = \$1,788,750$
 - FM-02: $150,000 \times 0.018 \times \$365 = \$985,500$
-- FM-03: $150,000 \times 0
+- FM-03: $150,000 \times 0$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -128,3 +128,6 @@ UVAM tidak hanya relevan dalam konteks pemesinan superalloys, tetapi juga dapat 
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan untuk peralatan khusus dan pemahaman mendalam tentang interaksi antara getaran ultrasonik dan material. Penelitian di masa depan perlu fokus pada pengembangan teknologi yang lebih efisien dan ramah lingkungan, serta eksplorasi aplikasi UVAM dalam material baru dan kompleks.
 
 Dengan demikian, UVAM menawarkan potensi yang signifikan dalam meningkatkan efisiensi pemesinan, namun memerlukan penelitian lebih lanjut untuk mengoptimalkan parameter dan memahami interaksinya dengan berbagai jenis material.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

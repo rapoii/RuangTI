@@ -125,4 +125,7 @@ Ambil satu pembaruan Q-value tipikal pada transisi dari $s=(5,10)$ ke $s'=(6,10)
 
 - $Q_{old}(5,10, \text{timur}) = 12{,}4$ (nilai sebelum episode ke-250)
 - Reward diterima $r = -1$ (langkah biasa)
-- $\max_{a'} Q(6,10, a') = 14{,}7$ (aksi optimal berikutnya "utara" mengarah
+- $\max_{a'} Q(6,10, a') = 14{,}7$ (aksi optimal berikutnya "utara" mengarah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

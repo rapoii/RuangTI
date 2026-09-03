@@ -143,4 +143,7 @@ $$
 \Delta T = \frac{5 \cdot 30}{7{,}075 \cdot 10^3} = 0{,}021\,^{\circ}\text{C}
 $$
 
-Artinya *cold chain box* memiliki *buffer termal* yang baik; pelanggaran *cold chain* biasanya terjadi pada **kerusakan segel insulasi atau kegagalan sistem refrigerasi**, bukan pada akses singkat. Inilah argumen kuat untuk monitoring **kontinu** dibanding *intermittent* (Putra et al.,
+Artinya *cold chain box* memiliki *buffer termal* yang baik; pelanggaran *cold chain* biasanya terjadi pada **kerusakan segel insulasi atau kegagalan sistem refrigerasi**, bukan pada akses singkat. Inilah argumen kuat untuk monitoring **kontinu** dibanding *intermittent* (Putra et al., \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

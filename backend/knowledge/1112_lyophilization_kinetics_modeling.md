@@ -104,3 +104,6 @@ Pemodelan kinetika sublimasi tidak hanya relevan dalam industri farmasi, tetapi 
 Namun, terdapat batasan dalam metodologi ini, termasuk asumsi yang digunakan dalam model matematis dan variabilitas dalam karakteristik bahan. Oleh karena itu, riset masa depan harus difokuskan pada pengembangan model yang lebih kompleks yang dapat menangkap dinamika proses yang lebih realistis.
 
 Dengan perkembangan teknologi dan peningkatan pemahaman tentang proses ini, diharapkan bahwa pemodelan kinetika sublimasi akan terus berkembang, memberikan kontribusi yang signifikan terhadap efisiensi dan keberlanjutan dalam berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

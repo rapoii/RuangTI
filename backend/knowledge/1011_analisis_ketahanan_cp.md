@@ -95,4 +95,7 @@ Arah riset masa depan harus fokus pada pengembangan teknik analisis risiko yang 
 
 Referensi:
 - Smith, J. (2023). Cyber-Physical Systems: Design and Applications. IEEE Transactions on Industrial Informatics. DOI: 10.1109/TII.2023.1234567
-- Zhang, L., et al. (2022). The Impact of Cyber Attacks on Manufacturing Systems: A Case Study. Journal of Manufacturing Systems. DOI: 10.1016/j.jmsy.2022.01.005
+- Zhang, L., et al. (2022). The Impact of Cyber Attacks on Manufacturing Systems: A Case Study. Journal of Manufacturing Systems. DOI: 10.1016/j.jmsy.2022.01.005.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

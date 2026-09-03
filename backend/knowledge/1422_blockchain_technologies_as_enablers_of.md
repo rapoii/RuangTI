@@ -159,4 +159,7 @@ Catatan koreksi: numerator harus total varian explained (sum squared loadings), 
 
 $$AVE_{BT} = \frac{\sum \lambda^2}{\sum \lambda^2 + \sum Var(\delta)} = \frac{3{,}3644}{3{,}3644 + 1{,}635} = \frac{3{,}3644}{4{,}9994} = 0{,}6729$$
 
-Karena $AVE_{BT} = 0{,}6729 \geq 0{,}50$, valid
+Karena $AVE_{BT} = 0{,}6729 \geq 0{,}50$, valid.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

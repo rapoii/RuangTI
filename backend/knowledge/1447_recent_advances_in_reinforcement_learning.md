@@ -122,4 +122,7 @@ Parameter numerik: $-\Delta H = 5.0 \times 10^4\,\text{kJ/kmol}$, $\rho C_p = 24
 
 ### 4.3 Simulasi Episode RL dengan Reward Tertimbang
 
-Definisikan bobot $w_1 = 1.0$ (penalti suhu), $w_2 = 0.5$ (penalti konsentrasi), $w_3 = 0.05$ (penalti *control effort*). Misalkan pada $t=0$: $T_0 = 380\,\text{K}$ ($T_0 - T_{sp} = -15\,\text{K}$), $C_{A,0} = 2.5\,\text{kmol/m}^3$, dan agen memilih aksi $a_0 = +2
+Definisikan bobot $w_1 = 1.0$ (penalti suhu), $w_2 = 0.5$ (penalti konsentrasi), $w_3 = 0.05$ (penalti *control effort*). Misalkan pada $t=0$: $T_0 = 380\,\text{K}$ ($T_0 - T_{sp} = -15\,\text{K}$), $C_{A,0} = 2.5\,\text{kmol/m}^3$, dan agen memilih aksi $a_0 = +2$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

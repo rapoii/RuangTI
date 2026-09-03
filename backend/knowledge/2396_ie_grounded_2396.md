@@ -138,4 +138,7 @@ Diagram alir logika:
 - $K_v$ = 0,25 mW/(cm²·K) = 2,5 W/(m²·K)
 - $R_p$ = 1,5 cm²·Torr·hr/g = 0,0193 m²·Pa·s/kg
 - $\Delta H_s$ = 2,838 × 10⁶ J/kg
-- Teb
+- Teb.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

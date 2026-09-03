@@ -113,3 +113,6 @@ Inovasi teknologi hijau dalam koridor maritim memiliki implikasi luas tidak hany
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti variabilitas dalam sumber energi terbarukan dan ketergantungan pada teknologi yang masih berkembang. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan teknologi yang lebih efisien dan ramah lingkungan, serta model bisnis yang dapat mendukung adopsi teknologi hijau secara luas.
 
 Dengan demikian, penerapan koridor maritim hijau tidak hanya menjadi solusi untuk tantangan lingkungan, tetapi juga sebagai peluang untuk inovasi dan efisiensi dalam industri maritim dan sektor terkait lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

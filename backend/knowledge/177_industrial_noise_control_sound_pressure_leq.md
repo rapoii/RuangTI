@@ -102,3 +102,6 @@ HPD (Hearing Protection Devices) rated via NRR (US) or SNR (EU). Real-world prot
 6.  **Chen, K., & Wang, L.** (2025). "Real-time personal noise dosimetry using MEMS microphone arrays: Validation against IEC 61252 Type 2 instruments." *Applied Acoustics*, 228, 110345.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -107,3 +107,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualit
 Ke depan, riset dalam bidang ini dapat berfokus pada pengembangan teknologi baru yang lebih efisien dan ramah lingkungan, serta penerapan teknik MAF dalam aplikasi yang lebih luas, termasuk dalam industri biomedis dan elektronik.
 
 Dengan demikian, Internal Magnetic Abrasive Finishing (MAF) menawarkan potensi besar untuk meningkatkan kualitas permukaan komponen kompleks, dan penelitian lebih lanjut diharapkan dapat membuka jalan bagi inovasi dalam teknik penyelesaian permukaan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

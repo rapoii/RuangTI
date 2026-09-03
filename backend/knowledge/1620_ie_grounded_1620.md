@@ -53,4 +53,7 @@ Kala (2024) menunjukkan bahwa pada perencanaan gerak di lingkungan dengan rintan
 
 ### 2.4 Policy Gradient dan Actor-Critic
 
-Untuk ruang aksi kontinyu—seperti perintah
+Untuk ruang aksi kontinyu—seperti perintah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

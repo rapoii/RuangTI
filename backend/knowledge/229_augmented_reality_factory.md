@@ -89,3 +89,6 @@ Current limitations include limited field of view in optical see-through display
 5. ISO 17664:2024. Processing of health care products — Information to be provided by the medical device manufacturer. (AR safety standards reference).
 6. Azuma, R. T. (2023). A survey of augmented reality: Revisited. *Presence: Teleoperators and Virtual Environments*, 32, 1-28.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

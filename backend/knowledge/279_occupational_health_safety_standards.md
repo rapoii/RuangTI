@@ -105,3 +105,6 @@ ISO 19011:2018 provides guidelines for auditing management systems including OHS
 6. Dul, J., Neumann, W. P., & Winkel, J. (2023). Human factors and ergonomics in production systems: Integrating OHS standards with operational excellence. *Applied Ergonomics*, 112, 104078.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

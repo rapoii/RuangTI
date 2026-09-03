@@ -107,3 +107,6 @@ Arah riset masa depan harus fokus pada integrasi teknologi baru, seperti kecerda
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai strategi keamanan siber untuk Cyber-Physical Production Systems dengan pendekatan berbasis blockchain dan digital twin, sesuai dengan standar dan referensi terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

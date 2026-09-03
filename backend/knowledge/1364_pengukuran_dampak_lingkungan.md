@@ -103,3 +103,6 @@ Namun, terdapat beberapa batasan dalam metodologi LCA, termasuk ketersediaan dat
 Arah riset masa depan dapat mencakup pengembangan model prediktif yang lebih baik, penggunaan big data untuk analisis dampak, serta integrasi dengan prinsip-prinsip ekonomi sirkular untuk mendukung keberlanjutan dalam rantai pasok.
 
 Dengan demikian, pemahaman yang mendalam tentang LCA dan penerapannya dalam rantai pasok berkelanjutan adalah kunci untuk mencapai tujuan keberlanjutan di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

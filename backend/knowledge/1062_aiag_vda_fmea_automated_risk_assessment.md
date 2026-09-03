@@ -86,3 +86,6 @@ Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan akan data berku
 Arah riset masa depan dapat mencakup pengembangan sistem yang lebih cerdas yang tidak hanya melakukan penilaian risiko tetapi juga memberikan rekomendasi tindakan perbaikan secara otomatis berdasarkan hasil analisis. Selain itu, integrasi dengan teknologi lain seperti Internet of Things (IoT) dapat meningkatkan pengumpulan data real-time dan responsivitas terhadap risiko yang muncul.
 
 Dengan demikian, penilaian risiko otomatis menggunakan AI dalam FMEA menawarkan potensi besar untuk meningkatkan kualitas produk dan efisiensi operasional, serta menjadi alat penting dalam strategi manajemen risiko modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -108,3 +108,6 @@ Penerapan sistem multi-agent dalam desain produksi tidak hanya terbatas pada sek
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kemampuan agen untuk beradaptasi dengan perubahan. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan algoritma yang lebih adaptif dan robust untuk meningkatkan kolaborasi antar agen dalam lingkungan yang dinamis.
 
 Dengan demikian, penerapan Multi-Agent LLM dalam desain produksi kolaboratif diharapkan dapat memberikan kontribusi signifikan terhadap efisiensi dan inovasi dalam industri manufaktur terdistribusi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

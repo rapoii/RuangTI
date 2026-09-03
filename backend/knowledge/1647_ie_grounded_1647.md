@@ -95,4 +95,7 @@ Untuk memberikan gambaran numerik yang realistis mengikuti pendekatan Amirullah 
 | Biaya assembly ($R_{labor}$ = Rp 25.000/jam) | Rp 1.250/unit | Rp 312/unit |
 
 **Perhitungan 1 — DFA Index.**
-Teori minimum komponen untuk
+Teori minimum komponen untuk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

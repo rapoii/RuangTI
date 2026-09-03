@@ -109,4 +109,7 @@ Diagram alur keputusan (*runtime policy*):
 - Jumlah AMR: $N = 8$ unit (model differential-drive, $v_{max} = 1{,}5$ m/s, payload 250 kg);
 - Resolusi grid: $\Delta = 0{,}25$ m, sehingga $|\mathcal{S}| \approx 4 \times 10^4$ state per agen;
 - Obstacle statis: rak-rak tetap (30% area);
-- Obstacle dinamis: 12 pekerja pejalan kaki dengan kecepatan rata-rata $\bar{v}_h = 1{,
+- Obstacle dinamis: 12 pekerja pejalan kaki dengan kecepatan rata-rata $\bar{v}_h = 1{,$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

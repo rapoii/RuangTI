@@ -40,3 +40,6 @@ $$\text{Total Cost of Quality (CoQ)} = \text{Prevention} + \text{Appraisal} + \t
 2. **Biaya Penilaian (Appraisal Costs - Biaya Kesesuaian):** Biaya inspeksi bahan baku masuk (IQC), uji laboratorium, pengujian akhir produk.
 3. **Biaya Kegagalan Internal (Internal Failure Costs):** Biaya scrap (produk gagal dibuang), pengerjaan ulang (*rework*), waktu henti mesin (*downtime*).
 4. **Biaya Kegagalan Eksternal (External Failure Costs - Paling Mahal):** Klaim garansi, penarikan produk dari pasar (*product recall*), kehilangan reputasi/konsumen.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

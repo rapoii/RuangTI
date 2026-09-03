@@ -107,3 +107,6 @@ SMED-focused Kaizen used video analysis integrated with simulation to validate i
 5. Simulations4All. (2026). Lean Manufacturing Value Stream Mapping Simulator. Retrieved from simulations4all.com.
 6. Antony, J., Snee, R., & Hoerl, R. (2024). Lean Six Sigma: Yesterday, today and tomorrow. *International Journal of Quality & Reliability Management*, 41(3), 789-812.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

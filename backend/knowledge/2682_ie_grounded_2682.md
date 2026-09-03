@@ -128,4 +128,7 @@ Total konsumsi CO₂ = $25 \times 5.43 = 135.8$ kg, sehingga **rasio S/F** (solv
 
 ### 4.4. Interpretasi Manajerial
 
-Hasil simulasi axisymmetric menunjukkan bahwa
+Hasil simulasi axisymmetric menunjukkan bahwa.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

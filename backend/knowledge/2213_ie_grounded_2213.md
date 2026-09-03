@@ -126,3 +126,6 @@ JIANG & TANG (2025) mengusulkan arsitektur empat *node* yang saling terhubung me
 | Tahap | Aktivitas | Standar | Output |
 |-------|-----------|---------|--------|
 | **1. Trigger** | Konsumen ajukan *trade-in*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

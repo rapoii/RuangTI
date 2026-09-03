@@ -143,3 +143,6 @@ Robust design feeds directly into DMAIC Improve phase:
 - ISO 14006:2020. *Environmental management systems — Guidelines for incorporating ecodesign*. Annex C: Robust design considerations.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

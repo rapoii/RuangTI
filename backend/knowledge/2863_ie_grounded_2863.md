@@ -143,3 +143,7 @@ $$\Delta C_{labor} = \frac{44.8 \text{ detik}}{3600 \text{ detik/jam}} \times Rp
 Untuk batch produksi 50.000 unit per tahun:
 
 $$\text{Total Labor Savings} = 50.000 \times Rp 311,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

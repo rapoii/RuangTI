@@ -111,3 +111,6 @@ Analisis jejak karbon berbasis AI memiliki aplikasi yang luas di berbagai sektor
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kompleksitas dalam integrasi sistem yang ada. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma AI yang lebih canggih dan sistem yang lebih terintegrasi.
 
 Arah riset masa depan dapat mencakup pengembangan model prediktif yang lebih akurat dan penggunaan teknologi blockchain untuk meningkatkan transparansi dalam rantai pasokan. Dengan demikian, perusahaan dapat lebih efektif dalam mencapai target pengurangan emisi dan berkontribusi pada keberlanjutan lingkungan secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

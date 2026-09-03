@@ -103,3 +103,6 @@ Pertimbangkan fasilitas e-commerce di Indonesia (luas 5.000 m²) dengan **$N = 1
 - *Learning rate*: $\alpha = 0{,}0005$
 
 ### 4.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

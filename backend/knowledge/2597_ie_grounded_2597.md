@@ -91,4 +91,7 @@ Diagram alir keputusan: *Collection → Testing → Classification → {Echelon 
 **Parameter recycler:** $p_r = 2{,}200$ RMB/kWh (setara recovered material), $c_r = 800$ RMB/kWh, $\delta = 50$ RMB/unit², kapasitas $K_r = 50{,}000$ unit, $t_r \cdot d_r = 250$ RMB/unit.  
 **Variabel keputusan:** insentif $w$, alokasi $q_e, q_r$.
 
-**Optimisasi
+**Optimisasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

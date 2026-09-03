@@ -124,4 +124,7 @@ Penerapan PBC dan PBH tidak hanya terbatas pada industri manufaktur, tetapi juga
 
 Namun, terdapat batasan dalam metodologi ini, seperti ketidakpastian dalam perhitungan KPI dan alokasi risiko yang dapat mempengaruhi hubungan antara pihak-pihak yang terlibat. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar.
 
-Ke depan, standar dan praktik terbaik dalam PBC dan PBH diharapkan dapat terus berkembang, dengan fokus pada integrasi teknologi digital dan analitik data untuk meningkatkan pengukuran kinerja dan pengambilan keputusan.
+Ke depan, standar dan praktik terbaik dalam PBC dan PBH diharapkan dapat terus berkembang, dengan fokus pada integrasi teknologi digital dan analitik data untuk meningkatkan pengukuran kinerja dan pengambilan keputusan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -129,3 +129,6 @@ Compare against chance-adjusted kappa to distinguish true agreement from categor
 4. Montgomery, D. C. (2020). *Introduction to Statistical Quality Control* (8th ed.). Wiley.
 5. Vanbelle, S., & Albert, A. (2024). Weighted kappa for ordinal rater agreement: A unified framework. *Statistical Methods in Medical Research*, 33(2), 412–430.
 6. Zhang, Y., & Liu, H. (2025). Human-AI agreement validation in automated visual inspection using Fleiss’ kappa. *Journal of Manufacturing Systems*, 78, 215–228.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

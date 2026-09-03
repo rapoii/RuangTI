@@ -472,4 +472,4 @@ Melalui formulasi MILP dan simulasi antrean $M/M/s$:
 3. **Song, Y., & Hu, Z.** (2023). Learning-based demand-supply-coupled charging station location problem for electric vehicle demand management. *Transportation Research Part D: Transport and Environment*, 121, 103975. https://doi.org/10.1016/j.trd.2023.103975
 4. **Ma, T. Y., & Xie, S.** (2021). Optimal fast charging station locations for electric ridesharing with vehicle-charging station assignment. *Transportation Research Part D: Transport and Environment*, 90, 102682. https://doi.org/10.1016/j.trd.2020.102682
 5. **Tompkins, J. A., White, J. A., Bozer, Y. A., & Tanchoco, J. M. A.** (2010). *Facilities Planning* (4th ed.). John Wiley & Sons, Hoboken, NJ. ISBN: 978-0470444047.
-6. **Hillier, F. S., & Lieberman, G. J.** (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill Education, New York. ISBN: 978-1259872990.
+6. **Hillier, F. S., & Lieberman, G. J.** (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill Education, New York. ISBN: 978-1259872990.$.

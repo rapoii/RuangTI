@@ -110,3 +110,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang ada, termasuk biaya awal 
 Arah riset masa depan dapat mencakup pengembangan teknologi robotika yang lebih cerdas dan adaptif, serta integrasi dengan sistem manajemen proyek berbasis AI untuk meningkatkan pengambilan keputusan dan efisiensi operasional. Standar yang lebih baik juga perlu dikembangkan untuk memastikan keselamatan dan interoperabilitas dalam penggunaan robotika di berbagai sektor industri.
 
 Dengan demikian, robotika memiliki potensi besar untuk merevolusi operasi rigging berat dalam konstruksi modular dan sektor terkait lainnya, memberikan solusi yang lebih aman, efisien, dan ekonomis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

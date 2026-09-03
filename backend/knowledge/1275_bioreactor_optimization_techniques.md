@@ -89,4 +89,7 @@ Dengan meningkatnya perhatian terhadap keberlanjutan dan tanggung jawab sosial, 
 
 --- 
 
-Dokumen ini memberikan gambaran komprehensif mengenai teknik optimasi multi-objektif dalam desain bioreactor untuk produksi biopharmaceutical, mencakup aspek teori, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan perkembangan industri terkini.
+Dokumen ini memberikan gambaran komprehensif mengenai teknik optimasi multi-objektif dalam desain bioreactor untuk produksi biopharmaceutical, mencakup aspek teori, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan perkembangan industri terkini.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

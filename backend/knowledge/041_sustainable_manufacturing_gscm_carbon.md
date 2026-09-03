@@ -49,3 +49,6 @@ Pelaporan keberlanjutan kini wajib mengikuti standar global seperti **GRI Standa
 $$\text{SI} = \sum_{j=1}^{m} w_j \times \left( \frac{\text{Actual Performance}_j}{\text{Benchmark}_j} \right)$$
 
 Dimana $w_j$ adalah bobot kriteria (lingkungan, sosial, ekonomi) yang ditentukan melalui metode AHP atau Entropy Weight Method.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -135,3 +135,6 @@ Metode kontrol gerakan anti-sway tidak hanya relevan untuk industri pelabuhan, t
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas model dan kebutuhan untuk data yang akurat. Penelitian masa depan dapat berfokus pada pengembangan algoritma kontrol yang lebih adaptif dan penerapan teknologi kecerdasan buatan untuk meningkatkan efisiensi sistem.
 
 Dengan demikian, pengembangan metode kontrol gerakan anti-sway yang lebih canggih akan menjadi kunci untuk meningkatkan produktivitas dan keselamatan dalam operasi industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

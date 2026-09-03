@@ -116,3 +116,6 @@ Metodologi estimasi biaya yang dibahas di atas tidak hanya relevan untuk industr
 Di masa depan, dengan kemajuan teknologi seperti otomatisasi dan analitik data besar, diharapkan estimasi biaya akan semakin akurat dan cepat. Penelitian lebih lanjut diperlukan untuk mengembangkan model prediktif yang dapat mengakomodasi variabel yang lebih kompleks dan dinamis dalam lingkungan industri yang terus berubah.
 
 Dengan demikian, pemahaman yang mendalam tentang klasifikasi estimasi biaya dan penerapan metodologi yang tepat akan menjadi kunci bagi keberhasilan proyek di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

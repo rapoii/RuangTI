@@ -110,4 +110,7 @@ Implementasi sistematis unit HPAL yang tahan-kerak mengikuti arsitektur **5-Stag
 
 **SOP Mitigasi Kerak Autoclave (berdasarkan Dickson dkk., 2026):**
 
-1. **Pengendalian
+1. **Pengendalian.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -166,3 +166,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang a
 Arah riset masa depan dapat mencakup pengembangan algoritma berbasis kecerdasan buatan untuk meningkatkan kemampuan prediksi dan pengambilan keputusan dalam penjadwalan, serta integrasi dengan teknologi IoT untuk pengumpulan data real-time.
 
 Dengan demikian, penerapan teknik Branch-and-Price dan generasi kolom dalam penjadwalan kendaraan dan kru industri tidak hanya memberikan solusi yang lebih efisien, tetapi juga membuka peluang untuk inovasi lebih lanjut di bidang teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

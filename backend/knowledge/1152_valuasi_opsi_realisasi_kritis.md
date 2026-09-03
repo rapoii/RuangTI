@@ -127,4 +127,7 @@ Namun, terdapat batasan dalam metodologi ini, seperti asumsi tentang distribusi 
 
 Arah riset masa depan dapat mencakup pengembangan model yang mengintegrasikan machine learning untuk memprediksi permintaan dan volatilitas yang lebih akurat, serta penerapan teknik ini dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (K3/ESG). 
 
-Dengan demikian, teknik penilaian opsi nyata menjadi alat yang sangat berharga dalam pengelolaan suku cadang modal di era industri 4.0, di mana ketidakpastian dan kompleksitas semakin meningkat.
+Dengan demikian, teknik penilaian opsi nyata menjadi alat yang sangat berharga dalam pengelolaan suku cadang modal di era industri 4.0, di mana ketidakpastian dan kompleksitas semakin meningkat.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

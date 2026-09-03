@@ -97,4 +97,7 @@ Pendekatan Kajjoba dkk. (2025) untuk bangunan tropis melengkapi SOP ini dengan s
 - *Round-trip efficiency*: $\eta_{RT} = 0{,}90$
 - Generator sekunder ORC: $\eta_{SPCS} = 0{,}35$
 - Discount rate: $r = 8{,}5\%$, umur ekonomis: $N = 60$ tahun
-- CAPEX TES + SPC
+- CAPEX TES + SPC.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

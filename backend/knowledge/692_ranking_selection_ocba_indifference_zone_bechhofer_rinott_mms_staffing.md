@@ -370,3 +370,6 @@ EOC OCBA sekuensial   = Rp 0.01 rb/jam
 - Law, A. M. (2015). *Simulation Modeling and Analysis* (5th ed.). McGraw-Hill. [bab comparing system alternatives & ranking-selection]
 - Banks, J., Carson, J. S., Nelson, B. L., & Nicol, D. M. (2010). *Discrete-Event System Simulation* (5th ed.). Pearson. [bab output analysis]
 - Hillier, F. S., & Lieberman, G. J. (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill. [bab simulation & queueing theory/Erlang]
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

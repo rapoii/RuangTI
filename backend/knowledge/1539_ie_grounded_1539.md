@@ -178,3 +178,7 @@ $$C_{\text{total}} = 5{,}000 \times 0.95 + 85{,}000 \times 0.05 = 4{,}750 + 4{,}
 Tanpa sistem CNN, biaya yang diharapkan (*expected cost*) dari pendekatan reaktif adalah:
 
 $$C_{\text{reaktif}} = 0.
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

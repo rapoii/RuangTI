@@ -101,3 +101,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih efisien, 
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang aplikasi Physics-Informed Neural Networks dalam prediksi kualitas produk di sektor manufaktur, mencakup teori, metodologi, studi kasus, dan evaluasi kritis yang relevan dengan standar industri terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

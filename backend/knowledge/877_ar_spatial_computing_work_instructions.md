@@ -105,3 +105,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan pe
 Ke depan, standar industri seperti ISO 9241-920 dapat berperan penting dalam mengarahkan pengembangan teknologi AR untuk memastikan bahwa solusi yang dihasilkan tidak hanya efektif tetapi juga aman dan ramah pengguna. Penelitian lebih lanjut juga diharapkan dapat mengidentifikasi cara-cara baru untuk mengurangi beban kognitif dan meningkatkan pengalaman pengguna dalam konteks AR.
 
 Dengan demikian, penerapan AR dalam instruksi kerja perakitan dapat menjadi solusi inovatif untuk tantangan yang dihadapi oleh industri modern, meningkatkan efisiensi, mengurangi kesalahan, dan meningkatkan keselamatan kerja.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

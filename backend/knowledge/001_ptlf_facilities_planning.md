@@ -77,4 +77,7 @@ $$A_{\text{total}} = \sum (\text{Luas Total Departemen}) \times (1 + \% \text{Ai
 *Standar Aisle Allowance Industri:*
 - Pekerjaan ringan / manusia: $15\% - 20\%$
 - Hand pallet / gerobak: $20\% - 30\%$
-- Forklift / AGV / Truk: $30\% - 45\%$
+- Forklift / AGV / Truk: $30\% - 45\%$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

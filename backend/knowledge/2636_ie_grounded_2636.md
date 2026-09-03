@@ -162,3 +162,7 @@ $$\Delta P_w^{eff} = P_{w,s}(T_s) - P_c \cdot \frac{P_{w,s}}{P_{w,s}+P_{inert}} 
 **Langkah 3**: Resistansi termal ruang sublimasi ke kondensor (pipa lebar 0.5 m):
 
 $$R_s = \frac{1}{\alpha_v} \approx \frac{d
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

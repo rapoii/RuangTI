@@ -118,4 +118,7 @@ ROV tidak hanya relevan untuk industri manufaktur, tetapi juga dapat diterapkan 
 
 Namun, ada batasan dalam metodologi ini, seperti ketergantungan pada asumsi yang mungkin tidak selalu akurat. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan realistis, serta untuk mengeksplorasi integrasi ROV dengan teknik manajemen risiko lainnya.
 
-Dengan meningkatnya ketidakpastian di pasar global, ROV akan menjadi alat yang semakin penting untuk membantu perusahaan dalam pengambilan keputusan strategis di masa depan. Penelitian lebih lanjut dapat difokuskan pada pengembangan algoritma yang lebih canggih dan penerapan analisis data besar untuk meningkatkan akurasi prediksi dalam penilaian opsi nyata.
+Dengan meningkatnya ketidakpastian di pasar global, ROV akan menjadi alat yang semakin penting untuk membantu perusahaan dalam pengambilan keputusan strategis di masa depan. Penelitian lebih lanjut dapat difokuskan pada pengembangan algoritma yang lebih canggih dan penerapan analisis data besar untuk meningkatkan akurasi prediksi dalam penilaian opsi nyata.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

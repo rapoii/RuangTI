@@ -151,4 +151,7 @@ Komponen latensi pada slot $\mu=1$ ($T_{slot}=1$ ms):
 | Retransmisi HARQ $L_{retrans}$ (rata-rata 1,02 attempt) | 0,02 |
 | **Total $L_{e2e}$** | **1,1205** |
 
-Karena $L_{e2
+Karena $L_{e2$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

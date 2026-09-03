@@ -116,3 +116,6 @@ Arah riset masa depan dapat mencakup integrasi teknologi digital dan otomatisasi
 ---
 
 Dengan demikian, modul ini memberikan pemahaman yang mendalam tentang analisis keberlanjutan dalam proses thermal aseptik menggunakan LCA, serta langkah-langkah yang diperlukan untuk menerapkannya dalam konteks industri makanan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

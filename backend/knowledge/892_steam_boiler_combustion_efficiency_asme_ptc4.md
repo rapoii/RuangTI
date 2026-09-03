@@ -129,3 +129,6 @@ Optimasi efisiensi pembakaran boiler tidak hanya relevan dalam sektor energi, te
 Batasan metodologi ini termasuk variabilitas dalam kualitas bahan bakar dan kebutuhan untuk sistem kontrol yang canggih. Penelitian masa depan dapat difokuskan pada pengembangan algoritma kontrol yang lebih adaptif dan penggunaan teknologi sensor yang lebih canggih untuk meningkatkan akurasi pengukuran gas buang.
 
 Dengan demikian, optimasi efisiensi pembakaran boiler uap industri merupakan langkah penting menuju keberlanjutan dan efisiensi energi yang lebih baik dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

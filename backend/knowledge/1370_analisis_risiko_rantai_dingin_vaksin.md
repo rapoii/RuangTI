@@ -96,3 +96,6 @@ Analisis risiko menggunakan Bayesian Network tidak hanya relevan dalam rantai di
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada ketersediaan data yang akurat dan representatif. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk menangani ketidakpastian dan meningkatkan akurasi model.
 
 Dengan demikian, penerapan metode Bayesian Network dalam analisis risiko dan keandalan rantai dingin vaksin menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas sistem logistik, yang pada gilirannya dapat berkontribusi pada kesehatan masyarakat secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

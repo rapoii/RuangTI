@@ -92,4 +92,7 @@ subject to: $0 \le x_{TR} \le K_R$, dengan $\beta$ adalah koefisien sensitivitas
 
 Kondisi KKT dari lower level disubstitusikan ke upper level, menghasilkan *Mathematical Program with Equilibrium Constraints* (MPEC) yang selanjutnya dilinierisasi menggunakan teknik big-$M$ untuk diselesaikan oleh *branch-and-bound*.
 
-## 3. Metodologi Rekayasa & Standar Prosedur
+## 3. Metodologi Rekayasa & Standar Prosedur.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

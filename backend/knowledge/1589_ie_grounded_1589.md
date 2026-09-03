@@ -110,4 +110,7 @@ KPI yang dipantau: *collection rate* $\eta$, *echelon yield* $Y_e$, *recycling r
 
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
-### 4.1 Parameter Input
+### 4.1 Parameter Input.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

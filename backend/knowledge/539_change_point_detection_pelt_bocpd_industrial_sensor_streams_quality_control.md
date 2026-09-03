@@ -602,4 +602,4 @@ Titik Perubahan Sebenarnya: [120, 250, 380] (Titik Waktu ke-120, 250, 380)
 4. **Montgomery, D. C.** (2020). *Introduction to Statistical Quality Control* (8th ed.). John Wiley & Sons, Hoboken, NJ. ISBN: `978-1-119-39930-8`.
 5. **ISO 13373-1:2002**. *Condition Monitoring and Diagnostics of Machines — Vibration Condition Monitoring — Part 1: General Procedures*. International Organization for Standardization, Geneva.
 6. **Fearnhead, P., & Rigaill, G.** (2019). "Changepoint Detection in the Presence of Outliers." *Journal of the American Statistical Association*, 114(525), 169–183. DOI: `10.1080/01621459.2017.1385466`.
-7. **IISE Transactions**. (2023). "Real-Time Statistical Process Monitoring and Abrupt Regime Shift Detection in High-Speed Advanced Manufacturing." *IISE Transactions on Quality and Reliability Engineering*, 55(11), 1204–1221.
+7. **IISE Transactions**. (2023). "Real-Time Statistical Process Monitoring and Abrupt Regime Shift Detection in High-Speed Advanced Manufacturing." *IISE Transactions on Quality and Reliability Engineering*, 55(11), 1204–1221.$.

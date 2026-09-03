@@ -115,3 +115,6 @@ Analisis mekanika crane tidak hanya relevan dalam industri manufaktur, tetapi ju
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketidakpastian dalam estimasi beban dan kondisi lingkungan. Oleh karena itu, riset masa depan perlu difokuskan pada pengembangan model yang lebih akurat dan adaptif, termasuk penerapan teknologi IoT untuk pemantauan real-time.
 
 Dengan demikian, analisis mekanika crane untuk proses perakitan modular merupakan bidang yang menjanjikan untuk eksplorasi lebih lanjut, sejalan dengan perkembangan teknologi dan kebutuhan industri yang terus berubah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

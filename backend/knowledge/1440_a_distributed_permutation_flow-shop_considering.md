@@ -156,4 +156,7 @@ Berdasarkan studi kasus Fathollahi-Fard et al. (2024) pada produksi *auto workpi
 - $H_{planning} = 8$ jam (1 shift)
 - $\alpha = 0.1$ (bobot penalti energi)
 
-### 4.2 Perhitungan Manual: Alokasi Job Optimal
+### 4.2 Perhitungan Manual: Alokasi Job Optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

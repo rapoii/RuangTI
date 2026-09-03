@@ -93,3 +93,6 @@ Pengembangan algoritma penglihatan 3D untuk bin-picking tidak hanya relevan dala
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data yang diperoleh dan kompleksitas algoritma yang digunakan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengatasi tantangan ini, termasuk integrasi teknologi baru seperti kecerdasan buatan dan pembelajaran mendalam.
 
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih adaptif dan real-time, serta penerapan teknologi sensor yang lebih canggih untuk meningkatkan akurasi dan efisiensi sistem bin-picking. Dengan demikian, pengembangan algoritma penglihatan 3D akan terus menjadi fokus penting dalam inovasi teknologi industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -97,4 +97,7 @@ Berdasarkan metodologi Amirullah dan Jakaria (2024, [10.21070/ups.3309](https://
 
 | Parameter | Nilai Awal |
 |-----------|-----------|
-| Jumlah komponen ($N_a$) | 16
+| Jumlah komponen ($N_a$) | 16.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

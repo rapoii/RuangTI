@@ -123,3 +123,6 @@ Dalam bidang otomasi, teknologi CFD dapat diintegrasikan dengan sistem kontrol u
 Namun, terdapat batasan dalam metodologi saat ini, termasuk ketergantungan pada asumsi model dan kompleksitas perhitungan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengatasi tantangan ini dan mengembangkan standar baru yang dapat meningkatkan akurasi dan efisiensi simulasi aerodinamik.
 
 Dengan demikian, simulasi interaksi aerodinamika vortex menggunakan model turbulensi dan analisis numerik lanjut merupakan bidang yang menjanjikan untuk inovasi dan peningkatan dalam berbagai sektor industri, mendukung tujuan keberlanjutan dan efisiensi operasional di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

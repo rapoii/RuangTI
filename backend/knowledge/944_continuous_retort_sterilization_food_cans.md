@@ -87,3 +87,6 @@ Proses sterilisasi dalam industri pengolahan makanan memiliki dampak yang luas t
 Batasan metodologi yang ada saat ini meliputi ketergantungan pada model matematis yang mungkin tidak sepenuhnya mencerminkan kondisi nyata. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan adaptif terhadap variabilitas dalam proses produksi.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi baru untuk pemantauan real-time yang lebih baik, serta penerapan teknik analitik untuk memprediksi dan mengoptimalkan proses sterilisasi berdasarkan data historis dan kondisi operasional yang berubah. Dengan demikian, industri dapat terus beradaptasi dan berkembang dalam menghadapi tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

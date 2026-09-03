@@ -155,3 +155,7 @@ $$\bar{A} = \frac{T - D_{total}}{T} = \frac{8.760 - 288}{8.760} = 0{,}9671 \text
 Jika hanya mengandalkan D-check (32.000 FH = 10 tahun) tanpa partial refurbishment, downtime per tahun adalah $D_{D-only} = 480$ jam (rata-rata), menghasilkan:
 
 $$\bar{A}_{D-only} = \frac{8.760 - 480}{8.760} = 0{,}9452 \text
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

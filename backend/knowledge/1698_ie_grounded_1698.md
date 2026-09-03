@@ -115,4 +115,7 @@ AAS digital twin diekspos melalui *AAS Server* yang mengimplementasikan protokol
 AAS Server dikoneksikan dengan sumber data *real-time* melalui adaptor — misalnya *OPC UA Adapter* untuk data PLC dan *SNMP/NetConf Adapter* untuk elemen 5G. Adapter mengubah *push* telemetry menjadi *update* terhadap elemen submodel. *Update interval* $\Delta t$ dipilih berdasarkan persyaratan aplikasi: 1 ms untuk kendali motion, 10–100 ms untuk monitoring QoS.
 
 ### Tahap 4 — Orkestrasi & *Closed-Loop Control*
-Digital twin tidak hanya bersifat pasif; menurut Cavalieri et al. (2024), AAS dilengkapi dengan kemampuan *command* yang dikirim ke *Network Slice Management Function* (NSMF
+Digital twin tidak hanya bersifat pasif; menurut Cavalieri et al. (2024), AAS dilengkapi dengan kemampuan *command* yang dikirim ke *Network Slice Management Function* (NSMF.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

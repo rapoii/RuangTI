@@ -243,3 +243,6 @@ Output solver diintegrasikan ke siklus PSM: hasil DHA menjadi input MOC (managem
 **Buku teks rujukan:**
 - Eckhoff, R. K. (2016). *Explosion Hazards in the Process Industries* (2nd ed.). Gulf Professional Publishing.
 - Amyotte, P. (2013). *An Introduction to Dust Explosions: Understanding the Myths and Realities of Prevention for a Safer Workplace*. Butterworth-Heinemann.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

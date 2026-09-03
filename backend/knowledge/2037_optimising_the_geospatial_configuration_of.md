@@ -122,3 +122,7 @@ $$V_{\text{EoL}} = 360{,}000 \times 60 \text{ kWh} \times \omega_{\text{bat}}$$
 dengan densitas energi tipikal $\omega \approx 0{,}15$ kg/kWh → massa total:
 
 $$M_{\text{EoL}} = 360{,}000
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

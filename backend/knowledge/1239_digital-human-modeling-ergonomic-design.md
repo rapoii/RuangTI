@@ -96,3 +96,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang digunakan. Misalnya, pemo
 Ke depan, arah riset dalam desain ergonomis harus fokus pada integrasi teknologi canggih seperti kecerdasan buatan dan realitas virtual untuk meningkatkan akurasi pemodelan dan simulasi. Selain itu, penting untuk mengembangkan standar yang lebih baik dalam evaluasi ergonomis yang dapat diadopsi secara luas di industri.
 
 Dengan demikian, optimasi desain ergonomis menggunakan pemodelan manusia digital merupakan langkah penting dalam menciptakan lingkungan kerja yang lebih aman dan produktif, serta memberikan kontribusi positif terhadap kesejahteraan pekerja dan kinerja perusahaan secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

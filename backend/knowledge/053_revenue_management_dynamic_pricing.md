@@ -64,3 +64,6 @@ For dynamic settings with inventory constraints, the optimal price increases as 
 5. Phillips, R. L. (2024). *Pricing and Revenue Optimization* (2nd ed.). Stanford Business Books.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

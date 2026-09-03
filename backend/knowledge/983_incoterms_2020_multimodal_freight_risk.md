@@ -120,4 +120,7 @@ Ke depan, penelitian dapat difokuskan pada pengembangan algoritma berbasis AI un
 
 ---
 
-Dokumen ini memberikan gambaran menyeluruh mengenai analisis risiko hukum dan alokasi biaya dalam konteks ICC Incoterms 2020, serta implikasi praktisnya dalam industri. Dengan pemahaman yang mendalam, perusahaan dapat mengelola risiko dan biaya dengan lebih efektif, sehingga meningkatkan daya saing di pasar global.
+Dokumen ini memberikan gambaran menyeluruh mengenai analisis risiko hukum dan alokasi biaya dalam konteks ICC Incoterms 2020, serta implikasi praktisnya dalam industri. Dengan pemahaman yang mendalam, perusahaan dapat mengelola risiko dan biaya dengan lebih efektif, sehingga meningkatkan daya saing di pasar global.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

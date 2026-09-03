@@ -127,4 +127,7 @@ Toloza dkk. (2026) membangun model dalam lingkungan **Modelica** dengan library 
 
 1. **Karakterisasi Termal PCM**: Tentukan $T_m$, $L$, $k_{pcm}(T)$, $c_{p,pcm}(T)$ melalui DSC dan T-History method.
 2. **Desain Geometri Awal**: Hitung massa PCM dari target kapasitas energi $E_{target}$ dan batasan volume plant.
-3. **Simulasi Numerik Transien**: Jalankan skenario charge–discharge untuk memvalidasi *dis
+3. **Simulasi Numerik Transien**: Jalankan skenario charge–discharge untuk memvalidasi *dis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

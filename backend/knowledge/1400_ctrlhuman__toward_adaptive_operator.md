@@ -120,4 +120,7 @@ $$WL_{AGTOR} = (0.25)(55) + (0.05)(25) + (0.20)(45) + (0.20)(35) + (0.15)(40) + 
 **Langkah 4: Benefit-Cost Ratio (BCR)**
 Asumsi: 1 insiden SA-loss dicegah bernilai €110.000, biaya implementasi AGTOR per kabin €8.500.
 
-- AGTOR menurunkan insiden SA-loss sebesar $\sim 35\%$ (berbasis $\Delta_{SA} = 22\%$ dengan discount factor untuk
+- AGTOR menurunkan insiden SA-loss sebesar $\sim 35\%$ (berbasis $\Delta_{SA} = 22\%$ dengan discount factor untuk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

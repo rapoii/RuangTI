@@ -104,3 +104,6 @@ Optimasi proses pemasangan chiplet 3D menggunakan algoritma genetik tidak hanya 
 Namun, terdapat beberapa batasan metodologi ini, termasuk kebutuhan akan data yang akurat dan komputasi yang intensif. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih efisien dan adaptif, serta untuk mengeksplorasi aplikasi baru dalam konteks keberlanjutan dan manajemen risiko.
 
 Ke depan, arah riset dapat difokuskan pada integrasi algoritma genetik dengan teknik pembelajaran mesin untuk meningkatkan kemampuan prediksi dan optimasi, serta penerapan dalam sistem yang lebih kompleks dan dinamis. Dengan demikian, optimasi proses pemasangan chiplet 3D dapat terus berkontribusi pada kemajuan teknologi dan industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

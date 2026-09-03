@@ -46,3 +46,6 @@ Module 256 (Design for Six Sigma DFSS), Module 257 (DFM), Module 259 (DFX), Modu
 2. Chase, K. W., & Greenwood, W. H. (1988). Design issues in mechanical tolerance analysis. *Mechanical Design*, 110(1), 75–82.
 3. ASME Y14.5-2018, *Dimensioning and Tolerancing*; ASME B89.7.2, *Dimensional Measurement Planning*.
 4. Precision Engineering (2023).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

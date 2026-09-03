@@ -107,4 +107,7 @@ Kumpulkan data jarak, permintaan historis, kapasitas supplier, dan parameter col
 **Tahap 2 — Formulasi MIP Dasar (Hari 4–5)**
 Bangun model MOP dalam *algebraic modeling language* (AMPL/Gurobi/Pyomo). Pilih primary objective (umumnya biaya) dan secondary objectives (emisi, freshness).
 
-**Tahap 3 — Inisialisasi Algoritma BD (Hari
+**Tahap 3 — Inisialisasi Algoritma BD (Hari.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

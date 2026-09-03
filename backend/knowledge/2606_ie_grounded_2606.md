@@ -120,3 +120,7 @@ Dengan $N_P = 2$, downtime unscheduled menjadi $49{,}7 \times 0{,}65 = 32{,}3$ j
 $$\bar{D}_{new} = 4.344 + 192 - (49{,}7 - 32{,}3) = 4.344 + 192 - 17{,}4 = 4.518{,}6 \text{ jam}$$
 
 $$\mathcal{A}_{new} = \frac{36.000 - 4.518{,}6}{36.000} = 0{,}8745 \text{ atau } 87{,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -99,3 +99,6 @@ Integrasi proses dalam fabrikasi semikonduktor tidak hanya relevan untuk industr
 Namun, terdapat beberapa batasan dalam metodologi yang ada, termasuk ketidakpastian dalam variabilitas proses dan keterbatasan sumber daya. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknik baru yang dapat mengatasi variabilitas ini, seperti penggunaan kecerdasan buatan dan machine learning untuk memprediksi dan mengoptimalkan proses.
 
 Dalam kesimpulan, tantangan integrasi proses dalam fabrikasi wafer semikonduktor memerlukan pendekatan rekayasa sistem yang komprehensif dan berkelanjutan. Dengan mengadopsi metodologi yang tepat dan memanfaatkan teknologi terbaru, industri semikonduktor dapat terus berinovasi dan memenuhi tuntutan pasar yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

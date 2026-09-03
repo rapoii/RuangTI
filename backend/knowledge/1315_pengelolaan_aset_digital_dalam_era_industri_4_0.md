@@ -119,3 +119,6 @@ Pengelolaan aset digital tidak hanya relevan dalam sektor manufaktur, tetapi jug
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada teknologi dan potensi risiko keamanan siber. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan solusi yang lebih aman dan efisien dalam pengelolaan aset digital.
 
 Dengan demikian, pengelolaan aset digital berbasis ISO 55001 dalam era Industri 4.0 bukan hanya sebuah kebutuhan, tetapi juga merupakan langkah strategis untuk memastikan keberlanjutan dan daya saing perusahaan di pasar global yang semakin kompetitif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

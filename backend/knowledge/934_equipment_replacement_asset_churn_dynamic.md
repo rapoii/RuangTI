@@ -163,3 +163,6 @@ Batasan dari metodologi ini termasuk asumsi bahwa arus kas dan biaya tetap konst
 Arah riset masa depan dapat mencakup pengembangan algoritma pemrograman dinamis yang lebih kompleks, serta integrasi dengan teknologi analitik data besar untuk meningkatkan akurasi prediksi arus kas dan degradasi teknologi.
 
 Dengan demikian, pemahaman yang mendalam tentang analisis ekonomi peralatan dan kebijakan penggantian sangat penting bagi insinyur industri untuk mengoptimalkan keputusan investasi dan memaksimalkan nilai perusahaan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

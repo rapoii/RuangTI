@@ -109,3 +109,6 @@ MAP tidak hanya relevan dalam industri makanan, tetapi juga memiliki aplikasi da
 Namun, terdapat beberapa batasan dalam metodologi MAP, seperti ketergantungan pada kondisi penyimpanan dan variasi dalam karakteristik produk. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknologi yang lebih adaptif dan efisien.
 
 Arah riset masa depan dapat mencakup pengembangan bahan kemasan yang lebih ramah lingkungan, serta integrasi teknologi sensor untuk pemantauan kondisi kemasan secara real-time. Dengan demikian, MAP dapat terus berkontribusi pada keberlanjutan dan efisiensi dalam industri makanan dan sektor lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

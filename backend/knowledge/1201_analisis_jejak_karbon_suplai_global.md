@@ -118,3 +118,6 @@ Analisis jejak karbon tidak hanya relevan dalam konteks industri manufaktur, tet
 Batasan metodologi ini termasuk kesulitan dalam mengumpulkan data yang akurat, terutama untuk Scope 3, di mana banyak faktor eksternal yang mempengaruhi emisi. Selain itu, standar yang ada, seperti ISO 14064-1:2018, memberikan kerangka kerja, tetapi implementasi di lapangan sering kali menghadapi tantangan.
 
 Arah riset masa depan dapat berfokus pada pengembangan teknologi baru untuk pengumpulan data otomatis, penggunaan big data dan analitik untuk meningkatkan akurasi perhitungan, serta integrasi sistem manajemen lingkungan yang lebih baik dalam operasi bisnis. Dengan demikian, perusahaan dapat lebih efektif dalam mengurangi jejak karbon mereka dan berkontribusi pada keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

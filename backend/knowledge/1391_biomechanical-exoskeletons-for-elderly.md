@@ -129,3 +129,6 @@ Riset masa depan harus berfokus pada pengembangan material yang lebih ringan dan
 ---
 
 Dokumen ini memberikan gambaran komprehensif tentang pengembangan exoskeleton biomekanik untuk meningkatkan mobilitas lansia di lingkungan kerja, dengan pendekatan yang sistematis dan berbasis pada standar ilmiah terkini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

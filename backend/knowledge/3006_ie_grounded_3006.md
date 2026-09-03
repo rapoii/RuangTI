@@ -92,4 +92,7 @@ Meskipun penelitian ini memberikan kerangka kerja yang komprehensif untuk kebija
 
 Aplikasi lintas sektor dari kebijakan ini dapat mencakup industri otomotif, energi, dan manufaktur, di mana keandalan sistem sangat penting. Ke depan, agenda riset lanjutan dapat berfokus pada pengembangan algoritma optimasi yang lebih canggih, serta integrasi teknologi digital seperti Internet of Things (IoT) untuk pemantauan real-time dan analisis data besar dalam pemeliharaan.
 
-Dengan demikian, penelitian ini tidak hanya memberikan wawasan baru dalam kebijakan pemeliharaan di sektor penerbangan, tetapi juga membuka jalan bagi inovasi dan efisiensi di berbagai industri lainnya.
+Dengan demikian, penelitian ini tidak hanya memberikan wawasan baru dalam kebijakan pemeliharaan di sektor penerbangan, tetapi juga membuka jalan bagi inovasi dan efisiensi di berbagai industri lainnya.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -122,3 +122,6 @@ Penerapan PCP tidak hanya terbatas pada industri transportasi, tetapi juga dapat
 Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan teknologi baru yang dapat meningkatkan efisiensi sistem PCP. Penggunaan sumber energi terbarukan dan teknologi ramah lingkungan juga harus dipertimbangkan untuk memenuhi standar keberlanjutan.
 
 Dengan demikian, PCP dan sistem transportasi tabung vakum memiliki potensi besar untuk mengubah cara kita mengangkut barang, namun memerlukan pendekatan yang sistematis dan berbasis data untuk mencapai hasil yang diinginkan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

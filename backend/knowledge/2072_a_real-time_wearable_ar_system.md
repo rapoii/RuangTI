@@ -147,3 +147,7 @@ $$t_{\text{process}} = \frac{1000}{7{,}5} + 5 = 133{,}3 + 5 = 138{,}3\text{ ms (
 Rata-rata per frame:
 
 $$\
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

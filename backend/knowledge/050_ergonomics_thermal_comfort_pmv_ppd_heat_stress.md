@@ -53,3 +53,6 @@ Untuk pekerjaan industri di lingkungan luar ruangan atau dekat tungku pembakaran
   $$ \text{WBGT}_{\text{indoor}} = 0.7 T_w + 0.3 T_g $$
   $$ \text{WBGT}_{\text{outdoor}} = 0.7 T_w + 0.2 T_g + 0.1 T_d $$
 - **mPET (modified Physiologically Equivalent Temperature):** Model termoregulasi tingkat lanjut (Abbasi et al., 2024) yang lebih akurat dalam memprediksi laju detak jantung (HR) dan suhu inti tubuh pekerja berat dibanding PMV.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

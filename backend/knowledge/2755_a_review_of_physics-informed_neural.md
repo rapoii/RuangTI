@@ -121,4 +121,7 @@ $$= 800 \cdot 1 \cdot \exp(-0{,}1545) = 800 \cdot 0{,}8568 = 685{,}4 \text{ °C}
 |--------|-------|
 | *Relative L2 error* (PINN) | $0{,}42\%$ |
 | *Relative L2 error* (FEM 11 node) | $1{,}18\%$ |
-| *Mean Squared Error* (PINN) | $4{,}7 \times 10^{-4}$ |
+| *Mean Squared Error* (PINN) | $4{,}7 \times 10^{-4}$ |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

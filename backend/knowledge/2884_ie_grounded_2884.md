@@ -69,4 +69,7 @@ dengan $\hat{y}_k$ adalah output prediksi dari Kalman filter atau extended Kalma
 
 ## 3. Metodologi Rekayasa & Standar Prosedur Operasional (SOP)
 
-Implementasi RL-based motion planning di industri mengikuti **SOP
+Implementasi RL-based motion planning di industri mengikuti **SOP.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -179,3 +179,6 @@ Gap: $|44,0 - 43,45| / 44,0 = 1,25\%$ → di bawah toleransi 1,3%, konvergen.
 
 Tiga skenario efisien diidentifikasi oleh Lead Researchers (2023):
 - **Skenario A**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -116,3 +116,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan d
 Ke depan, integrasi DRL dengan teknologi lain seperti Internet of Things (IoT) dan big data akan membuka peluang baru untuk optimasi rantai pasokan yang lebih canggih dan adaptif. Penelitian di bidang ini diharapkan dapat menghasilkan solusi yang lebih inovatif dan efektif untuk menghadapi tantangan rantai pasokan di masa depan.
 
 Dengan demikian, pemahaman dan penerapan DRL dalam optimasi rantai pasokan menjadi sangat penting bagi para profesional di bidang teknik industri untuk meningkatkan efisiensi dan daya saing perusahaan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

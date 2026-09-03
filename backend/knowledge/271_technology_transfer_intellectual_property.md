@@ -110,4 +110,7 @@ WIPO PATENTSCOPE database contains 100M+ patent documents; AI-assisted prior art
 6. AUTM. (2024). *U.S. Licensing Activity Survey: FY2023*. Association of University Technology Managers.
 7. WIPO. (2024). *World Intellectual Property Indicators 2024*. World Intellectual Property Organization.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

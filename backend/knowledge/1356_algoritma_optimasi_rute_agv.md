@@ -98,3 +98,6 @@ Pengembangan algoritma optimasi rute untuk AGV tidak hanya relevan dalam konteks
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada akurasi data dan kemampuan algoritma untuk beradaptasi dengan perubahan yang cepat. Oleh karena itu, penelitian di masa depan perlu fokus pada pengembangan algoritma yang lebih adaptif dan mampu memanfaatkan teknologi terkini seperti kecerdasan buatan dan pembelajaran mesin.
 
 Dengan demikian, pengembangan algoritma optimasi rute untuk AGV dalam lingkungan pabrik yang dinamis adalah langkah penting menuju efisiensi operasional yang lebih baik dan keberlanjutan dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

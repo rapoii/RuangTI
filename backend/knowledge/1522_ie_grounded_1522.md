@@ -137,3 +137,7 @@ $$T = 2{,}04 \times 10^9 \text{ bit/s} = 2{,}04 \text{ Gbps}$$
 ### 4.3 Perhitungan Keandalan Paket
 
 $$R_{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

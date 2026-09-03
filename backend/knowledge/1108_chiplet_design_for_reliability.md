@@ -94,3 +94,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin u
 ---
 
 Dokumen ini diharapkan dapat memberikan pemahaman yang mendalam tentang penilaian keandalan dalam desain chiplet 2.5D/3D, serta memberikan panduan praktis bagi para profesional di bidang teknik industri dan rekayasa sistem industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

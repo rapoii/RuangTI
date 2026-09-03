@@ -159,4 +159,7 @@ $$\Delta E_{design} = 100\% - 50\% = 50\ \text{persentase poin}$$
 
 **4.6 Analisis Material Menggunakan Weighted Index**
 
-Untuk memilih material mesh antara SS 304 dan SS 316L
+Untuk memilih material mesh antara SS 304 dan SS 316L.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -166,3 +166,6 @@ Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang 
 --- 
 
 Dokumen ini menyajikan pemahaman mendalam mengenai pengembangan metodologi FMEA multivariat dalam konteks sistem produksi cerdas, lengkap dengan formulasi matematis dan studi kasus kuantitatif. Diharapkan modul ini dapat menjadi referensi yang bermanfaat bagi para profesional dan akademisi di bidang teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

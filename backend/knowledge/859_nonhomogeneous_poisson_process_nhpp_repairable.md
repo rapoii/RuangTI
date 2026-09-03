@@ -119,3 +119,6 @@ Arah riset masa depan dapat mencakup integrasi model keandalan dengan analisis d
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang penerapan NHPP dan model Crow-AMSAA dalam konteks keandalan armada pertambangan, serta langkah-langkah praktis untuk implementasi dan evaluasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

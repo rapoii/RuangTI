@@ -592,3 +592,6 @@ Dari fitting 120 siklus historis (dengan tingkat *censoring* 38,3% pada batas ob
 4. **Banjevic, D., Jardine, A. K. S., Makis, V., & Ennis, M. (2001).** "A software for condition-based maintenance optimization." *Production and Operations Management*, 10(2), 159–180. DOI: [10.1111/j.1937-5956.2001.tb00076.x](https://doi.org/10.1111/j.1937-5956.2001.tb00076.x).
 5. **ISO 17359:2018.** *Condition monitoring and diagnostics of machine systems — General guidelines*. International Organization for Standardization.
 6. **IEEE Std 493-2007.** *IEEE Recommended Practice for the Design of Reliable Industrial and Commercial Power Systems (Gold Book)*. IEEE Industry Applications Society.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -111,3 +111,6 @@ Dalam perspektif standar masa depan, penting untuk mengembangkan pedoman dan reg
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai pengaruh exoskeleton terhadap peningkatan ergonomi dalam proses manufaktur, serta metodologi dan perhitungan yang relevan untuk evaluasi kinerja. Penelitian lebih lanjut dan penerapan praktis di lapangan akan memperkuat pemahaman kita tentang teknologi ini dan dampaknya terhadap industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

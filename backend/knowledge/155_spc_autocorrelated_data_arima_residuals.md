@@ -183,4 +183,7 @@ Recommended: $\lambda = 0.1–0.3$, $L = 2.7–3.0$ for residual EWMA.
 - Residual EWMA outperforms residual Shewhart for small-to-moderate shifts (<2σ)
 - Online implementation requires recursive residual computation and periodic model re-fitting
 - Distinguish **process autocorrelation** (inherent physics) from **control-induced autocorrelation** (feedback loops); latter may require closed-loop identification
-- Modern approaches combine ARIMA with ML surrogates for non-linear/non-stationary processes where linear ARIMA fails
+- Modern approaches combine ARIMA with ML surrogates for non-linear/non-stationary processes where linear ARIMA fails.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

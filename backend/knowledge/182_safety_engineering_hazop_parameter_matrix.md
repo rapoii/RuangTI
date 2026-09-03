@@ -92,3 +92,6 @@ Each node (a section of the process, typically a pipe, vessel, or piece of equip
 6.  **Wilson, J., & Smith, R.** (2024). "Quantitative risk assessment integration with HAZOP studies in chemical plants." *Process Safety Progress*, 43(2), 178-192.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

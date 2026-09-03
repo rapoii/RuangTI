@@ -210,4 +210,4 @@ Kunci keberhasilan DFM adalah **early involvement** manufacturing stakeholders, 
 5. Swift, K.G., & Booker, J.D. (2023). *Process Selection: From Design to Manufacture* (3rd ed.). Butterworth-Heinemann.
 6. ASM International. (2024). *ASM Handbook Volume 20: Materials Selection and Design*. ASM International.
 
-</content>
+</content>$.

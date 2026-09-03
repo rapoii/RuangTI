@@ -128,3 +128,7 @@ Kök dan Yıldız (2023) menyajikan studi kasus pada proses *welding* (*resistan
 ### 4.2. Perhitungan RPN Konvensional (AIAG 2008)
 
 $$RPN_{FM-01}
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

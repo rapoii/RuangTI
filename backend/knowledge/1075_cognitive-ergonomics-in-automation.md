@@ -85,3 +85,6 @@ Namun, ada batasan dalam metodologi ini, termasuk variabilitas individu dalam ka
 Ke depan, riset dalam ergonomi kognitif harus fokus pada pengembangan teknologi adaptif yang dapat menyesuaikan antarmuka berdasarkan kebutuhan dan kemampuan pengguna secara real-time. Ini termasuk penggunaan kecerdasan buatan untuk menganalisis perilaku pengguna dan menyesuaikan penyajian informasi sesuai dengan konteks dan situasi yang dihadapi.
 
 Dengan demikian, penerapan ergonomi kognitif dalam desain antarmuka otomatis akan terus menjadi area penting dalam meningkatkan keamanan dan efisiensi proses di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

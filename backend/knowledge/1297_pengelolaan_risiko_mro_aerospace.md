@@ -113,3 +113,6 @@ Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketidakpastian 
 Arah riset masa depan dapat mencakup pengembangan algoritma berbasis machine learning untuk prediksi risiko yang lebih baik, serta integrasi sistem manajemen risiko dengan teknologi Internet of Things (IoT) untuk pemantauan real-time terhadap kondisi komponen pesawat.
 
 Dengan demikian, pengelolaan risiko yang efektif dalam proses MRO aerospace tidak hanya akan meningkatkan keselamatan dan efisiensi, tetapi juga memberikan kontribusi signifikan terhadap keberlanjutan industri penerbangan secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

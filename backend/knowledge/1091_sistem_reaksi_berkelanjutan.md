@@ -125,3 +125,6 @@ Arah riset masa depan dapat meliputi integrasi teknologi Internet of Things (IoT
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang optimisasi sistem reaksi berkelanjutan dengan algoritma pembelajaran mesin, serta aplikasinya dalam proses distilasi berkelanjutan. Diharapkan, modul ini dapat menjadi referensi yang berguna bagi praktisi dan akademisi di bidang Teknik Industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

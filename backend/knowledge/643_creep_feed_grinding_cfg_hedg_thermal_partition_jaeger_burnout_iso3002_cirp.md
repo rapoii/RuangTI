@@ -597,4 +597,4 @@ Tim rekayasa manufaktur menerapkan perombakan total proses berbasis prinsip term
 4. **CIRP Annals — Manufacturing Technology** (2020). *Advances in High-Efficiency Deep Grinding and Thermal Damage Mitigation of Nickel-Based Superalloys*. CIRP Annals, 69(2), 650–673. DOI: 10.1016/j.cirp.2020.05.004.
 5. **ISO 3002-1:1982 / Amd 2018**: *Geometry of the active part of cutting tools — Part 1: General terms, reference systems, tool and working angles, chip breakers*. International Organization for Standardization.
 6. **ASTM E8 / E8M-22**: *Standard Test Methods for Tension Testing of Metallic Materials*. ASTM International, West Conshohocken, PA. DOI: 10.1520/E0008_E0008M-22.
-7. **Klocke, F., & Zeis, M.** (2018). *Manufacturing Processes 2: Grinding, Honing, Lapping*. Springer-Verlag Berlin Heidelberg. ISBN: 978-3-662-55070-0.
+7. **Klocke, F., & Zeis, M.** (2018). *Manufacturing Processes 2: Grinding, Honing, Lapping*. Springer-Verlag Berlin Heidelberg. ISBN: 978-3-662-55070-0.$.

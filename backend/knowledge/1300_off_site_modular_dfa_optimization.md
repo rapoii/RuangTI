@@ -117,4 +117,7 @@ Penerapan DfMA berbasis AI dalam OSMC tidak hanya terbatas pada industri konstru
 
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan representatif untuk pelatihan model AI, serta tantangan dalam mengintegrasikan teknologi baru dalam proses yang sudah ada. Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk optimasi desain, serta penerapan teknologi IoT untuk memantau dan menganalisis proses manufaktur secara real-time.
 
-Dengan demikian, optimasi proses desain untuk OSMC menggunakan pendekatan DfMA berbasis AI tidak hanya membawa manfaat langsung dalam hal efisiensi dan penghematan biaya, tetapi juga membuka peluang untuk inovasi dan peningkatan berkelanjutan dalam industri konstruksi dan sektor lainnya.
+Dengan demikian, optimasi proses desain untuk OSMC menggunakan pendekatan DfMA berbasis AI tidak hanya membawa manfaat langsung dalam hal efisiensi dan penghematan biaya, tetapi juga membuka peluang untuk inovasi dan peningkatan berkelanjutan dalam industri konstruksi dan sektor lainnya.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

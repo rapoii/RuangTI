@@ -115,3 +115,6 @@ Penerapan teknik marker dan nesting tidak hanya terbatas pada industri tekstil, 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas komputasi algoritma genetik dan kebutuhan untuk validasi yang ekstensif. Penelitian masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan integrasi teknologi otomatisasi untuk meningkatkan kecepatan dan akurasi dalam proses pemotongan.
 
 Dengan demikian, pemahaman yang mendalam tentang teknik-teknik ini sangat penting untuk meningkatkan efisiensi dan keberlanjutan dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

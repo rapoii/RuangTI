@@ -148,4 +148,7 @@ Asumsikan unit *shell-and-tube* dengan parameter berikut berdasarkan protokol mo
 | HTF: thermal oil | — | — | — |
 | Debit HTF | $\dot{m}$ | 0,02 | kg/s |
 | $c_{p,HTF}$ | — | 2300 | J/(kg·K) |
-| $T_{in}$ (charging) | — | 230 |
+| $T_{in}$ (charging) | — | 230 |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

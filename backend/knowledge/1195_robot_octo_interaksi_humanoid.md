@@ -103,3 +103,6 @@ Interaksi antara robot octopod dan humanoid tidak hanya relevan dalam sektor man
 Namun, terdapat beberapa batasan dalam metodologi yang digunakan, termasuk kebutuhan untuk pengembangan algoritma kontrol yang lebih canggih dan sistem sensor yang dapat mendeteksi keberadaan manusia dan robot secara akurat. Selain itu, perlu adanya penelitian lebih lanjut mengenai aspek keselamatan dan etika dalam penggunaan robot di lingkungan kerja.
 
 Arah riset masa depan dapat difokuskan pada pengembangan sistem interaksi yang lebih adaptif dan cerdas, serta integrasi teknologi kecerdasan buatan untuk meningkatkan kemampuan kolaborasi antara robot dan manusia. Dengan demikian, diharapkan bahwa interaksi antara robot octopod dan humanoid dapat menjadi solusi yang efektif dalam menghadapi tantangan industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

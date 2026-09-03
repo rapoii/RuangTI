@@ -182,4 +182,7 @@ Gaya resultan pada agen memberikan arah gerak yang mana APF cenderung gagal keti
 
 Setelah 500.000 episode pelatihan di simulator:
 
-| Met
+| Met.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

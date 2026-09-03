@@ -97,3 +97,6 @@ Namun, terdapat batasan metodologi yang perlu diperhatikan. Misalnya, kompleksit
 Standar masa depan juga perlu ditetapkan untuk memastikan bahwa semua perangkat dan sistem yang terhubung dapat beroperasi secara harmonis. Hal ini mencakup pengembangan protokol komunikasi yang lebih baik dan standar keamanan yang lebih ketat untuk melindungi data dan sistem dari ancaman siber.
 
 Dengan demikian, studi interoperabilitas antara CPS dan IoT dalam lingkungan industri pintar sangat penting untuk memastikan bahwa perusahaan dapat bersaing dalam pasar global yang semakin kompleks dan terhubung.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

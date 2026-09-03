@@ -116,3 +116,6 @@ Penerapan metode akuntansi karbon ter-tokenisasi tidak hanya relevan untuk sekto
 Batasan metodologi ini terletak pada ketergantungan pada data yang akurat dan dapat diandalkan dari berbagai sumber. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang dapat mengatasi masalah ini dan meningkatkan akurasi penghitungan emisi.
 
 Arah riset masa depan dapat berfokus pada pengembangan sistem yang lebih terintegrasi dan berbasis AI untuk memprediksi emisi dan mengoptimalkan pengurangan emisi dalam rantai pasok. Dengan demikian, perusahaan tidak hanya dapat memenuhi regulasi tetapi juga berkontribusi pada keberlanjutan lingkungan secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

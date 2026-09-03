@@ -158,4 +158,7 @@ Subject to: $Quality(x) \geq Q_{min}$, $Throughput(x) \geq T_{min}$
 - Kumar, S., & Singh, R. (2025). Industry 4.0 technologies enabling green manufacturing: Bibliometric analysis and research agenda. *Sustainable Production and Consumption*, 43, 234–251.
 - EPA. (2024). *Pollution Prevention Technical Assistance Guide for Manufacturers*. U.S. Environmental Protection Agency.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

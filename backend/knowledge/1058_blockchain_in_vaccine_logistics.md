@@ -89,3 +89,6 @@ Dengan mengadopsi teknologi blockchain secara luas, kita dapat berharap untuk me
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai aplikasi blockchain dalam logistik vaksin, dengan fokus pada aspek teknis dan metodologis yang relevan dengan disiplin Teknik Industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

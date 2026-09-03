@@ -133,4 +133,7 @@ Panjang lintasan tipikal pick-station A → rak B → packing: $L = 28$ m. Kecep
 
 $$T_{\text{siklus}} = \frac{L}{\bar{v}} + T_{\text{pick}} + T_{\text{dock}} = \frac{28}{1{,}1} + 8 + 5 \approx 38{,}45 \text{ s}$$
 
-Dengan reward $-0{,}1$ per detik, total step reward siklus
+Dengan reward $-0{,}1$ per detik, total step reward siklus.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -574,4 +574,4 @@ Berdasarkan pengujian eksekusi simulasi sinyal emisi akustik pada pemesinan padu
 5. **Groover, M. P.** (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th ed.). John Wiley & Sons. ISBN: 978-1119706427.
 6. **ISO 3685:1993**. *Tool-life testing with single-point turning tools*. International Organization for Standardization, Geneva.
 7. **ASTM E976-15**. *Standard Guide for Determining the Reproducibility of Acoustic Emission Sensor Response*. ASTM International, West Conshohocken, PA.
-8. **Zhu, K., & Zhang, Y.** (2024). Multi-sensor fusion and deep wavelet learning for in-process tool condition monitoring in milling of nickel-based superalloys. *Mechanical Systems and Signal Processing*, 208, 111052. https://doi.org/10.1016/j.ymssp.2023.111052
+8. **Zhu, K., & Zhang, Y.** (2024). Multi-sensor fusion and deep wavelet learning for in-process tool condition monitoring in milling of nickel-based superalloys. *Mechanical Systems and Signal Processing*, 208, 111052. https://doi.org/10.1016/j.ymssp.2023.111052$.

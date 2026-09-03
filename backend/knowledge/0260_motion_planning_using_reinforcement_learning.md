@@ -130,4 +130,7 @@ Kerangka implementasi yang diadaptasi dari Kala (2024) dan Borah (2024) untuk la
 
 **Fase 5 — Continuous Learning (Ongoing):**
 - *Online fine-tuning* dengan prioritas *experience replay* berbasis *temporal difference error*.
-- *Periodic retraining* setiap 6 bulan untuk adaptasi
+- *Periodic retraining* setiap 6 bulan untuk adaptasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

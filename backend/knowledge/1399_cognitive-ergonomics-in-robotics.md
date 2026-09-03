@@ -108,3 +108,6 @@ Namun, terdapat batasan dalam metodologi yang ada, seperti ketidakpastian dalam 
 Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin untuk meningkatkan adaptasi robot terhadap kebutuhan pengguna, serta eksplorasi lebih lanjut tentang dampak psikologis dari interaksi manusia-robot dalam konteks kerja.
 
 Dengan demikian, penerapan prinsip ergonomi kognitif dalam desain HRI bukan hanya penting untuk meningkatkan efisiensi operasional, tetapi juga untuk menciptakan lingkungan kerja yang lebih aman dan nyaman bagi pekerja.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

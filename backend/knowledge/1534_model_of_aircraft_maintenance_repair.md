@@ -119,4 +119,7 @@ $$h_1 = \tanh(0.847) = 0.689, \quad h_2 = \tanh(1.235) = 0.826, \quad \ldots, \q
 
 Keluaran jaringan (RUL prediksi dalam hari kalender):
 
-$$\hat{y} = \text{ReLU}\left(\sum_{j=1}^{24} w_j^{(2)} h_j + b^{(2)}\right) = \text{ReLU}(412.7) = 412.7 \text{ hari}$$
+$$\hat{y} = \text{ReLU}\left(\sum_{j=1}^{24} w_j^{(2)} h_j + b^{(2)}\right) = \text{ReLU}(412.7) = 412.7 \text{ hari}$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

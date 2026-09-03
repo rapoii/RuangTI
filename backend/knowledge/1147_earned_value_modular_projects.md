@@ -114,3 +114,6 @@ Integrasi EVM dengan teknik konstruksi modular tidak hanya relevan dalam industr
 Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan untuk data yang akurat dan real-time, serta tantangan dalam mengintegrasikan berbagai sistem informasi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan alat dan teknologi yang dapat meningkatkan akurasi pengukuran kinerja dan mempercepat proses pengambilan keputusan.
 
 Dengan demikian, integrasi EVM dan teknik konstruksi modular dapat menjadi solusi efektif untuk meningkatkan pengendalian proyek, namun memerlukan pendekatan yang sistematis dan adaptif terhadap tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -137,4 +137,7 @@ dengan $C_{clean}$ biaya *shutdown* + cleaning, $C_{prod}$ margin produksi haria
 **Fase Operasional:**
 1. **Monitoring suhu dinding autoclave** dengan termokopel T₁–T₆ sepanjang bejana. Jika $\Delta T_{wall-steam} > 12$ °C, indikasi deposisi kerak > 8 mm.
 2. **Sampling slurry setiap 4 jam** untuk analisis Fe³⁺, free acid, dan *particle size distribution* dengan laser diffraction (Malvern Mastersizer).
-3. **Kontrol pH slurry pada 1,0–1,5** menggunakan online probe (Hamilton
+3. **Kontrol pH slurry pada 1,0–1,5** menggunakan online probe (Hamilton.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

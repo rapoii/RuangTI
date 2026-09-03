@@ -108,4 +108,7 @@ Implementasi arsitektur DT-AAS untuk sistem 5G dan CP-ATS mengikuti SOP delapan 
 ### Fase 2 — Pemodelan AAS *Submodels*
 Definisikan *submodel* esensial untuk setiap kelas aset:
 - *Nameplate* (identitas, pabrikan, seri).
-- *TechnicalData* (spesifikasi teknis: bandwidth, latensi,
+- *TechnicalData* (spesifikasi teknis: bandwidth, latensi, \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

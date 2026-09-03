@@ -110,3 +110,6 @@ Model valuasi opsi realisasi memiliki aplikasi yang luas di berbagai sektor, ter
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas dalam pengukuran variabel sosial dan lingkungan, serta ketidakpastian yang tinggi dalam proyeksi pasar. Oleh karena itu, arah riset masa depan perlu difokuskan pada pengembangan model yang lebih robust dan integratif, yang dapat mengakomodasi berbagai faktor risiko dan dampak sosial.
 
 Dengan demikian, penerapan model valuasi opsi realisasi dalam investasi berkelanjutan tidak hanya memberikan manfaat finansial, tetapi juga mendukung tujuan keberlanjutan dan tanggung jawab sosial perusahaan. Penelitian lebih lanjut diperlukan untuk mengeksplorasi potensi dan tantangan dalam penerapan model ini di berbagai konteks industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

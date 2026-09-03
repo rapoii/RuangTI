@@ -140,3 +140,6 @@ Recent benchmarking studies (JIPM, 2024) show median OEE improvement of 22 perce
 8. ISO. (2023). *ISO 14224: Collection and Exchange of Reliability and Maintenance Data for Equipment*. International Organization for Standardization.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

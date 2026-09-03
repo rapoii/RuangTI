@@ -144,3 +144,6 @@ Pendekatan optimasi portofolio tidak hanya relevan dalam konteks R&D, tetapi jug
 Namun, terdapat batasan dalam metodologi ini, seperti asumsi bahwa imbal hasil mengikuti distribusi normal dan ketidakpastian dalam estimasi parameter. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih robust, termasuk penggunaan teknik machine learning untuk memprediksi imbal hasil dan risiko.
 
 Arah riset masa depan dapat berfokus pada integrasi aspek keberlanjutan (ESG) dalam proses seleksi proyek, serta pengembangan alat analisis yang lebih canggih untuk mengatasi bottleneck sumber daya secara real-time. Dengan demikian, perusahaan dapat lebih responsif terhadap perubahan pasar dan meningkatkan daya saing mereka di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

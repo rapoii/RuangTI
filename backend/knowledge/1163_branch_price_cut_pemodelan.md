@@ -113,3 +113,6 @@ Algoritma Branch-and-Price-and-Cut tidak hanya relevan dalam konteks VRP, tetapi
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan terkini, serta kompleksitas komputasi yang tinggi untuk skala besar. Oleh karena itu, riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan adaptif, serta penerapan teknologi seperti kecerdasan buatan untuk meningkatkan akurasi dan kecepatan pemecahan masalah.
 
 Dengan demikian, penerapan algoritma inovatif dalam VRP akan terus menjadi area riset yang penting dan relevan di masa depan, seiring dengan perkembangan industri dan kebutuhan akan efisiensi yang lebih tinggi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

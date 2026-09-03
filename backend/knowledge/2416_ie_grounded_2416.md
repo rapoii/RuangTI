@@ -160,4 +160,7 @@ Studi kasus menggunakan jaringan rantai pasok susu di Pulau Jawa dengan paramete
 ### 4.2 Perhitungan Step-by-Step
 
 **Iterasi 1 — Solve MP Awal:**
-Asumsikan semua $y_j = 0$, sehingga $\theta =
+Asumsikan semua $y_j = 0$, sehingga $\theta =$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

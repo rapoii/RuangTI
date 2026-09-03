@@ -161,4 +161,7 @@ Sebuah fasilitas *oil & gas* memiliki pompa sentrifugal kritikal dengan paramete
 
 ### Langkah 1: Model Degradasi Getaran
 
-Asumsikan degradasi mengikuti model Wiener dengan drift
+Asumsikan degradasi mengikuti model Wiener dengan drift$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -125,4 +125,7 @@ Implementasi industri unit LHTES-HTHP mengikuti SOP berlapis yang diturunkan dar
 | PCM | Eutektik NaNO₃–KNO₃ | – |
 | $T_m$ | 222 | °C |
 | $\rho_{PCM}$ | 1890 | kg/m³ |
-| $k_{PCM}$ | 0,50 | W/(m·
+| $k_{PCM}$ | 0,50 | W/(m·.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

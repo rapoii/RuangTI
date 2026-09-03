@@ -89,4 +89,7 @@ Analisis risiko kebijakan CBAM tidak hanya relevan bagi sektor industri tertentu
 
 Batasan metodologi yang digunakan dalam analisis ini termasuk ketidakpastian dalam data yang dikumpulkan dan asumsi yang dibuat dalam model matematis. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih dinamis dan adaptif, serta integrasi data real-time untuk meningkatkan akurasi analisis risiko.
 
-Dengan demikian, pemahaman yang mendalam tentang risiko yang terkait dengan kebijakan CBAM akan menjadi kunci bagi perusahaan untuk tetap kompetitif dan berkelanjutan di pasar global yang semakin kompleks.
+Dengan demikian, pemahaman yang mendalam tentang risiko yang terkait dengan kebijakan CBAM akan menjadi kunci bagi perusahaan untuk tetap kompetitif dan berkelanjutan di pasar global yang semakin kompleks.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

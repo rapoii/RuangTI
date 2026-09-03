@@ -130,3 +130,6 @@ Meskipun APET dengan data besar menawarkan banyak keuntungan, ada beberapa batas
 Riset di masa depan dapat fokus pada pengembangan algoritma analitik yang lebih canggih, penggunaan kecerdasan buatan untuk prediksi kebutuhan energi, dan integrasi dengan teknologi energi terbarukan untuk mencapai efisiensi yang lebih tinggi.
 
 Dengan demikian, implementasi Analisis Pinch Energi Termal menggunakan data besar menjadi langkah strategis yang dapat membawa manfaat signifikan bagi industri dalam menghadapi tantangan energi di era modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

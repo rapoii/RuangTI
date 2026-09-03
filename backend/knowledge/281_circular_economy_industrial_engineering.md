@@ -44,3 +44,6 @@ Module 258 (Design for Disassembly & Remanufacturing Index), Module 280 (Sustain
 2. McDonough, W., & Braungart, M. (2013). *The Upcycle: Beyond Sustainability—Designing for Abundance*. North Point Press.
 3. Cradle to Cradle Products Innovation Institute. (2021). *C2C Certified Product Standard Version 4.0*.
 4. Resources, Conservation and Recycling (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

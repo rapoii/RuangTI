@@ -105,3 +105,7 @@ $$\mathcal{L}_{physics} = \frac{1}{10{,}000} \sum_{j=1}^{10{,}000} r_j^2$$
 Langkah 4: Hitung *data loss* terhadap 200 titik observasi:
 
 $$\mathcal{L}_{data} = \frac{1}{200} \sum_{i
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

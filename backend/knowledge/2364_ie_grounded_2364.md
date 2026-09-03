@@ -112,3 +112,7 @@ Hitung rata-rata dan varians batch: μ_T, σ²_T
     ▼
 Apakah |T_p(i,t) - T_setpoint| > 2 °C untuk > 5% vial?
     │                              │
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -40,3 +40,7 @@ dengan $\sigma_{film}$ adalah tegangan residu film tipis, $\nu$ rasio Poisson, $
 Untuk *signal integrity*, Roze dan Gerber (2026) mengadopsi model transmisi untuk TSV dan *hybrid bonding* interconnect. Resistansi TSV silikon tembaga:
 
 $$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

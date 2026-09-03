@@ -92,4 +92,7 @@ dengan $\rho$ sebagai parameter regularisasi Proximal.
 
 **Studi Kasus:** Jaringan distribusi produk susu di sebuah provinsi dengan 5 peternakan ($i=1,...,5$), 2 kandidat pabrik pengolahan ($j=1,2$), 3 kandidat gudang ($k=1,2,3$), dan 8 zona pelanggan ($l=1,...,8$). Produk: susu pasteurisasi ($\tau=7$ hari) dan yogurt ($\tau=21$ hari). Horizon: 12 bulan, 4 skenario permintaan (S1: rendah, S2: sedang, S3: tinggi, S4: ekstrim).
 
-**Parameter Biaya (Rp):** $f_1=2{,}5 \times 10^9$, $f_2=3{,}0 \times 10^9$; $g_k \in \{8 \times 10^8, 9 \times 10^8, 1{,}0 \times 10^9\}$; biaya transportasi rata-rata $c_{ij} = 250$/liter, $h_{jk} = 180$/liter, $r_{kl} = 320$/liter. Biaya persediaan $h^{I} = 50$/liter/minggu. Penalty shortage $\text{Pen} = 1{,}200$/liter. Permintaan skenario S1: $D_l^{S1} \in [8.000, 15.000]$ liter/m
+**Parameter Biaya (Rp):** $f_1=2{,}5 \times 10^9$, $f_2=3{,}0 \times 10^9$; $g_k \in \{8 \times 10^8, 9 \times 10^8, 1{,}0 \times 10^9\}$; biaya transportasi rata-rata $c_{ij} = 250$/liter, $h_{jk} = 180$/liter, $r_{kl} = 320$/liter. Biaya persediaan $h^{I} = 50$/liter/minggu. Penalty shortage $\text{Pen} = 1{,}200$/liter. Permintaan skenario S1: $D_l^{S1} \in [8.000, 15.000]$ liter/m.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

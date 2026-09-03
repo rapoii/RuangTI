@@ -119,3 +119,6 @@ Sistem pemulihan gas flare tidak hanya relevan dalam industri petrokimia, tetapi
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk variabilitas dalam komposisi gas dan kondisi operasi yang dapat mempengaruhi kinerja sistem. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan adaptif.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi baru untuk pemulihan gas, serta metode untuk mengurangi emisi NMVOC lebih lanjut, sejalan dengan standar lingkungan yang semakin ketat. Penelitian ini akan berkontribusi pada keberlanjutan industri dan pengurangan dampak lingkungan secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -141,3 +141,7 @@ BHET ini dapat dipolimerisasi kembali menjadi PET *food-grade* atau diaplikasika
 Hasil kuantitatif ini menunjukkan bahwa substitusi PET daur ulang pada proyek infrastruktur jalan tidak hanya memenuhi target dekarbonisasi Abreu et al. (2022) pada level makro, tetapi juga memberikan nilai tambah ekonomi melalui penciptaan pasar sekunder untuk monomer hasil glikolisis (Enache et al. 2024). ROI proyek dapat dihitung sebagai:
 
 $$ROI = \frac{\Delta CO_2 \times P_{carbon} + \Delta Cost_{material}}{Capex
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

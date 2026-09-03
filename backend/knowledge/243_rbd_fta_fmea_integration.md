@@ -46,3 +46,6 @@ Analisis DFTA keandalan sistem pengereman darurat kereta ringan dan sistem pendi
 2. Vesely, W., et al. (2002). *Fault Tree Handbook with Aerospace Applications*, Version 1.1. NASA Office of Safety and Mission Assurance.
 3. Ruijters, E., & Stoelinga, M. (2015). Fault tree analysis: A survey of the state-of-the-art in modeling, analysis and tools. *Computer Science Review*, 15–16, 29–62.
 4. Boudali, H., Crouzen, P., & Stoelinga, M. (2024). Dynamic fault tree analysis using input/output interactive Markov chains: Recent advances and industrial validation. *Reliability Engineering & System Safety*, 243, 109812.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

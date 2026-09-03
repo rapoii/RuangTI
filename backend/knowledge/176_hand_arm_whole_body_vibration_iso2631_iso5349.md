@@ -65,3 +65,6 @@ Glove effectiveness is governed by **ISO 10819**. Certified anti-vibration glove
 6.  **Li, Y., & Chen, Z.** (2025). "Machine learning integration with ISO 2631 metrics improves low back pain prediction in mining vehicle operators." *Journal of Sound and Vibration*, 598, 118834.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

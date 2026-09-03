@@ -102,3 +102,6 @@ Teknik pemulihan energi termal melalui pompa panas tidak hanya relevan untuk sek
 Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan untuk investasi awal yang signifikan dan kompleksitas integrasi dengan sistem yang ada. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan biaya yang lebih rendah, serta peningkatan sistem pemantauan dan kontrol untuk mengoptimalkan kinerja pompa panas.
 
 Dengan demikian, penerapan teknik pemulihan energi termal melalui pompa panas merupakan langkah strategis menuju keberlanjutan dan efisiensi energi dalam industri, sejalan dengan standar ISO 50001:2022 dan tren global menuju pengurangan emisi karbon.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

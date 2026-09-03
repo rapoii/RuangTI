@@ -104,4 +104,7 @@ Ke depan, arah riset dapat difokuskan pada integrasi teknologi baru seperti Inte
 
 ---
 
-Dokumen ini memberikan gambaran komprehensif tentang inovasi teknologi dalam automasi pelabuhan, dengan fokus pada dampaknya terhadap efisiensi operasional dan keamanan. Dengan mengikuti standar dan referensi yang relevan, diharapkan modul ini dapat menjadi sumber informasi yang berguna bagi para profesional di bidang teknik industri dan rekayasa sistem industri.
+Dokumen ini memberikan gambaran komprehensif tentang inovasi teknologi dalam automasi pelabuhan, dengan fokus pada dampaknya terhadap efisiensi operasional dan keamanan. Dengan mengikuti standar dan referensi yang relevan, diharapkan modul ini dapat menjadi sumber informasi yang berguna bagi para profesional di bidang teknik industri dan rekayasa sistem industri.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

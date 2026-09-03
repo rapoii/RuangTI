@@ -152,4 +152,7 @@ Asumsi kompresi isotermal reversibel:
 
 $$W = n_{CO_2} \cdot RT \ln\left(\frac{P_2}{P_1}\right)$$
 
-dengan $n_{CO_2} = \frac{1055{,}2 \times 871{,}3}{44{,}01} = 20{,
+dengan $n_{CO_2} = \frac{1055{,}2 \times 871{,}3}{44{,}01} = 20{,$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

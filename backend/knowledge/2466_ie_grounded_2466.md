@@ -62,3 +62,6 @@ Mohon konfirmasi opsi A, B, atau C agar saya dapat menyelesaikan Modul 2466 deng
 ---
 
 *Ringkasan: Dokumen penuh belum dapat disusun karena kolom "Abstrak & Temuan" pada kedua literatur riil berstatus kosong. Konten matematis, numerik, dan tematik tidak boleh difabrikasi; diperlukan data badan paper aktual untuk memenuhi struktur dan panjang yang diminta.*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

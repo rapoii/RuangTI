@@ -155,3 +155,6 @@ Wafer fab equipment maintenance optimization balances yield loss against through
 8. Elwany, A. B., Gebraeel, N. Z., & Maillart, L. M. (2024). Structured replacement policies for partially observable degrading systems. *Operations Research*, 72(4), 1567–1585.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

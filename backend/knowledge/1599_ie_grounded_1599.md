@@ -103,4 +103,7 @@ $$\eta_{DFA,lama} = \frac{2 \times 9}{5 \times 18} \times 100\% = \frac{18}{90} 
 Efisiensi DFA desain eksisting sangat rendah (20%), mengindikasikan peluang besar untuk redesain.
 
 **Parameter Desain Usulan (Proposed):**
-- Jumlah
+- Jumlah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

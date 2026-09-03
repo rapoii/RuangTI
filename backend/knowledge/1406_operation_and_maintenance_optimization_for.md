@@ -135,4 +135,7 @@ $$t^* = t_0 + \frac{D^* - D_0}{r} = 7000 + \frac{2.5 - 1.8}{0.0003} = 7000 + 233
 
 **Langkah 3: Update Bayesian dengan inspeksi terbaru.**
 
-*Prior*: distribusi kerusakan $D \sim \mathcal{N}(1.8, 0.3^2)$ mm. *Likelihood* dari pengukuran *borescope* baru: $\mathcal{N}(2.1,
+*Prior*: distribusi kerusakan $D \sim \mathcal{N}(1.8, 0.3^2)$ mm. *Likelihood* dari pengukuran *borescope* baru: $\mathcal{N}(2.1,$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

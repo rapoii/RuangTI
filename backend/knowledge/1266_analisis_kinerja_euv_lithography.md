@@ -105,3 +105,6 @@ Arah riset masa depan dapat difokuskan pada integrasi teknologi baru, seperti In
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai analisis kinerja EUV lithography dengan pendekatan multivariat, serta metodologi dan aplikasi praktis yang relevan dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

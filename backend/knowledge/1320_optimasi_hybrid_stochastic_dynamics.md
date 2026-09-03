@@ -102,3 +102,6 @@ HSDP tidak hanya relevan dalam konteks rantai pasok, tetapi juga dapat diterapka
 Namun, terdapat beberapa batasan dalam metodologi HSDP, termasuk kompleksitas perhitungan dan kebutuhan akan data yang akurat. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan teknik pengumpulan data yang lebih baik.
 
 Dengan demikian, HSDP memiliki potensi untuk menjadi alat yang sangat berharga dalam pengelolaan rantai pasok dan sistem industri lainnya, terutama dalam menghadapi tantangan ketidakpastian yang semakin kompleks di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

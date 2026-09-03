@@ -87,3 +87,6 @@ The Delphi Method is a structured communication technique for gathering expert o
 -   Journal of Engineering and Technology Management (2024). "Delphi method applications in industrial technology roadmapping".
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

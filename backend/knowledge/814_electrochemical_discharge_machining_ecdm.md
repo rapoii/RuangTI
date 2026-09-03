@@ -115,3 +115,6 @@ ECDM memiliki aplikasi yang luas tidak hanya dalam pemesinan keramik tetapi juga
 Namun, terdapat batasan metodologi yang perlu diperhatikan, seperti ketergantungan pada parameter proses yang tepat dan potensi kerusakan pada material jika tidak dikelola dengan baik. 
 
 Arah riset masa depan dapat berfokus pada pengembangan algoritma kontrol cerdas untuk mengoptimalkan proses ECDM, serta eksplorasi material baru yang dapat diproses dengan metode ini. Dengan demikian, ECDM berpotensi menjadi salah satu metode pemesinan yang dominan dalam era manufaktur canggih yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

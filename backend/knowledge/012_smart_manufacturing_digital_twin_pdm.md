@@ -41,3 +41,6 @@ Evolusi strategi pemeliharaan mesin:
 Implementasi *Predictive Maintenance* dan *Digital Twin* menargetkan eliminasi langsung terhadap dua akar kerugian utama OEE Nakajima:
 1. **Equipment Failure (Kerusakan Mesin):** Waktu henti mesin tak terencana akan mendekati angka nol, sehingga **Availability Rate ($A$) $\uparrow$**.
 2. **Reduced Speed & Quality Defects:** Gejala keausan terdeteksi secara algoritmis sebelum merusak kualitas produk, sehingga **Performance Rate ($P$) $\uparrow$** dan **Quality Rate ($Q$) $\uparrow$**.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

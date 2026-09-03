@@ -124,4 +124,7 @@ Integrasi prinsip ekonomi berkelanjutan dalam manajemen aset tidak hanya relevan
 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketidakpastian dalam estimasi biaya dan dampak lingkungan. Oleh karena itu, riset masa depan harus difokuskan pada pengembangan model yang lebih akurat dan adaptif terhadap perubahan kondisi pasar dan regulasi.
 
-Dalam kesimpulannya, penerapan prinsip ekonomi berkelanjutan dalam manajemen aset berdasarkan ISO 55001 tidak hanya memberikan manfaat ekonomi tetapi juga berkontribusi pada keberlanjutan lingkungan dan sosial, yang semakin menjadi perhatian utama di dunia industri saat ini.
+Dalam kesimpulannya, penerapan prinsip ekonomi berkelanjutan dalam manajemen aset berdasarkan ISO 55001 tidak hanya memberikan manfaat ekonomi tetapi juga berkontribusi pada keberlanjutan lingkungan dan sosial, yang semakin menjadi perhatian utama di dunia industri saat ini.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

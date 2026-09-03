@@ -307,4 +307,4 @@ $$X_{\text{feed}} \ge 508.29\text{ kg}$$
 2. **Nemirovski, A., & Shapiro, A.** (2006). Convex approximations of chance constrained programs. *SIAM Journal on Optimization*, 17(4), 969-996. DOI: [10.1137/050622320](https://doi.org/10.1137/050622320).
 3. **Rockafellar, R. T., & Uryasev, S.** (2000). Optimization of conditional value-at-risk. *Journal of Risk*, 2(3), 21-41. DOI: [10.21314/JOR.2000.038](https://doi.org/10.21314/JOR.2000.038).
 4. **Prékopa, A.** (1995). *Stochastic Programming*. Kluwer Academic Publishers / Springer, Dordrecht. ISBN: 978-90-481-4560-7. DOI: [10.1007/978-94-017-3087-7](https://doi.org/10.1007/978-94-017-3087-7).
-5. **Birge, J. R., & Louveaux, F.** (2011). *Introduction to Stochastic Programming* (2nd Edition). Springer Science & Business Media, New York. ISBN: 978-1-4614-0236-7. DOI: [10.1007/978-1-4614-0237-4](https://doi.org/10.1007/978-1-4614-0237-4).
+5. **Birge, J. R., & Louveaux, F.** (2011). *Introduction to Stochastic Programming* (2nd Edition). Springer Science & Business Media, New York. ISBN: 978-1-4614-0236-7. DOI: [10.1007/978-1-4614-0237-4](https://doi.org/10.1007/978-1-4614-0237-4).$.

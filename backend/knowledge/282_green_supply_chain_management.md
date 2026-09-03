@@ -104,4 +104,7 @@ Balanced scorecard extensions weight environmental objectives alongside financia
 5. Ellen MacArthur Foundation. (2023). *Circular Economy in Detail: Deep Dive*. EMF Publications.
 6. Carter, C. R., & Washispack, S. (2024). Sustainable supply chain management: A bibliometric analysis and future research agenda. *Supply Chain Management: An International Journal*, 29(1), 1–22.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

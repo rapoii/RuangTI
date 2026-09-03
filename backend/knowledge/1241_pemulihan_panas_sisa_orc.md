@@ -105,3 +105,6 @@ Pengembangan sistem ORC berbasis algoritma pembelajaran mesin tidak hanya releva
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data dan kompleksitas model yang dapat mempengaruhi akurasi prediksi. Oleh karena itu, penelitian lebih lanjut diperlukan untuk meningkatkan algoritma dan teknik analisis data.
 
 Arah riset masa depan dapat mencakup pengembangan model pembelajaran mendalam (deep learning) untuk meningkatkan akurasi prediksi dan penerapan teknik big data untuk analisis data dalam skala besar. Dengan demikian, sistem ORC berbasis algoritma pembelajaran mesin dapat menjadi solusi yang lebih efektif dan efisien dalam pemulihan energi panas sisa di industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -39,3 +39,6 @@ Simulasi armada 24 unit AMR gudang e-commerce (SimPy, 30 hari operasi virtual) m
 2. Vis, I. F. A. (2006). Survey of research in the design and control of automated guided vehicle systems. *European Journal of Operational Research*, 170(3), 677–709.
 3. Stern, R., et al. (2019). Multi-agent pathfinding: Definitions, variants, and benchmarks. *Symposium on Combinatorial Search (SoCS)*.
 4. Fransen, J., van Eekelen, J., & Adan, I. (2024). Energy-aware scheduling of AGV fleets with battery degradation considerations. *Computers & Operations Research*, 166, 106620.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

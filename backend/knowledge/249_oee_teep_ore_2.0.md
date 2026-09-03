@@ -143,4 +143,7 @@ A 300mm wafer fab implemented OEE 2.0 across lithography cluster tools (2024):
 7. Li, J., Blumenfeld, D., & Marin, S. (2023). Manufacturing system design with OEE-driven bottleneck analysis. *Manufacturing Science and Engineering*, 145(8), 081005.
 8. SEMI. (2024). *SEMI E10-0703: Specification for Definition and Measurement of Equipment Reliability, Availability, Maintainability, and Utilization*. SEMI International Standards.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -48,3 +48,6 @@ Module 260 (Statistical Tolerance Stack-Up), Module 256 (Design for Six Sigma DF
 2. Jones, B., & Nachtsheim, C. J. (2013). Definitive screening designs with added two-level categorical factors. *Journal of Quality Technology*, 45(2), 121–129.
 3. Montgomery, D. C. (2020). *Design and Analysis of Experiments* (10th ed.). Wiley.
 4. Quality Engineering (2023).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

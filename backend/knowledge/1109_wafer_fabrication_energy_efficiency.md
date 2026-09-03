@@ -119,3 +119,6 @@ Peningkatan efisiensi energi dalam fabrikasi semikonduktor tidak hanya berdampak
 Namun, ada batasan dalam metodologi yang digunakan, termasuk ketidakpastian dalam data dan asumsi yang dibuat selama analisis. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknik pengukuran yang lebih akurat dan penerapan teknologi baru seperti kecerdasan buatan untuk mengoptimalkan proses produksi.
 
 Dengan demikian, penilaian siklus hidup dan metrik efisiensi energi akan terus menjadi fokus utama dalam upaya meningkatkan keberlanjutan dan efisiensi dalam industri semikonduktor.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

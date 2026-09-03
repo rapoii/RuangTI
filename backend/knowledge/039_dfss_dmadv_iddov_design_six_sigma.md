@@ -58,3 +58,6 @@ Desain harus mencapai minimal $Z_{\text{short-term}} \ge 6.0$ (setara $Z_{\text{
 - **Reliability Engineering:** Memprediksi MTBF dan laju kegagalan desain baru sebelum diproduksi massal.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

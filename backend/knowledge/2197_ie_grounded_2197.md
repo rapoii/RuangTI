@@ -153,3 +153,7 @@ $$M_{in} = 0.40 \times 350{,}000 = 140{,}000 \text{ kWh}$$
 Untuk permintaan $D_i = a_i - b_i p_i$, harga optimum monopoli: $p_i^* = \dfrac{a_i + b_i \cdot c_i^{eff}}{2 b_i}$, dengan $c_n^{eff}=0$, $c_e^{eff} = c_c+c_t+c_d \approx 350$ RMB/kWh, $c_r^{eff} = (c_c+c_t+c_d+c_{rm})/\eta \approx 970.65$ RMB/kWh:
 
 $$p_n^* =
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

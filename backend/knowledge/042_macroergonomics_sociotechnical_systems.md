@@ -57,3 +57,6 @@ $$\text{STS Effectiveness} = f(\text{Technical Efficiency}, \text{Social Quality
 *(Di mana optimasi parsial pada satu subsistem saja akan menurunkan efektivitas total sistem).*
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

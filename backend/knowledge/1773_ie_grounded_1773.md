@@ -153,4 +153,7 @@ Berdasarkan Dickson et al. (2026) dan Andrameda et al. (2024), berikut adalah SO
 | Konsentrasi Fe³⁺ awal | 4,2 | g/L |
 | Waktu operasi | 250 | jam |
 | $D_0$ (pre-eksponensial) | 2,5×10⁻⁴ | m²/s |
-| $E_a$ | 78 | kJ/mol |
+| $E_a$ | 78 | kJ/mol |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

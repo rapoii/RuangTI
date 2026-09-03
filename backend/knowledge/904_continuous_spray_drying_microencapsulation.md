@@ -105,3 +105,6 @@ Spray drying dan mikroenkapsulasi memiliki aplikasi luas dalam berbagai disiplin
 Batasan metodologi yang ada, seperti ketergantungan pada parameter fisik tertentu dan variasi dalam sifat bahan baku, perlu diatasi melalui penelitian lebih lanjut. Arah riset masa depan dapat mencakup pengembangan teknologi baru untuk atomisasi yang lebih efisien dan pengujian bahan baru yang dapat meningkatkan stabilitas produk akhir.
 
 Dengan demikian, pemahaman yang mendalam tentang dinamika atomisasi droplet, psikrometri, dan retensi hasil matriks kaca akan sangat berkontribusi pada inovasi dan efisiensi dalam industri spray drying dan mikroenkapsulasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

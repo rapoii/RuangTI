@@ -39,3 +39,6 @@ Mode kegagalan pengelasan bracket: efek = rangka melemah saat tabrakan; penyebab
 - Basis untuk menentukan titik pengendalian pada Control Plan dan rencana inspeksi SPC.
 - Terintegrasi dengan FTA (Fault Tree Analysis) untuk analisis top-down vs bottom-up.
 - Dalam lean six sigma DMAIC, FMEA dipakai pada fase Analyze/Improve untuk memprioritaskan mode kegagalan yang ditangani kaizen burst.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -90,4 +90,7 @@ Diagram alir proses logika dapat direpresentasikan sebagai berikut:
 
 ### 3.2. Standar Prosedur Operasional Mitigasi Scaling
 
-Berdasarkan sintesis Dickson et al. (2026) dan pengalaman operasi industri plant Murrin Murrin, Ravensthorpe
+Berdasarkan sintesis Dickson et al. (2026) dan pengalaman operasi industri plant Murrin Murrin, Ravensthorpe.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

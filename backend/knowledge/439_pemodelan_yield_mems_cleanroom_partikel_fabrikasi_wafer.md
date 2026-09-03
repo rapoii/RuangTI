@@ -223,4 +223,4 @@ Investasi peningkatan kebersihan terbukti sangat layak secara keinsinyuran manuf
 3. Cunningham, J. A. (1990). *The use and evaluation of yield models in integrated circuit manufacturing*. IEEE Transactions on Semiconductor Manufacturing, 3(2), 60-71. DOI: 10.1109/66.53188.
 4. ISO 14644-1:2015. *Cleanrooms and associated controlled environments — Part 1: Classification of air cleanliness by particle concentration*. International Organization for Standardization.
 5. Groover, M. P. (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th Edition). John Wiley & Sons, Hoboken, NJ. ISBN: 978-1-119-47521-7.
-6. Montgomery, D. C. (2019). *Introduction to Statistical Quality Control* (8th Edition). John Wiley & Sons, New York. ISBN: 978-1-119-39930-8.
+6. Montgomery, D. C. (2019). *Introduction to Statistical Quality Control* (8th Edition). John Wiley & Sons, New York. ISBN: 978-1-119-39930-8.$.

@@ -107,3 +107,6 @@ Pemrograman dinamis berbasis jaringan tidak hanya relevan dalam proyek konstruks
 Namun, ada beberapa batasan dalam metodologi ini, termasuk kompleksitas komputasi yang meningkat seiring dengan bertambahnya jumlah simpul dan sisi dalam jaringan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih efisien dan dapat diimplementasikan dalam skala besar.
 
 Arah riset masa depan juga dapat mencakup integrasi teknologi baru, seperti kecerdasan buatan dan analitik data besar, untuk meningkatkan kemampuan pemodelan dan analisis risiko dalam proyek konstruksi. Dengan demikian, pemrograman dinamis berbasis jaringan dapat terus beradaptasi dan berkembang untuk memenuhi tantangan yang dihadapi dalam industri konstruksi modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

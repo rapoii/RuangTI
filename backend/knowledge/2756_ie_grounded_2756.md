@@ -153,3 +153,6 @@ $$\text{Savings} = 5 \times 160 \text{ siklus/hari} \times 365 \text{ hari} \tim
 ### 5.1 Evaluasi Batasan Metodologi
 
 Kala (2024) secara eksplisit mengakui beberapa keterbatasan motion planning berbasis RL: (1) **Sample inefficiency** — DQN klasik memerlukan jutaan *transisi* untuk konvergensi pada tugas kompleks; (2) **Safety exploration** — eksplorasi acak (*$\epsilon$-greedy*) selama pelatihan dapat menghasilkan perilaku berbahaya di lingkungan nyata sehingga memerlukan *sim-to-real*; (3) **Lack of formal guarantees** — tidak seperti pengontrol optimal LQR yang memiliki bukti stabilitas, kebijakan RL bersifat *empirical*. Borah (2024) menambahkan tantangan dalam *scalability*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

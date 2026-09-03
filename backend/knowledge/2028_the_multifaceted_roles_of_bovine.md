@@ -31,4 +31,7 @@ Persamaan kesetimbangan pengikatan besi dapat diformulasikan sebagai:
 
 $$K_a = \frac{[\text{bLF} \cdot \text{Fe}^{3+}]}{[\text{bLF}] \cdot [\text{Fe}^{3+}]}$$
 
-di mana $K_a$ adalah konstanta asosiasi pengikatan besi, yang nilainya berbeda secara signifikan antara bentuk holo-LF (
+di mana $K_a$ adalah konstanta asosiasi pengikatan besi, yang nilainya berbeda secara signifikan antara bentuk holo-LF (.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

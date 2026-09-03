@@ -116,3 +116,6 @@ Meskipun ada banyak keuntungan, terdapat batasan dalam metodologi yang digunakan
 Riset masa depan harus fokus pada pengembangan teknologi baru yang lebih efisien, serta model bisnis yang mendukung transisi ke energi berkelanjutan. Selain itu, kolaborasi antara sektor industri dan akademisi akan menjadi kunci untuk menciptakan solusi inovatif yang dapat diterapkan secara luas.
 
 Dengan demikian, pemanfaatan energi panas dalam proses industri melalui integrasi sistem energi berkelanjutan merupakan langkah strategis yang tidak hanya meningkatkan efisiensi operasional tetapi juga mendukung keberlanjutan lingkungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

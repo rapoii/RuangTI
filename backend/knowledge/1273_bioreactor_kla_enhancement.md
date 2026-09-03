@@ -94,3 +94,6 @@ Peningkatan kLa melalui teknik aerasi novel tidak hanya berdampak pada bioteknol
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti variabilitas dalam sifat kultur sel dan substrat yang dapat mempengaruhi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih komprehensif dan adaptif.
 
 Ke depan, arah riset dapat difokuskan pada integrasi teknik aerasi dengan teknologi pemantauan berbasis AI untuk optimasi real-time, serta eksplorasi teknik aerasi baru yang lebih efisien dan berkelanjutan. Dengan demikian, peningkatan kLa dapat menjadi kunci untuk mencapai efisiensi yang lebih tinggi dalam produksi bioteknologi dan aplikasi industri lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

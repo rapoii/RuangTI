@@ -108,4 +108,7 @@ $$Nu = \frac{h D_h}{k} = f(Re, Pr)$$
 | 1 | Pre-conditioning biomass | Moisture ≤10%, ukuran 1 mm |
 | 2 | Charge vessel | $\rho_{bed}$ terukur |
 | 3 | Pressurize ke P_target | dP/dt terkontrol |
-|
+|.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

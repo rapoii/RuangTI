@@ -128,3 +128,6 @@ Ke depan, integrasi teknologi AI dan machine learning dalam TEB dapat membuka pe
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh mengenai optimasi trajektori AMR menggunakan TEB, dengan fokus pada aplikasi praktis dan relevansi industri. Penelitian dan pengembangan lebih lanjut dalam bidang ini diharapkan dapat menghasilkan solusi yang lebih inovatif dan efisien untuk tantangan yang dihadapi dalam lingkungan industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

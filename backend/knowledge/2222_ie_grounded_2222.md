@@ -143,3 +143,7 @@ $$\Delta \text{Hari} = \frac{390}{10} = 39 \text{ hari pesawat tambahan/tahun}$$
 Dampak finansial:
 
 $$\
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

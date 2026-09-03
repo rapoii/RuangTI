@@ -122,3 +122,6 @@ Optimasi rantai pasok menggunakan algoritma genetika dan digital twin memiliki a
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada data yang akurat dan real-time, serta kompleksitas dalam pemodelan sistem yang besar. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan robust, serta integrasi teknologi baru seperti kecerdasan buatan dan analitik data besar.
 
 Dengan demikian, pemahaman yang mendalam tentang optimasi rantai pasok dalam konteks CPPS sangat penting bagi para profesional teknik industri untuk menghadapi tantangan industri yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

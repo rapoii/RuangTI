@@ -104,3 +104,6 @@ Penggunaan nanostruktur dalam proses CMP tidak hanya terbatas pada industri semi
 Namun, terdapat batasan metodologi yang perlu diperhatikan, seperti variabilitas dalam karakteristik nanostruktur dan dampaknya terhadap proses CMP. Oleh karena itu, penelitian lebih lanjut diperlukan untuk memahami interaksi kompleks antara nanostruktur dan material wafer.
 
 Arah riset masa depan dapat mencakup pengembangan nanostruktur yang lebih canggih, seperti nanostruktur yang dapat beradaptasi dengan kondisi proses yang berubah-ubah, serta penerapan teknologi berbasis AI untuk mengoptimalkan proses CMP secara real-time. Dengan demikian, penelitian ini tidak hanya akan memberikan kontribusi signifikan terhadap peningkatan kualitas permukaan wafer, tetapi juga akan membuka jalan bagi inovasi baru dalam industri manufaktur.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

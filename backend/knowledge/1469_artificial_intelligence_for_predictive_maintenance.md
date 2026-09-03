@@ -129,3 +129,7 @@ Artinya, pada 3.000 jam operasi, masih ada 63,61% pompa yang belum gagal.
 **Langkah 3 — Hazard rate pada $t = 3.000$ jam:**
 
 $$h(3000) = \frac
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

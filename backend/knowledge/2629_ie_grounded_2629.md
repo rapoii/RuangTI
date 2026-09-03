@@ -173,4 +173,7 @@ $$\Delta \Pi = (p_e - c_e - b^*) - \beta(p_m - c_r)$$
 $$= (42{,}000 - 18{,}000 - 5{,}775) - 0.85(9{,}500 - 8{,}000)$$
 $$= 18{,}225 - 1{,}275 = 16{,}950 \text{ CNY/unit}$$
 
-Karena $\Delta\Pi > 0$, Grade B tetap
+Karena $\Delta\Pi > 0$, Grade B tetap.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

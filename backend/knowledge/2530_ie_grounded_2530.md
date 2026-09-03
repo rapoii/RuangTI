@@ -130,3 +130,7 @@ $$PER_{max} = 1 - \rho_{rel}^{1/N_{packet}}$$
 Untuk misi 10 menit dengan *control loop* 100 Hz ($N_{packet} = 60{,}000$):
 
 $$PER_{max} = 1 - (0.99999)^{1/60000} = 1 - e^{-1.
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

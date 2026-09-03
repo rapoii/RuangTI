@@ -139,3 +139,6 @@ Asumsi awal $T_p = -38\,^\circ\text{C}$ → $P_{w,i} \approx 0{,}134\,\text{mbar
 $$\Delta P = P_{w,i} - P_c = 0{,}134 - 0{,}12 = 0{,}014\,\text{mbar}$$
 
 **
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

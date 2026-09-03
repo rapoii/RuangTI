@@ -115,4 +115,7 @@ Where monetary and environmental values are normalized to common units.
 - Domenech, T., et al. (2025). Digital technologies enabling industrial symbiosis: A systematic review. *Resources, Conservation and Recycling*, 212, 107891.
 - UNEP. (2024). *Global Material Flows and Resource Productivity Database Update*. United Nations Environment Programme.
 
-</content>
+</content>$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

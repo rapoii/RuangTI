@@ -178,4 +178,7 @@ Misalkan agen 1 pada state $s_t$ (di posisi (10, 8), kecepatan 0.5 m/s) mengambi
 
 Parameter: $\alpha = 0.1$, $\gamma = 0.99$, $\max_{a'} Q(s_{t+1}, a') = 15.3$.
 
-$$Q(s_t,a_t) \leftarrow Q(s_t,a_t) + \alpha\left[r + \gamma \max_{a'} Q(s_{t+1},a') - Q(s_t,a_t)\right]$$
+$$Q(s_t,a_t) \leftarrow Q(s_t,a_t) + \alpha\left[r + \gamma \max_{a'} Q(s_{t+1},a') - Q(s_t,a_t)\right]$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

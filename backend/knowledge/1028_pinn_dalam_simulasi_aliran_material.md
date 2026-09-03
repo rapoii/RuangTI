@@ -114,3 +114,6 @@ Penerapan PINN dalam simulasi aliran material tidak hanya terbatas pada sektor m
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang berkualitas tinggi dan kompleksitas dalam pengembangan model. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan penerapan teknik pembelajaran transfer untuk mempercepat pelatihan model.
 
 Dengan demikian, simulasi aliran material menggunakan Physics-Informed Neural Networks menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas proses manufaktur, serta memberikan kontribusi signifikan terhadap inovasi dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

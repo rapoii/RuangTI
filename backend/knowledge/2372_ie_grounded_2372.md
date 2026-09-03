@@ -89,4 +89,7 @@ Model yang telah tervalidasi di-*deploy* ke *edge computing* (NVIDIA Jetson Orin
 $Q(s,a) = 0$ untuk seluruh $(s,a)$. Reward: $+100$ jika mencapai goal, $-100$ jika menabrak rintangan, $-1$ untuk setiap langkah lain.
 
 **Langkah 2 — Satu Episode Simulasi.**
-Ambil trajectory hipotetis dari state $s_0 = (0,0)$ dengan
+Ambil trajectory hipotetis dari state $s_0 = (0,0)$ dengan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

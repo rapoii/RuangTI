@@ -106,3 +106,6 @@ Where $E_{total}$ is cumulative energy, $TH$ is throughput, and $\alpha$ reflect
 5. Kagermann, H., Wahlster, W., & Helbig, J. (2023). Recommendations for implementing the strategic initiative INDUSTRIE 4.0. *Final Report of the Industrie 4.0 Working Group*.
 6. Gilchrist, A. (2024). *Industry 4.0: The Industrial Internet of Things* (2nd ed.). Apress.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

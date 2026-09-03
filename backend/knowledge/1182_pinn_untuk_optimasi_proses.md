@@ -100,3 +100,6 @@ Penerapan PINNs tidak hanya terbatas pada manufaktur aditif, tetapi juga dapat d
 Namun, ada beberapa batasan dalam metodologi ini, termasuk kebutuhan akan data yang berkualitas tinggi dan pemahaman yang mendalam tentang fisika yang mendasari proses. Arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan teknik pengumpulan data yang lebih baik untuk meningkatkan akurasi model.
 
 Dengan demikian, PINNs memiliki potensi besar untuk merevolusi cara kita mendekati masalah dalam manufaktur dan disiplin teknik lainnya, menjadikannya alat yang sangat berharga untuk inovasi dan efisiensi industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

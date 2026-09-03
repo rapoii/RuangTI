@@ -117,3 +117,6 @@ Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih efisien u
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang integrasi Physics-Informed Neural Networks dan AI dalam desain produk yang dioptimalkan, dengan penekanan pada konteks industri, landasan teori, metodologi, studi kasus, dan evaluasi kritis. Dengan mengikuti standar dan referensi yang relevan, diharapkan modul ini dapat menjadi sumber pengetahuan yang berguna bagi praktisi dan akademisi di bidang Teknik Industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

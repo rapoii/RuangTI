@@ -58,3 +58,6 @@ Penelitian terkini (Mrugalska & Stasiuk-Piekarska, 2024; Battaïa & Dolgui, 2023
 - **Edge AI Computer Vision:** Kamera industri resolusi tinggi dengan model *YOLOv10* / *Vision Transformer* yang memverifikasi orientasi komponen mikro, warna kabel, dan kelengkapan perakitan dalam hitungan milidetik ($< 20\text{ ms}$).
 - **Augmented Reality (AR) Smart Glasses:** Memproyeksikan instruksi kerja langsung di atas bidang pandang operator dan memberikan sinyal visual merah/hijau secara adaptif saat perakitan berlangsung.
 - **Cobot Force-Torque Sensing Interlock:** Robot kolaboratif yang secara otomatis membatalkan siklus pengencangan jika resistansi gaya torsi menyimpang dari kurva standar, mencegah kerusakan ulir (*cross-threading*).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

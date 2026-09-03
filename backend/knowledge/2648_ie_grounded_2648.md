@@ -146,4 +146,7 @@ $$TLX_{weighted} = \frac{312 + 65 + 425 + 0 + 216 + 136}{15} = \frac{1154}{15} \
 
 Data *work sampling* dari operator gudang (Aditya.R & Putra, 2024):
 
-|
+|.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

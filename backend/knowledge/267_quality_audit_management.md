@@ -72,3 +72,6 @@ ISO 19011:2018 defines auditor competency across four dimensions: personal behav
 6. Hoyle, D. (2022). *Quality Management System Handbook* (3rd ed.). Routledge.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

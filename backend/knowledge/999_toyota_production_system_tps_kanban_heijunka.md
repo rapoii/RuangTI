@@ -116,3 +116,6 @@ Penerapan TPS dan Lean Manufacturing tidak hanya terbatas pada industri otomotif
 Namun, ada batasan dalam metodologi ini, termasuk resistensi terhadap perubahan budaya organisasi dan kebutuhan untuk pelatihan yang memadai. Oleh karena itu, penelitian di masa depan harus fokus pada pengembangan strategi untuk mengatasi tantangan ini dan meningkatkan penerapan TPS di berbagai sektor industri.
 
 Dalam era digitalisasi dan otomatisasi, integrasi teknologi seperti Internet of Things (IoT) dan analitik data besar juga dapat meningkatkan efektivitas TPS. Penelitian lebih lanjut diperlukan untuk mengeksplorasi potensi kombinasi antara TPS dan teknologi canggih dalam menciptakan sistem produksi yang lebih efisien dan responsif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

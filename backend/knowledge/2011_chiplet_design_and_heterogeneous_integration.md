@@ -157,4 +157,7 @@ $$
 
 **Langkah 4 – Bandingkan Yield Gabungan.**
 
-Yield monolitik (0.530) vs yield chiplet system (0.484). Tampaknya
+Yield monolitik (0.530) vs yield chiplet system (0.484). Tampaknya$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

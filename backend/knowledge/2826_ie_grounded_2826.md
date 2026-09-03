@@ -61,4 +61,7 @@ $$Y(t) = Y_\infty\left[\phi(1-e^{-k_f t}) + (1-\phi)(1-e^{-k_s t})\right] \tag{8
 
 dengan $Y_\infty$ yield maksimum, $\phi$ fraksi cannabinoid yang mudah terekstraksi, serta $k_f$ dan $k_s$ konstanta laju fase cepat dan lambat.
 
-## 3. Metodologi Rekayasa & Standar
+## 3. Metodologi Rekayasa & Standar.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

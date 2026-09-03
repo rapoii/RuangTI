@@ -103,3 +103,6 @@ Praktik berkelanjutan dalam transportasi vaksin tidak hanya relevan untuk indust
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti ketergantungan pada infrastruktur yang ada dan biaya awal untuk investasi teknologi baru. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengeksplorasi solusi inovatif yang dapat mengurangi biaya dan dampak lingkungan.
 
 Arah riset masa depan dapat mencakup pengembangan sistem transportasi yang lebih cerdas dan ramah lingkungan, serta integrasi dengan teknologi blockchain untuk meningkatkan keamanan dan transparansi dalam rantai pasokan vaksin. Dengan demikian, praktik berkelanjutan dalam transportasi vaksin akan menjadi semakin penting dalam mencapai tujuan kesehatan global dan keberlanjutan lingkungan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

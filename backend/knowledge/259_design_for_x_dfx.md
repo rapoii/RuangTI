@@ -203,3 +203,6 @@ Documented by BMW Group Engineering (2024) as benchmark for next-generation EV p
 8. ISO. (2023). *ISO 14040/14044: Environmental Management — Life Cycle Assessment*. International Organization for Standardization.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -124,3 +124,6 @@ Meskipun TDABC menawarkan banyak keuntungan, terdapat beberapa batasan. Misalnya
 Riset masa depan dapat difokuskan pada pengembangan model TDABC yang lebih adaptif dan integratif dengan teknologi digital, seperti Internet of Things (IoT) dan big data. Integrasi ini dapat meningkatkan akurasi pengukuran waktu dan biaya, serta memberikan wawasan yang lebih mendalam tentang efisiensi aset dalam konteks keberlanjutan.
 
 Dengan demikian, pengukuran efisiensi aset menggunakan Time-Driven ABC Costing merupakan alat yang sangat berharga bagi perusahaan manufaktur dalam mencapai tujuan keberlanjutan dan efisiensi operasional.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

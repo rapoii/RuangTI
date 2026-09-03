@@ -131,3 +131,6 @@ Recent applications demonstrate significant impact:
 5. Montgomery, D. C. (2020). *Introduction to Statistical Quality Control* (8th ed.). Wiley.
 6. Kelton, W. D., Smith, J. S., & Sturrock, D. T. (2022). *Simio and Simulation: Modeling, Analysis, Applications* (6th ed.). Simio LLC.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

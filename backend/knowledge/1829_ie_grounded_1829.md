@@ -58,3 +58,7 @@ dengan variabel keputusan:
 $$\sum_{k \in K} z_k + \sum_{m \in M} w_m = \sum_{j \in J} u_j \quad \text{(konservasi aliran)} \tag{2}$$
 
 $$z_k \leq
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

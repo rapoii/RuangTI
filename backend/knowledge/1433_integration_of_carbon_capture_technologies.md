@@ -114,3 +114,7 @@ $$\dot{m}_{CO_2}^{gross} = 2{,}1 \times 5{,}0 = 10{,}5 \text{ Mt CO}_2/\text{tah
 **Langkah 2 — Debit CO₂ yang ditangkap:**
 
 $$\
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

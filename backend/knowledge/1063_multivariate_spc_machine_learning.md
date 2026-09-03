@@ -150,3 +150,6 @@ Penerapan machine learning dalam MSPC tidak hanya terbatas pada industri manufak
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan data yang berkualitas tinggi dan tantangan dalam interpretasi hasil model. Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih robust dan mampu menangani data yang lebih besar dan kompleks.
 
 Dengan demikian, integrasi machine learning dalam MSPC memiliki potensi besar untuk meningkatkan efisiensi dan kualitas proses di berbagai sektor industri, dan menjadi arah riset yang menjanjikan di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

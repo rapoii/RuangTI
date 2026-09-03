@@ -154,3 +154,7 @@ $$w_{pump,s} = v_1 (p_2 - p_1) = 0{,}000791 \times (1.600 - 150) = 1,146 \text{ 
 
 Kerja pompa aktual:
 $$w_{pump} = \frac{w_{pump,s}}{\eta_{p
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

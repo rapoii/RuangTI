@@ -93,3 +93,7 @@ $$m_{\text{product}} = 0{,}060 \times 100 \text{ mmol} \times 1019 \text{ g/mol}
 
 Koreksi untuk TFA salt (asumsi 1,5 ekivalen TFA per peptida dengan 4 situs basa):
 $$m_{\text{
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

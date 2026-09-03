@@ -483,4 +483,4 @@ Setelah implementasi parameter optimal pada 1.200 siklus produksi kontinu:
 4. **Wüthrich, R., & Hof, L. A.** (2006). *The gas film in spark assisted chemical engraving (SACE)—A key element for micro-machining applications*. **International Journal of Machine Tools and Manufacture**, 46(7-8), 828–835. https://doi.org/10.1016/j.ijmachtools.2005.07.029.
 5. **Abou Ziki, J. D., & Wüthrich, R.** (2015). *The machining gap during constant velocity-feed glass micro-drilling by Spark Assisted Chemical Engraving*. **Journal of Manufacturing Processes**, 20, 305–314. https://doi.org/10.1016/j.jmapro.2015.05.006.
 6. **ISO 25178-2:2021**. *Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters*. International Organization for Standardization, Geneva.
-7. **ASTM E384-22**. *Standard Test Method for Microindentation Hardness of Materials*. ASTM International, West Conshohocken, PA.
+7. **ASTM E384-22**. *Standard Test Method for Microindentation Hardness of Materials*. ASTM International, West Conshohocken, PA.$.

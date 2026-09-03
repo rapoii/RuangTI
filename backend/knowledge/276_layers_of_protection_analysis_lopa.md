@@ -48,3 +48,6 @@ Module 243 (RBD/FTA/FMEA Integration), Module 275 (HIRADC), Module 277 (Quantita
 2. Center for Chemical Process Safety (CCPS). (2001). *Layer of Protection Analysis: Simplified Process Risk Assessment*. AIChE.
 3. IEC 61511:2016, *Functional Safety — Safety Instrumented Systems for the Process Industry Sector*.
 4. Reliability Engineering & System Safety (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -90,3 +90,6 @@ Koordinasi fleet AMR berbasis optimasi tidak hanya relevan dalam konteks manufak
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan pada data yang akurat dan kebutuhan untuk pembaruan model secara berkala. Di masa depan, penelitian dapat diarahkan untuk mengembangkan algoritma yang lebih adaptif dan responsif terhadap perubahan kondisi operasional, serta integrasi dengan teknologi AI untuk meningkatkan kemampuan prediktif dalam pengelolaan armada AMR.
 
 Dengan demikian, koordinasi fleet AMR berbasis optimasi tidak hanya berkontribusi pada peningkatan produktivitas, tetapi juga mendukung keberlanjutan dan efisiensi energi sesuai dengan standar ISO 50001:2022.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

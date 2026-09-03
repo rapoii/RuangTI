@@ -171,3 +171,6 @@ Meskipun algoritma genetika menawarkan solusi yang efektif, terdapat beberapa ba
 Riset ke depan dapat berfokus pada pengembangan algoritma hybrid yang menggabungkan algoritma genetika dengan metode optimasi lainnya, serta penerapan machine learning untuk meningkatkan akurasi prediksi dalam penjadwalan produksi. Selain itu, eksplorasi penggunaan big data dalam pengambilan keputusan penjadwalan dapat menjadi area yang menjanjikan untuk penelitian lebih lanjut.
 
 Dengan demikian, optimalisasi dispatching menggunakan algoritma genetika di open-pit mining tidak hanya memberikan solusi praktis untuk masalah penjadwalan, tetapi juga membuka peluang untuk inovasi dalam berbagai disiplin ilmu lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

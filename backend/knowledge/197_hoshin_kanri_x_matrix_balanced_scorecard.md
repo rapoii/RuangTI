@@ -108,3 +108,6 @@ Wiersma et al. (2025) found that digitally-enabled Hoshin-BSC integration reduce
 -   International Organization for Standardization. (2023). *ISO 9004:2023 Quality of organization — Guidance to achieve sustained success*. (Aligns with Hoshin principles).
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

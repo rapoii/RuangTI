@@ -104,3 +104,6 @@ Sistem thermoelectric memiliki aplikasi yang luas, tidak hanya dalam industri pe
 Ke depan, riset harus difokuskan pada pengembangan material thermoelectric yang lebih efisien dan biaya yang lebih rendah, serta integrasi dengan teknologi lain seperti sistem penyimpanan energi. Selain itu, penerapan prinsip-prinsip K3 dan ESG dalam desain dan implementasi sistem thermoelectric harus menjadi perhatian utama untuk memastikan keberlanjutan dan keselamatan dalam aplikasi industri.
 
 Dengan demikian, inovasi dalam teknologi pemulihan panas sisa menggunakan sistem thermoelectric tidak hanya menjanjikan efisiensi energi yang lebih baik tetapi juga mendukung tujuan keberlanjutan dan pengurangan dampak lingkungan dalam industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -86,3 +86,6 @@ Sistem AI adaptif tidak hanya relevan dalam industri manufaktur, tetapi juga dap
 Namun, ada beberapa batasan metodologi yang perlu diperhatikan, seperti ketergantungan pada data yang berkualitas tinggi dan tantangan dalam integrasi sistem yang berbeda. Di masa depan, penelitian lebih lanjut diperlukan untuk mengembangkan algoritma yang lebih canggih dan adaptif, serta untuk mengeksplorasi dampak etis dari penggunaan AI dalam konteks ergonomi kognitif.
 
 Dengan demikian, pengembangan sistem AI yang responsif terhadap kebutuhan pengguna dan mempertimbangkan aspek ergonomi kognitif akan menjadi kunci dalam meningkatkan produktivitas dan kesejahteraan pekerja di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

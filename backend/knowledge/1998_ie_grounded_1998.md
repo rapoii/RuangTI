@@ -133,4 +133,7 @@ $$\Delta E[TC] = \frac{141.250 - 85.250}{141.250} \times 100\% = 39{,}6\%$$
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
 ### 5.1 Batasan Metodologis
-Stanton et al. (2022) secara eksplisit mengakui belum adanya survei komprehensif yang didedikasikan khusus untuk PdM di industri *aircraft manufacturing*, sehingga generalisasi ke *rotorcraft*, *eVTOL*, dan *U
+Stanton et al. (2022) secara eksplisit mengakui belum adanya survei komprehensif yang didedikasikan khusus untuk PdM di industri *aircraft manufacturing*, sehingga generalisasi ke *rotorcraft*, *eVTOL*, dan *U.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

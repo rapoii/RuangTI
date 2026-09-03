@@ -121,3 +121,7 @@ $$F(t) = F_0 + \lambda_0 t + \eta \int_0^t T_{overhead}(s)\,ds$$
 Untuk $F_0 = 1$ (KSS awal) dan $t = 10$ jam:
 
 $$F(10) = 1 + 0{,}05 \cdot 10 + 0{,}003 \cdot 41{,}3 \cdot 10 = 1 + 0{,}5 + 1{,}24 = 2{,}74 \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

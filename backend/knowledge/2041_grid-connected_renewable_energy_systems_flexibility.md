@@ -82,4 +82,7 @@ Hoseinzadeh dkk. (2023) menyusun prosedur sistematis dalam lima tahapan yang dap
 
 **Tahap 3 — Komposisi Sistem.** Merancang arsitektur grid-connected dengan komponen: PV array, wind turbine, hydro plant, baterai Lithium-ion, bi-directional converter (AC/DC), dan sambungan grid. Setiap komponen memiliki parameter biaya CAPEX, OPEX, *replacement cost*, dan lifetime.
 
-**Tahap 4 — Simulasi HOMER.** Menjalankan *search space optimization* terhadap variabel diskret (jumlah PV, jumlah
+**Tahap 4 — Simulasi HOMER.** Menjalankan *search space optimization* terhadap variabel diskret (jumlah PV, jumlah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

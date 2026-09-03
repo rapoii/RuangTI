@@ -96,3 +96,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada data y
 Arah riset masa depan dapat mencakup pengembangan alat analisis berbasis AI untuk memprediksi dampak keberlanjutan dari berbagai desain dan proses, serta integrasi dengan teknologi otomasi untuk meningkatkan efisiensi dan mengurangi limbah.
 
 Dengan demikian, pengukuran keberlanjutan dalam OSMC menggunakan DfMA merupakan langkah penting menuju praktik konstruksi yang lebih berkelanjutan dan efisien.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

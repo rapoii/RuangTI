@@ -136,4 +136,7 @@ Pertimbangkan sebuah OEM baterai LFP (LiFePO₄) di Asia Timur yang mengelola pe
 | $b_1$ (buy-back price) | 220 | USD/unit |
 | $\rho$ (collection rate) | 0,82 | – |
 | $\tau_1$ (recovery kapasitas) | 0,88 | – |
-| $K^{(e)}$ (kapasitas echelon) | 30.000 | unit/t
+| $K^{(e)}$ (kapasitas echelon) | 30.000 | unit/t.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

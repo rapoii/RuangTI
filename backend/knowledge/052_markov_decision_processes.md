@@ -92,3 +92,6 @@ Generalizes MDPs to allow sojourn times with arbitrary distributions, critical f
 | Convergence Bound | $\|V_k - V^*\| \leq \frac{\gamma^k}{1-\gamma}\|V_1 - V_0\|$ |
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

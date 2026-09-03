@@ -113,3 +113,7 @@ Implementasi CLSC baterai pensiun mengikuti arsitektur berlapis yang distandarka
    │   [Disassembly → Cell Sorting → Reconfiguration → SESS/Storage Pack]
    │            ↓
    │   [Quality Test (Capacity, IR, Thermal)] → [Secondary Market
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

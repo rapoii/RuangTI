@@ -91,4 +91,7 @@ Arsitektur teknologi ini selaras dengan standar **ISO 14040/14044 (LCA)**, **ISO
 | Kandungan katoda NMC811 | $x_c = 0{,}30$ | Literatur industri |
 | Komposisi katoda | Co 8%, Ni 80%, Li 7% | Tsai *et al.* (2022) |
 | Efisiensi hidrometalurgi $\eta$ | Co: 0,96; Ni: 0,96; Li: 0,80 | Islam & Iyer-Raniga (2022) |
-| Harga pasar (Q1 2024) | Co: USD 35.000/ton; Ni: USD 22.000/ton; Li₂CO
+| Harga pasar (Q1 2024) | Co: USD 35.000/ton; Ni: USD 22.000/ton; Li₂CO.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

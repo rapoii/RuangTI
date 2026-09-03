@@ -100,3 +100,6 @@ Sistem SFE-CO₂ industri tersusun atas subsistem berikut:
 | 3. Presurisasi | Pemompaan CO₂ ke tekanan target dengan ramp 5–10 bar/s | Laju Joule–Thomson cooling | Toledo & del Valle (2023) |
 | 4. Ekstraksi | Pemeliharaan T dan p, pengumpulan data $\dot{m}_{\text{CO}_2}$, $\Delta T$, $\Delta p$ | T, p, $\dot{m}_{\text{CO}_2}$ | DOI 10.1016/j.supflu.2023.106046 |
 | 5. Depresurisasi | Pembukaan BPR dengan ramp 2–5 bar/s | Pendinginan Joule–Thomson reversibel | Toledo & del Valle (2023)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

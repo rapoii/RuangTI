@@ -168,4 +168,7 @@ Sebuah pabrik minuman ringan menghadapi masalah *lot sizing* untuk 3 SKU utama d
 
 Untuk perbandingan, hitung ukuran lot berbasis Economic Part Period (EPP) deterministik pada SKU dengan $\mu_t$ sebagai input pasti:
 
-**EPP criterion**: $E_t = \frac{s_t
+**EPP criterion**: $E_t = \frac{s_t$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

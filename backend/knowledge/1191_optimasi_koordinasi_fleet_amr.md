@@ -107,3 +107,6 @@ Meskipun algoritma swarm berbasis pembelajaran mendalam menunjukkan potensi yang
 Riset di masa depan dapat difokuskan pada pengembangan algoritma yang lebih adaptif dan efisien, integrasi teknologi sensor canggih untuk meningkatkan pemahaman lingkungan, serta penerapan algoritma ini dalam konteks yang lebih luas, seperti transportasi dan logistik.
 
 Dengan demikian, optimasi koordinasi fleet AMR menggunakan algoritma swarm berbasis pembelajaran mendalam merupakan langkah maju yang signifikan dalam meningkatkan efisiensi operasional dan keselamatan di industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

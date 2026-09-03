@@ -105,4 +105,7 @@ Sensor → Pra-pemrosesan → Ekstraksi Fitur → Diagnosis (ML)
 
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
-**Skenario:** Motor induksi sangkar tupai 3 fasa, $P_{rated}=50$ HP (37,3 kW), $V=400$ V, $f=50$ Hz, $p=4$ kutub, $n_s=
+**Skenario:** Motor induksi sangkar tupai 3 fasa, $P_{rated}=50$ HP (37,3 kW), $V=400$ V, $f=50$ Hz, $p=4$ kutub, $n_s=$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

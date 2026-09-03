@@ -90,3 +90,6 @@ Hubungkan submodel `OperationalData` dengan sumber data telemetri 5G melalui *no
 Validasi konsistensi antara nilai di AAS dengan kondisi fisik menggunakan teknik *state estimation* seperti Kalman Filter pada data RSRP, atau *hypothesis testing* (uji-$\chi^2$) untuk distribusi BLER. Cavalieri *et al.* (2024) menekankan pentingnya *closed-loop validation* agar kembaran digital menjadi benar-benar representatif.
 
 Selaras dengan paper De Marchi *et al.* (2022), arsitektur ini kemudian di-*compose* ke dalam sistem perakitan siber-fisik, di mana AAAS base station 5G menyediakan lapisan konektivitas deterministik antara *
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

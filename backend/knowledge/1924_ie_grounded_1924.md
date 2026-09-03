@@ -133,4 +133,7 @@ Diagram alur logika proses pengambilan keputusan agen RL:
 
 ### 4.2 Perhitungan Q-Value Iteratif pada Sub-Masalah
 
-Pertimbangkan satu state
+Pertimbangkan satu state.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

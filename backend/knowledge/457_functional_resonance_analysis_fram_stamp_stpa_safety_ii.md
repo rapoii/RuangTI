@@ -362,4 +362,4 @@ Berdasarkan analisis STPA dan simulasi spektral FRAM:
 4. Patriarca, R., Di Gravio, G., Woltjer, R., Costantino, F., Falegnami, A., et al. (2020). "Framing the Functional Resonance Analysis Method: A Systematic Review of Twelve Years of Application in Safety Science". *Reliability Engineering & System Safety*, Vol. 200, 106979. DOI: 10.1016/j.ress.2020.106979.
 5. Leveson, N. (2004). "A New Accident Model for Engineering Safer Systems". *Safety Science*, 42(4), pp. 237-270. DOI: 10.1016/S0925-7535(03)00047-8.
 6. International Electrotechnical Commission. (2010). *IEC 61508: Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems*. Geneva: IEC.
-7. International Organization for Standardization. (2018). *ISO 45001:2018 - Occupational Health and Safety Management Systems - Requirements with Guidance for Use*. Geneva: ISO.
+7. International Organization for Standardization. (2018). *ISO 45001:2018 - Occupational Health and Safety Management Systems - Requirements with Guidance for Use*. Geneva: ISO.$.

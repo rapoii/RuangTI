@@ -134,3 +134,6 @@ Meskipun model ini menawarkan pendekatan yang kuat untuk manajemen pendapatan, t
 Ke depan, penelitian dapat difokuskan pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan pasar, termasuk penggunaan algoritma pembelajaran mesin untuk meningkatkan akurasi estimasi WTP dan permintaan. Selain itu, integrasi dengan teknologi blockchain dapat meningkatkan transparansi dan kepercayaan dalam transaksi, terutama dalam konteks overbooking.
 
 Dengan demikian, manajemen pendapatan jaringan dan penetapan harga dinamis merupakan area yang menjanjikan untuk penelitian dan aplikasi praktis di masa depan, dengan potensi untuk meningkatkan efisiensi dan profitabilitas di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -108,4 +108,7 @@ Berdasarkan Tinjauan Literatur Tzima *et al.* (2023), parameter operasi pada kas
 | Kadar astaksantin awal | 3,2% b/b | $C_0$ |
 | Ko-solven etanol | 5% mol | $y_{EtOH}$ |
 | Durasi proses | 180 menit | $t_{\text{proses}}$ |
-| Densitas CO₂ pada 35 MPa,
+| Densitas CO₂ pada 35 MPa, \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

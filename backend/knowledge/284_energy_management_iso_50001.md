@@ -48,3 +48,6 @@ Module 280 (Sustainability Engineering & LCA), Module 289 (Sustainable Manufactu
 2. Hoekstra, A. Y., Chapagain, A. K., Aldaya, M. M., & Mekonnen, M. M. (2011). *The Water Footprint Assessment Manual*. Earthscan.
 3. Boulay, A.-M., et al. (2018). The WULCA consensus characterization model for water scarcity footprints: AWARE. *International Journal of Life Cycle Assessment*, 23(2), 368–378.
 4. Journal of Cleaner Production (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

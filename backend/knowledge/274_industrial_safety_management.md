@@ -104,3 +104,6 @@ Just culture enables reporting without fear while maintaining appropriate accoun
 6. Guldenmund, F. W. (2023). Understanding safety culture: A review and research agenda. *Safety Science*, 167, 106267.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

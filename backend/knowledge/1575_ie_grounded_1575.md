@@ -153,4 +153,7 @@ $$\text{RRI} = \frac{198 - 81}{198} \times 100\% = \frac{117}{198} \times 100\% 
 Untuk spindel mesin CNC milling, Saputra dan Sukmono (2024) menemukan beberapa mode kegagalan dominan dengan karakteristik:
 
 - **Bearing wear** ($S=8, O=6, D=4$, RPN = 192)
-- **Spindle
+- **Spindle.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

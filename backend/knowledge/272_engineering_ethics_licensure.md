@@ -44,3 +44,6 @@ Module 270 (Project Portfolio Management), Module 271 (Technology Transfer & Int
 2. Merges, R. P. (2021). *Patent Law and Policy* (8th ed.). Aspen Publishing.
 3. Lemley, M. A., & Shapiro, C. (2005). Probabilistic patents. *Journal of Economic Perspectives*, 19(2), 75–98.
 4. World Patent Information (2023); Research Policy (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

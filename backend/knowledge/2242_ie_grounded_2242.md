@@ -120,3 +120,7 @@ $$R_{peak} = 273 \times 12 \times 6 \times 0.5 \times (1 - 0.14) = 8.450 \text{ 
 - $L_{queue}$ untuk arrival rate $\lambda = 200$ pkt/s dan service rate $\mu = 500$ pkt/s (M/D/1):
 
 $$L_{queue} = \frac{\rho (2 - \rho)}{2 \mu (1 - \rho)}, \quad \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

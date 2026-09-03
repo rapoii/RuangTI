@@ -120,4 +120,7 @@ dengan state $S_t \in \{\text{New, In-Use, Returned, Sorted, Echelon, Remanufakt
 | Biaya pengumpulan | $c_c$ | 0,3 | juta Rp/unit |
 | Biaya konversi echelon | $c_e$ | 0,5 | juta Rp/unit |
 | Harga jual echelon | $p_e$ | 1,2 | juta Rp/unit |
-| Harga jual material daur ulang | $p_m$ | 0,8 | juta Rp/unit |
+| Harga jual material daur ulang | $p_m$ | 0,8 | juta Rp/unit |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

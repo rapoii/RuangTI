@@ -111,3 +111,6 @@ Penerapan CCP dalam mikrogrid tidak hanya relevan untuk sektor energi, tetapi ju
 Namun, terdapat batasan dalam metodologi ini, seperti asumsi distribusi normal yang mungkin tidak selalu valid dalam semua konteks. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih robust dan adaptif.
 
 Ke depan, arah riset dapat difokuskan pada pengembangan algoritma optimasi yang lebih efisien, serta integrasi teknologi baru seperti Internet of Things (IoT) dan kecerdasan buatan (AI) untuk meningkatkan akurasi prediksi dan respons sistem terhadap ketidakpastian.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

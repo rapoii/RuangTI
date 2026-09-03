@@ -100,4 +100,7 @@ $$N_t = \frac{0{,}907 \, D_{\text{sh}}^2}{P_t^2} \tag{8}$$
 | Parameter | Nilai | Satuan |
 |---|---|---|
 | PCM | Solar Salt (60 % NaNO₃ – 40 % KNO₃) | — |
-| $T_m$ |
+| $T_m$ |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -135,4 +135,7 @@ Penerapan MES tidak hanya terbatas pada industri manufaktur, tetapi juga dapat d
 
 Namun, terdapat batasan dalam metodologi yang ada, termasuk tantangan dalam integrasi sistem yang berbeda dan kebutuhan untuk memenuhi regulasi yang terus berkembang. Arah riset masa depan dapat berfokus pada pengembangan teknologi baru, seperti kecerdasan buatan dan analitik data besar, untuk lebih meningkatkan efisiensi dan efektivitas sistem MES.
 
-Dengan demikian, pemahaman yang mendalam tentang arsitektur inti MES dan penerapannya dalam konteks industri modern sangatlah penting untuk mencapai keunggulan kompetitif dan keberlanjutan dalam operasional bisnis.
+Dengan demikian, pemahaman yang mendalam tentang arsitektur inti MES dan penerapannya dalam konteks industri modern sangatlah penting untuk mencapai keunggulan kompetitif dan keberlanjutan dalam operasional bisnis.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

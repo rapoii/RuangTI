@@ -131,4 +131,7 @@ Merujuk pada metodologi Pohan dkk. (2024):
 1. **Pemodelan lingkungan**: discretisasi peta gudang menjadi *occupancy grid* atau *probabilistic roadmap*.
 2. **Inisialisasi Informed RRT***: bangun *tree* awal dengan sampling dalam elips informed.
 3. **Optimisasi PSO**: inisialisasi partikel dengan waypoint dari jalur Informed RRT*, optimisasi dengan parameter $(w, c_1, c_2) = (0{,}7298, 1{,}49618, 1{,}49618)$.
-4. **Validasi statistik**: jalankan $\geq 50$ trial dengan *seed
+4. **Validasi statistik**: jalankan $\geq 50$ trial dengan *seed.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

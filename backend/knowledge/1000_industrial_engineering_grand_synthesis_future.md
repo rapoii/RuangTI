@@ -107,3 +107,6 @@ Dalam hal keberlanjutan, perusahaan harus mempertimbangkan dampak lingkungan dar
 Arah riset masa depan harus fokus pada pengembangan teknologi baru yang dapat meningkatkan integrasi antara faktor manusia dan sistem cerdas, serta menciptakan model yang lebih akurat untuk memprediksi kinerja sistem dalam konteks yang kompleks dan dinamis.
 
 Dengan demikian, Grand Synthesis of Industrial & Systems Engineering (ISE 2030) tidak hanya akan meningkatkan efisiensi operasional tetapi juga memastikan bahwa industri dapat beradaptasi dengan tantangan global yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

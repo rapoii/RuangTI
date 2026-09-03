@@ -131,3 +131,6 @@ Riset di bidang desain dan analisis sistem produksi harus terus beradaptasi deng
 - Penelitian tentang keberlanjutan dan dampak lingkungan dari sistem produksi.
 
 Dengan demikian, pemahaman yang mendalam tentang desain dan analisis sistem produksi akan menjadi kunci untuk menghadapi tantangan industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

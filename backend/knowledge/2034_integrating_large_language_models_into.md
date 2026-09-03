@@ -105,4 +105,7 @@ Jika $D_t > \tau_{\text{drift}}$, picu *retraining pipeline* secara otomatis.
 
 ### 4.1 Skenario: Pabrik Otomotif dengan 12 Lini Produksi
 
-Sebuah pabrik komponen otomotif di Jawa Timur memiliki 12 lini produksi dengan karakteristik berikut: produksi harian 8.000 unit *engine block*, defect rate historis 4,2% (336 unit reject/hari), downtime rata-rata 7,3%, dan biaya produksi Rp
+Sebuah pabrik komponen otomotif di Jawa Timur memiliki 12 lini produksi dengan karakteristik berikut: produksi harian 8.000 unit *engine block*, defect rate historis 4,2% (336 unit reject/hari), downtime rata-rata 7,3%, dan biaya produksi Rp.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

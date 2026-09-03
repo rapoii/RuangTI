@@ -101,4 +101,7 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 
 Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan analitik data besar dapat meningkatkan akurasi model biaya garansi. Dengan memanfaatkan data real-time dari produk yang digunakan di lapangan, perusahaan dapat lebih baik dalam memprediksi kegagalan dan mengelola biaya garansi secara lebih efektif.
 
-Dalam kesimpulannya, model biaya garansi berbasis keandalan dua dimensi merupakan alat yang sangat berharga bagi perusahaan dalam mengelola risiko dan biaya yang terkait dengan garansi, serta meningkatkan kepuasan pelanggan di era industri yang semakin kompetitif.
+Dalam kesimpulannya, model biaya garansi berbasis keandalan dua dimensi merupakan alat yang sangat berharga bagi perusahaan dalam mengelola risiko dan biaya yang terkait dengan garansi, serta meningkatkan kepuasan pelanggan di era industri yang semakin kompetitif.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

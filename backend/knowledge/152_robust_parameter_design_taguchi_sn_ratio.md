@@ -127,3 +127,6 @@ def taguchi_anova(sn_values, factor_levels, alpha=0.05):
 - Confirmation experiment is **mandatory**; prediction failure reveals hidden interactions
 - Modern extensions combine Taguchi with ML surrogates, Bayesian inference, and grey relational analysis for complex systems
 - Always distinguish **control factors** (set for robustness) from **signal/adjustment factors** (set for targeting)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

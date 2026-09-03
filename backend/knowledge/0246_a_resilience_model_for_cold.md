@@ -149,4 +149,7 @@ $$TEL_{IoT} = 0,0919 \cdot Rp\,850\,jt + Rp\,3,6\,jt + Rp\,8,5\,jt \approx Rp\,9
 
 ## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Standar Masa Depan
 
-**Keterbatasan Metodologi:** Model Khurshid dan Siddiqui (2024) mengasumsikan *single-node disruption* dan parameter $\lambda_i$ yang stasioner, padahal pada kenyataan工业区 disruptions bersifat *cascading*—misalnya kegagalan genset memicu kenaikan suhu yang memicu kerusakan compressor. Putra dkk. (2024) juga mencatat bahwa sensor DS18
+**Keterbatasan Metodologi:** Model Khurshid dan Siddiqui (2024) mengasumsikan *single-node disruption* dan parameter $\lambda_i$ yang stasioner, padahal pada kenyataan工业区 disruptions bersifat *cascading*—misalnya kegagalan genset memicu kenaikan suhu yang memicu kerusakan compressor. Putra dkk. (2024) juga mencatat bahwa sensor DS18.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

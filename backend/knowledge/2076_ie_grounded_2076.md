@@ -75,4 +75,7 @@ Penerapan sensor nirkabel untuk liofilisasi mengikuti SOP berlapis yang terdiri 
 
 **Tahap 1 – Pra‐Studi Kelayakan dan Pemetaan Risiko (PRA).** Sebelum instalasi, dilakukan *Process Risk Assessment* menggunakan metode Failure Mode and Effects Analysis (FMEA) untuk mengidentifikasi lokasi vial kritis (misalnya *edge vials*, *corner vials*) yang menjadi kandidat pemasangan sensor prioritas. Suhu sublimasi yang homogen antar‐vial menjadi tujuan utama agar standar deviasi $T_b$ antar‐vial tidak melampaui 1.5 °C.
 
-**Tahap 2 – Instalasi Arsitektur Topologi Mesh.** Sensor thermocouple nirkabel berbasis protokol IEEE 802.15
+**Tahap 2 – Instalasi Arsitektur Topologi Mesh.** Sensor thermocouple nirkabel berbasis protokol IEEE 802.15.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

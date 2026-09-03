@@ -121,3 +121,6 @@ Tantangan yang dihadapi dalam SPDT mencakup pengendalian kualitas yang ketat dan
 Ke depan, penelitian lebih lanjut diperlukan untuk mengembangkan material baru dan teknik pemotongan yang lebih efisien, serta untuk mengeksplorasi integrasi SPDT dengan teknologi manufaktur canggih lainnya seperti additive manufacturing dan machine learning.
 
 Dengan demikian, SPDT tetap menjadi area penelitian yang menjanjikan dan penting dalam pengembangan teknologi manufaktur presisi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

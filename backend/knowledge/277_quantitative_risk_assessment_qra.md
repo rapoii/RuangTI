@@ -48,3 +48,6 @@ Module 274 (Industrial Safety Management), Module 275 (HIRADC), Module 276 (Bow-
 2. Mannan, S. (Ed.). (2012). *Lees' Loss Prevention in the Process Industries* (4th ed.). Butterworth-Heinemann.
 3. TNO. *Methods for the Calculation of Physical Effects (Yellow Book)*. TNO Defence, Security and Safety.
 4. Process Safety Progress (2023).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

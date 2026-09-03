@@ -98,3 +98,6 @@ Secara keseluruhan, pemeliharaan prediktif dengan PHM berbasis AI merupakan lang
 ---
 
 Dokumen ini diharapkan dapat memberikan pemahaman yang mendalam tentang pemeliharaan prediktif dan PHM berbasis AI, serta aplikasinya dalam konteks industri manufaktur cerdas.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

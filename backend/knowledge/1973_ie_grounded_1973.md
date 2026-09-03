@@ -167,4 +167,7 @@ $$
 \tau^* = \frac{1.200 - 1.400}{7.500} = \frac{-200}{7.500} = -0{,}0267
 $$
 
-Karena $\tau^*$ bernilai negatif, artinya **SEMUA baterai pensiun layak dikirim ke echelon integrator** — secara ekonomi, *second-life* lebih menguntungkan daripada recycling langsung ketika biaya daur ulang mendekati harga transfer. Langkah ini selanjutnya dikonfirmasi
+Karena $\tau^*$ bernilai negatif, artinya **SEMUA baterai pensiun layak dikirim ke echelon integrator** — secara ekonomi, *second-life* lebih menguntungkan daripada recycling langsung ketika biaya daur ulang mendekati harga transfer. Langkah ini selanjutnya dikonfirmasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

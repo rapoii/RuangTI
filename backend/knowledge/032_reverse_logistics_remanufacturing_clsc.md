@@ -31,4 +31,7 @@ Reverse Logistics adalah proses perencanaan, pelaksanaan, dan pengendalian alira
 
 ## 3. Disassembly Line Balancing Problem (DLBP)
 Optimasi pembongkaran produk purna-pakai (*End-of-Life - EOL*) dengan urutan pembongkaran yang meminimalkan stasiun kerja dan bahaya material berbahaya:
-$$\text{Hazard Index Minimization} \quad \min H = \sum_{k=1}^K h_k \cdot t_k$$
+$$\text{Hazard Index Minimization} \quad \min H = \sum_{k=1}^K h_k \cdot t_k$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -129,4 +129,7 @@ dengan $\delta_i \in \{0,1\}$ indikator *censoring*. Implementasi dapat mengguna
 
 Menggunakan fungsi tujuan dari Bagian 2.3, dilakukan optimasi numerik dengan *interior-point method* atau *sequential quadratic programming* (SQP). Hasil optimasi dibandingkan dengan *task packaging* sesuai MSG-3 *Decision Logic Diagram*.
 
-### 3.5 Tahap 5 — Logika Pemutakhiran
+### 3.5 Tahap 5 — Logika Pemutakhiran.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -141,4 +141,7 @@ Episode 50 (konvergensi parsial):
 - Investasi awal 20 AMR × USD 25.000 = USD 500.000
 - Infrastruktur RL (GPU server, SIM, integrasi): USD 150.000
 - Total CAPEX: USD 650.000
-- Biaya training & deployment: USD 50.000
+- Biaya training & deployment: USD 50.000.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

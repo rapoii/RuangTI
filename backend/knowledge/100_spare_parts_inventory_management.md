@@ -45,4 +45,4 @@ Untuk suku cadang vital dengan downtime cost $> \$10,000/jam$, $CSL$ sering dite
 ## Kata Kunci RAG
 Spare Parts Management, MRO Inventory, Lumpy Demand, Croston Method, TSB Forecasting, VED Analysis, Criticality Matrix, Service Level Agreement, Downtime Cost, Intermittent Demand, Syntetos-Boylan.
 
-</content>
+</content>$.

@@ -98,3 +98,6 @@ Analisis kinerja pompa panas tidak hanya relevan dalam konteks industri, tetapi 
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketergantungan pada kondisi lingkungan dan variasi dalam ketersediaan sumber energi terbarukan. Oleh karena itu, arah riset masa depan harus berfokus pada pengembangan teknologi yang lebih adaptif dan efisien, serta integrasi sistem pompa panas dengan sumber energi terbarukan yang lebih beragam.
 
 Dengan demikian, pemahaman yang mendalam tentang analisis kinerja pompa panas dalam lingkungan industri akan menjadi kunci untuk mencapai keberlanjutan dan efisiensi energi yang lebih tinggi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

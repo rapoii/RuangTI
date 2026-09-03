@@ -590,4 +590,4 @@ Sebuah fasilitas manufaktur Tier-1 komponen otomotif memproduksi modul *Engine C
 4. Di Stefano, A., & Boland, F. M. (1996). Solder-paste inspection by structured light methods based on phase measurement. *SPIE Proceedings: Machine Vision Applications in Industrial Inspection*, 2665, 114–125. DOI: `10.1117/12.253007`.
 5. Luo, H., & Kou, Y. (2011). Image Acquisition Designing for SMT Solder Paste Deposition 3D Inspection. *International Conference on Multimedia and Signal Processing*, 2, 230–234. DOI: `10.1109/cmsp.2011.59`.
 6. IPC International. (2020). *IPC-A-610H: Acceptability of Electronic Assemblies*. IPC Association Connecting Electronics Industries, Bannockburn, IL.
-7. IPC International. (2018). *IPC-7527: Requirements for Solder Paste Printing Processes*. IPC Association Connecting Electronics Industries, Bannockburn, IL.
+7. IPC International. (2018). *IPC-7527: Requirements for Solder Paste Printing Processes*. IPC Association Connecting Electronics Industries, Bannockburn, IL.$.

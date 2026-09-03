@@ -64,3 +64,6 @@ Recent research extends Jackson networks to IoT-enabled smart factories and stoc
 4. Bertsekas, D.P. (2023). *Dynamic Programming and Optimal Control* (5th ed.). Athena Scientific.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

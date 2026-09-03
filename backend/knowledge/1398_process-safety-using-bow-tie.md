@@ -119,3 +119,6 @@ Metode Bow-Tie tidak hanya relevan dalam analisis keamanan proses di sektor ener
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data yang digunakan untuk analisis dan kebutuhan untuk melibatkan berbagai pemangku kepentingan dalam proses identifikasi risiko. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan alat dan teknik yang lebih canggih untuk mengumpulkan dan menganalisis data risiko, serta integrasi metode Bow-Tie dengan teknologi digital seperti Internet of Things (IoT) dan analitik data besar.
 
 Dengan demikian, penerapan metode Bow-Tie dalam analisis keamanan proses di sektor energi terbarukan tidak hanya akan meningkatkan keamanan dan efisiensi operasional, tetapi juga mendukung keberlanjutan dan inovasi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

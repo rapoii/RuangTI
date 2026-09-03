@@ -96,3 +96,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini. Ketersediaan data berkual
 Ke depan, riset dalam bidang ini harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi dengan teknologi lain seperti Internet of Things (IoT) dan blockchain untuk meningkatkan transparansi dan efisiensi dalam rantai pasok. Dengan demikian, teknik deep learning dapat menjadi alat yang sangat berharga dalam mencapai tujuan keberlanjutan di industri manufaktur.
 
 Dengan mengintegrasikan pertimbangan lingkungan dalam perencanaan produksi, perusahaan tidak hanya dapat memenuhi regulasi yang semakin ketat tetapi juga meningkatkan citra merek dan daya saing di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -138,4 +138,7 @@ Implementasi mengikuti kerangka berlapis (*layered architecture*) yang dipetakan
 | Parameter | Nilai | Satuan |
 |-----------|-------|--------|
 | Jumlah vial | 20.000 | vial |
-| Volume isi per vial
+| Volume isi per vial.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

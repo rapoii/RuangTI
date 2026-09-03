@@ -113,3 +113,6 @@ Ke depan, riset dalam integrasi chiplet harus fokus pada pengembangan teknologi 
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang tantangan dan solusi teknik dalam integrasi chiplet dalam proses fabrikasi semikonduktor, serta memberikan dasar matematis yang kuat untuk analisis lebih lanjut.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

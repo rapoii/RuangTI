@@ -137,4 +137,7 @@ Untuk menunjukkan aplikasi konkret, kami mereplikasi *small-scale instance* dari
 - Emisi: $CO_2^{jk} = 0.45$ kgCO₂/kWh
 - Harga jual: $P^1 = 50$ unit, $P^2 = 70$ unit
 - Kapasitas: $Cap_j = 2000$ unit, $Cap_k = 3000$ unit
-- Koefisien lapangan kerja: $\alpha_j = 25$, $\
+- Koefisien lapangan kerja: $\alpha_j = 25$, $\$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

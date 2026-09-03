@@ -97,3 +97,6 @@ Ke depan, penelitian dapat difokuskan pada pengembangan teknologi baru yang mend
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai praktik berkelanjutan dalam konstruksi modular off-site dari perspektif DfMA, dengan penekanan pada pentingnya efisiensi material dan energi dalam mencapai keberlanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

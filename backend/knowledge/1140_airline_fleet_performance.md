@@ -104,3 +104,6 @@ Analisis kinerja armada penerbangan tidak hanya relevan untuk industri penerbang
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada data yang akurat dan kemampuan analitik yang memadai. Di masa depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data besar dan penerapan teknologi kecerdasan buatan untuk meningkatkan prediksi dan pengambilan keputusan.
 
 Dengan demikian, penerapan big data dan analitik prediktif dalam analisis kinerja armada penerbangan menawarkan potensi besar untuk meningkatkan efisiensi operasional dan profitabilitas, serta memberikan kontribusi yang signifikan terhadap keberlanjutan industri penerbangan secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

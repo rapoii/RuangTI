@@ -116,3 +116,6 @@ Pendekatan MOSDP tidak hanya relevan untuk sektor manufaktur, tetapi juga dapat 
 Meskipun MOSDP menawarkan banyak keuntungan, terdapat beberapa batasan, seperti kompleksitas komputasi dan kebutuhan data yang akurat. Penelitian masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan penggunaan teknologi big data untuk meningkatkan akurasi model.
 
 Dengan demikian, penerapan Multi-Objective Stochastic Dynamic Programming dalam pengelolaan sumber daya di sektor manufaktur tidak hanya dapat meningkatkan efisiensi operasional tetapi juga berkontribusi pada keberlanjutan lingkungan, sejalan dengan tuntutan industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

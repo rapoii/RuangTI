@@ -118,3 +118,6 @@ Kinetika flotasi busa tidak hanya relevan dalam industri pertambangan, tetapi ju
 Namun, terdapat batasan dalam metodologi yang ada, seperti variasi sifat bijih dan reagen yang dapat mempengaruhi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih adaptif dan akurat. Arah riset masa depan dapat mencakup penggunaan teknologi sensor untuk pemantauan real-time dan pengembangan algoritma pembelajaran mesin untuk optimasi proses.
 
 Dengan pemahaman yang lebih baik tentang kinetika flotasi dan aplikasinya, diharapkan industri dapat mencapai efisiensi yang lebih tinggi dan dampak lingkungan yang lebih rendah.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

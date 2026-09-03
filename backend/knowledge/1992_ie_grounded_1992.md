@@ -139,4 +139,7 @@ Studi kasus ini mengilustrasikan penerapan formula pada 5 mitra Shopee Express y
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | R1 | 75 | 60 | 80 | 40 | 70 | 55 |
 | R2 | 80 | 70 | 75 | 30 | 75 | 60 |
-| R3 | 85 | 55 |
+| R3 | 85 | 55 |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -123,3 +123,7 @@ Asumsikan setelah inisialisasi acak $\max_{a'} Q(s_{t+1}, a') \approx 5.4$, maka
 
 Update Q-value:
 $$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [y_t - Q(s_t, a_t)] = 3.2 + 0.1 \times [5.03 - 3.2
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

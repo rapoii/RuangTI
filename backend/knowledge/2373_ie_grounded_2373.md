@@ -145,4 +145,7 @@ Berdasarkan skenario industri EV di pasar Asia Tenggara dengan skala menengah, d
 | Biaya integrasi BESS ($c_{repack}$) | 80 | USD/unit |
 | Return rate aktual ($\bar{\lambda}$) | 0,85 | – |
 | Maximum deviation ($\hat{\lambda}$) | 0,15 | – |
-| Budget uncertainty ($\Gamma$) | 1,5 | – |
+| Budget uncertainty ($\Gamma$) | 1,5 | – |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -108,3 +108,6 @@ Ke depan, penelitian dapat difokuskan pada pengembangan alat analisis yang lebih
 ---
 
 Dokumen ini menyajikan pemahaman yang mendalam mengenai pengukuran efisiensi proses remanufaktur dalam sistem closed-loop dengan pendekatan Life Cycle Assessment, serta memberikan panduan praktis untuk implementasi di industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

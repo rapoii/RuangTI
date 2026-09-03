@@ -160,3 +160,6 @@ Sebuah perusahaan *remanufacturing* printer di Eropa Timur ingin membangun jarin
 **Tabel 1. Data Permintaan dan Kapasitas**
 
 | Zona $j$ | $q_j$ (unit/bulan) | | Lokasi $i$ | $Q_i$ (unit/bulan)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

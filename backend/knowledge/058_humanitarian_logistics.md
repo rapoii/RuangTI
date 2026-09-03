@@ -68,3 +68,6 @@ Subject to budget $\sum_i f_i y_i + \sum_i h_i I_i \leq B$ and survivability con
 5. Tomasini, R. M., & Van Wassenhove, L. N. (2009). *Humanitarian Logistics*. Palgrave Macmillan.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

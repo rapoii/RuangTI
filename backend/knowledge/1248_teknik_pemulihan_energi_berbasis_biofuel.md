@@ -101,3 +101,6 @@ Pengembangan teknik pemulihan energi dari limbah panas menggunakan biofuel memil
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk investasi awal yang tinggi dan kompleksitas dalam pengelolaan biofuel. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknologi yang lebih efisien dan ekonomis.
 
 Arah riset masa depan dapat mencakup pengembangan teknologi baru untuk pemulihan energi, serta eksplorasi sumber biofuel yang lebih berkelanjutan dan ramah lingkungan. Dengan demikian, pemulihan energi dari limbah panas menggunakan biofuel dapat menjadi solusi yang inovatif dan berkelanjutan untuk tantangan energi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

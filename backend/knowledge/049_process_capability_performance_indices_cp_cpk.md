@@ -53,3 +53,6 @@ $$ P_{pk} = \min \left( \frac{\text{USL} - \mu}{3\sigma_{\text{overall}}}, \frac
 Balasubramainam (2026) dan Wu et al. (2023) menunjukkan bahwa evaluasi kapabilitas proses modern tidak cukup hanya dengan *Go/No-Go* (berada dalam USL/LSL). Indeks baru seperti $C_{pm}$ (Taguchi Capability Index) mempertimbangkan deviasi dari *Target* ($T$):
 $$ C_{pm} = \frac{\text{USL} - \text{LSL}}{6 \sqrt{\sigma^2 + (\mu - T)^2}} $$
 Ini membuktikan bahwa variansi yang sekecil apapun dari target spesifikasi akan menimbulkan kerugian ekonomi (*Quality Loss*).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

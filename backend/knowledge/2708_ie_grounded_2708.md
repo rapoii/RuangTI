@@ -163,3 +163,7 @@ $$E_{\text{kinetik}} = \frac{1}{2} M v^2 = \frac{1}{2} \times 300 \times 1{,}5^2
 Untuk 1 siklus misi lengkap (akselerasi +巡航 + deselerasi):
 
 $$E_{\text{misi}} = E_{\text{roll}} + E_{\text{acc}} + E_{\text{latent}} = 1{,}8 + 0{,}34 + 0{,}46 = 2{,}6 \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

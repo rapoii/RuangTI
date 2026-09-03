@@ -162,3 +162,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan da
 Arah penelitian ke depan juga dapat mencakup pengembangan algoritma yang lebih efisien, integrasi dengan teknologi IoT untuk pengumpulan data real-time, dan penerapan teknik pembelajaran mendalam untuk meningkatkan akurasi prediksi.
 
 Dengan demikian, integrasi AI dalam algoritma Branch-and-Price-and-Cut memiliki potensi yang sangat besar untuk merevolusi cara kita mengelola masalah rute kendaraan dan meningkatkan efisiensi operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

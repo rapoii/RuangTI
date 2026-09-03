@@ -118,3 +118,6 @@ dengan bobot tipikal $w_1 = 100$, $w_2 = 1.0$, $w_3 = 50$, $w_4 = 0.5$, $w_5 = 0
 **Fase 3 — Pelatihan dengan *Domain Randomization*.** Variasikan tekstur, pencahayaan, dinamika pejalan kaki, dan tingkat kegagalan sensor secara prosedural. Borah (2024) menyarankan pelatihan bersamaan dengan modul deteksi anomali agar agen belajar *graceful degradation*.
 
 **Fase 4 — Integrasi FDIR & Sim-to-Real Transfer.** Deploy model TensorRT/ONNX ke onboard compute (NVIDIA Jetson Orin). Jalankan UKF pada frekuensi 50 Hz, policy RL pada 10 Hz. Tetapkan *safety layer* (opsional: *control barrier function*) yang *
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

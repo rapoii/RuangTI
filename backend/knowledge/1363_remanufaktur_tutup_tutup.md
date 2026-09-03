@@ -85,3 +85,6 @@ Inovasi dalam remanufaktur tertutup tidak hanya terbatas pada industri otomotif,
 Namun, ada beberapa batasan dalam metodologi ini, termasuk biaya awal investasi untuk teknologi baru dan perlunya pelatihan karyawan. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan teknologi yang lebih murah dan mudah diimplementasikan.
 
 Dalam kesimpulan, remanufaktur tertutup menawarkan potensi besar untuk meningkatkan efisiensi energi dan keberlanjutan industri. Dengan pendekatan yang sistematis dan inovatif, industri dapat berkontribusi pada pengurangan limbah dan penggunaan sumber daya yang lebih efisien, sejalan dengan tujuan keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

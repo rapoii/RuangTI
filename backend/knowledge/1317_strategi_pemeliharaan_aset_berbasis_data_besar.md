@@ -101,3 +101,6 @@ Pemeliharaan aset berbasis data besar dan analitik tidak hanya relevan dalam sek
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan infrastruktur teknologi yang memadai, keterampilan analitis yang tinggi, dan tantangan dalam integrasi data dari berbagai sumber. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan alat dan teknik yang lebih efisien untuk mengatasi tantangan ini, serta eksplorasi aplikasi baru dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (K3/ESG).
 
 Dengan demikian, pemeliharaan aset berbasis data besar dan analitik memiliki potensi untuk meningkatkan efisiensi operasional dan daya saing perusahaan di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

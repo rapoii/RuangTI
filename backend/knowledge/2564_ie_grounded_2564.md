@@ -107,3 +107,7 @@ dengan $\eta$ koefisien penjamin jarak dan $d(s, S_{goal})$ jarak Euclidean ke t
 [Loop Episode]
         ↓
 [Reset robot ke posisi awal acak
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

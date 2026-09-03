@@ -44,3 +44,6 @@ Module 260 (Tolerance Stack-Up & Monte Carlo synthesis), Module 262 (Definitive 
 2. Smith, W. F. (2005). *Experimental Design for Formulation*. SIAM.
 3. McLean, R. A., & Anderson, V. L. (1966). Extreme vertices design of mixture experiments. *Technometrics*, 8(3), 447–454.
 4. Technometrics (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

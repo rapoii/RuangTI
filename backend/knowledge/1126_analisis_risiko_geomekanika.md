@@ -136,3 +136,6 @@ Dalam era otomatisasi dan digitalisasi, integrasi analisis risiko dengan teknolo
 Namun, ada beberapa batasan dalam metodologi ini, termasuk ketidakpastian dalam pemodelan distribusi probabilitas dan asumsi yang digunakan dalam model. Oleh karena itu, riset masa depan harus fokus pada pengembangan metode yang lebih robust dan akurat untuk memodelkan ketidakpastian, serta integrasi dengan teknologi baru untuk meningkatkan akurasi analisis risiko.
 
 Dengan demikian, analisis risiko geomekanika menggunakan simulasi Monte Carlo merupakan alat yang sangat penting dalam manajemen risiko di industri penambangan terbuka dan sektor terkait lainnya, dan akan terus berkembang seiring dengan kemajuan teknologi dan metodologi analisis.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

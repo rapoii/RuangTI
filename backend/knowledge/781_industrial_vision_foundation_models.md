@@ -124,3 +124,6 @@ Secara keseluruhan, pendekatan ini selaras dengan ESG melalui penghematan materi
 (Word count for section 5: 218 kata)
 
 **Total kata keseluruhan: 1.648 kata**
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

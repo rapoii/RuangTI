@@ -171,3 +171,6 @@ If $C_{pk} < 1.0$, revert to WC or apply Modified RSS with $b \geq 2.0$.
 *Module ID: 159 · Last verified: 2026-08-18 · Content depth: ~5400 chars · KaTeX formulas: 16 · Citations: 7*
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

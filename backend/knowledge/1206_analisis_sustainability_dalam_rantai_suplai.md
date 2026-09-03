@@ -126,3 +126,6 @@ Analisis keberlanjutan dalam rantai suplai tidak hanya relevan untuk sektor manu
 Namun, terdapat batasan dalam metodologi yang ada, seperti kesulitan dalam mengumpulkan data yang akurat dan keterbatasan dalam model penilaian yang ada. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan metode baru yang lebih akurat dan komprehensif untuk mengevaluasi keberlanjutan dalam rantai suplai.
 
 Dengan meningkatnya tekanan untuk memenuhi standar ESG (Environmental, Social, and Governance), perusahaan harus beradaptasi dengan cepat dan mengintegrasikan keberlanjutan ke dalam strategi bisnis mereka. Penelitian lebih lanjut diperlukan untuk mengeksplorasi hubungan antara keberlanjutan dan kinerja finansial, serta untuk mengembangkan alat dan teknik yang dapat membantu perusahaan dalam mencapai tujuan keberlanjutan mereka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

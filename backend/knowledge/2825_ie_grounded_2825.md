@@ -97,4 +97,7 @@ Bangun model transien 2D-aksisimetri dalam Modelica atau COMSOL, validasi terhad
 HTF harus stabil pada 230–260°C dengan viskositas rendah; *thermal oil* (mis. Therminol VP-1, T_max = 400°C) atau *pressurized water* (P > 40 bar) adalah opsi standar. HTHP bersumber dari siklus trans-kritis CO₂ dengan $COP_{Carnot} \approx 0,5 \cdot (T_{hot}/(T_{hot}-T_{cold}))$.
 
 **Tahap 6 — Instrumentasi dan Kontrol.**
-Pasang sensor suhu HTF in/out
+Pasang sensor suhu HTF in/out.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

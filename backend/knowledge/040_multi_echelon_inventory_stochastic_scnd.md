@@ -47,3 +47,6 @@ $$P(\text{Stockout}_i) \le 1 - \alpha_i \quad \forall i \in N$$
 - **Postponement Strategy**: Menunda diferensiasi produk hingga tahap terakhir dalam rantai pasok untuk meningkatkan fleksibilitas respons permintaan.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

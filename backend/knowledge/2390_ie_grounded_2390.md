@@ -131,4 +131,7 @@ Berdasarkan karakteristik cold chain box standar yang digunakan di Indonesia (ka
 | Konduktivitas polyurethane | $k_{ins}$ | 0,024 | W/(m·K) |
 | Suhu ambient | $T_{amb}$ | 32 | °C |
 | Suhu internal awal | $T_0$ | 5,0 | °C |
-| Suhu target | $T_{opt}$ | 5,0 | °
+| Suhu target | $T_{opt}$ | 5,0 | °.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

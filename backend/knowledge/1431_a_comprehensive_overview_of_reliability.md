@@ -173,4 +173,7 @@ Dari 1 tahun data misi, diperoleh spektrum siklus termal (3 kelompok utama):
 
 | Kelas | $\Delta T_j$ (K) | $T_{j,\max}$ (K) | Siklus/tahun |
 |---|---|---|---|
-| Harian (pagi-siang-m
+| Harian (pagi-siang-m.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

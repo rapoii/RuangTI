@@ -106,3 +106,6 @@ Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan kecerdasan bu
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai penjadwalan ARMG cranes di terminal kontainer, dengan fokus pada penghindaran interferensi dan kolisi serta optimasi stacking yard block. Melalui penerapan model matematis dan metodologi yang sistematis, diharapkan dapat meningkatkan efisiensi operasional dalam industri yang semakin kompetitif ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

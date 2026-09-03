@@ -103,3 +103,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Arah riset masa depan dapat mencakup integrasi teknologi kecerdasan buatan (AI) untuk meningkatkan kemampuan prediktif dari model dinamis, serta pengembangan standar yang lebih komprehensif untuk penerapan FMEA dalam konteks industri yang berbeda.
 
 Dengan demikian, penggunaan model dinamis dalam FMEA AIAG-VDA menawarkan potensi besar untuk meningkatkan analisis risiko dan pengambilan keputusan dalam konteks industri yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

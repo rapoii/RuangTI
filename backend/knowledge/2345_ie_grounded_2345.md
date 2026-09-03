@@ -115,4 +115,7 @@ Untuk pabrik tekstil di Catalonia kapasitas termal 50 kW_th (kebutuhan proses *d
 | Panjang tube ($L$) | 2,0 | m |
 | Jumlah tube | 36 | – |
 | HTF | Minyak termal (Therminol 66) | – |
-| $\dot{m}_{HT
+| $\dot{m}_{HT$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

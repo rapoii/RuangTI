@@ -95,3 +95,6 @@ Inovasi dalam teknologi ekstrusi tidak hanya berdampak pada industri bioplastik,
 Namun, terdapat batasan dalam metodologi yang ada, seperti keterbatasan dalam pemilihan bahan baku dan teknologi yang tersedia. Penelitian masa depan harus fokus pada pengembangan bahan baku baru yang lebih ramah lingkungan dan teknologi ekstrusi yang lebih canggih untuk meningkatkan efisiensi dan kualitas produk.
 
 Dengan demikian, inovasi dalam teknologi ekstrusi untuk bioplastik tidak hanya penting untuk keberlanjutan industri, tetapi juga untuk memenuhi tuntutan pasar yang semakin kompleks dan beragam.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

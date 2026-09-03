@@ -87,4 +87,7 @@ Untuk recycler:
 
 $$\frac{\partial \pi_R}{\partial \theta_z} = \tau \alpha D (v_z - p_r - c_z) = 0 \implies \theta_z^* = \begin{cases} 1 & \text{jika } v_z > p_r + c_z \\ 0 & \text{lainnya} \end{cases}$$
 
-*Backward induction* kemudian diselesaikan dengan substitusi reaksi optimal
+*Backward induction* kemudian diselesaikan dengan substitusi reaksi optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

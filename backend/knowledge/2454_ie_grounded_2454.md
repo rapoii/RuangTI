@@ -85,4 +85,7 @@ Data yang terdistribusi di luar rentang fisik (-55°C sampai +125°C) langsung d
 
 **Parameter Input:**
 - Suhu nominal: $T_{nom} = 5°C$
-- Energi aktivasi vaksin: $E_a = 95$ k
+- Energi aktivasi vaksin: $E_a = 95$ k.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

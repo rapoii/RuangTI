@@ -112,3 +112,6 @@ Asumsikan harga pasar mAb = USD 5.000/g, batch 1.000 vial × 100 mg = 100 g prod
 **Keterbatasan metodologi:** Pendekatan WSN-PAT yang dipaparkan Meza-Galvan dkk. (2026) menghadapi tantangan *latency* komunikasi pada rak logam (*Faraday cage effect*) dan degradasi baterai pada lingkungan cryogenic. *Sensor drift* akibat paparan uap air berulang menuntut kalibrasi ulang periodik, sementara integrasi dengan DCS legacy sering terhambat *interoperability*. Dibandingkan metode thermocouple berkabel, WSN unggul pada densitas spasial namun masih inferior pada *reliability* jangka panjang (>5 tahun) dan *cost per node* (~USD 200–500 per titik).
 
 **Aplikasi lintas sektor:** Prinsip WSN-PAT ini dapat di-*leverage* pada: (1) *cold chain logistics*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -124,3 +124,6 @@ Penelitian lebih lanjut diperlukan untuk mengembangkan algoritma alokasi thrust 
 --- 
 
 Dokumen ini memberikan pemahaman yang mendalam tentang keandalan sistem DP-3 pada rig semi-submersible, dengan fokus pada algoritma alokasi thrust, analisis risiko, dan verifikasi redundansi sesuai dengan standar internasional.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

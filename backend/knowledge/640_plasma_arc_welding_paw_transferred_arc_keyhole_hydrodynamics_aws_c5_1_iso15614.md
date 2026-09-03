@@ -511,3 +511,6 @@ Pengelasan *Keyhole PAW* lintasan tunggal autogenus pada baja tahan karat austen
 7. Abedifard, R., & Sadodin, S. (2015). *Numerical modeling of non-Fourier heat transfer and fluid flow during plasma arc welding of AISI 304 stainless steel*. **Numerical Heat Transfer, Part A: Applications**, 68(10), 1146-1166. DOI: https://doi.org/10.1080/10407782.2015.1080576.
 8. Zhang, T., Wu, C. S., & Feng, Y. H. (2011). *Numerical Analysis of Heat Transfer and Fluid Flow in Keyhole Plasma Arc Welding*. **Numerical Heat Transfer, Part A: Applications**, 60(8), 685-703. DOI: https://doi.org/10.1080/10407782.2011.616851.
 9. Li, T. Q., Wu, C. S., Feng, Y. H., & Zheng, L. C. (2012). *Modeling of the thermal fluid flow and keyhole shape in stationary plasma arc welding*. **International Journal of Heat and Fluid Flow**, 34, 100-109. DOI: https://doi.org/10.1016/j.ijheatfluidflow.2011.12.004.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

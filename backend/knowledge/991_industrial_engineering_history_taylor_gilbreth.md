@@ -115,3 +115,6 @@ Evolusi pemikiran teknik industri tidak hanya terbatas pada sektor manufaktur, t
 Namun, terdapat batasan metodologi yang perlu diperhatikan, seperti ketergantungan pada teknologi dan kebutuhan untuk pelatihan karyawan. Di masa depan, penelitian dapat difokuskan pada integrasi teknologi canggih seperti kecerdasan buatan dan analitik data dalam sistem produksi untuk meningkatkan efisiensi dan fleksibilitas.
 
 Dengan memahami dan menerapkan prinsip-prinsip ini, industri dapat menciptakan sistem yang lebih adaptif dan responsif terhadap perubahan pasar, serta meningkatkan daya saing di era yang semakin kompleks ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

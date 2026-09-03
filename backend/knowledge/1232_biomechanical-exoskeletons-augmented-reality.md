@@ -124,3 +124,6 @@ Integrasi AR dalam exoskeleton tidak hanya bermanfaat dalam konteks biomekanik t
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti kebutuhan akan perangkat keras yang mahal dan kompleksitas dalam pengembangan perangkat lunak. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih terjangkau dan mudah diakses, serta peningkatan interaksi pengguna dengan sistem AR.
 
 Dengan demikian, integrasi AR dalam exoskeleton biomekanik menawarkan potensi yang besar untuk meningkatkan interaksi pengguna dan kinerja, serta membuka peluang baru dalam berbagai disiplin ilmu.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

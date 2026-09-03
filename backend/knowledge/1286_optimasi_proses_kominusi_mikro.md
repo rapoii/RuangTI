@@ -116,3 +116,6 @@ Arah riset masa depan dapat mencakup pengembangan nanopartikel yang lebih efisie
 ---
 
 Dokumen ini memberikan gambaran menyeluruh mengenai optimasi proses kominusi mikro dengan teknologi nanopartikel, serta implikasi dan aplikasi lintas sektor yang relevan dalam konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

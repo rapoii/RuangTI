@@ -187,4 +187,7 @@ $$NOP = R - TC = 6.937.500 - 4.487.500 = 2.450.000 \text{ USD/tahun}$$
 
 $$\text{Margin} = \frac{NOP}{R} \times 100\% = \frac{2.450.000}{6.937.500} \times 100\% = 35{,}32\%$$
 
-### 4.3 Analisis Sensitivitas Robust (Mengikuti Shin et
+### 4.3 Analisis Sensitivitas Robust (Mengikuti Shin et$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

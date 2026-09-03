@@ -132,3 +132,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan da
 Ke depan, integrasi TDABC dengan teknologi digital seperti Internet of Things (IoT) dan big data dapat membuka peluang baru untuk analisis biaya yang lebih mendalam dan real-time. Dengan memanfaatkan data yang diperoleh dari sensor dan perangkat pintar, perusahaan dapat meningkatkan akurasi perhitungan biaya dan merespons perubahan kondisi operasional dengan lebih cepat.
 
 Dengan demikian, TDABC dapat menjadi alat yang sangat berharga dalam manajemen biaya pemeliharaan, tidak hanya di industri penerbangan tetapi juga di sektor-sektor lainnya, mendukung efisiensi operasional dan keberlanjutan bisnis di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -120,3 +120,6 @@ Sistem High-Throughput Rotary Car Dumper dan Unit Train Automated Loadout Statio
 Arah riset masa depan dapat difokuskan pada pengembangan teknologi otomatisasi yang lebih canggih, integrasi IoT untuk pemantauan real-time, dan penerapan machine learning untuk prediksi dan pengendalian sistem. Selain itu, perhatian terhadap aspek K3 dan ESG semakin penting, sehingga pengembangan sistem yang ramah lingkungan dan aman bagi pekerja harus menjadi prioritas.
 
 Dengan demikian, modul ini memberikan gambaran komprehensif tentang pentingnya optimasi dalam sistem pemuatan material curah dan tantangan yang dihadapi dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

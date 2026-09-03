@@ -127,4 +127,7 @@ $$\bar{A}_{\text{Optimal}} = \frac{82.800}{82.800 + 1.440 + 240 + 3 \cdot 96} = 
 
 ---
 
-## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Stand
+## 5. Evaluasi Kritis, Aplikasi Lintas Sektor & Stand.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

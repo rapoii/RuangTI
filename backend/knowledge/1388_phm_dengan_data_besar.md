@@ -115,3 +115,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk d
 Standar seperti ISO 50001 juga memberikan kerangka kerja untuk manajemen energi yang efisien, yang dapat diintegrasikan dengan praktik PHM untuk mencapai hasil yang lebih baik dalam pengelolaan sumber daya energi terbarukan.
 
 Dengan demikian, penerapan analisis data besar dalam PHM tidak hanya meningkatkan efisiensi operasional tetapi juga mendorong inovasi dan keberlanjutan dalam industri energi terbarukan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

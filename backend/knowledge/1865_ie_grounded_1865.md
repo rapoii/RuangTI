@@ -86,4 +86,7 @@ Sebagai studi kasus ilustratif berbasis parameter Toloza et al. (2026), pertimba
 | $h_{sl}$ | $180\,\text{kJ/kg}$ |
 | $\rho_{\text{PCM}}$ | $1900\,\text{kg/m}^3$ |
 | $c_{p,s}, c_{p,l}$ | $1,55 / 1,65\,\text{kJ/(kg·K)}$ |
-| $k_{\text{PCM,s}}, k_{\text{
+| $k_{\text{PCM,s}}, k_{\text{$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

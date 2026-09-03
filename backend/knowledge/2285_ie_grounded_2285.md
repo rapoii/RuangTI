@@ -40,4 +40,7 @@ Ketika reaksi permukaan kimiawi (reaksi interfacial) yang dominan, persamaan ber
 
 $$1 - (1 - X)^{1/3} = \frac{k_s C_a}{\rho_p R_p} \cdot t = k_r \cdot t \tag{2}$$
 
-dengan $k_s$ = konstant
+dengan $k_s$ = konstant.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

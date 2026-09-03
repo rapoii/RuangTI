@@ -85,4 +85,9 @@ Amirullah & Jakaria (2024) menyusun SOP rekayasa DFMA yang terdiri atas delapan 
 
 **Tahap 2 — Inventarisasi Komponen Eksisting (*Bill of Materials Audit*).** Setiap bagian dievaluasi menggunakan tiga pertanyaan kritis Boothroyd-Dewhurst: (a) Apakah bagian tersebut bergerak relatif terhadap bagian lain selama operasi? (b) Apakah bagian tersebut harus material berbeda? (c) Apakah bagian tersebut harus dipisahkan untuk memungkinkan perakitan/pembongkaran? Jika ketiga jawaban "tidak", maka bagian tersebut kandidat eliminasi.
 
-**Tahap 3 — Perhitungan DFA Awal.** Menghitung $DE$, $
+**Tahap 3 — Perhitungan DFA Awal.** Menghitung $DE$, $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

@@ -162,3 +162,6 @@ Penerapan DMLS dalam desain saluran pendingin konformal tidak hanya terbatas pad
 Namun, terdapat batasan dalam metodologi ini, seperti biaya awal yang tinggi untuk investasi dalam teknologi DMLS dan kebutuhan untuk pelatihan khusus bagi tenaga kerja. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan teknik yang lebih efisien dan terjangkau.
 
 Ke depan, arah riset dapat difokuskan pada pengembangan material baru yang lebih efisien untuk cetakan, serta integrasi teknologi IoT untuk memantau dan mengoptimalkan proses pendinginan secara real-time. Hal ini sejalan dengan tren industri 4.0 yang mengedepankan otomatisasi dan efisiensi dalam proses manufaktur.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

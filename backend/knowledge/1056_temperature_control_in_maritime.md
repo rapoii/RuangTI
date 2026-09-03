@@ -125,3 +125,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang digunakan. Misalnya, kete
 Ke depan, riset harus difokuskan pada pengembangan algoritma pembelajaran mesin yang dapat memprediksi perubahan suhu secara lebih akurat dan responsif. Selain itu, integrasi dengan teknologi blockchain untuk transparansi dan pelacakan dalam rantai pasok juga menjadi arah yang menjanjikan.
 
 Inovasi dalam sistem kontrol suhu untuk logistik rantai dingin maritim adalah langkah penting menuju efisiensi dan keberlanjutan dalam industri, dan harus terus didorong melalui penelitian dan pengembangan yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

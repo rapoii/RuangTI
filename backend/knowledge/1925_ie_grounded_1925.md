@@ -89,4 +89,7 @@ Implementasi industri Modul 1925 mengikuti kerangka tujuh-tahap yang disintesis 
 
 **Tahap 5 — Sistem Manajemen Pengembalian (Return Management System/RMS).** Mengikuti Shin et al. (2024), RMS mengintegrasikan *tracking* baterai via *battery passport* (sesuai EU Battery Regulation 2023/1542), insentif deposit (*buy-back*) kepada konsumen sebesar 8–15% harga baterai baru, dan *reverse logistics network* dengan armada khusus sesuai standar **UN 3480** untuk baterai litium.
 
-**Tahap 6 — Pengujian Kinerja dan Validasi Robustness.** Solusi jaringan diuji terhadap 1.000 skenario Monte Carlo pada parameter $\tilde{\lambda}$ dan $\tilde{p}_m$ untuk memverifikasi bahwa *worst-case cost deviation* tidak melebihi ambang容忍 (misalnya, ≤15% dari sk
+**Tahap 6 — Pengujian Kinerja dan Validasi Robustness.** Solusi jaringan diuji terhadap 1.000 skenario Monte Carlo pada parameter $\tilde{\lambda}$ dan $\tilde{p}_m$ untuk memverifikasi bahwa *worst-case cost deviation* tidak melebihi ambang容忍 (misalnya, ≤15% dari sk$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

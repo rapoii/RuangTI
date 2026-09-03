@@ -103,3 +103,6 @@ Sistem multi-agen LLM untuk pemeliharaan otonom memiliki aplikasi yang luas di b
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kemampuan model LLM dalam memahami konteks teknis. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih robust dan adaptif, serta integrasi dengan teknologi IoT untuk pengumpulan data real-time.
 
 Dengan demikian, penerapan sistem multi-agen LLM dalam pemeliharaan otonom tidak hanya menjanjikan efisiensi yang lebih tinggi, tetapi juga membuka jalan untuk inovasi lebih lanjut dalam bidang teknik industri dan rekayasa sistem.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

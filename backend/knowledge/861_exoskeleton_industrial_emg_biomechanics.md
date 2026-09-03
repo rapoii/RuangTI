@@ -110,3 +110,6 @@ Eksoskeleton industri memiliki aplikasi luas tidak hanya dalam manufaktur, tetap
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti variabilitas individu dalam respons terhadap eksoskeleton dan kondisi kerja yang berbeda. Penelitian lebih lanjut diperlukan untuk mengeksplorasi dampak jangka panjang dari penggunaan eksoskeleton terhadap kesehatan pekerja dan produktivitas.
 
 Arah riset masa depan dapat mencakup pengembangan eksoskeleton yang lebih ringan dan lebih ergonomis, serta integrasi teknologi sensor untuk pemantauan real-time terhadap kelelahan otot dan kompresi spinal. Dengan demikian, eksoskeleton dapat menjadi alat yang lebih efektif dalam meningkatkan keselamatan dan efisiensi kerja di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

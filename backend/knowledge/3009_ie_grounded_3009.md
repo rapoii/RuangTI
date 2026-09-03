@@ -93,4 +93,7 @@ Implementasi sistematis model hybrid mengikuti prosedur operasional berikut:
 3. Identifikasi biaya setup, biaya simpan, dan *sequence-dependent setup time* $\tau_{ij}$ dari catatan produksi aktual.
 4. Validasi data dengan *goodness-of-fit test* (Anderson-Darling) untuk memastikan distribusi normalitas residual (Forel & Grunow, 2023).
 
-**Tahap 2 — Konstruksi Model Matemat
+**Tahap 2 — Konstruksi Model Matemat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

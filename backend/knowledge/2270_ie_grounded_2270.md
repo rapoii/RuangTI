@@ -109,3 +109,7 @@ Diagram alur keputusan RCM hierarkis Zhou (2024):
        │         [Lanjut operasi]
        ▼              │
 [t < τ_B?]──
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

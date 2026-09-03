@@ -108,4 +108,7 @@ Misalkan pada $t=0$ posisi robot $(5,5)$ dengan jarak Euclidean ke goal: $d_0^{\
 
 - Jarak baru: $d_1^{\text{goal}} = \sqrt{64{,}65^2 + 44{,}65^2} = \sqrt{4179{,}6 + 1993{,}6} = \sqrt{6173{,}2} \approx 78{,}57$ m.
 - Progress: $\Delta d = 79{,}06 - 78{,}57 = 0{,}49$ m.
-- Reward: $r_1 = 0
+- Reward: $r_1 = 0$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

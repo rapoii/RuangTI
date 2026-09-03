@@ -114,4 +114,7 @@ Implementasi industri motion planning RL mengikuti arsitektur berlapis seperti y
 - *Safety wrapper*: integrasi *hard constraints* (misalnya zona eksklusi manusia) sebagai post-processing pada output aksi RL, sesuai standar ISO 10218 untuk robot industri kolaboratif.
 
 **Tahap 4 — Deployment & Continuous Learning:**
-- Online fine-tuning dengan pengalaman baru menggunakan *prioritized experience replay* dengan prioritas $p_i = |\delta_i
+- Online fine-tuning dengan pengalaman baru menggunakan *prioritized experience replay* dengan prioritas $p_i = |\delta_i$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

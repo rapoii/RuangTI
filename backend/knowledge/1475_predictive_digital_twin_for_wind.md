@@ -143,4 +143,7 @@ Misalkan turbin telah beroperasi selama $t = 12{,}000$ jam (akumulasi *equivalen
 
 $$t_{50} = \tau + \eta \cdot (-\ln 0.5)^{1/\beta} = 8{,}000 + 18{,}400 \cdot (0.693)^{1/2.85}$$
 
-Hitung pangkat: $1/\
+Hitung pangkat: $1/\$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

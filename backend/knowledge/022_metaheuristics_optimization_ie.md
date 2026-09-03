@@ -45,3 +45,6 @@ $$\mathbf{x}_i^{(t+1)} = \mathbf{x}_i^{(t)} + \mathbf{v}_i^{(t+1)}$$
   $$P(\text{accept}) = \exp\left( -\frac{\Delta E}{T} \right)$$
   *(Memungkinkan algoritma melompat keluar dari jebakan lembah lokal optimum).*
 - **Tabu Search:** Menggunakan memori jangka pendek (*Tabu List*) untuk melarang algoritma mengunjungi kembali solusi yang baru saja dieksplorasi guna mencegah perulangan siklus (*cycling*).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

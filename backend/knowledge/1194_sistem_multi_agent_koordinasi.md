@@ -103,3 +103,6 @@ Pengembangan sistem koordinasi multi-agent berbasis teori permainan memiliki imp
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas perhitungan yang meningkat seiring dengan bertambahnya jumlah AGV. Arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien dan penerapan teknologi kecerdasan buatan untuk meningkatkan kemampuan adaptasi sistem terhadap perubahan kondisi lingkungan.
 
 Dengan demikian, pengembangan sistem koordinasi multi-agent untuk fleet AGV menggunakan teori permainan tidak hanya relevan untuk meningkatkan efisiensi operasional, tetapi juga berpotensi untuk mendorong inovasi lebih lanjut dalam industri otomasi dan manajemen rantai pasok.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

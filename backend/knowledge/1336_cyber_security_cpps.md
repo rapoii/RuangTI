@@ -84,3 +84,6 @@ Keamanan siber dalam CPS tidak hanya relevan untuk sektor manufaktur, tetapi jug
 Batasan metodologi yang ada saat ini mencakup ketidakpastian dalam penilaian risiko dan kesulitan dalam mengukur dampak dari serangan siber. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan model yang lebih akurat dan adaptif untuk menilai risiko dan dampak serangan siber, serta penerapan teknologi baru seperti kecerdasan buatan untuk meningkatkan keamanan.
 
 Dengan demikian, perusahaan harus terus beradaptasi dan mengembangkan strategi keamanan siber yang inovatif untuk menghadapi tantangan yang terus berkembang dalam era Industry 5.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

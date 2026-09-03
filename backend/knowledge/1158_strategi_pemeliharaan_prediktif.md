@@ -119,4 +119,7 @@ Pemeliharaan prediktif dan TDABC tidak hanya relevan dalam sektor manufaktur, te
 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan sistem yang terintegrasi. Penelitian di masa depan dapat berfokus pada pengembangan algoritma yang lebih canggih untuk analisis data dan integrasi sistem yang lebih baik untuk mendukung pemeliharaan prediktif.
 
-Dengan demikian, pemeliharaan prediktif yang didukung oleh TDABC merupakan langkah strategis yang dapat meningkatkan efisiensi dan mengurangi biaya dalam industri manufaktur, serta memberikan kontribusi positif terhadap keberlanjutan dan keselamatan kerja.
+Dengan demikian, pemeliharaan prediktif yang didukung oleh TDABC merupakan langkah strategis yang dapat meningkatkan efisiensi dan mengurangi biaya dalam industri manufaktur, serta memberikan kontribusi positif terhadap keberlanjutan dan keselamatan kerja.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

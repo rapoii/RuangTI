@@ -140,3 +140,6 @@ Riset masa depan harus fokus pada pengembangan alat dan teknik yang lebih baik u
 --- 
 
 Dokumen ini memberikan panduan komprehensif mengenai penilaian materialitas ganda dalam konteks CSRD dan ESRS, serta aplikasinya dalam industri. Dengan mengikuti langkah-langkah yang diuraikan, perusahaan dapat meningkatkan transparansi dan akuntabilitas dalam laporan keberlanjutan mereka.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

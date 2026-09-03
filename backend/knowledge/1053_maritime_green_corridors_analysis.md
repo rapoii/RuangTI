@@ -128,4 +128,7 @@ Riset masa depan dapat fokus pada pengembangan teknologi baru untuk meminimalkan
 
 ---
 
-Dokumen ini memberikan panduan komprehensif mengenai analisis koridor hijau maritim untuk barang mudah rusak, dengan fokus pada metodologi, perhitungan kuantitatif, dan evaluasi kritis terhadap aplikasi lintas sektor. Dengan mengikuti standar dan referensi yang relevan, diharapkan modul ini dapat berkontribusi pada pengembangan praktik terbaik dalam industri logistik maritim.
+Dokumen ini memberikan panduan komprehensif mengenai analisis koridor hijau maritim untuk barang mudah rusak, dengan fokus pada metodologi, perhitungan kuantitatif, dan evaluasi kritis terhadap aplikasi lintas sektor. Dengan mengikuti standar dan referensi yang relevan, diharapkan modul ini dapat berkontribusi pada pengembangan praktik terbaik dalam industri logistik maritim.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

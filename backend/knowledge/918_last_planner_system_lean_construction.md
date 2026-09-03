@@ -116,3 +116,6 @@ Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan analitik data
 ---
 
 Dokumen ini memberikan panduan komprehensif tentang penerapan Last Planner System dan Percent Plan Complete dalam konteks konstruksi fast-track. Dengan mengikuti langkah-langkah yang diuraikan dan menerapkan analisis yang tepat, tim proyek dapat meningkatkan efisiensi dan efektivitas dalam pelaksanaan proyek konstruksi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

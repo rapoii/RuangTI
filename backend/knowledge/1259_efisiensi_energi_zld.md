@@ -114,3 +114,6 @@ Meskipun LCA memberikan wawasan yang berharga, ada batasan dalam akurasi data da
 Riset di masa depan harus fokus pada pengembangan teknologi baru untuk meningkatkan efisiensi energi dan mengurangi biaya sistem ZLD. Selain itu, integrasi dengan sistem otomatisasi dan digitalisasi dapat meningkatkan pengelolaan energi dan limbah.
 
 Dengan demikian, modul ini memberikan pemahaman yang mendalam tentang studi efisiensi energi dalam sistem Zero Liquid Discharge dengan pendekatan Life Cycle Assessment, serta implikasi praktis dan teoritis dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

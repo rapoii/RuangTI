@@ -143,4 +143,7 @@ Sebuah *fulfillment center* memiliki AGV yang harus bergerak dari *pick station*
 
 ### 4.2 Perhitungan Step-by-Step Q-Learning Iteration
 
-Misalkan state $s_t = (1,1)$ (sel awal S), action yang diambil $a_t = \text{right}$ ke state $s_{t+1} = (1,2)$ (sel kosong). Misal $Q(s_t, a_t)$ awal = 0 dan $\max_{a'} Q(s_{t+1}, a
+Misalkan state $s_t = (1,1)$ (sel awal S), action yang diambil $a_t = \text{right}$ ke state $s_{t+1} = (1,2)$ (sel kosong). Misal $Q(s_t, a_t)$ awal = 0 dan $\max_{a'} Q(s_{t+1}, a$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

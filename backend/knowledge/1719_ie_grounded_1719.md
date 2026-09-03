@@ -135,4 +135,7 @@ $$\Delta Q = Q_h \times t_d = 25 \times 16 = 400 \text{ unit}$$
 
 $$C_{internal} = \Delta Q \times m = 400 \times 70.000 = Rp 28.000.000$$
 
-**Penambahan biaya perbaikan darurat +
+**Penambahan biaya perbaikan darurat + \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -77,3 +77,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketergantungan p
 Arah riset masa depan dapat mencakup integrasi teknologi blockchain untuk transparansi data, serta penggunaan IoT untuk pengumpulan data secara real-time, yang dapat meningkatkan akurasi dan efisiensi sistem pemulihan energi panas.
 
 Dengan demikian, implementasi kecerdasan buatan dalam sistem pemulihan energi panas merupakan langkah strategis yang tidak hanya akan meningkatkan efisiensi energi, tetapi juga berkontribusi pada keberlanjutan industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

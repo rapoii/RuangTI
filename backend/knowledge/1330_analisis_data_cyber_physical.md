@@ -111,3 +111,6 @@ Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketergantungan 
 Dalam konteks standar masa depan, penting untuk mengadopsi dan memperbarui standar seperti ISO 22400-1:2022 untuk mencerminkan kemajuan teknologi dan praktik terbaik dalam analisis data real-time. Penelitian lebih lanjut juga harus mempertimbangkan aspek keberlanjutan dan tanggung jawab sosial dalam implementasi CPPS.
 
 Dengan demikian, analisis data real-time dalam CPPS merupakan alat yang sangat penting untuk mencapai optimalisasi proses manufaktur yang berkelanjutan dan efisien, serta memberikan kontribusi signifikan terhadap daya saing industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -129,3 +129,6 @@ Model kinematika tubuh utuh tidak hanya relevan untuk aplikasi robotika dalam ma
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas perhitungan dan kebutuhan untuk perangkat keras yang canggih. Oleh karena itu, arah riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih efisien untuk perhitungan kinematika dan penerapan kecerdasan buatan untuk meningkatkan adaptabilitas robot dalam lingkungan yang dinamis.
 
 Dengan mengikuti standar yang ditetapkan oleh ASME dan mengintegrasikan teknologi terbaru, industri dapat memanfaatkan potensi penuh dari robot manusia dalam tugas bin-picking yang kompleks, meningkatkan produktivitas dan keselamatan kerja secara signifikan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

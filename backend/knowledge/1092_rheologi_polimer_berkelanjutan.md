@@ -105,3 +105,6 @@ Namun, ada batasan dalam metodologi ini, termasuk ketergantungan pada model mate
 Arah riset masa depan dapat mencakup pengembangan teknik baru untuk pemrosesan polimer yang lebih ramah lingkungan, serta pengintegrasian teknologi digital dan AI dalam proses ekstrusi untuk meningkatkan efisiensi dan keberlanjutan.
 
 Dengan demikian, pendekatan yang sistematis dan berbasis data dalam analisis rheologi polimer dapat memberikan kontribusi signifikan terhadap pengurangan limbah dan peningkatan efisiensi dalam industri manufaktur.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -142,3 +142,6 @@ Optimasi rantai pasok koridor hijau maritim memiliki implikasi luas tidak hanya 
 Batasan metodologi ini termasuk ketidakpastian dalam harga bahan baku dan perubahan regulasi yang cepat. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengeksplorasi model dinamis yang dapat beradaptasi dengan perubahan kondisi pasar dan kebijakan.
 
 Arah riset masa depan harus fokus pada pengembangan teknologi penyimpanan yang lebih aman dan efisien, serta pemodelan yang lebih akurat untuk memprediksi dampak lingkungan dari operasi maritim. Dengan demikian, optimasi rantai pasok koridor hijau maritim tidak hanya akan memenuhi standar IMO tetapi juga berkontribusi pada keberlanjutan industri maritim secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

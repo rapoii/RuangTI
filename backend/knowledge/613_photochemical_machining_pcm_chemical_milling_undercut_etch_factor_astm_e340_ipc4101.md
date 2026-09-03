@@ -578,4 +578,4 @@ Tim rekayasa industri menerapkan empat intervensi teknis:
 5. Allen, D. M. (2004). Photochemical machining: from 'manufacturing's best kept secret' to a $6 billion per annum, rapid manufacturing process. *CIRP Annals - Manufacturing Technology*, 53(2), 559-572. [https://doi.org/10.1016/S0007-8506(07)60029-8](https://doi.org/10.1016/S0007-8506(07)60029-8)
 6. ASTM International. (2023). *ASTM E340-23: Standard Practice for Macroetching Metals and Alloys*. West Conshohocken, PA: ASTM International. [https://doi.org/10.1520/E0340-23](https://doi.org/10.1520/E0340-23)
 7. International Organization for Standardization. (2017). *ISO 1101:2017 Geometrical product specifications (GPS) — Geometrical tolerancing — Tolerances of form, orientation, location and run-out*. Geneva: ISO.
-8. IPC - Association Connecting Electronics Industries. (2022). *IPC-4101E: Specification for Base Materials for Rigid and Multilayer Printed Boards*. Bannockburn, IL: IPC.
+8. IPC - Association Connecting Electronics Industries. (2022). *IPC-4101E: Specification for Base Materials for Rigid and Multilayer Printed Boards*. Bannockburn, IL: IPC.$.

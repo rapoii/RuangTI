@@ -114,3 +114,6 @@ Model ini berhubungan erat dengan supply chain melalui just-in-time scheduling: 
 Tantangan adopsi: Integrasi data privasi (GDPR-like regulations), false positive eye-tracking (kurangi dengan hybrid EEG), biaya awal tinggi (Rp 100 juta/unit), dan resistensi budaya shiftwork. Evaluasi manajerial: Lakukan cost-benefit analysis tahunan, gunakan KPI seperti SD kumulatif rata-rata <10 jam dan A(t) >0.8. Aplikasi lintas sektor mencakup juga manufaktur (assembly line monitoring) dan logistik (warehouse control), dengan potensi skalabilitas 40% lebih luas. Secara keseluruhan, model ini memberikan kerangka rekayasa yang actionable untuk mengoptimalkan human factors dalam era industri 4.0.
 
 (Word count section 5: 218; total document word count: 1568)
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -125,3 +125,6 @@ Penerapan metode Gauge R&R dan model ANOVA efek acak bersarang tidak hanya terba
 Namun, terdapat batasan dalam metodologi ini, seperti asumsi normalitas dan independensi data. Penelitian masa depan dapat mengeksplorasi penggunaan teknik pembelajaran mesin untuk meningkatkan analisis data pengukuran dan mengatasi batasan yang ada.
 
 Dengan demikian, penerapan metode ini diharapkan dapat meningkatkan efisiensi dan efektivitas proses pengukuran di berbagai sektor industri, serta mendukung pencapaian standar kualitas yang lebih tinggi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

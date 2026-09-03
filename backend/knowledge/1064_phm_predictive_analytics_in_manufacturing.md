@@ -77,3 +77,6 @@ Analitik prediktif dalam PHM tidak hanya relevan di sektor manufaktur, tetapi ju
 Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada kualitas data dan kompleksitas model yang digunakan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih robust dan adaptif serta integrasi teknologi baru seperti Internet of Things (IoT) untuk pengumpulan data yang lebih efektif.
 
 Dengan demikian, penerapan analitik prediktif dalam PHM akan terus menjadi fokus utama dalam meningkatkan efisiensi dan efektivitas pengelolaan aset di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

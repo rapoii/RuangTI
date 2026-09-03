@@ -132,3 +132,6 @@ Optimasi rantai pasok dalam konstruksi modular tidak hanya relevan untuk sektor 
 Namun, terdapat batasan dalam metodologi yang perlu diatasi, seperti resistensi terhadap perubahan dan kebutuhan untuk pelatihan yang memadai. Penelitian masa depan harus fokus pada pengembangan model yang lebih adaptif dan responsif terhadap dinamika pasar serta integrasi teknologi baru yang dapat mendukung prinsip lean dan DfMA.
 
 Dengan demikian, penerapan strategi optimasi rantai pasok yang efektif dapat memberikan keuntungan kompetitif yang signifikan bagi perusahaan di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

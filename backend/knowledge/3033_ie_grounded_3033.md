@@ -77,4 +77,7 @@ dengan $T_i, T_f, T_m$ berturut-turut temperatur awal, akhir, dan titik lebur PC
 
 Penerapan LHTES-HTHP terintegrasi mengikuti SOP rekayasa lima tahap yang konsisten dengan paper Toloza et al. (2026, [DOI:10.21001/eurotherm2026.086](https://doi.org/10.21001/eurotherm2026.086)) dan kerangka IEA Heat Pump Programme:
 
-**Tahap 1 — Karakterisasi Beban Termal.** Audit energi berdasarkan ISO 50001 untuk
+**Tahap 1 — Karakterisasi Beban Termal.** Audit energi berdasarkan ISO 50001 untuk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

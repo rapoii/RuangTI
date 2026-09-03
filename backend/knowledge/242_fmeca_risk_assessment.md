@@ -151,3 +151,6 @@ Digital twin monitors trigger FMECA review when:
 5. Rausand, M., & Høyland, A. (2024). *System Reliability Theory: Models, Statistical Methods, and Applications* (3rd ed.). Wiley.
 6. NASA. (2023). *NASA Systems Engineering Handbook* (Rev. 2). NASA-SP-2023-5002163.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

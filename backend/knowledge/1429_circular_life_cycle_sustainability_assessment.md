@@ -134,3 +134,7 @@ $$MCI_A = 1 - 1{,}000 \cdot 1 = 0$$
 Untuk Desain B: $V_{lin} = 100$ g, $W_{cyc} = 150$ g, asumsi $W_{rer} = 0$:
 $$LFI_B = \frac{100}{100 + 150 + 0} = 0{,}400$$
 $$MCI_B = 1 - 0{,}400 \cdot 1
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

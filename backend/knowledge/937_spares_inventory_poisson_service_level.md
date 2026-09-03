@@ -133,3 +133,6 @@ Meskipun metode ini efektif, terdapat batasan dalam hal data yang akurat dan rep
 Riset masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk memprediksi permintaan dan mengoptimalkan inventaris dalam konteks yang lebih kompleks, termasuk penggunaan kecerdasan buatan dan pembelajaran mesin.
 
 Dengan pemahaman yang mendalam tentang kritikalitas suku cadang dan optimasi inventaris, perusahaan dapat meningkatkan daya saing dan keberlanjutan operasional mereka di pasar yang semakin kompetitif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -146,4 +146,7 @@ Sebuah pusat distribusi e-commerce di Tangerang akan menerapkan 50 unit AMR untu
 | $R_g$ | +100 | Reward goal |
 | $R_c$ | −100 | Penalty collision |
 | $\beta$ | 1.0 | Progress coefficient |
-| $\|\mathcal{A}\|$ | 5 | Aksi diskret |
+| $\|\mathcal{A}\|$ | 5 | Aksi diskret |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

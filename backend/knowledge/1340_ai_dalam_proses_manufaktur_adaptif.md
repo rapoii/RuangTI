@@ -108,3 +108,6 @@ Penerapan PINNs tidak terbatas pada industri manufaktur saja, tetapi juga dapat 
 Namun, ada beberapa batasan dalam metodologi ini, termasuk ketergantungan pada data berkualitas tinggi dan kompleksitas dalam pengembangan model. Oleh karena itu, riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan teknik pengumpulan data yang lebih baik untuk meningkatkan akurasi dan keandalan model.
 
 Dengan demikian, PINNs memiliki potensi besar untuk merevolusi cara kita mengoptimalkan proses industri dan mengambil keputusan secara real-time, memberikan keuntungan kompetitif yang signifikan bagi perusahaan yang mengadopsinya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

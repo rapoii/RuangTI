@@ -117,4 +117,7 @@ Dickson dkk. (2026) melakukan karakterisasi kerak menggunakan:
 
 ### 3.4 Integrasi dengan Pra-Proses Desulfurisasi-Reduction
 
-Andrameda dkk. (202
+Andrameda dkk. (202.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

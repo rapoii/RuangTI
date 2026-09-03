@@ -141,3 +141,7 @@ $$\dot{Q}_{charge,unit} = \dot{m}_{HTF} \cdot c_{p,HTF} \cdot \Delta T_{HTF} = 0
 Waktu *charge* per unit:
 
 $$t_{charge} = \frac{\Delta E_{unit}}{\dot{Q}_{charge,unit}} = \frac{15{,}562}{3{,}68} \approx 4{,}23~\text
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

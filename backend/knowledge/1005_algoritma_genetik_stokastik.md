@@ -116,3 +116,6 @@ Algoritma genetik stokastik tidak hanya terbatas pada masalah produksi, tetapi j
 Namun, ada beberapa batasan metodologi ini, seperti kebutuhan akan parameter yang tepat dan kompleksitas perhitungan yang tinggi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknik hybrid yang menggabungkan AGA dengan metode optimasi lainnya, seperti algoritma pemrograman linier dan teknik pembelajaran mesin, untuk meningkatkan keakuratan dan efisiensi.
 
 Dengan demikian, pengembangan algoritma genetik stokastik untuk penyelesaian masalah kombinatorial non-linier menawarkan potensi besar untuk meningkatkan kinerja industri dan memberikan solusi yang lebih baik dalam menghadapi tantangan yang kompleks di era modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

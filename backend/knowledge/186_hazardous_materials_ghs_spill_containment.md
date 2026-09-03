@@ -138,3 +138,6 @@ Process simulation coupled with real-time sensor data creates digital twins that
 6.  **Martinez, R., et al.** (2024). "Machine learning prediction of secondary containment integrity degradation using multi-sensor fusion." *Environmental Science & Technology*, 58(12), 5432-5445.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

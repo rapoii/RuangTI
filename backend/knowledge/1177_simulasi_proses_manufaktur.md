@@ -103,3 +103,6 @@ Penerapan Digital Twin tidak hanya terbatas pada sektor manufaktur, tetapi juga 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan data yang akurat dan real-time, serta keterampilan analitis yang diperlukan untuk menginterpretasikan hasil simulasi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk analisis data besar dan integrasi sistem yang lebih baik antara Digital Twin dan teknologi IoT.
 
 Dengan demikian, Digital Twin memiliki potensi besar untuk meningkatkan efisiensi energi di smart factories dan harus menjadi fokus utama dalam pengembangan industri masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

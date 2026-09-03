@@ -71,4 +71,7 @@ Berdasarkan kerangka yang diajukan Cavalieri et al. (2024) dan divalidasi oleh D
 
 **Tahap 2 — *Submodel Decomposition*.** Menguraikan setiap aset ke dalam submodel terstandar: *Identification*, *CapabilityDescription*, *OperationalData*, *MaintenanceRecord*, *Documentation*, dan *PredictedBehavior*. Banyaknya submodel rata-rata adalah $M = 6$ hingga $M = 15$ per aset tergantung kompleksitasnya (Cavalieri et al., 2024).
 
-**Tahap 3 — *5G
+**Tahap 3 — *5G.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

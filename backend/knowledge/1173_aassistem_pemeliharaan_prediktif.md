@@ -102,3 +102,6 @@ Penerapan AAS dan pemeliharaan prediktif berbasis AI tidak hanya terbatas pada s
 Namun, beberapa batasan metodologi masih perlu diperhatikan, seperti kualitas data yang dikumpulkan dan kompleksitas algoritma AI yang digunakan. Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih adaptif dan mampu belajar dari data baru secara real-time, serta integrasi dengan teknologi blockchain untuk meningkatkan keamanan dan integritas data.
 
 Dengan demikian, pengembangan AAS untuk sistem pemeliharaan prediktif berbasis AI di smart factories menawarkan potensi besar untuk meningkatkan efisiensi operasional dan pengelolaan aset, sejalan dengan standar ISO 55000:2023 yang menekankan pentingnya manajemen aset yang efektif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

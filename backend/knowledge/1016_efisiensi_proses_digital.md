@@ -107,3 +107,6 @@ Digital Twin tidak hanya relevan dalam konteks manufaktur, tetapi juga memiliki 
 Namun, terdapat batasan metodologi yang perlu diakui, seperti kebutuhan untuk data yang akurat dan real-time, serta tantangan dalam integrasi sistem. Ke depan, penelitian harus difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data besar dan penerapan kecerdasan buatan dalam Digital Twin untuk meningkatkan akurasi dan efisiensi.
 
 Dengan demikian, Digital Twin menjadi alat yang sangat berharga dalam mencapai tujuan keberlanjutan dan efisiensi dalam manufaktur modern, dan penelitian lebih lanjut akan terus membuka peluang baru dalam penerapannya di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

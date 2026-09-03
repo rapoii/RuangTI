@@ -123,3 +123,6 @@ Integrasi teknologi dalam penambangan longwall tidak hanya meningkatkan efisiens
 Batasan metodologi yang ada, seperti ketergantungan pada model geomekanik yang mungkin tidak sepenuhnya akurat, harus diatasi dengan penelitian lebih lanjut. Arah riset masa depan dapat mencakup pengembangan teknologi sensor yang lebih canggih untuk pemantauan real-time, serta algoritma pembelajaran mesin untuk memprediksi perubahan kondisi geomekanik dan optimasi sistem drainase.
 
 Dengan demikian, pemahaman yang mendalam tentang sistem penambangan longwall otomatis dan teknologi terkait akan menjadi kunci untuk menghadapi tantangan masa depan dalam industri pertambangan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

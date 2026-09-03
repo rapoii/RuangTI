@@ -438,3 +438,6 @@ Berdasarkan pengujian terhadap 30 titik observasi historis SCADA, berikut adalah
 5. **Bertsimas, D., Gupta, V., & Paschalidis, I. C. (2012).** *Inverse Optimization: A New Perspective on the Black-Litterman Model*. **Operations Research**, 60(6), 1389–1403. https://doi.org/10.1287/opre.1120.1115
 6. **Hillier, F. S., & Lieberman, G. J. (2021).** *Introduction to Operations Research* (11th ed.). McGraw-Hill Education. ISBN: 978-1259872990.
 7. **Taha, H. A. (2017).** *Operations Research: An Introduction* (10th ed.). Pearson. ISBN: 978-0134444017.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

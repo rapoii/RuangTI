@@ -101,4 +101,7 @@ Strategi inovasi untuk ekonomi sirkular memiliki implikasi yang luas di berbagai
 
 Namun, terdapat batasan dalam metodologi yang digunakan, seperti kesulitan dalam mengukur dampak lingkungan secara akurat dan tantangan dalam kolaborasi antar pemangku kepentingan. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan alat dan teknik yang lebih baik dalam mengevaluasi kinerja model bisnis ekonomi sirkular.
 
-Arah riset masa depan dapat mencakup pengembangan sistem yang lebih cerdas untuk pengelolaan sumber daya, serta eksplorasi model bisnis baru yang lebih inovatif dan berkelanjutan. Dengan demikian, para profesional di bidang teknik industri harus terus beradaptasi dan berinovasi untuk menghadapi tantangan yang ada di masa depan.
+Arah riset masa depan dapat mencakup pengembangan sistem yang lebih cerdas untuk pengelolaan sumber daya, serta eksplorasi model bisnis baru yang lebih inovatif dan berkelanjutan. Dengan demikian, para profesional di bidang teknik industri harus terus beradaptasi dan berinovasi untuk menghadapi tantangan yang ada di masa depan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -120,3 +120,6 @@ Penerapan teknologi blockchain dalam akuntansi karbon tidak hanya relevan untuk 
 Namun, ada beberapa batasan yang perlu dipertimbangkan, termasuk biaya implementasi teknologi dan kebutuhan untuk kolaborasi antara berbagai pemangku kepentingan. Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk analisis data emisi dan penerapan teknologi baru seperti kecerdasan buatan untuk meningkatkan akurasi dan efisiensi.
 
 Dengan demikian, penggunaan blockchain dalam akuntansi karbon adalah langkah maju yang signifikan dalam mengelola jejak karbon di seluruh rantai pasok, dan dapat menjadi standar masa depan dalam industri yang berorientasi pada keberlanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

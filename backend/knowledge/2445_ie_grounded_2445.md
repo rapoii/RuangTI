@@ -34,3 +34,7 @@ $$\text{Fe}_2\text{O}_3 + 3\text{H}_2\text{SO}_4 \rightleftharpoons 2\text{Fe}^{
 waktu induksi nukleasi mengikuti korelasi:
 
 $$t_{\text{ind}} = \frac{K_1}{S^n
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

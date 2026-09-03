@@ -41,3 +41,6 @@ $$\text{Bullwhip Ratio} = \frac{\sigma^2_{\text{Orders}} / \mu_{\text{Orders}}}{
 ### Formula Chen et al. untuk Model Lead Time & Estimasi Peramalan:
 $$\frac{\text{Var}(\text{Orders})}{\text{Var}(\text{Demand})} \ge 1 + \frac{2L}{p} + \frac{2L^2}{p^2}$$
 *(Di mana $L =$ Lead Time pemesanan, $p =$ Jumlah periode historis yang digunakan dalam moving average).*
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

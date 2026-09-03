@@ -90,3 +90,6 @@ Otomatisasi pelabuhan tidak hanya berdampak pada efisiensi rantai dingin, tetapi
 Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan untuk investasi awal yang tinggi dan potensi risiko keamanan siber. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih terjangkau dan aman, serta integrasi sistem otomatisasi dengan praktik keberlanjutan (ESG).
 
 Dengan demikian, otomatisasi pelabuhan dalam operasi rantai dingin menawarkan peluang signifikan untuk meningkatkan efisiensi, tetapi perlu pendekatan yang hati-hati dan terencana untuk mengatasi tantangan yang ada.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

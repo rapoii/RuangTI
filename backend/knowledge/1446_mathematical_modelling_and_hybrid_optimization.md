@@ -123,4 +123,7 @@ Untuk menggambarkan penerapan, perhatikan studi kasus distribusi produk susu pas
 
 Kapasitas kendaraan $Q = 250$ kg, daya制冷 $P_k = 1800$ W, COP $\eta_{\text{ref}} = 2{,}1$, $\alpha = 0{,}0008$, $c_e = \text{Rp }120/\text{kWh}$, $c_t = \text{Rp }1500/\text{jam}$, $c_{\text{pen}} = \text{Rp }50.000/°\text{C}$ pelanggaran.
 
-**Langkah 1: Pembentukan Rute Awal GA.** Misalkan sebuah kromosom kandidat menghasilkan rute: D → 1 → 2 → 6 → D (Rute A) dan D → 3 → 4 → 5 → 7 → 8 → D (Rute B). Beban: Rute A = 80+120
+**Langkah 1: Pembentukan Rute Awal GA.** Misalkan sebuah kromosom kandidat menghasilkan rute: D → 1 → 2 → 6 → D (Rute A) dan D → 3 → 4 → 5 → 7 → 8 → D (Rute B). Beban: Rute A = 80+120.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -150,3 +150,7 @@ $$\pi_{65\%} = (0{,}65 \times 583) \times 8{,}5 - 3.498 = -171 \text{ juta/bulan
 Jati dengan $D_{\text{eff}} = 2{,}5 \times 10^{-10}$ m²/s, tebal slab $h = 25$ mm = 0,025 m, $MC_0 = 80\%$, $MC_e = 12\%$. Menghitung waktu untuk mencapai $MC = 18\%$ (kondisi operasional):
 
 $$\frac{MC - MC_e}{MC_0 - MC_e} \approx \frac{18 - 12
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

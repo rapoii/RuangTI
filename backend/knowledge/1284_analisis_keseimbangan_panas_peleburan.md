@@ -119,3 +119,6 @@ Pemodelan dan analisis keseimbangan panas dalam proses peleburan tidak hanya rel
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketidakpastian dalam parameter material dan kondisi operasional yang dapat mempengaruhi hasil. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan model yang lebih akurat dan dapat diandalkan.
 
 Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin untuk memprediksi perilaku termal dalam proses peleburan, serta penerapan teknologi ramah lingkungan untuk mengurangi emisi karbon. Dengan demikian, pemodelan dan analisis keseimbangan panas dalam proses peleburan akan terus menjadi area penting untuk penelitian dan pengembangan dalam teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

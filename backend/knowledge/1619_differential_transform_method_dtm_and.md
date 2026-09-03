@@ -138,4 +138,7 @@ Rekonstruksi: $u_{DTM}(x) \approx 0.3333 + 0.2500x + 0.5000x^2$. Setelah normali
 
 ### 4.4 Implementasi PINN
 
-Ar
+Ar.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -97,3 +97,6 @@ Inovasi dalam operasi crane berat tidak hanya relevan untuk industri konstruksi,
 Namun, terdapat batasan dalam metodologi yang ada, seperti ketergantungan pada teknologi dan kebutuhan untuk pelatihan operator yang memadai. Oleh karena itu, penelitian masa depan harus fokus pada pengembangan teknologi yang lebih canggih, seperti penggunaan kecerdasan buatan untuk analisis data dan pengambilan keputusan otomatis dalam operasi crane.
 
 Dengan demikian, inovasi dalam keamanan dan efisiensi operasi crane berat untuk konstruksi modular off-site bukan hanya penting untuk meningkatkan keselamatan dan produktivitas, tetapi juga untuk memastikan keberlanjutan dan daya saing industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

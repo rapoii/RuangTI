@@ -82,3 +82,6 @@ Hand Activity Level combined with Normalized Peak Force provides a threshold lim
 6.  **Silverstein, B., et al.** (2023). "Prospective validation of HAL-TLV and Strain Index for predicting incident carpal tunnel syndrome in a multi-industry cohort." *Scandinavian Journal of Work, Environment & Health*, 49(4), 278-289.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

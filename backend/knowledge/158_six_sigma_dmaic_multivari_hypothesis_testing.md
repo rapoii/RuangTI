@@ -176,3 +176,6 @@ Step 6: If significant + practically large → Proceed to DOE (Improve)
 *Module ID: 158 · Last verified: 2026-08-18 · Content depth: ~5200 chars · KaTeX formulas: 14 · Citations: 7*
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -84,3 +84,6 @@ Penerapan Digital Twin tidak hanya bermanfaat dalam sektor manufaktur, tetapi ju
 Namun, terdapat batasan dalam metodologi ini, termasuk kebutuhan akan data yang berkualitas tinggi dan tantangan dalam integrasi sistem yang kompleks. Ke depan, riset dapat difokuskan pada pengembangan algoritma pembelajaran mesin yang lebih canggih untuk meningkatkan akurasi prediksi serta pengembangan standar keamanan data untuk melindungi informasi sensitif.
 
 Dengan demikian, implementasi Digital Twin untuk pemeliharaan prediktif dalam lingkungan manufaktur cerdas bukan hanya sebuah inovasi teknologi, tetapi juga sebuah kebutuhan strategis untuk meningkatkan daya saing dan keberlanjutan industri di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -101,3 +101,6 @@ Namun, terdapat batasan dalam metodologi yang digunakan, seperti ketidakpastian 
 Ke depan, arah riset dapat berfokus pada integrasi teknologi berbasis AI dan machine learning untuk memprediksi dan mengoptimalkan kinerja SAG mills secara real-time. Selain itu, pengembangan material baru yang lebih efisien dan ramah lingkungan juga menjadi penting untuk mencapai tujuan keberlanjutan dalam industri pertambangan.
 
 Dengan demikian, inovasi dalam desain SAG mills akan terus menjadi fokus utama dalam upaya meningkatkan efisiensi energi dan mengurangi limbah, sejalan dengan tuntutan industri yang semakin berorientasi pada keberlanjutan dan efisiensi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -99,3 +99,6 @@ Integrasi CPS dan blockchain memiliki potensi untuk diterapkan di berbagai sekto
 Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan, seperti biaya implementasi yang tinggi dan kebutuhan akan infrastruktur teknologi yang memadai. Arah riset masa depan dapat difokuskan pada pengembangan solusi yang lebih terjangkau dan mudah diimplementasikan, serta eksplorasi aplikasi baru dalam konteks keberlanjutan dan tanggung jawab sosial perusahaan (CSR).
 
 Dengan demikian, integrasi CPS dan blockchain tidak hanya menawarkan solusi untuk tantangan yang ada dalam rantai pasok, tetapi juga membuka peluang baru untuk inovasi dan efisiensi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

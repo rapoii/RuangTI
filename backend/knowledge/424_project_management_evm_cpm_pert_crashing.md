@@ -88,4 +88,4 @@ Dengan kendala: $x_i \le \text{Normal Time}_i - \text{Crash Time}_i$ dan total d
 - Project Management Institute. (2021). *A Guide to the Project Management Body of Knowledge (PMBOK® Guide)* (7th ed.). Newtown Square: PMI.
 - Fleming, Q. W., & Koppelman, J. M. (2016). *Earned Value Project Management* (4th ed.). Project Management Institute.
 - Elmousalami, H., & Alotaibi, A. (2026). *Automated conceptual earned value management and critical path schedule optimization*. Scientific Reports, 16(1), 61909. DOI: [10.1038/s41598-026-61909-5](https://doi.org/10.1038/s41598-026-61909-5).
-- Capone, C., Kretzschmar, G., & Narbaev, T. (2024). *Eliminating sub-optimality in Earned Value Management scheduling with stochastic critical paths*. IEEE Access, 12, 10679-10694. DOI: [10.1109/ACCESS.2024.10679792](https://doi.org/10.1109/ACCESS.2024.10679792).
+- Capone, C., Kretzschmar, G., & Narbaev, T. (2024). *Eliminating sub-optimality in Earned Value Management scheduling with stochastic critical paths*. IEEE Access, 12, 10679-10694. DOI: [10.1109/ACCESS.2024.10679792](https://doi.org/10.1109/ACCESS.2024.10679792).$.

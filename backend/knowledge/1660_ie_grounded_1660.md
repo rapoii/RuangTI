@@ -96,3 +96,6 @@ $$\text{PRL} = \frac{P_{w,i}(T_b) - P_{chamber}}{R_p + R_s} \quad \text{[kg/(m²
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
 **Skenario:** Pilot batch 1.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

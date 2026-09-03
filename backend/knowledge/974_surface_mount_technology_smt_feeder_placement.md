@@ -83,3 +83,6 @@ Optimasi penempatan komponen SMT tidak hanya relevan dalam industri elektronik, 
 Namun, terdapat batasan dalam metodologi yang ada, seperti kompleksitas algoritma yang digunakan dan keterbatasan dalam data yang tersedia. Oleh karena itu, penelitian lebih lanjut diperlukan untuk mengembangkan solusi yang lebih adaptif dan responsif terhadap perubahan permintaan pasar.
 
 Ke depan, fokus pada integrasi teknologi baru, seperti kecerdasan buatan dan analitik data besar, dapat membuka jalan bagi inovasi dalam optimasi penempatan komponen SMT, menjadikannya lebih efisien dan efektif dalam memenuhi tuntutan industri yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

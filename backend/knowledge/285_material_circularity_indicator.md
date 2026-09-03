@@ -44,3 +44,6 @@ Module 280 (Sustainability Engineering & LCA), Module 281 (Cradle-to-Cradle & Ma
 2. Chertow, M. R. (2000). Industrial symbiosis: Literature and taxonomy. *Annual Review of Energy and the Environment*, 25, 313–337.
 3. Jacobsen, N. B. (2006). Industrial symbiosis in Kalundborg, Denmark: A quantitative assessment. *Journal of Industrial Ecology*, 10(1–2), 239–255.
 4. Journal of Industrial Ecology (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -118,3 +118,7 @@ $$D_{e2e} \leq 2{,}912 \times 10^{-3}\ \text{detik} = 2{,}91\ \text{ms}$$
 Dengan *mini-slot* 2-OFDM-symbol, waktu transmisi turun menjadi $T_{slot} = 0{,}125$ ms. Dengan asumsi $b_{\max}$ berkurang menjadi 64 kbit akibat *packet aggregation* yang lebih agresif:
 
 $$D_{e2e}^{baru} \leq \frac{64 \times 10^3}{100 \times 10^6} + 4 \cdot \frac{300 \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

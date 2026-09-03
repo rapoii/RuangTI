@@ -100,3 +100,6 @@ Namun, metodologi ini juga memiliki batasan. Misalnya, kompleksitas geometri dan
 Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran dalam yang lebih canggih untuk analisis aliran dan pemisahan vortex, serta penerapan teknologi baru seperti komputasi kuantum untuk simulasi CFD yang lebih cepat dan akurat. 
 
 Dengan demikian, pemahaman yang mendalam tentang pemisahan vortex wake dan penerapan teknik CFD serta pembelajaran dalam akan menjadi kunci untuk inovasi dan efisiensi di industri masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

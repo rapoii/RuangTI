@@ -113,3 +113,6 @@ Dengan meningkatnya kesadaran akan keberlanjutan, pengendalian proses yang efisi
 ---
 
 Dokumen ini memberikan gambaran komprehensif mengenai penerapan APC dan DMC dalam kolom distilasi atmosfer minyak mentah, serta pentingnya optimasi dan penyeimbangan dalam proses industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

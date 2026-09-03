@@ -132,3 +132,6 @@ Meskipun metode ini efektif, terdapat batasan dalam hal kompleksitas komputasi, 
 Ke depan, penelitian dapat difokuskan pada pengembangan algoritma berbasis kecerdasan buatan untuk meningkatkan proses pengambilan keputusan dalam pengemasan kargo. Selain itu, integrasi dengan teknologi IoT untuk pemantauan kondisi kargo selama perjalanan juga dapat menjadi area penelitian yang menarik.
 
 Dengan demikian, pengelolaan kargo untuk Stasiun Luar Angkasa tidak hanya merupakan tantangan teknis, tetapi juga peluang untuk inovasi dalam teknik industri dan rekayasa sistem.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

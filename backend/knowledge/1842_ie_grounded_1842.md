@@ -122,4 +122,7 @@ Sebuah lini perakitan otomatis memiliki $N_{AGV}=20$ *Automated Guided Vehicle* 
 | Interval sampling $T_s$ | 50 | ms |
 | Jumlah AGV simultan $N$ | 20 | unit |
 | SINR rata-rata | 12 | dB |
-| Bandwidth total $B$ | 100 | MHz |
+| Bandwidth total $B$ | 100 | MHz |.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

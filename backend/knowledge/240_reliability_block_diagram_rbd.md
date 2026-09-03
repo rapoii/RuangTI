@@ -213,3 +213,6 @@ UPS improvement yields highest marginal gain due to parallel redundancy already 
 5. Ebeling, C. E. (2024). *An Introduction to Reliability and Maintainability Engineering* (3rd ed.). Waveland Press.
 6. ISO 26262-5:2023. Road vehicles — Functional safety — Part 5: Product development at hardware level. International Organization for Standardization.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

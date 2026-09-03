@@ -97,4 +97,7 @@ Penggunaan algoritma genetika dalam optimasi proses distilasi tidak hanya terbat
 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan data yang akurat dan representatif, serta waktu komputasi yang mungkin tinggi untuk masalah yang sangat kompleks. Oleh karena itu, arah riset masa depan seharusnya fokus pada pengembangan teknik hybrid yang menggabungkan algoritma genetika dengan metode optimasi lainnya, seperti algoritma swarm atau machine learning, untuk meningkatkan akurasi dan efisiensi.
 
-Dalam rangka mencapai keberlanjutan dan efisiensi yang lebih tinggi, penting bagi industri untuk terus mengeksplorasi dan mengimplementasikan teknologi baru, termasuk algoritma genetika, dalam proses distilasi berkelanjutan. Dengan demikian, kita dapat menghadapi tantangan operasional dan lingkungan yang semakin kompleks di masa depan.
+Dalam rangka mencapai keberlanjutan dan efisiensi yang lebih tinggi, penting bagi industri untuk terus mengeksplorasi dan mengimplementasikan teknologi baru, termasuk algoritma genetika, dalam proses distilasi berkelanjutan. Dengan demikian, kita dapat menghadapi tantangan operasional dan lingkungan yang semakin kompleks di masa depan.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

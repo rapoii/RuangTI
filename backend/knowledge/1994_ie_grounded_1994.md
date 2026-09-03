@@ -154,4 +154,7 @@ $$Y_{sp} = \frac{31{,}85}{32} = 0{,}995\ \text{gram astaxanthin per kg CO}_2$$
 - Harga astaxanthin natural grade: ~$7.000/kg (sintetis $1.500/kg)
 - Nilai produk: $31{,}85 \times 10^{-3} \times 7.000 = \$222{,}95$ per batch
 - Konsumsi CO₂ per kg: $32\ \text{kg}$ × \$0,15/kg = \$4,80
-- Kontribusi margin CO₂: $(222{,}95 - 4{,
+- Kontribusi margin CO₂: $(222{,}95 - 4{, \dots.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

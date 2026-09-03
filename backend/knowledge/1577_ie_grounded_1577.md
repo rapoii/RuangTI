@@ -75,3 +75,7 @@ Implementasi industri dari unit LHTES 222 °C mengikuti SOP berlapis yang selara
 **Perhitungan kapasitas energi tersimpan:**
 
 $$Q_{sens,s} = m_{pcm}\, c_{p,s} (T_s - T_{in}) = 500 \times 1{,}55 \times (217-200) = 13{,}175 \text
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -97,3 +97,6 @@ Arah riset masa depan dapat mencakup pengembangan material baru dengan konduktiv
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai pemodelan termal chiplet dalam 3D packaging, yang penting untuk meningkatkan kinerja energi dalam industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -90,3 +90,6 @@ AAS tidak hanya relevan dalam industri manufaktur tetapi juga dapat diterapkan d
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk interoperabilitas antara berbagai sistem dan standar yang belum sepenuhnya disepakati. Oleh karena itu, riset masa depan perlu difokuskan pada pengembangan standar yang lebih baik dan teknologi yang mendukung integrasi AAS dengan sistem yang ada.
 
 Dengan demikian, AAS memiliki potensi untuk menjadi komponen kunci dalam transformasi digital industri, dan pemahaman yang mendalam tentang implementasinya akan menjadi aset berharga bagi para profesional di bidang teknik industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

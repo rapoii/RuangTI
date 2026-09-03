@@ -121,4 +121,7 @@ $$m_{\text{kurkumin}} = 4151 \times 8{,}7 \times 10^{-4} \times 368{,}38 / 44{,}
 
 ### Studi Kasus B: Optimasi Yield Impregnasi Film SCF
 
-Berdasarkan data Lukić et al. (2022), pada kondisi operasi $P = 10$ MPa dan $T = 40$°C dengan rasio massa optimal $R_m^* = 0{,}1$ (1:10), yield impregnasi tertinggi yang dicapai untuk film SCF (starch/chitosan) adalah $Y = 8{,}71\%$. Jika kita menginginkan yield $\geq 10\%$ untuk antiviral gauze dengan aktivitas HSV-1 yang memenuhi
+Berdasarkan data Lukić et al. (2022), pada kondisi operasi $P = 10$ MPa dan $T = 40$°C dengan rasio massa optimal $R_m^* = 0{,}1$ (1:10), yield impregnasi tertinggi yang dicapai untuk film SCF (starch/chitosan) adalah $Y = 8{,}71\%$. Jika kita menginginkan yield $\geq 10\%$ untuk antiviral gauze dengan aktivitas HSV-1 yang memenuhi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

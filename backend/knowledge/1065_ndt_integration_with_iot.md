@@ -96,3 +96,6 @@ Integrasi NDT dengan IoT tidak hanya relevan dalam sektor manufaktur, tetapi jug
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan akan infrastruktur yang memadai dan tantangan dalam keamanan data. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih aman dan efisien, serta peningkatan interoperabilitas antara berbagai sistem NDT dan IoT.
 
 Dengan demikian, integrasi NDT dengan IoT merupakan langkah penting menuju lingkungan manufaktur yang lebih cerdas dan responsif, yang dapat meningkatkan daya saing industri di era digital ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

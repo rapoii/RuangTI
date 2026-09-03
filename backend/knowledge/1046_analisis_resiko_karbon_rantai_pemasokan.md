@@ -104,3 +104,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk ketersediaan dat
 Ke depan, riset dalam analisis risiko emisi karbon diharapkan dapat berfokus pada integrasi teknologi baru, seperti Internet of Things (IoT) dan analitik big data, untuk meningkatkan akurasi dan efisiensi dalam pengukuran emisi karbon. Selain itu, pengembangan standar internasional yang lebih ketat dan komprehensif akan menjadi kunci dalam mendorong perusahaan untuk berkomitmen pada praktik berkelanjutan dan pengurangan emisi karbon dalam rantai pasokan mereka.
 
 Dengan demikian, analisis risiko emisi karbon dalam rantai pasokan global bukan hanya sebuah keharusan, tetapi juga merupakan langkah strategis untuk mencapai keberlanjutan dan efisiensi dalam operasional industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

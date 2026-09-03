@@ -105,3 +105,6 @@ CIS tidak hanya relevan untuk sektor industri, tetapi juga dapat diterapkan dala
 Namun, terdapat batasan dalam metodologi yang perlu diatasi, seperti ketidakpastian dalam estimasi eksergi dan kompleksitas dalam pengelolaan kolaborasi antar perusahaan. Penelitian masa depan harus fokus pada pengembangan model yang lebih akurat dan adaptif, serta penerapan teknologi digital untuk meningkatkan transparansi dan efisiensi dalam jaringan CIS.
 
 Dengan demikian, Circular Industrial Symbiosis menawarkan potensi besar untuk meningkatkan keberlanjutan industri dan efisiensi sumber daya, namun memerlukan pendekatan yang sistematis dan kolaboratif untuk mencapai hasil yang optimal.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -101,4 +101,7 @@ Output akhir berupa dokumen FMEA terstruktur (sesuai template AIAG-VDA) yang dis
 | FM-01 | Sensor kecepatan roda | Drift kalibrasi | ABS tidak aktif, jarak pengerjaan bertambah | 9 | 4 | 5 | 180 | 180 |
 | FM-02 | Solder joint BGA | Cold joint / retak | Intermittent failure ECU, lampu MIL nyala | 8 | 5 | 6 | 240 | 240 |
 | FM-03 | Kapasitor elektrolitik | Kapasitansi turun (dry-out) | Ripple tegangan, sensor erroneous | 7 | 6 | 7 | 294 | 294 |
-|
+|.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

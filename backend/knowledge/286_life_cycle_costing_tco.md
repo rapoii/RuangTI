@@ -48,3 +48,6 @@ Module 253 (Value Engineering), Module 283 (Internal Carbon Pricing — carbon a
 2. ISO 15686-5:2017, *Buildings and Constructed Assets — Service Life Planning — Part 5: Life Cycle Costing*.
 3. Monczka, R. M., Handfield, R. B., Giunipero, L. C., & Patterson, J. L. (2021). *Purchasing and Supply Chain Management* (6th ed.). Cengage.
 4. International Journal of Production Economics (2024).
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

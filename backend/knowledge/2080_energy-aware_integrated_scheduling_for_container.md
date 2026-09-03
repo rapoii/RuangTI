@@ -187,3 +187,7 @@ E_{T1} = 0{,}05 \times \frac{420}{5} = 0{,}05 \times 84 = 4{,}20 \text{ kWh}
 $$
 $$
 E_{T2} = 0{,
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

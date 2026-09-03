@@ -127,3 +127,6 @@ Variable frequency drives (VFDs) coupled with real-time particle/gas sensors ena
 6.  **Park, J., & Kim, S.** (2025). "Energy-efficient demand-controlled industrial ventilation using real-time aerosol monitoring and machine learning predictive control." *Building and Environment*, 267, 112145.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

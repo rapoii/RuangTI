@@ -94,3 +94,6 @@ Use Real Options (see Module 196) combined with IP valuation to manage R&D portf
 -   Research Policy (2023). "Real options and IP valuation in R&D-intensive industries".
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

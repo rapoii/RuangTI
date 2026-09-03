@@ -122,3 +122,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas perhitungan d
 Arah riset masa depan dapat mencakup pengembangan algoritma pembelajaran mesin yang dapat beradaptasi secara real-time terhadap kondisi lingkungan yang berubah, serta integrasi teknologi sensor untuk meningkatkan akurasi dan responsivitas robot otonom.
 
 Dengan demikian, optimasi kinematika tubuh utuh untuk robot otonom dalam lingkungan yang berubah adalah bidang yang menjanjikan, dengan potensi untuk meningkatkan efisiensi dan efektivitas operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

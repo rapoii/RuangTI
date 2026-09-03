@@ -111,3 +111,6 @@ Arah riset masa depan juga harus mempertimbangkan aspek keberlanjutan dan dampak
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang penggunaan model manusia digital dalam desain dan evaluasi exoskeleton biomekanik, serta tantangan dan peluang yang ada di bidang ini. Dengan mengikuti metodologi yang sistematis dan berbasis data, kita dapat menciptakan solusi inovatif yang dapat meningkatkan kualitas hidup dan produktivitas di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

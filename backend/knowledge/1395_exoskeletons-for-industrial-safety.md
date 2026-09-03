@@ -116,3 +116,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan. Misal
 Ke depan, penelitian dapat difokuskan pada pengembangan exoskeleton yang lebih ringan, lebih terjangkau, dan lebih mudah digunakan. Selain itu, integrasi teknologi seperti kecerdasan buatan (AI) dan Internet of Things (IoT) dapat meningkatkan kinerja exoskeleton dan memberikan data real-time untuk analisis keselamatan kerja.
 
 Dengan demikian, evaluasi keefektifan exoskeleton dalam meningkatkan keamanan kerja di lingkungan industri berisiko tinggi adalah langkah penting menuju pengurangan cedera dan peningkatan produktivitas, yang pada akhirnya akan memberikan dampak positif bagi keseluruhan industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

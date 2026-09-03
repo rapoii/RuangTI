@@ -119,3 +119,6 @@ Arah riset masa depan dapat mencakup integrasi sistem SBS/RS dengan teknologi Io
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang optimasi throughput pada sistem SBS/RS, dengan penekanan pada aspek teknis dan aplikatif yang relevan dalam konteks industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

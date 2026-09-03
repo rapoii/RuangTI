@@ -95,3 +95,6 @@ Dibandingkan dengan metode konvensional, penggunaan blockchain dapat meningkatka
 Ke depan, agenda riset lanjutan harus fokus pada pengembangan standar industri untuk penerapan blockchain, serta eksplorasi lebih lanjut tentang bagaimana teknologi ini dapat diintegrasikan dengan kecerdasan buatan dan analitik data untuk meningkatkan efisiensi operasional di berbagai sektor industri.
 
 Dengan demikian, penerapan teknologi blockchain dalam MRO tidak hanya menjanjikan efisiensi dan keamanan yang lebih baik, tetapi juga membuka jalan bagi inovasi yang lebih besar dalam manajemen rantai pasokan dan pemeliharaan di industri penerbangan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

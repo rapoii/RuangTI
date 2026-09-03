@@ -124,3 +124,6 @@ Analisis kompleksitas dalam optimisasi non-linier tidak hanya relevan dalam sist
 Namun, ada batasan dalam metodologi yang ada, seperti ketidakpastian dalam data dan kompleksitas komputasi yang tinggi. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi teknologi baru seperti kecerdasan buatan untuk meningkatkan kemampuan analisis dan pengambilan keputusan.
 
 Dengan demikian, pemahaman yang mendalam tentang analisis kompleksitas masalah optimisasi kombinatorial non-linier akan menjadi kunci untuk menciptakan solusi yang lebih baik dalam pengelolaan energi dan sistem industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

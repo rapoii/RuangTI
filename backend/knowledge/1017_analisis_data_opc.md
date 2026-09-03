@@ -100,3 +100,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk isu keamanan dat
 Ke depan, penelitian dalam analisis data real-time akan terus berkembang, dengan fokus pada pengembangan algoritma yang lebih efisien dan penerapan teknologi baru seperti kecerdasan buatan dan Internet of Things (IoT). Hal ini akan membuka peluang baru untuk meningkatkan kinerja sistem produksi dan menciptakan nilai tambah bagi perusahaan.
 
 Dengan demikian, pemahaman yang mendalam tentang analisis data real-time dalam konteks OPC-UA menjadi sangat penting bagi para profesional di bidang teknik industri untuk menghadapi tantangan dan memanfaatkan peluang di era industri 4.0.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -115,3 +115,6 @@ Teknologi ORC tidak hanya relevan dalam sektor bioproses, tetapi juga dapat dite
 Namun, ada batasan metodologi yang perlu diperhatikan, seperti ketergantungan pada kondisi operasi yang optimal dan biaya awal yang tinggi. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan terjangkau, serta pendekatan yang lebih holistik dalam integrasi sistem ORC ke dalam proses industri.
 
 Dengan demikian, teknologi ORC untuk pemulihan energi panas limbah dari proses bioproses tidak hanya menawarkan solusi untuk efisiensi energi, tetapi juga berpotensi untuk mendorong inovasi dan keberlanjutan di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

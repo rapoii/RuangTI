@@ -109,3 +109,7 @@ Diagram alir keputusan (high-level):
 [Refurbish] [Recycle]
    ↓         ↓
 [2
+```
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

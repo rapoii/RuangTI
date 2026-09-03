@@ -99,3 +99,6 @@ Namun, terdapat beberapa batasan metodologi yang perlu diperhatikan. Salah satun
 Arah riset masa depan dalam bidang ini dapat mencakup pengembangan algoritma pembelajaran mesin yang lebih canggih, integrasi dengan teknologi IoT untuk pengumpulan data real-time, serta penerapan prinsip keberlanjutan dalam desain dan operasional Digital Twin.
 
 Dengan demikian, penerapan Digital Twin dalam optimasi proses produksi tidak hanya memberikan manfaat ekonomis, tetapi juga berkontribusi pada keberlanjutan industri secara keseluruhan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

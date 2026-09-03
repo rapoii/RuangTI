@@ -101,3 +101,6 @@ Analisis kinematika tidak hanya relevan dalam konteks bin-picking, tetapi juga d
 Batasan dari metodologi ini termasuk kompleksitas perhitungan dan kebutuhan akan sensor yang akurat. Oleh karena itu, arah riset masa depan harus berfokus pada pengembangan algoritma yang lebih efisien dan teknologi sensor yang lebih canggih untuk meningkatkan akurasi dan kecepatan dalam bin-picking.
 
 Dengan demikian, analisis kinematika merupakan aspek penting dalam pengembangan robot otonom yang dapat meningkatkan efektivitas bin-picking dan memberikan kontribusi signifikan terhadap efisiensi operasional di industri modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

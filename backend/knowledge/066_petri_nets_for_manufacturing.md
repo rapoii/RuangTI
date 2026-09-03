@@ -79,3 +79,6 @@ Little's Law applies: $WIP = TH \cdot CT$
 5. Wu, N. Q., & Zhou, M. C. (2025). RO-PN for Cluster Tools. *IEEE TASE*, 22, 1234-1248.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

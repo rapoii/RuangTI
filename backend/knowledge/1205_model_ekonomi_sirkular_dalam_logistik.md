@@ -90,3 +90,6 @@ Model ekonomi sirkular memiliki relevansi yang luas di berbagai disiplin ilmu, t
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kebutuhan untuk investasi awal yang tinggi dan tantangan dalam mengubah budaya organisasi. Oleh karena itu, riset masa depan harus fokus pada pengembangan teknologi yang lebih efisien dan metode untuk mengedukasi pemangku kepentingan tentang manfaat ekonomi sirkular.
 
 Secara keseluruhan, model ekonomi sirkular dalam manajemen logistik menawarkan peluang signifikan untuk meningkatkan efisiensi dan keberlanjutan di berbagai sektor industri. Ke depan, integrasi lebih lanjut antara teknologi dan praktik ekonomi sirkular akan menjadi kunci untuk mencapai tujuan keberlanjutan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

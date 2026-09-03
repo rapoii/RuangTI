@@ -160,4 +160,7 @@ Koreksi model: $F(t) = F_0 \cdot e^{-k_{cold} \cdot t}$ dengan $k_{cold} = 0.001
 
 $$F(5) = 8.2 \cdot e^{-0.0015 \times 5} = 8.2 \cdot e^{-0.0075} = 8.2 \times 0.9925 = 8.14 \text{ N/mm}$$
 
-Hasil: firmness turun hanya 0.73% dalam 5 hari, memenuhi standar Grade
+Hasil: firmness turun hanya 0.73% dalam 5 hari, memenuhi standar Grade.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

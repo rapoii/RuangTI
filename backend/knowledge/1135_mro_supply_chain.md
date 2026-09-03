@@ -91,3 +91,6 @@ Penerapan blockchain dalam pengelolaan rantai pasokan MRO pesawat dapat memberik
 Teknologi blockchain tidak hanya relevan untuk industri penerbangan, tetapi juga dapat diterapkan dalam sektor lain seperti otomotif, farmasi, dan makanan. Dalam konteks otomasi dan manajemen biaya, blockchain dapat membantu dalam mengurangi biaya transaksi dan meningkatkan efisiensi rantai pasokan.
 
 Ke depan, riset harus difokuskan pada pengembangan standar interoperabilitas antara berbagai platform blockchain, serta studi lebih lanjut mengenai dampak sosial dan ekonomi dari penerapan teknologi ini dalam industri. Dengan demikian, blockchain dapat menjadi pilar utama dalam menciptakan rantai pasokan yang lebih transparan dan aman di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -110,4 +110,7 @@ Patel dkk. (2024) melengkapi arsitektur dengan lapisan kendali:
 
 **Threshold** (persentil ke-99 data normal): $\tau = \mu + 2{,}33\sigma = 0{,}0041 + 2{,}33 \times 0{,}0012 = 0{,}00690$.
 
-Karena $A(x_2) = 0{,
+Karena $A(x_2) = 0{,$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

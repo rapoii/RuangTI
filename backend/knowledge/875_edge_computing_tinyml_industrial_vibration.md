@@ -107,3 +107,6 @@ Penerapan TinyML dan Edge AI tidak hanya terbatas pada deteksi anomali getaran, 
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti keterbatasan akurasi model yang dikuantisasi dan tantangan dalam pengumpulan data yang representatif. Oleh karena itu, riset masa depan harus fokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta eksplorasi penggunaan teknologi baru seperti 5G untuk meningkatkan komunikasi dan pemrosesan data di lapangan.
 
 Dengan demikian, penerapan TinyML dan Edge AI pada mikrokontroler untuk deteksi anomali getaran menawarkan potensi besar untuk meningkatkan efisiensi dan efektivitas operasional di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

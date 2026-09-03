@@ -99,3 +99,6 @@ Desain jaringan logistik terbalik untuk e-waste tidak hanya relevan untuk indust
 Namun, metodologi ini memiliki batasan, terutama dalam hal ketidakpastian tingkat pengembalian dan biaya yang mungkin berubah seiring waktu. Oleh karena itu, riset masa depan harus fokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar dan regulasi.
 
 Dengan demikian, desain jaringan logistik terbalik tertutup untuk e-waste menjadi elemen kunci dalam mencapai keberlanjutan dan kepatuhan terhadap regulasi, serta memberikan nilai tambah bagi perusahaan dalam jangka panjang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

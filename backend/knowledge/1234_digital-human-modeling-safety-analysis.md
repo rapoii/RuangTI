@@ -96,3 +96,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti ketergantungan pada data y
 Arah riset masa depan dapat mencakup pengembangan model yang lebih realistis dengan mempertimbangkan faktor psikologis dan sosial dalam interaksi manusia dengan mesin. Selain itu, penerapan teknologi virtual reality (VR) dan augmented reality (AR) dalam pelatihan keselamatan kerja dapat menjadi langkah inovatif untuk meningkatkan kesadaran dan pemahaman pekerja mengenai risiko yang ada.
 
 Dengan demikian, penerapan teknik pemodelan manusia digital lanjutan untuk analisis keselamatan di industri berisiko tinggi merupakan langkah yang strategis dan diperlukan untuk menciptakan lingkungan kerja yang lebih aman dan produktif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

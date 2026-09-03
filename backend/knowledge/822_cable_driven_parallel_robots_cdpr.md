@@ -109,3 +109,6 @@ CDPR memiliki potensi aplikasi yang luas di berbagai sektor, termasuk otomasi gu
 Ke depan, penelitian lebih lanjut diperlukan untuk mengatasi batasan metodologi, seperti pengembangan algoritma yang lebih canggih untuk distribusi tensi dan kompensasi jatuh kabel. Selain itu, integrasi teknologi baru seperti kecerdasan buatan dan Internet of Things (IoT) dapat meningkatkan kinerja dan fleksibilitas CDPR dalam aplikasi industri.
 
 Dengan mengikuti standar yang ditetapkan oleh ISO 10218-1 dan referensi dari literatur terkini, para insinyur dapat memastikan bahwa sistem yang dikembangkan tidak hanya efisien tetapi juga aman dan berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -111,3 +111,6 @@ Arah riset masa depan dapat difokuskan pada pengembangan teknologi baru yang dap
 ---
 
 Dokumen ini diharapkan dapat menjadi panduan yang komprehensif bagi para profesional di bidang teknik industri dalam memahami dan menerapkan pengukuran serta optimalisasi efisiensi energi dalam proses remanufaktur tertutup.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

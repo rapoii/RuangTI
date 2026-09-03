@@ -147,3 +147,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang a
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih adaptif dan efisien, serta penerapan teknik optimasi dalam konteks industri 4.0 yang mengintegrasikan IoT dan big data untuk meningkatkan keputusan berbasis data dalam desain bioreaktor.
 
 Dengan demikian, penggunaan algoritma genetika dalam optimasi desain bioreaktor memberikan peluang besar untuk meningkatkan efisiensi dan keberlanjutan dalam produksi biopharmaceutical, serta membuka jalan bagi inovasi dalam berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

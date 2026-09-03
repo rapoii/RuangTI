@@ -110,3 +110,6 @@ Keterkaitan dengan disiplin lain, seperti manajemen biaya dan teknik keselamatan
 Di masa depan, penelitian dapat difokuskan pada pengembangan teknologi sensor yang lebih canggih dan otomatisasi dalam pengukuran partikel udara. Selain itu, integrasi sistem manajemen kualitas berbasis data dapat meningkatkan efisiensi dan responsivitas dalam pengendalian kualitas cleanroom.
 
 Dengan demikian, pemahaman yang mendalam tentang metrologi partikel udara dan penerapan standar internasional akan terus menjadi kunci untuk keberhasilan industri yang bergantung pada lingkungan bersih.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

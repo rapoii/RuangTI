@@ -440,4 +440,4 @@ Tim *Supply Chain Engineering* merestrukturisasi portofolio pengadaan dengan men
 4. **Chopra, S., & Sodhi, M. S.** (2014). *Reducing the Risk of Supply Chain Disruptions*. MIT Sloan Management Review, 55(3), 73-80.
 5. **Artzner, P., Delbaen, F., Eber, J. M., & Heath, D.** (1999). *Coherent Measures of Risk*. Mathematical Finance, 9(3), 203-228. [DOI: 10.1111/1467-9965.00068]
 6. **ISO 22301:2019**. *Security and Resilience — Business Continuity Management Systems — Requirements*. International Organization for Standardization, Geneva.
-7. **ISO 28000:2022**. *Security and Resilience — Security Management Systems — Requirements*. International Organization for Standardization, Geneva.
+7. **ISO 28000:2022**. *Security and Resilience — Security Management Systems — Requirements*. International Organization for Standardization, Geneva.$.

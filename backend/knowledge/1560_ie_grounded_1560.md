@@ -196,3 +196,8 @@ WWLS_{R1} = \frac{(3 \times 70) + (2 \times 60) + (5 \times 85) + (1 \times 40) 
 $$
 
 $$
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

@@ -165,3 +165,6 @@ Model validation requiring $R^2 > 0.90$ and residual normality before deployment
 - EPA. (2025). *Six Sigma for Environmental Excellence: Case Studies and Best Practices*. U.S. Environmental Protection Agency.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

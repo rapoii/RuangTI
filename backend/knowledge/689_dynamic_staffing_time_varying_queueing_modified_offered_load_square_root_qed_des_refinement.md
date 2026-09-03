@@ -256,3 +256,6 @@ Repair rounds: 1
 **Buku teks rujukan:**
 - Hillier, F. S., & Lieberman, G. J. (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill. [Bab queueing theory & simulation]
 - Winston, W. L. (2022). *Operations Research: Applications and Algorithms* (4th ed.). Cengage Learning.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -160,4 +160,7 @@ Shell dengan panjang 1,5 m dan diameter 1,7 m berisi shell-side PCM, volume ters
 
 $$V_{shell} = \pi \times (0{,}85)^2 \times 1{,}5 - 7 \times \pi \times (0{,}0125)^2 \times 1{,}5 \approx 3{,}40\,\text{m}^3$$
 
-Cocok dengan target densitas packing ~95
+Cocok dengan target densitas packing ~95.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

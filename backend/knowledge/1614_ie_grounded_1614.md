@@ -127,4 +127,7 @@ Audit triwulanan terhadap kepatuhan检修, analisis tren MTBUR, dan *root cause 
 
 ### 4.1. Parameter Input (Studi Kasus: Armada Narrow-Body 50 Pesawat)
 
-Sebuah maskapai regional mengoperasikan 50 pesawat narrow
+Sebuah maskapai regional mengoperasikan 50 pesawat narrow.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

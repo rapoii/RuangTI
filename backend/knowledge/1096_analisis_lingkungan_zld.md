@@ -104,3 +104,6 @@ Ke depan, arah penelitian dapat fokus pada pengembangan teknologi baru yang lebi
 ---
 
 Dokumen ini memberikan gambaran yang komprehensif tentang analisis lingkungan dan ekonomi dari implementasi sistem ZLD dalam industri kimia menggunakan metode Life Cycle Assessment. Dengan mengikuti langkah-langkah yang telah dijelaskan, perusahaan dapat membuat keputusan yang lebih baik terkait investasi dalam teknologi yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

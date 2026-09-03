@@ -207,3 +207,6 @@ Namun, terdapat batasan dalam metodologi ini, seperti kebutuhan akan data yang c
 Ke depan, penelitian dapat difokuskan pada pengembangan algoritma berbasis kecerdasan buatan untuk meningkatkan akurasi prediksi dan pengendalian kualitas dalam proses produksi. Integrasi teknologi seperti machine learning dan big data analytics akan menjadi kunci dalam mengoptimalkan MSPC di era Industri 4.0.
 
 Dengan demikian, MSPC tidak hanya berfungsi sebagai alat kontrol kualitas, tetapi juga sebagai pendorong inovasi dan efisiensi dalam lingkungan produksi yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

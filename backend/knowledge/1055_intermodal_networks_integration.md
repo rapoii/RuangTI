@@ -114,3 +114,6 @@ Kendala dalam metodologi ini termasuk ketidakpastian dalam permintaan dan fluktu
 Arah riset masa depan dapat mencakup pengembangan algoritma yang lebih canggih untuk optimasi rute, serta penerapan teknologi IoT untuk pemantauan real-time dalam rantai pasok vaksin. Dengan demikian, integrasi jaringan angkutan intermodal dapat menjadi solusi yang lebih efisien dan efektif dalam distribusi vaksin dan produk kritis lainnya. 
 
 Dengan mengikuti standar ISO 9001:2015, organisasi dapat memastikan bahwa proses distribusi vaksin memenuhi persyaratan kualitas dan efisiensi yang tinggi, sehingga dapat meningkatkan kepercayaan masyarakat terhadap sistem kesehatan global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

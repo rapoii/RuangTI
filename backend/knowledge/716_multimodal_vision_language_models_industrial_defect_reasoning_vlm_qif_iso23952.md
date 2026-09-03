@@ -330,4 +330,4 @@ Pabrik memproduksi 1.200 unit bilah turbin berkecepatan tinggi per bulan. Cacat 
 3. Al-Saeed, M., & Groover, M. P. (2024). *Automated Quality Systems and Computer-Integrated Metrology* (6th ed.). Prentice Hall.
 4. Montgomery, D. C. (2020). *Introduction to Statistical Quality Control* (8th ed.). John Wiley & Sons.
 5. Tao, F., Zhang, H., Qi, Q., & Nee, A. Y. C. (2025). "Generative Multimodal Digital Twins: Integrating Large Vision-Language Models with Industrial Ontologies". *Journal of Manufacturing Systems*, 78, 215–231. DOI: `10.1016/j.jmsy.2024.11.009`.
-6. AIAG & VDA. (2019). *Failure Mode and Effects Analysis (FMEA) Handbook* (1st ed.). Automotive Industry Action Group.
+6. AIAG & VDA. (2019). *Failure Mode and Effects Analysis (FMEA) Handbook* (1st ed.). Automotive Industry Action Group.$.

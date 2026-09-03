@@ -373,3 +373,6 @@ BC-node          289    399    178    164.15     3.51%
 - Wolsey, L. A. (2020). *Integer Programming* (2nd ed.). Wiley.
 - Gomory, R. E. (1963). An algorithm for integer solutions to linear programs. Dalam R. L. Graves & P. Wolfe (Eds.), *Recent Advances in Mathematical Programming*. McGraw-Hill. [makalah historis fondasional]
 - Hillier, F. S., & Lieberman, G. J. (2021). *Introduction to Operations Research* (11th ed.). McGraw-Hill. [Bab integer programming]
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

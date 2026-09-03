@@ -129,3 +129,6 @@ Proses ekstrusi tidak hanya terbatas pada industri makanan dan pakan, tetapi jug
 Dari perspektif K3 dan ESG, pengurangan energi dalam proses ekstrusi berkontribusi pada pengurangan jejak karbon. Penelitian masa depan dapat berfokus pada pengembangan teknologi ekstrusi yang lebih efisien dan ramah lingkungan, serta penerapan otomatisasi dan kontrol cerdas untuk meningkatkan konsistensi produk dan efisiensi operasional.
 
 Dengan demikian, pemahaman yang mendalam tentang optimasi SME, gelatinisasi pati, rheologi die swell, dan kontrol pellet sangat penting untuk kemajuan industri makanan dan pakan akuakultur yang berkelanjutan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

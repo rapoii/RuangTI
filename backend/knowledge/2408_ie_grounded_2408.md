@@ -222,3 +222,8 @@ Cek: $0,267 + 0,133 + 0,333 + 0 + 0,200 + 0,067 = 1,000$ ✓
 **Langkah 4 — Hitung TLX Tertimbang:**
 
 $$\text{TLX}_w = \sum
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+$

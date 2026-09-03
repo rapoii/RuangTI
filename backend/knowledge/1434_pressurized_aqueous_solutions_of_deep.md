@@ -103,3 +103,7 @@ $$V_{\text{solvent}} = Q \times t = 5{,}3\,\text{mL/min} \times 12\,\text{min} =
 **Langkah 2: Komposisi pelarut DES-air**
 
 $$V_{\text{DES}} = 0{,}47 \times 3{,}180\,\text{L} = 1.494{,}6\,\text{L},\quad V_{\
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

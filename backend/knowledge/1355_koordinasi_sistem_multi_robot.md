@@ -82,3 +82,6 @@ Koordinasi sistem multi-robot tidak hanya relevan dalam sektor manufaktur, tetap
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas algoritma yang dapat mempengaruhi waktu komputasi dan kebutuhan akan infrastruktur yang memadai untuk mendukung sistem visi 3D. Ke depan, penelitian dapat difokuskan pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi teknologi baru seperti kecerdasan buatan dan pembelajaran mesin untuk meningkatkan kemampuan koordinasi robot.
 
 Dalam rangka memenuhi standar industri dan regulasi yang berlaku, penting untuk melakukan evaluasi berkala dan penyesuaian sistem agar tetap relevan dan efektif dalam menghadapi tantangan yang terus berkembang di dunia industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

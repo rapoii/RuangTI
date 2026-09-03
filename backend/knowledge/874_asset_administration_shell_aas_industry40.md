@@ -107,3 +107,6 @@ Dalam konteks K3 dan ESG, penerapan AAS dapat membantu perusahaan dalam memantau
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang implementasi AAS dalam konteks pabrik cerdas, dengan penekanan pada pentingnya interoperabilitas dan penggunaan standar yang tepat. Melalui pendekatan sistematis dan berbasis data, perusahaan dapat memanfaatkan AAS untuk meningkatkan kinerja operasional dan daya saing mereka di pasar global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

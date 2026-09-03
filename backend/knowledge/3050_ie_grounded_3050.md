@@ -142,4 +142,7 @@ Sesuai protokol CFD untuk *supercritical extraction* (Obchoei & Limtrakarn, 2024
 ### 3.3 Standar Operasi dan Kepatuhan
 
 - **Tekanan kerja**: dijaga dalam ±2 bar dari setpoint (sensor PT 0,1% akurasi FS).
-- **Debit CO₂**: kontroler
+- **Debit CO₂**: kontroler.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

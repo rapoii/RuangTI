@@ -92,3 +92,6 @@ Keamanan siber dalam ICS tidak hanya berdampak pada sektor industri, tetapi juga
 Selain itu, dengan meningkatnya perhatian terhadap keberlanjutan dan tanggung jawab sosial perusahaan (K3/ESG), penting bagi organisasi untuk mempertimbangkan aspek keamanan siber dalam strategi keberlanjutan mereka. Hal ini mencakup pengembangan teknologi baru dan praktik terbaik yang dapat membantu mengurangi risiko dan meningkatkan ketahanan sistem.
 
 Arah riset masa depan dalam keamanan siber ICS harus fokus pada pengembangan teknologi baru, seperti kecerdasan buatan dan analitik data, untuk meningkatkan kemampuan deteksi dan respons terhadap ancaman. Selain itu, kolaborasi antara sektor publik dan swasta akan menjadi kunci dalam menciptakan kerangka kerja yang lebih kuat untuk melindungi infrastruktur kritis dari ancaman siber yang terus berkembang.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

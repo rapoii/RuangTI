@@ -69,4 +69,9 @@ Implementasi AMR berbasis RL di lingkungan industri mengikuti **SOP 7-tahap** ya
 
 **Tahap 3 — Inisialisasi Sensor & Estimasi Keadaan (per Borah, 2024).** Modul *Extended Kalman Filter* dipasang untuk mengestimasi pose $(\hat{x}, \hat{y}, \hat{\theta})$ dari data *LiDAR* + *wheel odometry*. Covariance threshold $\text{tr}(P_k) > \sigma_{\text{thresh}}$ memicu flag degradasi sensor.
 
-**Tahap 4 — Inisialisasi Q-table atau Jaringan Neural.** Untuk $|S| \leq 10.000$, gunakan tabel $
+**Tahap 4 — Inisialisasi Q-table atau Jaringan Neural.** Untuk $|S| \leq 10.000$, gunakan tabel $$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
+
+$$

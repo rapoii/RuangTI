@@ -107,3 +107,6 @@ Implementasi AI dalam perawatan prediktif tidak hanya terbatas pada industri pen
 Namun, terdapat batasan dalam metodologi ini, termasuk ketergantungan pada kualitas data dan kompleksitas algoritma yang digunakan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih robust dan mampu menangani data besar dengan lebih efisien.
 
 Dengan demikian, perawatan prediktif berbasis AI memiliki potensi besar untuk merevolusi industri MRO aerospace dan sektor lainnya, memberikan manfaat signifikan dalam hal efisiensi dan pengurangan biaya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

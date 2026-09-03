@@ -473,4 +473,4 @@ Pada bulan ke-31 hingga 36, pesawat tipe lawas mulai difasekan keluar (*phasing-
 4. **Teunter, R. H., Syntetos, A. A., & Babai, M. Z. (2011).** "Intermittent demand: Linking forecasting to inventory obsolescence." *European Journal of Operational Research*, 214(3), pp. 606–615. DOI: `10.1016/j.ejor.2011.05.018`.
 5. **Willemain, T. R., Smart, C. N., & Schwarz, H. F. (2004).** "A new approach to forecasting intermittent demand for service parts inventories." *International Journal of Forecasting*, 20(3), pp. 375–387. DOI: `10.1016/S0169-2070(03)00013-X`.
 6. **Babai, M. Z., Syntetos, A. A., & Teunter, R. H. (2019).** "A new method to forecast intermittent demand in the presence of obsolescence." *International Journal of Production Economics*, 209, pp. 30–41. DOI: `10.1016/j.ijpe.2018.01.025`.
-7. **Silver, E. A., Pyke, D. F., & Thomas, D. J. (2016).** *Inventory and Production Management in Supply Chains* (4th ed.). CRC Press / Taylor & Francis Group. ISBN: `978-1466558618`.
+7. **Silver, E. A., Pyke, D. F., & Thomas, D. J. (2016).** *Inventory and Production Management in Supply Chains* (4th ed.). CRC Press / Taylor & Francis Group. ISBN: `978-1466558618`.$.

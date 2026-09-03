@@ -9,4 +9,7 @@
 
 ## 1. Pendahuluan dan Konteks Industri
 
-Transisi global menuju elektrifikasi armada kendaraan listrik (EV) dan sistem energi terbarukan telah menempatkan nikel (Ni) dan kobalt (Co) sebagai logam kritis yang tak tergantikan dalam teknologi baterai lithium-ion modern, khususnya untuk katoda NMC (Ni-Mn-Co) dan NCA (Ni-Co-Al). Msumange, Jampaiah, dan Tardio (2026) dalam *Journal of Sustainable Metallurgy* dengan DOI [10.1007/s40831-026-01439-6](https://doi.org/10.1007/s40831-026-01439-6) menyoroti bahwa permintaan Ni dan Co melonjak tajam akibat
+Transisi global menuju elektrifikasi armada kendaraan listrik (EV) dan sistem energi terbarukan telah menempatkan nikel (Ni) dan kobalt (Co) sebagai logam kritis yang tak tergantikan dalam teknologi baterai lithium-ion modern, khususnya untuk katoda NMC (Ni-Mn-Co) dan NCA (Ni-Co-Al). Msumange, Jampaiah, dan Tardio (2026) dalam *Journal of Sustainable Metallurgy* dengan DOI [10.1007/s40831-026-01439-6](https://doi.org/10.1007/s40831-026-01439-6) menyoroti bahwa permintaan Ni dan Co melonjak tajam akibat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

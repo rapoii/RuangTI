@@ -122,3 +122,6 @@ Dalam hal otomasi, penerapan teknologi seperti sistem navigasi cerdas dan pengel
 Namun, metodologi ini juga memiliki batasan, seperti tingginya biaya awal dan kebutuhan untuk kolaborasi antara berbagai pemangku kepentingan. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan teknologi yang lebih terjangkau, serta kebijakan yang mendukung transisi menuju koridor hijau maritim.
 
 Dengan demikian, pengembangan koridor hijau maritim adalah langkah penting menuju keberlanjutan dalam transportasi perdagangan internasional, yang memerlukan pendekatan multidisiplin dan kolaboratif untuk mencapai tujuan pengurangan emisi karbon secara efektif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

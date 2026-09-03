@@ -116,3 +116,6 @@ Model matematis untuk penentuan jarak aman tidak hanya relevan dalam industri pe
 Batasan dari metodologi ini termasuk ketidakpastian dalam parameter yang digunakan, serta variabilitas lingkungan yang sulit diprediksi. Penelitian masa depan dapat berfokus pada pengembangan model yang lebih adaptif dan responsif terhadap kondisi dinamis, serta integrasi teknologi baru seperti kecerdasan buatan untuk meningkatkan akurasi prediksi.
 
 Dengan demikian, penerapan model matematis dalam penentuan jarak aman antara pesawat berdasarkan vortex wake tidak hanya meningkatkan keselamatan, tetapi juga membuka peluang untuk inovasi dalam manajemen lalu lintas udara yang lebih efisien dan efektif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

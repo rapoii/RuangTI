@@ -142,4 +142,7 @@ Data historis disimpan di *time-series database* (InfluxDB atau OSIsoft PI), den
 | Tekanan uap es di $T_b = -30°C$ | $P_{ice}$ | 38.0 | Pa |
 | Tekanan chamber | $P_c$ | 10.0 | Pa |
 | Resistansi transfer massa awal | $R_{p,0}$ | 0.5 | m²·Pa·s/kg |
-| Luas sublimasi internal vial | $A_v$ | $8.5 \times 10
+| Luas sublimasi internal vial | $A_v$ | $8.5 \times 10$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

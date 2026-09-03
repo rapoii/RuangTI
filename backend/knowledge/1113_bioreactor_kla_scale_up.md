@@ -96,3 +96,6 @@ Pemodelan multiskala dalam skala-up kLa memiliki aplikasi luas di berbagai sekto
 Namun, terdapat batasan dalam metodologi ini, seperti kompleksitas model dan kebutuhan akan data yang akurat. Penelitian di masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan penggunaan kecerdasan buatan untuk meningkatkan akurasi prediksi kLa.
 
 Dengan demikian, pemodelan multiskala tidak hanya meningkatkan pemahaman kita tentang proses bioreaktor, tetapi juga membuka jalan bagi inovasi dalam desain dan operasi sistem bioproduksi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

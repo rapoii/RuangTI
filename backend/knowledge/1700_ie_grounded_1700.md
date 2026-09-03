@@ -120,3 +120,7 @@ di mana $d(s_t, g_{\text{target}})$ adalah jarak Euclidean ke goal, dan $\lambda
 Iterasi 1: AGV di state $s_0=(0,0)$, pilih $a_0 = \text{kanan}$. Transisi ke $s_1=(1,0)$, $r_1=-1$ (bukan goal, bukan collision). Update Q:
 
 $$Q(s_0, a_0
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

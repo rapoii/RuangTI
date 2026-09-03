@@ -103,3 +103,6 @@ Generasi data pelatihan sintetik dan teknik randomisasi domain memiliki aplikasi
 Namun, ada batasan dalam metodologi ini, seperti ketergantungan pada kualitas data asli dan kemampuan model untuk generalisasi. Penelitian masa depan harus fokus pada pengembangan algoritma yang lebih robust dan metrik transferabilitas yang lebih akurat untuk memastikan bahwa model dapat berfungsi dengan baik dalam berbagai kondisi nyata.
 
 Dengan demikian, generasi data pelatihan sintetik dan randomisasi domain 3D merupakan langkah penting dalam meningkatkan deteksi cacat industri langka, yang pada gilirannya dapat meningkatkan efisiensi dan profitabilitas dalam industri manufaktur.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

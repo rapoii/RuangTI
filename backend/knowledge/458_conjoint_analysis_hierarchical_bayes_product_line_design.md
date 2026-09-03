@@ -443,4 +443,4 @@ Penerapan optimasi portofolio multi-atribut membuktikan bahwa menawarkan 3 varia
 4. Sawtooth Software. (2021). *The CBC System for Choice-Based Conjoint Analysis Technical Paper Series*. Sawtooth Software Inc., Provo, UT.
 5. Michalek, J. J., Feinberg, F. M., & Papalambros, P. Y. (2005). "Linking Marketing and Engineering Product Design Decisions via Analytical Target Cascading". *Journal of Mechanical Design*, 127(5), pp. 866-874. DOI: 10.1115/1.1993666.
 6. Ulrich, K. T., & Eppinger, S. D. (2020). *Product Design and Development* (7th Edition). McGraw-Hill Education, New York.
-7. Montgomery, D. C. (2017). *Design and Analysis of Experiments* (9th Edition). John Wiley & Sons, Hoboken, NJ.
+7. Montgomery, D. C. (2017). *Design and Analysis of Experiments* (9th Edition). John Wiley & Sons, Hoboken, NJ.$.

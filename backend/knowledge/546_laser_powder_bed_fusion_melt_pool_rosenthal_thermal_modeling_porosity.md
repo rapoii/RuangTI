@@ -428,4 +428,4 @@ Dengan menerapkan modul analisis termal Rosenthal:
 3. **King, W. E., Barth, H. D., Castillo, V. M., Gallegos, G. F., Gibbs, J. W., Hahn, D. E., Kamath, C., & Rubenchik, A. M.** (2014). *Observation of Keyhole-Mode Laser Melting in Laser Powder-Bed Fusion Additive Manufacturing via In Situ X-ray Imaging*. Journal of Materials Processing Technology, 214(12), 2915-2925. [DOI: 10.1016/j.jmatprotec.2014.06.005]
 4. **Groover, M. P.** (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th Edition). John Wiley & Sons, New York.
 5. **ASTM F2924-14(2021)**. *Standard Specification for Additive Manufacturing Titanium-6 Aluminum-4 Vanadium with Powder Bed Fusion*. ASTM International, West Conshohocken, PA.
-6. **ISO/ASTM 52900:2021**. *Additive Manufacturing — General Principles — Fundamentals and Vocabulary*. International Organization for Standardization, Geneva.
+6. **ISO/ASTM 52900:2021**. *Additive Manufacturing — General Principles — Fundamentals and Vocabulary*. International Organization for Standardization, Geneva.$.

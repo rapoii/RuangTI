@@ -87,3 +87,6 @@ Dengan demikian, pengembangan kontainer pintar untuk transportasi vaksin dalam r
 --- 
 
 Dokumen ini memberikan gambaran menyeluruh tentang pengembangan kontainer pintar untuk transportasi vaksin dalam rantai dingin, dengan penekanan pada aspek teknis dan metodologis yang diperlukan untuk implementasi yang sukses.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

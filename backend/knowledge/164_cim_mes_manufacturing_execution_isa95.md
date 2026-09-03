@@ -50,3 +50,6 @@ Di mana MES secara real-time memastikan bahwa nilai $\text{WIP}$ fisik di lantai
 
 ## 4. Evolusi Menuju Smart MES & Digital Twin (Industry 4.0 / RAMI 4.0)
 Dalam era manufaktur modern (Cheng et al., 2024; Vogel-Heuser et al., 2023), MES bertransformasi menjadi *Cloud/Edge Hybrid MES* yang terintegrasi dengan arsitektur RAMI 4.0 (Reference Architectural Model Industrie 4.0) melalui protokol komunikasi **OPC UA (Open Platform Communications Unified Architecture)** dan **MQTT**. Data telemetri dari MES menjadi sumber utama untuk memperbarui model *Digital Twin* fisik secara sinkron dengan *latency* $< 100\text{ ms}$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

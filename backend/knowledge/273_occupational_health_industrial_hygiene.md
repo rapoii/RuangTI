@@ -117,3 +117,6 @@ Blood lead levels (BLL) action level = 5 μg/dL (CDC 2023 reference value). Urin
 6. ISO. (2023). *ISO 5349-1: Mechanical vibration — Measurement and evaluation of human exposure to hand-transmitted vibration*. International Organization for Standardization.
 
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

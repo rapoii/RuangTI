@@ -111,4 +111,7 @@ Implementasi motion planning berbasis RL di lantai pabrik mengikuti SOP 7-fase y
 3. *Fault detection module* (FDIR) memantau anomaly pada sensor/aktuator; jika terdeteksi, agen tetangga melakukan re-planning melalui komunikasi peer-to-peer.
 
 ### Fase 7 — Monitoring & Continuous Improvement
-1. Logging *t
+1. Logging *t.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -149,4 +149,7 @@ $$
 
 ### 4.4 Evaluasi Out-of-Sample pada 1000 Skenario Monte Carlo
 
-Saat dijalankan pada simulasi 1.000 skenario permintaan aktual yang independen terhadap skenario perancangan, biaya rata
+Saat dijalankan pada simulasi 1.000 skenario permintaan aktual yang independen terhadap skenario perancangan, biaya rata.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

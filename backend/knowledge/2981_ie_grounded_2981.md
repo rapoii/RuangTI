@@ -160,4 +160,7 @@ $$w^* = 4.500 + \frac{80.000}{2 \times 1{,}2 \times 0{,}55 \times 0{,}70} = 4.50
 
 Catatan: Nilai ini terlalu tinggi, menunjukkan perlunya re-kalibrasi parameter; dalam implementasi riil JIANG & TANG (2025) harga transfer berada di kisaran $w^* = 5.500 - 6.200$ USD. Hal ini mengilustrasikan **sensitivitas ekstrem** model terhadap parameter $a_r$ — sehingga asumsi permintaan menjadi krusial.
 
-**Langkah 2: Harga
+**Langkah 2: Harga.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

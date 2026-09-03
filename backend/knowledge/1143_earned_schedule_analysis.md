@@ -109,4 +109,7 @@ Teknik analisis Earned Schedule tidak hanya relevan dalam konteks konstruksi mod
 
 Namun, terdapat batasan dalam metodologi ini, termasuk ketergantungan pada data yang akurat dan tepat waktu. Untuk itu, penelitian masa depan harus fokus pada pengembangan alat dan teknik yang lebih canggih untuk pengumpulan data otomatis dan analisis real-time, serta integrasi dengan teknologi seperti Internet of Things (IoT) dan Big Data.
 
-Dengan demikian, pemahaman dan penerapan teknik analisis Earned Schedule lanjutan akan terus menjadi bagian penting dari praktik terbaik dalam manajemen proyek, terutama dalam konteks industri yang terus berkembang dan berubah.
+Dengan demikian, pemahaman dan penerapan teknik analisis Earned Schedule lanjutan akan terus menjadi bagian penting dari praktik terbaik dalam manajemen proyek, terutama dalam konteks industri yang terus berkembang dan berubah.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

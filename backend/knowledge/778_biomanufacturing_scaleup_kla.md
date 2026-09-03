@@ -129,3 +129,6 @@ CO_2 = kLa \times (C^* - C_L) \times M_{CO_2} \times t
 $$
 
 dengan \(M_{CO_2}\) sebagai bobot molekul CO₂. Tantangan adopsi meliputi kurangnya tenaga ahli rekayasa biologi di banyak perusahaan, biaya awal CFD modeling yang tinggi (sekitar $500.000), serta regulasi yang berbeda antar negara. Evaluasi manajerial menunjukkan bahwa perusahaan yang menerapkan ASTM E2500 dan ISPE Baseline Guide mengalami peningkatan produktivitas 30% dan pengurangan risiko kepatuhan hingga 40%. Rekomendasi strategis mencakup pelatihan karyawan dan investasi digital twin untuk simulasi skala-up sebelum implementasi fisik. Secara keseluruhan, modul ini memberikan kerangka operasional yang praktis bagi spesialis teknik industri dalam mengelola skala-up biomanufaktur sintetis biologi secara berkelanjutan dan berdaya saing global.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

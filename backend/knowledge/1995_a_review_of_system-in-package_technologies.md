@@ -149,3 +149,7 @@ $$T_j = 35 + 0.44 \times 22.97 = 35 + 10.11 = 45.11 \text{ °C}$$
 $$R_{th,TIM1,new} = \frac{5.0\times 10^{-5}}{12 \times 2.5\times 10^{-5}} = \frac{5.0\times 10^{-5}}{3.0\times 10^{-4}} = 0.167 \text{ K/W}$$
 
 $$R
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

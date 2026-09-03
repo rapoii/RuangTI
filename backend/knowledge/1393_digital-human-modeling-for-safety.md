@@ -107,3 +107,6 @@ Dalam manajemen biaya dan teknik, DHM dapat digunakan untuk mengevaluasi dampak 
 Namun, terdapat beberapa batasan dalam metodologi ini, termasuk kebutuhan akan data yang akurat dan representatif, serta kompleksitas dalam pemodelan perilaku manusia. Oleh karena itu, arah riset masa depan harus fokus pada pengembangan algoritma yang lebih canggih untuk pemodelan perilaku manusia dan integrasi data real-time untuk analisis risiko yang lebih akurat.
 
 Dengan demikian, DHM menawarkan potensi besar untuk meningkatkan keamanan operasional dan efisiensi proses di berbagai sektor industri. Implementasi yang tepat dari metodologi ini dapat membantu organisasi untuk mencapai tujuan keberlanjutan dan keselamatan kerja yang lebih baik.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

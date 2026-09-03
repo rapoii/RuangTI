@@ -186,3 +186,6 @@ Lakukan uji konformitas terhadap:
 Aktifkan *change management* untuk *lifecycle* aset: setiap kali *firmware* gNodeB di-*upgrade*, *Submodel* AAS diperbarui secara otomatis melalui *event-driven synchronization*.
 
 > **Catatan SOP Lintas-Sektor:** Peters (2025) mengimplementasikan langkah 01–07 pada lini *punch-bending* di industri *cold forming*, dengan penyesuaian: *Submodel* yang digunakan adalah **ProcessData**, **QualityPrediction**, dan **
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

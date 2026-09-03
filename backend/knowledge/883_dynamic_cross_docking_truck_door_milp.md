@@ -141,3 +141,6 @@ Meskipun model MILP menawarkan solusi yang kuat, terdapat beberapa batasan, sepe
 Penelitian di masa depan dapat berfokus pada pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi operasional, serta integrasi teknologi baru seperti Internet of Things (IoT) untuk pemantauan real-time dan pengambilan keputusan yang lebih baik.
 
 Dengan pendekatan yang tepat, operasi terminal cross-docking dapat dioptimalkan untuk memenuhi tuntutan industri yang terus berkembang, meningkatkan efisiensi dan kepuasan pelanggan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

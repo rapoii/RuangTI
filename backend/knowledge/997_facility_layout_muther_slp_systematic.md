@@ -122,3 +122,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini. Misalnya, REL-Chart mungk
 Ke depan, arah riset dapat difokuskan pada pengembangan algoritma optimasi berbasis kecerdasan buatan yang dapat mengadaptasi tata letak secara real-time sesuai dengan perubahan permintaan dan kondisi operasional. Ini akan memungkinkan perusahaan untuk tetap kompetitif dalam lingkungan bisnis yang terus berubah.
 
 Dengan demikian, pemahaman yang mendalam tentang SLP dan SHA, serta penerapan metodologi yang tepat, akan menjadi kunci keberhasilan dalam perencanaan tata letak fasilitas di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

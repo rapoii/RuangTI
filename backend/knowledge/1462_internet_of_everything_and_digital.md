@@ -87,4 +87,7 @@ Implementasi platform IoE-DT mengikuti *engineering pipeline* 7-fase yang diadap
 
 **Fase 4 — *Digital Twin Modeling*.** Pembangunan model termal-mekanik-elektrik di platform Siemens MindSphere, Azure Digital Twins, atau ANSYS Twin Builder. *Model parameter identification* dilakukan via *grey-box identification* dari data historis; validasi mengikuti protokol *ASME V&V 40-2018* dengan *benchmark* pada *Root Mean Square Error* (RMSE) <0,3 °C untuk prediksi suhu 30 menit ke depan.
 
-**Fase 5 — *Analytics & AI Layer*.** Pipeline analitik: *streaming analytics* (Apache Flink/Kafka) → *feature store* → *anomaly detection* (autoencoder LSTM) → *remaining useful life* (RUL) prediction untuk
+**Fase 5 — *Analytics & AI Layer*.** Pipeline analitik: *streaming analytics* (Apache Flink/Kafka) → *feature store* → *anomaly detection* (autoencoder LSTM) → *remaining useful life* (RUL) prediction untuk.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

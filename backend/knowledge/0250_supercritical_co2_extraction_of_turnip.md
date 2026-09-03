@@ -81,4 +81,7 @@ $$Y_{eq} = \frac{q_0 \cdot m_{feed,\,db}\left(1-e^{-k_s a_s t}\right)}{m_{feed,\
 
 $$\hat{Y}=32{,}1+2{,}4X_1-1{,}1X_2+1{,}8X_3-1{,}6X_1^2-2{,}3X_2^2-1{,}9X_3^2+1{,}3X_1X_2$$
 
-dengan $X_1$, $X_2$, $X_3$ berturut
+dengan $X_1$, $X_2$, $X_3$ berturut.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

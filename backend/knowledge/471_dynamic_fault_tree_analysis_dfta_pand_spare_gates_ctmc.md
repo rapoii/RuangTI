@@ -399,3 +399,6 @@ Jika $C$ mengalami kerusakan (*fail closed*) sebelum $P$ trip (urutan $C \to P$)
 3. **Kabir, S.** (2023). *An overview of dynamic fault tree analysis methodologies for system safety and reliability assessment*. Journal of King Saud University - Computer and Information Sciences, 35(1), 1-19. https://doi.org/10.1016/j.jksuci.2022.08.012
 4. **IEC 61025:2006 / IEC 62740:2015.** *Fault Tree Analysis (FTA) and Root Cause Analysis (RCA) in Dependability and Industrial Risk Management*. International Electrotechnical Commission.
 5. **Rausand, M., Barros, A., & Hoyland, A.** (2021). *System Reliability Theory: Models, Statistical Methods, and Applications* (3rd Edition). John Wiley & Sons, Hoboken, NJ.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

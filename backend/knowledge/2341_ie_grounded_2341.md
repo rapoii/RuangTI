@@ -162,4 +162,7 @@ Robust premium = $\Delta p_e = 62,50$ CNY/unit atau **6,0%** di atas harga deter
 **Interpretasi Manajerial:**
 1. Operator echelon bersedia membayar premium回收 hingga 1.042 CNY/unit karena margin kontribusi per unit ($612$ CNY) masih positif dan volume回收 73.450 unit menjamin skala ekonomis.
 2. Subsidi pemerintah $s = 150$ CNY/unit meningkatkan total kesejahteraan (*social welfare*) sebesar 16,88 juta CNY/tahun.
-3. Robust premium 6% adalah *h
+3. Robust premium 6% adalah *h.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

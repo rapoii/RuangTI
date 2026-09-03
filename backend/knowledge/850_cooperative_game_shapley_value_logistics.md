@@ -120,3 +120,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, termasuk asumsi bahwa sem
 Arah riset masa depan dapat mencakup pengembangan model yang lebih adaptif dan responsif terhadap perubahan kondisi pasar, serta integrasi teknologi baru seperti kecerdasan buatan dan analitik data besar untuk meningkatkan pengambilan keputusan dalam kolaborasi logistik.
 
 Dengan demikian, pemahaman yang mendalam tentang teori permainan kooperatif dan aplikasinya dalam kolaborasi logistik horizontal sangat penting untuk mencapai efisiensi dan keberlanjutan dalam industri logistik modern.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

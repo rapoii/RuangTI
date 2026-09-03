@@ -73,3 +73,6 @@ Digital twin integration enables predictive intervention before quality loss occ
 - Design IoT monitoring architectures with anomaly detection.
 - Evaluate sustainability trade-offs in refrigeration technology selection.
 </content>
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

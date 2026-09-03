@@ -33,4 +33,7 @@ Model simulasi tidak dapat digunakan untuk pengambilan keputusan manajerial sebe
 2. **Warm-Up Period & Replikasi Independen:**
    - **Warm-Up Period:** Membuang data simulasi fase awal (*transient state*) agar statistik hanya mencatat kondisi stabil (*steady-state*).
    - **Number of Replications ($N$):** Penentuan jumlah putaran simulasi untuk mencapai margin error ($\epsilon$) dan tingkat kepercayaan ($1-\alpha$):
-     $$N \ge \left( \frac{z_{\alpha/2} \times S}{\epsilon} \right)^2$$
+     $$N \ge \left( \frac{z_{\alpha/2} \times S}{\epsilon} \right)^2$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

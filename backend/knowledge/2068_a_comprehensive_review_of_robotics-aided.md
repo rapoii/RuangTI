@@ -105,4 +105,7 @@ di mana $\mathcal{S}$ permukaan fuselage target, $\epsilon$ toleransi jarak prob
 
 ### 4.1 Spesifikasi Kasus
 
-Ambil kasus inspeksi **fuselage
+Ambil kasus inspeksi **fuselage.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

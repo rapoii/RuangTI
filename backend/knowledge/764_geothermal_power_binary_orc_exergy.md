@@ -134,3 +134,6 @@ Analisis eksrgi dalam sistem ORC tidak hanya relevan untuk pembangkit listrik ge
 Batasan metodologi ini terletak pada asumsi ideal yang digunakan dalam perhitungan, yang mungkin tidak sepenuhnya mencerminkan kondisi nyata. Oleh karena itu, riset masa depan harus berfokus pada pengembangan model yang lebih akurat dan penerapan teknologi baru untuk mitigasi skala silika dan pengelolaan NCG.
 
 Dengan demikian, pemahaman yang mendalam tentang analisis eksrgi dalam konteks pembangkit listrik geothermal ORC akan membuka peluang untuk inovasi dan efisiensi yang lebih besar dalam industri energi terbarukan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -182,4 +182,7 @@ Hasil menunjukkan bahwa membuka keempat collection center adalah sub-optimal. Fi
 
 Lead Researchers (2023) secara eksplisit mengakui beberapa limitasi: (a) **deterministic assumption** untuk parameter demand dan biaya, padahal pada kenyataannya stokastik; (b) **single-period planning horizon**, belum menangkap efek musiman (*seasonality*) produksi susu yang mencapai puncaknya di musim hujan; (c) asumsi **single product type**, padahal portofolio produk susu (UHT, pasteurized, yogurt, keju) memerlukan multi-product formulations. Zhang, Li, & Ren (2024) mengatasi sebagian limitasi ini melalui *quality-aware stochastic* subproblem, namun computational burden meningkat ~3.5x.
 
-### 5.2
+### 5.2.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

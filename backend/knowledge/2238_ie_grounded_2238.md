@@ -131,3 +131,7 @@ $$f_D = \frac{3.200}{30.000} = 0{,}107 \text{ check/tahun}$$
 **Langkah 2: Perhitungan Downtime Total Tahunan per Pesawat**
 
 $$T_{\text{down,total}}
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

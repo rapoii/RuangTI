@@ -138,3 +138,7 @@ Pertimbangkan jaringan distribusi sebuah perusahaan FMCG di Pulau Jawa dengan ti
 
 $$
 F_{AB} = 180 + 210 = 390, \quad F_{AC} = 180 + 150 = 330
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

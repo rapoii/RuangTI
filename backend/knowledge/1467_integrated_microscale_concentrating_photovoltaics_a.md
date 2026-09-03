@@ -115,4 +115,7 @@ Fraksi rugi terhadap output: $2{,}12/400 = 0{,}53\%$ — sangat rendah dan dapat
 
 Sebagai perbandingan, modul silicon PERC 400 W komersial berada di kisaran \$0,25–\$0,35/W pada 2023. Micro-CPV belum kompetitif pada *modul level alone*, tetapi dengan mengintegrasikan arsitektur tandem (Jost et al., 2023) yang menambahkan layer perovskite atau Si di atas micro-CPV, biaya per watt sistem dapat turun menjadi \$0,40–\$0,55/W dengan efisiensi sistem 30–35% — menjadikan micro-CPV sangat kompetitif pada level *system LCOE* di pasar utility-scale.
 
-**Langkah 5 — Interpretasi manajerial.** Hasil kuantitatif menunjukkan bahwa *sweet spot* micro-CPV adalah aplikasi di mana densitas daya per luas menjadi pemb
+**Langkah 5 — Interpretasi manajerial.** Hasil kuantitatif menunjukkan bahwa *sweet spot* micro-CPV adalah aplikasi di mana densitas daya per luas menjadi pemb$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

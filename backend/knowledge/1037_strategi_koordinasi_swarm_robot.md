@@ -111,3 +111,6 @@ Strategi koordinasi swarm robot yang menggunakan metode game theory dapat ditera
 Namun, terdapat beberapa batasan dalam metodologi ini, seperti kompleksitas perhitungan dan kebutuhan untuk data yang akurat mengenai biaya dan waktu. Arah riset masa depan dapat berfokus pada pengembangan algoritma yang lebih efisien dan adaptif, serta integrasi dengan teknologi kecerdasan buatan untuk meningkatkan kemampuan pengambilan keputusan robot.
 
 Dengan demikian, penerapan strategi koordinasi swarm robot yang efektif tidak hanya dapat meningkatkan efisiensi operasional dalam industri, tetapi juga memberikan kontribusi signifikan terhadap inovasi dalam teknologi robotik dan otomatisasi.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -111,3 +111,6 @@ Namun, terdapat beberapa batasan dalam metodologi yang perlu diperhatikan, seper
 Ke depan, arah riset dapat difokuskan pada integrasi teknologi pembelajaran mendalam (deep learning) untuk meningkatkan akurasi pengenalan objek dan pengembangan sistem yang lebih adaptif terhadap variasi lingkungan kerja. Selain itu, penerapan standar internasional dalam pengembangan sistem bin-picking otonom juga akan menjadi penting untuk memastikan keamanan dan efisiensi operasional. 
 
 Dengan demikian, analisis data 3D untuk bin-picking otonom menjadi sangat penting dalam mendukung transformasi digital di industri, dan penelitian berkelanjutan dalam bidang ini akan membuka peluang baru untuk inovasi dan efisiensi di masa depan.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

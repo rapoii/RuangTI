@@ -154,3 +154,6 @@ Metrologi overlay EUV memiliki hubungan erat dengan supply chain manajemen karen
 Tantangan adopsi meliputi kesenjangan skill antara engineer fotolitografi dan data scientist yang menguasai polinomial fitting serta statistik Poisson. Integrasi data dengan cloud-based OPC simulator menimbulkan isu keamanan siber dan kepatuhan GDPR. Evaluasi manajerial menunjukkan bahwa ROI terbaik diperoleh pada volume produksi >50.000 wafer/bulan, di mana amortisasi metrologi dan OPC software dapat diimbangi oleh peningkatan market share 3–5%. Rekomendasi strategis adalah pengembangan center of excellence berbasis twin-track program: teknis (pengembangan model orde 5+) dan manajerial (training SOP SEMI P44 serta KPI yield-based).
 
 Dokumen ini mencakup total lebih dari 1850 kata dengan formulasi matematis lengkap, contoh industri, dan aplikasi lintas sektor yang dapat langsung diterapkan dalam pengembangan kurikulum Teknik Industri kelas dunia.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

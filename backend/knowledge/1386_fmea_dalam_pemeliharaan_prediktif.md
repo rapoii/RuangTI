@@ -105,3 +105,6 @@ Namun, terdapat batasan dalam metodologi FMEA, seperti subjektivitas dalam penil
 Ke depan, integrasi teknologi seperti Internet of Things (IoT) dan analitik data besar dapat memperkuat penerapan FMEA dalam pemeliharaan prediktif, memungkinkan perusahaan untuk beradaptasi dengan cepat terhadap perubahan kondisi operasional dan meminimalkan risiko kegagalan.
 
 Dengan demikian, penerapan FMEA dalam strategi pemeliharaan prediktif merupakan langkah penting untuk meningkatkan keandalan sistem manufaktur dan mendukung keberlanjutan operasional di era industri yang semakin kompleks.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

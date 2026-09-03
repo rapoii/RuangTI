@@ -102,3 +102,6 @@ Kerangka manajemen risiko yang dikembangkan untuk 4D BIM dalam konstruksi modula
 Selain itu, dengan meningkatnya perhatian terhadap keberlanjutan dan tanggung jawab sosial perusahaan (K3/ESG), penting untuk mempertimbangkan risiko lingkungan dan sosial dalam kerangka manajemen risiko. Penelitian masa depan dapat berfokus pada pengembangan model yang lebih kompleks yang mengintegrasikan faktor-faktor ini ke dalam analisis risiko.
 
 Dengan demikian, kerangka manajemen risiko yang komprehensif dan adaptif akan menjadi kunci untuk menghadapi tantangan yang terus berkembang di industri konstruksi dan sektor terkait lainnya.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

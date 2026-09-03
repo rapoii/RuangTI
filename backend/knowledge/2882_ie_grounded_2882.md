@@ -111,4 +111,7 @@ Sebuah lini perakitan *cyber-physical transfer system* ala De Marchi dkk. (2022)
 | Rata-rata RSRP | $\overline{\text{RSRP}}$ | $-92$ | dBm |
 | Rata-rata SINR | $\overline{\text{SINR}}$ | $12$ | dB |
 | Bandwidth total sel | $B$ | $100$ | MHz |
-| Throughput downlink agregat
+| Throughput downlink agregat.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

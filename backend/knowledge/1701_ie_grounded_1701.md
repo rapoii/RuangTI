@@ -70,3 +70,7 @@ $$\sum_{b \in B} z_{jlb} \leq u_l, \quad \forall l \in L \quad \text{(kapasitas 
 Mengikuti kerangka Soyster (1973) dan Bertsimas–Sim (2004) yang juga diadopsi oleh Shin et al. (2024, DOI: 10.2139/ssrn.4934197), parameter SOH tidak diobservasi secara deterministik melainkan sebagai variabel acak dalam *uncertainty set* $U$:
 
 $$U = \left\{ \tilde{s}_b : \tilde{s}_b = s_b + \Delta s_b \cdot \xi_b, \; \sum_{b \in B} |\xi_b| \leq \Gamma, \; |\xi_b| \leq
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

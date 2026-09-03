@@ -500,4 +500,4 @@ Untuk memaksimalkan formabilitas tanpa merusak integritas permukaan lembaran pel
 5. **ISO 12004-2:2021**. *Metallic materials — Sheet and strip — Determination of forming-limit curves — Part 2: Determination of forming-limit curves in the laboratory*. International Organization for Standardization, Geneva.
 6. **ASTM E2218-15(2021)**. *Standard Test Method for Determining Forming Limit Curves*. ASTM International, West Conshohocken, PA.
 7. **ASTM E8 / E8M-22**. *Standard Test Methods for Tension Testing of Metallic Materials*. ASTM International, West Conshohocken, PA.
-8. **DIN 8584-1:2003**. *Manufacturing processes forming under combinations of tensile and compressive conditions - Part 1: General; Classification, sub-division, terms and definitions*. Deutsches Institut für Normung, Berlin.
+8. **DIN 8584-1:2003**. *Manufacturing processes forming under combinations of tensile and compressive conditions - Part 1: General; Classification, sub-division, terms and definitions*. Deutsches Institut für Normung, Berlin.$.

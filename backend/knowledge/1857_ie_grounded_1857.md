@@ -169,3 +169,7 @@ Prakira awal dan standar deviasi mengikuti MMFE:
 Sebagai pembanding, EOQ deterministik untuk permintaan total $D = \sum \mu_t = 25.300$ unit menghasilkan:
 
 $$EOQ = \sqrt{\frac{2 \cdot D \cdot s}{h}} = \sqrt{\frac{2 \times
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -92,3 +92,6 @@ Beban kerja yang tinggi dapat menyebabkan kelelahan pada pekerja. Dengan menerap
 Integrasi AI dalam desain ergonomi kognitif tidak hanya relevan untuk sektor manufaktur, tetapi juga dapat diterapkan dalam berbagai disiplin lain seperti manajemen rantai pasok, otomasi, dan keselamatan kerja. Dalam konteks ini, penting untuk mempertimbangkan batasan metodologi yang ada, seperti kebutuhan untuk data yang akurat dan pelatihan yang memadai bagi pekerja.
 
 Arah riset masa depan harus fokus pada pengembangan algoritma AI yang lebih canggih dan teknik analisis data yang dapat membantu dalam menciptakan sistem yang lebih adaptif dan responsif. Dengan demikian, integrasi AI dalam desain ergonomi kognitif dapat menjadi kunci untuk mencapai efisiensi dan efektivitas yang lebih tinggi dalam sistem manufaktur adaptif.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -115,3 +115,6 @@ Teknik sinkronisasi dalam 4D BIM tidak hanya relevan untuk industri konstruksi, 
 Namun, terdapat batasan dalam metodologi yang perlu diperhatikan, seperti ketergantungan pada data yang akurat dan real-time. Penelitian masa depan dapat difokuskan pada pengembangan algoritma yang lebih canggih untuk meningkatkan akurasi prediksi dan sinkronisasi dalam proyek yang lebih kompleks.
 
 Dengan demikian, penerapan teknik sinkronisasi inovatif dalam 4D BIM diharapkan dapat menjadi standar masa depan dalam industri konstruksi dan sektor terkait lainnya, mendukung efisiensi dan keberlanjutan dalam operasional.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

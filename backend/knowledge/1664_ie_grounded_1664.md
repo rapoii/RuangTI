@@ -114,4 +114,7 @@ Implementasi kerangka Benders Multi-Objektif di industri memerlukan SOP terstruk
 
 **Tahap 1 – Akuisisi & Pembersihan Data.** Data historis 12 bulan permintaan ritel, kapasitas armada refrigerated truck, dan parameter kualitas produk dikumpulkan dari ERP (SAP S/4HANA atau Oracle SCM). Validasi outlier dilakukan menggunakan metode IQR dan *time-series decomposition* untuk memisahkan tren, musiman, dan residu.
 
-**Tahap 2 – Kalibrasi Parameter Emisi.** Faktor emisi $\phi_{ij
+**Tahap 2 – Kalibrasi Parameter Emisi.** Faktor emisi $\phi_{ij$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -140,3 +140,6 @@ Ke depan, penelitian harus fokus pada pengembangan model yang lebih akurat untuk
 ---
 
 Dokumen ini memberikan gambaran menyeluruh tentang penerapan Additive Manufacturing dalam pengembangan High-Entropy Alloys, mencakup aspek teoritis, metodologi, dan aplikasi praktis yang relevan dengan konteks industri saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

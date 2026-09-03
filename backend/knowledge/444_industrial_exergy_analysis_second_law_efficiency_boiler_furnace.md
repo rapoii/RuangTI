@@ -359,4 +359,4 @@ print(f"12. Faktor Termoekonomi (f_k)                  : {audit_results['Thermoe
 3. Bejan, A., Tsatsaronis, G., & Moran, M. (1996). *Thermal Design and Optimization*. John Wiley & Sons, New York. ISBN: 978-0-471-58467-4.
 4. Elwardany, A. E. (2024). "Enhancing steam boiler efficiency through comprehensive energy and exergy analysis: A review". *Process Safety and Environmental Protection*, 183, pp. 102-124. DOI: [10.1016/j.psep.2024.01.102](https://doi.org/10.1016/j.psep.2024.01.102).
 5. Leili, M., Bahrami, M., & Mohseni, S. (2024). "Energy and exergy analysis of a steam power plant to replace the boiler with a heat recovery steam generator". *International Journal of Exergy*, 43(2), pp. 185-208. DOI: [10.1504/ijex.2024.136448](https://doi.org/10.1504/ijex.2024.136448).
-6. Szargut, J., Morris, D. R., & Steward, F. R. (1988). *Exergy Analysis of Thermal, Chemical, and Metallurgical Processes*. Hemisphere Publishing, New York. ISBN: 978-0-891-16574-3.
+6. Szargut, J., Morris, D. R., & Steward, F. R. (1988). *Exergy Analysis of Thermal, Chemical, and Metallurgical Processes*. Hemisphere Publishing, New York. ISBN: 978-0-891-16574-3.$.

@@ -83,4 +83,7 @@ Diagram alur keputusan agen RL dapat diringkas sebagai berikut: `(Observasi → 
 
 ## 4. Studi Kasus Kuantitatif Industri & Perhitungan Numerik
 
-**Skenario:** Sebuah AGV pengangkut palet beroperasi di gudang *cross-docking* berukuran $30 \times 30$ meter (grid $30 \times 30$ sel). AGV harus berpindah dari start
+**Skenario:** Sebuah AGV pengangkut palet beroperasi di gudang *cross-docking* berukuran $30 \times 30$ meter (grid $30 \times 30$ sel). AGV harus berpindah dari start.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -113,3 +113,6 @@ Ke depan, penelitian dapat difokuskan pada pengembangan material baru dan teknik
 ---
 
 Dokumen ini memberikan panduan komprehensif mengenai mekanika kompaksi bubuk dalam proses Cold Isostatic Pressing, serta implikasi dari pemilihan metode Wet-Bag dan Dry-Bag dalam konteks industri keramik teknis dan refraktori.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

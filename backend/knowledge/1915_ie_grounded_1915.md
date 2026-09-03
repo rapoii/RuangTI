@@ -85,4 +85,7 @@ Definisikan *target* performa, *budget* daya, dan constraints termal. Lakukan pa
 Jaringan distribusi daya dirancang sebagai mesh global dengan *decoupling capacitor* on-die. Untuk stack 3D, *IR-drop* harus dihitung pada setiap die karena variasi beban dinamis.
 
 **Tahap 4 — Simulasi Multi-Fisika (minggu 15-20).**
-Lakukan simulasi elekt
+Lakukan simulasi elekt.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

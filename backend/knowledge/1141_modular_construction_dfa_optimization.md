@@ -122,4 +122,7 @@ Dengan mempertimbangkan standar seperti ISO 9001:2015, penting untuk memastikan 
 
 ---
 
-Dokumen ini memberikan panduan komprehensif mengenai penerapan DfMA dalam OSMC, dengan penekanan pada metodologi sistematis dan evaluasi kuantitatif yang relevan. Dengan mengikuti prinsip-prinsip ini, industri dapat meningkatkan efisiensi dan efektivitas dalam proyek konstruksi modular.
+Dokumen ini memberikan panduan komprehensif mengenai penerapan DfMA dalam OSMC, dengan penekanan pada metodologi sistematis dan evaluasi kuantitatif yang relevan. Dengan mengikuti prinsip-prinsip ini, industri dapat meningkatkan efisiensi dan efektivitas dalam proyek konstruksi modular.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

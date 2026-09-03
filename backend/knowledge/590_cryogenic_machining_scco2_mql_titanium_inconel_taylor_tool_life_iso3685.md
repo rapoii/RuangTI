@@ -442,4 +442,4 @@ Pabrik melakukan retrofit spindel internal CNC dengan sistem kriogenik $\text{sc
 5. **ISO 3685:1993**: *Tool-life testing with single-point turning tools*. International Organization for Standardization, Geneva.
 6. **ISO 4287:1997 / ISO 21920:2021**: *Geometrical product specifications (GPS) — Surface texture: Profile method*. ISO, Geneva.
 7. **Shaw, M. C.** (2005). *Metal Cutting Principles* (2nd Edition). Oxford University Press, New York.
-8. **Groover, M. P.** (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th Edition). John Wiley & Sons, Hoboken, NJ.
+8. **Groover, M. P.** (2020). *Fundamentals of Modern Manufacturing: Materials, Processes, and Systems* (7th Edition). John Wiley & Sons, Hoboken, NJ.$.

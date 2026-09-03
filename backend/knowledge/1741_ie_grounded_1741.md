@@ -122,4 +122,7 @@ Protokol karakterisasi yang diadopsi mengikuti prosedur Dickson *et al.* (2026):
 2. **Pengeringan vakum** pada $T = 60^{\circ}\text{C}$ selama 24 jam untuk mencegah transformasi fase *goethite*→*hematit* artefaktual.
 3. **Analisis XRD** (Cu-K$\alpha$, $2\theta = 5$–$80^{\circ}$, step 0,02°) untuk identifikasi kuantitatif fasa dengan metode Rietveld.
 5. **SEM-EDS mapping** pada sayatan melintang untuk distribusi elemen Fe, S, Ca, Al, Si.
-6. **TGA-DSC** pada heating rate $10^{\circ}\text{C/min}$ di atmosfer $\text{N}_2$ untuk dekomposisi *jarosite* ($T_{\text{dec}} \approx 480^{\circ}\text{C
+6. **TGA-DSC** pada heating rate $10^{\circ}\text{C/min}$ di atmosfer $\text{N}_2$ untuk dekomposisi *jarosite* ($T_{\text{dec}} \approx 480^{\circ}\text{C$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

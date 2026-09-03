@@ -94,4 +94,7 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti asumsi distribusi
 
 Arah riset masa depan dapat mencakup integrasi teknologi seperti kecerdasan buatan dan pembelajaran mesin untuk meningkatkan akurasi prediksi permintaan dan pengambilan keputusan dalam pengendalian persediaan.
 
-Dengan demikian, penerapan model pemrograman dinamis stokastik dalam pengendalian persediaan di rantai pasok e-commerce merupakan langkah strategis yang dapat meningkatkan efisiensi operasional dan daya saing perusahaan di pasar global.
+Dengan demikian, penerapan model pemrograman dinamis stokastik dalam pengendalian persediaan di rantai pasok e-commerce merupakan langkah strategis yang dapat meningkatkan efisiensi operasional dan daya saing perusahaan di pasar global.$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

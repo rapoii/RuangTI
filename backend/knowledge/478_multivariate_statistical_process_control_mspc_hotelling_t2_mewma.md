@@ -533,3 +533,6 @@ Dalam uji coba 50 benda kerja (25 in-control, disusul pergeseran halus akibat ke
 4. **Mason, R. L., Tracy, N. D., & Young, J. C. (1995).** "Decomposition of $T^2$ for multivariate statistical process control." *Journal of Quality Technology*, 27(2), 99–108. DOI: [10.1080/00224065.1995.11979573](https://doi.org/10.1080/00224065.1995.11979573).
 5. **ISO 7870-6:2016.** *Control charts — Part 6: Multivariate control charts*. International Organization for Standardization.
 6. **AIAG.** *Statistical Process Control (SPC) Reference Manual (2nd ed.)*. Automotive Industry Action Group.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

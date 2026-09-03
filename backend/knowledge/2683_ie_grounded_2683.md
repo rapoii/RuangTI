@@ -84,3 +84,7 @@ Partisi fungsional IP blok ke dalam chiplet berdasarkan analisis *throughput*, *
 Floorplanning dilakukan secara *hierarchical* dengan empat tingkat: (i) board/package, (ii) interposer/substrat, (iii) chiplet placement, dan (iv) *bump/bonded interconnect* planning. Algoritma optimisasi menggunakan *mixed-integer linear programming* (MILP) atau *simulated annealing* dengan fungsi objektif:
 
 $$\min \left( w_1 \
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -97,3 +97,6 @@ Namun, metodologi pengukuran beban kognitif juga memiliki batasan. Salah satunya
 Arah riset masa depan dapat mencakup pengembangan teknologi baru, seperti penggunaan kecerdasan buatan (AI) untuk memantau dan menganalisis beban kognitif secara real-time. Ini dapat membantu dalam menciptakan sistem otomatis yang lebih adaptif dan responsif terhadap kebutuhan pengguna.
 
 Dengan demikian, pengukuran beban kognitif dalam sistem otomatis tidak hanya penting untuk desain ergonomi, tetapi juga untuk meningkatkan keselamatan, efisiensi, dan produktivitas di berbagai sektor industri.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

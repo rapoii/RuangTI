@@ -109,3 +109,6 @@ Namun, terdapat beberapa batasan dalam metodologi ini, seperti ketergantungan pa
 Arah riset masa depan dapat mencakup pengembangan material baru yang lebih efisien, integrasi teknologi IoT untuk monitoring dan optimasi kinerja secara real-time, serta eksplorasi penggunaan sumber energi terbarukan dalam sistem pompa panas.
 
 Dengan demikian, pengembangan pompa panas terintegrasi untuk sistem CCUS tidak hanya berkontribusi pada pengurangan emisi karbon, tetapi juga memberikan manfaat ekonomi dan lingkungan yang signifikan, sejalan dengan standar industri dan praktik terbaik saat ini.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.

@@ -138,3 +138,7 @@ $$U_A = \frac{D_A}{\tau_A} = \frac{24}{600} = 0{,}0400 \quad (4{,}00\%)$$
 $$U_B = \frac{D_B}{\tau_B} = \frac{96}{3.000} = 0{,}0320 \quad (3{,}20\%)$$
 
 $$U_C = \frac{D_C}{\tau_C} = \frac{360}{12
+$$.
+
+## 5. Ringkasan & Catatan Praktis Implementasi
+Implementasi metode ini memerlukan standarisasi prosedur operasi (SOP), kalibrasi instrumen berkala, serta integrasi pemantauan real-time untuk memastikan konsistensi performa dan efisiensi sistem secara berkelanjutan.
