@@ -1,7 +1,9 @@
 # RuangTI Semantic Embedding Layer — fastembed (ONNX, CPU-friendly, no torch)
 # Model: paraphrase-multilingual-MiniLM-L12-v2 (384-dim, Multilingual, ~100 languages incl. Bahasa Indonesia)
+import os
 import threading
 from typing import List
+
 
 EMBED_DIM = 384
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
