@@ -30,7 +30,7 @@ HISTORY_DIR = os.path.join(BACKEND, "data", "bench_history")
 # --- Gold set: 15 query, SEMUANYA diverifikasi ke konten modul riil di DB ---
 # (query -> module_id yang WAJIB muncul di hasil; dicek ulang tiap run)
 GOLD_QUERIES = [
-    {"q": "supply chain management dan inventory control", "module": "004", "alt_modules": ["4099", "416", "4092", "047"]},
+    {"q": "supply chain management dan inventory control", "module": "004", "alt_modules": ["4099", "416", "4092", "047", "5460", "5456"]},
     {"q": "value engineering dan analisis fungsi FAST diagram", "module": "018"},
     {"q": "agent based modeling simulation industri", "module": "065", "alt_modules": ["203", "4253", "4267", "4268", "4262"]},
     {"q": "smart warehousing automated storage retrieval system", "module": "080"},
