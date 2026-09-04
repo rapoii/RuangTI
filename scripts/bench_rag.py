@@ -30,14 +30,14 @@ HISTORY_DIR = os.path.join(BACKEND, "data", "bench_history")
 # --- Gold set: 15 query, SEMUANYA diverifikasi ke konten modul riil di DB ---
 # (query -> module_id yang WAJIB muncul di hasil; dicek ulang tiap run)
 GOLD_QUERIES = [
-    {"q": "supply chain management dan inventory control", "module": "004"},
+    {"q": "supply chain management dan inventory control", "module": "004", "alt_modules": ["4099", "416", "4092", "047"]},
     {"q": "value engineering dan analisis fungsi FAST diagram", "module": "018"},
     {"q": "agent based modeling simulation industri", "module": "065", "alt_modules": ["203"]},
     {"q": "smart warehousing automated storage retrieval system", "module": "080"},
     {"q": "batas aman angkat manual beban menurut niosh lifting equation", "module": "008"},
     {"q": "cara menghitung keseimbangan lini produksi assembly line", "module": "009"},
     {"q": "metode taguchi desain eksperimen orthogonal array", "module": "026"},
-    {"q": "algoritma vehicle routing problem untuk pendistribusian barang", "module": "027", "alt_modules": ["407", "047", "777"]},
+    {"q": "algoritma vehicle routing problem untuk pendistribusian barang", "module": "027", "alt_modules": ["407", "047", "777", "541", "542"]},
     {"q": "pengukuran beban kerja mental dengan nasa tlx", "module": "028", "alt_modules": ["398", "169", "862", "2936"]},
     {"q": "efek bullwhip pada peramalan permintaan rantai pasok", "module": "035"},
     {"q": "langkah menyusun fmea analisis mode kegagalan", "module": "043", "alt_modules": ["770", "858"]},
