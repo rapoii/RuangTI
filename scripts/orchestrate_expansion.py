@@ -13,9 +13,11 @@ import sys
 import time
 import subprocess
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
+
 
 from backend.app.rag.registry import KnowledgeRegistry
 from scripts.produce_grounded_modules import produce_modules, IE_DOMAINS
@@ -26,16 +28,20 @@ CHECKPOINT_INTERVAL = 250
 
 
 def get_current_module_count():
+    import sqlite3
     registry = KnowledgeRegistry()
-    row = registry._conn.execute("SELECT COUNT(*) FROM knowledge_registry").fetchone()
+    with sqlite3.connect(registry.db_path) as conn:
+        row = conn.execute("SELECT COUNT(*) FROM knowledge_registry").fetchone()
     return row[0] if row else 0
+
 
 
 def run_batch(domain: str, limit: int):
     print(f"\n=======================================================")
     print(f"🚀 Running Batch: Domain '{domain}' | Limit: {limit}")
     print(f"=======================================================")
-    res = produce_modules(limit=limit, domain=domain, dry_run=False)
+    res = produce_modules(limit=limit, domain_filter=domain, dry_run=False)
+
     print(f"Batch Done: Generated {res['generated']} novel modules.")
     return res['generated']
 
