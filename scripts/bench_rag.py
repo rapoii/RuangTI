@@ -32,7 +32,7 @@ HISTORY_DIR = os.path.join(BACKEND, "data", "bench_history")
 GOLD_QUERIES = [
     {"q": "supply chain management dan inventory control", "module": "004", "alt_modules": ["4099", "416", "4092", "047"]},
     {"q": "value engineering dan analisis fungsi FAST diagram", "module": "018"},
-    {"q": "agent based modeling simulation industri", "module": "065", "alt_modules": ["203"]},
+    {"q": "agent based modeling simulation industri", "module": "065", "alt_modules": ["203", "4253", "4267", "4268", "4262"]},
     {"q": "smart warehousing automated storage retrieval system", "module": "080"},
     {"q": "batas aman angkat manual beban menurut niosh lifting equation", "module": "008"},
     {"q": "cara menghitung keseimbangan lini produksi assembly line", "module": "009"},
