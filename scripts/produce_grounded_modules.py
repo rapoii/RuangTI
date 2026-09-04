@@ -67,7 +67,7 @@ def call_llm(prompt: str, system_prompt: Optional[str] = None, model: str = DEFA
     )
 
     try:
-        with urllib.request.urlopen(req, timeout=90) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode("utf-8"))
             if "choices" in data and data["choices"]:
                 content = data["choices"][0]["message"].get("content", "")
@@ -132,16 +132,16 @@ $$\\min Z = \\sum_{{i=1}}^{{M}} \\sum_{{j=1}}^{{N}} c_{{ij}} x_{{ij}} + \\sum_{{
 Di mana:
 - $M$ merepresentasikan jumlah stasiun kerja atau node sumber daya dalam fasilitas industri.
 - $N$ menunjukkan kuantitas komponen, aliran material, atau entitas pekerjaan (*jobs*) yang dijadwalkan.
-- $c_{ij}$ adalah koefisien biaya transfer atau konsumsi energi antara unit $i$ dan $j$.
-- $x_{ij}$ merupakan variabel keputusan alokasi proses kuantitatif ($x_{ij} \\ge 0$).
+- $c_{{ij}}$ adalah koefisien biaya transfer atau konsumsi energi antara unit $i$ dan $j$.
+- $x_{{ij}}$ merupakan variabel keputusan alokasi proses kuantitatif ($x_{{ij}} \\ge 0$).
 - $\\lambda_k$ menyatakan parameter penalti deviasi kendala batas teknis ke-$k$.
-- $g_k(\\mathbf{x})$ memodelkan batas kapasitas operasional sesuai toleransi proses produksi.
+- $g_k(\\mathbf{{x}})$ memodelkan batas kapasitas operasional sesuai toleransi proses produksi.
 
 Kendala konservasi kapasitas pada setiap stasiun kerja dirumuskan sebagai berikut:
 
 $$\\sum_{{j=1}}^{{N}} a_{{ij}} x_{{ij}} \\le C_i, \\quad \\forall i \\in \\{{1, 2, \\dots, M\\}}$$
 
-Di mana $a_{ij}$ merupakan koefisien kebutuhan waktu proses per unit output pada mesin $i$, dan $C_i$ adalah kapasitas jam kerja efektif per periode perencanaan setelah memperhitungkan faktor *Overall Equipment Effectiveness* ($OEE$) dan ketersediaan mesin ($A_i$).
+Di mana $a_{{ij}}$ merupakan koefisien kebutuhan waktu proses per unit output pada mesin $i$, dan $C_i$ adalah kapasitas jam kerja efektif per periode perencanaan setelah memperhitungkan faktor *Overall Equipment Effectiveness* ($OEE$) dan ketersediaan mesin ($A_i$).
 
 Tingkat utilitas sistem $\\eta$ dihitung melalui rasio beban aktual terhadap kapasitas rancangan teoritis:
 
@@ -151,7 +151,7 @@ Melalui parameterisasi ini, trade-off antara throughput produksi dan penumpukan 
 
 ---
 
-## 3. Metodologi Rekayasa & Algoritma Solusi
+## 3. Algoritma & Metodologi Rekayasa Solusi
 
 Prosedur rekayasa komputasi dan langkah eksekusi algoritma pemecahan masalah dirancang melalui algoritma penelusuran heuristik bertahap untuk memastikan konvergensi solusi deterministik pada skala data industri besar:
 
@@ -201,7 +201,7 @@ Penerapan empiris diuji pada fasilitas manufaktur perakitan terintegrasi berkapa
 ### Parameter Uji Numerik:
 - Jumlah stasiun kerja ($M$): 8 stasiun
 - Jumlah pesanan per siklus ($N$): 40 batch
-- Nilai rata-rata waktu proses ($a_{ij}$): 3.2 jam/batch (standar deviasi $\\sigma = 0.6$ jam)
+- Nilai rata-rata waktu proses ($a_{{ij}}$): 3.2 jam/batch (standar deviasi $\\sigma = 0.6$ jam)
 - Kapasitas efektif per stasiun ($C_i$): 20 jam/pekan
 
 ### Langkah Kalkulasi Numerik:
@@ -215,7 +215,7 @@ Penerapan empiris diuji pada fasilitas manufaktur perakitan terintegrasi berkapa
    Setelah alokasi solusi algoritma diterapkan, varians waktu siklus stasiun berkurang dari 4.8 menjadi 1.1, yang secara langsung memangkas rata-rata *waiting time* sebesar 34.2% sesuai formulasi antrian Kingman:
    $$W_q \\approx \\left(\\frac{{\\rho}}{{1 - \\rho}}\\right) \\left(\\frac{{c_a^2 + c_s^2}}{{2}}\\right) t_s$$
 
-Dampak finansial dari efisiensi ini setara dengan penghematan biaya penanganan material dan lembur tenaga kerja sebesar US$ 84,500 per kuartal operasional.
+Dampak finansial dari efisiensi ini setara dengan penghematan biaya penanganan material dan lembur tenaga kerja sebesar USD 84,500 per kuartal operasional.
 
 ---
 
@@ -390,7 +390,11 @@ def produce_modules(
             sec_paper = filtered[i + 1] if i + 1 < len(filtered) else None
 
             # Get next ID from registry
-            module_id = registry.get_next_module_id()
+            if dry_run:
+                next_num = int(registry.get_next_module_id()) + generated_count
+                module_id = f"{next_num:04d}"
+            else:
+                module_id = registry.get_next_module_id()
             p_title = paper.get("title", "")
             p_doi = paper.get("doi")
             p_authors = paper.get("authors", "")

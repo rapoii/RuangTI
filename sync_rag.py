@@ -5,9 +5,8 @@
 import os, sys, time, re, struct, sqlite3, json
 from datetime import datetime, timedelta
 
-# ROOT is FIXED to the RuangTI repo so this script can live anywhere
-# (cron scheduler requires it under ~/AppData/Local/hermes/scripts/).
-ROOT = r"D:\Software\Hermes Workspace\projects\web\RuangTI"
+# ROOT is dynamically resolved or points to the RuangTI repository
+ROOT = os.path.dirname(os.path.abspath(__file__))
 DB = os.path.join(ROOT, "backend", "data", "ruangti_rag.db")
 KNOWLEDGE_DIR = os.path.join(ROOT, "backend", "knowledge")
 sys.path.insert(0, os.path.join(ROOT, "backend"))
