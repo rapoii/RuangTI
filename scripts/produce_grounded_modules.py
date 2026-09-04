@@ -391,9 +391,14 @@ def produce_modules(
 
             # Get next ID from registry, with collision safety
             attempts = 0
+            p_title = paper.get("title", "")
+            p_doi = paper.get("doi")
+            p_authors = paper.get("authors", "")
+            p_year = paper.get("year", 2024)
+            p_venue = paper.get("venue", "")
+            slug = slugify(p_title)
             while attempts < 50:
                 module_id = registry.get_next_module_id()
-                slug = slugify(p_title)
                 filename = f"{module_id}_{slug}.md"
                 filepath = os.path.join(KNOWLEDGE_DIR, filename)
                 if not os.path.exists(filepath):
@@ -402,16 +407,10 @@ def produce_modules(
             if dry_run:
                 next_num = int(registry.get_next_module_id()) + generated_count
                 module_id = f"{next_num:04d}"
-                slug = slugify(p_title)
                 filename = f"{module_id}_{slug}.md"
                 filepath = os.path.join(KNOWLEDGE_DIR, filename)
             else:
                 module_id = registry.get_next_module_id()
-            p_title = paper.get("title", "")
-            p_doi = paper.get("doi")
-            p_authors = paper.get("authors", "")
-            p_year = paper.get("year", 2024)
-            p_venue = paper.get("venue", "")
 
             # Generate content
             content = generate_grounded_module_content(
@@ -451,7 +450,8 @@ def produce_modules(
                     f.write(content)
 
                 # Register in database
-                if registry.is_duplicate(doi=p_doi, title=f"{domain}: {p_title}"):
+                full_title = f"{domain}: {p_title}"
+                if registry.is_duplicate(doi=p_doi, title=full_title):
                     if os.path.exists(filepath):
                         os.remove(filepath)
                     results["skipped_duplicate"] += 1
@@ -460,7 +460,7 @@ def produce_modules(
                 registered = registry.register_module(
 
                     module_id=module_id,
-                    title=f"{domain}: {p_title}",
+                    title=full_title,
                     doi=p_doi,
                     isbn=None,
                     domain=domain,
@@ -468,6 +468,7 @@ def produce_modules(
                     citation=citation,
                     status="verified",
                 )
+
 
 
                 if registered:

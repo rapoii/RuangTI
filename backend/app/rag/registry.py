@@ -70,7 +70,7 @@ class KnowledgeRegistry:
     def get_next_module_id(self) -> str:
         with sqlite3.connect(self.db_path) as conn:
             cur = conn.cursor()
-            cur.execute("SELECT module_id FROM knowledge_registry ORDER BY CAST(module_id AS INTEGER) DESC LIMIT 1")
+            cur.execute("SELECT module_id FROM knowledge_registry ORDER BY id DESC LIMIT 1")
             row = cur.fetchone()
             if not row:
                 return "1499"
