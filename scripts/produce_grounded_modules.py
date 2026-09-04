@@ -389,10 +389,22 @@ def produce_modules(
             results["attempted"] += 1
             sec_paper = filtered[i + 1] if i + 1 < len(filtered) else None
 
-            # Get next ID from registry
+            # Get next ID from registry, with collision safety
+            attempts = 0
+            while attempts < 50:
+                module_id = registry.get_next_module_id()
+                slug = slugify(p_title)
+                filename = f"{module_id}_{slug}.md"
+                filepath = os.path.join(KNOWLEDGE_DIR, filename)
+                if not os.path.exists(filepath):
+                    break
+                attempts += 1
             if dry_run:
                 next_num = int(registry.get_next_module_id()) + generated_count
                 module_id = f"{next_num:04d}"
+                slug = slugify(p_title)
+                filename = f"{module_id}_{slug}.md"
+                filepath = os.path.join(KNOWLEDGE_DIR, filename)
             else:
                 module_id = registry.get_next_module_id()
             p_title = paper.get("title", "")
@@ -417,9 +429,6 @@ def produce_modules(
                 results["failed_validation"] += 1
                 continue
 
-            slug = slugify(p_title)
-            filename = f"{module_id}_{slug}.md"
-            filepath = os.path.join(KNOWLEDGE_DIR, filename)
             citation = f"{p_authors} ({p_year}). {p_venue}. DOI: {p_doi}"
 
             if dry_run:
