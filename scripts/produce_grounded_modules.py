@@ -454,6 +454,8 @@ def produce_modules(
                 if registry.is_duplicate(doi=p_doi, title=full_title):
                     if os.path.exists(filepath):
                         os.remove(filepath)
+                    # Print which collision happened
+                    print(f"[-] {module_id} skipped duplicate: {p_doi}", flush=True)
                     results["skipped_duplicate"] += 1
                     continue
 
@@ -468,6 +470,11 @@ def produce_modules(
                     citation=citation,
                     status="verified",
                 )
+
+                if not registered and os.path.exists(filepath):
+                    # Belt-and-suspenders: rare race where two candidates share the same DOI/title
+                    os.remove(filepath)
+
 
 
 
