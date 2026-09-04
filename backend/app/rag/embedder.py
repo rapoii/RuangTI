@@ -16,11 +16,10 @@ def _get_model():
         with _lock:
             if _model is None:
                 from fastembed import TextEmbedding
-                # threads=2: single-query embedding is tiny; an all-core session
-                # here thrashes against the cross-encoder session (both ONNX)
-                # and slows every search by ~10x under sustained load.
-                _model = TextEmbedding(MODEL_NAME, threads=2)
+                threads = int(os.getenv("FASTEMBED_THREADS", "8"))
+                _model = TextEmbedding(MODEL_NAME, threads=threads)
     return _model
+
 
 
 def embed_texts(texts: List[str]) -> List[List[float]]:

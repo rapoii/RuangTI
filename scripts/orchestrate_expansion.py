@@ -48,10 +48,14 @@ def run_batch(domain: str, limit: int):
 
 def sync_rag():
     print("\n[RAG] Synchronizing RAG index...")
-    ret = subprocess.run([sys.executable, "sync_rag.py"], capture_output=True, text=True, timeout=600)
+    # Provide generous timeout and enable multithreading for vector embedding
+    env = dict(os.environ)
+    env["FASTEMBED_THREADS"] = "8"
+    ret = subprocess.run([sys.executable, "sync_rag.py", "-v"], capture_output=True, text=True, timeout=1800, env=env)
     print(ret.stdout[-300:] if ret.stdout else "")
     if ret.stderr:
         print("[RAG Error]:", ret.stderr[-300:])
+
 
 
 def run_benchmark():
