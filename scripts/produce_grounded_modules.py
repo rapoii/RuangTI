@@ -443,6 +443,8 @@ def produce_modules(
 
                 # Register in database
                 if registry.is_duplicate(doi=p_doi, title=f"{domain}: {p_title}"):
+                    if os.path.exists(filepath):
+                        os.remove(filepath)
                     results["skipped_duplicate"] += 1
                     continue
 
@@ -457,6 +459,7 @@ def produce_modules(
                     citation=citation,
                     status="verified",
                 )
+
 
                 if registered:
                     print(f"[+] Module {module_id} WRITTEN & REGISTERED: {filename} ({len(content)} chars)")
