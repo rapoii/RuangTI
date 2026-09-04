@@ -157,15 +157,17 @@ def parse_openalex_abstract(inverted_index: Optional[dict]) -> str:
     return " ".join([words[i] for i in sorted(words.keys())])
 
 
-def search_openalex(query: str, limit: int = 5, timeout: int = 12) -> List[Dict[str, Any]]:
-    """Query OpenAlex Works API for academic papers with abstracts."""
+def search_openalex(query: str, limit: int = 5, page: int = 1, timeout: int = 12) -> List[Dict[str, Any]]:
+    """Query OpenAlex Works API for academic papers with abstracts and pagination."""
     base_url = "https://api.openalex.org/works"
     params = {
         "search": query,
-        "filter": "from_publication_date:2020-01-01",
+        "filter": "from_publication_date:2018-01-01",
         "sort": "relevance_score:desc",
-        "per_page": limit,
+        "per_page": min(limit, 100),
+        "page": page,
     }
+
     url = f"{base_url}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(
         url,
@@ -326,20 +328,24 @@ def harvest_academic_candidates(
     for kw in keywords:
         if len(harvested) >= limit:
             break
-        # Query OpenAlex first
-        papers = search_openalex(kw, limit=limit)
-        if not papers:
-            # Fallback to Crossref
-            papers = search_crossref(kw, limit=limit)
-
-        valid_papers = filter_candidate_papers(papers, seen_dois=seen_dois, registry=registry)
-        for p in valid_papers:
-            p["domain"] = domain
-            p["search_query"] = kw
-            harvested.append(p)
-            if seen_dois is not None and p["doi"]:
-                seen_dois.add(p["doi"])
+        # Query OpenAlex with pagination to reach unharvested deep literature
+        for page in range(1, 5):
             if len(harvested) >= limit:
                 break
+            papers = search_openalex(kw, limit=100, page=page)
+            if not papers and page == 1:
+                # Fallback to Crossref
+                papers = search_crossref(kw, limit=50)
+
+            valid_papers = filter_candidate_papers(papers, seen_dois=seen_dois, registry=registry)
+            for p in valid_papers:
+                p["domain"] = domain
+                p["search_query"] = kw
+                harvested.append(p)
+                if seen_dois is not None and p["doi"]:
+                    seen_dois.add(p["doi"])
+                if len(harvested) >= limit:
+                    break
+
 
     return harvested[:limit]

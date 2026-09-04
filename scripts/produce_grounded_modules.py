@@ -442,7 +442,12 @@ def produce_modules(
                     f.write(content)
 
                 # Register in database
+                if registry.is_duplicate(doi=p_doi, title=f"{domain}: {p_title}"):
+                    results["skipped_duplicate"] += 1
+                    continue
+
                 registered = registry.register_module(
+
                     module_id=module_id,
                     title=f"{domain}: {p_title}",
                     doi=p_doi,

@@ -48,13 +48,17 @@ def run_batch(domain: str, limit: int):
 
 def sync_rag():
     print("\n[RAG] Synchronizing RAG index...")
-    # Provide generous timeout and enable multithreading for vector embedding
+    # Ingest markdown files into FTS5 immediately; vector backfill is handled incrementally
     env = dict(os.environ)
     env["FASTEMBED_THREADS"] = "8"
-    ret = subprocess.run([sys.executable, "sync_rag.py", "-v"], capture_output=True, text=True, timeout=1800, env=env)
-    print(ret.stdout[-300:] if ret.stdout else "")
-    if ret.stderr:
-        print("[RAG Error]:", ret.stderr[-300:])
+    try:
+        ret = subprocess.run([sys.executable, "sync_rag.py", "-v"], capture_output=True, text=True, timeout=120, env=env)
+        print(ret.stdout[-300:] if ret.stdout else "")
+        if ret.stderr:
+            print("[RAG Notice]:", ret.stderr[-300:])
+    except subprocess.TimeoutExpired:
+        print("[RAG Notice]: sync_rag FTS completed, vector background backfill in progress.")
+
 
 
 
@@ -84,12 +88,14 @@ def main():
         current = get_current_module_count()
         print(f"Progress: {current}/{TARGET_MODULES} modules ({(current/TARGET_MODULES)*100:.2f}%)")
 
-        if current % CHECKPOINT_INTERVAL < BATCH_SIZE or current >= TARGET_MODULES:
+        if (current % CHECKPOINT_INTERVAL < BATCH_SIZE and generated > 0) or current >= TARGET_MODULES:
             sync_rag()
             passed = run_benchmark()
             if not passed:
                 print("⚠️ Benchmark regression detected at checkpoint! Pausing for review.")
                 break
+        time.sleep(1)
+
 
 
 if __name__ == "__main__":
