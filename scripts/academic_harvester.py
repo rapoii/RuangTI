@@ -328,14 +328,15 @@ def harvest_academic_candidates(
     for kw in keywords:
         if len(harvested) >= limit:
             break
-        # Query OpenAlex with pagination to reach unharvested deep literature
+        # Query OpenAlex with pagination; fallback to Crossref if OpenAlex returns empty or 429
         for page in range(1, 5):
             if len(harvested) >= limit:
                 break
             papers = search_openalex(kw, limit=100, page=page)
-            if not papers and page == 1:
-                # Fallback to Crossref
-                papers = search_crossref(kw, limit=50)
+            if not papers:
+                # Fallback to Crossref immediately
+                papers = search_crossref(kw, limit=100)
+
 
             valid_papers = filter_candidate_papers(papers, seen_dois=seen_dois, registry=registry)
             for p in valid_papers:
