@@ -251,7 +251,7 @@ export function Composer({
 
       // Resolve model based on selected thinking effort
       const currentThinkingOption = THINKING_EFFORT_OPTIONS.find((opt) => opt.id === thinkingEffort);
-      const selectedModelId = currentThinkingOption ? currentThinkingOption.modelId : "gcli/grok-4.6";
+      const selectedModelId = currentThinkingOption ? currentThinkingOption.modelId : "mimo-v2.6-flash@none";
 
       onSendMessage(text.trim(), {
         webSearch: webSearchEnabled,

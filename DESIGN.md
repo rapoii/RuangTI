@@ -80,12 +80,14 @@ Untuk memastikan antarmuka berjalan sangat lancar di segala jenis perangkat (ter
 ---
 
 ## 8. Multi-Tier Thinking Effort Selector
-Tersedia 5 level reasoning model RuangTI Neural Engine:
-1. **Non-Thinking (Default)**: Respon cepat & instan tanpa penalaran bertahap (`gcli/grok-4.6`).
-2. **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas (`gcli/grok-4.6-low`).
-3. **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur (`gcli/grok-4.6-medium`).
-4. **High Effort**: Penalaran mendalam untuk optimasi sistem & simulasi kompleks (`gcli/grok-4.6-high`).
-5. **Extra High Effort**: Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis (`gcli/grok-4.6-xhigh`).
+Tersedia 5 level reasoning RuangTI Neural Engine (engine utama: **Mimoly** — gateway Xiaomi MiMo di port 8080; cadangan: 9Router di port 20128):
+1. **Non-Thinking (Default)**: Respon cepat & instan tanpa penalaran bertahap (`mimo-v2.6-flash@none`).
+2. **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas (`mimo-v2.6-flash@default`).
+3. **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur (`mimo-v2.6-flash@max`).
+4. **High Effort**: Penalaran mendalam untuk optimasi sistem & simulasi kompleks (`mimo-v2.6-pro@default`).
+5. **Extra High Effort**: Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis (`mimo-v2.6-pro@max`).
+
+Format spesifikasi model adalah `model@reasoning_effort`, diparse di `backend/app/routers/chat_9router.py`. Bila engine utama tidak terjangkau, backend otomatis beralih ke gateway cadangan agar RuangTI tidak mati total.
 
 ---
 

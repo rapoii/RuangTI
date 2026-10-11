@@ -41,7 +41,7 @@ export function useChat({
 }: UseChatProps) {
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [isStreaming, setIsStreaming] = useState<boolean>(false);
-  const [selectedModel, setSelectedModel] = useState<string>("gcli/grok-4.6-high");
+  const [selectedModel, setSelectedModel] = useState<string>("mimo-v2.6-pro@default");
   const abortControllerRef = useRef<AbortController | null>(null);
 
   // Load messages from backend whenever conversationId changes (skip for anonymous)
@@ -129,7 +129,7 @@ export function useChat({
       abortControllerRef.current = controller;
 
       try {
-        const targetModel = options?.model_id || customModel || selectedModel || "gcli/grok-4.6";
+        const targetModel = options?.model_id || customModel || selectedModel || "mimo-v2.6-pro@default";
         const res = await fetch(`${getApiBase()}/api/chat/stream`, {
           method: "POST",
           headers: {
