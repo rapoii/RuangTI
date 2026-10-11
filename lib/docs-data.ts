@@ -56,7 +56,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       {
         id: "overview",
         title: "Pengenalan RuangTI",
-        description: "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri pertama di Indonesia dengan 742 Modul RAG Eksak.",
+        description: "Platform AI Workspace & Chat Assistant Spesialis Teknik Industri pertama di Indonesia dengan 4.595 Modul RAG Eksak.",
         category: "getting-started",
         badge: "Pondasi",
         readTime: "4 min",
@@ -72,7 +72,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               id: "apa-itu-ruangti",
               title: "Apa itu RuangTI?",
               paragraphs: [
-                "Berbeda dengan model AI generik konvensional yang kerap berhalusinasi saat dihadapkan pada kalkulasi eksak dan regulasi industri spesifik, RuangTI menggabungkan Neural Reasoning Engine mutakhir dengan Retrieval-Augmented Generation (RAG) FTS5 berkekuatan 742 modul master ilmiah.",
+                "Berbeda dengan model AI generik konvensional yang kerap berhalusinasi saat dihadapkan pada kalkulasi eksak dan regulasi industri spesifik, RuangTI menggabungkan Neural Reasoning Engine mutakhir dengan Retrieval-Augmented Generation (RAG) FTS5 berkekuatan 4.595 modul master ilmiah.",
                 "RuangTI dirancang khusus untuk mahasiswa, akademisi, dan praktisi Teknik Industri di bidang HSE, Perencanaan Produksi (PPIC), Quality Assurance/Control (QA/QC), Desain CAD/CAM, Manajemen Pergudangan (WMS), dan Rekayasa Keandalan Fasilitas.",
               ],
               callout: {
@@ -90,7 +90,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               table: {
                 headers: ["Dimensi Keunggulan", "RuangTI Engineering AI", "AI Generik Konvensional"],
                 rows: [
-                  ["Basis Pengetahuan (RAG)", "742 Modul Terverifikasi (ISO, ASME, PP, SNI, APICS, IISE)", "Pengetahuan umum tanpa sumber terindeks"],
+                  ["Basis Pengetahuan (RAG)", "4.595 Modul Terverifikasi (ISO, ASME, PP, SNI, APICS, IISE)", "Pengetahuan umum tanpa sumber terindeks"],
                   ["Parser File Khusus", "Universal CAD (DWG, DXF, STEP, STL), CNC (G-Code), FlexSim (.fsm/.fsx)", "Hanya PDF dan Teks biasa"],
                   ["Rendering Formula", "KaTeX Editorial Precision dengan baseline alignment & display math", "Teks ASCII kasar atau pecahan bertumpuk"],
                   ["Penyimpanan Berkas", "Zero-DB-Bloat (WebP 85KB, 60B SQLite metadata, 14d auto-prune)", "Database membengkak dengan binary blob"],
@@ -318,45 +318,52 @@ export const DOCS_CATEGORIES: DocCategory[] = [
       },
       {
         id: "rag-knowledge-base",
-        title: "742 Modul RAG Knowledge Base Eksak",
-        description: "Repositori pengetahuan komprehensif berstandar ilmiah terindeks FTS5 SQLite untuk seluruh domain Teknik Industri.",
+        title: "4.595 Modul RAG Knowledge Base Eksak",
+        description: "Repositori pengetahuan komprehensif berstandar ilmiah terindeks FTS5 SQLite + vektor semantik untuk seluruh domain Teknik Industri.",
         category: "core-features",
         badge: "RAG Hub",
         readTime: "8 min",
         subsections: [
           { id: "struktur-rag", title: "Arsitektur RAG & FTS5 Indexing" },
-          { id: "taksonomi-keilmuan", title: "Taksonomi 742 Modul Master" },
+          { id: "taksonomi-keilmuan", title: "Taksonomi 16 Kluster Keilmuan" },
           { id: "thesaurus-expansion", title: "FTS5 Query Expansion & Thesaurus" },
         ],
         content: {
-          lead: "RuangTI mengintegrasikan 742 modul master pengetahuan Teknik Industri yang diteliti dari jurnal peer-reviewed, standar internasional (ISO, ASME, OSHA, APICS, IISE), dan regulasi perundang-undangan nasional.",
+          lead: "RuangTI mengintegrasikan 4.595 modul master pengetahuan Teknik Industri yang diteliti dari jurnal peer-reviewed, standar internasional (ISO, ASME, OSHA, APICS, IISE), dan regulasi perundang-undangan nasional.",
           sections: [
             {
               id: "struktur-rag",
               title: "Arsitektur RAG & FTS5 Indexing",
               paragraphs: [
-                "Seluruh 742 modul pengetahuan diurai ke dalam 5.375 bagian semantik (*semantic sections*) dan disimpan dalam database SQLite lokal berkecepatan tinggi dengan ekstensi FTS5 (*Full-Text Search 5*).",
+                "Seluruh 4.595 modul pengetahuan diurai ke dalam 32.413 bagian semantik (*semantic sections*) dan disimpan dalam database SQLite lokal berkecepatan tinggi dengan ekstensi FTS5 (*Full-Text Search 5*) serta lapisan pencarian vektor semantik (hybrid retrieval).",
                 "Saat pengguna mengirimkan pertanyaan, mesin pencari RAG melakukan ekspansi kueri melalui kamus sinonim istilah teknik (*Industrial Engineering Thesaurus*), menjalankan pencarian BM25 tertimbang, dan menyuntikkan 3 bagian pengetahuan paling relevan langsung ke dalam konteks prompt AI.",
               ],
             },
             {
               id: "taksonomi-keilmuan",
-              title: "Taksonomi 742 Modul Master",
+              title: "Taksonomi 16 Kluster Keilmuan",
               paragraphs: [
-                "Cakupan disiplin ilmu dalam RAG RuangTI terbagi ke dalam kluster-kluster strategis berikut:",
+                "Cakupan disiplin ilmu dalam RAG RuangTI terbagi ke dalam 16 kluster strategis berikut:",
               ],
               table: {
-                headers: ["Kluster Bidang Keilmuan", "Rentang Modul", "Contoh Standar & Topik Utama"],
+                headers: ["Kluster Bidang Keilmuan", "Modul", "Rentang ID", "Contoh Standar & Topik Utama"],
                 rows: [
-                  ["Riset Operasi & Fasilitas", "Modul 001 - 100", "PTLF Facilities Layout, Riset Operasi Deterministik & Stokastik, Antrian, Transportasi, Game Theory."],
-                  ["SCM & Manajemen Energi", "Modul 101 - 200", "Reverse Logistics, Multi-Echelon SCND, GHS Hazmat, LCC TCO, Audit Energi ISO 50001 SEC, Dekarbonisasi."],
-                  ["Simulasi & Quality Eng.", "Modul 201 - 300", "Simulasi Diskrit & Kontinu (DES/System Dynamics), Kaizen, Six Sigma DMAIC, Taguchi Robust Design."],
-                  ["Reliability & Optimasi", "Modul 301 - 400", "Distribusi Weibull, FTA, FMEA AIAG-VDA, Taguchi Orthogonal Arrays, Optimasi Stokastik."],
-                  ["Spesialisasi Profesi Industri", "Modul 401 - 425", "SMK3 PP 50/2012, ASME Y14.5 GD&T, WMS Slotting COI, S&OP DBR, IATF 16949 Core Tools, RCM II SAE JA1011."],
-                  ["Kurikulum Fundamental TI", "Modul 426 - 434", "Menggambar Teknik ISO 128, Material Fe-Fe3C ASTM E8, Fisika Fluida/Carnot, Kalkulus Marginal EOQ, Kimia Korosi ICCP, Etika PII/ABET, Pancasila TKDN."],
-                  ["Smart Manufacturing & Metaheuristik", "Modul 435 - 523", "Purdue ANSI/ISA-95, MES MESA-11, ALNS, Production Routing Problem (PRP), Overhead Crane Scheduling."],
-                  ["Industri Berat & Metalurgi Lanjut", "Modul 524 - 600", "Manufaktur Baja & Pengecoran, Perlakuan Panas Lanjut, NDT Uji Ultrasonik/Radiografi, Friction Stir Welding ISO 25239."],
-                  ["Advanced Joining & Emerging Tech", "Modul 601 - 742", "Tandem SAW, Laser-Arc Hybrid Welding (LAHW), Cavitation Peening Rayleigh-Plesset ASTM G32/E466, EPD Koloid, UVAC/EVC Elliptical Kinematics ISO 3002, AFP/ELID/ECJM/PLD/LST, Cold Spray ISO 14917, 4D Printing SMP, LIPSS Biomimetic Surfaces, Human Digital Twin IEEE 2857."],
+                  ["Industrial Engineering (Umum & Fundamental)", "1.498", "001–2958", "Kurikulum fundamental TI, menggambar teknik ISO 128, material ASTM E8, fisika/kalkulus/kimia dasar, etika PII, TKDN."],
+                  ["Operations Research & Large-Scale Optimization", "363", "2959–6283", "Linear/Integer/Nonlinear Programming, metaheuristik, ALNS, penjadwalan, game theory."],
+                  ["Supply Chain Management & Logistics Engineering", "312", "3019–6457", "EOQ, safety stock, VRP, cross-docking, cold chain, reverse logistics, multi-echelon SCND."],
+                  ["Manufacturing Systems & Cyber-Physical Production", "264", "3069–6370", "Purdue ISA-95, MES MESA-11, smart factory, proses manufaktur & metalurgi."],
+                  ["Quality Engineering & Reliability Systems", "248", "3119–6417", "Six Sigma DMAIC, SPC, FMEA AIAG-VDA, IATF 16949, Weibull, FTA, MSA Gage R&R."],
+                  ["Human Factors & Cognitive Ergonomics", "280", "3169–6460", "REBA/RULA, NIOSH Lifting Equation, antropometri, biomekanika, human digital twin IEEE 2857."],
+                  ["Facilities Planning & Material Handling", "191", "3452–5890", "PTLF, From-To Chart, ARC, CRAFT, CORELAP, ASRS, penanganan material."],
+                  ["Production Planning & Inventory Control", "221", "3502–6195", "MRP/ERP, S&OP, DBR, WMS slotting COI, aggregate planning."],
+                  ["Engineering Economics & Cost Optimization", "216", "3552–6193", "Analisis NPV/IRR, LCC TCO, depresiasi, optimasi biaya siklus hidup."],
+                  ["Applied Statistics & Stochastic Modeling", "229", "3602–6172", "Desain eksperimen Taguchi, regresi, proses stokastik, analisis varians."],
+                  ["Simulation Modeling & Digital Twins", "196", "3652–6176", "Discrete Event Simulation (FlexSim/Arena/SimPy), System Dynamics, digital twin ISO 23247."],
+                  ["Industrial Energy Management & Decarbonization", "189", "3702–6179", "Audit energi ISO 50001/50002, LCA ISO 14040, GHG Protocol, dekarbonisasi."],
+                  ["Safety Engineering & Risk Management", "199", "3752–6190", "SMK3 PP 50/2012, ISO 45001, HIRADC, GHS Hazmat."],
+                  ["Maintenance Engineering & Asset Life Cycle", "198", "3802–6236", "RCM II SAE JA1011, preventive/predictive maintenance, keandalan aset."],
+                  ["Industrial Artificial Intelligence & Data Analytics", "198", "3852–6073", "Machine learning industri, PINN, computer vision, analitik prediktif."],
+                  ["Continuous Improvement & Lean Six Sigma", "198", "3902–6454", "Kaizen, 5S, VSM, A3, Hoshin Kanri X-Matrix, eliminasi 8 pemborosan (Muda)."],
                 ],
               },
             },
@@ -859,7 +866,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               paragraphs: [
                 "1. Hak Milik Pengguna: Anda memegang hak kepemilikan penuh atas data masukan (prompt), dokumen, gambar, atau berkas CAD yang Anda unggah ke RuangTI.",
                 "2. Hak Luaran (Output): Seluruh hasil kalkulasi, ringkasan, kode pemrograman, dan laporan dokumen biner (.xlsx, .docx, .pdf, .pptx) yang di-generate oleh sistem menjadi milik Anda dan dapat digunakan untuk keperluan akademik maupun profesional.",
-                "3. Hak Platform: Kode sumber platform RuangTI, arsitektur UI/UX, logo, 742 modul knowledge base, dan dokumentasi resmi dilindungi oleh hak cipta pengembang.",
+                "3. Hak Platform: Kode sumber platform RuangTI, arsitektur UI/UX, logo, 4.595 modul knowledge base, dan dokumentasi resmi dilindungi oleh hak cipta pengembang.",
               ],
             },
             {
@@ -892,7 +899,7 @@ export const DOCS_CATEGORIES: DocCategory[] = [
               title: "6. Batasan Tanggung Jawab (Disclaimer)",
               paragraphs: [
                 "Layanan RuangTI disediakan atas dasar 'sebagaimana adanya' (as is) dan 'sebagaimana tersedia' (as available).",
-                "Meskipun RuangTI didukung oleh 742 modul terverifikasi dan formula KaTeX eksak, pengembang tidak bertanggung jawab atas segala kerugian finansial, kegagalan operasional fisik pabrik, atau keputusan bisnis kritis yang diambil semata-mata berdasarkan luaran komputasi AI tanpa validasi ahli insinyur di lapangan.",
+                "Meskipun RuangTI didukung oleh 4.595 modul terverifikasi dan formula KaTeX eksak, pengembang tidak bertanggung jawab atas segala kerugian finansial, kegagalan operasional fisik pabrik, atau keputusan bisnis kritis yang diambil semata-mata berdasarkan luaran komputasi AI tanpa validasi ahli insinyur di lapangan.",
               ],
             },
           ],
