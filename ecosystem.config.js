@@ -8,13 +8,18 @@
 // Backend runs through run_backend.py wrapper (uv interpreter, unbuffered)
 // so PM2 tracks a single stable python.exe process instead of guessing
 // uvicorn's reloader children. Frontend: next start (production build).
+//
+// CATATAN: interpreter di bawah adalah Python yang dependensinya lengkap
+// (lihat backend/requirements.txt). Venv hermes-agent TIDAK dipakai lagi
+// karena tidak memuat pydantic-settings/fastapi, sehingga backend gagal boot
+// dengan ModuleNotFoundError.
 module.exports = {
   apps: [
     {
       name: "ruangti-backend",
       script: "run_backend.py",
       cwd: __dirname,
-      interpreter: "C:/Users/Rafi/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe",
+      interpreter: "C:/Users/Rafi/AppData/Local/Python/bin/python.exe",
       // Restart policy: crash => immediate restart; 4 consecutive unstable
       // restarts < 10s apart => backoff, stop after 8 tries (fail loudly).
       autorestart: true,
@@ -41,6 +46,21 @@ module.exports = {
       max_memory_restart: "1G",
       out_file: "./logs/pm2-frontend-out.log",
       error_file: "./logs/pm2-frontend-err.log",
+      time: true,
+    },
+    {
+      // Engine AI utama RuangTI (proxy Xiaomi MiMo). Bila proses ini mati,
+      // backend otomatis fallback ke 9Router sehingga platform tetap hidup.
+      name: "ruangti-mimoly",
+      script: "mimoly.py",
+      args: "serve --host 127.0.0.1 --port 8080",
+      cwd: "../mimoly",
+      interpreter: "../mimoly/.venv/Scripts/python.exe",
+      autorestart: true,
+      max_restarts: 8,
+      min_uptime: "15s",
+      restart_delay: 3000,
+      max_memory_restart: "1G",
       time: true,
     },
   ],
