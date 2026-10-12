@@ -17,6 +17,7 @@ import (
 )
 
 func main() {
+	host := flag.String("host", "0.0.0.0", "Host address listening HTTP server")
 	port := flag.Int("port", 8000, "Port listening HTTP server")
 	mimolyURL := flag.String("mimoly", "http://127.0.0.1:8080/v1", "Base URL Mimoly AI Gateway")
 	router9URL := flag.String("router9", "http://127.0.0.1:20128/v1", "Base URL 9Router Fallback Gateway")
@@ -45,14 +46,14 @@ func main() {
 	mux.Handle("/", NewSPAHandler())
 
 	server := &http.Server{
-		Addr:         fmt.Sprintf("127.0.0.1:%d", *port),
+		Addr:         fmt.Sprintf("%s:%d", *host, *port),
 		Handler:      mux,
 		ReadTimeout:  15 * time.Second,
 		WriteTimeout: 5 * time.Minute,
 	}
 
 	go func() {
-		log.Printf("RuangTI Go Server berjalan di http://127.0.0.1:%d", *port)
+		log.Printf("RuangTI Go Server berjalan di http://%s:%d (Akses HP: http://192.168.100.158:%d)", *host, *port, *port)
 		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			log.Fatalf("Gagal menjalankan server: %v", err)
 		}
