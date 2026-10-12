@@ -190,7 +190,7 @@
   </div>
 
   <!-- Pinned Bottom Composer Dock (Fixed di dasar viewport dengan safe-area inset) -->
-  <div class="shrink-0 bg-white/95 backdrop-blur-md pt-2 pb-3 border-t-2 border-black z-20 pb-[max(12px,env(safe-area-inset-bottom))]">
+  <div class="shrink-0 bg-white/95 backdrop-blur-md pt-2 pb-3 z-20 pb-[max(12px,env(safe-area-inset-bottom))]">
     <Composer
       {selectedModelId}
       {isStreaming}
