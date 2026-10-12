@@ -128,22 +128,6 @@
 </script>
 
 <div class="flex-1 flex flex-col overflow-hidden min-h-0 relative ti-grid-bw">
-  <!-- Watermark Bagan Alir Simbol ASME di Latar Belakang -->
-  <svg class="asme-watermark-bw w-full h-full" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="#000" stroke-width="2" fill="none">
-      <circle cx="60" cy="110" r="22" />
-      <line x1="60" y1="132" x2="60" y2="175" />
-      <rect x="38" y="175" width="44" height="44" rx="2" />
-      <line x1="60" y1="219" x2="60" y2="260" />
-      <path d="M42 260 L78 260 L60 288 Z" />
-
-      <circle cx="340" cy="330" r="20" />
-      <line x1="340" y1="350" x2="340" y2="385" />
-      <rect x="320" y="385" width="40" height="40" rx="2" />
-      <line x1="340" y1="425" x2="340" y2="460" />
-      <path d="M322 460 L358 460 L340 485 Z" />
-    </g>
-  </svg>
 
   <!-- Message Container (Hanya area ini yang scroll) -->
   <div bind:this={chatContainerRef} class="flex-1 overflow-y-auto min-h-0 relative z-10">
