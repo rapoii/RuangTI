@@ -30,7 +30,7 @@
 
 <!-- Side Navigation Drawer (.neo-card format) -->
 <aside
-  class="fixed top-0 bottom-0 left-0 w-[290px] sm:w-[320px] bg-white border-r-2 border-black z-50 flex flex-col shadow-[6px_0px_0px_#000] transition-transform duration-200 ease-out {isOpen ? 'translate-x-0' : '-translate-x-full'}"
+  class="fixed top-0 bottom-0 left-0 w-[290px] sm:w-[320px] bg-white border-r-2 border-black z-50 flex flex-col transition-all duration-200 ease-out {isOpen ? 'translate-x-0 shadow-[6px_0px_0px_#000] visible' : '-translate-x-full invisible'}"
 >
   <!-- Drawer Header -->
   <div class="p-4 border-b-2 border-black flex items-center justify-between bg-white shrink-0">
