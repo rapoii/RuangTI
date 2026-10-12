@@ -162,13 +162,16 @@
   }
 </script>
 
-<div class="flex-1 flex flex-col overflow-hidden min-h-0 relative ti-grid-bw">
+<div class="flex-1 flex flex-col overflow-hidden min-h-0 relative bg-white">
 
   <!-- Message Container (Hanya area ini yang scroll) -->
   <div bind:this={chatContainerRef} class="flex-1 overflow-y-auto min-h-0 relative z-10">
     {#if messages.length === 0}
-      <!-- Empty State: sapaan acak terpusat (konsep Claude) di atas latar grid kotak-kotak -->
-      <div class="h-full flex items-center justify-center px-6">
+      <!-- Empty State: logo RuangTI + sapaan acak terpusat di atas latar putih polos -->
+      <div class="h-full flex flex-col items-center justify-center px-6">
+        <div class="w-12 h-12 bg-black text-white neo-card flex items-center justify-center font-black text-lg mb-4 shadow-[3px_3px_0px_#000]">
+          TI
+        </div>
         <h1 class="text-xl sm:text-3xl font-black text-black tracking-tight text-center leading-snug">
           {greetingByHour()}, <span class="underline decoration-2 underline-offset-4">{randomWord}</span>
         </h1>
