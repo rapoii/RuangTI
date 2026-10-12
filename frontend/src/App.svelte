@@ -1,13 +1,24 @@
 <script lang="ts">
   import Header from './components/Header.svelte';
+  import Sidebar from './components/Sidebar.svelte';
   import Chat from './routes/Chat.svelte';
   import Docs from './routes/Docs.svelte';
 
   let activeRoute = $state('chat');
+  let isSidebarOpen = $state(false);
+  let chatKey = $state(0);
 
   function handleNavigate(route: string) {
     activeRoute = route;
     window.location.hash = route;
+    isSidebarOpen = false;
+  }
+
+  function handleNewChat() {
+    activeRoute = 'chat';
+    window.location.hash = 'chat';
+    chatKey += 1;
+    isSidebarOpen = false;
   }
 
   // Baca hash awal jika ada
@@ -19,12 +30,27 @@
   }
 </script>
 
-<div class="h-[100dvh] max-h-[100dvh] flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white">
-  <Header {activeRoute} onNavigate={handleNavigate} />
+<div class="h-[100dvh] max-h-[100dvh] flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white relative">
+  <Header
+    {activeRoute}
+    onNavigate={handleNavigate}
+    onToggleSidebar={() => (isSidebarOpen = !isSidebarOpen)}
+    onNewChat={handleNewChat}
+  />
+
+  <Sidebar
+    isOpen={isSidebarOpen}
+    onClose={() => (isSidebarOpen = false)}
+    onNavigate={handleNavigate}
+    onNewChat={handleNewChat}
+    {activeRoute}
+  />
 
   <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
     {#if activeRoute === 'chat'}
-      <Chat />
+      {#key chatKey}
+        <Chat />
+      {/key}
     {:else}
       <Docs />
     {/if}
