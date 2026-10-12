@@ -43,18 +43,18 @@
     >
       Mulai Bertanya
     </button>
-    <span class="text-[10px] font-mono font-bold text-neutral-400 tracking-wider">
+    <span class="text-[10px] font-mono font-bold text-text-secondary tracking-wider">
       GRATIS · TANPA DAFTAR
     </span>
   </section>
 
   <!-- CONTOH PERCAKAPAN -->
   <section class="px-5 py-8 border-t-2 border-black">
-    <p class="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wider mb-3">
+    <h2 class="text-[11px] font-mono font-bold text-text-secondary uppercase tracking-wider mb-3">
       Contoh Percakapan
-    </p>
+    </h2>
     <div class="neo-card bg-white p-3 flex flex-col gap-2.5">
-      <div class="neo-card bg-neutral-100 text-black px-3 py-2 max-w-[85%] self-end text-xs font-semibold">
+      <div class="neo-card bg-canvas-subtle text-black px-3 py-2 max-w-[85%] self-end text-xs font-semibold">
         Turunkan rumus EOQ dan arti tiap variabelnya
       </div>
       <div class="neo-card bg-white text-black px-3 py-2.5 max-w-[95%] self-start text-xs leading-relaxed">
@@ -69,30 +69,30 @@
 
   <!-- BASIS PENGETAHUAN -->
   <section class="px-5 py-8 border-t-2 border-black">
-    <p class="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wider mb-3">
+    <h2 class="text-[11px] font-mono font-bold text-text-secondary uppercase tracking-wider mb-3">
       Basis Pengetahuan
-    </p>
+    </h2>
     <div class="grid grid-cols-3 gap-2.5">
-      <div class="border-2 border-black rounded-xl bg-white py-3 text-center">
-        <b class="block text-lg font-black leading-none">4.595</b>
-        <span class="text-[8px] font-mono font-bold text-neutral-500 uppercase tracking-wider">Modul</span>
+      <div class="neo-badge bg-white py-3 text-center">
+        <strong class="block text-lg font-black leading-none">4.595</strong>
+        <span class="text-[10px] font-mono font-bold text-text-secondary uppercase tracking-wider">Modul</span>
       </div>
-      <div class="border-2 border-black rounded-xl bg-white py-3 text-center">
-        <b class="block text-lg font-black leading-none">32.413</b>
-        <span class="text-[8px] font-mono font-bold text-neutral-500 uppercase tracking-wider">Seksi</span>
+      <div class="neo-badge bg-white py-3 text-center">
+        <strong class="block text-lg font-black leading-none">32.413</strong>
+        <span class="text-[10px] font-mono font-bold text-text-secondary uppercase tracking-wider">Seksi</span>
       </div>
-      <div class="border-2 border-black rounded-xl bg-white py-3 text-center">
-        <b class="block text-lg font-black leading-none">~13 MB</b>
-        <span class="text-[8px] font-mono font-bold text-neutral-500 uppercase tracking-wider">Ukuran</span>
+      <div class="neo-badge bg-white py-3 text-center">
+        <strong class="block text-lg font-black leading-none">~13 MB</strong>
+        <span class="text-[10px] font-mono font-bold text-text-secondary uppercase tracking-wider">Runtime</span>
       </div>
     </div>
   </section>
 
   <!-- TOPIK POPULER -->
   <section class="px-5 py-8 border-t-2 border-black">
-    <p class="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wider mb-3">
+    <h2 class="text-[11px] font-mono font-bold text-text-secondary uppercase tracking-wider mb-3">
       Topik Populer
-    </p>
+    </h2>
     <div class="flex flex-wrap gap-2">
       {#each TOPICS as t}
         <button
@@ -108,7 +108,7 @@
 
   <!-- FOOTER -->
   <footer class="px-5 py-7 border-t-2 border-black text-center">
-    <p class="text-[9px] font-mono font-bold text-neutral-400 tracking-wider">
+    <p class="text-[10px] font-mono font-bold text-text-secondary tracking-wider">
       RUANGTI · GO + SVELTE · TEKNIK INDUSTRI
     </p>
   </footer>

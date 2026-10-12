@@ -6,66 +6,103 @@
   import Docs from './routes/Docs.svelte';
   import Landing from './routes/Landing.svelte';
 
+  const ROUTES = ['chat', 'docs'];
+
   let activeRoute = $state('landing');
   let isSidebarOpen = $state(false);
   let chatKey = $state(0);
   let hasMessages = $state(false);
   let pendingMessage = $state('');
+  let suppressHashChange = $state(false);
 
   // Tinggi viewport visual (menyesuaikan saat keyboard virtual terbuka)
   let appHeight = $state('100dvh');
 
+  function routeFromHash(): string {
+    const hash = window.location.hash.replace('#', '');
+    return ROUTES.includes(hash) ? hash : 'landing';
+  }
+
+  // Tulis hash tanpa memicu handler kita sendiri
+  function applyHash(route: string) {
+    const target = route === 'landing' ? '' : route;
+    if (window.location.hash.replace('#', '') !== target) {
+      suppressHashChange = true;
+      window.location.hash = target;
+    }
+  }
+
+  // Navigasi internal (Header/Sidebar) — tanpa pertanyaan awal
   function handleNavigate(route: string) {
+    pendingMessage = '';
     activeRoute = route;
-    window.location.hash = route;
+    hasMessages = false;
+    if (route === 'chat') chatKey += 1;
     isSidebarOpen = false;
+    applyHash(route);
   }
 
   function handleNewChat() {
-    pendingMessage = '';
-    activeRoute = 'chat';
-    window.location.hash = 'chat';
-    hasMessages = false;
-    chatKey += 1;
-    isSidebarOpen = false;
+    handleNavigate('chat');
   }
 
+  // Dari landing — pindah ke chat, opsional membawa pertanyaan awal
   function handleStartChat(message?: string) {
     pendingMessage = message ?? '';
     activeRoute = 'chat';
-    window.location.hash = 'chat';
     hasMessages = false;
     chatKey += 1;
+    isSidebarOpen = false;
+    applyHash('chat');
+  }
+
+  // Back/Forward browser atau hash diedit manual
+  function handleHashChange() {
+    if (suppressHashChange) {
+      suppressHashChange = false;
+      return;
+    }
+    const route = routeFromHash();
+    if (route === activeRoute) return;
+    pendingMessage = '';
+    activeRoute = route;
+    hasMessages = false;
+    if (route === 'chat') chatKey += 1;
     isSidebarOpen = false;
   }
 
   onMount(() => {
     const vv = window.visualViewport;
-    if (!vv) return;
 
     const applyHeight = () => {
       // Kunci tinggi app persis setinggi area yang terlihat.
       // Saat keyboard terbuka, hanya composer yang naik — bukan seluruh halaman.
-      appHeight = `${Math.round(vv.height)}px`;
+      appHeight = `${Math.round(vv!.height)}px`;
       window.scrollTo(0, 0);
     };
 
-    applyHeight();
-    vv.addEventListener('resize', applyHeight);
-    vv.addEventListener('scroll', applyHeight);
+    if (vv) {
+      applyHeight();
+      vv.addEventListener('resize', applyHeight);
+      vv.addEventListener('scroll', applyHeight);
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
 
     return () => {
-      vv.removeEventListener('resize', applyHeight);
-      vv.removeEventListener('scroll', applyHeight);
+      if (vv) {
+        vv.removeEventListener('resize', applyHeight);
+        vv.removeEventListener('scroll', applyHeight);
+      }
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
     };
   });
 
-  // Baca hash awal jika ada
+  // Baca hash awal secara sinkron agar tidak ada kedipan rute
   if (typeof window !== 'undefined') {
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'landing' || hash === 'chat' || hash === 'docs') {
-      activeRoute = hash;
-    }
+    activeRoute = routeFromHash();
   }
 </script>
 
