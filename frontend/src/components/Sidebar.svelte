@@ -30,7 +30,7 @@
 
 <!-- Side Navigation Drawer (.neo-card format) -->
 <aside
-  class="fixed top-0 bottom-0 left-0 w-[290px] sm:w-[320px] bg-white border-r-2 border-black z-50 flex flex-col justify-between shadow-[6px_0px_0px_#000] transition-transform duration-200 ease-out {isOpen ? 'translate-x-0' : '-translate-x-full'}"
+  class="fixed top-0 bottom-0 left-0 w-[290px] sm:w-[320px] bg-white border-r-2 border-black z-50 flex flex-col shadow-[6px_0px_0px_#000] transition-transform duration-200 ease-out {isOpen ? 'translate-x-0' : '-translate-x-full'}"
 >
   <!-- Drawer Header -->
   <div class="p-4 border-b-2 border-black flex items-center justify-between bg-white shrink-0">
@@ -57,7 +57,7 @@
 
   <!-- Drawer Body Navigation Links -->
   <div class="flex-1 overflow-y-auto p-3.5 space-y-4">
-    <!-- Tombol Aksi Utama: Chat Baru (Satu ikon plus) -->
+    <!-- Tombol Aksi Utama: Chat Baru -->
     <button
       type="button"
       onclick={onNewChat}
@@ -89,33 +89,6 @@
           </span>
         </button>
       {/each}
-    </div>
-  </div>
-
-  <!-- Drawer Footer: Akses Modul TI & Metadata Sistem -->
-  <div class="p-3 border-t-2 border-black bg-neutral-50 shrink-0 text-[10px] mono space-y-2">
-    <button
-      type="button"
-      onclick={() => onNavigate('docs')}
-      class="neo-btn w-full py-2 px-2.5 bg-white hover:bg-neutral-100 text-black font-black flex items-center justify-between text-xs"
-    >
-      <div class="flex items-center gap-2">
-        <svg class="w-3.5 h-3.5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-        </svg>
-        <span>Modul TI (4.595)</span>
-      </div>
-      <span class="neo-badge px-1 py-0.2 bg-neutral-100 text-[8px] font-bold">RAG</span>
-    </button>
-
-    <div class="flex justify-between font-bold text-black pt-1 border-t border-black/10">
-      <span>RuangTI Engine</span>
-      <span>Go + Svelte 5</span>
-    </div>
-    <div class="flex justify-between text-neutral-500">
-      <span>Memory Runtime</span>
-      <span class="text-emerald-700 font-bold">~17 MB RAM</span>
     </div>
   </div>
 </aside>
