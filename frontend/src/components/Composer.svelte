@@ -105,7 +105,7 @@
     <textarea
       bind:value={inputMessage}
       onkeydown={handleKeyDown}
-      placeholder="Tanyakan konsep, rumus matematis, atau studi kasus Teknik Industri..."
+      placeholder="Ada yang bisa saya bantu hari ini?"
       rows="2"
       class="w-full bg-transparent resize-none text-xs sm:text-sm text-black placeholder:text-neutral-400 focus:outline-none leading-relaxed px-1 font-medium"
     ></textarea>
