@@ -9,6 +9,7 @@
   let { selectedModelId, onSelect }: Props = $props();
 
   let isOpen = $state(false);
+  let containerRef = $state<HTMLDivElement | null>(null);
 
   let currentOption = $derived(
     THINKING_EFFORT_OPTIONS.find((o) => o.modelId === selectedModelId) || THINKING_EFFORT_OPTIONS[0]
@@ -22,9 +23,34 @@
     onSelect(opt);
     isOpen = false;
   }
+
+  // Tutup dropdown saat mengetuk di luar area selector (klik-away).
+  // Memakai listener dokumen agar tidak terpengaruh containing block dari
+  // ancestor yang punya `backdrop-filter` (mis. footer composer).
+  $effect(() => {
+    if (!isOpen) return;
+
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node | null;
+      if (containerRef && target && !containerRef.contains(target)) {
+        isOpen = false;
+      }
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') isOpen = false;
+    };
+
+    document.addEventListener('pointerdown', onPointerDown, true);
+    document.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown, true);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  });
 </script>
 
-<div class="relative inline-block text-left">
+<div bind:this={containerRef} class="relative inline-block text-left">
   <!-- Trigger Button (Neobrutalism .neo-btn) -->
   <button
     type="button"
@@ -43,14 +69,6 @@
 
   <!-- Dropdown Popover (.neo-card B&W) -->
   {#if isOpen}
-    <!-- Backdrop to close -->
-    <button
-      type="button"
-      class="fixed inset-0 z-40 bg-transparent cursor-default"
-      onclick={() => (isOpen = false)}
-      aria-label="Tutup menu"
-    ></button>
-
     <div class="absolute bottom-full mb-2 left-0 z-50 w-72 sm:w-80 neo-card bg-white p-2 flex flex-col gap-1.5 shadow-[4px_4px_0px_#000]">
       <div class="px-2 py-1 border-b-2 border-black text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider flex justify-between">
         <span>Pilih Model</span>
