@@ -74,8 +74,8 @@ Dokumen ini adalah **satu-satunya sumber kebenaran (single source of truth)** un
 RuangTI mengusung arsitektur visual **Minimalist Pure Black & White Neobrutalism** dengan karakter khas studio Teknik Industri:
 - **Monokrom Murni (Zero Slop):** Tanpa gradien warna-warni murah atau efek blur ungu/biru. Hanya hitam pekat, putih bersih, dan abu-abu netral terstruktur.
 - **Konsistensi Absolut Bentuk & Ukuran:** Seluruh elemen bertipe sama wajib menggunakan token ukuran radius, tebal border, dan offset bayangan yang seragam tanpa variasi acak.
-- **Latar Belakang Gambar Teknik (Ambient Motif):** Tekstur kertas milimeter blok monokrom tipis (`opacity ~4%`) dengan watermark samar simbol alur proses ASME (⭕ Operasi, 🔲 Inspeksi, ➡️ Transportasi, ▽ Penyimpanan) di ruang kosong chat.
-- **Viewport Terkunci (100dvh):** Layout mobile terkunci pada `100dvh` (`overflow-hidden flex flex-col`). Header dan composer fixed, hanya kontainer gelembung chat yang bisa di-scroll.
+- **Latar Putih Polos (Zero Distraction):** Kanvas chat memakai `bg-white` polos tanpa grid, motif, atau watermark. Fokus 100% pada percakapan.
+- **Viewport Adaptif (VisualViewport):** Tinggi app shell diikat runtime ke `window.visualViewport.height` sehingga saat keyboard virtual muncul, hanya composer yang naik — bukan seluruh halaman terangkat (perilaku setara ChatGPT). Fallback `100dvh` sebelum listener aktif.
 
 ---
 
@@ -104,10 +104,10 @@ Menggunakan dua font utama:
 
 ## 4. Layout & Spacing (Tata Letak & Viewport)
 
-- **App Shell Viewport:** Wajib `h-[100dvh] max-h-[100dvh] flex flex-col overflow-hidden`.
-- **Pinned Header:** Tinggi tepat `56px` (`h-14 shrink-0 border-b-2 border-black`).
-- **Scrollable Chat Main:** Mengisi sisa ruang `flex-1 overflow-y-auto px-4 py-3`.
-- **Pinned Composer:** Terpasang di dasar layar dengan padding aman `pb-[max(12px,env(safe-area-inset-bottom))]`.
+- **App Shell Viewport:** Tinggi diikat runtime ke `window.visualViewport.height` (`style="height: {appHeight}"`) dengan `flex flex-col overflow-hidden`. Fallback `100dvh` sebelum listener aktif. Tujuan: keyboard virtual hanya mengangkat composer, bukan seluruh halaman.
+- **Header Bersih (Borderless):** Tinggi `56px` (`h-14 shrink-0`), tanpa garis pembatas bawah — menyatu mulus dengan kanvas. Berisi tombol hamburger (kiri) dan tombol `+` Percakapan Baru (kanan, hanya tampil saat sudah ada pesan). Branding (logo + teks) tidak ditampilkan di header.
+- **Scrollable Chat Main:** Mengisi sisa ruang `flex-1 overflow-y-auto min-h-0`; hanya kontainer ini yang bisa di-scroll.
+- **Pinned Composer:** Terpasang di dasar layar tanpa garis pemisah atas, dengan padding aman `pb-[max(12px,env(safe-area-inset-bottom))]`.
 
 ---
 
@@ -171,9 +171,32 @@ box-shadow: none;
 font-family: 'JetBrains Mono', monospace;
 ```
 
+### Tipe 5: Sidebar Drawer (Navigasi Samping)
+- Lebar `290px` (mobile) / `320px` (sm+), `bg-white`, `border-r-2 border-black`.
+- Saat terbuka: `translate-x-0 shadow-[6px_0px_0px_#000]`.
+- Saat tertutup: `-translate-x-full invisible` (wajib `invisible` penuh agar hard shadow 6px tidak bocor di tepi kiri layar).
+- Backdrop overlay: `bg-black/50` **tanpa** `backdrop-blur` (hanya digelapkan, konten belakang tetap tajam).
+
 ---
 
-## 8. Selector Model (2 Mode)
+## 8. Pola Chat & Navigasi
+
+### Empty State (Layar Awal Sebelum Ada Pesan)
+- Terpusat vertikal & horizontal di kanvas putih polos: logo kotak hitam `TI` (`neo-card` 48×48) di atas sapaan.
+- Sapaan: `{Selamat pagi/siang/sore/malam}, {kata acak}` — kata acak bernuansa Teknik Industri (Efisiensi, Optimasi, Sinergi, Presisi, dll.), tanpa garis bawah.
+- Jam sapaan: `<11` pagi, `<15` siang, `<19` sore, sisanya malam.
+
+### Dropdown / Popover Menu
+- Kartu `neo-card` muncul di atas trigger (`bottom-full mb-2`), `shadow-[4px_4px_0px_#000]`.
+- Menutup saat tap di luar: `pointerdown` listener di level dokumen + `Escape`. **Jangan** pakai backdrop `position: fixed` (bisa terkurung ancestor ber-`backdrop-filter` sehingga area luar tidak merespons).
+
+### Composer
+- Kotak `neo-input` FLAT, textarea 1 baris dengan padding vertikal seimbang (`py-3`) agar placeholder berada di tengah.
+- Tombol (selector model, lampiran, kirim) semuanya dikunci `h-8` (32px) + `shrink-0` agar sejajar rapi.
+
+---
+
+## 9. Selector Model (2 Mode)
 
 RuangTI menyediakan 2 pilihan mode model di composer:
 
@@ -184,16 +207,18 @@ RuangTI menyediakan 2 pilihan mode model di composer:
 
 ---
 
-## 9. Do's and Don'ts
+## 10. Do's and Don'ts
 
 ### Do's:
 - **Lakukan:** Selalu gunakan token radius yang sama persis untuk elemen bertipe serupa.
 - **Lakukan:** Posisikan seluruh formula matematika KaTeX persis di tengah (`text-center w-full block`).
 - **Lakukan:** Pastikan setiap tombol interaktif memiliki micro-interaction geser saat disentuh.
-- **Lakukan:** Kunci layout viewport ke `100dvh` di perangkat seluler.
+- **Lakukan:** Ikat tinggi app shell ke `window.visualViewport.height` agar keyboard virtual hanya mengangkat composer.
+- **Lakukan:** Sembunyikan dropdown/menu popover saat pengguna mengetuk di luar area (`pointerdown` listener di level dokumen) — bukan mengandalkan backdrop `position: fixed` yang bisa terkurung ancestor ber-`backdrop-filter`.
 
 ### Don'ts:
 - **Dilarang:** Menambahkan gradien warna-warni ungu/biru atau elemen di luar spektrum Black & White.
 - **Dilarang:** Memberi bayangan pada input teks (`textarea`) atau badge status kecil.
 - **Dilarang:** Menggunakan ukuran border selain `2px` untuk kotak/tombol (kecuali badge `1.5px`).
 - **Dilarang:** Membiarkan halaman mobile bergulir penuh sehingga menenggelamkan kotak input.
+- **Dilarang:** Menampilkan nama provider/model upstream (mis. "Mimoly", "MiMo", "Studio") pada antarmuka pengguna.
