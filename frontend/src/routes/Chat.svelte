@@ -173,7 +173,7 @@
           TI
         </div>
         <h1 class="text-xl sm:text-3xl font-black text-black tracking-tight text-center leading-snug">
-          {greetingByHour()}, <span class="underline decoration-2 underline-offset-4">{randomWord}</span>
+          {greetingByHour()}, <span>{randomWord}</span>
         </h1>
       </div>
     {:else}
