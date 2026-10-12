@@ -1,0 +1,65 @@
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #F8F9FA;
+  --canvas-subtle: #F1F3F5;
+  --surface: #FFFFFF;
+  --surface-hover: #F8F9FA;
+  --surface-active: #E9ECEF;
+  --border: #E2E4E9;
+  --border-strong: #D0D3D9;
+  --text-primary: #16181D;
+  --text-secondary: #5F6570;
+  --text-tertiary: #8F95A0;
+  --accent: #E09F3E;
+  --accent-hover: #C98B32;
+  --accent-subtle: rgba(224, 159, 62, 0.12);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--canvas);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+/* Glassmorphism Header */
+.glass-header {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* KaTeX Display Math Center Alignment */
+.katex-display {
+  display: block;
+  margin: 1em 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
