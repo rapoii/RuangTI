@@ -106,8 +106,8 @@
       bind:value={inputMessage}
       onkeydown={handleKeyDown}
       placeholder="Ada yang bisa saya bantu hari ini?"
-      rows="2"
-      class="w-full bg-transparent resize-none text-xs sm:text-sm text-black placeholder:text-neutral-400 focus:outline-none leading-relaxed px-1 font-medium"
+      rows="1"
+      class="w-full bg-transparent resize-none text-base text-black placeholder:text-neutral-400 focus:outline-none leading-normal px-1 py-3 font-medium"
     ></textarea>
 
     <!-- Bottom Controls -->
