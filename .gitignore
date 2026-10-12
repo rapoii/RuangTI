@@ -35,6 +35,7 @@ yarn-error.log*
 *.log
 
 # Local env & secret files
+.superpowers/
 .env*.local
 .env
 .env.*
