@@ -7,6 +7,7 @@
   let activeRoute = $state('chat');
   let isSidebarOpen = $state(false);
   let chatKey = $state(0);
+  let hasMessages = $state(false);
 
   function handleNavigate(route: string) {
     activeRoute = route;
@@ -17,6 +18,7 @@
   function handleNewChat() {
     activeRoute = 'chat';
     window.location.hash = 'chat';
+    hasMessages = false;
     chatKey += 1;
     isSidebarOpen = false;
   }
@@ -33,6 +35,7 @@
 <div class="h-[100dvh] max-h-[100dvh] flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white relative">
   <Header
     {activeRoute}
+    {hasMessages}
     onNavigate={handleNavigate}
     onToggleSidebar={() => (isSidebarOpen = !isSidebarOpen)}
     onNewChat={handleNewChat}
@@ -49,7 +52,7 @@
   <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
     {#if activeRoute === 'chat'}
       {#key chatKey}
-        <Chat />
+        <Chat onMessagesChange={(val) => (hasMessages = val)} />
       {/key}
     {:else}
       <Docs />

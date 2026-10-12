@@ -5,6 +5,12 @@
   import { streamChat } from '../lib/sse';
   import type { ChatMessage, ThinkingOption } from '../lib/types';
 
+  interface Props {
+    onMessagesChange?: (hasMessages: boolean) => void;
+  }
+
+  let { onMessagesChange }: Props = $props();
+
   let messages = $state<ChatMessage[]>([]);
   let selectedModelId = $state('mimo-v2.6-pro@default');
   let isStreaming = $state(false);
@@ -33,6 +39,12 @@
       query: 'Jelaskan 7 jenis pemborosan (waste) dalam Lean Manufacturing dan berikan contoh konkret eliminasinya di lantai pabrik.',
     },
   ];
+
+  $effect(() => {
+    if (onMessagesChange) {
+      onMessagesChange(messages.length > 0);
+    }
+  });
 
   async function scrollToBottom() {
     await tick();
