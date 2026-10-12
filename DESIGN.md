@@ -173,14 +173,14 @@ font-family: 'JetBrains Mono', monospace;
 
 ---
 
-## 8. Multi-Tier Thinking Effort Selector
+## 8. Selector Model (2 Mode)
 
-Tersedia 5 level reasoning RuangTI Neural Engine (engine utama: Mimoly port 8080; cadangan: 9Router port 20128):
-1. **Fast (No Think)**: Respon kilat tanpa penalaran bertahap (`mimo-v2.6-flash@none`).
-2. **Low Effort**: Penalaran ringan kueri & kalkulasi ringkas (`mimo-v2.6-flash@default`).
-3. **Medium Effort**: Penalaran berimbang analisis terstruktur (`mimo-v2.6-flash@max`).
-4. **High Effort**: Penalaran mendalam optimasi & simulasi kompleks (`mimo-v2.6-pro@default`).
-5. **Extra High Effort**: Eksplorasi komputasi mendalam riset operasi (`mimo-v2.6-pro@max`).
+RuangTI menyediakan 2 pilihan mode model di composer:
+
+1. **RTI Pro** — Mode penalaran mendalam (thinking) untuk analisis, optimasi sistem, dan pembuktian matematis.
+2. **RTI Fast** — Mode respon instan (non-thinking) tanpa proses penalaran bertahap.
+
+> **Catatan internal (jangan tampilkan ke pengguna):** kedua mode dipetakan ke model upstream yang sama dengan pengaturan effort berbeda (`pro` → effort `default`/thinking, `fast` → effort `none`/non-thinking). Nama provider upstream tidak boleh bocor ke antarmuka.
 
 ---
 

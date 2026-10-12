@@ -30,7 +30,7 @@
     type="button"
     onclick={toggleOpen}
     class="neo-btn h-8 flex items-center gap-1.5 px-2.5 text-xs font-bold bg-white hover:bg-neutral-50 text-black shrink-0"
-    title="Pilih tingkat penalaran thinking AI"
+    title="Pilih model AI"
   >
     <svg class="w-3.5 h-3.5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
@@ -53,8 +53,8 @@
 
     <div class="absolute bottom-full mb-2 left-0 z-50 w-72 sm:w-80 neo-card bg-white p-2 flex flex-col gap-1.5 shadow-[4px_4px_0px_#000]">
       <div class="px-2 py-1 border-b-2 border-black text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider flex justify-between">
-        <span>Tingkat Penalaran AI</span>
-        <span>MIMOLY STUDIO</span>
+        <span>Pilih Model</span>
+        <span>RUANGTI</span>
       </div>
 
       {#each THINKING_EFFORT_OPTIONS as opt}
