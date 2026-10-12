@@ -150,7 +150,7 @@
           <button
             type="button"
             onclick={onStop}
-            class="neo-btn px-3 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-bold flex items-center gap-1.5"
+            class="neo-btn h-8 px-3 bg-black hover:bg-neutral-800 text-white text-xs font-bold flex items-center gap-1.5 shrink-0"
           >
             <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
               <rect x="6" y="6" width="12" height="12" rx="2"></rect>
@@ -162,7 +162,7 @@
             type="button"
             onclick={submit}
             disabled={!inputMessage.trim()}
-            class="neo-btn px-3.5 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-black flex items-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            class="neo-btn h-8 px-3.5 bg-black hover:bg-neutral-800 text-white text-xs font-black flex items-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shrink-0"
           >
             <span>Kirim</span>
             <svg class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">

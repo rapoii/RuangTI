@@ -29,7 +29,7 @@
   <button
     type="button"
     onclick={toggleOpen}
-    class="neo-btn flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold bg-white hover:bg-neutral-50 text-black"
+    class="neo-btn h-8 flex items-center gap-1.5 px-2.5 text-xs font-bold bg-white hover:bg-neutral-50 text-black shrink-0"
     title="Pilih tingkat penalaran thinking AI"
   >
     <svg class="w-3.5 h-3.5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
