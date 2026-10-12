@@ -194,6 +194,11 @@ font-family: 'JetBrains Mono', monospace;
 - Kotak `neo-input` FLAT, textarea 1 baris dengan padding vertikal seimbang (`py-3`) agar placeholder berada di tengah.
 - Tombol (selector model, lampiran, kirim) semuanya dikunci `h-8` (32px) + `shrink-0` agar sejajar rapi.
 
+### Landing Page (Sebelum Chat)
+- Rute default `landing`; tampil tanpa Header/Sidebar (halaman berdiri sendiri).
+- Susunan: Hero (logo TI, judul, tagline rujukan modul, CTA "Mulai Bertanya", catatan gratis) → Contoh Percakapan (cuplikan EOQ, rumus KaTeX) → Basis Pengetahuan (3 angka) → Topik Populer (chip) → Footer.
+- CTA & chip memanggil `onStartChat(question?)`: berpindah ke rute `chat` dan mengirim pertanyaan awal bila ada (dikirim tepat satu kali via prop `initialMessage` di `Chat.svelte`).
+
 ---
 
 ## 9. Selector Model (2 Mode)
