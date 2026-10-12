@@ -4,8 +4,9 @@
   import Sidebar from './components/Sidebar.svelte';
   import Chat from './routes/Chat.svelte';
   import Docs from './routes/Docs.svelte';
+  import Landing from './routes/Landing.svelte';
 
-  let activeRoute = $state('chat');
+  let activeRoute = $state('landing');
   let isSidebarOpen = $state(false);
   let chatKey = $state(0);
   let hasMessages = $state(false);
@@ -20,6 +21,14 @@
   }
 
   function handleNewChat() {
+    activeRoute = 'chat';
+    window.location.hash = 'chat';
+    hasMessages = false;
+    chatKey += 1;
+    isSidebarOpen = false;
+  }
+
+  function handleStartChat() {
     activeRoute = 'chat';
     window.location.hash = 'chat';
     hasMessages = false;
@@ -51,8 +60,8 @@
   // Baca hash awal jika ada
   if (typeof window !== 'undefined') {
     const hash = window.location.hash.replace('#', '');
-    if (hash === 'docs') {
-      activeRoute = 'docs';
+    if (hash === 'landing' || hash === 'chat' || hash === 'docs') {
+      activeRoute = hash;
     }
   }
 </script>
@@ -61,29 +70,33 @@
   class="flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white relative"
   style="height: {appHeight}; max-height: {appHeight};"
 >
-  <Header
-    {activeRoute}
-    {hasMessages}
-    onNavigate={handleNavigate}
-    onToggleSidebar={() => (isSidebarOpen = !isSidebarOpen)}
-    onNewChat={handleNewChat}
-  />
+  {#if activeRoute === 'landing'}
+    <Landing onStartChat={handleStartChat} />
+  {:else}
+    <Header
+      {activeRoute}
+      {hasMessages}
+      onNavigate={handleNavigate}
+      onToggleSidebar={() => (isSidebarOpen = !isSidebarOpen)}
+      onNewChat={handleNewChat}
+    />
 
-  <Sidebar
-    isOpen={isSidebarOpen}
-    onClose={() => (isSidebarOpen = false)}
-    onNavigate={handleNavigate}
-    onNewChat={handleNewChat}
-    {activeRoute}
-  />
+    <Sidebar
+      isOpen={isSidebarOpen}
+      onClose={() => (isSidebarOpen = false)}
+      onNavigate={handleNavigate}
+      onNewChat={handleNewChat}
+      {activeRoute}
+    />
 
-  <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
-    {#if activeRoute === 'chat'}
-      {#key chatKey}
-        <Chat onMessagesChange={(val) => (hasMessages = val)} />
-      {/key}
-    {:else}
-      <Docs />
-    {/if}
-  </main>
+    <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
+      {#if activeRoute === 'chat'}
+        {#key chatKey}
+          <Chat onMessagesChange={(val) => (hasMessages = val)} />
+        {/key}
+      {:else}
+        <Docs />
+      {/if}
+    </main>
+  {/if}
 </div>
