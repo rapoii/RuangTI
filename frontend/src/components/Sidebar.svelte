@@ -22,7 +22,7 @@
 {#if isOpen}
   <button
     type="button"
-    class="fixed inset-0 bg-black/50 z-40 backdrop-blur-[1px] transition-opacity cursor-default"
+    class="fixed inset-0 bg-black/50 z-40 transition-opacity cursor-default"
     onclick={onClose}
     aria-label="Tutup Menu Navigasi"
   ></button>
