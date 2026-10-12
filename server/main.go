@@ -40,6 +40,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/health", handlers.NewHealthHandler())
 	mux.HandleFunc("/api/chat/stream", handlers.NewChatStreamHandler(aiClient, ragSvc))
+	mux.HandleFunc("/api/upload", handlers.NewUploadHandler())
 
 	server := &http.Server{
 		Addr:         fmt.Sprintf("127.0.0.1:%d", *port),
