@@ -149,7 +149,7 @@
   <div bind:this={chatContainerRef} class="flex-1 overflow-y-auto min-h-0 relative z-10">
     {#if messages.length === 0}
       <!-- Empty State / Welcome Screen Monokrom -->
-      <div class="max-w-3xl mx-auto px-4 py-8 sm:py-14 flex flex-col items-center text-center">
+      <div class="max-w-3xl mx-auto px-4 py-5 sm:py-14 flex flex-col items-center text-center">
         <!-- Badge Identitas ASME -->
         <div class="neo-badge inline-flex items-center gap-1.5 px-2.5 py-1 bg-neutral-100 text-black text-[10px] mono font-bold mb-3">
           <span>ASME Y15.3M WORK STUDY</span>
@@ -157,23 +157,23 @@
           <span>4.595 MODUL</span>
         </div>
 
-        <div class="w-12 h-12 bg-black text-white neo-card flex items-center justify-center font-black text-xl mb-3 shadow-[3px_3px_0px_#000]">
+        <div class="w-10 h-10 bg-black text-white neo-card flex items-center justify-center font-black text-lg mb-2.5 shadow-[3px_3px_0px_#000]">
           TI
         </div>
         <h1 class="text-lg sm:text-2xl font-black text-black tracking-tight mb-1.5">
           Asisten Riset & Keilmuan Teknik Industri
         </h1>
-        <p class="text-xs sm:text-sm text-neutral-600 max-w-md mb-6 leading-relaxed">
+        <p class="text-xs sm:text-sm text-neutral-600 max-w-md mb-5 leading-relaxed">
           Konsultasi metodologi kerja, perakitan produk, tata letak pabrik, dan kalkulasi matematis.
         </p>
 
         <!-- Suggestion Grid (.neo-btn seragam) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full text-left">
+        <div class="grid grid-cols-2 gap-2 sm:gap-2.5 w-full text-left">
           {#each SUGGESTIONS as s}
             <button
               type="button"
               onclick={() => handleSend(s.query)}
-              class="neo-btn p-3 bg-white hover:bg-neutral-50 text-left transition-all group shadow-[2px_2px_0px_#000]"
+              class="neo-btn p-2.5 sm:p-3 bg-white hover:bg-neutral-50 text-left transition-all group shadow-[2px_2px_0px_#000]"
             >
               <div class="flex items-center justify-between mb-1">
                 <span class="text-xs font-black text-black group-hover:underline">
