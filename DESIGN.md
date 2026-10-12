@@ -1,108 +1,199 @@
-# DESIGN.md — Sistem Desain RuangTI (Versi 4.0 - Pure Light Universal Industrial Engineering)
+---
+version: alpha
+name: RuangTI
+description: Pure Black & White Neobrutalism Design System for Industrial Engineering AI Workspace.
+colors:
+  primary: "#000000"
+  secondary: "#71717A"
+  canvas: "#FFFFFF"
+  canvas-subtle: "#F4F4F5"
+  surface: "#FFFFFF"
+  surface-user: "#F4F4F5"
+  border: "#000000"
+  shadow: "#000000"
+  shadow-muted: "#71717A"
+typography:
+  h1:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 1.5rem
+    fontWeight: 800
+    lineHeight: 1.2
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 0.875rem
+  mono:
+    fontFamily: JetBrains Mono
+    fontSize: 0.75rem
+rounded:
+  card: 16px
+  button: 10px
+  input: 12px
+  badge: 6px
+spacing:
+  xs: 4px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 24px
+components:
+  card-container:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.primary}"
+    rounded: "{rounded.card}"
+    padding: 16px
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "#FFFFFF"
+    rounded: "{rounded.button}"
+    padding: 8px
+  button-secondary:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.primary}"
+    rounded: "{rounded.button}"
+    padding: 8px
+  input-field:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.primary}"
+    rounded: "{rounded.input}"
+    padding: 10px
+  status-badge:
+    backgroundColor: "{colors.canvas-subtle}"
+    textColor: "{colors.primary}"
+    rounded: "{rounded.badge}"
+    padding: 4px
+---
 
-Dokumen ini adalah **satu-satunya sumber kebenaran (single source of truth)** untuk seluruh keputusan visual, antarmuka, token warna, tipografi, dan interaksi web app **RuangTI** (Platform AI Chat & Workspace Rekayasa Teknik Industri).
+# DESIGN.md — Sistem Desain RuangTI (Versi 5.0: Pure Black & White Neobrutalism)
+
+Dokumen ini adalah **satu-satunya sumber kebenaran (single source of truth)** untuk seluruh keputusan visual, komponen antarmuka, token bentuk, ukuran, bayangan, dan interaksi pada aplikasi **RuangTI** (Industrial Engineering AI Workspace).
 
 ---
 
-## 1. Filosofi & Esensi Desain
-RuangTI dirancang sebagai **"Ruang Kerja AI & Berpikir Rekayasa Sistem yang Tenang"** (*Industrial Engineering Workspace & Knowledge Hub*).
-- **Pendekatan Visual**: Pure Light Mode, Clean, Minimalist, Precision-Engineered, Human-Centric, Anti-AI Slop, dan **High-Performance 60fps Low-End Device Ready**.
-- **Karakter Antarmuka**: Tenang seperti ruang studio laboratorium teknik, tajam dan terstruktur, fokus pada konten matematis, formula optimasi, grafik alir, dan logika sistem tanpa distraksi visual.
+## 1. Overview (Filosofi & Esensi Desain)
+
+RuangTI mengusung arsitektur visual **Minimalist Pure Black & White Neobrutalism** dengan karakter khas studio Teknik Industri:
+- **Monokrom Murni (Zero Slop):** Tanpa gradien warna-warni murah atau efek blur ungu/biru. Hanya hitam pekat, putih bersih, dan abu-abu netral terstruktur.
+- **Konsistensi Absolut Bentuk & Ukuran:** Seluruh elemen bertipe sama wajib menggunakan token ukuran radius, tebal border, dan offset bayangan yang seragam tanpa variasi acak.
+- **Latar Belakang Gambar Teknik (Ambient Motif):** Tekstur kertas milimeter blok monokrom tipis (`opacity ~4%`) dengan watermark samar simbol alur proses ASME (⭕ Operasi, 🔲 Inspeksi, ➡️ Transportasi, ▽ Penyimpanan) di ruang kosong chat.
+- **Viewport Terkunci (100dvh):** Layout mobile terkunci pada `100dvh` (`overflow-hidden flex flex-col`). Header dan composer fixed, hanya kontainer gelembung chat yang bisa di-scroll.
 
 ---
 
-## 2. Palet Token Warna (Pure Light Mode Semantic Tokens)
+## 2. Colors (Palet Warna Monokrom)
 
-RuangTI mengadopsi tema terang murni (*Pure Light Theme*) dengan kontras tinggi sesuai standar WCAG AA:
-
-- **Canvas (Background Utama)**: `#F8F9FA` (Soft neutral off-white)
-- **Canvas Subtle (Sidebar / Panel)**: `#F1F3F5` (Elevasi pemisah yang tenang)
-- **Surface (Card / Bubble / Dialog)**: `#FFFFFF` (Solid white)
-- **Surface Hover**: `#F8F9FA`
-- **Surface Active**: `#E9ECEF`
-- **Border**: `#E2E4E9` (Subtle boundary)
-- **Border Strong**: `#D0D3D9` (Active/focused border)
-- **Text Primary**: `#16181D` (Deep charcoal, bukan pure black agar tidak melelahkan mata)
-- **Text Secondary**: `#5F6570` (Muted caption, sub-label, secondary copy)
-- **Text Tertiary**: `#8F95A0` (Disabled, hotkeys, placeholders)
-- **Accent Primary (Industrial Amber Gold)**: `#E09F3E` (*Industrial Amber Gold* — Aksen hangat utama)
-  - ⚠️ **Aturan Wajib Kontras**: Seluruh tombol, badge, dan pill dengan latar belakang `bg-accent` / `#E09F3E` **WAJIB** menggunakan teks putih tebal (`text-white font-bold`).
-- **Accent Subtle**: `rgba(224, 159, 62, 0.12)`
-- **Accent Hover**: `#C98B32`
-- **Emerald Primary (Share / Action)**: `#16A34A` (*Emerald Green* — Tombol aksi publik & status aman)
+| Token | Nilai Hex | Peran & Penggunaan |
+|---|---|---|
+| `primary` | `#000000` | Teks utama, border hitam tegas, bayangan hard shadow, tombol utama |
+| `secondary` | `#71717A` | Keterangan sekunder, bayangan elemen gelap (`shadow-muted`) |
+| `canvas` | `#FFFFFF` | Latar belakang dasar halaman & kanvas chat |
+| `canvas-subtle` | `#F4F4F5` | Area latar subtle, status pill background |
+| `surface` | `#FFFFFF` | Kartu jawaban AI, kotak dialog modal, header bar |
+| `surface-user` | `#F4F4F5` | Gelembung pesan user (abu-abu muda agar bayangan hitam tetap terlihat) |
+| `border` | `#000000` | Garis tepi tebal seragam (2px solid) |
+| `shadow` | `#000000` | Bayangan terpotong hard offset tanpa blur (`blurRadius: 0`) |
 
 ---
 
-## 3. Tipografi & Skala Hirarki
-RuangTI menggunakan 3 font Google via `next/font/google`:
-1. **Space Grotesk** (`font-display`): Digunakan untuk identitas merek RuangTI, badge hero, heading level 1, dan judul modal.
-2. **Manrope** (`font-sans`): Digunakan untuk seluruh UI body text, input form, nama menu, chat bubble, dan naskah dokumentasi.
-3. **IBM Plex Mono** (`font-mono`): Digunakan untuk blok kode Python/C++, formula matematis, kbd shortcut, dan metadata model.
+## 3. Typography (Skala Tipografi)
+
+Menggunakan dua font utama:
+1. **Plus Jakarta Sans / Inter (`font-sans`):** Digunakan untuk seluruh teks UI, heading, gelembung pesan, dan tombol.
+2. **JetBrains Mono (`font-mono`):** Digunakan untuk status badge, tier reasoning AI, kode formula, dan metadata teknis ASME.
 
 ---
 
-## 4. Tipografi Formula Ilmiah & KaTeX (Scientific Typography)
-- **Baseline Alignment**: KaTeX dibiarkan bekerja alami (`font-size: 1.02em - 1.05em`) tanpa forced `vertical-align` global agar rumus di dalam tanda kurung sejajar presisi.
-- **Spacious Fractions**: Pecahan bertingkat (`\dfrac`) memiliki garis bagi tegas (`0.08em`) dengan breathing room atas-bawah `0.22em`.
-- **Display Math Container**: Formula display terbungkus kartu putih dengan `margin: 1rem 0`, `padding: 0.85rem 1.25rem`, border halus, dan **posisi wajib di tengah secara simetris (`block w-full text-center flex justify-center`)** untuk mengeliminasi deadspace asimetris pada layar lebar maupun mobile.
+## 4. Layout & Spacing (Tata Letak & Viewport)
+
+- **App Shell Viewport:** Wajib `h-[100dvh] max-h-[100dvh] flex flex-col overflow-hidden`.
+- **Pinned Header:** Tinggi tepat `56px` (`h-14 shrink-0 border-b-2 border-black`).
+- **Scrollable Chat Main:** Mengisi sisa ruang `flex-1 overflow-y-auto px-4 py-3`.
+- **Pinned Composer:** Terpasang di dasar layar dengan padding aman `pb-[max(12px,env(safe-area-inset-bottom))]`.
 
 ---
 
-## 5. Rute Dokumentasi Resmi (`/docs`) — 3-Kolom Modern
-Dokumentasi RuangTI dirancang setara dengan standar dokumentasi modern kelas dunia (Claude Docs & Stripe Docs):
-1. **Kolom Kiri (Sidebar Navigasi)**: Kategori accordion dengan Zero-Reflow CSS Grid Transition, indikator aktif bernuansa emas, dan mobile drawer responsif dengan tombol close 'X' yang tegas.
-2. **Kolom Tengah (Area Konten Utama)**: Artikel teknis komprehensif (16 panduan resmi + 4.595 modul RAG), rendering semantik tebal/code untuk token UI, dan transisi pergantian halaman yang gesit.
-3. **Kolom Kanan (Table of Contents)**: Scrollspy dinamis dengan pelacakan judul aktif dan layout lock-scroll.
-4. **Spotlight Search Modal (`Ctrl+K` / `⌘K`)**: Dialog pencarian instan minimalis tanpa footer hint yang mengganggu.
+## 5. Elevation & Depth (Aturan Konsistensi Bayangan)
+
+> *"Box/container dan tombol wajib memakai hard shadow. Elemen teks statis, input field, dan badge status wajib FLAT (0px shadow)."*
+
+1. **Card / Container:** Hard shadow `3px 3px 0px #000000`.
+2. **Tombol Interaktif:** Hard shadow `2px 2px 0px #000000`.
+   - **Tactile Click Feedback:** Saat ditekan (*active/press*), tombol bergeser `translate(1.5px, 1.5px)` dan bayangan menyusut ke `0.5px 0.5px 0px #000000`.
+3. **Solusi Bayangan Elemen Hitam:**
+   - Gelembung pesan pengguna menggunakan `surface-user` (`#F4F4F5` dengan border hitam 2px) sehingga bayangan hitam `3px 3px 0px #000` tetap kontras dan terangkat jelas.
+   - Bila tombol menggunakan latar hitam pekat (`bg-black text-white`), bayangan menggunakan `shadow-[2px_2px_0px_#71717A]` (abu-abu terpotong) atau `shadow-[2px_2px_0px_#000]` di atas kanvas terang.
 
 ---
 
-## 6. Sistem Animasi Ultra-Smooth & Low-End Device Friendly (60fps)
-Untuk memastikan antarmuka berjalan sangat lancar di segala jenis perangkat (termasuk laptop lama dan smartphone low-end):
-1. **GPU Hardware Composited Properties**:
-   - Hanya menggerakkan properti **`transform`** (`translateX`, `translateY`, `scale`, `rotate`) dan **`opacity`**.
-   - Menghindari animasi CSS/JS pada properti layout seperti `top`, `left`, `width`, `height`, `margin`, `padding` yang memicu *Layout Calculation (Reflow)*.
-2. **Zero-Lag Native CSS Grid Accordion**:
-   - Menggunakan `grid-template-rows: 1fr` vs `0fr` + `transition: grid-template-rows 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.18s ease` untuk buka-tutup kategori sidebar dan kotak penalaran *ThinkingBlock*.
-3. **Hardware Acceleration Flag (`willChange`)**:
-   - Menyertakan `style={{ willChange: "transform, opacity" }}` pada seluruh komponen bergerak dinamis.
-4. **Lightweight Backdrop Blur**:
-   - Menggunakan filter ringan `backdrop-blur-[2px] bg-black/45` untuk mencegah beban berat pada chip grafis ponsel saat membuka modal atau drawer.
+## 6. Shapes & Harmonic Radii (Konsistensi Sudut Lengkung)
+
+Seluruh komponen dikelompokkan ke dalam **4 ukuran radius sudut baku**:
+- **Radius 16px (`rounded-2xl` / `1rem`):** Khusus Container Card (Bubble AI, Bubble User, Card Hero).
+- **Radius 12px (`rounded-xl` / `0.75rem`):** Khusus Input Field (Textarea composer, Box formula KaTeX).
+- **Radius 10px (`rounded-lg` / `0.625rem`):** Khusus Tombol (Kirim, New Chat, Selector Model, Prompt Starter).
+- **Radius 6px (`rounded-md` / `0.375rem`):** Khusus Status Badge & Tag Label (Tier model, Modul count).
 
 ---
 
-## 7. Skala Radius Bertingkat (Harmonic Radii)
-- **6px / 8px (`rounded-lg`)**: Kbd tags, badge model, icon buttons kecil.
-- **10px / 12px (`rounded-xl`)**: Action buttons, input form, sidebar history items, preview chip dokumen.
-- **16px (`rounded-2xl`)**: Suggestion prompt cards, header floating containers, popover menus, dialog modal.
-- **20px / 24px (`rounded-2xl` & `rounded-3xl`)**: Composer input dock, user chat bubble.
+## 7. Components (Matriks 4 Tipe Elemen Baku)
+
+### Tipe 1: Outer Card / Bubble Obrolan
+```css
+border: 2px solid #000000;
+border-radius: 16px;
+box-shadow: 3px 3px 0px #000000;
+```
+
+### Tipe 2: Tombol Interaktif (Semua yang Dapat Diklik)
+```css
+border: 2px solid #000000;
+border-radius: 10px;
+box-shadow: 2px 2px 0px #000000;
+transition: transform 0.08s ease, box-shadow 0.08s ease;
+```
+*Active state:*
+```css
+transform: translate(1.5px, 1.5px);
+box-shadow: 0.5px 0.5px 0px #000000;
+```
+
+### Tipe 3: Kotak Input & Layar Statis (FLAT)
+```css
+border: 2px solid #000000;
+border-radius: 12px;
+box-shadow: none; /* Wajib Flat agar teks stabil */
+```
+
+### Tipe 4: Status Badge & Label Metrik (FLAT KECIL)
+```css
+border: 1.5px solid #000000;
+border-radius: 6px;
+box-shadow: none;
+font-family: 'JetBrains Mono', monospace;
+```
 
 ---
 
 ## 8. Multi-Tier Thinking Effort Selector
-Tersedia 5 level reasoning RuangTI Neural Engine (engine utama: **Mimoly** — gateway Xiaomi MiMo di port 8080; cadangan: 9Router di port 20128):
-1. **Non-Thinking (Default)**: Respon cepat & instan tanpa penalaran bertahap (`mimo-v2.6-flash@none`).
-2. **Low Effort**: Penalaran ringan untuk kueri & kalkulasi ringkas (`mimo-v2.6-flash@default`).
-3. **Medium Effort**: Penalaran berimbang untuk analisis & metode terstruktur (`mimo-v2.6-flash@max`).
-4. **High Effort**: Penalaran mendalam untuk optimasi sistem & simulasi kompleks (`mimo-v2.6-pro@default`).
-5. **Extra High Effort**: Eksplorasi komputasi mendalam, riset operasi & pembuktian matematis (`mimo-v2.6-pro@max`).
 
-Format spesifikasi model adalah `model@reasoning_effort`, diparse di `backend/app/routers/chat_9router.py`. Bila engine utama tidak terjangkau, backend otomatis beralih ke gateway cadangan agar RuangTI tidak mati total.
-
----
-
-## 9. Standar Footer & Penamaan Navigasi
-- Tombol aksi navigasi utama konsisten menggunakan label **"Buka Workspace"** (Desktop) dan **"Workspace"** (Mobile).
-- Footer aplikasi di seluruh halaman publik disederhanakan menjadi baris hak cipta tunggal yang ultra-bersih:
-```
-© {new Date().getFullYear()} RuangTI. All rights reserved. Dikembangkan oleh rapoi.
-```
-*(Atribusi murni kepada pengembang "rapoi", tanpa tanda @ dan tanpa huruf i ganda).*
+Tersedia 5 level reasoning RuangTI Neural Engine (engine utama: Mimoly port 8080; cadangan: 9Router port 20128):
+1. **Fast (No Think)**: Respon kilat tanpa penalaran bertahap (`mimo-v2.6-flash@none`).
+2. **Low Effort**: Penalaran ringan kueri & kalkulasi ringkas (`mimo-v2.6-flash@default`).
+3. **Medium Effort**: Penalaran berimbang analisis terstruktur (`mimo-v2.6-flash@max`).
+4. **High Effort**: Penalaran mendalam optimasi & simulasi kompleks (`mimo-v2.6-pro@default`).
+5. **Extra High Effort**: Eksplorasi komputasi mendalam riset operasi (`mimo-v2.6-pro@max`).
 
 ---
 
-## 10. Arsitektur Media & Dokumen Ringan (Zero-DB-Bloat Storage)
-- **Kompresi Gambar**: Canvas WebP client-side (maksimal 1280px, kualitas 0.82 $\to \sim 85\text{KB}$).
-- **Dokumen Multi-Format**: `.docx`, `.xlsx`, `.csv`, `.pdf`, file kodingan (`.py`, `.ts`, `.json`, `.sql`), dan arsip `.zip`.
-- **Storage Terpisah**: File fisik disimpan di folder disk `uploads/` backend; SQLite hanya menyimpan metadata JSON ~60 byte per file.
-- **Auto-Pruning 14 Hari**: Background worker otomatis menghapus berkas yang telah melewati 14 hari.
+## 9. Do's and Don'ts
+
+### Do's:
+- **Lakukan:** Selalu gunakan token radius yang sama persis untuk elemen bertipe serupa.
+- **Lakukan:** Posisikan seluruh formula matematika KaTeX persis di tengah (`text-center w-full block`).
+- **Lakukan:** Pastikan setiap tombol interaktif memiliki micro-interaction geser saat disentuh.
+- **Lakukan:** Kunci layout viewport ke `100dvh` di perangkat seluler.
+
+### Don'ts:
+- **Dilarang:** Menambahkan gradien warna-warni ungu/biru atau elemen di luar spektrum Black & White.
+- **Dilarang:** Memberi bayangan pada input teks (`textarea`) atau badge status kecil.
+- **Dilarang:** Menggunakan ukuran border selain `2px` untuk kotak/tombol (kecuali badge `1.5px`).
+- **Dilarang:** Membiarkan halaman mobile bergulir penuh sehingga menenggelamkan kotak input.
