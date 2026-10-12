@@ -109,3 +109,33 @@ func (s *RAGService) Search(query string, limit int) ([]ChunkResult, error) {
 
 	return results, nil
 }
+
+func (s *RAGService) Browse(limit int) ([]ChunkResult, error) {
+	if limit <= 0 {
+		limit = 20
+	}
+
+	q := `
+		SELECT module_id, section_title, content, 0.0
+		FROM rag_fts
+		WHERE section_title != 'Overview'
+		LIMIT ?
+	`
+
+	rows, err := s.db.Query(q, limit)
+	if err != nil {
+		return nil, fmt.Errorf("query rag browse error: %w", err)
+	}
+	defer rows.Close()
+
+	var results []ChunkResult
+	for rows.Next() {
+		var item ChunkResult
+		if err := rows.Scan(&item.ModuleID, &item.SectionTitle, &item.Content, &item.Rank); err != nil {
+			return nil, fmt.Errorf("scan chunk error: %w", err)
+		}
+		results = append(results, item)
+	}
+
+	return results, rows.Err()
+}
