@@ -10,6 +10,7 @@
   let isSidebarOpen = $state(false);
   let chatKey = $state(0);
   let hasMessages = $state(false);
+  let pendingMessage = $state('');
 
   // Tinggi viewport visual (menyesuaikan saat keyboard virtual terbuka)
   let appHeight = $state('100dvh');
@@ -21,6 +22,7 @@
   }
 
   function handleNewChat() {
+    pendingMessage = '';
     activeRoute = 'chat';
     window.location.hash = 'chat';
     hasMessages = false;
@@ -28,7 +30,8 @@
     isSidebarOpen = false;
   }
 
-  function handleStartChat() {
+  function handleStartChat(message?: string) {
+    pendingMessage = message ?? '';
     activeRoute = 'chat';
     window.location.hash = 'chat';
     hasMessages = false;
@@ -92,7 +95,7 @@
     <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
       {#if activeRoute === 'chat'}
         {#key chatKey}
-          <Chat onMessagesChange={(val) => (hasMessages = val)} />
+          <Chat onMessagesChange={(val) => (hasMessages = val)} initialMessage={pendingMessage} />
         {/key}
       {:else}
         <Docs />

@@ -7,6 +7,17 @@
 
   let { onStartChat }: Props = $props();
 
+  const TOPICS: { label: string; question: string }[] = [
+    { label: 'EOQ', question: 'Jelaskan konsep Economic Order Quantity (EOQ) beserta rumus dan arti tiap variabelnya.' },
+    { label: 'OPC', question: 'Jelaskan fungsi Operation Process Chart (OPC) dan simbol ASME yang dipakai untuk perakitan.' },
+    { label: 'CPM', question: 'Bagaimana langkah menentukan lintasan kritis (Critical Path Method) dalam manajemen proyek?' },
+    { label: 'Lean', question: 'Jelaskan 7 jenis pemborosan (waste) dalam Lean Manufacturing dan cara eliminasinya.' },
+    { label: 'Ergonomi', question: 'Jelaskan prinsip dasar ergonomi dan penerapannya di tempat kerja.' },
+    { label: 'Simulasi', question: 'Bagaimana cara memulai simulasi sistem diskrit untuk lini produksi?' },
+    { label: 'Pengendalian Mutu', question: 'Jelaskan konsep dasar Statistical Process Control (SPC) dan control chart.' },
+    { label: 'Tata Letak', question: 'Jelaskan metode Systematic Layout Planning (SLP) untuk perancangan tata letak pabrik.' },
+  ];
+
   const EOQ_MATH = katex.renderToString('Q^* = \\sqrt{\\frac{2DS}{H}}', {
     displayMode: true,
     throwOnError: false,
@@ -74,6 +85,24 @@
         <b class="block text-lg font-black leading-none">~13 MB</b>
         <span class="text-[8px] font-mono font-bold text-neutral-500 uppercase tracking-wider">Ukuran</span>
       </div>
+    </div>
+  </section>
+
+  <!-- TOPIK POPULER -->
+  <section class="px-5 py-8 border-t-2 border-black">
+    <p class="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-wider mb-3">
+      Topik Populer
+    </p>
+    <div class="flex flex-wrap gap-2">
+      {#each TOPICS as t}
+        <button
+          type="button"
+          onclick={() => onStartChat(t.question)}
+          class="neo-badge px-3 py-1.5 text-[11px] font-bold bg-white hover:bg-neutral-100 text-black cursor-pointer"
+        >
+          {t.label}
+        </button>
+      {/each}
     </div>
   </section>
 

@@ -7,15 +7,17 @@
 
   interface Props {
     onMessagesChange?: (hasMessages: boolean) => void;
+    initialMessage?: string;
   }
 
-  let { onMessagesChange }: Props = $props();
+  let { onMessagesChange, initialMessage = '' }: Props = $props();
 
   let messages = $state<ChatMessage[]>([]);
   let selectedModelId = $state('mimo-v2.6-pro@default');
   let isStreaming = $state(false);
   let abortController = $state<AbortController | null>(null);
   let chatContainerRef = $state<HTMLDivElement | null>(null);
+  let didAutoSend = $state(false);
 
   // Kata singkat acak khas Teknik Industri — diganti tiap percakapan baru
   const RANDOM_WORDS = [
@@ -160,6 +162,14 @@
     }
     isStreaming = false;
   }
+
+  // Kirim pertanyaan awal (dari chip landing) tepat satu kali saat mount
+  $effect(() => {
+    if (initialMessage && !didAutoSend && messages.length === 0) {
+      didAutoSend = true;
+      handleSend(initialMessage);
+    }
+  });
 </script>
 
 <div class="flex-1 flex flex-col overflow-hidden min-h-0 relative bg-white">
