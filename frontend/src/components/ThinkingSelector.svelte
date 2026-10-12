@@ -25,26 +25,23 @@
 </script>
 
 <div class="relative inline-block text-left">
-  <!-- Trigger Button -->
+  <!-- Trigger Button (Neobrutalism .neo-btn) -->
   <button
     type="button"
     onclick={toggleOpen}
-    class="flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-md bg-canvas-subtle hover:bg-surface-active text-text-secondary hover:text-text-primary border border-border transition-colors shadow-2xs"
+    class="neo-btn flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold bg-white hover:bg-neutral-50 text-black"
     title="Pilih tingkat penalaran thinking AI"
   >
-    <svg class="w-3.5 h-3.5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg class="w-3.5 h-3.5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
     </svg>
-    <span class="max-w-[120px] truncate">{currentOption.shortLabel}</span>
-    <span class="text-[10px] px-1 py-0.2 rounded bg-accent/15 text-accent font-semibold">
-      {currentOption.badge}
-    </span>
-    <svg class="w-3 h-3 text-text-tertiary transition-transform {isOpen ? 'rotate-180' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <span class="max-w-[130px] truncate">{currentOption.shortLabel}</span>
+    <svg class="w-3 h-3 text-neutral-500 transition-transform {isOpen ? 'rotate-180' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
       <polyline points="6 9 12 15 18 9"></polyline>
     </svg>
   </button>
 
-  <!-- Dropdown Popover -->
+  <!-- Dropdown Popover (.neo-card B&W) -->
   {#if isOpen}
     <!-- Backdrop to close -->
     <button
@@ -54,31 +51,29 @@
       aria-label="Tutup menu"
     ></button>
 
-    <div class="absolute bottom-full mb-1.5 left-0 z-50 w-72 sm:w-80 rounded-xl bg-surface border border-border shadow-lg p-1.5 flex flex-col gap-1">
-      <div class="px-2.5 py-1.5 border-b border-border text-[11px] font-semibold text-text-tertiary uppercase tracking-wider">
-        Tingkat Penalaran (MiMo Studio)
+    <div class="absolute bottom-full mb-2 left-0 z-50 w-72 sm:w-80 neo-card bg-white p-2 flex flex-col gap-1.5 shadow-[4px_4px_0px_#000]">
+      <div class="px-2 py-1 border-b-2 border-black text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider flex justify-between">
+        <span>Tingkat Penalaran AI</span>
+        <span>MIMOLY STUDIO</span>
       </div>
 
       {#each THINKING_EFFORT_OPTIONS as opt}
         <button
           type="button"
           onclick={() => handleSelect(opt)}
-          class="w-full text-left p-2 rounded-lg transition-colors flex items-start gap-2.5 {opt.modelId === selectedModelId ? 'bg-accent/10 border border-accent/25' : 'hover:bg-canvas-subtle border border-transparent'}"
+          class="w-full text-left p-2 rounded-lg transition-all flex items-start gap-2 border-2 {opt.modelId === selectedModelId ? 'bg-black text-white border-black' : 'bg-white hover:bg-neutral-100 text-black border-transparent'}"
         >
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-1.5">
-              <span class="text-xs font-semibold text-text-primary">{opt.label}</span>
-              <span class="text-[10px] px-1.5 py-0.2 rounded bg-surface font-medium border border-border text-text-secondary">
+              <span class="text-xs font-black">{opt.label}</span>
+              <span class="text-[9px] font-mono px-1.5 py-0.2 rounded border {opt.modelId === selectedModelId ? 'border-neutral-700 bg-neutral-800 text-white' : 'border-black bg-neutral-100 text-black'} font-bold">
                 {opt.badge}
               </span>
             </div>
-            <p class="text-[11px] text-text-secondary mt-0.5 leading-tight">{opt.description}</p>
+            <p class="text-[10px] {opt.modelId === selectedModelId ? 'text-neutral-300' : 'text-neutral-500'} mt-0.5 leading-snug">
+              {opt.description}
+            </p>
           </div>
-          {#if opt.modelId === selectedModelId}
-            <svg class="w-4 h-4 text-accent shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          {/if}
         </button>
       {/each}
     </div>

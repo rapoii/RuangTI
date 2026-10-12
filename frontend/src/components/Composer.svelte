@@ -32,7 +32,6 @@
     onSend(trimmed, docContext);
 
     inputMessage = '';
-    // Pertahankan doc atau reset? Reset setelah kirim
     attachedDoc = null;
   }
 
@@ -80,47 +79,44 @@
 </script>
 
 <div class="w-full max-w-4xl mx-auto px-3 sm:px-6">
-  <!-- Document Attachment Chip -->
+  <!-- Document Attachment Chip (.neo-badge) -->
   {#if attachedDoc}
-    <div class="mb-2 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-border shadow-2xs w-fit">
-      <svg class="w-4 h-4 text-accent shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="mb-2 flex items-center gap-2 px-3 py-1.5 neo-badge bg-neutral-100 text-black w-fit font-mono text-xs">
+      <svg class="w-3.5 h-3.5 text-black shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
       </svg>
-      <span class="text-xs font-medium text-text-primary truncate max-w-[200px] sm:max-w-xs">{attachedDoc.filename}</span>
-      <span class="text-[10px] text-text-tertiary">({Math.round(attachedDoc.size / 1024)} KB)</span>
+      <span class="font-bold truncate max-w-[200px] sm:max-w-xs">{attachedDoc.filename}</span>
+      <span class="text-[10px] text-neutral-500">({Math.round(attachedDoc.size / 1024)} KB)</span>
       <button
         type="button"
         onclick={removeAttachedDoc}
-        class="ml-1 text-text-tertiary hover:text-red-500 transition-colors p-0.5 rounded-full"
+        class="ml-1 text-neutral-500 hover:text-black font-bold p-0.5"
         title="Hapus lampiran"
       >
-        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
+        ✕
       </button>
     </div>
   {/if}
 
-  <!-- Composer Box -->
-  <div class="bg-surface border border-border focus-within:border-accent/60 rounded-2xl p-2.5 sm:p-3 shadow-sm transition-all flex flex-col gap-2">
+  <!-- Composer Box (Neobrutalism .neo-input FLAT) -->
+  <div class="neo-input bg-white p-2.5 sm:p-3 transition-all flex flex-col gap-2">
     <!-- Text Area -->
     <textarea
       bind:value={inputMessage}
       onkeydown={handleKeyDown}
       placeholder="Tanyakan konsep, rumus matematis, atau studi kasus Teknik Industri..."
       rows="2"
-      class="w-full bg-transparent resize-none text-xs sm:text-sm text-text-primary placeholder:text-text-tertiary focus:outline-hidden leading-relaxed px-1"
+      class="w-full bg-transparent resize-none text-xs sm:text-sm text-black placeholder:text-neutral-400 focus:outline-none leading-relaxed px-1 font-medium"
     ></textarea>
 
     <!-- Bottom Controls -->
-    <div class="flex items-center justify-between pt-1 border-t border-border/40">
+    <div class="flex items-center justify-between pt-1.5 border-t border-neutral-200">
       <!-- Left: Thinking Selector & File Upload -->
       <div class="flex items-center gap-1.5 sm:gap-2">
         <ThinkingSelector {selectedModelId} onSelect={onSelectModel} />
 
-        <!-- Upload Button -->
+        <!-- Upload Button (.neo-btn) -->
         <input
           type="file"
           bind:this={fileInputRef}
@@ -132,31 +128,31 @@
           type="button"
           onclick={() => fileInputRef?.click()}
           disabled={isUploading || isStreaming}
-          class="p-1.5 text-text-secondary hover:text-text-primary hover:bg-canvas-subtle rounded-md transition-colors disabled:opacity-50"
+          class="neo-btn w-8 h-8 bg-white hover:bg-neutral-50 text-black flex items-center justify-center text-xs disabled:opacity-50"
           title="Lampirkan Dokumen (Word, PPTX, PDF, Teks)"
         >
           {#if isUploading}
-            <svg class="w-4 h-4 animate-spin text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="w-3.5 h-3.5 animate-spin text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
               <path d="M12 2a10 10 0 0 1 10 10"></path>
             </svg>
           {:else}
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
             </svg>
           {/if}
         </button>
       </div>
 
-      <!-- Right: Send / Stop Button -->
+      <!-- Right: Send / Stop Button (.neo-btn) -->
       <div>
         {#if isStreaming}
           <button
             type="button"
             onclick={onStop}
-            class="px-3 py-1.5 rounded-lg bg-red-500 hover:bg-red-600 text-surface text-xs font-semibold flex items-center gap-1.5 shadow-xs transition-colors"
+            class="neo-btn px-3 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-bold flex items-center gap-1.5"
           >
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
               <rect x="6" y="6" width="12" height="12" rx="2"></rect>
             </svg>
             <span>Stop</span>
@@ -166,12 +162,12 @@
             type="button"
             onclick={submit}
             disabled={!inputMessage.trim()}
-            class="px-3.5 py-1.5 rounded-lg bg-accent hover:bg-accent-hover text-surface text-xs font-semibold flex items-center gap-1.5 shadow-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            class="neo-btn px-3.5 py-1.5 bg-black hover:bg-neutral-800 text-white text-xs font-black flex items-center gap-1.5 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
           >
             <span>Kirim</span>
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            <svg class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
             </svg>
           </button>
         {/if}

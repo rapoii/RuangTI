@@ -19,10 +19,10 @@
   }
 </script>
 
-<div class="min-h-screen flex flex-col bg-canvas text-text-primary">
+<div class="h-[100dvh] max-h-[100dvh] flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white">
   <Header {activeRoute} onNavigate={handleNavigate} />
 
-  <main class="flex-1 flex flex-col">
+  <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
     {#if activeRoute === 'chat'}
       <Chat />
     {:else}

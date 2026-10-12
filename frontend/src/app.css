@@ -5,19 +5,20 @@
 @tailwind utilities;
 
 :root {
-  --canvas: #F8F9FA;
-  --canvas-subtle: #F1F3F5;
+  --canvas: #FFFFFF;
+  --canvas-subtle: #F4F4F5;
   --surface: #FFFFFF;
-  --surface-hover: #F8F9FA;
-  --surface-active: #E9ECEF;
-  --border: #E2E4E9;
-  --border-strong: #D0D3D9;
-  --text-primary: #16181D;
-  --text-secondary: #5F6570;
-  --text-tertiary: #8F95A0;
-  --accent: #E09F3E;
-  --accent-hover: #C98B32;
-  --accent-subtle: rgba(224, 159, 62, 0.12);
+  --surface-user: #F4F4F5;
+  --surface-hover: #F4F4F5;
+  --surface-active: #E4E4E7;
+  --border: #000000;
+  --border-strong: #000000;
+  --text-primary: #000000;
+  --text-secondary: #52525B;
+  --text-tertiary: #A1A1AA;
+  --accent: #000000;
+  --accent-hover: #27272A;
+  --accent-subtle: rgba(0, 0, 0, 0.06);
 }
 
 html,
@@ -31,7 +32,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar Monokrom */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -40,19 +41,63 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: #D4D4D8;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--border-strong);
+  background: #A1A1AA;
 }
 
-/* Glassmorphism Header */
-.glass-header {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+/* 1. Card / Outer Container: Radius 16px, Border 2px, Shadow 3px solid */
+.neo-card {
+  border: 2px solid #000000;
+  border-radius: 16px;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+/* 2. Tombol & Elemen Interaktif: Radius 10px, Border 2px, Shadow 2px solid + Click shift */
+.neo-btn {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px #000000;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.neo-btn:active {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 0.5px 0.5px 0px #000000;
+}
+
+/* 3. Input & Display Box: Radius 12px, Border 2px, FLAT (Shadow 0px) */
+.neo-input {
+  border: 2px solid #000000;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+/* 4. Status Badge / Pill: Radius 6px, Border 1.5px, FLAT (Shadow 0px) */
+.neo-badge {
+  border: 1.5px solid #000000;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* Latar Belakang Kertas Milimeter Blok / Grid Teknik Industri Monokrom */
+.ti-grid-bw {
+  background-color: #FFFFFF;
+  background-size: 24px 24px, 120px 120px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+}
+
+/* Watermark Simbol ASME */
+.asme-watermark-bw {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.045;
 }
 
 /* KaTeX Display Math Center Alignment */
