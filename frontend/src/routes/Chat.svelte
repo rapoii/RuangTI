@@ -17,6 +17,41 @@
   let abortController = $state<AbortController | null>(null);
   let chatContainerRef = $state<HTMLDivElement | null>(null);
 
+  // Kata singkat acak khas Teknik Industri — diganti tiap percakapan baru
+  const RANDOM_WORDS = [
+    'Efisiensi',
+    'Optimasi',
+    'Sinergi',
+    'Presisi',
+    'Produktivitas',
+    'Sistem',
+    'Standarisasi',
+    'Analisis',
+    'Integrasi',
+    'Inovasi',
+    'Kualitas',
+    'Kapasitas',
+    'Perbaikan',
+    'Perancangan',
+    'Simulasi',
+  ];
+
+  let randomWord = $state('');
+
+  function pickRandomWord() {
+    randomWord = RANDOM_WORDS[Math.floor(Math.random() * RANDOM_WORDS.length)];
+  }
+
+  function greetingByHour(): string {
+    const h = new Date().getHours();
+    if (h < 11) return 'Selamat pagi';
+    if (h < 15) return 'Selamat siang';
+    if (h < 19) return 'Selamat sore';
+    return 'Selamat malam';
+  }
+
+  pickRandomWord();
+
   const SUGGESTIONS = [
     {
       title: 'Rumus EOQ & Total Biaya Persediaan',
@@ -132,7 +167,12 @@
   <!-- Message Container (Hanya area ini yang scroll) -->
   <div bind:this={chatContainerRef} class="flex-1 overflow-y-auto min-h-0 relative z-10">
     {#if messages.length === 0}
-      <!-- Empty State: hanya latar grid kotak-kotak, tanpa elemen lain -->
+      <!-- Empty State: sapaan acak terpusat (konsep Claude) di atas latar grid kotak-kotak -->
+      <div class="h-full flex items-center justify-center px-6">
+        <h1 class="text-xl sm:text-3xl font-black text-black tracking-tight text-center leading-snug">
+          {greetingByHour()}, <span class="underline decoration-2 underline-offset-4">{randomWord}</span>
+        </h1>
+      </div>
     {:else}
       <!-- Messages List -->
       <div class="py-3 space-y-3">
