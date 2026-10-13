@@ -39,6 +39,32 @@ func (h *AuthHandlers) Disabled() *AuthHandlers {
 	return h
 }
 
+func (h *AuthHandlers) redirectURLForRequest(r *http.Request) string {
+	host := r.Header.Get("X-Forwarded-Host")
+	if host == "" {
+		host = r.Host
+	}
+	if strings.Contains(strings.ToLower(host), "varevastudio.tech") {
+		return "https://ruangti.varevastudio.tech/api/auth/callback/google"
+	}
+	return ""
+}
+
+func (h *AuthHandlers) isSecureForRequest(r *http.Request) bool {
+	if h.secure {
+		return true
+	}
+	proto := r.Header.Get("X-Forwarded-Proto")
+	if strings.EqualFold(proto, "https") {
+		return true
+	}
+	host := r.Header.Get("X-Forwarded-Host")
+	if host == "" {
+		host = r.Host
+	}
+	return strings.Contains(strings.ToLower(host), "varevastudio.tech")
+}
+
 func (h *AuthHandlers) GoogleLogin(w http.ResponseWriter, r *http.Request) {
 	if !h.enabled {
 		http.Error(w, "Login Google belum dikonfigurasi", http.StatusServiceUnavailable)
@@ -49,16 +75,17 @@ func (h *AuthHandlers) GoogleLogin(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Gagal membuat state", http.StatusInternalServerError)
 		return
 	}
+	secure := h.isSecureForRequest(r)
 	http.SetCookie(w, &http.Cookie{
 		Name:     oauthStateCookie,
 		Value:    state,
 		Path:     "/",
 		HttpOnly: true,
-		Secure:   h.secure,
+		Secure:   secure,
 		SameSite: http.SameSiteLaxMode,
 		MaxAge:   600,
 	})
-	http.Redirect(w, r, h.oauth.AuthCodeURL(state), http.StatusFound)
+	http.Redirect(w, r, h.oauth.AuthCodeURLWithRedirect(state, h.redirectURLForRequest(r)), http.StatusFound)
 }
 
 func (h *AuthHandlers) GoogleCallback(w http.ResponseWriter, r *http.Request) {
@@ -91,7 +118,7 @@ func (h *AuthHandlers) GoogleCallback(w http.ResponseWriter, r *http.Request) {
 	}
 
 	now := h.now()
-	user, err := h.oauth.ExchangeAndUpsert(r.Context(), code, now)
+	user, err := h.oauth.ExchangeAndUpsertWithRedirect(r.Context(), code, h.redirectURLForRequest(r), now)
 	if err != nil {
 		http.Error(w, "Gagal masuk dengan Google", http.StatusBadGateway)
 		return
@@ -108,9 +135,10 @@ func (h *AuthHandlers) GoogleCallback(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	auth.SetSessionCookie(w, raw, expires, h.secure)
+	secure := h.isSecureForRequest(r)
+	auth.SetSessionCookie(w, raw, expires, secure)
 	// Bersihkan cookie state setelah dipakai.
-	http.SetCookie(w, &http.Cookie{Name: oauthStateCookie, Value: "", Path: "/", HttpOnly: true, Secure: h.secure, SameSite: http.SameSiteLaxMode, MaxAge: -1})
+	http.SetCookie(w, &http.Cookie{Name: oauthStateCookie, Value: "", Path: "/", HttpOnly: true, Secure: secure, SameSite: http.SameSiteLaxMode, MaxAge: -1})
 	http.Redirect(w, r, "/#chat", http.StatusFound)
 }
 

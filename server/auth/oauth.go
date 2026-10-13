@@ -47,7 +47,18 @@ func NewOAuth(cfg GoogleConfig, store *Store) *OAuth {
 
 // AuthCodeURL membangun URL persetujuan Google.
 func (o *OAuth) AuthCodeURL(state string) string {
-	return o.conf.AuthCodeURL(state, oauth2.AccessTypeOnline, oauth2.SetAuthURLParam("prompt", "select_account"))
+	return o.AuthCodeURLWithRedirect(state, "")
+}
+
+// AuthCodeURLWithRedirect membangun URL persetujuan Google dengan opsi override redirect URI.
+func (o *OAuth) AuthCodeURLWithRedirect(state string, redirectURL string) string {
+	conf := o.conf
+	if redirectURL != "" && redirectURL != o.conf.RedirectURL {
+		clone := *o.conf
+		clone.RedirectURL = redirectURL
+		conf = &clone
+	}
+	return conf.AuthCodeURL(state, oauth2.AccessTypeOnline, oauth2.SetAuthURLParam("prompt", "select_account"))
 }
 
 type googleUserInfo struct {
@@ -60,7 +71,18 @@ type googleUserInfo struct {
 
 // ExchangeAndUpsert menukar authorization code menjadi profil, lalu menyimpan user.
 func (o *OAuth) ExchangeAndUpsert(ctx context.Context, code string, now int64) (*User, error) {
-	tok, err := o.conf.Exchange(ctx, code)
+	return o.ExchangeAndUpsertWithRedirect(ctx, code, "", now)
+}
+
+// ExchangeAndUpsertWithRedirect menukar authorization code dengan opsi override redirect URI.
+func (o *OAuth) ExchangeAndUpsertWithRedirect(ctx context.Context, code string, redirectURL string, now int64) (*User, error) {
+	conf := o.conf
+	if redirectURL != "" && redirectURL != o.conf.RedirectURL {
+		clone := *o.conf
+		clone.RedirectURL = redirectURL
+		conf = &clone
+	}
+	tok, err := conf.Exchange(ctx, code)
 	if err != nil {
 		return nil, fmt.Errorf("exchange code: %w", err)
 	}
