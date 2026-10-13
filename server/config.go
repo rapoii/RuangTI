@@ -18,8 +18,9 @@ type Config struct {
 }
 
 // RedirectURL adalah URL callback yang WAJIB didaftarkan di Google Cloud Console.
+// Menggunakan format /api/auth/callback/google yang sesuai dengan pendaftaran Google OAuth pengguna.
 func (c Config) RedirectURL() string {
-	return strings.TrimRight(c.AppBaseURL, "/") + "/api/auth/google/callback"
+	return strings.TrimRight(c.AppBaseURL, "/") + "/api/auth/callback/google"
 }
 
 // LoadEnvFile membaca file .env sederhana (KEY=VALUE) tanpa menimpa env yang sudah ada.

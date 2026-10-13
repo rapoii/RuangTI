@@ -19,7 +19,7 @@ import (
 
 func main() {
 	host := flag.String("host", "0.0.0.0", "Host address listening HTTP server")
-	port := flag.Int("port", 8000, "Port listening HTTP server")
+	port := flag.Int("port", 3005, "Port listening HTTP server")
 	mimolyURL := flag.String("mimoly", "http://127.0.0.1:8080/v1", "Base URL Mimoly AI Gateway")
 	router9URL := flag.String("router9", "http://127.0.0.1:20128/v1", "Base URL 9Router Fallback Gateway")
 	fallbackModel := flag.String("fallback-model", "Hermes", "Model fallback jika Mimoly offline")
@@ -78,6 +78,7 @@ func main() {
 	mux.HandleFunc("/api/health", handlers.NewHealthHandler())
 	mux.HandleFunc("/api/auth/google/login", authH.GoogleLogin)
 	mux.HandleFunc("/api/auth/google/callback", authH.GoogleCallback)
+	mux.HandleFunc("/api/auth/callback/google", authH.GoogleCallback)
 	mux.HandleFunc("/api/auth/logout", authH.Logout)
 	mux.HandleFunc("/api/auth/me", authH.Me)
 	mux.Handle("/api/chat/stream", auth.RequireAuth(store, http.HandlerFunc(handlers.NewChatStreamHandler(aiClient, ragSvc))))
@@ -108,6 +109,19 @@ func main() {
 			log.Fatalf("Gagal menjalankan server: %v", err)
 		}
 	}()
+
+	// Layani juga port 8000 agar tunnel cloudflared lama tetap terhubung tanpa putus
+	if *port != 8000 {
+		go func() {
+			s8000 := &http.Server{
+				Addr:         fmt.Sprintf("%s:8000", *host),
+				Handler:      mux,
+				ReadTimeout:  15 * time.Second,
+				WriteTimeout: 5 * time.Minute,
+			}
+			_ = s8000.ListenAndServe()
+		}()
+	}
 
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, os.Interrupt, syscall.SIGTERM)
