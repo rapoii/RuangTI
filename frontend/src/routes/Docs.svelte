@@ -4,7 +4,6 @@
   import {
     DOCS_CATEGORIES,
     ALL_ARTICLES,
-    REPO_URL,
     findArticle,
     articleNeighbors,
     type DocArticle,
@@ -28,6 +27,9 @@
   let filterQuery = $state<string>('');
   let isMobileNavOpen = $state<boolean>(false);
 
+  // Elemen scroll konten artikel (untuk reset posisi baca)
+  let scrollerEl = $state<HTMLDivElement | null>(null);
+
   // Status copy code snippet
   let copiedSnippetId = $state<string | null>(null);
 
@@ -41,6 +43,7 @@
   let kbQuery = $state('');
   let kbResults = $state<ChunkResult[]>([]);
   let kbLoading = $state(false);
+  let kbLoaded = $state(false);
   let kbSelectedChunk = $state<ChunkResult | null>(null);
   let kbSearchTimeout: any = null;
 
@@ -58,6 +61,7 @@
       console.error('Fetch KB error:', err);
     } finally {
       kbLoading = false;
+      kbLoaded = true;
     }
   }
 
@@ -68,6 +72,48 @@
     kbSearchTimeout = setTimeout(() => {
       fetchKb(val);
     }, 280);
+  }
+
+  // Buang prefix metadata modul yang diulang di awal konten RAG
+  function stripKbPreamble(content: string, title: string): string {
+    let text = (content || '').trim();
+    // Buang baris "Modul NNN: ... — <judul>" yang menduplikasi section_title
+    text = text.replace(/^Modul\s+\d+\s*:[^\n]*\n+/i, '');
+    text = text.replace(/^[^\n]*—\s*[^\n]*\n+/i, (m) => (m.length < 400 ? '' : m));
+    // Buang baris heading markdown yang sama dengan judul
+    const esc = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    text = text.replace(new RegExp(`^#{1,6}\\s*${esc}\\s*\\n+`, 'i'), '');
+    return text.trim();
+  }
+
+  // Bersihkan sisa sintaks markdown agar konten terbaca sebagai teks biasa.
+  // Rumus ($...$ / $$...$$) DIBIARKAN agar bisa dirender KaTeX di modal detail.
+  function stripMarkdown(text: string): string {
+    let s = (text || '').trim();
+    s = s.replace(/```[a-zA-Z]*\n?([\s\S]*?)```/g, (_, code) => code.trim()); // blok kode → isi saja
+    s = s.replace(/^\s*#{1,6}\s*/gm, '');       // heading
+    s = s.replace(/\*\*(.+?)\*\*/g, '$1');       // bold
+    s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1$2'); // italic
+    s = s.replace(/`([^`]+)`/g, '$1');           // inline code
+    s = s.replace(/^\s*[-*+]\s+/gm, '• ');       // bullet
+    s = s.replace(/^\s*\|.*\|\s*$/gm, '');       // baris tabel
+    s = s.replace(/^\s*[-:| ]{3,}\s*$/gm, '');   // garis pemisah tabel
+    s = s.replace(/^\s*>\s?/gm, '');             // blockquote
+    s = s.replace(/\[([^\]]+)\]\((?:[^)]+)\)/g, '$1'); // link
+    s = s.replace(/[ \t]{2,}/g, ' ');
+    s = s.replace(/\n{3,}/g, '\n\n');
+    return s.trim();
+  }
+
+  // Cuplikan kartu: teks satu paragraf, rumus & sisa sintaks dibuang total.
+  function kbExcerpt(content: string, title: string, limit = 200): string {
+    let s = stripMarkdown(stripKbPreamble(content, title));
+    s = s.replace(/\$\$[\s\S]*?\$\$/g, ' ');        // rumus display
+    s = s.replace(/\$[^$\n]+?\$/g, ' ');            // rumus inline
+    s = s.replace(/\\[a-zA-Z]+\{([^{}]*)\}/g, '$1'); // \text{...} → isi
+    s = s.replace(/\\[a-zA-Z]+/g, ' ');             // perintah LaTeX lain
+    s = s.replace(/[ \t]{2,}/g, ' ').replace(/\s*\n\s*/g, ' ').trim();
+    return s.length > limit ? s.slice(0, limit).trimEnd() + '…' : s;
   }
 
   function renderMath(text: string): string {
@@ -114,9 +160,18 @@
   function selectArticle(id: string) {
     currentArticleId = id;
     isMobileNavOpen = false;
+    resetArticleScroll();
     if (typeof window !== 'undefined') {
       window.location.hash = `docs/${id}`;
     }
+  }
+
+  // Kembalikan posisi baca ke atas saat artikel berganti
+  function resetArticleScroll() {
+    if (typeof requestAnimationFrame === 'undefined') return;
+    requestAnimationFrame(() => {
+      scrollerEl?.scrollTo({ top: 0, behavior: 'auto' });
+    });
   }
 
   function scrollToSection(id: string) {
@@ -124,6 +179,21 @@
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function closeKbModal() {
+    kbSelectedChunk = null;
+  }
+
+  function handleGlobalKeydown(e: KeyboardEvent) {
+    if (e.key !== 'Escape') return;
+    if (kbSelectedChunk) {
+      closeKbModal();
+      return;
+    }
+    if (isMobileNavOpen) {
+      isMobileNavOpen = false;
     }
   }
 
@@ -155,14 +225,18 @@
   );
 
   onMount(() => {
-    // Baca sub-path dari hash: misal #docs/single-binary
+    // Baca sub-path dari hash: misal #docs/single-binary atau #docs
     const syncFromHash = () => {
       const h = window.location.hash.replace('#', '');
       if (h.startsWith('docs/')) {
         const id = h.replace('docs/', '').trim();
         if (ALL_ARTICLES.some((a) => a.id === id) && id !== currentArticleId) {
           currentArticleId = id;
+          resetArticleScroll();
         }
+      } else if (h === 'docs' && currentArticleId !== 'overview') {
+        currentArticleId = 'overview';
+        resetArticleScroll();
       }
     };
 
@@ -176,11 +250,13 @@
 
   // Muat KB saat pertama kali tab KB dibuka
   $effect(() => {
-    if (activeTab === 'kb' && kbResults.length === 0 && !kbLoading) {
+    if (activeTab === 'kb' && !kbLoaded && !kbLoading) {
       void fetchKb();
     }
   });
 </script>
+
+<svelte:window onkeydown={handleGlobalKeydown} />
 
 <div class="flex-1 flex flex-col min-h-0 bg-white overflow-hidden text-black font-sans">
   <!-- TOP NAVBAR DOKUMENTASI -->
@@ -218,22 +294,8 @@
         </div>
       </div>
 
-      <!-- Kanan: Tombol Menu Mobile + GitHub -->
+      <!-- Kanan: Tombol Menu Mobile -->
       <div class="flex items-center gap-2 shrink-0">
-        <a
-          href={REPO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="neo-btn rounded-xl bg-white hover:bg-neutral-100 text-black font-black text-xs px-2.5 py-1.5 flex items-center gap-1.5 shadow-[2px_2px_0px_#000]"
-          title="Lihat Repositori GitHub"
-          aria-label="Repositori GitHub"
-        >
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-          </svg>
-          <span class="hidden sm:inline">GitHub</span>
-        </a>
-
         {#if activeTab === 'docs'}
           <!-- Tombol Menu Mobile untuk Sidebar Artikel -->
           <button
@@ -268,7 +330,7 @@
           onclick={() => (activeTab = 'kb')}
           class="flex-1 sm:flex-none px-3 py-1.5 rounded-lg font-bold transition-all {activeTab === 'kb' ? 'bg-black text-white shadow-[1px_1px_0px_#000]' : 'text-neutral-600 hover:text-black'}"
         >
-          4.595 Modul
+          Daftar Modul
         </button>
       </div>
     </div>
@@ -342,7 +404,7 @@
       </aside>
 
       <!-- KONTEN ARTIKEL UTAMA + TOC KANAN -->
-      <div class="flex-1 flex min-h-0 overflow-y-auto bg-white">
+      <div bind:this={scrollerEl} class="flex-1 flex min-h-0 overflow-y-auto bg-white">
         <!-- Body Artikel -->
         <article class="flex-1 max-w-3xl mx-auto px-5 sm:px-10 py-8 sm:py-12 space-y-8">
           <!-- Header Artikel -->
@@ -605,11 +667,11 @@
                   <span class="inline-block text-[10px] font-mono font-black px-1.5 py-0.5 bg-black text-white rounded">
                     Modul {chunk.module_id}
                   </span>
-                  <h3 class="text-xs sm:text-sm font-black text-black group-hover:underline leading-snug line-clamp-2">
+                  <h3 class="text-xs sm:text-sm font-black text-black group-hover:underline leading-snug line-clamp-3">
                     {chunk.section_title}
                   </h3>
                   <p class="text-xs text-text-secondary line-clamp-3 leading-relaxed">
-                    {chunk.content}
+                    {kbExcerpt(chunk.content, chunk.section_title)}
                   </p>
                 </div>
 
@@ -629,10 +691,19 @@
 <!-- MODAL DETAIL MODUL RAG -->
 {#if kbSelectedChunk}
   <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40">
+    <!-- Backdrop klik untuk menutup -->
+    <button
+      type="button"
+      class="absolute inset-0 cursor-default"
+      onclick={closeKbModal}
+      aria-label="Tutup detail modul"
+      tabindex="-1"
+    ></button>
+
     <div
       role="dialog"
       aria-modal="true"
-      class="bg-white rounded-2xl border-2 border-black shadow-[4px_4px_0px_#000] max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
+      class="relative bg-white rounded-2xl border-2 border-black shadow-[4px_4px_0px_#000] max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
     >
       <div class="px-5 py-3.5 border-b-2 border-black flex items-center justify-between bg-neutral-50 shrink-0">
         <div class="flex items-center gap-2 truncate pr-2">
@@ -655,22 +726,9 @@
       </div>
 
       <div class="p-5 sm:p-6 overflow-y-auto space-y-3 text-xs sm:text-sm text-black leading-relaxed">
-        <h2 class="text-base sm:text-lg font-black text-black">
-          {kbSelectedChunk.section_title}
-        </h2>
-        <div class="space-y-2">
-          {@html renderMath(kbSelectedChunk.content)}
+        <div class="space-y-2 whitespace-pre-wrap">
+          {@html renderMath(stripMarkdown(stripKbPreamble(kbSelectedChunk.content, kbSelectedChunk.section_title)))}
         </div>
-      </div>
-
-      <div class="px-5 py-3 border-t-2 border-black flex justify-end bg-neutral-50 shrink-0">
-        <button
-          type="button"
-          onclick={() => (kbSelectedChunk = null)}
-          class="neo-btn rounded-xl bg-black hover:bg-neutral-800 text-white font-bold text-xs px-4 py-2 shadow-[2px_2px_0px_#000]"
-        >
-          Tutup
-        </button>
       </div>
     </div>
   </div>
