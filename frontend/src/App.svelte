@@ -6,9 +6,10 @@
   import Docs from './routes/Docs.svelte';
   import Landing from './routes/Landing.svelte';
   import Login from './routes/Login.svelte';
+  import Profile from './routes/Profile.svelte';
   import { auth, loadSession } from './lib/auth.svelte';
 
-  const ROUTES = ['chat', 'docs', 'login'];
+  const ROUTES = ['chat', 'docs', 'login', 'profile'];
 
   let activeRoute = $state('landing');
   let isSidebarOpen = $state(false);
@@ -117,7 +118,7 @@
 >
   {#if activeRoute === 'landing'}
     <Landing onStartChat={handleStartChat} />
-  {:else if activeRoute === 'login' || (activeRoute === 'chat' && !auth.user)}
+  {:else if activeRoute === 'login' || ((activeRoute === 'chat' || activeRoute === 'profile') && !auth.user)}
     <Login onBack={() => handleNavigate('landing')} />
   {:else}
     <Header
@@ -141,6 +142,8 @@
         {#key chatKey}
           <Chat onMessagesChange={(val) => (hasMessages = val)} initialMessage={pendingMessage} />
         {/key}
+      {:else if activeRoute === 'profile'}
+        <Profile onNavigate={handleNavigate} />
       {:else}
         <Docs />
       {/if}
