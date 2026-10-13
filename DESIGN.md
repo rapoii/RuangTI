@@ -199,6 +199,15 @@ font-family: 'JetBrains Mono', monospace;
 - Susunan: Hero (logo TI, judul, tagline rujukan modul, CTA "Mulai Bertanya", catatan gratis) → Contoh Percakapan (cuplikan EOQ, rumus KaTeX) → Basis Pengetahuan (3 angka) → Topik Populer (chip) → Footer.
 - CTA & chip memanggil `onStartChat(question?)`: berpindah ke rute `chat` dan mengirim pertanyaan awal bila ada (dikirim tepat satu kali via prop `initialMessage` di `Chat.svelte`).
 
+### Alur Auth (Login Google)
+- **Rute publik**: `landing`, `docs`. **Rute terproteksi**: `chat`, `profile` — bila belum login, keduanya menampilkan `Login.svelte` (bukan redirect paksa, agar tombol Back browser tetap wajar).
+- **Login** (`Login.svelte`): logo TI, judul "Masuk untuk Mulai Bertanya", satu tombol `neo-btn` hitam "Masuk dengan Google" dengan ikon G **monokrom** (bukan logo berwarna), plus tautan "Kembali".
+- **Profil** (`Profile.svelte`): avatar bulat (`rounded-full border-2 border-black`) berisi foto Google atau inisial nama; nama; email (font mono); garis pemisah; tombol "Kembali ke Chat" (putih) & "Keluar" (hitam).
+- **Header**: avatar 32×32 (`neo-btn rounded-full overflow-hidden`) di kanan, hanya tampil bila sudah login; memanggil `onNavigate('profile')`.
+- **Sesi**: cookie `rti_session` HttpOnly (SameSite=Lax, Secure otomatis bila `APP_BASE_URL` https). Token disimpan di DB sebagai hash SHA-256, bukan teks asli.
+- **Riwayat percakapan**: Sidebar memuat `GET /api/conversations` saat dibuka; tiap item punya tombol hapus (✕). Bila kosong → teks "Belum ada riwayat". Judul diambil dari 60 karakter pertama pesan pertama.
+- **Larangan tetap berlaku**: nama provider upstream ("Mimoly"/"MiMo"/"Studio") tidak boleh muncul di UI mana pun, termasuk halaman login & profil.
+
 ---
 
 ## 9. Selector Model (2 Mode)
