@@ -191,7 +191,7 @@
       <span class="text-[10px] font-mono font-bold text-white bg-black px-1.5 py-0.5 rounded">06</span>
       <h2 class="text-[11px] font-mono font-bold text-text-secondary uppercase tracking-wider">Topik Populer</h2>
     </div>
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap justify-center gap-2">
       {#each TOPICS as t}
         <button
           type="button"
