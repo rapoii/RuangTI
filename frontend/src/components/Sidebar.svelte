@@ -105,12 +105,29 @@
       <span>Percakapan Baru</span>
     </button>
 
+    <!-- Tautan Navigasi Sekunder -->
+    <div class="space-y-1.5">
+      <button
+        type="button"
+        onclick={() => {
+          onNavigate('docs');
+          onClose();
+        }}
+        class="neo-btn w-full py-2 px-3 bg-white hover:bg-neutral-100 text-black font-bold text-xs flex items-center justify-center gap-2"
+      >
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+        <span>Dokumentasi</span>
+      </button>
+    </div>
+
     <!-- Section Riwayat Percakapan -->
     <div class="space-y-1.5 pt-1">
       <div class="text-[10px] font-mono font-bold text-text-secondary uppercase tracking-wider px-1">
         Riwayat Percakapan
       </div>
-
       {#if loading}
         <div class="text-xs text-text-secondary px-2 py-3 italic">Memuat...</div>
       {:else if conversations.length === 0}

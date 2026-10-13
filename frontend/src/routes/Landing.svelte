@@ -49,7 +49,36 @@
 
 <div class="flex-1 overflow-y-auto min-h-0 bg-white">
   <!-- HERO -->
-  <section class="min-h-full flex flex-col items-center justify-center text-center px-6 py-14 gap-4">
+  <section class="min-h-full flex flex-col items-center justify-center text-center px-6 py-14 gap-4 relative">
+    <!-- Top-Right Actions (GitHub + Docs) -->
+    <div class="absolute top-4 right-4 sm:top-6 sm:right-6 flex items-center gap-2 z-10">
+      <a
+        href="#docs"
+        class="neo-btn rounded-xl bg-white hover:bg-neutral-100 text-black font-black text-xs px-3 py-2 flex items-center gap-1.5 shadow-[2px_2px_0px_#000]"
+        title="Buka Dokumentasi RuangTI"
+      >
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+        <span class="hidden sm:inline">Dokumentasi</span>
+      </a>
+
+      <a
+        href="https://github.com/rapoii/RuangTI"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="neo-btn rounded-xl bg-white hover:bg-neutral-100 text-black font-black text-xs px-3 py-2 flex items-center gap-1.5 shadow-[2px_2px_0px_#000]"
+        title="Lihat Repositori GitHub RuangTI"
+        aria-label="Repositori GitHub"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+
     <div class="w-14 h-14 bg-black text-white rounded-2xl border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
       TI
     </div>

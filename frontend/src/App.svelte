@@ -24,8 +24,9 @@
   let appHeight = $state('100dvh');
 
   function routeFromHash(): string {
-    const hash = window.location.hash.replace('#', '');
-    return ROUTES.includes(hash) ? hash : 'landing';
+    const raw = window.location.hash.replace('#', '');
+    const seg = raw.split('/')[0];
+    return ROUTES.includes(seg) ? seg : 'landing';
   }
 
   // Tulis hash tanpa memicu handler kita sendiri
@@ -144,7 +145,9 @@
   class="flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white relative"
   style="height: {appHeight}; max-height: {appHeight};"
 >
-  {#if activeRoute === 'landing' || (!auth.user && (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile'))}
+  {#if activeRoute === 'docs'}
+    <Docs onNavigateHome={() => handleNavigate('landing')} />
+  {:else if activeRoute === 'landing' || (!auth.user && (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile'))}
     <Landing onStartChat={handleStartChat} />
   {:else}
     <Header
@@ -175,8 +178,6 @@
         {/key}
       {:else if activeRoute === 'profile'}
         <Profile onNavigate={handleNavigate} />
-      {:else}
-        <Docs />
       {/if}
     </main>
   {/if}
