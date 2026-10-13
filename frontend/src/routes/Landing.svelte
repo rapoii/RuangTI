@@ -49,7 +49,7 @@
 
 <div class="flex-1 overflow-y-auto min-h-0 bg-white">
   <!-- HERO -->
-  <section class="min-h-[72vh] flex flex-col items-center justify-center text-center px-6 py-14 gap-4">
+  <section class="min-h-full flex flex-col items-center justify-center text-center px-6 py-14 gap-4">
     <div class="w-14 h-14 bg-black text-white rounded-2xl border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
       TI
     </div>
@@ -64,10 +64,10 @@
       onclick={() => onStartChat()}
       class="neo-btn rounded-xl bg-black hover:bg-neutral-800 text-white font-black text-sm px-7 py-3.5 shadow-[2px_2px_0px_#000] mt-1"
     >
-      Mulai Bertanya
+      Mulai Chat
     </button>
     <span class="text-[10px] font-mono font-bold text-text-secondary tracking-wider">
-      GRATIS · TANPA DAFTAR · JAWABAN BERUJUKAN
+      GRATIS · MASUK DENGAN GOOGLE · JAWABAN BERUJUKAN
     </span>
   </section>
 
@@ -210,14 +210,14 @@
       Siap mulai riset Teknik Industri?
     </h2>
     <p class="text-xs text-text-secondary max-w-xs leading-relaxed">
-      Gratis dan tanpa daftar ribet — cukup masuk dengan Google untuk mulai.
+      Gratis — cukup masuk dengan Google untuk mulai bertanya.
     </p>
     <button
       type="button"
       onclick={() => onStartChat()}
       class="neo-btn rounded-xl bg-black hover:bg-neutral-800 text-white font-black text-sm px-7 py-3.5 shadow-[2px_2px_0px_#000] mt-1"
     >
-      Mulai Bertanya
+      Mulai Chat
     </button>
   </section>
 

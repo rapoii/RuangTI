@@ -67,7 +67,7 @@
       TI
     </div>
     <h2 id="login-modal-title" class="text-xl font-black text-black tracking-tight leading-tight">
-      Masuk untuk Mulai Bertanya
+      Masuk untuk Mulai Chat
     </h2>
     <p class="text-sm text-text-secondary max-w-xs leading-relaxed">
       Percakapanmu tersimpan di akunmu. Masuk dengan Google untuk melanjutkan.

@@ -196,22 +196,22 @@ font-family: 'JetBrains Mono', monospace;
 
 ### Landing Page (Sebelum Chat)
 - Rute default `landing`; tampil tanpa Header/Sidebar (halaman berdiri sendiri, scroll vertikal penuh).
-- Latar Hero memakai pola kertas milimeter blok monokrom (`.ti-grid-bw`).
+- Latar Hero putih polos (tanpa pola grid/tekstur).
 - Susunan 8 seksi berurutan, tiap seksi diberi nomor badge hitam kecil + label font mono uppercase (01–06):
-  1. **Hero** — logo TI (kotak hitam rounded), judul, tagline rujukan 4.595 modul, CTA "Mulai Bertanya", catatan `GRATIS · TANPA DAFTAR · JAWABAN BERUJUKAN`.
+  1. **Hero** — logo TI (kotak hitam rounded), judul, tagline rujukan 4.595 modul, CTA "Mulai Chat", catatan `GRATIS · MASUK DENGAN GOOGLE · JAWABAN BERUJUKAN`. Tinggi hero `min-h-full` agar pas satu layar HP (tidak ada seksi berikutnya yang mengintip).
   2. **01 Cara Kerja** — 3 kartu langkah bernomor (Ajukan Pertanyaan → Jawaban Berujung Rujukan → Riwayat Tersimpan).
   3. **02 Contoh Percakapan** — cuplikan gelembung tanya/jawab EOQ dengan rumus KaTeX dalam `neo-input`.
   4. **03 Bidang Keilmuan** — grid 2/4 kolom berisi 8 rumpun bidang TI (Riset Operasi, Lean Six Sigma, Ergonomi & K3, Tata Letak Fasilitas, Supply Chain, PPIC, Pemeliharaan, Simulasi & Otomasi).
   5. **04 Keunggulan** — 3 kartu ikon monokrom (Rujukan Nyata, Rumus Rapi, Riwayat Aman).
   6. **05 Basis Pengetahuan** — 3 kartu metrik (4.595 Modul · 32.413 Seksi · ~13 MB Runtime).
   7. **06 Topik Populer** — chip 8 topik yang mengirim pertanyaan langsung ke chat.
-  8. **CTA Penutup** — latar `canvas-subtle`, ajakan mulai + tombol "Mulai Bertanya"; lalu **Footer** teks mono.
+  8. **CTA Penutup** — latar `canvas-subtle`, ajakan mulai + tombol "Mulai Chat"; lalu **Footer** teks mono.
 - Semua seksi dipisah `border-t-2 border-black` agar ritme visual tegas dan konsisten; tanpa warna aksen (murni hitam-putih-abu).
 - CTA & chip memanggil `onStartChat(question?)`: berpindah ke rute `chat` dan mengirim pertanyaan awal bila ada (dikirim tepat satu kali via prop `initialMessage` di `Chat.svelte`).
 
 ### Alur Auth (Login Google)
 - **Rute publik**: `landing`, `docs`. **Rute terproteksi**: `chat`, `profile` — bila belum login, tetap menampilkan latar `Landing.svelte` dengan dialog modal `Login.svelte` melayang (floating modal, overlay gelap transparan **tanpa blur**, tombol tutup ✕ / Batal).
-- **Login Modal** (`Login.svelte`): floating dialog rounded (`rounded-2xl`) di tengah latar belakang landing page, logo TI, judul "Masuk untuk Mulai Bertanya", satu tombol `neo-btn` hitam "Masuk dengan Google" dengan ikon G **monokrom** (bukan logo berwarna), plus tombol tutup ✕ dan tautan "Batal". Tutup modal mengembalikan pengguna ke landing page.
+- **Login Modal** (`Login.svelte`): floating dialog rounded (`rounded-2xl`) di tengah latar belakang landing page, logo TI, judul "Masuk untuk Mulai Chat", satu tombol `neo-btn` hitam "Masuk dengan Google" dengan ikon G **monokrom** (bukan logo berwarna), plus tombol tutup ✕ dan tautan "Batal". Tutup modal mengembalikan pengguna ke landing page.
 - **Profil** (`Profile.svelte`): avatar bulat (`rounded-full border-2 border-black`) berisi foto Google atau inisial nama; nama; email (font mono); garis pemisah; tombol "Kembali ke Chat" (putih) & "Keluar" (hitam).
 - **Header**: avatar 32×32 (`neo-btn rounded-full overflow-hidden`) di kanan, hanya tampil bila sudah login; memanggil `onNavigate('profile')`.
 - **Sesi**: cookie `rti_session` HttpOnly (SameSite=Lax, Secure otomatis bila `APP_BASE_URL` https). Token disimpan di DB sebagai hash SHA-256, bukan teks asli.
