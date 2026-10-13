@@ -13,6 +13,7 @@
 
   let activeRoute = $state('landing');
   let isSidebarOpen = $state(false);
+  let isLoginModalOpen = $state(false);
   let chatKey = $state(0);
   let hasMessages = $state(false);
   let pendingMessage = $state('');
@@ -62,8 +63,20 @@
     applyHash('chat');
   }
 
+  function handleCloseLoginModal() {
+    isLoginModalOpen = false;
+    if (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile') {
+      handleNavigate('landing');
+    }
+  }
+
   // Dari landing — pindah ke chat, opsional membawa pertanyaan awal
   function handleStartChat(message?: string) {
+    if (!auth.user) {
+      pendingMessage = message ?? '';
+      isLoginModalOpen = true;
+      return;
+    }
     pendingMessage = message ?? '';
     activeConversationId = '';
     activeRoute = 'chat';
@@ -131,10 +144,8 @@
   class="flex flex-col overflow-hidden bg-white text-black selection:bg-black selection:text-white relative"
   style="height: {appHeight}; max-height: {appHeight};"
 >
-  {#if activeRoute === 'landing'}
+  {#if activeRoute === 'landing' || (!auth.user && (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile'))}
     <Landing onStartChat={handleStartChat} />
-  {:else if activeRoute === 'login' || ((activeRoute === 'chat' || activeRoute === 'profile') && !auth.user)}
-    <Login onBack={() => handleNavigate('landing')} />
   {:else}
     <Header
       {activeRoute}
@@ -168,5 +179,9 @@
         <Docs />
       {/if}
     </main>
+  {/if}
+
+  {#if isLoginModalOpen || (!auth.user && (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile'))}
+    <Login onClose={handleCloseLoginModal} />
   {/if}
 </div>

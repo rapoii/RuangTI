@@ -200,8 +200,8 @@ font-family: 'JetBrains Mono', monospace;
 - CTA & chip memanggil `onStartChat(question?)`: berpindah ke rute `chat` dan mengirim pertanyaan awal bila ada (dikirim tepat satu kali via prop `initialMessage` di `Chat.svelte`).
 
 ### Alur Auth (Login Google)
-- **Rute publik**: `landing`, `docs`. **Rute terproteksi**: `chat`, `profile` — bila belum login, keduanya menampilkan `Login.svelte` (bukan redirect paksa, agar tombol Back browser tetap wajar).
-- **Login** (`Login.svelte`): logo TI, judul "Masuk untuk Mulai Bertanya", satu tombol `neo-btn` hitam "Masuk dengan Google" dengan ikon G **monokrom** (bukan logo berwarna), plus tautan "Kembali".
+- **Rute publik**: `landing`, `docs`. **Rute terproteksi**: `chat`, `profile` — bila belum login, tetap menampilkan latar `Landing.svelte` dengan dialog modal `Login.svelte` melayang (floating modal dengan backdrop blur & tombol tutup ✕ / Batal).
+- **Login Modal** (`Login.svelte`): floating dialog di tengah latar belakang landing page, logo TI, judul "Masuk untuk Mulai Bertanya", satu tombol `neo-btn` hitam "Masuk dengan Google" dengan ikon G **monokrom** (bukan logo berwarna), plus tombol tutup ✕ dan tautan "Batal". Tutup modal mengembalikan pengguna ke landing page.
 - **Profil** (`Profile.svelte`): avatar bulat (`rounded-full border-2 border-black`) berisi foto Google atau inisial nama; nama; email (font mono); garis pemisah; tombol "Kembali ke Chat" (putih) & "Keluar" (hitam).
 - **Header**: avatar 32×32 (`neo-btn rounded-full overflow-hidden`) di kanan, hanya tampil bila sudah login; memanggil `onNavigate('profile')`.
 - **Sesi**: cookie `rti_session` HttpOnly (SameSite=Lax, Secure otomatis bila `APP_BASE_URL` https). Token disimpan di DB sebagai hash SHA-256, bukan teks asli.
