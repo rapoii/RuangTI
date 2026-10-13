@@ -1,28 +1,27 @@
 @echo off
-title RuangTI Full Production Stack - Startup Runner
+title RuangTI Production Server - Single Binary Go + Cloudflare Tunnel
 echo ========================================================
 echo   RUANGTI - INDUSTRIAL ENGINEERING AI WORKSPACE
-echo   Starting High-Performance Production Stack (24/7)
+echo   Starting High-Performance Single Binary Production (24/7)
 echo ========================================================
 echo.
 
-set WORKDIR=D:\Software\Hermes Workspace\projects\web\RuangTI
+set WORKDIR=D:\Software\Hermes Workspace\projects\websites\RuangTI
 set CLOUDFLARED_BIN=D:\Software\cloudflared\cloudflared.exe
 
 cd /d "%WORKDIR%"
 
-echo [1/3] Checking & Starting FastAPI Backend (Port 8000)...
-start "RuangTI Backend (FastAPI)" /min cmd /c "uvicorn backend.app.main:app --host 0.0.0.0 --port 8000"
+echo [1/2] Starting RuangTI Single Binary (Port 3005 ^& 8000)...
+start "RuangTI Single Binary" /min cmd /c "ruangti.exe --host 0.0.0.0 --port 3005 --rag-db backend/data/ruangti_rag.db --app-db backend/data/ruangti_app.db --mimoly http://127.0.0.1:8080/v1"
 
-echo [2/3] Starting Next.js Production Server (Port 3005)...
-start "RuangTI Frontend (Next.js Prod)" /min cmd /c "npm run start -- -p 3005"
-
-echo [3/3] Starting Cloudflare Public Secure Gateway...
+echo [2/2] Starting Cloudflare Named Tunnel (ruangti.varevastudio.tech)...
 echo.
 echo ========================================================
-echo   Stack is running! Keep this window open or minimized.
-echo   Local Address: http://localhost:3005
+echo   Production is running! Keep this window open or minimized.
+echo   Local Address : http://localhost:3005
+echo   Public Domain : https://ruangti.varevastudio.tech
 echo ========================================================
 echo.
 
-"%CLOUDFLARED_BIN%" tunnel --url http://localhost:3005
+set /p TOKEN=<tunnel_token.txt
+"%CLOUDFLARED_BIN%" tunnel run --token %TOKEN%
