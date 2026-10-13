@@ -1,21 +1,56 @@
 <script lang="ts">
+  import { listConversations, deleteConversation, type ConversationSummary } from '../lib/conversations';
+  import { auth } from '../lib/auth.svelte';
+
   interface Props {
     isOpen: boolean;
     onClose: () => void;
     onNavigate: (route: string) => void;
     onNewChat: () => void;
+    onSelectConversation?: (id: string) => void;
     activeRoute: string;
   }
 
-  let { isOpen, onClose, onNavigate, onNewChat, activeRoute }: Props = $props();
+  let { isOpen, onClose, onNavigate, onNewChat, onSelectConversation, activeRoute }: Props = $props();
 
-  const RECENT_TOPICS = [
-    { title: 'Rumus EOQ & Total Biaya', tag: 'Persediaan' },
-    { title: 'Peta Proses Operasi (OPC)', tag: 'ASME Y15' },
-    { title: 'Metode Jalur Kritis (CPM)', tag: 'Proyek' },
-    { title: '7 Pemborosan Lean (DOWNTIME)', tag: 'Lean' },
-    { title: 'Peta Tangan Kiri-Kanan (PTKTK)', tag: 'Ergonomi' },
-  ];
+  let conversations = $state<ConversationSummary[]>([]);
+  let loading = $state(false);
+
+  async function reloadList() {
+    if (!auth.user) {
+      conversations = [];
+      return;
+    }
+    loading = true;
+    try {
+      conversations = await listConversations();
+    } catch {
+      conversations = [];
+    } finally {
+      loading = false;
+    }
+  }
+
+  $effect(() => {
+    if (isOpen) {
+      void reloadList();
+    }
+  });
+
+  async function handleDelete(e: MouseEvent, id: string) {
+    e.stopPropagation();
+    try {
+      await deleteConversation(id);
+      conversations = conversations.filter((c) => c.id !== id);
+    } catch {
+      // abaikan bila gagal
+    }
+  }
+
+  function handleOpenConv(id: string) {
+    onSelectConversation?.(id);
+    onClose();
+  }
 </script>
 
 <!-- Backdrop Blur Overlay -->
@@ -70,25 +105,37 @@
       <span>Percakapan Baru</span>
     </button>
 
-    <!-- Section Riwayat / Topik Cepat Riset Industri -->
+    <!-- Section Riwayat Percakapan -->
     <div class="space-y-1.5 pt-1">
-      <div class="text-[10px] mono font-bold text-neutral-400 uppercase tracking-wider px-1">
-        Topik Populer Riset
+      <div class="text-[10px] font-mono font-bold text-text-secondary uppercase tracking-wider px-1">
+        Riwayat Percakapan
       </div>
-      {#each RECENT_TOPICS as item}
-        <button
-          type="button"
-          onclick={() => {
-            onNavigate('chat');
-          }}
-          class="neo-btn w-full p-2.5 text-left bg-white hover:bg-neutral-50 flex items-center justify-between text-xs transition-colors"
-        >
-          <span class="truncate font-semibold text-neutral-900">{item.title}</span>
-          <span class="neo-badge px-1.5 py-0.2 bg-neutral-100 text-[8px] mono font-bold text-neutral-600 shrink-0">
-            {item.tag}
-          </span>
-        </button>
-      {/each}
+
+      {#if loading}
+        <div class="text-xs text-text-secondary px-2 py-3 italic">Memuat...</div>
+      {:else if conversations.length === 0}
+        <div class="text-xs text-text-secondary px-2 py-3">Belum ada riwayat</div>
+      {:else}
+        {#each conversations as item (item.id)}
+          <div class="flex items-center gap-1">
+            <button
+              type="button"
+              onclick={() => handleOpenConv(item.id)}
+              class="neo-btn flex-1 p-2.5 text-left bg-white hover:bg-neutral-50 flex items-center text-xs transition-colors overflow-hidden"
+            >
+              <span class="truncate font-semibold text-black">{item.title}</span>
+            </button>
+            <button
+              type="button"
+              onclick={(e) => handleDelete(e, item.id)}
+              class="neo-btn w-8 h-8 bg-white hover:bg-neutral-100 text-black font-black flex items-center justify-center text-xs shrink-0"
+              title="Hapus percakapan"
+            >
+              ✕
+            </button>
+          </div>
+        {/each}
+      {/if}
     </div>
   </div>
 </aside>

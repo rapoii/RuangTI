@@ -3,14 +3,16 @@
   import MessageRow from '../components/MessageRow.svelte';
   import Composer from '../components/Composer.svelte';
   import { streamChat } from '../lib/sse';
+  import { addMessage, createConversation, getConversation } from '../lib/conversations';
   import type { ChatMessage, ThinkingOption } from '../lib/types';
 
   interface Props {
     onMessagesChange?: (hasMessages: boolean) => void;
     initialMessage?: string;
+    conversationId?: string;
   }
 
-  let { onMessagesChange, initialMessage = '' }: Props = $props();
+  let { onMessagesChange, initialMessage = '', conversationId = '' }: Props = $props();
 
   let messages = $state<ChatMessage[]>([]);
   let selectedModelId = $state('mimo-v2.6-pro@default');
@@ -18,6 +20,35 @@
   let abortController = $state<AbortController | null>(null);
   let chatContainerRef = $state<HTMLDivElement | null>(null);
   let didAutoSend = $state(false);
+  let activeConversationId = $state('');
+  let didLoadHistory = $state(false);
+
+  // Sinkronkan ID percakapan dari prop
+  $effect(() => {
+    activeConversationId = conversationId;
+  });
+
+  // Muat riwayat bila dibuka dari sidebar
+  $effect(() => {
+    if (conversationId && !didLoadHistory) {
+      didLoadHistory = true;
+      void (async () => {
+        try {
+          const detail = await getConversation(conversationId);
+          messages = detail.messages.map((m) => ({
+            id: m.id,
+            role: m.role,
+            content: m.content,
+            timestamp: m.created_at * 1000,
+          }));
+          activeConversationId = conversationId;
+          scrollToBottom();
+        } catch {
+          // gagal memuat riwayat: biarkan kosong
+        }
+      })();
+    }
+  });
 
   // Kata singkat acak khas Teknik Industri — diganti tiap percakapan baru
   const RANDOM_WORDS = [
@@ -116,6 +147,20 @@
     isStreaming = true;
     scrollToBottom();
 
+    // Persist ke server: buat percakapan bila ini pesan pertama
+    void (async () => {
+      try {
+        if (!activeConversationId) {
+          const title = text.trim().slice(0, 60);
+          const conv = await createConversation(title);
+          activeConversationId = conv.id;
+        }
+        await addMessage(activeConversationId, 'user', text);
+      } catch {
+        // gagal menyimpan riwayat tidak boleh memblokir chat
+      }
+    })();
+
     abortController = new AbortController();
 
     await streamChat({
@@ -137,6 +182,11 @@
         isStreaming = false;
         abortController = null;
         scrollToBottom();
+        // Simpan jawaban asisten ke riwayat
+        const final = messages.find((m) => m.id === assistantMsgId);
+        if (activeConversationId && final && final.content.trim()) {
+          void addMessage(activeConversationId, 'assistant', final.content).catch(() => {});
+        }
       },
       onError: (err: Error) => {
         messages = messages.map((m) => {

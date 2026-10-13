@@ -16,6 +16,7 @@
   let chatKey = $state(0);
   let hasMessages = $state(false);
   let pendingMessage = $state('');
+  let activeConversationId = $state('');
   let suppressHashChange = $state(false);
 
   // Tinggi viewport visual (menyesuaikan saat keyboard virtual terbuka)
@@ -38,6 +39,7 @@
   // Navigasi internal (Header/Sidebar) — tanpa pertanyaan awal
   function handleNavigate(route: string) {
     pendingMessage = '';
+    activeConversationId = '';
     activeRoute = route;
     hasMessages = false;
     if (route === 'chat') chatKey += 1;
@@ -49,9 +51,21 @@
     handleNavigate('chat');
   }
 
+  // Buka percakapan lama dari sidebar
+  function handleSelectConversation(id: string) {
+    pendingMessage = '';
+    activeConversationId = id;
+    activeRoute = 'chat';
+    hasMessages = true;
+    chatKey += 1;
+    isSidebarOpen = false;
+    applyHash('chat');
+  }
+
   // Dari landing — pindah ke chat, opsional membawa pertanyaan awal
   function handleStartChat(message?: string) {
     pendingMessage = message ?? '';
+    activeConversationId = '';
     activeRoute = 'chat';
     hasMessages = false;
     chatKey += 1;
@@ -68,6 +82,7 @@
     const route = routeFromHash();
     if (route === activeRoute) return;
     pendingMessage = '';
+    activeConversationId = '';
     activeRoute = route;
     hasMessages = false;
     if (route === 'chat') chatKey += 1;
@@ -134,13 +149,18 @@
       onClose={() => (isSidebarOpen = false)}
       onNavigate={handleNavigate}
       onNewChat={handleNewChat}
+      onSelectConversation={handleSelectConversation}
       {activeRoute}
     />
 
     <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
       {#if activeRoute === 'chat'}
         {#key chatKey}
-          <Chat onMessagesChange={(val) => (hasMessages = val)} initialMessage={pendingMessage} />
+          <Chat
+            onMessagesChange={(val) => (hasMessages = val)}
+            initialMessage={pendingMessage}
+            conversationId={activeConversationId}
+          />
         {/key}
       {:else if activeRoute === 'profile'}
         <Profile onNavigate={handleNavigate} />
