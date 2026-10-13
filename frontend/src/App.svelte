@@ -5,8 +5,10 @@
   import Chat from './routes/Chat.svelte';
   import Docs from './routes/Docs.svelte';
   import Landing from './routes/Landing.svelte';
+  import Login from './routes/Login.svelte';
+  import { auth, loadSession } from './lib/auth.svelte';
 
-  const ROUTES = ['chat', 'docs'];
+  const ROUTES = ['chat', 'docs', 'login'];
 
   let activeRoute = $state('landing');
   let isSidebarOpen = $state(false);
@@ -90,6 +92,9 @@
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('popstate', handleHashChange);
 
+    // Muat status sesi sekali saat boot (untuk gerbang login)
+    void loadSession();
+
     return () => {
       if (vv) {
         vv.removeEventListener('resize', applyHeight);
@@ -112,6 +117,8 @@
 >
   {#if activeRoute === 'landing'}
     <Landing onStartChat={handleStartChat} />
+  {:else if activeRoute === 'login' || (activeRoute === 'chat' && !auth.user)}
+    <Login onBack={() => handleNavigate('landing')} />
   {:else}
     <Header
       {activeRoute}
