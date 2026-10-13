@@ -81,6 +81,16 @@ func main() {
 	mux.HandleFunc("/api/auth/logout", authH.Logout)
 	mux.HandleFunc("/api/auth/me", authH.Me)
 	mux.Handle("/api/chat/stream", auth.RequireAuth(store, http.HandlerFunc(handlers.NewChatStreamHandler(aiClient, ragSvc))))
+
+	// Rute percakapan per akun (semuanya memerlukan autentikasi)
+	convH := handlers.NewConversationHandlers(store)
+	mux.Handle("GET /api/conversations", auth.RequireAuth(store, http.HandlerFunc(convH.List)))
+	mux.Handle("POST /api/conversations", auth.RequireAuth(store, http.HandlerFunc(convH.Create)))
+	mux.Handle("GET /api/conversations/{id}", auth.RequireAuth(store, http.HandlerFunc(convH.Get)))
+	mux.Handle("PATCH /api/conversations/{id}", auth.RequireAuth(store, http.HandlerFunc(convH.Rename)))
+	mux.Handle("DELETE /api/conversations/{id}", auth.RequireAuth(store, http.HandlerFunc(convH.Delete)))
+	mux.Handle("POST /api/conversations/{id}/messages", auth.RequireAuth(store, http.HandlerFunc(convH.AddMessage)))
+
 	mux.HandleFunc("/api/upload", handlers.NewUploadHandler())
 	mux.HandleFunc("/api/docs/search", handlers.NewDocsSearchHandler(ragSvc))
 	mux.Handle("/", NewSPAHandler())
