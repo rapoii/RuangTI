@@ -12,6 +12,7 @@ import (
 	"time"
 
 	"ruangti/ai"
+	"ruangti/auth"
 	"ruangti/handlers"
 	"ruangti/rag"
 )
@@ -23,7 +24,13 @@ func main() {
 	router9URL := flag.String("router9", "http://127.0.0.1:20128/v1", "Base URL 9Router Fallback Gateway")
 	fallbackModel := flag.String("fallback-model", "Hermes", "Model fallback jika Mimoly offline")
 	ragDBPath := flag.String("rag-db", "../backend/data/ruangti_rag.db", "Path database SQLite RAG")
+	appDBPath := flag.String("app-db", "../backend/data/ruangti_app.db", "Path database SQLite aplikasi (auth & percakapan)")
+	baseURL := flag.String("base-url", "", "Base URL publik aplikasi (untuk redirect OAuth Google)")
 	flag.Parse()
+
+	// Muat kredensial dari .env.local (nilai tidak pernah di-log).
+	LoadEnvFile(".env.local")
+	LoadEnvFile("../.env.local")
 
 	// Inisialisasi AI Client
 	aiClient := ai.NewClient(*mimolyURL, *router9URL, *fallbackModel)
@@ -38,9 +45,42 @@ func main() {
 		defer ragSvc.Close()
 	}
 
+	// Inisialisasi store aplikasi (auth & percakapan)
+	absAppDBPath, _ := filepath.Abs(*appDBPath)
+	store, err := auth.NewStore(absAppDBPath)
+	if err != nil {
+		log.Fatalf("Gagal membuka database aplikasi di %s: %v", absAppDBPath, err)
+	}
+	defer store.Close()
+	log.Printf("[INFO] Database aplikasi aktif di %s", absAppDBPath)
+
+	// Konfigurasi login Google
+	defaultBase := fmt.Sprintf("http://localhost:%d", *port)
+	if *baseURL != "" {
+		_ = os.Setenv("APP_BASE_URL", *baseURL)
+	}
+	cfg, cfgErr := ConfigFromEnv(defaultBase)
+	oauth := auth.NewOAuth(auth.GoogleConfig{
+		ClientID:     cfg.GoogleClientID,
+		ClientSecret: cfg.GoogleClientSecret,
+		RedirectURL:  cfg.RedirectURL(),
+	}, store)
+	states := auth.NewStateManager(600)
+	authH := handlers.NewAuthHandlers(store, oauth, states, cfg.Secure, auth.NowSeconds)
+	if cfgErr != nil {
+		authH = authH.Disabled()
+		log.Printf("[WARN] Login Google nonaktif: %v", cfgErr)
+	} else {
+		log.Printf("[INFO] Login Google aktif (redirect: %s)", cfg.RedirectURL())
+	}
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/health", handlers.NewHealthHandler())
-	mux.HandleFunc("/api/chat/stream", handlers.NewChatStreamHandler(aiClient, ragSvc))
+	mux.HandleFunc("/api/auth/google/login", authH.GoogleLogin)
+	mux.HandleFunc("/api/auth/google/callback", authH.GoogleCallback)
+	mux.HandleFunc("/api/auth/logout", authH.Logout)
+	mux.HandleFunc("/api/auth/me", authH.Me)
+	mux.Handle("/api/chat/stream", auth.RequireAuth(store, http.HandlerFunc(handlers.NewChatStreamHandler(aiClient, ragSvc))))
 	mux.HandleFunc("/api/upload", handlers.NewUploadHandler())
 	mux.HandleFunc("/api/docs/search", handlers.NewDocsSearchHandler(ragSvc))
 	mux.Handle("/", NewSPAHandler())
