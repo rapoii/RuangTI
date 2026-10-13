@@ -83,15 +83,5 @@
       </svg>
       Masuk dengan Google
     </button>
-
-    {#if onClose || onBack}
-      <button
-        type="button"
-        onclick={handleDismiss}
-        class="text-[11px] font-mono font-bold text-text-secondary underline mt-1"
-      >
-        Batal
-      </button>
-    {/if}
   </div>
 </div>
