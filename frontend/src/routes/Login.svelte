@@ -34,9 +34,9 @@
 <div
   class="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-150"
 >
-  <!-- Backdrop klik untuk menutup -->
+  <!-- Backdrop klik untuk menutup (tanpa blur) -->
   <div
-    class="fixed inset-0 bg-black/40 backdrop-blur-sm"
+    class="fixed inset-0 bg-black/40"
     onclick={handleDismiss}
     onkeydown={handleKeydown}
     role="button"
