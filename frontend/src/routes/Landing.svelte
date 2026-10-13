@@ -49,7 +49,7 @@
 
 <div class="flex-1 overflow-y-auto min-h-0 bg-white">
   <!-- HERO -->
-  <section class="ti-grid-bw min-h-[72vh] flex flex-col items-center justify-center text-center px-6 py-14 gap-4">
+  <section class="min-h-[72vh] flex flex-col items-center justify-center text-center px-6 py-14 gap-4">
     <div class="w-14 h-14 bg-black text-white rounded-2xl border-2 border-black flex items-center justify-center font-black text-xl shadow-[3px_3px_0px_#000]">
       TI
     </div>
