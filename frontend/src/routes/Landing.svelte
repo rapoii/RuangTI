@@ -79,7 +79,7 @@
     </div>
     <div class="flex flex-col gap-3">
       {#each STEPS as s, i}
-        <div class="neo-card bg-white p-4 flex items-start gap-3.5">
+        <div class="neo-card bg-white p-4 flex items-center gap-3.5">
           <span class="w-8 h-8 shrink-0 bg-black text-white rounded-lg flex items-center justify-center font-mono font-black text-xs leading-none">
             0{i + 1}
           </span>
