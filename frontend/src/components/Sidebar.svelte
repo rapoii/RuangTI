@@ -1,6 +1,6 @@
 <script lang="ts">
   import { listConversations, deleteConversation, type ConversationSummary } from '../lib/conversations';
-  import { auth } from '../lib/auth.svelte';
+  import { auth, logout, initialsOf } from '../lib/auth.svelte';
 
   interface Props {
     isOpen: boolean;
@@ -15,6 +15,7 @@
 
   let conversations = $state<ConversationSummary[]>([]);
   let loading = $state(false);
+  let loggingOut = $state(false);
 
   async function reloadList() {
     if (!auth.user) {
@@ -50,6 +51,17 @@
   function handleOpenConv(id: string) {
     onSelectConversation?.(id);
     onClose();
+  }
+
+  async function handleLogout() {
+    loggingOut = true;
+    try {
+      await logout();
+      onNavigate('landing');
+      onClose();
+    } finally {
+      loggingOut = false;
+    }
   }
 </script>
 
@@ -155,4 +167,56 @@
       {/if}
     </div>
   </div>
+
+  <!-- Profil Akun Pengguna (Pinned Footer di Bawah Drawer) -->
+  {#if auth.user}
+    <div class="p-3 border-t-2 border-black bg-white shrink-0 flex items-center justify-between gap-2">
+      <button
+        type="button"
+        onclick={() => {
+          onNavigate('profile');
+          onClose();
+        }}
+        class="flex-1 min-w-0 flex items-center gap-2.5 text-left p-1 rounded-lg hover:bg-neutral-100 transition-colors"
+        title="Buka Halaman Profil"
+      >
+        {#if auth.user.picture}
+          <img
+            src={auth.user.picture}
+            alt=""
+            referrerpolicy="no-referrer"
+            class="w-9 h-9 rounded-full border-2 border-black object-cover shrink-0"
+          />
+        {:else}
+          <div class="w-9 h-9 rounded-full border-2 border-black bg-black text-white flex items-center justify-center font-black text-xs shrink-0">
+            {initialsOf(auth.user.name)}
+          </div>
+        {/if}
+        <div class="min-w-0 flex-1">
+          <div class="text-xs font-black text-black truncate leading-tight">
+            {auth.user.name}
+          </div>
+          <div class="text-[10px] font-mono text-neutral-500 truncate mt-0.5">
+            {auth.user.email}
+          </div>
+        </div>
+      </button>
+
+      <!-- Tombol Keluar (Logout) Cepat -->
+      <button
+        type="button"
+        onclick={handleLogout}
+        disabled={loggingOut}
+        class="neo-btn w-8 h-8 bg-white hover:bg-neutral-100 text-black flex items-center justify-center text-xs shrink-0 disabled:opacity-50"
+        title="Keluar"
+        aria-label="Keluar dari akun"
+      >
+        <svg class="w-4 h-4 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+      </button>
+    </div>
+  {/if}
 </aside>
