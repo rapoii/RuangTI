@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { auth, initialsOf } from '../lib/auth.svelte';
-
   interface Props {
     activeRoute?: string;
     hasMessages?: boolean;
@@ -33,7 +31,7 @@
     </svg>
   </button>
 
-  <!-- Kanan: tombol '+' (bila ada percakapan) + avatar profil -->
+  <!-- Kanan: tombol '+' (bila ada percakapan) -->
   <div class="flex items-center gap-2">
     {#if hasMessages}
       <button
@@ -46,28 +44,6 @@
           <line x1="12" y1="5" x2="12" y2="19"></line>
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
-      </button>
-    {/if}
-
-    {#if auth.user}
-      <button
-        type="button"
-        onclick={() => onNavigate?.('profile')}
-        class="neo-btn w-8 h-8 bg-white hover:bg-neutral-50 text-black flex items-center justify-center shrink-0 overflow-hidden"
-        title="Profil Pengguna"
-      >
-        {#if auth.user.picture}
-          <img
-            src={auth.user.picture}
-            alt=""
-            referrerpolicy="no-referrer"
-            class="w-full h-full object-cover"
-          />
-        {:else}
-          <span class="text-[10px] font-mono font-black">
-            {initialsOf(auth.user.name)}
-          </span>
-        {/if}
       </button>
     {/if}
   </div>

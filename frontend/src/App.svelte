@@ -94,6 +94,10 @@
       return;
     }
     const route = routeFromHash();
+    if (auth.user && route === 'landing') {
+      handleNavigate('chat');
+      return;
+    }
     if (route === activeRoute) return;
     pendingMessage = '';
     activeConversationId = '';
@@ -122,8 +126,18 @@
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('popstate', handleHashChange);
 
-    // Muat status sesi sekali saat boot (untuk gerbang login)
-    void loadSession();
+    // Muat status sesi saat boot
+    void (async () => {
+      await loadSession();
+      if (auth.user) {
+        // Jika user sudah login dan rute saat ini landing (atau tanpa hash), langsung arahkan ke chat
+        const raw = window.location.hash.replace('#', '').trim();
+        const seg = raw.split('/')[0];
+        if (!seg || seg === 'landing') {
+          handleNavigate('chat');
+        }
+      }
+    })();
 
     return () => {
       if (vv) {
@@ -146,9 +160,22 @@
   style="height: {appHeight}; max-height: {appHeight};"
 >
   {#if activeRoute === 'docs'}
-    <Docs onNavigateHome={() => handleNavigate('landing')} />
-  {:else if activeRoute === 'landing' || (!auth.user && (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile'))}
+    <Docs onNavigateHome={() => handleNavigate(auth.user ? 'chat' : 'landing')} />
+  {:else if auth.loading}
+    <!-- Transisi saat inisialisasi sesi -->
+    <div class="flex-1 flex items-center justify-center bg-white">
+      <div class="w-8 h-8 bg-black text-white font-black flex items-center justify-center text-xs neo-badge shadow-[2px_2px_0px_#000]">
+        TI
+      </div>
+    </div>
+  {:else if !auth.user && (activeRoute === 'landing' || activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile')}
     <Landing onStartChat={handleStartChat} />
+  {:else if auth.user && activeRoute === 'landing'}
+    <div class="flex-1 flex items-center justify-center bg-white">
+      <div class="w-8 h-8 bg-black text-white font-black flex items-center justify-center text-xs neo-badge shadow-[2px_2px_0px_#000]">
+        TI
+      </div>
+    </div>
   {:else}
     <Header
       {activeRoute}
