@@ -4,6 +4,7 @@
   import Composer from '../components/Composer.svelte';
   import { streamChat } from '../lib/sse';
   import { addMessage, createConversation, getConversation } from '../lib/conversations';
+  import { auth } from '../lib/auth.svelte';
   import type { ChatMessage, ThinkingOption } from '../lib/types';
 
   interface Props {
@@ -50,31 +51,6 @@
     }
   });
 
-  // Kata singkat acak khas Teknik Industri — diganti tiap percakapan baru
-  const RANDOM_WORDS = [
-    'Efisiensi',
-    'Optimasi',
-    'Sinergi',
-    'Presisi',
-    'Produktivitas',
-    'Sistem',
-    'Standarisasi',
-    'Analisis',
-    'Integrasi',
-    'Inovasi',
-    'Kualitas',
-    'Kapasitas',
-    'Perbaikan',
-    'Perancangan',
-    'Simulasi',
-  ];
-
-  let randomWord = $state('');
-
-  function pickRandomWord() {
-    randomWord = RANDOM_WORDS[Math.floor(Math.random() * RANDOM_WORDS.length)];
-  }
-
   function greetingByHour(): string {
     const h = new Date().getHours();
     if (h < 11) return 'Selamat pagi';
@@ -82,8 +58,6 @@
     if (h < 19) return 'Selamat sore';
     return 'Selamat malam';
   }
-
-  pickRandomWord();
 
   const SUGGESTIONS = [
     {
@@ -233,7 +207,7 @@
           TI
         </div>
         <h1 class="text-xl sm:text-3xl font-black text-black tracking-tight text-center leading-snug">
-          {greetingByHour()}, <span>{randomWord}</span>
+          {greetingByHour()}, <span>{auth.user?.name?.trim() || 'Pengguna'}</span>
         </h1>
       </div>
     {:else}
