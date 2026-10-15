@@ -8,10 +8,11 @@
     onNavigate: (route: string) => void;
     onNewChat: () => void;
     onSelectConversation?: (id: string) => void;
+    onOpenProfile?: () => void;
     activeRoute: string;
   }
 
-  let { isOpen, onClose, onNavigate, onNewChat, onSelectConversation, activeRoute }: Props = $props();
+  let { isOpen, onClose, onNavigate, onNewChat, onSelectConversation, onOpenProfile, activeRoute }: Props = $props();
 
   let conversations = $state<ConversationSummary[]>([]);
   let loading = $state(false);
@@ -174,11 +175,15 @@
       <button
         type="button"
         onclick={() => {
-          onNavigate('profile');
+          if (onOpenProfile) {
+            onOpenProfile();
+          } else {
+            onNavigate('profile');
+          }
           onClose();
         }}
         class="flex-1 min-w-0 flex items-center gap-2.5 text-left p-1 rounded-lg hover:bg-neutral-100 transition-colors"
-        title="Buka Halaman Profil"
+        title="Buka Profil"
       >
         {#if auth.user.picture}
           <img

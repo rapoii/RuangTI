@@ -14,6 +14,7 @@
   let activeRoute = $state('landing');
   let isSidebarOpen = $state(false);
   let isLoginModalOpen = $state(false);
+  let isProfileModalOpen = $state(false);
   let chatKey = $state(0);
   let hasMessages = $state(false);
   let pendingMessage = $state('');
@@ -40,6 +41,11 @@
 
   // Navigasi internal (Header/Sidebar) — tanpa pertanyaan awal
   function handleNavigate(route: string) {
+    if (route === 'profile') {
+      isProfileModalOpen = true;
+      isSidebarOpen = false;
+      return;
+    }
     pendingMessage = '';
     activeConversationId = '';
     activeRoute = route;
@@ -51,6 +57,14 @@
 
   function handleNewChat() {
     handleNavigate('chat');
+  }
+
+  function handleCloseProfileModal() {
+    isProfileModalOpen = false;
+    const raw = window.location.hash.replace('#', '').trim();
+    if (raw.split('/')[0] === 'profile') {
+      applyHash('chat');
+    }
   }
 
   // Buka percakapan lama dari sidebar
@@ -94,6 +108,13 @@
       return;
     }
     const route = routeFromHash();
+    if (route === 'profile') {
+      isProfileModalOpen = true;
+      if (activeRoute !== 'chat' && activeRoute !== 'docs') {
+        activeRoute = 'chat';
+      }
+      return;
+    }
     if (auth.user && route === 'landing') {
       handleNavigate('chat');
       return;
@@ -133,7 +154,10 @@
         // Jika user sudah login dan rute saat ini landing (atau tanpa hash), langsung arahkan ke chat
         const raw = window.location.hash.replace('#', '').trim();
         const seg = raw.split('/')[0];
-        if (!seg || seg === 'landing') {
+        if (seg === 'profile') {
+          isProfileModalOpen = true;
+          handleNavigate('chat');
+        } else if (!seg || seg === 'landing') {
           handleNavigate('chat');
         }
       }
@@ -191,22 +215,32 @@
       onNavigate={handleNavigate}
       onNewChat={handleNewChat}
       onSelectConversation={handleSelectConversation}
+      onOpenProfile={() => {
+        isProfileModalOpen = true;
+        isSidebarOpen = false;
+      }}
       {activeRoute}
     />
 
     <main class="flex-1 flex flex-col overflow-hidden min-h-0 relative">
-      {#if activeRoute === 'chat'}
-        {#key chatKey}
-          <Chat
-            onMessagesChange={(val) => (hasMessages = val)}
-            initialMessage={pendingMessage}
-            conversationId={activeConversationId}
-          />
-        {/key}
-      {:else if activeRoute === 'profile'}
-        <Profile onNavigate={handleNavigate} />
-      {/if}
+      {#key chatKey}
+        <Chat
+          onMessagesChange={(val) => (hasMessages = val)}
+          initialMessage={pendingMessage}
+          conversationId={activeConversationId}
+        />
+      {/key}
     </main>
+  {/if}
+
+  {#if isProfileModalOpen && auth.user}
+    <Profile
+      onClose={handleCloseProfileModal}
+      onLogout={() => {
+        handleCloseProfileModal();
+        handleNavigate('landing');
+      }}
+    />
   {/if}
 
   {#if isLoginModalOpen || (!auth.user && (activeRoute === 'login' || activeRoute === 'chat' || activeRoute === 'profile'))}
